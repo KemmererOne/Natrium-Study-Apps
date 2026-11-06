@@ -2,8 +2,8 @@
 // scripts/build-lessons.js keeps TOPICS current and bumps VERSION when any of those pages change.
 // flashcards/ and quiz/ have their own service workers, so this one leaves them alone.
 const APP = "site";
-const VERSION = "v33";
-const CONTENT = "66aba104379d";
+const VERSION = "v36";
+const CONTENT = "3c5015069d05";
 const CACHE = APP + "-" + VERSION;
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap";
@@ -112,7 +112,7 @@ const TOPICS = [
   "./psar/psar-sy-23-nuclear-island-auxiliary-electrical-systems/",
   "./psar/psar-sy-24-buildings-and-structures/"
 ];
-const LOCAL = ["./", "./lessons/", "./feedback.js", "./reference/", ...TOPICS];
+const LOCAL = ["./", "./lessons/", "./feedback.js", "./sync.js", "./reference/", ...TOPICS];
 const OWN_WORKER = ["flashcards/", "quiz/"].map(p => new URL(p, self.location).pathname);
 
 // Fonts for the landing and reference pages. Best effort: fallback fonts work offline.

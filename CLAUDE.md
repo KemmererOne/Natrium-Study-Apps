@@ -241,6 +241,17 @@ PSAR acronym popups (Nov 6, 2026)\
 - Run python3 scripts/psar-glossary.py, then the lesson build. The build writes glossary.js, which the quiz and flashcards\
   load, and bumps their sw.js versions when it changes. Lessons carry their own terms inline. Never edit glossary.js by hand.\
 \
+Device sync (Nov 6, 2026)\
+- Flashcard marks and lesson progress can sync across a user's devices under a private 16-character code, with no\
+  account, name or email. Quiz results are still not kept. Sync is off until the user turns it on.\
+- sync.js is the client, and scripts/sync-worker.js is the Cloudflare Worker with one KV namespace bound as SYNC. Set\
+  SYNC_URL in sync.js to the Worker address. While it is empty, sync stays hidden.\
+- The apps still save to localStorage. sync.js finds changes, gives each item a time, and the latest change wins.\
+- The landing page and the flashcards app each show the sync box, because a phone may keep installed apps' data apart.\
+- The lesson build copies sync.js into each lesson. Plan pages, the landing page and flashcards load it as a file.\
+- After changing sync.js, run the lesson build and bump VERSION in flashcards/sw.js.\
+- Test with node scripts/test-sync.js. The preview "sync" runs the Worker locally for localhost pages.\
+\
 Stop and report, do not guess, if:\
 - A source file is missing or unreadable.\
 - A Word file cannot be parsed.\

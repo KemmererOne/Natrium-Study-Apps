@@ -150,13 +150,15 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
   .side .finish { margin: 0; }
 }
 `;
+const SYNC_LIB = read("sync.js");
 const SCRIPT = `
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
-// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+// Progress is saved on this device, and sync.js copies it to the user's other devices if sync is on.
+// It is stored by lesson slug, as one record for all lessons.
 const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
 function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); Sync.changed(); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
@@ -188,6 +190,7 @@ document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () =
   showMark(!saveAll(all));
 }));
 showMark(false);
+addEventListener("natrium-sync", () => showMark(false));
 addEventListener("keydown", e => {
   if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
   if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
@@ -342,6 +345,7 @@ ${side}
 ${sections}
 </div>
 </main>
+<script>${SYNC_LIB}</script>
 <script>${SCRIPT}</script>
 </html>
 `);
@@ -450,6 +454,7 @@ ${groups.map(g => `   <div class="group"><h3>${esc(g.title)} <span></span></h3><
   </div>
  </section>
 </main>
+<script src="../sync.js"></script>
 <script>
 const plan = document.getElementById("plan"), chosen = document.getElementById("chosen");
 const KEY = "natrium-lessons-progress";
@@ -487,6 +492,7 @@ function refresh() {
 }
 plan.addEventListener("change", show);
 addEventListener("pageshow", refresh);
+addEventListener("natrium-sync", refresh);
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../sw.js").catch(() => {});
 </script>
 </html>
@@ -510,7 +516,7 @@ if (!fs.existsSync(at("glossary.js")) || read("glossary.js") !== glossary) {
   write("glossary.js", glossary);
   for (const f of ["quiz/sw.js", "flashcards/sw.js"]) write(f, read(f).replace(/VERSION = "v(\d+)"/, (m, n) => `VERSION = "v${+n + 1}"`));
 }
-const psar = require("./build-psar.js")({ at, read, write, esc, cite, CSS, SCRIPT, mailto, TERMS, GLOSSARY_LIB, acr });
+const psar = require("./build-psar.js")({ at, read, write, esc, cite, CSS, SCRIPT, SYNC_LIB, mailto, TERMS, GLOSSARY_LIB, acr });
 
 // PSAR lesson checks go to the quiz. As with the topics, a question already in the file is not added again.
 function exportPsarChecks() {
@@ -586,7 +592,7 @@ cp.execFileSync("node", [at("reference/generate.js")], { stdio: "inherit" });
 // 5. Root service worker: new topic URLs are listed, and any content change bumps VERSION
 const urls = [...topics.map(t => `./topics/${t.slug}/`), "./psar/", "./psar/acronyms/", ...psar.lessons.map(t => `./psar/${t.slug}/`)];
 const hash = crypto.createHash("sha256");
-["index.html", "lessons/index.html", "psar/index.html", "psar/acronyms/index.html", "feedback.js", "reference/index.html", ...topics.map(t => `topics/${t.slug}/index.html`), ...psar.lessons.map(t => `psar/${t.slug}/index.html`)].forEach(f => hash.update(read(f)));
+["index.html", "lessons/index.html", "psar/index.html", "psar/acronyms/index.html", "feedback.js", "sync.js", "reference/index.html", ...topics.map(t => `topics/${t.slug}/index.html`), ...psar.lessons.map(t => `psar/${t.slug}/index.html`)].forEach(f => hash.update(read(f)));
 const digest = hash.digest("hex").slice(0, 12);
 let sw = read("sw.js");
 if (!sw.includes(`CONTENT = "${digest}"`)) {

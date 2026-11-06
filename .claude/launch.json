@@ -4,20 +4,52 @@
     {
       "name": "flashcards",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8101", "--bind", "127.0.0.1", "--directory", "flashcards"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8101",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "flashcards"
+      ],
       "port": 8101
     },
     {
       "name": "quiz",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8102", "--bind", "127.0.0.1", "--directory", "quiz"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8102",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "quiz"
+      ],
       "port": 8102
     },
     {
       "name": "site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8100", "--bind", "127.0.0.1", "--directory", "."],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8100",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "."
+      ],
       "port": 8100
+    },
+    {
+      "name": "sync",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "scripts/sync-dev-server.js"
+      ],
+      "port": 8787
     }
   ]
 }

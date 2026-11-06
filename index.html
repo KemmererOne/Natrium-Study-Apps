@@ -87,21 +87,29 @@ h1 { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
     <p class="note">Practice questions with answers</p>
   </div>
 
-  <p class="note">Flashcard marks and lesson progress are kept only on your device. Quiz scores and missed questions are not kept or reported.</p>
+  <div id="sync-box"></div>
+
+  <p class="note">Flashcard marks and lesson progress are kept on your device, and online under a private code only if you turn on sync. Quiz scores and missed questions are not kept or reported.</p>
 
   <p class="note"><a class="ref" href="reference/">Sources and reference</a></p>
   <p class="note">Feedback or an error? Email <a class="ref" id="feedback-link"></a><br>and include the item ID, such as Q12 or C34.</p>
 </main>
 <script src="feedback.js"></script>
+<script src="sync.js"></script>
 <script>
-try {
-  const all = JSON.parse(localStorage.getItem("natrium-lessons-progress")) || {};
-  document.querySelectorAll(".lesson-note").forEach(note => {
-    const psar = note.dataset.prefix === "psar";
-    const finished = Object.entries(all).filter(([slug, p]) => p.done && slug.startsWith("psar-") === psar).length;
-    if (finished) note.textContent = finished + " of " + note.dataset.total + " lessons completed";
-  });
-} catch (e) {}
+function showLessons() {
+  try {
+    const all = JSON.parse(localStorage.getItem("natrium-lessons-progress")) || {};
+    document.querySelectorAll(".lesson-note").forEach(note => {
+      const psar = note.dataset.prefix === "psar";
+      const finished = Object.entries(all).filter(([slug, p]) => p.done && slug.startsWith("psar-") === psar).length;
+      note.textContent = finished ? finished + " of " + note.dataset.total + " lessons completed" : note.dataset.total + " lesson plans";
+    });
+  } catch (e) {}
+}
+showLessons();
+addEventListener("natrium-sync", showLessons);
+Sync.panel(document.getElementById("sync-box"));
 const link = document.getElementById("feedback-link");
 link.textContent = FEEDBACK_EMAIL;
 link.href = mailto("Natrium study apps feedback", "Item ID, if any:\n\nYour feedback or the error:\n");

@@ -168,6 +168,7 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
   </div>
  </section>
 </main>
+<script src="../sync.js"></script>
 <script>
 const plan = document.getElementById("plan"), chosen = document.getElementById("chosen");
 const KEY = "natrium-lessons-progress";
@@ -205,6 +206,7 @@ function refresh() {
 }
 plan.addEventListener("change", show);
 addEventListener("pageshow", refresh);
+addEventListener("natrium-sync", refresh);
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../sw.js").catch(() => {});
 </script>
 </html>

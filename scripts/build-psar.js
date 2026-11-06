@@ -10,7 +10,7 @@ const EXTRA = `
 .study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
 .src { font-size: 0.9rem; }
 `;
-module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, mailto, TERMS, GLOSSARY_LIB, acr }) => {
+module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, SYNC_LIB, mailto, TERMS, GLOSSARY_LIB, acr }) => {
   const plan = JSON.parse(read("work/psar/plan.json"));
   const lessons = fs.readdirSync(at("work/psar")).filter(f => f.endsWith(".json") && f !== "plan.json").map(f => JSON.parse(read("work/psar/" + f)));
   const byId = new Map(lessons.map(t => [t.id, t]));
@@ -172,6 +172,7 @@ ${side}
 ${sections.replace(/(\d)x10-(\d+)(?=[^<>]*<)/g, "$1×10<sup>-$2</sup>")}
 </div>
 </main>
+<script>${SYNC_LIB}</script>
 <script>${SCRIPT}</script>
 <script>window.PSAR_TERMS = ${JSON.stringify(used(sections)).replace(/</g, "\\u003c")}; window.PSAR_TERMS_PAGE = "../acronyms/";
 ${GLOSSARY_LIB}
