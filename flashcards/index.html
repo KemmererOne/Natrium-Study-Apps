@@ -121,6 +121,7 @@ h1 { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
 .grade { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 .grade .btn.ok { background: var(--ok); border-color: var(--ok); color: #fff; }
 /* Phone width: the grade buttons share their row evenly */
+@media (min-width: 900px) { .wrap { max-width: 840px; } }
 @media (max-width: 480px) {
   #cardcontrols .btn { flex: 1; }
 }

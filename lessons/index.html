@@ -32,8 +32,28 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
 .chosen p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .big { display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 1.25rem; padding: 20px 16px; border-radius: 10px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); }
 .note { margin: 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.pane { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.all { display: none; }
+/* Wide screens also show every lesson at once. Phones keep the drop selector only. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 36px; align-items: start; }
+  .pane { position: sticky; top: 16px; }
+  .all { display: block; min-width: 0; }
+  .all h2 { margin: 8px 0 12px; font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.3rem; }
+  .groups { columns: 2; column-gap: 28px; }
+  .group { break-inside: avoid; margin-bottom: 18px; }
+  .group h3 { margin: 0 0 6px; font-size: 0.95rem; display: flex; justify-content: space-between; gap: 10px; }
+  .group h3 span { color: var(--muted); font-weight: 400; white-space: nowrap; }
+  .group ul { list-style: none; margin: 0; padding: 0; }
+  .group li { padding: 5px 0; border-top: 1px solid var(--line); }
+  .group a { text-decoration: none; } .group a:hover { text-decoration: underline; }
+  .group a.is-done::before { content: "\2713\00a0"; color: var(--good); }
+  .group small { display: block; color: var(--muted); }
+  .group .off { color: var(--muted); }
+}
 </style>
 <main class="wrap">
+ <div class="pane">
   <a class="home" href="../"><span aria-hidden="true">←</span> Home</a>
   <h1>Lesson Plans</h1>
   <div>
@@ -124,24 +144,66 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
     <h2 id="chosen-title"></h2>
     <p id="chosen-where"></p>
     <p id="chosen-status"></p>
+    <p id="chosen-progress"></p>
     <a class="big" id="start">Start lesson</a>
   </section>
-  <p class="note">58 of 58 lesson plans built. All are Draft until reviewed.</p>
+  <p class="note" id="progress">0 of 58 lessons completed</p>
+  <p class="note">Lesson progress is kept only on this device.</p>
   <p class="note"><a href="../reference/#lesson-references">References</a></p>
+ </div>
+ <section class="all" aria-label="All lesson plans">
+  <h2>All lesson plans</h2>
+  <div class="groups">
+   <div class="group"><h3>Classical Physics <span></span></h3><ul><li><a href="../topics/cp-01-unit-systems/" data-slug="cp-01-unit-systems">Unit Systems</a><small>Reviewed</small></li><li><a href="../topics/cp-02-vectors/" data-slug="cp-02-vectors">Vectors</a><small>Reviewed</small></li><li><a href="../topics/cp-03-force-and-motion/" data-slug="cp-03-force-and-motion">Force and Motion</a><small>Reviewed</small></li><li><a href="../topics/cp-04-application-of-newton-s-laws/" data-slug="cp-04-application-of-newton-s-laws">Application of Newton's Laws</a><small>Reviewed</small></li><li><a href="../topics/cp-05-energy-work-and-power/" data-slug="cp-05-energy-work-and-power">Energy, Work, and Power</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Electrical Science <span></span></h3><ul><li><a href="../topics/es-01-basic-electrical-theory/" data-slug="es-01-basic-electrical-theory">Basic Electrical Theory</a><small>Reviewed</small></li><li><a href="../topics/es-02-basic-dc-theory/" data-slug="es-02-basic-dc-theory">Basic DC Theory</a><small>Reviewed</small></li><li><a href="../topics/es-03-dc-circuits/" data-slug="es-03-dc-circuits">DC Circuits</a><small>Reviewed</small></li><li><a href="../topics/es-04-batteries/" data-slug="es-04-batteries">Batteries</a><small>Reviewed</small></li><li><a href="../topics/es-05-dc-generators/" data-slug="es-05-dc-generators">DC Generators</a><small>Reviewed</small></li><li><a href="../topics/es-06-dc-motors/" data-slug="es-06-dc-motors">DC Motors</a><small>Reviewed</small></li><li><a href="../topics/es-07-basic-ac-theory/" data-slug="es-07-basic-ac-theory">Basic AC Theory</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-08-basic-ac-reactive-components/" data-slug="es-08-basic-ac-reactive-components">Basic AC Reactive Components</a><small>Reviewed</small></li><li><a href="../topics/es-09-basic-ac-power/" data-slug="es-09-basic-ac-power">Basic AC Power</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-10-ac-generators/" data-slug="es-10-ac-generators">AC Generators</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-11-voltage-regulators/" data-slug="es-11-voltage-regulators">Voltage Regulators</a><small>Reviewed</small></li><li><a href="../topics/es-12-ac-motors/" data-slug="es-12-ac-motors">AC Motors</a><small>Reviewed</small></li><li><a href="../topics/es-13-transformers/" data-slug="es-13-transformers">Transformers</a><small>Reviewed</small></li><li><a href="../topics/es-14-test-instruments-and-measuring-devices/" data-slug="es-14-test-instruments-and-measuring-devices">Test Instruments &amp; Measuring Devices</a><small>Reviewed</small></li><li><a href="../topics/es-15-electrical-distribution-systems/" data-slug="es-15-electrical-distribution-systems">Electrical Distribution Systems</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Thermodynamics, Heat Transfer, and Fluid Flow <span></span></h3><ul><li><a href="../topics/ht-01-thermodynamics/" data-slug="ht-01-thermodynamics">Thermodynamics</a><small>Reviewed</small></li><li><a href="../topics/ht-02-heat-transfer/" data-slug="ht-02-heat-transfer">Heat Transfer</a><small>Reviewed, Draft source</small></li><li><a href="../topics/ht-03-fluid-flow/" data-slug="ht-03-fluid-flow">Fluid Flow</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Instrumentation and Control <span></span></h3><ul><li><a href="../topics/ic-01-temperature-detectors/" data-slug="ic-01-temperature-detectors">Temperature Detectors</a><small>Reviewed</small></li><li><a href="../topics/ic-02-pressure-detectors/" data-slug="ic-02-pressure-detectors">Pressure Detectors</a><small>Reviewed</small></li><li><a href="../topics/ic-03-level-detectors/" data-slug="ic-03-level-detectors">Level Detectors</a><small>Reviewed</small></li><li><a href="../topics/ic-04-flow-detectors/" data-slug="ic-04-flow-detectors">Flow Detectors</a><small>Reviewed</small></li><li><a href="../topics/ic-05-position-indicators/" data-slug="ic-05-position-indicators">Position Indicators</a><small>Reviewed</small></li><li><a href="../topics/ic-06-radiation-detectors/" data-slug="ic-06-radiation-detectors">Radiation Detectors</a><small>Reviewed</small></li><li><a href="../topics/ic-07-process-controls/" data-slug="ic-07-process-controls">Process Controls</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Chemistry <span></span></h3><ul><li><a href="../topics/ch-01-fundamentals-of-chemistry/" data-slug="ch-01-fundamentals-of-chemistry">Fundamentals of Chemistry</a><small>Reviewed</small></li><li><a href="../topics/ch-02-corrosion/" data-slug="ch-02-corrosion">Corrosion</a><small>Reviewed</small></li><li><a href="../topics/ch-03-reactor-water-chemistry/" data-slug="ch-03-reactor-water-chemistry">Reactor Water Chemistry</a><small>Reviewed, Water-system only</small></li><li><a href="../topics/ch-04-principles-of-water-treatment/" data-slug="ch-04-principles-of-water-treatment">Principles of Water Treatment</a><small>Reviewed, Water-system only</small></li><li><a href="../topics/ch-05-hazards-of-chemicals-and-gases/" data-slug="ch-05-hazards-of-chemicals-and-gases">Hazards of Chemicals and Gases</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Engineering Symbology, Prints, and Drawings <span></span></h3><ul><li><a href="../topics/pr-01-introduction-to-print-reading/" data-slug="pr-01-introduction-to-print-reading">Introduction To Print Reading</a><small>Reviewed</small></li><li><a href="../topics/pr-02-engineering-fluid-diagrams-and-prints/" data-slug="pr-02-engineering-fluid-diagrams-and-prints">Engineering Fluid Diagrams and Prints</a><small>Reviewed</small></li><li><a href="../topics/pr-03-electrical-diagrams-and-schematics/" data-slug="pr-03-electrical-diagrams-and-schematics">Electrical Diagrams and Schematics</a><small>Reviewed</small></li><li><a href="../topics/pr-04-electronic-diagrams-and-schematics/" data-slug="pr-04-electronic-diagrams-and-schematics">Electronic Diagrams and Schematics</a><small>Reviewed</small></li><li><a href="../topics/pr-05-logic-diagrams/" data-slug="pr-05-logic-diagrams">Logic Diagrams</a><small>Reviewed</small></li><li><a href="../topics/pr-06-engineering-fabrication-construction-and-architectural-drawings/" data-slug="pr-06-engineering-fabrication-construction-and-architectural-drawings">Engineering Fabrication, Construction, and Architectural Drawings</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Material Science <span></span></h3><ul><li><a href="../topics/ms-01-structure-of-metals/" data-slug="ms-01-structure-of-metals">Structure of Metals</a><small>Reviewed</small></li><li><a href="../topics/ms-02-properties-of-metals/" data-slug="ms-02-properties-of-metals">Properties of Metals</a><small>Reviewed</small></li><li><a href="../topics/ms-03-thermal-shock/" data-slug="ms-03-thermal-shock">Thermal Shock</a><small>Reviewed</small></li><li><a href="../topics/ms-04-brittle-fracture/" data-slug="ms-04-brittle-fracture">Brittle Fracture</a><small>Reviewed</small></li><li><a href="../topics/ms-05-plant-materials/" data-slug="ms-05-plant-materials">Plant Materials</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Mechanical Science <span></span></h3><ul><li><a href="../topics/me-01-diesel-engine-fundamentals/" data-slug="me-01-diesel-engine-fundamentals">Diesel Engine Fundamentals</a><small>Reviewed</small></li><li><a href="../topics/me-02-heat-exchangers/" data-slug="me-02-heat-exchangers">Heat Exchangers</a><small>Reviewed</small></li><li><a href="../topics/me-03-pumps/" data-slug="me-03-pumps">Pumps</a><small>Reviewed</small></li><li><a href="../topics/me-04-valves/" data-slug="me-04-valves">Valves</a><small>Reviewed</small></li><li><a href="../topics/me-05-miscellaneous-mechanical-components/" data-slug="me-05-miscellaneous-mechanical-components">Miscellaneous Mechanical Components</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Nuclear Physics and Reactor Theory <span></span></h3><ul><li><a href="../topics/np-01-atomic-and-nuclear-physics/" data-slug="np-01-atomic-and-nuclear-physics">Atomic and Nuclear Physics</a><small>Reviewed</small></li><li><a href="../topics/np-02-reactor-theory-neutron-characteristics/" data-slug="np-02-reactor-theory-neutron-characteristics">Reactor Theory (Neutron Characteristics)</a><small>Reviewed</small></li><li><a href="../topics/np-03-reactor-theory-nuclear-parameters/" data-slug="np-03-reactor-theory-nuclear-parameters">Reactor Theory (Nuclear Parameters)</a><small>Reviewed, Draft source</small></li><li><a href="../topics/np-04-reactor-theory-reactor-operations/" data-slug="np-04-reactor-theory-reactor-operations">Reactor Theory (Reactor Operations)</a><small>Reviewed</small></li></ul></div>
+   <div class="group"><h3>Sodium Systems <span></span></h3><ul><li><a href="../topics/na-01-cold-traps-and-sodium-coolant-purification/" data-slug="na-01-cold-traps-and-sodium-coolant-purification">Cold Traps and Sodium Coolant Purification</a><small>Reviewed, Draft source</small></li><li><a href="../topics/na-02-plugging-temperature-indicators/" data-slug="na-02-plugging-temperature-indicators">Plugging Temperature Indicators</a><small>Reviewed</small></li><li><a href="../topics/na-03-sodium-leak-detectors/" data-slug="na-03-sodium-leak-detectors">Sodium Leak Detectors</a><small>Reviewed</small></li></ul></div>
+  </div>
+ </section>
 </main>
 <script>
 const plan = document.getElementById("plan"), chosen = document.getElementById("chosen");
+const KEY = "natrium-lessons-progress";
+const slugOf = v => v.split("/")[2];
+const options = [...plan.options].filter(o => o.value);
+options.forEach(o => { o.dataset.label = o.textContent; });
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function dateText(d) { return new Date(d + "T12:00:00").toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }); }
 function show() {
   const o = plan.options[plan.selectedIndex];
   chosen.hidden = !plan.value;
   if (!plan.value) return;
+  const p = loadAll()[slugOf(plan.value)], start = document.getElementById("start"), resume = p && !p.done && p.n > 1;
   document.getElementById("chosen-title").textContent = o.dataset.title;
   document.getElementById("chosen-where").textContent = o.dataset.where;
   document.getElementById("chosen-status").textContent = "Status: " + o.dataset.status;
-  document.getElementById("start").href = plan.value;
+  document.getElementById("chosen-progress").textContent = "Your progress: " + (p && p.done ? "Completed " + dateText(p.done) : resume ? "Stopped at page " + p.n + " of " + p.total : p ? "Started" : "Not started");
+  start.textContent = p && p.done ? "Review lesson" : resume ? "Resume lesson" : "Start lesson";
+  start.href = plan.value + (resume ? "#" + p.page : "");
+}
+function refresh() {
+  const all = loadAll();
+  options.forEach(o => {
+    const p = all[slugOf(o.value)];
+    o.textContent = (p && p.done ? "✓ " : p ? "Started: " : "") + o.dataset.label;
+  });
+  document.querySelectorAll(".group").forEach(g => {
+    const links = [...g.querySelectorAll("a")];
+    links.forEach(a => a.classList.toggle("is-done", !!(all[a.dataset.slug] || {}).done));
+    g.querySelector("h3 span").textContent = links.filter(a => a.classList.contains("is-done")).length + " of " + links.length;
+  });
+  const finished = options.filter(o => (all[slugOf(o.value)] || {}).done).length;
+  document.getElementById("progress").textContent = finished + " of " + options.length + " lessons completed";
+  show();
 }
 plan.addEventListener("change", show);
-addEventListener("pageshow", show);
+addEventListener("pageshow", refresh);
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../sw.js").catch(() => {});
 </script>
 </html>

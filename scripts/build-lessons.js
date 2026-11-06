@@ -131,16 +131,70 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 `;
 const SCRIPT = `
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {
@@ -261,12 +315,15 @@ ${t.word_sequence.length ? `<div class="obj"><h3>Lesson plan sequence</h3><ol>${
 <p><a class="report" href="${esc(mailto("Problem with lesson " + t.module_id, `Lesson: ${t.module_id} ${t.title}\nPage:\n\nWhat looks wrong:\n`))}">Report a problem with this lesson</a></p>`;
   };
   const menu = `<details class="menu"><summary>All pages</summary><ol>${list.map(p => `<li><a href="#${p.id}">${esc(p.title)}</a></li>`).join("")}</ol></details>`;
+  const finish = `<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>`;
+  const side = `<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol>${list.map(p => `<li><a href="#${p.id}">${esc(p.title)}</a></li>`).join("")}</ol>${finish}</nav>`;
   const sections = list.map((p, i) => `<section class="page" id="${p.id}">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page ${i + 1} of ${list.length}</span></div>
 <h1>${esc(t.title)}</h1>
 <ul class="tags">${tagList(p)}</ul>
 ${menu}
 ${body(p)}
+${p.id === "summary" || p.id === "references" ? finish : ""}
 <div class="pager">${i ? `<a href="#${list[i - 1].id}"><span aria-hidden="true">←</span> ${esc(list[i - 1].title)}</a>` : ""}${i + 1 < list.length ? `<a class="next" href="#${list[i + 1].id}">${esc(list[i + 1].title)} <span aria-hidden="true">→</span></a>` : ""}</div>
 </section>`).join("\n");
   write(`topics/${t.slug}/index.html`, `<!doctype html>
@@ -277,8 +334,11 @@ ${body(p)}
 <meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
 <title>${esc(t.title)}</title>
 <style>${CSS}</style>
-<main class="wrap">
+<main class="wrap" data-slug="${esc(t.slug)}">
+${side}
+<div class="pages">
 ${sections}
+</div>
 </main>
 <script>${SCRIPT}</script>
 </html>
@@ -289,6 +349,11 @@ ${sections}
 const done = new Map(topics.map(t => [t.module_id, t]));
 const groups = new Map();
 manifest.modules.forEach(m => { if (!groups.has(m.handbook_title)) groups.set(m.handbook_title, []); groups.get(m.handbook_title).push(m); });
+const planLink = m => {
+  const t = done.get(m.module_id);
+  if (!t) return `<li><span class="off">${esc(m.title)}</span><small>In progress</small></li>`;
+  return `<li><a href="../topics/${t.slug}/" data-slug="${t.slug}">${esc(m.title)}</a><small>${esc([t.status, ...t.scope_tags].join(", "))}</small></li>`;
+};
 const option = m => {
   const t = done.get(m.module_id);
   const where = m.handbook ? `${m.handbook}${m.volume && /\/\d/.test(m.handbook) ? ", Volume " + m.volume : ""}` : "Sodium system lesson";
@@ -331,8 +396,28 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
 .chosen p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .big { display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 1.25rem; padding: 20px 16px; border-radius: 10px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); }
 .note { margin: 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.pane { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.all { display: none; }
+/* Wide screens also show every lesson at once. Phones keep the drop selector only. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 36px; align-items: start; }
+  .pane { position: sticky; top: 16px; }
+  .all { display: block; min-width: 0; }
+  .all h2 { margin: 8px 0 12px; font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.3rem; }
+  .groups { columns: 2; column-gap: 28px; }
+  .group { break-inside: avoid; margin-bottom: 18px; }
+  .group h3 { margin: 0 0 6px; font-size: 0.95rem; display: flex; justify-content: space-between; gap: 10px; }
+  .group h3 span { color: var(--muted); font-weight: 400; white-space: nowrap; }
+  .group ul { list-style: none; margin: 0; padding: 0; }
+  .group li { padding: 5px 0; border-top: 1px solid var(--line); }
+  .group a { text-decoration: none; } .group a:hover { text-decoration: underline; }
+  .group a.is-done::before { content: "\\2713\\00a0"; color: var(--good); }
+  .group small { display: block; color: var(--muted); }
+  .group .off { color: var(--muted); }
+}
 </style>
 <main class="wrap">
+ <div class="pane">
   <a class="home" href="../"><span aria-hidden="true">←</span> Home</a>
   <h1>Lesson Plans</h1>
   <div>
@@ -348,24 +433,57 @@ ${mods.map(option).join("\n")}
     <h2 id="chosen-title"></h2>
     <p id="chosen-where"></p>
     <p id="chosen-status"></p>
+    <p id="chosen-progress"></p>
     <a class="big" id="start">Start lesson</a>
   </section>
-  <p class="note">${topics.length} of ${manifest.modules.length} lesson plans built. All are Draft until reviewed.</p>
+  <p class="note" id="progress">0 of ${topics.length} lessons completed</p>
+  <p class="note">Lesson progress is kept only on this device.</p>
   <p class="note"><a href="../reference/#lesson-references">References</a></p>
+ </div>
+ <section class="all" aria-label="All lesson plans">
+  <h2>All lesson plans</h2>
+  <div class="groups">
+${[...groups].map(([title, mods]) => `   <div class="group"><h3>${esc(title)} <span></span></h3><ul>${mods.map(planLink).join("")}</ul></div>`).join("\n")}
+  </div>
+ </section>
 </main>
 <script>
 const plan = document.getElementById("plan"), chosen = document.getElementById("chosen");
+const KEY = "natrium-lessons-progress";
+const slugOf = v => v.split("/")[2];
+const options = [...plan.options].filter(o => o.value);
+options.forEach(o => { o.dataset.label = o.textContent; });
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function dateText(d) { return new Date(d + "T12:00:00").toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }); }
 function show() {
   const o = plan.options[plan.selectedIndex];
   chosen.hidden = !plan.value;
   if (!plan.value) return;
+  const p = loadAll()[slugOf(plan.value)], start = document.getElementById("start"), resume = p && !p.done && p.n > 1;
   document.getElementById("chosen-title").textContent = o.dataset.title;
   document.getElementById("chosen-where").textContent = o.dataset.where;
   document.getElementById("chosen-status").textContent = "Status: " + o.dataset.status;
-  document.getElementById("start").href = plan.value;
+  document.getElementById("chosen-progress").textContent = "Your progress: " + (p && p.done ? "Completed " + dateText(p.done) : resume ? "Stopped at page " + p.n + " of " + p.total : p ? "Started" : "Not started");
+  start.textContent = p && p.done ? "Review lesson" : resume ? "Resume lesson" : "Start lesson";
+  start.href = plan.value + (resume ? "#" + p.page : "");
+}
+function refresh() {
+  const all = loadAll();
+  options.forEach(o => {
+    const p = all[slugOf(o.value)];
+    o.textContent = (p && p.done ? "\u2713 " : p ? "Started: " : "") + o.dataset.label;
+  });
+  document.querySelectorAll(".group").forEach(g => {
+    const links = [...g.querySelectorAll("a")];
+    links.forEach(a => a.classList.toggle("is-done", !!(all[a.dataset.slug] || {}).done));
+    g.querySelector("h3 span").textContent = links.filter(a => a.classList.contains("is-done")).length + " of " + links.length;
+  });
+  const finished = options.filter(o => (all[slugOf(o.value)] || {}).done).length;
+  document.getElementById("progress").textContent = finished + " of " + options.length + " lessons completed";
+  show();
 }
 plan.addEventListener("change", show);
-addEventListener("pageshow", show);
+addEventListener("pageshow", refresh);
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../sw.js").catch(() => {});
 </script>
 </html>
@@ -375,7 +493,7 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
 const lessons = `<!-- lessons:start (generated by scripts/build-lessons.js) -->
   <div class="choice">
     <a class="big" href="lessons/">Lesson Plans</a>
-    <p class="note">${topics.length} of ${manifest.modules.length} lesson plans built so far</p>
+    <p class="note" id="lesson-note" data-total="${topics.length}">${topics.length} lesson plans</p>
   </div>
   <!-- lessons:end -->`;
 write("index.html", read("index.html").replace(/<!-- lessons:start[\s\S]*?<!-- lessons:end -->/, () => lessons));

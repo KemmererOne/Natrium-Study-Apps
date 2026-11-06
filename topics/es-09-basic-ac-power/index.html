@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="es-09-basic-ac-power">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">The power triangle</a></li><li><a href="#check-1">Knowledge check: The power triangle</a></li><li><a href="#concept-2">Power factor</a></li><li><a href="#check-2">Knowledge check: Power factor</a></li><li><a href="#concept-3">Three-phase systems</a></li><li><a href="#check-3">Knowledge check: Three-phase systems</a></li><li><a href="#concept-4">Unbalanced loads</a></li><li><a href="#check-4">Knowledge check: Unbalanced loads</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 12</span></div>
 <h1>Basic AC Power</h1>
 <ul class="tags"><li class="tag">Reviewed</li><li class="tag">Draft source</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">The power triangle</a></li><li><a href="#check-1">Knowledge check: The power triangle</a></li><li><a href="#concept-2">Power factor</a></li><li><a href="#check-2">Knowledge check: Power factor</a></li><li><a href="#concept-3">Three-phase systems</a></li><li><a href="#check-3">Knowledge check: Three-phase systems</a></li><li><a href="#concept-4">Unbalanced loads</a></li><li><a href="#check-4">Knowledge check: Unbalanced loads</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1011/3-92, Module 9.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given an AC single-phase or three-phase circuit, DESCRIBE the power characteristics in the circuit. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DESCRIBE the relationship between apparent, true, and reactive power by definition or by using a power triangle. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><p><span class="num">1.2</span> DEFINE power factor as it relates to true power and apparent power. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><p><span class="num">1.3</span> Given the necessary values for voltage (E), resistance (R), reactance (X), impedance (Z), and/or current (I), CALCULATE the following power components for an AC circuit: <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><ul class="letters"><li>a. True power (P)</li><li>b. Apparent power (S)</li><li>c. Reactive power (Q)</li><li>d. Power factor (pf)</li></ul><p><span class="num">1.4</span> DEFINE the following terms: <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><ul class="letters"><li>a. Leading power factor</li><li>b. Lagging power factor</li></ul><p><span class="num">1.5</span> STATE the reasons that three-phase power systems are used in the industry. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><p><span class="num">1.6</span> Given values for current, voltage, and power factor in a three-phase system, CALCULATE the following: <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><ul class="letters"><li>a. Real power</li><li>b. Reactive power</li><li>c. Apparent power</li></ul><p><span class="num">1.7</span> Given a diagram of a wye- or delta-connected three-phase system, DESCRIBE the voltage/current relationships of the circuit. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p><p><span class="num">1.8</span> STATE the indications of an unbalanced load in a three-phase power system. <cite>DOE-HDBK-1011/3-92 ES-09 p.v</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">The power triangle <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -83,6 +104,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Does not perform any useful work but is essential for maintaining magnetic and electric fields through inductors and capacitors." <cite>Word: AC Generator Theory and Operation.docx, slide 1.23 Power Factor Recall</cite></blockquote>
 <blockquote>"The total power delivered by the source is the apparent power." <cite>DOE-HDBK-1011/3-92 ES-09 p.4</cite></blockquote>
 <p>Part of the apparent power, called true power, is dissipated by the circuit resistance as heat. The rest is returned to the source by the circuit inductance and capacitance. <cite>DOE-HDBK-1011/3-92 ES-09 p.4</cite></p>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: The power triangle <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -110,6 +132,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q734&amp;body=Item%3A%20Q734%0ATopic%3A%20Motors%20and%20Generators%0AQuestion%3A%20Why%20is%20reactive%20power%20not%20useful%20power%3F%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Power%20Triangle%2C%20ES-09%20p.%203%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> The power triangle</a><a class="next" href="#concept-2">Power factor <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -127,6 +150,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The memory aid is ELI the ICE man. ELI refers to an: <cite>DOE-HDBK-1011/3-92 ES-09 p.4</cite></p>
 <blockquote>"inductive circuit (L) where current (I) lags voltage (E)." <cite>DOE-HDBK-1011/3-92 ES-09 p.4</cite></blockquote>
 <p>ICE refers to a capacitive circuit (C) where current (I) leads voltage (E). <cite>DOE-HDBK-1011/3-92 ES-09 p.4</cite></p>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: The power triangle</a><a class="next" href="#check-2">Knowledge check: Power factor <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -184,6 +208,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q738&amp;body=Item%3A%20Q738%0ATopic%3A%20Motors%20and%20Generators%0AQuestion%3A%20In%20an%20inductive%20circuit%2C%20the%20power%20factor%20is%3A%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Power%20Triangle%2C%20ES-09%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Power factor</a><a class="next" href="#concept-3">Three-phase systems <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -210,6 +235,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p class="eq"><b>ST = √3 VT IL</b> <cite>DOE-HDBK-1011/3-92 ES-09 p.21</cite></p>
 <p class="eq"><b>QT = √3 VT IL sin θ</b> <cite>DOE-HDBK-1011/3-92 ES-09 p.21</cite></p>
 <figure class="fig"><img src="data:image/png;base64,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" alt="Three-phase power triangle with PT in kW on the base, QT in kVAR on the vertical side, and ST in kVA on the hypotenuse."><figcaption>Figure 13. 3φ Power Triangle <cite>DOE-HDBK-1011/3-92 ES-09 p.21</cite></figcaption></figure>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Power factor</a><a class="next" href="#check-3">Knowledge check: Three-phase systems <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -277,6 +303,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q744&amp;body=Item%3A%20Q744%0ATopic%3A%20Motors%20and%20Generators%0AQuestion%3A%20In%20a%20balanced%20wye%20load%2C%20how%20does%20line%20current%20compare%20with%20phase%20current%3F%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Three-Phase%20Circuits%2C%20ES-09%20p.%2020%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Three-phase systems</a><a class="next" href="#concept-4">Unbalanced loads <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -290,6 +317,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"the neutral connection in a wye-connected load will carry more current than the phase under a balanced load." <cite>DOE-HDBK-1011/3-92 ES-09 p.25</cite></blockquote>
 <blockquote>"Unbalanced three-phase circuits are indicated by abnormally high currents in one or more of the phases." <cite>DOE-HDBK-1011/3-92 ES-09 p.25</cite></blockquote>
 <p>This may cause damage to equipment if the imbalance is allowed to continue. <cite>DOE-HDBK-1011/3-92 ES-09 p.25</cite></p>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Three-phase systems</a><a class="next" href="#check-4">Knowledge check: Unbalanced loads <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -317,6 +345,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q745&amp;body=Item%3A%20Q745%0ATopic%3A%20Motors%20and%20Generators%0AQuestion%3A%20In%20a%20fault%20condition%2C%20what%20can%20the%20neutral%20connection%20of%20a%20wye-connected%20load%20carry%3F%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Three-Phase%20Circuits%2C%20ES-09%20p.%2025%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Unbalanced loads</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -326,6 +355,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">The power triangle</a></li><li><a href="#check-1">Knowledge check: The power triangle</a></li><li><a href="#concept-2">Power factor</a></li><li><a href="#check-2">Knowledge check: Power factor</a></li><li><a href="#concept-3">Three-phase systems</a></li><li><a href="#check-3">Knowledge check: Three-phase systems</a></li><li><a href="#concept-4">Unbalanced loads</a></li><li><a href="#check-4">Knowledge check: Unbalanced loads</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Power in a series R-C circuit</h3><p>An 80 Ω XC and a 60 Ω resistance are in series with a 120 V source, and the current is 1.2 amps. Find the power factor, true power, reactive power, and apparent power.</p><ol><li>pf = cos θ, where θ = arctan(-80/60) = -53°, so pf = 0.60.</li><li>P = EI cos θ = (120)(1.2)(0.60) = 86.4 watts.</li><li>Q = EI sin θ = (120)(1.2)(0.798) = 114.9 VAR.</li><li>S = EI = (120)(1.2) = 144 VA.</li></ol><p class="answer">Answer: pf 0.60, P 86.4 watts, Q 114.9 VAR, S 144 VA</p><p><cite>DOE-HDBK-1011/3-92 ES-09 p.9</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Power in a series R-C-L circuit</h3><p>A series R-C-L circuit has 71.6 V applied, a 4 amp current, and a phase angle of 63.4°. Find the power factor, true power, and apparent power.</p><ol><li>pf = cos 63.4° = 0.45.</li><li>P = EI cos θ = (71.6)(4)(0.45) = 128.9 watts.</li><li>S = EI = (71.6)(4) = 286.4 VA.</li></ol><p class="answer">Answer: pf 0.45, P 128.9 watts, S 286.4 VA</p><p><cite>DOE-HDBK-1011/3-92 ES-09 p.13</cite></p></div>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Unbalanced loads</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -334,6 +364,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li><li class="tag">Draft source</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">The power triangle</a></li><li><a href="#check-1">Knowledge check: The power triangle</a></li><li><a href="#concept-2">Power factor</a></li><li><a href="#check-2">Knowledge check: Power factor</a></li><li><a href="#concept-3">Three-phase systems</a></li><li><a href="#check-3">Knowledge check: Three-phase systems</a></li><li><a href="#concept-4">Unbalanced loads</a></li><li><a href="#check-4">Knowledge check: Unbalanced loads</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>Apparent power is S = I²Z = ITE, true power is P = I²R = EI cos θ, and reactive power is Q = I²X = EI sin θ. <cite>DOE-HDBK-1011/3-92 ES-09 p.16</cite></li><li>ELI the ICE man describes the reactive characteristics of an AC circuit. <cite>DOE-HDBK-1011/3-92 ES-09 p.16</cite></li><li>Three-phase systems are used because the equipment is smaller, weighs less, and is more efficient. <cite>DOE-HDBK-1011/3-92 ES-09 p.26</cite></li><li>Unbalanced three-phase circuits are indicated by abnormally high currents in one or more of the phases. <cite>DOE-HDBK-1011/3-92 ES-09 p.26</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -348,18 +379,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q733, Q734, Q279, Q735, Q736, Q737, Q738, Q739, Q740, Q741, Q742, Q743, Q744, Q428, Q745.</p><p>Flashcards from this lesson: C759, C760, C761, C762, C763, C764.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20ES-09&amp;body=Lesson%3A%20ES-09%20Basic%20AC%20Power%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

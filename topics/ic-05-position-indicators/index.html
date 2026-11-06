@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ic-05-position-indicators">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Synchro equipment</a></li><li><a href="#check-1">Knowledge check: Synchro equipment</a></li><li><a href="#concept-2">Limit and reed switches</a></li><li><a href="#check-2">Knowledge check: Limit and reed switches</a></li><li><a href="#concept-3">Potentiometers and LVDTs</a></li><li><a href="#check-3">Knowledge check: Potentiometers and LVDTs</a></li><li><a href="#concept-4">Coil stack rod position</a></li><li><a href="#check-4">Knowledge check: Coil stack rod position</a></li><li><a href="#concept-5">Position circuits and environmental concerns</a></li><li><a href="#check-5">Knowledge check: Position circuits and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 14</span></div>
 <h1>Position Indicators</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Synchro equipment</a></li><li><a href="#check-1">Knowledge check: Synchro equipment</a></li><li><a href="#concept-2">Limit and reed switches</a></li><li><a href="#check-2">Knowledge check: Limit and reed switches</a></li><li><a href="#concept-3">Potentiometers and LVDTs</a></li><li><a href="#check-3">Knowledge check: Potentiometers and LVDTs</a></li><li><a href="#concept-4">Coil stack rod position</a></li><li><a href="#check-4">Knowledge check: Coil stack rod position</a></li><li><a href="#concept-5">Position circuits and environmental concerns</a></li><li><a href="#check-5">Knowledge check: Position circuits and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1013/1-92, Module 5.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given a position indicating instrument, RELATE the associated fundamental principles, including possible failure modes, to that instrument. <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DESCRIBE the synchro position indicators to include the basic construction and theory of operation. <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p><p><span class="num">1.2</span> DESCRIBE the following switch position indicators to include basic construction and theory of operation. <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p><ul class="letters"><li>a. Limit switches</li><li>b. Reed switches</li></ul><p><span class="num">1.3</span> DESCRIBE the following variable output position indicators to include basic construction and theory of operation. <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p><ul class="letters"><li>a. Potentiometer</li><li>b. Linear variable differential transformers (LVDT)</li></ul><p><span class="num">1.4</span> Given a diagram of a position indicator, STATE the purpose of the following components: <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p><ul class="letters"><li>a. Detection device</li><li>b. Indicator and control circuits</li></ul><p><span class="num">1.5</span> STATE the two environmental concerns that can affect the accuracy and reliabiltity of position indication equipment. <cite>DOE-HDBK-1013/1-92 IC-05 p.v</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Synchro equipment <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -81,6 +102,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"it incorporates a damping device to prevent hunting." <cite>DOE-HDBK-1013/1-92 IC-05 p.2</cite></blockquote>
 <blockquote>"Hunting refers to the overshoot and undershoot that occur as the receiving device tries to match the sending device." <cite>DOE-HDBK-1013/1-92 IC-05 p.2</cite></blockquote>
 <blockquote>"Control transformer synchros are used when only a voltage indication of angular position is desired." <cite>DOE-HDBK-1013/1-92 IC-05 p.3</cite></blockquote>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Synchro equipment <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -118,6 +140,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1004&amp;body=Item%3A%20Q1004%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20How%20many%20stator%20windings%20does%20a%20synchro%20transmitter%20have%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Synchro%20Equipment%2C%20IC-05%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Synchro equipment</a><a class="next" href="#concept-2">Limit and reed switches <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -139,6 +162,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Failures are normally limited to a reed switch stuck open or stuck shut. <cite>DOE-HDBK-1013/1-92 IC-05 p.7</cite></p>
 <blockquote>"If a reed switch is stuck shut, the open (closed) indication will be continuously illuminated." <cite>DOE-HDBK-1013/1-92 IC-05 p.7</cite></blockquote>
 <p>If a reed switch is stuck open, the indication for that switch stays extinguished regardless of position. <cite>DOE-HDBK-1013/1-92 IC-05 p.7</cite></p>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Synchro equipment</a><a class="next" href="#check-2">Knowledge check: Limit and reed switches <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -186,6 +210,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1007&amp;body=Item%3A%20Q1007%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20A%20reed%20switch%20is%20stuck%20shut.%20What%20does%20the%20indication%20show%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Switches%2C%20IC-05%20p.%207%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Limit and reed switches</a><a class="next" href="#concept-3">Potentiometers and LVDTs <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -203,6 +228,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The extension acts as the movable core of a transformer. Moving it varies the inductance and output voltage in proportion to position. <cite>DOE-HDBK-1013/1-92 IC-05 p.9</cite></p>
 <blockquote>"A metal extension on the valve stem changes the coupling between the secondary coils." <cite>Word: Position Indicators.docx, slide 1.7 Linear Variable Differential Transformer (LVDT) valve position detector</cite></blockquote>
 <p>LVDT failures are limited to rare electrical faults. An open primary winding fails the indication to a value equal to zero differential voltage, normally mid-stroke. A failed secondary winding indicates full open or full closed. <cite>DOE-HDBK-1013/1-92 IC-05 p.9</cite></p>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Limit and reed switches</a><a class="next" href="#check-3">Knowledge check: Potentiometers and LVDTs <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -250,6 +276,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1009&amp;body=Item%3A%20Q1009%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20How%20does%20an%20LVDT%20differ%20from%20a%20potentiometer%20position%20indicator%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Variable%20Output%20Devices%2C%20IC-05%20p.%209%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Potentiometers and LVDTs</a><a class="next" href="#concept-4">Coil stack rod position <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -262,6 +289,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"As the control rod is raised, the drive mechanism becomes a core for the coils and the value of inductance goes up." <cite>Word: Position Indicators.docx, slide 1.5 Coil stack control rod position</cite></blockquote>
 <p>With the drive mechanism in the middle of a coil, its inductive reactance is higher and <cite>Word: Position Indicators.docx, slide 1.5 Coil stack control rod position</cite></p>
 <blockquote>"the ammeter would read a lower current." <cite>Word: Position Indicators.docx, slide 1.5 Coil stack control rod position</cite></blockquote>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Potentiometers and LVDTs</a><a class="next" href="#check-4">Knowledge check: Coil stack rod position <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -279,6 +307,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q280&amp;body=Item%3A%20Q280%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20In%20a%20coil-stack%20control%20rod%20position%20indicator%2C%20what%20does%20the%20ammeter%20on%20a%20coil%20read%20when%20the%20control%20rod%20drive%20is%20in%20the%20middle%20of%20that%20coil%3F%0ASource%3A%20Approved%20lesson%20plan%3A%20Position%20Indicators%20(Position%20Indicators.docx)%2C%20slide%201.5%20Coil%20stack%20control%20rod%20position%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Coil stack rod position</a><a class="next" href="#concept-5">Position circuits and environmental concerns <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -295,6 +324,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"two valves may be interlocked to prevent both of the valves from being opened at the same time." <cite>DOE-HDBK-1013/1-92 IC-05 p.11</cite></blockquote>
 <blockquote>"Control rod interlocks are normally used to prevent outward motion of certain rods unless certain conditions are met." <cite>DOE-HDBK-1013/1-92 IC-05 p.11</cite></blockquote>
 <blockquote>"The accuracy and reliability of position indication instrumentation can be affected by ambient temperature and humidity." <cite>DOE-HDBK-1013/1-92 IC-05 p.13</cite></blockquote>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Coil stack rod position</a><a class="next" href="#check-5">Knowledge check: Position circuits and environmental concerns <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -342,6 +372,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1012&amp;body=Item%3A%20Q1012%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20Which%20two%20environmental%20concerns%20can%20affect%20position%20indication%20equipment%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Position%20Indication%20Circuitry%2C%20IC-05%20p.%2013%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Position circuits and environmental concerns</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -351,6 +382,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Synchro equipment</a></li><li><a href="#check-1">Knowledge check: Synchro equipment</a></li><li><a href="#concept-2">Limit and reed switches</a></li><li><a href="#check-2">Knowledge check: Limit and reed switches</a></li><li><a href="#concept-3">Potentiometers and LVDTs</a></li><li><a href="#check-3">Knowledge check: Potentiometers and LVDTs</a></li><li><a href="#concept-4">Coil stack rod position</a></li><li><a href="#check-4">Knowledge check: Coil stack rod position</a></li><li><a href="#concept-5">Position circuits and environmental concerns</a></li><li><a href="#check-5">Knowledge check: Position circuits and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.2</span></div><h3>Stuck open reed switch</h3><p>A reed switch is stuck open. What does the operator see as the valve moves?</p><ol><li>The switch never closes</li><li>Its indication receives no signal</li></ol><p class="answer">Answer: The indication stays extinguished regardless of valve position.</p><p><cite>DOE-HDBK-1013/1-92 IC-05 p.7</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Open LVDT primary</h3><p>An LVDT primary winding opens. What does the indication do?</p><ol><li>The output falls to zero differential voltage</li><li>That normally corresponds to mid-stroke</li></ol><p class="answer">Answer: It fails to a predetermined value, normally mid-stroke.</p><p><cite>DOE-HDBK-1013/1-92 IC-05 p.9</cite></p></div>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Position circuits and environmental concerns</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -359,6 +391,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Synchro equipment</a></li><li><a href="#check-1">Knowledge check: Synchro equipment</a></li><li><a href="#concept-2">Limit and reed switches</a></li><li><a href="#check-2">Knowledge check: Limit and reed switches</a></li><li><a href="#concept-3">Potentiometers and LVDTs</a></li><li><a href="#check-3">Knowledge check: Potentiometers and LVDTs</a></li><li><a href="#concept-4">Coil stack rod position</a></li><li><a href="#check-4">Knowledge check: Coil stack rod position</a></li><li><a href="#concept-5">Position circuits and environmental concerns</a></li><li><a href="#check-5">Knowledge check: Position circuits and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>A basic synchro system has a transmitter and a receiver whose shaft follows the transmitter's electrical position. <cite>DOE-HDBK-1013/1-92 IC-05 p.4</cite></li><li>Limit switches and reed switches give ON/OFF position indication. <cite>DOE-HDBK-1013/1-92 IC-05 p.7</cite></li><li>Potentiometer and LVDT position indicators provide accurate indication of valve and rod position throughout their travel. <cite>DOE-HDBK-1013/1-92 IC-05 p.11</cite></li><li>Ambient temperature and humidity can affect position indication instrumentation. <cite>DOE-HDBK-1013/1-92 IC-05 p.13</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -373,18 +406,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q1002, Q1003, Q1004, Q392, Q1005, Q1006, Q1007, Q282, Q393, Q1008, Q1009, Q280, Q281, Q1010, Q1011, Q1012.</p><p>Flashcards from this lesson: C832, C833, C834, C835, C836.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20IC-05&amp;body=Lesson%3A%20IC-05%20Position%20Indicators%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ch-01-fundamentals-of-chemistry">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Matter and the atom</a></li><li><a href="#check-1">Knowledge check: Matter and the atom</a></li><li><a href="#concept-2">Atomic weight and the mole</a></li><li><a href="#check-2">Knowledge check: Atomic weight and the mole</a></li><li><a href="#concept-3">The periodic table</a></li><li><a href="#check-3">Knowledge check: The periodic table</a></li><li><a href="#concept-4">Electron shells and valence</a></li><li><a href="#check-4">Knowledge check: Electron shells and valence</a></li><li><a href="#concept-5">Chemical bonds</a></li><li><a href="#check-5">Knowledge check: Chemical bonds</a></li><li><a href="#concept-6">Chemical laws and combining elements</a></li><li><a href="#check-6">Knowledge check: Chemical laws and combining elements</a></li><li><a href="#concept-7">Mixtures and solutions</a></li><li><a href="#check-7">Knowledge check: Mixtures and solutions</a></li><li><a href="#concept-8">Concentration and balancing equations</a></li><li><a href="#check-8">Knowledge check: Concentration and balancing equations</a></li><li><a href="#concept-9">Acids, bases, and salts</a></li><li><a href="#check-9">Knowledge check: Acids, bases, and salts</a></li><li><a href="#concept-10">pH and pOH</a></li><li><a href="#check-10">Knowledge check: pH and pOH</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 24</span></div>
 <h1>Fundamentals of Chemistry</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Matter and the atom</a></li><li><a href="#check-1">Knowledge check: Matter and the atom</a></li><li><a href="#concept-2">Atomic weight and the mole</a></li><li><a href="#check-2">Knowledge check: Atomic weight and the mole</a></li><li><a href="#concept-3">The periodic table</a></li><li><a href="#check-3">Knowledge check: The periodic table</a></li><li><a href="#concept-4">Electron shells and valence</a></li><li><a href="#check-4">Knowledge check: Electron shells and valence</a></li><li><a href="#concept-5">Chemical bonds</a></li><li><a href="#check-5">Knowledge check: Chemical bonds</a></li><li><a href="#concept-6">Chemical laws and combining elements</a></li><li><a href="#check-6">Knowledge check: Chemical laws and combining elements</a></li><li><a href="#concept-7">Mixtures and solutions</a></li><li><a href="#check-7">Knowledge check: Mixtures and solutions</a></li><li><a href="#concept-8">Concentration and balancing equations</a></li><li><a href="#check-8">Knowledge check: Concentration and balancing equations</a></li><li><a href="#concept-9">Acids, bases, and salts</a></li><li><a href="#check-9">Knowledge check: Acids, bases, and salts</a></li><li><a href="#concept-10">pH and pOH</a></li><li><a href="#check-10">Knowledge check: pH and pOH</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1015/1-93, Module 1.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Without references, DESCRIBE the characteristics of an atom. <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DEFINE the following terms: <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><ul class="letters"><li>a. States of matter</li><li>b. Atomic weight</li><li>c. Molecular weight</li><li>d. Mole</li><li>e. Gram atomic weight</li><li>f. Gram molecular weight</li></ul><p><span class="num">1.2</span> LIST the components of an atom, their relative sizes, and charges. <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><p><span class="num">1.3</span> STATE the criterion used to classify an atom chemically. <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><p><span class="num">1.4</span> DEFINE the following subdivisions of the periodic table: <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><ul class="letters"><li>a. Periods of the periodic table</li><li>b. Groups of the periodic table</li><li>c. Classes of the periodic table</li></ul><p><span class="num">1.5</span> Given a periodic table, IDENTIFY the following subdivisions: <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><ul class="letters"><li>a. Periods of the periodic table</li><li>b. Groups of the periodic table</li><li>c. Classes of the periodic table</li></ul><p><span class="num">1.6</span> LIST the characteristics that elements in the same group on the periodic table share. <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p><p><span class="num">1.7</span> DEFINE the term valence. <cite>DOE-HDBK-1015/1-93 CH-01 p.vii</cite></p></div><div class="obj"><h3>Terminal objective</h3><p><span class="num">2.0</span> Given an incomplete chemical equation, BALANCE the equation by the method presented. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><h3>Enabling objectives</h3><p><span class="num">2.1</span> DEFINE the following terms: <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><ul class="letters"><li>a. Ionic bonds</li><li>b. Van der Waals forces</li><li>c. Covalent bonds</li><li>d. Metallic bonds</li></ul><p><span class="num">2.2</span> DESCRIBE the physical arrangement and bonding of a polar molecule. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><p><span class="num">2.3</span> DESCRIBE the three basic laws of chemical reactions. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><p><span class="num">2.4</span> STATE how elements combine to form chemical compounds. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><p><span class="num">2.5</span> EXPLAIN the probability of any two elements combining to form a compound. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><p><span class="num">2.6</span> DEFINE the following terms: <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><ul class="letters"><li>a. Mixture</li><li>b. Solvent</li><li>c. Solubility</li><li>d. Solute</li><li>e. Solution</li><li>f. Equilibrium</li></ul><p><span class="num">2.7</span> STATE Le Chatelier’s principle. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><p><span class="num">2.8</span> DEFINE the following terms: <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p><ul class="letters"><li>a. ppm</li><li>b. Molarity</li><li>c. Density</li><li>d. Normality</li></ul><p><span class="num">2.9</span> BALANCE chemical equations that combine elements and/or compounds. <cite>DOE-HDBK-1015/1-93 CH-01 p.viii</cite></p></div><div class="obj"><h3>Terminal objective</h3><p><span class="num">3.0</span> Given sufficient information about a solution, CALCULATE the pH and pOH of the solution. <cite>DOE-HDBK-1015/1-93 CH-01 p.ix</cite></p><h3>Enabling objectives</h3><p><span class="num">3.1</span> DEFINE the following terms: <cite>DOE-HDBK-1015/1-93 CH-01 p.ix</cite></p><ul class="letters"><li>a. Acid</li><li>b. Salt</li><li>c. pOH</li><li>d. Alkalies</li><li>e. Base</li><li>f. pH</li><li>g. Dissociation constant of water</li></ul><p><span class="num">3.2</span> STATE the formula for pH. <cite>DOE-HDBK-1015/1-93 CH-01 p.ix</cite></p><p><span class="num">3.3</span> STATE the formula for pOH. <cite>DOE-HDBK-1015/1-93 CH-01 p.ix</cite></p><p><span class="num">3.4</span> CALCULATE the pH of a specified solution. <cite>DOE-HDBK-1015/1-93 CH-01 p.ix</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Matter and the atom <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -78,6 +99,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The diameter of an atom is about 10⁻⁸ cm, and the nucleus is roughly 10,000 times smaller. <cite>DOE-HDBK-1015/1-93 CH-01 p.3</cite></p>
 <blockquote>"An atom is classified chemically by the number of protons in its nucleus." <cite>DOE-HDBK-1015/1-93 CH-01 p.3</cite></blockquote>
 <blockquote>"Atoms of the same element with different atomic mass numbers are called isotopes." <cite>DOE-HDBK-1015/1-93 CH-01 p.4</cite></blockquote>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Matter and the atom <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -115,6 +137,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1090&amp;body=Item%3A%20Q1090%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20are%20the%20three%20states%20of%20matter%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Characteristics%20of%20Atoms%2C%20CH-01%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Matter and the atom</a><a class="next" href="#concept-2">Atomic weight and the mole <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -130,6 +153,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"In other words, a mole is Avogadro's number of anything." <cite>DOE-HDBK-1015/1-93 CH-01 p.9</cite></blockquote>
 <blockquote>"The mass of a mole of atoms is called the gram atomic weight (GAW)." <cite>DOE-HDBK-1015/1-93 CH-01 p.9</cite></blockquote>
 <blockquote>"The mass of a mole of molecules is called the molar mass or gram molecular weight(GMW)." <cite>DOE-HDBK-1015/1-93 CH-01 p.10</cite></blockquote>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Matter and the atom</a><a class="next" href="#check-2">Knowledge check: Atomic weight and the mole <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -157,6 +181,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1092&amp;body=Item%3A%20Q1092%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20is%20the%20gram%20molecular%20weight%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Characteristics%20of%20Atoms%2C%20CH-01%20p.%2010%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Atomic weight and the mole</a><a class="next" href="#concept-3">The periodic table <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -177,6 +202,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The most accurate observation is that all elements within a particular group have similar physical and chemical properties." <cite>DOE-HDBK-1015/1-93 CH-01 p.18</cite></blockquote>
 <ul><li>Group IA: Alkali Family, soft metals</li><li>Group IIA: Alkaline Earth Family</li><li>Group VIA: Oxygen Family</li><li>Group VIIA: Halogen Family</li><li>Group 0: inert gases, unreactive</li></ul><p><cite>DOE-HDBK-1015/1-93 CH-01 p.18</cite></p>
 <blockquote>"The most active metals are the members of the Alkali Family" <cite>DOE-HDBK-1015/1-93 CH-01 p.19</cite></blockquote>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Atomic weight and the mole</a><a class="next" href="#check-3">Knowledge check: The periodic table <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -224,6 +250,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1096&amp;body=Item%3A%20Q1096%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20How%20does%20sodium%20react%20with%20water%2C%20according%20to%20the%20handbook%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20The%20Periodic%20Table%2C%20CH-01%20p.%2017%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> The periodic table</a><a class="next" href="#concept-4">Electron shells and valence <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -237,6 +264,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The term valence (of an atom) is defined as the number of electrons an element gains or loses, or the number of pairs of electrons it shares when it interacts with other elements." <cite>DOE-HDBK-1015/1-93 CH-01 p.21</cite></blockquote>
 <p>For A group elements, the number of valence electrons is the same as the group number. <cite>DOE-HDBK-1015/1-93 CH-01 p.21</cite></p>
 <blockquote>"In general, the fewer electrons an element must lose, gain, or share to reach a stable shell structure, the more chemically active the element is." <cite>DOE-HDBK-1015/1-93 CH-01 p.21</cite></blockquote>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: The periodic table</a><a class="next" href="#check-4">Knowledge check: Electron shells and valence <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -254,6 +282,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1097&amp;body=Item%3A%20Q1097%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20is%20the%20valence%20of%20an%20atom%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20The%20Periodic%20Table%2C%20CH-01%20p.%2021%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Electron shells and valence</a><a class="next" href="#concept-5">Chemical bonds <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -273,6 +302,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Valence electrons move among atoms in a metal crystal, which is why most metals are malleable and ductile. <cite>DOE-HDBK-1015/1-93 CH-01 p.27</cite></p>
 <blockquote>"These forces are generally believed to be caused by a temporary dipole, or unequal charge distribution, as electrons constantly move about in an atom, ion, or molecule." <cite>DOE-HDBK-1015/1-93 CH-01 p.27</cite></blockquote>
 <p>Van der Waals forces are small compared to the forces of chemical bonding. <cite>DOE-HDBK-1015/1-93 CH-01 p.28</cite></p>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Electron shells and valence</a><a class="next" href="#check-5">Knowledge check: Chemical bonds <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -320,6 +350,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1100&amp;body=Item%3A%20Q1100%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20causes%20van%20der%20Waals%20forces%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Chemical%20Bonding%2C%20CH-01%20p.%2027%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Chemical bonds</a><a class="next" href="#concept-6">Chemical laws and combining elements <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -335,6 +366,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"the masses of one of the elements combining with a fixed mass of the other are in a simple ratio to one another." <cite>DOE-HDBK-1015/1-93 CH-01 p.32</cite></blockquote>
 <p>Regardless of the type of bond, specific amounts of one element react with specific amounts of the element it combines with. <cite>DOE-HDBK-1015/1-93 CH-01 p.33</cite></p>
 <p>The likelihood of elements forming compounds is strongly influenced by the valence shell and by the stability of the resulting molecule. <cite>DOE-HDBK-1015/1-93 CH-01 p.35</cite></p>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Chemical bonds</a><a class="next" href="#check-6">Knowledge check: Chemical laws and combining elements <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -362,6 +394,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1102&amp;body=Item%3A%20Q1102%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20Carbon%20forms%20CO%20and%20CO2%2C%20with%20oxygen%20masses%20in%20a%202%3A1%20ratio.%20Which%20law%20does%20this%20show%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Chemical%20Bonding%2C%20CH-01%20p.%2032%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Chemical laws and combining elements</a><a class="next" href="#concept-7">Mixtures and solutions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -377,6 +410,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Equilibrium is the point at which the rates of the forward and reverse reactions are exactly equal for a chemical reaction if the conditions of reaction are constant." <cite>DOE-HDBK-1015/1-93 CH-01 p.33</cite></blockquote>
 <blockquote>"Le Chatelier's Principle states that if a stress (for example, heat, pressure, concentration of one reactant) is applied to an equilibrium, the system will adjust, if possible, to minimize the effect of the stress." <cite>DOE-HDBK-1015/1-93 CH-01 p.36</cite></blockquote>
 <p>If dissolving consumes heat, a temperature rise increases solubility. If dissolving gives off heat, a temperature rise decreases it. <cite>DOE-HDBK-1015/1-93 CH-01 p.36</cite></p>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Chemical laws and combining elements</a><a class="next" href="#check-7">Knowledge check: Mixtures and solutions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -414,6 +448,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1105&amp;body=Item%3A%20Q1105%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20In%20a%20solution%2C%20what%20is%20the%20solvent%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Chemical%20Bonding%2C%20CH-01%20p.%2033%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Mixtures and solutions</a><a class="next" href="#concept-8">Concentration and balancing equations <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -429,6 +464,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>In a chemical equation, reactants are on the left of the arrow and products on the right. <cite>DOE-HDBK-1015/1-93 CH-01 p.40</cite></p>
 <blockquote>"a chemical equation must be balanced so that there are exactly the same number of atoms of each element on each side of the equation." <cite>DOE-HDBK-1015/1-93 CH-01 p.40</cite></blockquote>
 <ul><li>Do not change a compound's correct formula</li><li>Start with the compound with the most atoms, usually not with hydrogen, oxygen, or a polyatomic ion</li><li>Balance each element with coefficients</li><li>Balance polyatomic ions, then hydrogen, then oxygen</li><li>Use whole number coefficients at the lowest ratios</li></ul><p><cite>DOE-HDBK-1015/1-93 CH-01 p.41</cite></p>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Mixtures and solutions</a><a class="next" href="#check-8">Knowledge check: Concentration and balancing equations <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -466,6 +502,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1107&amp;body=Item%3A%20Q1107%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20is%20molarity%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Chemical%20Equations%2C%20CH-01%20p.%2037%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Concentration and balancing equations</a><a class="next" href="#concept-9">Acids, bases, and salts <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-9">
@@ -482,6 +519,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>An acid and a base react to form water and a salt. <cite>DOE-HDBK-1015/1-93 CH-01 p.48</cite></p>
 <blockquote>"This type of acid-base reaction is called neutralization." <cite>DOE-HDBK-1015/1-93 CH-01 p.48</cite></blockquote>
 <blockquote>"Certain soluble salts (principally sodium, potassium, magnesium, and calcium) that have the property of combining with acids to form neutral salts are called alkalies." <cite>DOE-HDBK-1015/1-93 CH-01 p.48</cite></blockquote>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Concentration and balancing equations</a><a class="next" href="#check-9">Knowledge check: Acids, bases, and salts <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-9">
@@ -509,6 +547,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1109&amp;body=Item%3A%20Q1109%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20two%20products%20form%20when%20an%20acid%20reacts%20with%20a%20base%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Acids%2C%20Bases%2C%20Salts%2C%20and%20pH%2C%20CH-01%20p.%2048%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-9"><span aria-hidden="true">←</span> Acids, bases, and salts</a><a class="next" href="#concept-10">pH and pOH <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-10">
@@ -523,6 +562,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>This product, Kw, is called the Ion Product Constant, Ionization Constant, or Dissociation Constant. It varies with temperature. <cite>DOE-HDBK-1015/1-93 CH-01 p.50</cite></p>
 <blockquote>"pH values less than 7 indicate an acidic solution and values greater than 7 indicate a basic or alkaline solution." <cite>DOE-HDBK-1015/1-93 CH-01 p.51</cite></blockquote>
 <p>The pH of pure water at 25 °C is 7. <cite>DOE-HDBK-1015/1-93 CH-01 p.51</cite></p>
+
 <div class="pager"><a href="#check-9"><span aria-hidden="true">←</span> Knowledge check: Acids, bases, and salts</a><a class="next" href="#check-10">Knowledge check: pH and pOH <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-10">
@@ -570,6 +610,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1112&amp;body=Item%3A%20Q1112%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20When%20is%20pH%20%2B%20pOH%20%3D%2014%20true%3F%0ASource%3A%20DOE-1015-V1%20(DOE-HDBK-1015%2F1-93)%2C%20Acids%2C%20Bases%2C%20Salts%2C%20and%20pH%2C%20CH-01%20p.%2050%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-10"><span aria-hidden="true">←</span> pH and pOH</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -583,6 +624,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <div class="ex"><div class="meta"><span>Objective 2.9</span></div><h3>Balancing an equation</h3><p>Balance FeS2 + O2 → Fe2O3 + SO2.</p><ol><li>2FeS2 balances the Fe</li><li>4SO2 balances the S</li><li>5.5O2 balances the O</li><li>Multiply by two to get whole numbers</li></ol><p class="answer">Answer: 4FeS2 + 11O2 → 2Fe2O3 + 8SO2</p><p><cite>DOE-HDBK-1015/1-93 CH-01 p.42</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 3.4</span></div><h3>pH from hydrogen concentration</h3><p>[H+] is 4.8 x 10⁻⁸ moles/liter. Find the pH.</p><ol><li>pH = -log [H+]</li><li>pH = -log (4.8 x 10⁻⁸)</li></ol><p class="answer">Answer: 7.32</p><p><cite>DOE-HDBK-1015/1-93 CH-01 p.49</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 3.4</span></div><h3>Hydrogen concentration from pH</h3><p>A solution has a pH of 3.83. Find [H+].</p><ol><li>[H+] = 10⁻ᵖᴴ</li><li>[H+] = 10⁻³·⁸³ moles/liter</li></ol><p class="answer">Answer: 1.48 x 10⁻⁴ moles/liter</p><p><cite>DOE-HDBK-1015/1-93 CH-01 p.49</cite></p></div>
+
 <div class="pager"><a href="#check-10"><span aria-hidden="true">←</span> Knowledge check: pH and pOH</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -591,6 +633,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Matter and the atom</a></li><li><a href="#check-1">Knowledge check: Matter and the atom</a></li><li><a href="#concept-2">Atomic weight and the mole</a></li><li><a href="#check-2">Knowledge check: Atomic weight and the mole</a></li><li><a href="#concept-3">The periodic table</a></li><li><a href="#check-3">Knowledge check: The periodic table</a></li><li><a href="#concept-4">Electron shells and valence</a></li><li><a href="#check-4">Knowledge check: Electron shells and valence</a></li><li><a href="#concept-5">Chemical bonds</a></li><li><a href="#check-5">Knowledge check: Chemical bonds</a></li><li><a href="#concept-6">Chemical laws and combining elements</a></li><li><a href="#check-6">Knowledge check: Chemical laws and combining elements</a></li><li><a href="#concept-7">Mixtures and solutions</a></li><li><a href="#check-7">Knowledge check: Mixtures and solutions</a></li><li><a href="#concept-8">Concentration and balancing equations</a></li><li><a href="#check-8">Knowledge check: Concentration and balancing equations</a></li><li><a href="#concept-9">Acids, bases, and salts</a></li><li><a href="#check-9">Knowledge check: Acids, bases, and salts</a></li><li><a href="#concept-10">pH and pOH</a></li><li><a href="#check-10">Knowledge check: pH and pOH</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>The components of an atom are protons, neutrons, and electrons. <cite>DOE-HDBK-1015/1-93 CH-01 p.11</cite></li><li>An atom is classified chemically by the number of protons in its nucleus. <cite>DOE-HDBK-1015/1-93 CH-01 p.11</cite></li><li>The subdivisions of the periodic table are periods, groups, and classes. <cite>DOE-HDBK-1015/1-93 CH-01 p.22</cite></li><li>Ionic, covalent, and metallic bonds join atoms, and van der Waals forces are attractions between nonpolar covalent molecules. <cite>DOE-HDBK-1015/1-93 CH-01 p.34</cite></li><li>Le Chatelier's principle states that if a stress is applied to an equilibrium, the system will adjust to minimize its effect. <cite>DOE-HDBK-1015/1-93 CH-01 p.45</cite></li><li>pH is the negative logarithm of the hydrogen concentration, and pOH is the negative logarithm of the hydroxyl concentration. <cite>DOE-HDBK-1015/1-93 CH-01 p.53</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -605,18 +648,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q1088, Q1089, Q1090, Q1091, Q1092, Q1093, Q1094, Q1095, Q1096, Q1097, Q493, Q1098, Q1099, Q1100, Q1101, Q1102, Q1103, Q1104, Q1105, Q494, Q1106, Q1107, Q1108, Q1109, Q444, Q1110, Q1111, Q1112.</p><p>Flashcards from this lesson: C3, C850, C851, C852, C853, C854.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20CH-01&amp;body=Lesson%3A%20CH-01%20Fundamentals%20of%20Chemistry%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

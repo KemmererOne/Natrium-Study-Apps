@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="es-11-voltage-regulators">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why voltage is regulated</a></li><li><a href="#check-1">Knowledge check: Why voltage is regulated</a></li><li><a href="#concept-2">The regulator circuits</a></li><li><a href="#check-2">Knowledge check: The regulator circuits</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 8</span></div>
 <h1>Voltage Regulators</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why voltage is regulated</a></li><li><a href="#check-1">Knowledge check: Why voltage is regulated</a></li><li><a href="#concept-2">The regulator circuits</a></li><li><a href="#check-2">Knowledge check: The regulator circuits</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1011/3-92, Module 11.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given a block diagram, DESCRIBE the operation of a typical voltage regulator. <cite>DOE-HDBK-1011/3-92 ES-11 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> STATE the purpose for voltage regulation equipment. <cite>DOE-HDBK-1011/3-92 ES-11 p.v</cite></p><p><span class="num">1.2</span> Given a block diagram of a typical voltage regulator, DESCRIBE the function of each of the following components: <cite>DOE-HDBK-1011/3-92 ES-11 p.v</cite></p><ul class="letters"><li>a. Sensing circuit</li><li>b. Reference circuit</li><li>c. Comparison circuit</li><li>d. Amplification circuit(s)</li><li>e. Signal output circuit</li><li>f. Feedback circuit</li></ul></div>
+
 <div class="pager"><a class="next" href="#concept-1">Why voltage is regulated <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -72,6 +93,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>As load on an AC generator changes, the voltage tends to change, mainly because of the changing voltage drop across the armature winding. <cite>DOE-HDBK-1011/3-92 ES-11 p.1</cite></p>
 <p>The IR drop depends on the load change only. The IXL drop depends on the load change and also the power factor of the circuit. <cite>DOE-HDBK-1011/3-92 ES-11 p.1</cite></p>
 <blockquote>"the output voltage of an AC generator varies with both changes in load (i.e., current) and changes in power factor." <cite>DOE-HDBK-1011/3-92 ES-11 p.1</cite></blockquote>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Why voltage is regulated <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -89,6 +111,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q760&amp;body=Item%3A%20Q760%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20two%20changes%20make%20the%20output%20voltage%20of%20an%20AC%20generator%20vary%3F%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Voltage%20Regulators%2C%20ES-11%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Why voltage is regulated</a><a class="next" href="#concept-2">The regulator circuits <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -107,6 +130,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The signal output circuit, which controls field excitation of the AC generator, increases or decreases field excitation to either raise or lower the AC output voltage." <cite>DOE-HDBK-1011/3-92 ES-11 p.3</cite></blockquote>
 <p>The feedback circuit takes some of the output of the signal output circuit and feeds it back to the amplification circuit. <cite>DOE-HDBK-1011/3-92 ES-11 p.3</cite></p>
 <blockquote>"It does this to prevent overshooting or undershooting of the desired voltage by slowing down the circuit response." <cite>DOE-HDBK-1011/3-92 ES-11 p.3</cite></blockquote>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Why voltage is regulated</a><a class="next" href="#check-2">Knowledge check: The regulator circuits <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -154,6 +178,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q763&amp;body=Item%3A%20Q763%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20does%20the%20reference%20circuit%20of%20a%20voltage%20regulator%20do%3F%0ASource%3A%20DOE-1011-V3%20(DOE-HDBK-1011%2F3-92)%2C%20Voltage%20Regulators%2C%20ES-11%20p.%202%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> The regulator circuits</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -163,6 +188,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why voltage is regulated</a></li><li><a href="#check-1">Knowledge check: Why voltage is regulated</a></li><li><a href="#concept-2">The regulator circuits</a></li><li><a href="#check-2">Knowledge check: The regulator circuits</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.2</span></div><h3>Load increases</h3><p>Generator load increases and output voltage drops. Follow the regulator's response.</p><ol><li>The sensing circuit senses the decrease and lowers its input to the comparison circuit.</li><li>The reference stays constant, so the comparison circuit develops a positive error signal.</li><li>The amplifier circuit amplifies it and sends it to the signal output circuit.</li><li>The signal output circuit increases field excitation.</li></ol><p class="answer">Answer: Generated voltage increases to the desired output</p><p><cite>DOE-HDBK-1011/3-92 ES-11 p.3</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.2</span></div><h3>Load decreases</h3><p>Generator load decreases and output voltage rises. What does the regulator do?</p><ol><li>The comparison circuit develops a negative error signal.</li><li>The signal output circuit decreases field excitation.</li></ol><p class="answer">Answer: Generated voltage decreases to the desired output</p><p><cite>DOE-HDBK-1011/3-92 ES-11 p.3</cite></p></div>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: The regulator circuits</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -171,6 +197,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why voltage is regulated</a></li><li><a href="#check-1">Knowledge check: Why voltage is regulated</a></li><li><a href="#concept-2">The regulator circuits</a></li><li><a href="#check-2">Knowledge check: The regulator circuits</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>The purpose of a voltage regulator is to maintain the output voltage of a generator at a desired value. <cite>DOE-HDBK-1011/3-92 ES-11 p.4</cite></li><li>A regulator has sensing, reference, comparison, amplification, signal output, and feedback circuits. <cite>DOE-HDBK-1011/3-92 ES-11 p.4</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -185,18 +212,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q760, Q432, Q761, Q762, Q763.</p><p>Flashcards from this lesson: C771, C772, C773.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20ES-11&amp;body=Lesson%3A%20ES-11%20Voltage%20Regulators%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

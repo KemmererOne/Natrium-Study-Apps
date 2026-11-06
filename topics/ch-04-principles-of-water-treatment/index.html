@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ch-04-principles-of-water-treatment">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why water is treated</a></li><li><a href="#check-1">Knowledge check: Why water is treated</a></li><li><a href="#concept-2">Ion exchange and resins</a></li><li><a href="#check-2">Knowledge check: Ion exchange and resins</a></li><li><a href="#concept-3">Affinity and the ion exchanger</a></li><li><a href="#check-3">Knowledge check: Affinity and the ion exchanger</a></li><li><a href="#concept-4">Decontamination factor</a></li><li><a href="#check-4">Knowledge check: Decontamination factor</a></li><li><a href="#concept-5">Mixed-bed reactions</a></li><li><a href="#check-5">Knowledge check: Mixed-bed reactions</a></li><li><a href="#concept-6">Dissolved gases and suspended solids</a></li><li><a href="#check-6">Knowledge check: Dissolved gases and suspended solids</a></li><li><a href="#concept-7">pH control and resin malfunctions</a></li><li><a href="#check-7">Knowledge check: pH control and resin malfunctions</a></li><li><a href="#concept-8">Water purity</a></li><li><a href="#check-8">Knowledge check: Water purity</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 20</span></div>
 <h1>Principles of Water Treatment</h1>
 <ul class="tags"><li class="tag">Reviewed</li><li class="tag">Water-system only</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why water is treated</a></li><li><a href="#check-1">Knowledge check: Why water is treated</a></li><li><a href="#concept-2">Ion exchange and resins</a></li><li><a href="#check-2">Knowledge check: Ion exchange and resins</a></li><li><a href="#concept-3">Affinity and the ion exchanger</a></li><li><a href="#check-3">Knowledge check: Affinity and the ion exchanger</a></li><li><a href="#concept-4">Decontamination factor</a></li><li><a href="#check-4">Knowledge check: Decontamination factor</a></li><li><a href="#concept-5">Mixed-bed reactions</a></li><li><a href="#check-5">Knowledge check: Mixed-bed reactions</a></li><li><a href="#concept-6">Dissolved gases and suspended solids</a></li><li><a href="#check-6">Knowledge check: Dissolved gases and suspended solids</a></li><li><a href="#concept-7">pH control and resin malfunctions</a></li><li><a href="#check-7">Knowledge check: pH control and resin malfunctions</a></li><li><a href="#concept-8">Water purity</a></li><li><a href="#check-8">Knowledge check: Water purity</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1015/2-93, Module 4.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Without references, EXPLAIN the concept and application of ion exchange in water purification. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> LIST the three reasons for removing impurities from water prior to use in reactor systems. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><p><span class="num">1.2</span> DEFINE the following terms: <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><ul class="letters"><li>a. Ion exchange</li><li>b. Demineralize</li><li>c. Cation</li><li>d. Anion</li><li>e. Polymer</li><li>f. Mixed-bed demineralizer</li><li>g. Affinity</li><li>h. Decontamination factor</li></ul><p><span class="num">1.3</span> DESCRIBE the following: <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><ul class="letters"><li>a. Resin bead</li><li>b. Cation resin</li><li>c. Anion resin</li></ul><p><span class="num">1.4</span> DISCUSS the following factors of ion exchange: <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><ul class="letters"><li>a. Relative affinity</li><li>b. Decontamination factor</li></ul><p><span class="num">1.5</span> WRITE the reaction for removal of NaCl and CaSO4 by a mixed-bed ion exchanger such as one containing HOH resin. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><p><span class="num">1.6</span> EXPLAIN the three basic methods used to remove dissolved gases from water. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><p><span class="num">1.7</span> LIST five filtration mediums used to remove suspended solids from water. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><p><span class="num">1.8</span> EXPLAIN how mixed-bed ion exchangers may be used to control pH. <cite>DOE-HDBK-1015/2-93 CH-04 p.v</cite></p><p><span class="num">1.9</span> DISCUSS resin malfunctions, including the following: <cite>DOE-HDBK-1015/2-93 CH-04 p.vi</cite></p><ul class="letters"><li>a. Channeling</li><li>b. Breakthrough</li><li>c. Exhaustion</li></ul><p><span class="num">1.10</span> LIST the maximum conductivity and approximate concentration of electrolyte for each level of purity for makeup water. <cite>DOE-HDBK-1015/2-93 CH-04 p.vi</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Why water is treated <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -73,6 +94,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"To minimize radiation levels in a reactor facility." <cite>DOE-HDBK-1015/2-93 CH-04 p.1</cite></blockquote>
 <blockquote>"To minimize fouling of heat transfer surfaces." <cite>DOE-HDBK-1015/2-93 CH-04 p.1</cite></blockquote>
 <p>Deaeration strips dissolved gases, filtration removes insoluble solids, and ion exchange replaces undesirable ions with acceptable ones. <cite>DOE-HDBK-1015/2-93 CH-04 p.2</cite></p>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Why water is treated <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -90,6 +112,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q447&amp;body=Item%3A%20Q447%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20Why%20is%20pretreatment%20of%20makeup%20water%20necessary%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Dissolved%20Gases%2C%20Suspended%20Solids%2C%20and%20pH%20Control%2C%20CH-04%20p.%2026%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Why water is treated</a><a class="next" href="#concept-2">Ion exchange and resins <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -107,6 +130,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>A mixed-bed demineralizer is a vessel containing a uniform mixture of cation and anion resins. <cite>DOE-HDBK-1015/2-93 CH-04 p.4</cite></p>
 <blockquote>"The ratio is normally 2 parts cation resin to 3 parts anion resin." <cite>DOE-HDBK-1015/2-93 CH-04 p.4</cite></blockquote>
 <p>A resin is usually named by the ion on its active sites, such as hydrogen form or hydroxyl form. <cite>DOE-HDBK-1015/2-93 CH-04 p.7</cite></p>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Why water is treated</a><a class="next" href="#check-2">Knowledge check: Ion exchange and resins <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -154,6 +178,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1146&amp;body=Item%3A%20Q1146%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20does%20an%20anion%20resin%20exchange%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Water%20Treatment%20Processes%2C%20CH-04%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Ion exchange and resins</a><a class="next" href="#concept-3">Affinity and the ion exchanger <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -168,6 +193,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"the efficiency for removal of impurities is greater in a mixed-bed resin than a layered arrangement." <cite>DOE-HDBK-1015/2-93 CH-04 p.9</cite></blockquote>
 <blockquote>"The ion exchange process is reversible." <cite>DOE-HDBK-1015/2-93 CH-04 p.10</cite></blockquote>
 <p>If the capacity of the resin is exceeded, previously removed substances may return to the solution. <cite>DOE-HDBK-1015/2-93 CH-04 p.10</cite></p>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Ion exchange and resins</a><a class="next" href="#check-3">Knowledge check: Affinity and the ion exchanger <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -195,6 +221,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1148&amp;body=Item%3A%20Q1148%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20Why%20does%20solution%20flow%20from%20top%20to%20bottom%20in%20a%20mixed%20bed%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Water%20Treatment%20Processes%2C%20CH-04%20p.%209%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Affinity and the ion exchanger</a><a class="next" href="#concept-4">Decontamination factor <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -207,6 +234,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p class="eq"><b>DF = influent concentration, conductivity, or radioactivity / effluent concentration, conductivity, or radioactivity</b> <cite>DOE-HDBK-1015/2-93 CH-04 p.10</cite></p>
 <figure class="fig"><img src="data:image/png;base64,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" alt="History curve of DF against time, staying high and then falling, with exhaustion at point X."><figcaption>Figure 4. Typical History Curve <cite>DOE-HDBK-1015/2-93 CH-04 p.11</cite></figcaption></figure>
 <p>To find percent of impurities removed, divide the amount removed by the amount entering. <cite>Word: Demineralizers and Ion Exchangers.docx, slide 1.29 Decontamination Factor</cite></p>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Affinity and the ion exchanger</a><a class="next" href="#check-4">Knowledge check: Decontamination factor <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -254,6 +282,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1150&amp;body=Item%3A%20Q1150%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20Inlet%20conductivity%20is%2050%20%CE%BCmho%2Fcm%20and%20outlet%20is%200.5%20%CE%BCmho%2Fcm.%20What%20percent%20of%20impurities%20is%20removed%3F%0ASource%3A%20LP-DEMINERALIZERS-AND-ION-EXCHANGERS%20(Demineralizers%20and%20Ion%20Exchangers.docx)%2C%20slide%201.41%20What%20is%20the%20percent%20of%20impurities%20removed%20if%20the%20inlet%20conductivity%20is%2050%20%CE%BCmho%2Fcm%20and%20the%20outlet%20conductivity%20is%200.5%20%CE%BCmho%2Fcm%3F%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Decontamination factor</a><a class="next" href="#concept-5">Mixed-bed reactions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -266,6 +295,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"In the reaction with NaCl, both Na+ and Cl- ions are removed from solution and replaced by H+ and OH- ions, respectively" <cite>DOE-HDBK-1015/2-93 CH-04 p.12</cite></blockquote>
 <p>H+ and OH- ions from the resin mostly combine to form water. <cite>DOE-HDBK-1015/2-93 CH-04 p.12</cite></p>
 <blockquote>"By this process, the original NaCl solution becomes pure water." <cite>DOE-HDBK-1015/2-93 CH-04 p.12</cite></blockquote>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Decontamination factor</a><a class="next" href="#check-5">Knowledge check: Mixed-bed reactions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -283,6 +313,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1151&amp;body=Item%3A%20Q1151%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20is%20the%20result%20of%20passing%20NaCl%20solution%20through%20a%20mixed%20bed%20of%20hydrogen%20and%20hydroxyl%20resins%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Water%20Treatment%20Processes%2C%20CH-04%20p.%2012%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Mixed-bed reactions</a><a class="next" href="#concept-6">Dissolved gases and suspended solids <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -301,6 +332,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Sand is not normally used in nuclear applications because of the silicate ion" <cite>DOE-HDBK-1015/2-93 CH-04 p.20</cite></blockquote>
 <p>Pressure filters are the most widely used, because they can be installed in a pressurized system. <cite>DOE-HDBK-1015/2-93 CH-04 p.20</cite></p>
 <blockquote>"(90% or less for filtration versus approximately 100% for most ion exchange reactions)." <cite>DOE-HDBK-1015/2-93 CH-04 p.21</cite></blockquote>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Mixed-bed reactions</a><a class="next" href="#check-6">Knowledge check: Dissolved gases and suspended solids <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -328,6 +360,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1153&amp;body=Item%3A%20Q1153%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20Why%20is%20sand%20not%20normally%20used%20as%20a%20filter%20in%20nuclear%20applications%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Dissolved%20Gases%2C%20Suspended%20Solids%2C%20and%20pH%20Control%2C%20CH-04%20p.%2020%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Dissolved gases and suspended solids</a><a class="next" href="#concept-7">pH control and resin malfunctions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -343,6 +376,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"This condition is called exhaustion and indicates that essentially all the exchange capacity of the resin has been used." <cite>DOE-HDBK-1015/2-93 CH-04 p.24</cite></blockquote>
 <p>The first indication of depletion is breakthrough. <cite>DOE-HDBK-1015/2-93 CH-04 p.27</cite></p>
 <p>Overheated anion resin releases trimethylamine (TMA), and overheated cation resin destroys its exchange capacity and produces an acid. <cite>DOE-HDBK-1015/2-93 CH-04 p.25</cite></p>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Dissolved gases and suspended solids</a><a class="next" href="#check-7">Knowledge check: pH control and resin malfunctions <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -400,6 +434,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1156&amp;body=Item%3A%20Q1156%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20is%20breakthrough%20in%20a%20resin%20bed%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Dissolved%20Gases%2C%20Suspended%20Solids%2C%20and%20pH%20Control%2C%20CH-04%20p.%2024%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> pH control and resin malfunctions</a><a class="next" href="#concept-8">Water purity <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -412,6 +447,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>For most nuclear facility applications, <cite>DOE-HDBK-1015/2-93 CH-04 p.30</cite></p>
 <blockquote>"the specification that is identified as Very Pure" <cite>DOE-HDBK-1015/2-93 CH-04 p.30</cite></blockquote>
 <p>is used, at 1.0 µmho/cm maximum conductivity. <cite>DOE-HDBK-1015/2-93 CH-04 p.30</cite></p>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: pH control and resin malfunctions</a><a class="next" href="#check-8">Knowledge check: Water purity <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -429,6 +465,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1157&amp;body=Item%3A%20Q1157%0ATopic%3A%20Demineralizers%20and%20Ion%20Exchangers%0AQuestion%3A%20What%20maximum%20conductivity%20is%20listed%20for%20Very%20Pure%20water%3F%0ASource%3A%20DOE-1015-V2%20(DOE-HDBK-1015%2F2-93)%2C%20Water%20Purity%2C%20CH-04%20p.%2030%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Water purity</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -438,6 +475,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why water is treated</a></li><li><a href="#check-1">Knowledge check: Why water is treated</a></li><li><a href="#concept-2">Ion exchange and resins</a></li><li><a href="#check-2">Knowledge check: Ion exchange and resins</a></li><li><a href="#concept-3">Affinity and the ion exchanger</a></li><li><a href="#check-3">Knowledge check: Affinity and the ion exchanger</a></li><li><a href="#concept-4">Decontamination factor</a></li><li><a href="#check-4">Knowledge check: Decontamination factor</a></li><li><a href="#concept-5">Mixed-bed reactions</a></li><li><a href="#check-5">Knowledge check: Mixed-bed reactions</a></li><li><a href="#concept-6">Dissolved gases and suspended solids</a></li><li><a href="#check-6">Knowledge check: Dissolved gases and suspended solids</a></li><li><a href="#concept-7">pH control and resin malfunctions</a></li><li><a href="#check-7">Knowledge check: pH control and resin malfunctions</a></li><li><a href="#concept-8">Water purity</a></li><li><a href="#check-8">Knowledge check: Water purity</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.4</span></div><h3>DF from chloride</h3><p>Influent has 15 ppm chloride, and effluent has 0.1 ppm. Find the DF.</p><ol><li>DF = influent / effluent</li><li>DF = 15 / 0.1</li></ol><p class="answer">Answer: 150</p><p><cite>DOE-HDBK-1015/2-93 CH-04 p.10</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.4</span></div><h3>DF from activity</h3><p>Influent activity is 2.8 x 10⁻² µCi/ml, and effluent is 1.0 x 10⁻⁴ µCi/ml. Find the DF.</p><ol><li>DF = influent / effluent</li><li>DF = (2.8 x 10⁻²)/(1.0 x 10⁻⁴)</li></ol><p class="answer">Answer: 280</p><p><cite>DOE-HDBK-1015/2-93 CH-04 p.10</cite></p></div>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Water purity</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -446,6 +484,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li><li class="tag">Water-system only</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why water is treated</a></li><li><a href="#check-1">Knowledge check: Why water is treated</a></li><li><a href="#concept-2">Ion exchange and resins</a></li><li><a href="#check-2">Knowledge check: Ion exchange and resins</a></li><li><a href="#concept-3">Affinity and the ion exchanger</a></li><li><a href="#check-3">Knowledge check: Affinity and the ion exchanger</a></li><li><a href="#concept-4">Decontamination factor</a></li><li><a href="#check-4">Knowledge check: Decontamination factor</a></li><li><a href="#concept-5">Mixed-bed reactions</a></li><li><a href="#check-5">Knowledge check: Mixed-bed reactions</a></li><li><a href="#concept-6">Dissolved gases and suspended solids</a></li><li><a href="#check-6">Knowledge check: Dissolved gases and suspended solids</a></li><li><a href="#concept-7">pH control and resin malfunctions</a></li><li><a href="#check-7">Knowledge check: pH control and resin malfunctions</a></li><li><a href="#concept-8">Water purity</a></li><li><a href="#check-8">Knowledge check: Water purity</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>There are three general reasons to treat water for its impurities. <cite>DOE-HDBK-1015/2-93 CH-04 p.2</cite></li><li>Decontamination factor defines the effectiveness of the ion exchange process. <cite>DOE-HDBK-1015/2-93 CH-04 p.13</cite></li><li>Dissolved gases are removed by aeration, deaeration, or scavengers. <cite>DOE-HDBK-1015/2-93 CH-04 p.27</cite></li><li>Suspended solids are removed by mechanical filters. <cite>DOE-HDBK-1015/2-93 CH-04 p.27</cite></li><li>When impurity concentration is the same before and after the resin, the resin has reached exhaustion. <cite>DOE-HDBK-1015/2-93 CH-04 p.27</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -460,18 +499,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q447, Q253, Q448, Q1145, Q1146, Q1147, Q1148, Q252, Q449, Q1149, Q1150, Q1151, Q1152, Q1153, Q250, Q251, Q1154, Q1155, Q1156, Q1157.</p><p>Flashcards from this lesson: C864, C865, C866, C867, C868.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20CH-04&amp;body=Lesson%3A%20CH-04%20Principles%20of%20Water%20Treatment%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

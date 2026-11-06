@@ -182,6 +182,7 @@ h1 {
 .counts .btn { min-width: 64px; }
 .counts .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 /* The keyboard hint means nothing on a touch screen */
+@media (min-width: 900px) { .wrap { max-width: 840px; } }
 @media (hover: none) and (pointer: coarse) { .hint { display: none; } }
 [hidden] { display: none !important; }
 </style>

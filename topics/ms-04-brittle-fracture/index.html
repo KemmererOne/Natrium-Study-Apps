@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ms-04-brittle-fracture">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Ductile and brittle fracture</a></li><li><a href="#check-1">Knowledge check: Ductile and brittle fracture</a></li><li><a href="#concept-2">Nil-ductility transition temperature</a></li><li><a href="#check-2">Knowledge check: Nil-ductility transition temperature</a></li><li><a href="#concept-3">Conditions for brittle fracture</a></li><li><a href="#check-3">Knowledge check: Conditions for brittle fracture</a></li><li><a href="#concept-4">Crack initiation and fracture toughness</a></li><li><a href="#check-4">Knowledge check: Crack initiation and fracture toughness</a></li><li><a href="#concept-5">FTE and FTP</a></li><li><a href="#check-5">Knowledge check: FTE and FTP</a></li><li><a href="#concept-6">Minimum pressurization-temperature curves</a></li><li><a href="#check-6">Knowledge check: Minimum pressurization-temperature curves</a></li><li><a href="#concept-7">Heatup and cooldown rate limits</a></li><li><a href="#check-7">Knowledge check: Heatup and cooldown rate limits</a></li><li><a href="#concept-8">Soak times</a></li><li><a href="#check-8">Knowledge check: Soak times</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 20</span></div>
 <h1>Brittle Fracture</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Ductile and brittle fracture</a></li><li><a href="#check-1">Knowledge check: Ductile and brittle fracture</a></li><li><a href="#concept-2">Nil-ductility transition temperature</a></li><li><a href="#check-2">Knowledge check: Nil-ductility transition temperature</a></li><li><a href="#concept-3">Conditions for brittle fracture</a></li><li><a href="#check-3">Knowledge check: Conditions for brittle fracture</a></li><li><a href="#concept-4">Crack initiation and fracture toughness</a></li><li><a href="#check-4">Knowledge check: Crack initiation and fracture toughness</a></li><li><a href="#concept-5">FTE and FTP</a></li><li><a href="#check-5">Knowledge check: FTE and FTP</a></li><li><a href="#concept-6">Minimum pressurization-temperature curves</a></li><li><a href="#check-6">Knowledge check: Minimum pressurization-temperature curves</a></li><li><a href="#concept-7">Heatup and cooldown rate limits</a></li><li><a href="#check-7">Knowledge check: Heatup and cooldown rate limits</a></li><li><a href="#concept-8">Soak times</a></li><li><a href="#check-8">Knowledge check: Soak times</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1017/2-93, Module 4.</p><p>These pages are tagged Water-system only: Minimum pressurization-temperature curves. Other pages apply to the sodium and salt systems.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Without references, EXPLAIN the importance of controlling heatup and cooldown rates of the primary coolant system. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DEFINE the following terms: <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><ul class="letters"><li>a. Ductile fracture</li><li>b. Brittle fracture</li><li>c. Nil-ductility Transition (NDT) Temperature</li></ul><p><span class="num">1.2</span> DESCRIBE the two changes made to reactor pressure vessels to decrease NDT. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.3</span> STATE the effect grain size and irradiation have on a material’s NDT. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.4</span> LIST the three conditions necessary for brittle fracture to occur. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.5</span> STATE the three conditions that tend to mitigate crack initiation. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.6</span> LIST the five factors that determine the fracture toughness of a material. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.7</span> Given a stress-temperature diagram, IDENTIFY the following points: <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><ul class="letters"><li>a. NDT (with no flaw)</li><li>b. NDT (with flaw)</li><li>c. Fracture transition elastic point</li><li>d. Fracture transition plastic point</li></ul><p><span class="num">1.8</span> STATE the two bases used for developing a minimum pressurization-temperature curve. <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><p><span class="num">1.9</span> EXPLAIN a typical minimum pressure-temperature curve including: <cite>DOE-HDBK-1017/2-93 MS-04 p.v</cite></p><ul class="letters"><li>a. Location of safe operating region</li><li>b. The way the curve will shift due to irradiation</li></ul><p><span class="num">1.10</span> LIST the normal actions taken, in sequence, if the minimum pressurization-temperature curve is exceeded during critical operations. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.11</span> STATE the precaution for hydrostatic testing. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.12</span> IDENTIFY the basis used for determining heatup and cooldown rate limits. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.13</span> IDENTIFY the three components that will set limits on the heatup and cooldown rates. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.14</span> STATE the action typically taken upon discovering the heatup or cooldown rate has been exceeded. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.15</span> STATE the reason for using soak times. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p><p><span class="num">1.16</span> STATE when soak times become very significant. <cite>DOE-HDBK-1017/2-93 MS-04 p.vi</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Ductile and brittle fracture <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -73,6 +94,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <figure class="fig"><img src="data:image/png;base64,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" alt="An original test specimen, a brittle fracture with a jagged flat break, and a ductile fracture with necked ends."><figcaption>Figure 1. Basic Fracture Types <cite>DOE-HDBK-1017/2-93 MS-04 p.2</cite></figcaption></figure>
 <p>In brittle fracture, cracks propagate rapidly, and failure results from cleavage, or splitting along definite planes. <cite>DOE-HDBK-1017/2-93 MS-04 p.1</cite></p>
 <blockquote>"Ductile fracture is better than brittle fracture, because ductile fracture occurs over a period of time, where as brittle fracture is fast, and can occur (with flaws) at lower stress levels than a ductile fracture." <cite>DOE-HDBK-1017/2-93 MS-04 p.1</cite></blockquote>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Ductile and brittle fracture <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -100,6 +122,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1339&amp;body=Item%3A%20Q1339%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20brittle%20fracture%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Brittle%20Fracture%20Mechanism%2C%20MS-04%20p.%206%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Ductile and brittle fracture</a><a class="next" href="#concept-2">Nil-ductility transition temperature <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -116,6 +139,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The reactor vessel is continuously exposed to fast neutrons that escape from the core. <cite>DOE-HDBK-1017/2-93 MS-04 p.2</cite></p>
 <blockquote>"Consequently, during operation the reactor vessel is subjected to an increasing fluence (flux) of fast neutrons, and as a result the NDT temperature increases steadily." <cite>DOE-HDBK-1017/2-93 MS-04 p.2</cite></blockquote>
 <p>During shutdown or an abnormal cooldown, the temperature may fall below the NDT value while the internal pressure is still high, and the vessel is then susceptible to brittle fracture. <cite>DOE-HDBK-1017/2-93 MS-04 p.2</cite></p>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Ductile and brittle fracture</a><a class="next" href="#check-2">Knowledge check: Nil-ductility transition temperature <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -153,6 +177,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1341&amp;body=Item%3A%20Q1341%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20happens%20to%20the%20NDT%20temperature%20of%20a%20reactor%20vessel%20during%20operation%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Brittle%20Fracture%20Mechanism%2C%20MS-04%20p.%202%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Nil-ductility transition temperature</a><a class="next" href="#concept-3">Conditions for brittle fracture <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -167,6 +192,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The temperature at which the yield and tensile strength coincide is the NDT temperature." <cite>DOE-HDBK-1017/2-93 MS-04 p.3</cite></blockquote>
 <p>When a small flaw is present, tensile strength follows dashed Curve C. About 50°F above the no-flaw NDT temperature, it drops to the yield curve, and where Curves C and B meet there is a new NDT temperature. <cite>DOE-HDBK-1017/2-93 MS-04 p.4</cite></p>
 <blockquote>"Therefore, if a flaw exists, any failure at a temperature equal or below the NDT temperature for flawed material will be brittle." <cite>DOE-HDBK-1017/2-93 MS-04 p.4</cite></blockquote>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Nil-ductility transition temperature</a><a class="next" href="#check-3">Knowledge check: Conditions for brittle fracture <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -204,6 +230,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1343&amp;body=Item%3A%20Q1343%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20On%20a%20stress-temperature%20diagram%2C%20where%20is%20the%20NDT%20temperature%20with%20no%20flaw%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Brittle%20Fracture%20Mechanism%2C%20MS-04%20p.%203%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Conditions for brittle fracture</a><a class="next" href="#concept-4">Crack initiation and fracture toughness <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -220,6 +247,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>This stress level is called the lower fracture propagation stress. As temperature increases, a higher stress is needed for a crack to propagate. That relationship is the crack arrest curve, Curve D. <cite>DOE-HDBK-1017/2-93 MS-04 p.4</cite></p>
 <blockquote>"Fracture toughness is an indication of the amount of stress required to propagate a preexisting flaw." <cite>DOE-HDBK-1017/2-93 MS-04 p.4</cite></blockquote>
 <ul><li>Metal composition</li><li>Metal temperature</li><li>Extent of deformations to the crystal structure</li><li>Metal grain size</li><li>Metal crystalline form</li></ul><p><cite>DOE-HDBK-1017/2-93 MS-04 p.4</cite></p>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Conditions for brittle fracture</a><a class="next" href="#check-4">Knowledge check: Crack initiation and fracture toughness <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -257,6 +285,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1346&amp;body=Item%3A%20Q1346%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20fracture%20toughness%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Brittle%20Fracture%20Mechanism%2C%20MS-04%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Crack initiation and fracture toughness</a><a class="next" href="#concept-5">FTE and FTP <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -273,6 +302,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Operation must be above the NDT temperature to be certain that no brittle fracture can occur. <cite>DOE-HDBK-1017/2-93 MS-04 p.5</cite></p>
 <blockquote>"For greater safety, it is desirable that operation be limited above the FTE temperature, or NDT + 60°F." <cite>DOE-HDBK-1017/2-93 MS-04 p.5</cite></blockquote>
 <p>Under those conditions, no brittle fracture can occur for purely elastic loads. <cite>DOE-HDBK-1017/2-93 MS-04 p.5</cite></p>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Crack initiation and fracture toughness</a><a class="next" href="#check-5">Knowledge check: FTE and FTP <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -300,6 +330,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1348&amp;body=Item%3A%20Q1348%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20About%20how%20far%20above%20NDT%20is%20the%20fracture%20transition%20plastic%20(FTP)%20temperature%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Brittle%20Fracture%20Mechanism%2C%20MS-04%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> FTE and FTP</a><a class="next" href="#concept-6">Minimum pressurization-temperature curves <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -315,6 +346,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>This shift accounts for the increased brittleness or decreased ductility from neutron irradiation. <cite>DOE-HDBK-1017/2-93 MS-04 p.7</cite></p>
 <ul><li>Scram reactor</li><li>Cool down and depressurize</li><li>Conduct engineering evaluation prior to further plant operation</li></ul><p><cite>DOE-HDBK-1017/2-93 MS-04 p.10</cite></p>
 <blockquote>"The precaution to be observed when performing a hydrostatic test is to make sure the pressure is consistent with plant temperatures." <cite>DOE-HDBK-1017/2-93 MS-04 p.10</cite></blockquote>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: FTE and FTP</a><a class="next" href="#check-6">Knowledge check: Minimum pressurization-temperature curves <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -372,6 +404,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1351&amp;body=Item%3A%20Q1351%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20the%20precaution%20for%20hydrostatic%20testing%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Minimum%20Pressurization-Temperature%20Curves%2C%20MS-04%20p.%2010%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Minimum pressurization-temperature curves</a><a class="next" href="#concept-7">Heatup and cooldown rate limits <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -385,6 +418,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Usually the most limiting component sets the heatup and cooldown rates. <cite>DOE-HDBK-1017/2-93 MS-04 p.11</cite></p>
 <blockquote>"Usually exceeding the heatup or cooldown rate limits requires only an assessment of the impact on the future fatigue life of the plant." <cite>DOE-HDBK-1017/2-93 MS-04 p.13</cite></blockquote>
 <p>This may depend on the individual plant and its limiting components. <cite>DOE-HDBK-1017/2-93 MS-04 p.12</cite></p>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Minimum pressurization-temperature curves</a><a class="next" href="#check-7">Knowledge check: Heatup and cooldown rate limits <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -422,6 +456,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1353&amp;body=Item%3A%20Q1353%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20typically%20required%20when%20a%20heatup%20or%20cooldown%20rate%20limit%20is%20exceeded%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Heatup%20and%20Cooldown%20Rate%20Limits%2C%20MS-04%20p.%2013%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Heatup and cooldown rate limits</a><a class="next" href="#concept-8">Soak times <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -433,6 +468,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Soak times are used so that heating can be carefully controlled." <cite>DOE-HDBK-1017/2-93 MS-04 p.12</cite></blockquote>
 <p>This minimizes thermal stresses. For example, the coolant is heated to a specified temperature and held there for a set time, so the metal in a large component heats more evenly from the hot side to the cold side. <cite>DOE-HDBK-1017/2-93 MS-04 p.12</cite></p>
 <blockquote>"Become very significant if system is at room temperature or below and very close to RTNDT temperature limitations" <cite>DOE-HDBK-1017/2-93 MS-04 p.13</cite></blockquote>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Heatup and cooldown rate limits</a><a class="next" href="#check-8">Knowledge check: Soak times <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -460,6 +496,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1355&amp;body=Item%3A%20Q1355%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20When%20do%20soak%20times%20become%20very%20significant%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Heatup%20and%20Cooldown%20Rate%20Limits%2C%20MS-04%20p.%2013%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Soak times</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -468,6 +505,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Ductile and brittle fracture</a></li><li><a href="#check-1">Knowledge check: Ductile and brittle fracture</a></li><li><a href="#concept-2">Nil-ductility transition temperature</a></li><li><a href="#check-2">Knowledge check: Nil-ductility transition temperature</a></li><li><a href="#concept-3">Conditions for brittle fracture</a></li><li><a href="#check-3">Knowledge check: Conditions for brittle fracture</a></li><li><a href="#concept-4">Crack initiation and fracture toughness</a></li><li><a href="#check-4">Knowledge check: Crack initiation and fracture toughness</a></li><li><a href="#concept-5">FTE and FTP</a></li><li><a href="#check-5">Knowledge check: FTE and FTP</a></li><li><a href="#concept-6">Minimum pressurization-temperature curves</a></li><li><a href="#check-6">Knowledge check: Minimum pressurization-temperature curves</a></li><li><a href="#concept-7">Heatup and cooldown rate limits</a></li><li><a href="#check-7">Knowledge check: Heatup and cooldown rate limits</a></li><li><a href="#concept-8">Soak times</a></li><li><a href="#check-8">Knowledge check: Soak times</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.7</span></div><h3>Find the temperature after an NDT shift</h3><p>The FTE was 60°F at the beginning of vessel life, and the NDT changed by 300°F over time. What temperature must the coolant be above before full system pressure can be applied?</p><ol><li>Irradiation raises the NDT, and the FTE moves with it.</li><li>Add the shift to the starting FTE: 60°F + 300°F.</li></ol><p class="answer">Answer: More than 360°F.</p><p><cite>DOE-HDBK-1017/2-93 MS-04 p.5</cite></p></div>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Soak times</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -476,6 +514,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Ductile and brittle fracture</a></li><li><a href="#check-1">Knowledge check: Ductile and brittle fracture</a></li><li><a href="#concept-2">Nil-ductility transition temperature</a></li><li><a href="#check-2">Knowledge check: Nil-ductility transition temperature</a></li><li><a href="#concept-3">Conditions for brittle fracture</a></li><li><a href="#check-3">Knowledge check: Conditions for brittle fracture</a></li><li><a href="#concept-4">Crack initiation and fracture toughness</a></li><li><a href="#check-4">Knowledge check: Crack initiation and fracture toughness</a></li><li><a href="#concept-5">FTE and FTP</a></li><li><a href="#check-5">Knowledge check: FTE and FTP</a></li><li><a href="#concept-6">Minimum pressurization-temperature curves</a></li><li><a href="#check-6">Knowledge check: Minimum pressurization-temperature curves</a></li><li><a href="#concept-7">Heatup and cooldown rate limits</a></li><li><a href="#check-7">Knowledge check: Heatup and cooldown rate limits</a></li><li><a href="#concept-8">Soak times</a></li><li><a href="#check-8">Knowledge check: Soak times</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>Ductile fracture follows substantial plastic strain, and brittle fracture follows a small or negligible amount. <cite>DOE-HDBK-1017/2-93 MS-04 p.6</cite></li><li>NDT decreases due to smaller grain size and increases due to irradiation. <cite>DOE-HDBK-1017/2-93 MS-04 p.6</cite></li><li>Brittle fracture requires a flaw such as a crack, stress sufficient to develop a small deformation at the crack tip, and a temperature at or below NDT. <cite>DOE-HDBK-1017/2-93 MS-04 p.6</cite></li><li>MPT curves are based on reactor vessel and head stress limitations, and the safe operating region is to the right of the curve. <cite>DOE-HDBK-1017/2-93 MS-04 p.10</cite></li><li>Heatup and cooldown rate limits are based upon impact on the future fatigue life of the plant. <cite>DOE-HDBK-1017/2-93 MS-04 p.13</cite></li><li>Soak times are used to minimize thermal stresses by controlling the heating rate. <cite>DOE-HDBK-1017/2-93 MS-04 p.13</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -490,18 +529,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q1338, Q1339, Q379, Q1340, Q1341, Q385, Q1342, Q1343, Q1344, Q1345, Q1346, Q1347, Q1348, Q380, Q381, Q1349, Q1350, Q1351, Q382, Q1352, Q1353, Q1354, Q1355.</p><p>Flashcards from this lesson: C927, C928, C929, C930, C931, C932.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20MS-04&amp;body=Lesson%3A%20MS-04%20Brittle%20Fracture%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

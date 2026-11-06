@@ -143,6 +143,10 @@ Launch and navigation\
 - Add all new topic URLs to sw.js and bump the cache version.\
 - Generate the selector from the manifest, so no topic appears without its page.\
   Topics not yet built show as "In progress" and cannot be selected.\
+- Lesson progress stays on the device in localStorage (natrium-lessons-progress), stored by\
+  topic slug. Last page is saved automatically. Completed is marked by the user.\
+- Screen layout uses CSS width (900 px and up), not device or browser detection. Wide screens\
+  get the side page list and the full lesson list. Phones keep the single column and selector.\
 \
 Approved decisions (Step 1 review, Nov 5, 2026)\
 - CH-03 and CH-04 are built, tagged "Water-system only."\

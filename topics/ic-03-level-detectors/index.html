@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ic-03-level-detectors">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Gauge glasses</a></li><li><a href="#check-1">Knowledge check: Gauge glasses</a></li><li><a href="#concept-2">Reflex and refraction gauge glasses</a></li><li><a href="#check-2">Knowledge check: Reflex and refraction gauge glasses</a></li><li><a href="#concept-3">Float detectors</a></li><li><a href="#check-3">Knowledge check: Float detectors</a></li><li><a href="#concept-4">Conductivity probes</a></li><li><a href="#check-4">Knowledge check: Conductivity probes</a></li><li><a href="#concept-5">Differential pressure: open tank and dry reference leg</a></li><li><a href="#check-5">Knowledge check: Differential pressure: open tank and dry reference leg</a></li><li><a href="#concept-6">Wet reference leg</a></li><li><a href="#check-6">Knowledge check: Wet reference leg</a></li><li><a href="#concept-7">Density compensation</a></li><li><a href="#check-7">Knowledge check: Density compensation</a></li><li><a href="#concept-8">Remote indication and environmental concerns</a></li><li><a href="#check-8">Knowledge check: Remote indication and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 20</span></div>
 <h1>Level Detectors</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Gauge glasses</a></li><li><a href="#check-1">Knowledge check: Gauge glasses</a></li><li><a href="#concept-2">Reflex and refraction gauge glasses</a></li><li><a href="#check-2">Knowledge check: Reflex and refraction gauge glasses</a></li><li><a href="#concept-3">Float detectors</a></li><li><a href="#check-3">Knowledge check: Float detectors</a></li><li><a href="#concept-4">Conductivity probes</a></li><li><a href="#check-4">Knowledge check: Conductivity probes</a></li><li><a href="#concept-5">Differential pressure: open tank and dry reference leg</a></li><li><a href="#check-5">Knowledge check: Differential pressure: open tank and dry reference leg</a></li><li><a href="#concept-6">Wet reference leg</a></li><li><a href="#check-6">Knowledge check: Wet reference leg</a></li><li><a href="#concept-7">Density compensation</a></li><li><a href="#check-7">Knowledge check: Density compensation</a></li><li><a href="#concept-8">Remote indication and environmental concerns</a></li><li><a href="#check-8">Knowledge check: Remote indication and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1013/1-92, Module 3.</p><p>These pages are tagged Water-system only: Reflex and refraction gauge glasses. Other pages apply to the sodium and salt systems.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given a level instrument, RELATE the associated fundamental principles, including possible failure modes, to that instrument. <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> IDENTIFY the principle of operation of the following types of level instrumentation: <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p><ul class="letters"><li>a. Gauge glass</li><li>b. Ball float</li><li>c. Chain float</li><li>d. Magnetic bond</li><li>e. Conductivity probe</li><li>f. Differential pressure (∆P)</li></ul><p><span class="num">1.2</span> EXPLAIN the process of density compensation in level detection systems to include: <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p><ul class="letters"><li>a. Why needed</li><li>b. How accomplished</li></ul><p><span class="num">1.3</span> STATE the three reasons for using remote level indicators. <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p><p><span class="num">1.4</span> Given a basic block diagram of a differential pressure detector-type level instrument, STATE the purpose of the following blocks: <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p><ul class="letters"><li>a. Differential pressure (D/P) transmitter</li><li>b. Amplifier</li><li>c. Indication</li></ul><p><span class="num">1.5</span> STATE the three environmental concerns which can affect the accuracy and reliability of level detection instrumentation. <cite>DOE-HDBK-1013/1-92 IC-03 p.v</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Gauge glasses <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -76,6 +97,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"the liquid seeks its own level due to the pressure of the liquid in the vessel." <cite>DOE-HDBK-1013/1-92 IC-03 p.2</cite></blockquote>
 <blockquote>"Gauge glasses made from tubular glass or plastic are used for service up to 450 psig and 400°F." <cite>DOE-HDBK-1013/1-92 IC-03 p.2</cite></blockquote>
 <p>For higher temperatures and pressures, a metal-bodied gauge glass with a heavy glass or quartz section is used. <cite>DOE-HDBK-1013/1-92 IC-03 p.2</cite></p>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Gauge glasses <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -103,6 +125,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q972&amp;body=Item%3A%20Q972%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20A%20pressure%20gauge%20at%20the%20bottom%20of%20a%20tank%20reads%20hydrostatic%20head.%20Which%20group%20of%20level%20measurement%20is%20this%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detectors%2C%20IC-03%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Gauge glasses</a><a class="next" href="#concept-2">Reflex and refraction gauge glasses <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -117,6 +140,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"This results in the glass appearing black" <cite>DOE-HDBK-1013/1-92 IC-03 p.3</cite></blockquote>
 <blockquote>"Light is bent, or refracted, to a greater extent in water than in steam." <cite>DOE-HDBK-1013/1-92 IC-03 p.4</cite></blockquote>
 <blockquote>"The portion of the gauge containing water appears green; the portion of the gauge from that level upward appears red." <cite>DOE-HDBK-1013/1-92 IC-03 p.4</cite></blockquote>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Gauge glasses</a><a class="next" href="#check-2">Knowledge check: Reflex and refraction gauge glasses <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -134,6 +158,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q973&amp;body=Item%3A%20Q973%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20In%20a%20refraction%20gauge%20glass%2C%20what%20color%20shows%20the%20portion%20containing%20water%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detectors%2C%20IC-03%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Reflex and refraction gauge glasses</a><a class="next" href="#concept-3">Float detectors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -153,6 +178,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The float travels outside a non-magnetic tube housing an inner magnet. The outer magnet attracts the inner magnet, which follows the level. <cite>DOE-HDBK-1013/1-92 IC-03 p.6</cite></p>
 <p>A float switch gives a simple, accurate, and reliable signal, such as to start a sump pump. <cite>Word: Level Detectors.docx, slide 1.1 Introduction and float switch</cite></p>
 <blockquote>"The primary disadvantage is that you only get level indication at specific points" <cite>Word: Level Detectors.docx, slide 1.1 Introduction and float switch</cite></blockquote>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Reflex and refraction gauge glasses</a><a class="next" href="#check-3">Knowledge check: Float detectors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -190,6 +216,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q976&amp;body=Item%3A%20Q976%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20Why%20was%20the%20magnetic%20bond%20method%20developed%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detectors%2C%20IC-03%20p.%206%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Float detectors</a><a class="next" href="#concept-4">Conductivity probes <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -203,6 +230,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The current energizes a relay, whose contacts open or close. <cite>DOE-HDBK-1013/1-92 IC-03 p.6</cite></p>
 <blockquote>"The relay in turn will actuate an alarm, a pump, a control valve, or all three." <cite>DOE-HDBK-1013/1-92 IC-03 p.6</cite></blockquote>
 <blockquote>"A typical system has three probes: a low level probe, a high level probe, and a high level alarm probe." <cite>DOE-HDBK-1013/1-92 IC-03 p.6</cite></blockquote>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Float detectors</a><a class="next" href="#check-4">Knowledge check: Conductivity probes <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -220,6 +248,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q977&amp;body=Item%3A%20Q977%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20In%20a%20conductivity%20probe%20system%2C%20what%20happens%20when%20liquid%20touches%20an%20electrode%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detectors%2C%20IC-03%20p.%206%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Conductivity probes</a><a class="next" href="#concept-5">Differential pressure: open tank and dry reference leg <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -237,6 +266,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The gas or vapor pressure is equally applied to the low and high pressure sides." <cite>DOE-HDBK-1013/1-92 IC-03 p.8</cite></blockquote>
 <p>The transmitter output is therefore directly proportional to the hydrostatic head pressure, which is the level in the tank. <cite>DOE-HDBK-1013/1-92 IC-03 p.8</cite></p>
 <blockquote>"when differential pressure rises, indicated level rises for level detectors in a dry reference leg." <cite>Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!</cite></blockquote>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Conductivity probes</a><a class="next" href="#check-5">Knowledge check: Differential pressure: open tank and dry reference leg <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -274,6 +304,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q979&amp;body=Item%3A%20Q979%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20With%20a%20dry%20reference%20leg%20on%20a%20pressurized%20tank%2C%20why%20does%20gas%20pressure%20not%20affect%20the%20level%20reading%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detectors%2C%20IC-03%20p.%208%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Differential pressure: open tank and dry reference leg</a><a class="next" href="#concept-6">Wet reference leg <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -290,6 +321,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"a differential pressure drop causes indicated level to rise for level detectors installed with a wet reference leg." <cite>Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!</cite></blockquote>
 <p>A leak in the reference leg reduces differential pressure, causing indicated level to rise above actual level. <cite>Word: Level Detectors.docx, slide 1.9 Your turn to practice!!</cite></p>
 <p>A rise in reference leg temperature makes its fluid expand and spill over, which also causes indicated level to rise above actual level. <cite>Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!</cite></p>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Differential pressure: open tank and dry reference leg</a><a class="next" href="#check-6">Knowledge check: Wet reference leg <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -337,6 +369,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q268&amp;body=Item%3A%20Q268%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20The%20full%2C%20wet%20reference%20leg%20of%20a%20tank%20level%20detector%20heats%20up%2C%20for%20example%20from%20a%20nearby%20sodium%20fire.%20Actual%20level%20is%20constant.%20Indicated%20level%20becomes%3A%0ASource%3A%20Approved%20lesson%20plan%3A%20Level%20Detectors%20(Level%20Detectors.docx)%2C%20slide%201.8%20The%20most%20important%20slide%20of%20this%20section!!%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Wet reference leg</a><a class="next" href="#concept-7">Density compensation <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -354,6 +387,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul><li>Electronic circuitry</li><li>Pressure detector input</li><li>Instrument calibration</li></ul><p><cite>DOE-HDBK-1013/1-92 IC-03 p.14</cite></p>
 <blockquote>"Density compensation may also be accomplished through electronic circuitry." <cite>DOE-HDBK-1013/1-92 IC-03 p.13</cite></blockquote>
 <p>Calibration charts are also available to correct indications for changes in reference leg temperature. <cite>DOE-HDBK-1013/1-92 IC-03 p.13</cite></p>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Wet reference leg</a><a class="next" href="#check-7">Knowledge check: Density compensation <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -381,6 +415,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q981&amp;body=Item%3A%20Q981%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20Which%20is%20one%20way%20density%20compensation%20is%20accomplished%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Density%20Compensation%2C%20IC-03%20p.%2013%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Density compensation</a><a class="next" href="#concept-8">Remote indication and environmental concerns <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -398,6 +433,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"It primarily affects level sensing instruments which utilize a wet reference leg." <cite>DOE-HDBK-1013/1-92 IC-03 p.16</cite></blockquote>
 <blockquote>"Ambient temperature variations will affect the accuracy and reliability of level detection instrumentation." <cite>DOE-HDBK-1013/1-92 IC-03 p.16</cite></blockquote>
 <blockquote>"High humidity causes moisture to collect on the equipment." <cite>DOE-HDBK-1013/1-92 IC-03 p.16</cite></blockquote>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Density compensation</a><a class="next" href="#check-8">Knowledge check: Remote indication and environmental concerns <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -435,6 +471,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q984&amp;body=Item%3A%20Q984%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20What%20are%20the%20three%20environmental%20concerns%20for%20level%20detection%20instrumentation%3F%0ASource%3A%20DOE-1013-V1%20(DOE-HDBK-1013%2F1-92)%2C%20Level%20Detection%20Circuitry%2C%20IC-03%20p.%2016%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Remote indication and environmental concerns</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -444,6 +481,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Gauge glasses</a></li><li><a href="#check-1">Knowledge check: Gauge glasses</a></li><li><a href="#concept-2">Reflex and refraction gauge glasses</a></li><li><a href="#check-2">Knowledge check: Reflex and refraction gauge glasses</a></li><li><a href="#concept-3">Float detectors</a></li><li><a href="#check-3">Knowledge check: Float detectors</a></li><li><a href="#concept-4">Conductivity probes</a></li><li><a href="#check-4">Knowledge check: Conductivity probes</a></li><li><a href="#concept-5">Differential pressure: open tank and dry reference leg</a></li><li><a href="#check-5">Knowledge check: Differential pressure: open tank and dry reference leg</a></li><li><a href="#concept-6">Wet reference leg</a></li><li><a href="#check-6">Knowledge check: Wet reference leg</a></li><li><a href="#concept-7">Density compensation</a></li><li><a href="#check-7">Knowledge check: Density compensation</a></li><li><a href="#concept-8">Remote indication and environmental concerns</a></li><li><a href="#check-8">Knowledge check: Remote indication and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.1</span></div><h3>Reference leg leak on a wet leg</h3><p>A wet reference leg develops a leak. What happens to indicated level compared with actual level?</p><ol><li>The leak reduces the liquid height on the high side</li><li>Differential pressure falls</li><li>On a wet leg, falling differential pressure raises indication</li></ol><p class="answer">Answer: Indicated level rises above actual level.</p><p><cite>Word: Level Detectors.docx, slide 1.9 Your turn to practice!!</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.1</span></div><h3>Wet leg at maximum level</h3><p>A wet reference leg tank is at maximum level. What differential pressure does the transmitter see?</p><ol><li>The reference leg head equals the maximum level</li><li>The two sides see equal pressure</li></ol><p class="answer">Answer: The differential pressure is zero.</p><p><cite>DOE-HDBK-1013/1-92 IC-03 p.9</cite></p></div>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Remote indication and environmental concerns</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -452,6 +490,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Gauge glasses</a></li><li><a href="#check-1">Knowledge check: Gauge glasses</a></li><li><a href="#concept-2">Reflex and refraction gauge glasses</a></li><li><a href="#check-2">Knowledge check: Reflex and refraction gauge glasses</a></li><li><a href="#concept-3">Float detectors</a></li><li><a href="#check-3">Knowledge check: Float detectors</a></li><li><a href="#concept-4">Conductivity probes</a></li><li><a href="#check-4">Knowledge check: Conductivity probes</a></li><li><a href="#concept-5">Differential pressure: open tank and dry reference leg</a></li><li><a href="#check-5">Knowledge check: Differential pressure: open tank and dry reference leg</a></li><li><a href="#concept-6">Wet reference leg</a></li><li><a href="#check-6">Knowledge check: Wet reference leg</a></li><li><a href="#concept-7">Density compensation</a></li><li><a href="#check-7">Knowledge check: Density compensation</a></li><li><a href="#concept-8">Remote indication and environmental concerns</a></li><li><a href="#check-8">Knowledge check: Remote indication and environmental concerns</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>Level instruments include the gauge glass, ball float, chain float, magnetic bond, conductivity probe, and differential pressure detector. <cite>DOE-HDBK-1013/1-92 IC-03 p.10</cite></li><li>If a vapor with a significant density exists above the liquid, its hydrostatic pressure may need to be considered. <cite>DOE-HDBK-1013/1-92 IC-03 p.14</cite></li><li>There are three major reasons for utilizing remote level indication. <cite>DOE-HDBK-1013/1-92 IC-03 p.17</cite></li><li>Density of the fluid, ambient temperature changes, and humidity can affect level detection instrumentation. <cite>DOE-HDBK-1013/1-92 IC-03 p.17</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -466,18 +505,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q971, Q972, Q973, Q974, Q975, Q976, Q977, Q269, Q978, Q979, Q387, Q388, Q267, Q268, Q980, Q981, Q982, Q983, Q984.</p><p>Flashcards from this lesson: C822, C823, C824, C825, C826.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20IC-03&amp;body=Lesson%3A%20IC-03%20Level%20Detectors%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

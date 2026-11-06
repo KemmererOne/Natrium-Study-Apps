@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ms-05-plant-materials">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Properties that drive material selection</a></li><li><a href="#check-1">Knowledge check: Properties that drive material selection</a></li><li><a href="#concept-2">Fast-spectrum fuel materials</a></li><li><a href="#check-2">Knowledge check: Fast-spectrum fuel materials</a></li><li><a href="#concept-3">Selecting a fuel material</a></li><li><a href="#check-3">Knowledge check: Selecting a fuel material</a></li><li><a href="#concept-4">Fuel cladding</a></li><li><a href="#check-4">Knowledge check: Fuel cladding</a></li><li><a href="#concept-5">Reflectors</a></li><li><a href="#check-5">Knowledge check: Reflectors</a></li><li><a href="#concept-6">Control materials</a></li><li><a href="#check-6">Knowledge check: Control materials</a></li><li><a href="#concept-7">Shielding materials</a></li><li><a href="#check-7">Knowledge check: Shielding materials</a></li><li><a href="#concept-8">Pellet-cladding interaction and fission product swelling</a></li><li><a href="#check-8">Knowledge check: Pellet-cladding interaction and fission product swelling</a></li><li><a href="#concept-9">Fuel densification</a></li><li><a href="#concept-10">Cladding embrittlement</a></li><li><a href="#concept-11">Fatigue, work hardening, and creep</a></li><li><a href="#check-11">Knowledge check: Fatigue, work hardening, and creep</a></li><li><a href="#concept-12">Radiation interactions with metals</a></li><li><a href="#check-12">Knowledge check: Radiation interactions with metals</a></li><li><a href="#concept-13">Thermal and displacement spikes</a></li><li><a href="#check-13">Knowledge check: Thermal and displacement spikes</a></li><li><a href="#concept-14">Recoil from emitted radiation</a></li><li><a href="#check-14">Knowledge check: Recoil from emitted radiation</a></li><li><a href="#concept-15">Effects of thermal neutron capture</a></li><li><a href="#concept-16">Fast neutron effects on metal properties</a></li><li><a href="#check-16">Knowledge check: Fast neutron effects on metal properties</a></li><li><a href="#concept-17">Radiation effects in organic compounds</a></li><li><a href="#check-17">Knowledge check: Radiation effects in organic compounds</a></li><li><a href="#concept-18">Aluminum in reactors</a></li><li><a href="#check-18">Knowledge check: Aluminum in reactors</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 37</span></div>
 <h1>Plant Materials</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Properties that drive material selection</a></li><li><a href="#check-1">Knowledge check: Properties that drive material selection</a></li><li><a href="#concept-2">Fast-spectrum fuel materials</a></li><li><a href="#check-2">Knowledge check: Fast-spectrum fuel materials</a></li><li><a href="#concept-3">Selecting a fuel material</a></li><li><a href="#check-3">Knowledge check: Selecting a fuel material</a></li><li><a href="#concept-4">Fuel cladding</a></li><li><a href="#check-4">Knowledge check: Fuel cladding</a></li><li><a href="#concept-5">Reflectors</a></li><li><a href="#check-5">Knowledge check: Reflectors</a></li><li><a href="#concept-6">Control materials</a></li><li><a href="#check-6">Knowledge check: Control materials</a></li><li><a href="#concept-7">Shielding materials</a></li><li><a href="#check-7">Knowledge check: Shielding materials</a></li><li><a href="#concept-8">Pellet-cladding interaction and fission product swelling</a></li><li><a href="#check-8">Knowledge check: Pellet-cladding interaction and fission product swelling</a></li><li><a href="#concept-9">Fuel densification</a></li><li><a href="#concept-10">Cladding embrittlement</a></li><li><a href="#concept-11">Fatigue, work hardening, and creep</a></li><li><a href="#check-11">Knowledge check: Fatigue, work hardening, and creep</a></li><li><a href="#concept-12">Radiation interactions with metals</a></li><li><a href="#check-12">Knowledge check: Radiation interactions with metals</a></li><li><a href="#concept-13">Thermal and displacement spikes</a></li><li><a href="#check-13">Knowledge check: Thermal and displacement spikes</a></li><li><a href="#concept-14">Recoil from emitted radiation</a></li><li><a href="#check-14">Knowledge check: Recoil from emitted radiation</a></li><li><a href="#concept-15">Effects of thermal neutron capture</a></li><li><a href="#concept-16">Fast neutron effects on metal properties</a></li><li><a href="#check-16">Knowledge check: Fast neutron effects on metal properties</a></li><li><a href="#concept-17">Radiation effects in organic compounds</a></li><li><a href="#check-17">Knowledge check: Radiation effects in organic compounds</a></li><li><a href="#concept-18">Aluminum in reactors</a></li><li><a href="#check-18">Knowledge check: Aluminum in reactors</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1017/2-93, Module 5.</p><p>These pages are tagged Water-system only: Fast-spectrum fuel materials; Fuel cladding; Reflectors; Control materials; Fuel densification; Cladding embrittlement; Effects of thermal neutron capture; Aluminum in reactors. Other pages apply to the sodium and salt systems.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Without references, DESCRIBE the considerations commonly used when selecting material for use in a reactor plant. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DEFINE the following terms: <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><ul class="letters"><li>a. Machinability</li><li>b. Formability</li><li>c. Stability</li><li>d. Fabricability</li></ul><p><span class="num">1.2</span> IDENTIFY the importance of a material property and its application in a reactor plant. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.3</span> LIST the four radioactive materials that fission by thermal neutrons and are used as reactor fuels. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.4</span> STATE the four considerations in selecting fuel material and the desired effect on the nuclear properties of the selected fuel material. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.5</span> STATE the four major characteristics necessary in a material used for fuel cladding. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.6</span> IDENTIFY the four materials suitable for use as fuel cladding material and their applications. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.7</span> STATE the purpose of a reflector. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.8</span> LIST the five essential requirements for reflector material in a thermal reactor. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.9</span> STATE the five common poisons used as control rod material. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.10</span> IDENTIFY the advantage(s) and/or disadvantages of the five common poisons used as control rod material. <cite>DOE-HDBK-1017/2-93 MS-05 p.vii</cite></p><p><span class="num">1.11</span> DESCRIBE the requirements of a material used to shield against the following types of radiation: <cite>DOE-HDBK-1017/2-93 MS-05 p.viii</cite></p><ul class="letters"><li>a. Beta</li><li>b. Gamma</li><li>c. High energy neutron</li><li>d. Low energy neutron</li></ul><p><span class="num">1.12</span> STATE the nuclear reactor core problems and causes associated with the following: <cite>DOE-HDBK-1017/2-93 MS-05 p.viii</cite></p><ul class="letters"><li>a. Pellet-cladding interaction</li><li>b. Fuel densification</li><li>c. Fuel cladding embrittlement</li><li>d. Fuel burnup and fission product swelling</li></ul><p><span class="num">1.13</span> STATE the measures taken to counteract or minimize the effects of the following: <cite>DOE-HDBK-1017/2-93 MS-05 p.viii</cite></p><ul class="letters"><li>a. Pellet-cladding interaction</li><li>b. Fuel densification</li><li>c. Fuel cladding embrittlement</li><li>d. Fission product swelling of a fuel element</li></ul><p><span class="num">1.14</span> DEFINE the following terms: <cite>DOE-HDBK-1017/2-93 MS-05 p.viii</cite></p><ul class="letters"><li>a. Fatigue failure</li><li>b. Work hardening</li><li>c. Creep</li></ul><p><span class="num">1.15</span> STATE the measures taken to counteract or minimize the effects of the following: <cite>DOE-HDBK-1017/2-93 MS-05 p.viii</cite></p><ul class="letters"><li>a. Fatigue failure</li><li>b. Work hardening</li><li>c. Creep</li></ul><p><span class="num">1.16</span> STATE how the following types of radiation interact with metals: <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><ul class="letters"><li>a. Gamma</li><li>b. Alpha</li><li>c. Beta</li><li>d. Fast neutron</li><li>e. Slow neutron</li></ul><p><span class="num">1.17</span> DEFINE the following terms: <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><ul class="letters"><li>a. Knock-on</li><li>b. Vacancy</li><li>c. Interstitial</li></ul><p><span class="num">1.18</span> DEFINE the following terms: <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><ul class="letters"><li>a. Thermal spike</li><li>b. Displacement spike</li></ul><p><span class="num">1.19</span> STATE the effect a large number of displacement spikes has on the properties of a metal. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.20</span> DESCRIBE how the emission of radiation can cause dislocation of the atom emitting the radiation. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.21</span> STATE the two effects on a crystalline structure resulting from the capture of a neutron. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.22</span> STATE how thermal neutrons can produce atomic displacements. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.23</span> STATE how gamma and beta radiation effect organic materials. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.24</span> IDENTIFY the change in organic compounds due to radiation. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><ul class="letters"><li>a. Nylon</li><li>b. High-density polyethylene marlex 50</li><li>c. Rubber</li></ul><p><span class="num">1.25</span> IDENTIFY the chemical bond with the least resistance to radiation. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.26</span> DEFINE the term polymerization. <cite>DOE-HDBK-1017/2-93 MS-05 p.ix</cite></p><p><span class="num">1.27</span> STATE the applications and the property that makes aluminum desirable in reactors operating at: <cite>DOE-HDBK-1017/2-93 MS-05 p.x</cite></p><ul class="letters"><li>a. Low kilowatt power</li><li>b. Low temperature ranges</li><li>c. Moderate temperature range</li></ul><p><span class="num">1.28</span> STATE why aluminum is undesirable in high temperature power reactors. <cite>DOE-HDBK-1017/2-93 MS-05 p.x</cite></p></div>
+
 <div class="pager"><a class="next" href="#concept-1">Properties that drive material selection <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -80,6 +101,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Good heat transfer properties are desirable from the fuel boundary to the coolant in order that the heat produced will be efficiently transferred." <cite>DOE-HDBK-1017/2-93 MS-05 p.3</cite></blockquote>
 <blockquote>"The availability of a material used in the construction of nuclear plants refers to the ease with which a material can be obtained and its cost." <cite>DOE-HDBK-1017/2-93 MS-05 p.2</cite></blockquote>
 <ul><li>Ductility: important for materials under tension and compression, and essential for reactor vessel steels</li><li>Heat transfer: most important for core cladding and heat exchanger tubes</li><li>Mechanical strength: desirable because of possible degradation from radiation damage and the need to contain radioactive liquids and fuel</li><li>Cost: a major part of facility capital cost is plant material</li></ul><p><cite>DOE-HDBK-1017/2-93 MS-05 p.3</cite></p>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Properties that drive material selection <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -127,6 +149,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1468&amp;body=Item%3A%20Q1468%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20Which%20components%20make%20good%20heat%20transfer%20a%20major%20selection%20consideration%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Properties%20Considered%20When%20Selecting%20Materials%2C%20MS-05%20p.%203%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Properties that drive material selection</a><a class="next" href="#concept-2">Fast-spectrum fuel materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -144,6 +167,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Under the much more severe conditions in a fast reactor, however, even inert UO2 begins to respond to its environment in a manner that is often detrimental to fuel performance." <cite>DOE-HDBK-1017/2-93 MS-05 p.6</cite></blockquote>
 <p>At Natrium, the PSAR says: <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1</cite></p>
 <blockquote>"The initial fuel for the core is sodium-bonded uranium - 10 weight percent Zirconium (U-10Zr) that is encapsulated by HT-9 ferritic-martensitic steel cladding." <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1</cite></blockquote>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Properties that drive material selection</a><a class="next" href="#check-2">Knowledge check: Fast-spectrum fuel materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -181,6 +205,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1470&amp;body=Item%3A%20Q1470%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20three%20things%20does%20fuel%20cladding%20do%2C%20according%20to%20the%20fuel%20materials%20chapter%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Fuel%20Materials%2C%20MS-05%20p.%206%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Fast-spectrum fuel materials</a><a class="next" href="#concept-3">Selecting a fuel material <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -196,6 +221,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Swelling compromises dimensional stability. It constricts the coolant channels and may lead to rupture of the metal cladding and escape of fission products into the coolant. <cite>DOE-HDBK-1017/2-93 MS-05 p.9</cite></p>
 <blockquote>"The main cause of fuel element swelling is the accumulation of two fission product atoms for each atom fissioned." <cite>DOE-HDBK-1017/2-93 MS-05 p.9</cite></blockquote>
 <p>Some of the fission products are gases, so a ceramic fuel's ability to retain and accommodate fission gases is of primary importance to core lifetime. <cite>DOE-HDBK-1017/2-93 MS-05 p.9</cite></p>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Fast-spectrum fuel materials</a><a class="next" href="#check-3">Knowledge check: Selecting a fuel material <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -233,6 +259,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1473&amp;body=Item%3A%20Q1473%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20the%20main%20cause%20of%20fuel%20element%20swelling%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Fuel%20Materials%2C%20MS-05%20p.%209%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Selecting a fuel material</a><a class="next" href="#concept-4">Fuel cladding <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -250,6 +277,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The choice of cladding for fast reactors is less dependent on the neutron absorption cross section than for thermal reactors. <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></p>
 <blockquote>"The essential requirements for these materials are high melting point, retention of satisfactory physical and mechanical properties, a low swelling rate when irradiated by large fluences of fast neutrons, and good corrosion resistance, especially to molten sodium." <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></blockquote>
 <blockquote>"At present, stainless steel is the preferred fuel cladding material for sodium-cooled fast breeder reactors (LMFBRs)." <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></blockquote>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Selecting a fuel material</a><a class="next" href="#check-4">Knowledge check: Fuel cladding <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -287,6 +315,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1476&amp;body=Item%3A%20Q1476%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20Which%20is%20an%20essential%20requirement%20for%20fast%20reactor%20cladding%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Cladding%20and%20Reflectors%2C%20MS-05%20p.%2012%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Fuel cladding</a><a class="next" href="#concept-5">Reflectors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -298,6 +327,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The primary consideration for selecting a reflector material is its nuclear properties. <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></p>
 <p>Objective 1.8 lists requirements for a reflector in a thermal reactor. That list is left off under scope Rule 8, and the objective is marked for review. The handbook's fast reactor statement follows. <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></p>
 <blockquote>"In the case of a fast reactor, neutron thermalization is not desirable, and the reflector will consist of a dense element of high mass number." <cite>DOE-HDBK-1017/2-93 MS-05 p.13</cite></blockquote>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Fuel cladding</a><a class="next" href="#check-5">Knowledge check: Reflectors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -325,6 +355,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1478&amp;body=Item%3A%20Q1478%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20does%20a%20fast%20reactor%20reflector%20consist%20of%2C%20according%20to%20the%20handbook%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Cladding%20and%20Reflectors%2C%20MS-05%20p.%2013%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Reflectors</a><a class="next" href="#concept-6">Control materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -344,6 +375,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Control rods of this nature have been used in PWRs, BWRs, and HTGRs and have been proposed for use in fast breeder reactors employing oxide fuels." <cite>DOE-HDBK-1017/2-93 MS-05 p.16</cite></blockquote>
 <p>At Natrium, the PSAR says: <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10</cite></p>
 <blockquote>"The absorber pins contain cladded, helium-bonded, Boron Carbide absorber pellets." <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10</cite></blockquote>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Reflectors</a><a class="next" href="#check-6">Knowledge check: Control materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -381,6 +413,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1481&amp;body=Item%3A%20Q1481%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20Why%20is%20pure%20boron%20not%20used%20for%20control%20rods%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Control%20Materials%2C%20MS-05%20p.%2016%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Control materials</a><a class="next" href="#concept-7">Shielding materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -401,6 +434,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The beta particle can generally be stopped by a sheet of aluminum." <cite>DOE-HDBK-1017/2-93 MS-05 p.20</cite></blockquote>
 <p>All materials described for neutron and gamma radiation also attenuate beta radiation. <cite>DOE-HDBK-1017/2-93 MS-05 p.20</cite></p>
 <blockquote>"Since alpha and beta particles can be easily shielded against, they do not present a major problem in the nuclear reactor plant." <cite>DOE-HDBK-1017/2-93 MS-05 p.21</cite></blockquote>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Control materials</a><a class="next" href="#check-7">Knowledge check: Shielding materials <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -448,6 +482,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1485&amp;body=Item%3A%20Q1485%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20generally%20stops%20a%20beta%20particle%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Shielding%20Materials%2C%20MS-05%20p.%2020%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Shielding materials</a><a class="next" href="#concept-8">Pellet-cladding interaction and fission product swelling <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -463,6 +498,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Swelling of oxide fuels is attributed to gaseous fission-product bubble formation and the accumulation of solid fission products. <cite>DOE-HDBK-1017/2-93 MS-05 p.25</cite></p>
 <blockquote>"Swelling can cause excessive pressure on the cladding, which could lead to fuel element cladding failure." <cite>DOE-HDBK-1017/2-93 MS-05 p.25</cite></blockquote>
 <p>Fuel element life, or core burnup, is also set by the decrease in reactivity from the loss of fissile material and the accumulation of fission-product poisons. Operational maximum and minimum coolant flow limits help prevent extensive fuel element damage. <cite>DOE-HDBK-1017/2-93 MS-05 p.25</cite></p>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Shielding materials</a><a class="next" href="#check-8">Knowledge check: Pellet-cladding interaction and fission product swelling <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -500,6 +536,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1487&amp;body=Item%3A%20Q1487%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20can%20swelling%20of%20the%20fuel%20do%20to%20the%20cladding%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Nuclear%20Reactor%20Core%20Problems%2C%20MS-05%20p.%2025%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Pellet-cladding interaction and fission product swelling</a><a class="next" href="#concept-9">Fuel densification <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-9">
@@ -512,6 +549,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The process of fuel densification is complete within 200 hours of reactor operation." <cite>DOE-HDBK-1017/2-93 MS-05 p.23</cite></blockquote>
 <ul><li>An increase in the linear heat generation rate, directly proportional to the decrease in pellet length</li><li>An increased local neutron flux and a local power spike in axial gaps in the fuel column</li><li>A decrease in the clearance gap heat conductance between pellets and cladding, which raises fuel temperature</li></ul><p><cite>DOE-HDBK-1017/2-93 MS-05 p.23</cite></p>
 <p>The handbook's measures against densification come from PWR fuel rods and water-reactor accident limits, so they are left off this page and the objective is marked for review. The general measure is that plant procedures limit the rate at which power may be increased. <cite>DOE-HDBK-1017/2-93 MS-05 p.24</cite></p>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Pellet-cladding interaction and fission product swelling</a><a class="next" href="#concept-10">Cladding embrittlement <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-10">
@@ -522,6 +560,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <h2>Cladding embrittlement</h2><p class="count">Objectives 1.12, 1.13</p><p>The handbook's cladding embrittlement section is mainly about hydrogen from zircaloy corrosion in water, which is left off this page. The objective is marked for review. Its fast reactor statement follows. <cite>DOE-HDBK-1017/2-93 MS-05 p.24</cite></p>
 <blockquote>"Irradiation at high temperatures can lead to brittle fracture of stainless steels used as cladding in fast liquid metal breeder reactors." <cite>DOE-HDBK-1017/2-93 MS-05 p.24</cite></blockquote>
 <p>As with metals in general, irradiation decreases ductility and increases embrittlement. <cite>DOE-HDBK-1017/2-93 MS-05 p.24</cite></p>
+
 <div class="pager"><a href="#concept-9"><span aria-hidden="true">←</span> Fuel densification</a><a class="next" href="#concept-11">Fatigue, work hardening, and creep <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-11">
@@ -546,6 +585,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The creep rate depends strongly on both stress and temperature. <cite>DOE-HDBK-1017/2-93 MS-05 p.30</cite></p>
 <blockquote>"For safe operation, the total deformation due to creep must be well below the strain at which failure occurs." <cite>DOE-HDBK-1017/2-93 MS-05 p.30</cite></blockquote>
 <blockquote>"Similarly, creep is a consideration at the temperatures that stainless-steel cladding encounters in gas-cooled reactors and fast reactors" <cite>DOE-HDBK-1017/2-93 MS-05 p.30</cite></blockquote>
+
 <div class="pager"><a href="#concept-10"><span aria-hidden="true">←</span> Cladding embrittlement</a><a class="next" href="#check-11">Knowledge check: Fatigue, work hardening, and creep <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-11">
@@ -603,6 +643,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1492&amp;body=Item%3A%20Q1492%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20How%20is%20creep%20kept%20from%20causing%20failure%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Plant%20Material%20Problems%2C%20MS-05%20p.%2030%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-11"><span aria-hidden="true">←</span> Fatigue, work hardening, and creep</a><a class="next" href="#concept-12">Radiation interactions with metals <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-12">
@@ -620,6 +661,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Most of those displacements are temporary. Over a long irradiation many displaced atoms return to normal lattice sites. <cite>DOE-HDBK-1017/2-93 MS-05 p.34</cite></p>
 <blockquote>"The presence of interstitials and vacancies makes it more difficult for dislocations to move through the lattice." <cite>DOE-HDBK-1017/2-93 MS-05 p.34</cite></blockquote>
 <blockquote>"This increases the strength and reduces the ductility of a material." <cite>DOE-HDBK-1017/2-93 MS-05 p.34</cite></blockquote>
+
 <div class="pager"><a href="#check-11"><span aria-hidden="true">←</span> Knowledge check: Fatigue, work hardening, and creep</a><a class="next" href="#check-12">Knowledge check: Radiation interactions with metals <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-12">
@@ -657,6 +699,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1495&amp;body=Item%3A%20Q1495%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20About%20how%20much%20kinetic%20energy%20must%20a%20struck%20nucleus%20gain%20in%20most%20metals%20to%20be%20displaced%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Atomic%20Displacement%20Due%20to%20Irradiation%2C%20MS-05%20p.%2033%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-12"><span aria-hidden="true">←</span> Radiation interactions with metals</a><a class="next" href="#concept-13">Thermal and displacement spikes <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-13">
@@ -669,6 +712,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>A displacement spike occurs when many atoms in a small area are displaced by a knock-on or a cascade of knock-ons. A 1 MeV neutron may affect about 5000 atoms in one spike. <cite>DOE-HDBK-1017/2-93 MS-05 p.35</cite></p>
 <blockquote>"The presence of many displacement spikes will change the properties of the material being irradiated." <cite>DOE-HDBK-1017/2-93 MS-05 p.35</cite></blockquote>
 <blockquote>"The presence of large numbers of vacancies and interstitials in the lattice of a metal will generally increase hardness and decrease ductility." <cite>DOE-HDBK-1017/2-93 MS-05 p.35</cite></blockquote>
+
 <div class="pager"><a href="#check-12"><span aria-hidden="true">←</span> Knowledge check: Radiation interactions with metals</a><a class="next" href="#check-13">Knowledge check: Thermal and displacement spikes <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-13">
@@ -696,6 +740,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1497&amp;body=Item%3A%20Q1497%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20does%20a%20large%20number%20of%20displacement%20spikes%20do%20to%20a%20metal%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Thermal%20and%20Displacement%20Spikes%20Due%20to%20Irradiation%2C%20MS-05%20p.%2035%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-13"><span aria-hidden="true">←</span> Thermal and displacement spikes</a><a class="next" href="#concept-14">Recoil from emitted radiation <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-14">
@@ -706,6 +751,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <h2>Recoil from emitted radiation</h2><p class="count">Objectives 1.20</p><p>Highly energetic recoil nuclei can be produced indirectly by the absorption of a neutron and the emission of a gamma ray. <cite>DOE-HDBK-1017/2-93 MS-05 p.37</cite></p>
 <blockquote>"When a gamma-ray photon is emitted by the excited compound nucleus formed by neutron capture, the residual atom suffers recoil (sometimes referred to as the shotgun effect)." <cite>DOE-HDBK-1017/2-93 MS-05 p.38</cite></blockquote>
 <p>The gamma photon has momentum, so the nucleus must take an equal and opposite momentum. The recoil energy is often large enough to displace the atom and produce a cascade of displacements. <cite>DOE-HDBK-1017/2-93 MS-05 p.38</cite></p>
+
 <div class="pager"><a href="#check-13"><span aria-hidden="true">←</span> Knowledge check: Thermal and displacement spikes</a><a class="next" href="#check-14">Knowledge check: Recoil from emitted radiation <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-14">
@@ -723,6 +769,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1498&amp;body=Item%3A%20Q1498%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20Why%20does%20an%20atom%20recoil%20when%20it%20emits%20a%20gamma%20ray%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Effect%20Due%20to%20Neutron%20Capture%2C%20MS-05%20p.%2038%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-14"><span aria-hidden="true">←</span> Recoil from emitted radiation</a><a class="next" href="#concept-15">Effects of thermal neutron capture <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-15">
@@ -734,6 +781,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The absorption or capture of lower energy thermal neutrons can produce two effects." <cite>DOE-HDBK-1017/2-93 MS-05 p.37</cite></blockquote>
 <ul><li>Introduction of an impurity atom, from transmutation of the absorbing nucleus</li><li>Atomic displacement caused by recoil atoms or knock-ons</li></ul><p><cite>DOE-HDBK-1017/2-93 MS-05 p.37</cite></p>
 <blockquote>"Thermal neutrons cannot produce atomic displacements directly, but they can do so indirectly as the result of radioactive capture (n,γ) and other neutron reactions or elastic scattering." <cite>DOE-HDBK-1017/2-93 MS-05 p.37</cite></blockquote>
+
 <div class="pager"><a href="#check-14"><span aria-hidden="true">←</span> Knowledge check: Recoil from emitted radiation</a><a class="next" href="#concept-16">Fast neutron effects on metal properties <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-16">
@@ -752,6 +800,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>When irradiation-induced swelling occurs, it is usually significant only from roughly 0.3 Tm to 0.5 Tm, where Tm is the melting point of the metal in kelvin. <cite>DOE-HDBK-1017/2-93 MS-05 p.42</cite></p>
 <blockquote>"In stainless steel, trace amounts of boron undergo a (n,α) reaction that generates helium bubbles which lead to the deterioration of mechanical properties." <cite>DOE-HDBK-1017/2-93 MS-05 p.39</cite></blockquote>
 <p>Helium bubbles can also enhance embrittlement. The accepted view is stress-induced bubble growth at the grain boundaries, where bubbles link up and cause intergranular failure. <cite>DOE-HDBK-1017/2-93 MS-05 p.43</cite></p>
+
 <div class="pager"><a href="#concept-15"><span aria-hidden="true">←</span> Effects of thermal neutron capture</a><a class="next" href="#check-16">Knowledge check: Fast neutron effects on metal properties <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-16">
@@ -789,6 +838,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1501&amp;body=Item%3A%20Q1501%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20generates%20helium%20bubbles%20in%20stainless%20steel%20under%20irradiation%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Effect%20Due%20to%20Neutron%20Capture%2C%20MS-05%20p.%2039%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-16"><span aria-hidden="true">←</span> Fast neutron effects on metal properties</a><a class="next" href="#concept-17">Radiation effects in organic compounds <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-17">
@@ -807,6 +857,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The chemical bond with the least resistance to decomposition is the covalent bond, in which outer electrons are shared by two atoms rather than firmly attached to one. <cite>DOE-HDBK-1017/2-93 MS-05 p.46</cite></p>
 <blockquote>"This recombination of broken hydrocarbon chains into longer ones is called" <cite>DOE-HDBK-1017/2-93 MS-05 p.46</cite></blockquote>
 <p>That word is polymerization. It is one of the reactions that takes place in organic compounds during irradiation, and it changes their properties. <cite>DOE-HDBK-1017/2-93 MS-05 p.46</cite></p>
+
 <div class="pager"><a href="#check-16"><span aria-hidden="true">←</span> Knowledge check: Fast neutron effects on metal properties</a><a class="next" href="#check-17">Knowledge check: Radiation effects in organic compounds <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-17">
@@ -864,6 +915,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1506&amp;body=Item%3A%20Q1506%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20What%20is%20polymerization%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Radiation%20Effects%20in%20Organic%20Compounds%2C%20MS-05%20p.%2046%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-17"><span aria-hidden="true">←</span> Radiation effects in organic compounds</a><a class="next" href="#concept-18">Aluminum in reactors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-18">
@@ -874,6 +926,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <h2>Aluminum in reactors</h2><p class="count">Objectives 1.27, 1.28</p><p>Objective 1.27 is about low-power research and training reactors, and it rests on aluminum's low thermal neutron absorption. That content and aluminum's corrosion in water are left off this page, and the objective is marked for review. <cite>DOE-HDBK-1017/2-93 MS-05 p.49</cite></p>
 <blockquote>"Generally, at high temperatures, the relative low strength and poor corrosion properties of aluminum make it unsuitable as a structural material in power reactors due to hydrogen generation." <cite>DOE-HDBK-1017/2-93 MS-05 p.49</cite></blockquote>
 <p>Alloying can improve aluminum's high temperature strength and corrosion properties, but only at the expense of a higher neutron capture cross section. <cite>DOE-HDBK-1017/2-93 MS-05 p.49</cite></p>
+
 <div class="pager"><a href="#check-17"><span aria-hidden="true">←</span> Knowledge check: Radiation effects in organic compounds</a><a class="next" href="#check-18">Knowledge check: Aluminum in reactors <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-18">
@@ -891,6 +944,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1507&amp;body=Item%3A%20Q1507%0ATopic%3A%20Brittle%20Fracture%20and%20Vessel%20Thermal%20Stress%0AQuestion%3A%20Why%20is%20aluminum%20unsuitable%20as%20a%20structural%20material%20in%20high%20temperature%20power%20reactors%3F%0ASource%3A%20DOE-1017-V2%20(DOE-HDBK-1017%2F2-93)%2C%20Reactor%20Use%20of%20Aluminum%2C%20MS-05%20p.%2049%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-18"><span aria-hidden="true">←</span> Aluminum in reactors</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -899,6 +953,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Properties that drive material selection</a></li><li><a href="#check-1">Knowledge check: Properties that drive material selection</a></li><li><a href="#concept-2">Fast-spectrum fuel materials</a></li><li><a href="#check-2">Knowledge check: Fast-spectrum fuel materials</a></li><li><a href="#concept-3">Selecting a fuel material</a></li><li><a href="#check-3">Knowledge check: Selecting a fuel material</a></li><li><a href="#concept-4">Fuel cladding</a></li><li><a href="#check-4">Knowledge check: Fuel cladding</a></li><li><a href="#concept-5">Reflectors</a></li><li><a href="#check-5">Knowledge check: Reflectors</a></li><li><a href="#concept-6">Control materials</a></li><li><a href="#check-6">Knowledge check: Control materials</a></li><li><a href="#concept-7">Shielding materials</a></li><li><a href="#check-7">Knowledge check: Shielding materials</a></li><li><a href="#concept-8">Pellet-cladding interaction and fission product swelling</a></li><li><a href="#check-8">Knowledge check: Pellet-cladding interaction and fission product swelling</a></li><li><a href="#concept-9">Fuel densification</a></li><li><a href="#concept-10">Cladding embrittlement</a></li><li><a href="#concept-11">Fatigue, work hardening, and creep</a></li><li><a href="#check-11">Knowledge check: Fatigue, work hardening, and creep</a></li><li><a href="#concept-12">Radiation interactions with metals</a></li><li><a href="#check-12">Knowledge check: Radiation interactions with metals</a></li><li><a href="#concept-13">Thermal and displacement spikes</a></li><li><a href="#check-13">Knowledge check: Thermal and displacement spikes</a></li><li><a href="#concept-14">Recoil from emitted radiation</a></li><li><a href="#check-14">Knowledge check: Recoil from emitted radiation</a></li><li><a href="#concept-15">Effects of thermal neutron capture</a></li><li><a href="#concept-16">Fast neutron effects on metal properties</a></li><li><a href="#check-16">Knowledge check: Fast neutron effects on metal properties</a></li><li><a href="#concept-17">Radiation effects in organic compounds</a></li><li><a href="#check-17">Knowledge check: Radiation effects in organic compounds</a></li><li><a href="#concept-18">Aluminum in reactors</a></li><li><a href="#check-18">Knowledge check: Aluminum in reactors</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.20</span><span class="tag">Needs sodium review</span></div><h3>Recoil energy after a capture gamma</h3><p>An atom of mass number 10 emits a 7 MeV gamma ray after capturing a neutron. Find the recoil energy and compare it with the energy needed to displace an atom.</p><ol><li>The handbook gives Er = 5.4 x 10^-4 x Eγ² / A, with energies in MeV and A in atomic mass units.</li><li>Er = 5.4 x 10^-4 x (7)² / 10 = 5.4 x 10^-4 x 4.9 = 2.6 x 10^-3 MeV.</li><li>That is about 2.6 keV, or 2600 eV.</li></ol><p class="answer">Answer: About 2.6 keV, far above the roughly 25 eV needed to displace an atom. This agrees with the handbook's 2 keV to 3 keV for an element of low atomic mass.</p><p><cite>DOE-HDBK-1017/2-93 MS-05 p.38</cite></p></div>
+
 <div class="pager"><a href="#check-18"><span aria-hidden="true">←</span> Knowledge check: Aluminum in reactors</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -907,6 +962,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Properties that drive material selection</a></li><li><a href="#check-1">Knowledge check: Properties that drive material selection</a></li><li><a href="#concept-2">Fast-spectrum fuel materials</a></li><li><a href="#check-2">Knowledge check: Fast-spectrum fuel materials</a></li><li><a href="#concept-3">Selecting a fuel material</a></li><li><a href="#check-3">Knowledge check: Selecting a fuel material</a></li><li><a href="#concept-4">Fuel cladding</a></li><li><a href="#check-4">Knowledge check: Fuel cladding</a></li><li><a href="#concept-5">Reflectors</a></li><li><a href="#check-5">Knowledge check: Reflectors</a></li><li><a href="#concept-6">Control materials</a></li><li><a href="#check-6">Knowledge check: Control materials</a></li><li><a href="#concept-7">Shielding materials</a></li><li><a href="#check-7">Knowledge check: Shielding materials</a></li><li><a href="#concept-8">Pellet-cladding interaction and fission product swelling</a></li><li><a href="#check-8">Knowledge check: Pellet-cladding interaction and fission product swelling</a></li><li><a href="#concept-9">Fuel densification</a></li><li><a href="#concept-10">Cladding embrittlement</a></li><li><a href="#concept-11">Fatigue, work hardening, and creep</a></li><li><a href="#check-11">Knowledge check: Fatigue, work hardening, and creep</a></li><li><a href="#concept-12">Radiation interactions with metals</a></li><li><a href="#check-12">Knowledge check: Radiation interactions with metals</a></li><li><a href="#concept-13">Thermal and displacement spikes</a></li><li><a href="#check-13">Knowledge check: Thermal and displacement spikes</a></li><li><a href="#concept-14">Recoil from emitted radiation</a></li><li><a href="#check-14">Knowledge check: Recoil from emitted radiation</a></li><li><a href="#concept-15">Effects of thermal neutron capture</a></li><li><a href="#concept-16">Fast neutron effects on metal properties</a></li><li><a href="#check-16">Knowledge check: Fast neutron effects on metal properties</a></li><li><a href="#concept-17">Radiation effects in organic compounds</a></li><li><a href="#check-17">Knowledge check: Radiation effects in organic compounds</a></li><li><a href="#concept-18">Aluminum in reactors</a></li><li><a href="#check-18">Knowledge check: Aluminum in reactors</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>Selection considers machinability, formability, ductility, stability, availability, fabricability, heat transfer, cost, and mechanical strength. <cite>DOE-HDBK-1017/2-93 MS-05 p.4</cite></li><li>Fuel selection considers thermal conductivity, resistance to radiation damage, chemical stability with coolant, and properties that permit economical fabrication. <cite>DOE-HDBK-1017/2-93 MS-05 p.10</cite></li><li>Stainless steel is the preferred cladding for sodium-cooled fast breeder reactors, and a fast reactor reflector is a dense element of high mass number. <cite>DOE-HDBK-1017/2-93 MS-05 p.12</cite></li><li>Gamma shielding needs high atomic mass number and high density. Neutron shielding depends on energy. <cite>DOE-HDBK-1017/2-93 MS-05 p.21</cite></li><li>Fatigue, work hardening, and creep are managed by design and by controlled operation. <cite>DOE-HDBK-1017/2-93 MS-05 p.31</cite></li><li>Fast neutrons displace atoms, which raises strength and hardness and lowers ductility. Stainless steel swelling is a concern in fast reactors. <cite>DOE-HDBK-1017/2-93 MS-05 p.39</cite></li><li>Gamma and beta radiation cause permanent damage in organic compounds, and the covalent bond is the least resistant. <cite>DOE-HDBK-1017/2-93 MS-05 p.48</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -921,18 +977,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q1465, Q1466, Q1467, Q1468, Q1615, Q1469, Q1470, Q1471, Q1472, Q1473, Q1474, Q1475, Q1476, Q1477, Q1478, Q1479, Q1480, Q1481, Q1482, Q1483, Q1484, Q1485, Q386, Q1486, Q1487, Q1488, Q1489, Q1490, Q1491, Q1492, Q1493, Q1494, Q1495, Q1496, Q1497, Q1498, Q1499, Q1500, Q1501, Q1502, Q1503, Q1504, Q1505, Q1506, Q1507.</p><p>Flashcards from this lesson: C965, C1045, C966, C967, C968, C426, C969, C970, C971, C972.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20MS-05&amp;body=Lesson%3A%20MS-05%20Plant%20Materials%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

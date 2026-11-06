@@ -53,14 +53,35 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .answer { font-weight: 600; margin-bottom: 8px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
 .pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
 </style>
-<main class="wrap">
+<main class="wrap" data-slug="ic-07-process-controls">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Control system terms</a></li><li><a href="#check-1">Knowledge check: Control system terms</a></li><li><a href="#concept-2">Automatic control</a></li><li><a href="#check-2">Knowledge check: Automatic control</a></li><li><a href="#concept-3">Control loop diagrams</a></li><li><a href="#check-3">Knowledge check: Control loop diagrams</a></li><li><a href="#concept-4">Example: lube oil cooler</a></li><li><a href="#check-4">Knowledge check: Example: lube oil cooler</a></li><li><a href="#concept-5">Process time lags and stability</a></li><li><a href="#check-5">Knowledge check: Process time lags and stability</a></li><li><a href="#concept-6">Two position control</a></li><li><a href="#check-6">Knowledge check: Two position control</a></li><li><a href="#concept-7">Proportional control</a></li><li><a href="#check-7">Knowledge check: Proportional control</a></li><li><a href="#concept-8">Integral (reset) control</a></li><li><a href="#check-8">Knowledge check: Integral (reset) control</a></li><li><a href="#concept-9">Proportional plus reset (PI)</a></li><li><a href="#check-9">Knowledge check: Proportional plus reset (PI)</a></li><li><a href="#concept-10">Proportional plus rate (PD)</a></li><li><a href="#check-10">Knowledge check: Proportional plus rate (PD)</a></li><li><a href="#concept-11">PID control</a></li><li><a href="#check-11">Knowledge check: PID control</a></li><li><a href="#concept-12">Control stations</a></li><li><a href="#check-12">Knowledge check: Control stations</a></li><li><a href="#concept-13">Self-balancing stations and final control elements</a></li><li><a href="#check-13">Knowledge check: Self-balancing stations and final control elements</a></li><li><a href="#concept-14">Pneumatic actuators</a></li><li><a href="#check-14">Knowledge check: Pneumatic actuators</a></li><li><a href="#concept-15">Hydraulic, solenoid, and motor actuators</a></li><li><a href="#check-15">Knowledge check: Hydraulic, solenoid, and motor actuators</a></li><li><a href="#concept-16">Distributed control systems</a></li><li><a href="#check-16">Knowledge check: Distributed control systems</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
 <section class="page" id="objectives">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 36</span></div>
 <h1>Process Controls</h1>
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Control system terms</a></li><li><a href="#check-1">Knowledge check: Control system terms</a></li><li><a href="#concept-2">Automatic control</a></li><li><a href="#check-2">Knowledge check: Automatic control</a></li><li><a href="#concept-3">Control loop diagrams</a></li><li><a href="#check-3">Knowledge check: Control loop diagrams</a></li><li><a href="#concept-4">Example: lube oil cooler</a></li><li><a href="#check-4">Knowledge check: Example: lube oil cooler</a></li><li><a href="#concept-5">Process time lags and stability</a></li><li><a href="#check-5">Knowledge check: Process time lags and stability</a></li><li><a href="#concept-6">Two position control</a></li><li><a href="#check-6">Knowledge check: Two position control</a></li><li><a href="#concept-7">Proportional control</a></li><li><a href="#check-7">Knowledge check: Proportional control</a></li><li><a href="#concept-8">Integral (reset) control</a></li><li><a href="#check-8">Knowledge check: Integral (reset) control</a></li><li><a href="#concept-9">Proportional plus reset (PI)</a></li><li><a href="#check-9">Knowledge check: Proportional plus reset (PI)</a></li><li><a href="#concept-10">Proportional plus rate (PD)</a></li><li><a href="#check-10">Knowledge check: Proportional plus rate (PD)</a></li><li><a href="#concept-11">PID control</a></li><li><a href="#check-11">Knowledge check: PID control</a></li><li><a href="#concept-12">Control stations</a></li><li><a href="#check-12">Knowledge check: Control stations</a></li><li><a href="#concept-13">Self-balancing stations and final control elements</a></li><li><a href="#check-13">Knowledge check: Self-balancing stations and final control elements</a></li><li><a href="#concept-14">Pneumatic actuators</a></li><li><a href="#check-14">Knowledge check: Pneumatic actuators</a></li><li><a href="#concept-15">Hydraulic, solenoid, and motor actuators</a></li><li><a href="#check-15">Knowledge check: Hydraulic, solenoid, and motor actuators</a></li><li><a href="#concept-16">Distributed control systems</a></li><li><a href="#check-16">Knowledge check: Distributed control systems</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <p>DOE-HDBK-1013/2-92, Module 7.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given a process control system, SUMMARIZE the operation of the system based on changing system inputs. <cite>DOE-HDBK-1013/2-92 IC-07 p.viii</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DEFINE the following process control terms: <cite>DOE-HDBK-1013/2-92 IC-07 p.viii</cite></p><ul class="letters"><li>a. Control system</li><li>b. Control system input</li><li>c. Control system output</li><li>d. Open-loop system</li><li>e. Closed-loop system</li><li>f. Feedback</li><li>g. Controlled variable</li><li>h. Manipulated variable</li></ul><p><span class="num">1.2</span> DESCRIBE the operation of a control loop diagram including the following components: <cite>DOE-HDBK-1013/2-92 IC-07 p.viii</cite></p><ul class="letters"><li>a. Controlled system</li><li>b. Controlled elements</li><li>c. Feedback elements</li><li>d. Reference point</li><li>e. Controlled output</li><li>f. Feedback signal</li><li>g. Actuating signal</li><li>h. Manipulated variable</li><li>i. Disturbance</li></ul><p><span class="num">1.3</span> EXPLAIN how capacitance, resistance, and transportation time affect a control system’s lag time. <cite>DOE-HDBK-1013/2-92 IC-07 p.viii</cite></p><p><span class="num">1.4</span> DESCRIBE the characteristics of the following types of automatic control systems: <cite>DOE-HDBK-1013/2-92 IC-07 p.viii</cite></p><ul class="letters"><li>a. Two position control system</li><li>b. Proportional control system</li><li>c. Integral control</li><li>d. Proportional plus reset control system</li><li>e. Proportional plus rate control</li><li>f. Proportional plus reset plus rate control</li></ul><p><span class="num">1.5</span> STATE the purpose of the following components of a typical control station: <cite>DOE-HDBK-1013/2-92 IC-07 p.ix</cite></p><ul class="letters"><li>a. Setpoint indicator</li><li>b. Setpoint adjustment</li><li>c. Deviation indicator</li><li>d. Output meter</li><li>e. Manual-automatic transfer switch</li><li>f. Manual output adjust knob</li></ul><p><span class="num">1.6</span> DESCRIBE the operation of a self-balancing control station. <cite>DOE-HDBK-1013/2-92 IC-07 p.ix</cite></p><p><span class="num">1.7</span> DESCRIBE the operation of the following types of actuators: <cite>DOE-HDBK-1013/2-92 IC-07 p.ix</cite></p><ul class="letters"><li>a. Pneumatic</li><li>b. Hydraulic</li><li>c. Solenoid</li><li>d. Electric motor</li></ul></div>
+
 <div class="pager"><a class="next" href="#concept-1">Control system terms <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-1">
@@ -80,6 +101,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <figure class="fig"><img src="data:image/png;base64,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" alt="Block diagram of feedback: measured level is compared with desired level and fed back to the control action."><figcaption>Figure 3. Feedback in a Closed-Loop Control System <cite>DOE-HDBK-1013/2-92 IC-07 p.3</cite></figcaption></figure>
 <blockquote>"A controlled variable is the process variable that is maintained at a specified value or within a specified range." <cite>DOE-HDBK-1013/2-92 IC-07 p.4</cite></blockquote>
 <blockquote>"A manipulated variable is the process variable that is acted on by the control system to maintain the controlled variable at the specified value or within the specified range." <cite>DOE-HDBK-1013/2-92 IC-07 p.4</cite></blockquote>
+
 <div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Control system terms <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-1">
@@ -127,6 +149,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1059&amp;body=Item%3A%20Q1059%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20In%20a%20tank%20level%20control%20system%2C%20what%20is%20the%20tank%20level%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Principles%20of%20Control%20Systems%2C%20IC-07%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Control system terms</a><a class="next" href="#concept-2">Automatic control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-2">
@@ -141,6 +164,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The measuring element performs the measuring function by sensing and evaluating the controlled variable." <cite>DOE-HDBK-1013/2-92 IC-07 p.5</cite></blockquote>
 <p>The error detection element compares the controlled variable to the desired value and signals an error if there is a deviation. <cite>DOE-HDBK-1013/2-92 IC-07 p.5</cite></p>
 <blockquote>"The final control element responds to the error signal by correcting the manipulated variable of the process." <cite>DOE-HDBK-1013/2-92 IC-07 p.5</cite></blockquote>
+
 <div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Control system terms</a><a class="next" href="#check-2">Knowledge check: Automatic control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-2">
@@ -158,6 +182,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1060&amp;body=Item%3A%20Q1060%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20are%20the%20four%20basic%20functions%20in%20any%20automatic%20control%20system%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Principles%20of%20Control%20Systems%2C%20IC-07%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Automatic control</a><a class="next" href="#concept-3">Control loop diagrams <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-3">
@@ -178,6 +203,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The actuating signal represents the control action of the control loop and is equal to the algebraic sum of the reference input signal and feedback signal." <cite>DOE-HDBK-1013/2-92 IC-07 p.10</cite></blockquote>
 <p>The actuating signal is also called the error signal. <cite>DOE-HDBK-1013/2-92 IC-07 p.10</cite></p>
 <blockquote>"The disturbance is an undesirable input signal that upsets the value of the controlled output of the plant." <cite>DOE-HDBK-1013/2-92 IC-07 p.10</cite></blockquote>
+
 <div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Automatic control</a><a class="next" href="#check-3">Knowledge check: Control loop diagrams <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-3">
@@ -225,6 +251,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1064&amp;body=Item%3A%20Q1064%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20is%20a%20disturbance%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Control%20Loop%20Diagrams%2C%20IC-07%20p.%2010%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Control loop diagrams</a><a class="next" href="#concept-4">Example: lube oil cooler <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-4">
@@ -239,6 +266,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>If the temperature is above the setpoint, the controller moves the valve in the open direction, which sends more cooling water through the cooler. <cite>DOE-HDBK-1013/2-92 IC-07 p.12</cite></p>
 <p>The lube oil cooler is the plant, and the temperature transmitter is the feedback element. <cite>DOE-HDBK-1013/2-92 IC-07 p.12</cite></p>
 <p>The actuating signal passes through the temperature controller and the control valve. <cite>DOE-HDBK-1013/2-92 IC-07 p.13</cite></p>
+
 <div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Control loop diagrams</a><a class="next" href="#check-4">Knowledge check: Example: lube oil cooler <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-4">
@@ -256,6 +284,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1065&amp;body=Item%3A%20Q1065%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20In%20the%20lube%20oil%20cooler%20loop%2C%20what%20is%20the%20manipulated%20variable%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Control%20Loop%20Diagrams%2C%20IC-07%20p.%2012%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Example: lube oil cooler</a><a class="next" href="#concept-5">Process time lags and stability <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-5">
@@ -274,6 +303,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Decreasing amplitude oscillations eventually stop. <cite>DOE-HDBK-1013/2-92 IC-07 p.14</cite></p>
 <blockquote>"This is the condition desired in an automatic control system." <cite>DOE-HDBK-1013/2-92 IC-07 p.14</cite></blockquote>
 <p>Constant amplitude never reaches a stable condition. Increasing amplitude causes the process to go out of control. <cite>DOE-HDBK-1013/2-92 IC-07 p.15</cite></p>
+
 <div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Example: lube oil cooler</a><a class="next" href="#check-5">Knowledge check: Process time lags and stability <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-5">
@@ -321,6 +351,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1069&amp;body=Item%3A%20Q1069%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20Which%20type%20of%20oscillation%20is%20desired%20in%20an%20automatic%20control%20system%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Control%20Loop%20Diagrams%2C%20IC-07%20p.%2014%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Process time lags and stability</a><a class="next" href="#concept-6">Two position control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-6">
@@ -336,6 +367,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"This opening and closing of the final control element results in a cycling characteristic of the measured variable." <cite>DOE-HDBK-1013/2-92 IC-07 p.19</cite></blockquote>
 <blockquote>"Bistables are two-position switches that are either on or off, depending on the input variable." <cite>Word: Controllers and Positioners.docx, slide 1.8 Bistable Operation</cite></blockquote>
 <p>They may have a reset point above or below the on setpoint to prevent excessive cycling. <cite>Word: Controllers and Positioners.docx, slide 1.8 Bistable Operation</cite></p>
+
 <div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Process time lags and stability</a><a class="next" href="#check-6">Knowledge check: Two position control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-6">
@@ -363,6 +395,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1070&amp;body=Item%3A%20Q1070%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20characteristic%20does%20a%20two%20position%20controller%20give%20the%20measured%20variable%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Two%20Position%20Control%20Systems%2C%20IC-07%20p.%2019%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Two position control</a><a class="next" href="#concept-7">Proportional control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-7">
@@ -381,6 +414,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Offset is an inherent characteristic of the proportional mode. <cite>DOE-HDBK-1013/2-92 IC-07 p.21</cite></p>
 <blockquote>"Direct acting controllers or actuators will respond in the same direction as the control signal" <cite>Word: Controllers and Positioners.docx, slide 1.17 Process Control Terms</cite></blockquote>
 <blockquote>"The proportional controller is reverse-acting so that the control valve throttles down to reduce steam flow as the hot water outlet temperature increases" <cite>DOE-HDBK-1013/2-92 IC-07 p.25</cite></blockquote>
+
 <div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Two position control</a><a class="next" href="#check-7">Knowledge check: Proportional control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-7">
@@ -438,6 +472,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1073&amp;body=Item%3A%20Q1073%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20An%20instrument%20has%20a%20full%20range%20of%20200%20%C2%B0F%20and%20a%2050%20%C2%B0F%20change%20causes%20full%20valve%20travel.%20What%20is%20the%20proportional%20band%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Two%20Position%20Control%20Systems%2C%20IC-07%20p.%2021%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Proportional control</a><a class="next" href="#concept-8">Integral (reset) control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-8">
@@ -453,6 +488,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The major advantage of integral controllers is that they have the unique ability to return the controlled variable back to the exact setpoint following a disturbance." <cite>DOE-HDBK-1013/2-92 IC-07 p.32</cite></blockquote>
 <p>Disadvantages are a relatively slow response and a possibly large initial deviation. <cite>DOE-HDBK-1013/2-92 IC-07 p.32</cite></p>
 <blockquote>"the integral control mode is not normally used alone, but is combined with another control mode." <cite>DOE-HDBK-1013/2-92 IC-07 p.32</cite></blockquote>
+
 <div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Proportional control</a><a class="next" href="#check-8">Knowledge check: Integral (reset) control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-8">
@@ -490,6 +526,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1075&amp;body=Item%3A%20Q1075%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20An%20integral%20controller%20has%20a%20constant%20of%200.1%20per%20second%20and%20a%205%25%20error.%20What%20is%20its%20output%20rate%20of%20change%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Reset%20(Integral)%20Control%20Systems%2C%20IC-07%20p.%2030%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Integral (reset) control</a><a class="next" href="#concept-9">Proportional plus reset (PI) <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-9">
@@ -503,6 +540,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Reset action also makes the process return to setpoint more quickly. <cite>DOE-HDBK-1013/2-92 IC-07 p.35</cite></p>
 <blockquote>"a large sustained error signal will eventually cause the controller to drive to its limit, and the result is called &quot;reset windup.&quot;" <cite>DOE-HDBK-1013/2-92 IC-07 p.35</cite></blockquote>
 <blockquote>"this control mode is not well-suited for processes that are frequently shut down and started up." <cite>DOE-HDBK-1013/2-92 IC-07 p.35</cite></blockquote>
+
 <div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Integral (reset) control</a><a class="next" href="#check-9">Knowledge check: Proportional plus reset (PI) <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-9">
@@ -540,6 +578,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1077&amp;body=Item%3A%20Q1077%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20does%20adding%20reset%20to%20proportional%20control%20eliminate%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Proportional%20Plus%20Reset%20Control%20Systems%2C%20IC-07%20p.%2034%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-9"><span aria-hidden="true">←</span> Proportional plus reset (PI)</a><a class="next" href="#concept-10">Proportional plus rate (PD) <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-10">
@@ -556,6 +595,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Proportional plus rate control is normally used with large capacity or slow-responding processes such as temperature control." <cite>DOE-HDBK-1013/2-92 IC-07 p.41</cite></blockquote>
 <blockquote>"Rate action is not usually employed with fast responding processes such as flow control or noisy processes" <cite>DOE-HDBK-1013/2-92 IC-07 p.41</cite></blockquote>
 <p>It is useful for processes frequently started up and shut down, because it is not susceptible to reset windup. <cite>DOE-HDBK-1013/2-92 IC-07 p.41</cite></p>
+
 <div class="pager"><a href="#check-9"><span aria-hidden="true">←</span> Knowledge check: Proportional plus reset (PI)</a><a class="next" href="#check-10">Knowledge check: Proportional plus rate (PD) <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-10">
@@ -593,6 +633,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1078&amp;body=Item%3A%20Q1078%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20Why%20is%20rate%20action%20not%20usually%20used%20on%20flow%20control%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Proportional%20Plus%20Rate%20Control%20Systems%2C%20IC-07%20p.%2041%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-10"><span aria-hidden="true">←</span> Proportional plus rate (PD)</a><a class="next" href="#concept-11">PID control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-11">
@@ -607,6 +648,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul><li>The proportional action responds to the error amplitude</li><li>The integral action eliminates the offset error</li><li>The derivative action provides additional stability to the process</li></ul><p><cite>DOE-HDBK-1013/2-92 IC-07 p.46</cite></p>
 <blockquote>"The rate action combined with the proportional action reduces the initial overshoot and cyclic period." <cite>DOE-HDBK-1013/2-92 IC-07 p.45</cite></blockquote>
 <p>Most PID controllers have the derivative features zeroed out due to potential instability. <cite>Word: Controllers and Positioners.docx, slide 1.50 PID Controller Response to Demand Disturbance</cite></p>
+
 <div class="pager"><a href="#check-10"><span aria-hidden="true">←</span> Knowledge check: Proportional plus rate (PD)</a><a class="next" href="#check-11">Knowledge check: PID control <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-11">
@@ -624,6 +666,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1079&amp;body=Item%3A%20Q1079%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20In%20a%20PID%20controller%2C%20which%20action%20eliminates%20offset%20error%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20PID%20Control%20Systems%2C%20IC-07%20p.%2046%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-11"><span aria-hidden="true">←</span> PID control</a><a class="next" href="#concept-12">Control stations <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-12">
@@ -642,6 +685,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>The five positions are AUTO, 0-100 on the auto side, MAN, 0-100 on the manual side, and BAL. <cite>DOE-HDBK-1013/2-92 IC-07 p.50</cite></p>
 <blockquote>"Bumpless transfer is the smooth transfer of a controller from one operating mode to another." <cite>DOE-HDBK-1013/2-92 IC-07 p.50</cite></blockquote>
 <p>Without a match, the final control element could get a sudden change, or bump, causing large swings in the process variable. <cite>DOE-HDBK-1013/2-92 IC-07 p.50</cite></p>
+
 <div class="pager"><a href="#check-11"><span aria-hidden="true">←</span> Knowledge check: PID control</a><a class="next" href="#check-12">Knowledge check: Control stations <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-12">
@@ -679,6 +723,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1082&amp;body=Item%3A%20Q1082%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20is%20bumpless%20transfer%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Controllers%2C%20IC-07%20p.%2050%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-12"><span aria-hidden="true">←</span> Control stations</a><a class="next" href="#concept-13">Self-balancing stations and final control elements <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-13">
@@ -695,6 +740,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"Final control elements are devices that complete the control loop." <cite>DOE-HDBK-1013/2-92 IC-07 p.52</cite></blockquote>
 <blockquote>"Of the final control elements discussed, the most widely used in power plants are valves." <cite>DOE-HDBK-1013/2-92 IC-07 p.52</cite></blockquote>
 <p>Other final control elements include dampers, pumps, and electric heaters. <cite>DOE-HDBK-1013/2-92 IC-07 p.52</cite></p>
+
 <div class="pager"><a href="#check-12"><span aria-hidden="true">←</span> Knowledge check: Control stations</a><a class="next" href="#check-13">Knowledge check: Self-balancing stations and final control elements <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-13">
@@ -712,6 +758,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1083&amp;body=Item%3A%20Q1083%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20What%20does%20self-balancing%20mean%20on%20a%20control%20station%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Controllers%2C%20IC-07%20p.%2051%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-13"><span aria-hidden="true">←</span> Self-balancing stations and final control elements</a><a class="next" href="#concept-14">Pneumatic actuators <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-14">
@@ -730,6 +777,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"On a loss of supply air, the actuator in Figure 36 will fail open." <cite>DOE-HDBK-1013/2-92 IC-07 p.56</cite></blockquote>
 <p>This is called air-to-close, spring-to-open, or fail-open. Others are air-to-open, spring-to-close, or fail-closed. <cite>DOE-HDBK-1013/2-92 IC-07 p.56</cite></p>
 <blockquote>"This &quot;fail-safe&quot; concept is an important consideration in nuclear facility design." <cite>DOE-HDBK-1013/2-92 IC-07 p.56</cite></blockquote>
+
 <div class="pager"><a href="#check-13"><span aria-hidden="true">←</span> Knowledge check: Self-balancing stations and final control elements</a><a class="next" href="#check-14">Knowledge check: Pneumatic actuators <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-14">
@@ -757,6 +805,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1084&amp;body=Item%3A%20Q1084%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20An%20air-to-close%2C%20spring-to-open%20actuator%20loses%20supply%20air.%20What%20does%20the%20valve%20do%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Valve%20Actuators%2C%20IC-07%20p.%2056%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-14"><span aria-hidden="true">←</span> Pneumatic actuators</a><a class="next" href="#concept-15">Hydraulic, solenoid, and motor actuators <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-15">
@@ -777,6 +826,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <blockquote>"The clutch and clutch lever disconnects the electric motor from the gear assembly and allows the valve to be operated manually with the handwheel." <cite>DOE-HDBK-1013/2-92 IC-07 p.59</cite></blockquote>
 <blockquote>"Limit switches de-energize the electric motor when the valve has reached a specific position." <cite>DOE-HDBK-1013/2-92 IC-07 p.59</cite></blockquote>
 <p>Torque limiters de-energize the motor when turning force reaches a specified value. <cite>DOE-HDBK-1013/2-92 IC-07 p.60</cite></p>
+
 <div class="pager"><a href="#check-14"><span aria-hidden="true">←</span> Knowledge check: Pneumatic actuators</a><a class="next" href="#check-15">Knowledge check: Hydraulic, solenoid, and motor actuators <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-15">
@@ -814,6 +864,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1087&amp;body=Item%3A%20Q1087%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20How%20is%20an%20electric%20motor%20actuated%20valve%20operated%20by%20hand%3F%0ASource%3A%20DOE-1013-V2%20(DOE-HDBK-1013%2F2-92)%2C%20Valve%20Actuators%2C%20IC-07%20p.%2059%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-15"><span aria-hidden="true">←</span> Hydraulic, solenoid, and motor actuators</a><a class="next" href="#concept-16">Distributed control systems <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="concept-16">
@@ -824,6 +875,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <h2>Distributed control systems</h2><p class="count">From the lesson plan</p><p>In a typical DCS, input/output modules convert analog signals from field devices into digital data. <cite>Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.33 In a typical DCS, which component is primarily responsible for converting analog signals from field devices into digital data that can be processed by the system?</cite></p>
 <p>A setpoint change at the Human-Machine Interface must reach the controller to take effect. <cite>Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.32 If an operator makes a setpoint change via the Human-Machine Interface (HMI), which component must receive this information to implement the change in the process?</cite></p>
 <p>A communication bus sends and receives information from one DCS cabinet to another. <cite>Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.34 What is the function of a Communication bus in a Distributed Control System (DCS)?</cite></p>
+
 <div class="pager"><a href="#check-15"><span aria-hidden="true">←</span> Knowledge check: Hydraulic, solenoid, and motor actuators</a><a class="next" href="#check-16">Knowledge check: Distributed control systems <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="check-16">
@@ -881,6 +933,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
     <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q262&amp;body=Item%3A%20Q262%0ATopic%3A%20Controllers%20and%20Positioners%0AQuestion%3A%20In%20normal%20operation%2C%20how%20does%20a%20primary%20coolant%20temperature%20change%20reach%20the%20control%20room%20operators%20in%20a%20DCS%3F%0ASource%3A%20Approved%20lesson%20plan%3A%20DISTRIBUTED%20CONTROL%20SYSTEMS%20(DCS)%20(DISTRIBUTED%20CONTROL%20SYSTEMS%20(DCS).docx)%2C%20slide%201.35%20Temperature%20has%20changed%20in%20the%20primary%20coolant%20system.%20Which%20of%20the%20following%20describes%20the%20correct%20flow%20of%20information%20in%20a%20typical%20DCS%2C%20during%20normal%20operation%2C%20to%20communicate%20that%20change%20to%20the%20control%20room%20operators%3F%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
   </div>
 </div>
+
 <div class="pager"><a href="#concept-16"><span aria-hidden="true">←</span> Distributed control systems</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="examples">
@@ -892,6 +945,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <div class="ex"><div class="meta"><span>Objective 1.4</span></div><h3>Integral output rate</h3><p>Flow falls from 50 gpm to 45 gpm, giving a positive error of 5%. The controller constant is 0.1 seconds⁻¹. Find the output rate of change.</p><ol><li>Output rate of change = integral constant x % error</li><li>0.1 x 5</li></ol><p class="answer">Answer: 0.5% per second</p><p><cite>DOE-HDBK-1013/2-92 IC-07 p.30</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.4</span></div><h3>Proportional band in a temperature system</h3><p>A controller has a 50% proportional band on a 200 °F span. What temperature change causes a 100% output change?</p><ol><li>50% of the 200 °F span</li></ol><p class="answer">Answer: 100 °F</p><p><cite>DOE-HDBK-1013/2-92 IC-07 p.25</cite></p></div>
 <div class="ex"><div class="meta"><span>Objective 1.4</span></div><h3>Two position tank control</h3><p>Level falls below the setpoint in a two position system. What happens?</p><ol><li>A positive error signal is created</li><li>The controller opens the final control element fully</li><li>When level rises above setpoint, a negative error shuts it</li></ol><p class="answer">Answer: The measured variable cycles.</p><p><cite>DOE-HDBK-1013/2-92 IC-07 p.19</cite></p></div>
+
 <div class="pager"><a href="#check-16"><span aria-hidden="true">←</span> Knowledge check: Distributed control systems</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="summary">
@@ -900,6 +954,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <ul class="tags"><li class="tag">Reviewed</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Control system terms</a></li><li><a href="#check-1">Knowledge check: Control system terms</a></li><li><a href="#concept-2">Automatic control</a></li><li><a href="#check-2">Knowledge check: Automatic control</a></li><li><a href="#concept-3">Control loop diagrams</a></li><li><a href="#check-3">Knowledge check: Control loop diagrams</a></li><li><a href="#concept-4">Example: lube oil cooler</a></li><li><a href="#check-4">Knowledge check: Example: lube oil cooler</a></li><li><a href="#concept-5">Process time lags and stability</a></li><li><a href="#check-5">Knowledge check: Process time lags and stability</a></li><li><a href="#concept-6">Two position control</a></li><li><a href="#check-6">Knowledge check: Two position control</a></li><li><a href="#concept-7">Proportional control</a></li><li><a href="#check-7">Knowledge check: Proportional control</a></li><li><a href="#concept-8">Integral (reset) control</a></li><li><a href="#check-8">Knowledge check: Integral (reset) control</a></li><li><a href="#concept-9">Proportional plus reset (PI)</a></li><li><a href="#check-9">Knowledge check: Proportional plus reset (PI)</a></li><li><a href="#concept-10">Proportional plus rate (PD)</a></li><li><a href="#check-10">Knowledge check: Proportional plus rate (PD)</a></li><li><a href="#concept-11">PID control</a></li><li><a href="#check-11">Knowledge check: PID control</a></li><li><a href="#concept-12">Control stations</a></li><li><a href="#check-12">Knowledge check: Control stations</a></li><li><a href="#concept-13">Self-balancing stations and final control elements</a></li><li><a href="#check-13">Knowledge check: Self-balancing stations and final control elements</a></li><li><a href="#concept-14">Pneumatic actuators</a></li><li><a href="#check-14">Knowledge check: Pneumatic actuators</a></li><li><a href="#concept-15">Hydraulic, solenoid, and motor actuators</a></li><li><a href="#check-15">Knowledge check: Hydraulic, solenoid, and motor actuators</a></li><li><a href="#concept-16">Distributed control systems</a></li><li><a href="#check-16">Knowledge check: Distributed control systems</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
 <h2>Summary</h2><ul><li>A control system maintains a process variable at a desired value or within a desired range. <cite>DOE-HDBK-1013/2-92 IC-07 p.6</cite></li><li>Process time lags are affected by capacitance, resistance, and transportation time. <cite>DOE-HDBK-1013/2-92 IC-07 p.16</cite></li><li>A two position controller has two operating conditions: completely on or completely off. <cite>DOE-HDBK-1013/2-92 IC-07 p.21</cite></li><li>Proportional plus reset control eliminates any offset error that would occur with proportional control only. <cite>DOE-HDBK-1013/2-92 IC-07 p.36</cite></li><li>Proportional plus rate control increases system stability but does not eliminate offset error. <cite>DOE-HDBK-1013/2-92 IC-07 p.42</cite></li><li>The PID controller combines the three individual modes to achieve the advantages of each. <cite>DOE-HDBK-1013/2-92 IC-07 p.46</cite></li><li>Actuators may be pneumatic, hydraulic, solenoid, or electric motor types. <cite>DOE-HDBK-1013/2-92 IC-07 p.60</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
 </section>
 <section class="page" id="references">
@@ -914,18 +969,56 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <p>Quiz questions from this lesson: Q400, Q1057, Q1058, Q1059, Q1060, Q1061, Q1062, Q1063, Q1064, Q1065, Q1066, Q1067, Q1068, Q1069, Q257, Q1070, Q357, Q403, Q1071, Q1072, Q1073, Q401, Q1074, Q1075, Q358, Q1076, Q1077, Q356, Q402, Q1078, Q1079, Q1080, Q1081, Q1082, Q1083, Q359, Q1084, Q1085, Q1086, Q1087, Q258, Q259, Q260, Q261, Q262.</p><p>Flashcards from this lesson: C843, C844, C845, C846, C847, C848, C849.</p>
 <p><a href="../../reference/">All sources and references</a></p>
 <p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20IC-07&amp;body=Lesson%3A%20IC-07%20Process%20Controls%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
 <div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
 </section>
+</div>
 </main>
 <script>
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
   window.scrollTo(0, 0);
 }
 addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {

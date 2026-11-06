@@ -1,7 +1,7 @@
 // Offline cache for the quiz app.
 // Bump VERSION after editing index.html or the content file so phones pick up the new copy.
 const APP = "quiz";
-const VERSION = "v117";
+const VERSION = "v118";
 const CACHE = APP + "-" + VERSION;
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap";
