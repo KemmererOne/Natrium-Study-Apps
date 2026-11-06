@@ -1,0 +1,475 @@
+{
+ "concepts": [
+  {
+   "title": "The PRA and LBE selection",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The PRA is the plant model that provides an integrated assessment of risk to the public.",
+     "anchor": "is the plant model that provides an integrated assessment of risk to the public",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.1, p. 3.1-1"
+    },
+    {
+     "t": "p",
+     "text": "The NEI 18-04 methodology, endorsed by RG 1.233, is implemented without deviation for LBE selection and evaluation.",
+     "anchor": "is implemented without deviation for licensing basis event (LBE) selection and evaluation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.4, p. 3.4-1"
+    },
+    {
+     "t": "p",
+     "text": "LBE selection includes the systematic definition, categorization, and evaluation of event sequences.",
+     "anchor": "The selection of LBEs includes the systematic definition, categorization, and evaluation of event sequences",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.4, p. 3.4-1"
+    },
+    {
+     "t": "p",
+     "text": "Radionuclide sources in the PRA include the RES, SPS and SCG, gaseous radwaste, the EVHM, the EVST, spent fuel processing, and the Spent Fuel Pool.",
+     "anchor": "The following sources of radionuclides are evaluated by the PRA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.1.1.3, p. 3.1-2"
+    },
+    {
+     "t": "p",
+     "text": "At the construction permit stage, the PRA is internal events at-power and low-power shutdown only.",
+     "anchor": "internal events at-power and low-power shutdown only",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.1.1.15, p. 3.1-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What methodology is used for LBE selection and evaluation?",
+     "o": [
+      "NEI 18-04",
+      "10 CFR 50 Appendix K",
+      "NUREG-0800 only",
+      "ASME Section III"
+     ],
+     "a": 0,
+     "x": "NEI 18-04, as endorsed by RG 1.233, is implemented without deviation.",
+     "anchor": "is implemented without deviation for licensing basis event (LBE) selection and evaluation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.4, p. 3.4-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Event categories",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "BDBEs are event sequences with mean frequencies of 5x10^-7 to 1x10^-4 per plant-year.",
+     "anchor": "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1"
+    },
+    {
+     "t": "p",
+     "text": "The DBE frequency ceiling used in the DID evaluation is 1x10^-2 per plant-year, and the BDBE ceiling is 1x10^-4.",
+     "anchor": "The frequency of all DBEs and BDBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Tables 3.5-1, 3.5-2, and 3.5-3 summarize the AOOs, DBEs, and BDBEs. Table 3.5-4 maps DBEs to DBAs and gives each DBA's dose consequence.",
+     "anchor": "The table provides a mapping of DBEs to DBAs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.2, p. 3.5-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "A sequence with a mean frequency of 1x10^-5 per plant-year is classified as what?",
+     "o": [
+      "AOO",
+      "DBE",
+      "BDBE",
+      "Outside the LBE range"
+     ],
+     "a": 2,
+     "x": "Mean frequencies of 5x10^-7 to 1x10^-4 per plant-year are classified as BDBEs.",
+     "anchor": "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Analysis assumptions",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Bounding parameters are selected for DBAs.",
+     "anchor": "Bounding parameters are selected for use in evaluating design basis accidents",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.1, p. 3.3-1"
+    },
+    {
+     "t": "p",
+     "text": "DBA analyses consider only safety-related SSCs for mitigation. AOO, DBE, and BDBE analyses take into account the expected response of all SSCs, regardless of safety classification.",
+     "anchor": "AOO, DBE, and BDBE analyses take into account the expected response of all SSCs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.2.1, p. 3.3-3"
+    },
+    {
+     "t": "p",
+     "text": "AOO, DBE, and BDBE transients use either the conservative DBA approach or a best-estimate plus uncertainty approach.",
+     "anchor": "a best-estimate plus uncertainty (BEPU) approach",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.2.1, p. 3.3-3"
+    },
+    {
+     "t": "p",
+     "text": "The assumption that a function fails in an LBE description does not necessarily mean the failure resulted from the initiating event.",
+     "anchor": "does not necessarily mean the failure was a result of the LBE initiating event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1, p. 3.3-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which SSCs are considered for mitigation in DBA analyses?",
+     "o": [
+      "Only Energy Island SSCs",
+      "All SSCs",
+      "Only safety-related SSCs",
+      "Only NST SSCs"
+     ],
+     "a": 2,
+     "x": "Only safety-related SSCs are considered for mitigation in DBA analyses.",
+     "anchor": "Where only safety-related SSCs are considered for",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.2.1, p. 3.3-2",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Initial conditions and end states",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Plant condition",
+      "Reactor power",
+      "Core flow",
+      "Core inlet temperature"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Low power",
+        "5%",
+        "15%",
+        "309.5 C"
+       ],
+       "anchor": "Low Power 5 15 309.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7"
+      },
+      {
+       "cells": [
+        "Full power",
+        "100%",
+        "100%",
+        "360.1 C"
+       ],
+       "anchor": "Full Power 100 100 360.1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "LBEs with releases are evaluated for 30 days.",
+     "anchor": "LBEs with releases are evaluated for 30 days",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+    },
+    {
+     "t": "table",
+     "head": [
+      "End state",
+      "Criteria"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Safe shutdown",
+        "Peak cladding temperature below 1157 F (625 C) and stable or decreasing, with K-effective 1.0 (BDBE only) or less and core power stable or reducing"
+       ],
+       "anchor": "Peak Cladding Temperature value below 1157°F (625°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+      },
+      {
+       "cells": [
+        "Safe and stable",
+        "Used if there is no scram. K-effective 1.0, with heat removal equal to heat production"
+       ],
+       "anchor": "Heat removal is equal to heat production",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Transients that rely on passive long-term cooling must also show heat removal exceeds total heat produced.",
+     "anchor": "Heat removal exceeds total heat produced",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What peak cladding temperature limit defines the safe shutdown end state?",
+     "o": [
+      "625 C",
+      "510 C",
+      "360.1 C",
+      "883 C"
+     ],
+     "a": 0,
+     "x": "The safe shutdown state requires peak cladding temperature below 1157 F (625 C), stable or decreasing.",
+     "anchor": "Peak Cladding Temperature value below 1157°F (625°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7",
+     "eo": "4"
+    },
+    {
+     "q": "What full power core inlet temperature is assumed in the LBE analyses?",
+     "o": [
+      "309.5 C",
+      "360.1 C",
+      "625 C",
+      "500 C"
+     ],
+     "a": 1,
+     "x": "Full power assumes 100% power, 100% flow, and 360.1 C core inlet.",
+     "anchor": "Full Power 100 100 360.1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Risk significance",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "LBEs are risk-significant if the site boundary dose exceeds 2.5 mrem over 30 days and the frequency of the dose is within one percent of the F-C target.",
+     "anchor": "LBEs are classified as risk-significant if the LBE site boundary dose exceeds 2.5 mrem over 30 days",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.1, p. 3.5-1"
+    },
+    {
+     "t": "p",
+     "text": "BDBEs are high-consequence if the dose exceeds 10 CFR 50.34 criteria.",
+     "anchor": "BDBEs are classified as high-consequence if the dose exceeds 10 CFR 50.34 criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.1, p. 3.5-1"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-3-5-1",
+     "num": "3.5-1",
+     "cap": "F-C Chart for LBEs with Uncertainty Bands",
+     "alt": "PSAR Rev 1 figure: F-C Chart for LBEs with Uncertainty Bands",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.2, p. 3.5-10"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When is a BDBE classified as high-consequence?",
+     "o": [
+      "When the dose exceeds 10 CFR 50.34 criteria",
+      "When sodium leaks",
+      "When both IAC trains fail",
+      "When it involves a scram"
+     ],
+     "a": 0,
+     "x": "BDBEs are high-consequence if the dose exceeds 10 CFR 50.34 criteria.",
+     "anchor": "BDBEs are classified as high-consequence if the dose exceeds 10 CFR 50.34 criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.1, p. 3.5-1",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Cumulative risk metrics",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Metric",
+      "Target",
+      "Result"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Site boundary dose above 100 mrem",
+        "Not more than 1 per plant-year",
+        "3.12x10^-3 per plant-year"
+       ],
+       "anchor": "is 3.12×10-3 per plant-year",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.1.1, p. 4.1-2"
+      },
+      {
+       "cells": [
+        "EAB early fatality risk",
+        "5x10^-7 per plant-year",
+        "0 per plant-year"
+       ],
+       "anchor": "is 0 per plant-year",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.1.2, p. 4.1-2"
+      },
+      {
+       "cells": [
+        "Latent cancer risk",
+        "2x10^-6 per plant-year",
+        "3.86x10^-9 per plant-year"
+       ],
+       "anchor": "is 3.86×10-9 per plant-year",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.1.3, p. 4.1-2"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the target for EAB early fatality risk?",
+     "o": [
+      "1 per plant-year",
+      "5x10^-7 per plant-year",
+      "2x10^-6 per plant-year",
+      "1x10^-2 per plant-year"
+     ],
+     "a": 1,
+     "x": "The EAB early fatality metric target is 5x10^-7 per plant-year.",
+     "anchor": "early fatality integrated risk metric target of 5×10-7 per plant-year",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.1.2, p. 4.1-2",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "The major accident",
+   "eo": [
+    "7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The major accident is a deterministic analysis that meets 10 CFR 50.34(a)(1)(ii)(D).",
+     "anchor": "The Major Accident is a deterministic analysis that meets the requirement of 10 CFR 50.34(a)(1)(ii)(D)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4"
+    },
+    {
+     "t": "p",
+     "text": "For Kemmerer Unit 1, the EAB and LPZ are the same boundary, a 0.25-mile radius from the Reactor Building centerpoint.",
+     "anchor": "the Exclusion Area Boundary (EAB) and Low Population Zone (LPZ) are the same boundary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4"
+    },
+    {
+     "t": "p",
+     "text": "The DBA with the maximum core damage and associated in-vessel release was selected as the major accident.",
+     "anchor": "The DBA with the maximum core damage and associated in-vessel release",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What radius defines both the EAB and LPZ for Kemmerer Unit 1?",
+     "o": [
+      "0.25 mile",
+      "1 mile",
+      "5 miles",
+      "10 miles"
+     ],
+     "a": 0,
+     "x": "The EAB and LPZ are the same boundary at a 0.25-mile radius.",
+     "anchor": "the Exclusion Area Boundary (EAB) and Low Population Zone (LPZ) are the same boundary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4",
+     "eo": "7"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "PRA-derived event sequences are sorted into AOOs, DBEs, and BDBEs by frequency.",
+   "anchor": "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1"
+  },
+  {
+   "text": "DBAs credit only safety-related SSCs, while other LBEs consider all SSCs.",
+   "anchor": "Where only safety-related SSCs are considered for",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.2.1, p. 3.3-2"
+  },
+  {
+   "text": "Safe shutdown requires peak cladding temperature below 625 C and stable or decreasing.",
+   "anchor": "Peak Cladding Temperature value below 1157°F (625°C)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "PL-03",
+ "title": "Licensing Basis Events",
+ "kind": "topic",
+ "subject": "licensing basis events",
+ "sec_note": "Secs. 3.1 and 3.3 to 3.9, with Sec. 4.1",
+ "intro": "The PSAR uses a risk-informed framework. This lesson explains how events are found, sorted by frequency, analyzed, and judged.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "Describe the role of the PRA in selecting licensing basis events.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Classify AOOs, DBEs, and BDBEs by frequency, and describe DBAs.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain how analysis assumptions differ between DBAs and other LBEs.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "State the initial conditions and end states used in LBE analysis.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Explain what makes an LBE risk-significant or a BDBE high-consequence.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "State the three cumulative risk metrics.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Describe the major accident analysis.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-pl-03-licensing-basis-events"
+}

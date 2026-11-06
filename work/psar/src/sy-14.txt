@@ -1,0 +1,74 @@
+# SY-14 | Nuclear Island HVAC System | system | NHV
+range: 7.5-1 7.5-9
+sec: Sec. 7.5.1, pp. 7.5-1 to 7.5-9
+intro: The NHV is planned building by building. Its safety-significant work is isolating penetrations, filtering exhaust, and keeping the control room habitable.
+
+== Purpose and layout | 1,2
+S The NHV is allocated per building. It provides fresh air and controls exhaust from all NI buildings. @@ is allocated on a per building basis within the nuclear island
+S The RAB, RXB, FHB, and FAB have RCAs, where airflow goes from lesser to higher potential contamination. @@ HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination
+S The NCB does not contain RCAs. @@ The Nuclear Island Control Building (NCB) does not contain RCAs
+S The NHV is NSRST to support radionuclide retention and MCR isolation. @@ to support radionuclide retentions functions described in Section 7.5.1.2
+S The controlled combined release path from the FHB, RXB, RAB, and FAB through the monitored plant stack is an NSRST function. @@ through the monitored plant stack is an NSRST function
+K Which way does RCA airflow go? | Higher to lesser contamination | Lesser to higher potential contamination | It is not controlled | Straight to the stack with no filter | 1 | Airflow goes from areas of lesser to areas of higher potential contamination. @@ HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination
+K Which building has no RCAs? | RXB | RAB | NCB | FHB | 2 | The NCB does not contain RCAs. @@ The Nuclear Island Control Building (NCB) does not contain RCAs
+
+== Reactor Building | 3,4,6
+S RXB HVAC keeps the building at slightly negative pressure with NST HEPA exhaust units. Exhaust goes to the monitored stack. @@ The RXB HVAC equipment maintains the building at slightly negative pressure
+S HAA isolation uses one inboard and one outboard air operated valve pair for each penetration. @@ the double isolation arrangement of one inboard and one outboard air operated valve pair
+S The below grade SCG vapor trap cell is slightly negative with an inerted atmosphere and is monitored for SCG leakage. @@ The below grade SCG vapor trap cell is maintained at slightly negative pressure with inerted atmosphere
+S The reactor overpressure protection release point is the SCG trap cell. @@ The reactor overpressure protection release point is the SCG trap cell
+S The trap cell is automatically isolated on leakage indication in the MCR. @@ The SCG trap cell is automatically isolated upon leakage indication in the MCR
+S The NHV cooling loop isolates automatically on reactor vessel relief valve position. @@ The cooling loop is automatically isolated based on the position indication of the reactor vessel relief valves
+K What is the release point for reactor overpressure protection? | HAA | SCG trap cell | Plant stack | RWG holdup tank | 1 | The reactor overpressure protection release point is the SCG trap cell. @@ The reactor overpressure protection release point is the SCG trap cell
+K How is each HAA penetration isolated? | One damper | An inboard and an outboard valve | Manual blank | A HEPA filter | 1 | There is one inboard and one outboard air operated valve pair for each penetration. @@ the double isolation arrangement of one inboard and one outboard air operated valve pair
+
+== Reactor Auxiliary Building | 3,4,6
+S RAB HVAC also keeps the building slightly negative, using NST HEPA exhaust units to the monitored stack. @@ The RAB HVAC equipment maintains the building at slightly negative pressure
+S Below grade SPS cells are slightly negative with inerted atmosphere during operations. @@ Below grade SPS cells are maintained at slightly negative pressure with inerted atmosphere
+S SPS cell leak detectors connect to an NFP sodium leak detection control panel. It sends signals to the utility monitoring and control system for cell isolation. @@ transmits the sodium leak detection signals to the nuclear island utility monitoring and control system
+K How is SPS cell isolation signaled? | From the NACP through the utility monitoring and control system | From the RPS | By manual action only | From the FHC | 0 | The NACP transmits leak signals to the utility monitoring and control system. @@ transmits the sodium leak detection signals to the nuclear island utility monitoring and control system
+
+== Fuel Handling Building | 3,4,8
+S FHB normal exhaust goes through two 50 percent HEPA filtration units. @@ The FHB normal exhaust is provided through two 50 percent HEPA filtration units
+S Differential pressure monitors on the main working floor control exhaust flow to keep the FHB slightly negative. @@ Exhaust flow is controlled by differential pressure monitors installed on the main FHB working floor
+S All FHB exhaust goes through welded ductwork, HEPA filters, and the monitored stack. @@ through welded ductwork, HEPA filters and out the monitored plant stack
+S High radiation on HEPA filter discharge alarms in the MCR for manual operator action. @@ Indication of high radiation on the HEPA filter discharge alarms in the M
+K How many FHB exhaust filter units does normal exhaust use? | One 100 percent unit | Two 50 percent units | Three 50 percent units | Four 25 percent units | 1 | Normal exhaust is through two 50 percent HEPA filtration units. @@ The FHB normal exhaust is provided through two 50 percent HEPA filtration units
+
+== Control room habitability | 4,5,8
+S Sodium monitors, toxic chemical sensors, and a radiation monitor continually sample the MCR fresh air intake. @@ Sodium monitors, toxic chemical sensors, and a radiation monitor continually sample the MCR fresh air intake
+S On an elevated hazard, an MCR alarm alerts operators to place MCR HVAC units in recirculation and deenergize the below grade HVAC systems. @@ to place the MCR HVAC units in recirculation mode and deenergize the below grade HVAC systems
+S Deenergizing below grade HVAC prevents similar hazards in the remote shutdown facility. @@ to prevent similar hazards in the remote shutdown facility
+S Recirculation credits NSRST HEPA filters to minimize operator dose. @@ Recirculation mode of the MCR HVAC credits the NSRST high efficiency particulate air
+S If MCR personnel evacuate to the RSC, a manually operated compressed breathable air bottle rack supports post accident monitoring. @@ a manually operated compressed breathable air bottle rack
+K The MCR intake sodium monitor alarms. What does the PSAR say operators do? | Evacuate at once | Place MCR HVAC in recirculation and deenergize below grade HVAC | Start the RSC fans | Nothing, it isolates by itself | 1 | The alarm alerts operators to place units in recirculation and deenergize below grade HVAC. @@ to place the MCR HVAC units in recirculation mode and deenergize the below grade HVAC systems
+K What provides a habitable environment for monitoring in the RSC? | Compressed breathable air bottles | Recirculation HEPA filters | A dedicated chiller | FHB exhaust | 0 | NHV provides a manually operated compressed breathable air bottle rack. @@ a manually operated compressed breathable air bottle rack
+
+== Automatic versus manual isolation | 5,6,8
+T Condition | Response
+R SPS-P leak detection signal | SPS-P cells isolate automatically @@ On a leak detection signal, isolation at the
+R SCG cell leak detection signal | NHV isolates the SCG cell penetrations @@ integrity of the SCG cell barrier by isolation of the NHV penetrations
+R RV relief valve open | Control system isolates the SCG trap cell automatically @@ automatically isolates the SCG trap cell if the relief valve opens
+R High radiation after a postulated release | Indication in the MCR. Operators evaluate and may manually isolate the HAA HVAC @@ evaluate the condition and initiate a manual isolation of the HAA HVAC system
+R High radiation in SPS cells HVAC | Indication. Operators evaluate and may manually isolate SPS cells @@ initiate a manual isolation of the SPS cells
+R High radiation in SCG trap cell HVAC | Indication. Operators evaluate and may manually isolate @@ initiate a manual isolation of the SCG trap cell
+R Radiation, toxic chemical, or sodium vapor in MCR intake | Indication. Operators evaluate and may manually isolate @@ initiate a manual isolation of the control room HVAC system
+S Isolation dampers and valves have NST power from the NLV and fail closed when power is not available. @@ The valves and dampers are designed to fail closed
+K The RV pressure relief valve opens. What happens to the SCG trap cell? | It isolates automatically | Operators must isolate it | It vents to the HAA | Nothing | 0 | The control system monitors valve position and automatically isolates the trap cell. @@ automatically isolates the SCG trap cell if the relief valve opens
+K High radiation is indicated in the SPS cells HVAC. What is the response? | Automatic scram | Operators evaluate and manually isolate as necessary | The cells purge to the HAA | Automatic isolation only | 1 | Operations personnel evaluate the condition and initiate a manual isolation, as necessary. @@ initiate a manual isolation of the SPS cells
+K Power is lost to NHV isolation valves. What is their position? | Fail closed | Fail open | As is | Modulating | 0 | Valves and dampers are designed to fail closed. @@ The valves and dampers are designed to fail closed
+
+== Safety significance | 9,10
+T Function | Class | NHV support
+R DL4-RR1, RR1a, RR1c | NSRST | Isolate the HAA barrier by closing penetration isolation valves @@ DL4-RR1a HAA Barrier (NSRST)
+R DL4-RR3, RR3c | NSRST | SPS cells barrier and isolation on leak detection @@ DL4-RR3 SPS Cells Barrier (NSRST)
+R DL4-RR4, RR4b | NSRST | SCG cell barrier and isolation on leak detection @@ DL4-RR4 SCG Cells Barrier (NSRST)
+R DL4-RR4c | NSRST | Vapor trap cell isolation on overpressure relief valve open @@ DL4-RR4c Vapor Trap Cell Isolation on
+R DL4-RR7 | NSRST | HEPA filtration of all FHB exhaust @@ DL4-RR7 Fuel Handling Building Barrier
+R DL5-PAM1 | NSRST | Conditioned air in the MCR, air bottles in the RSC @@ DL5-PAM1 Post Accident Monitoring
+S The NSRST portions are seismic class SCN1. @@ The NSRST portions of NHV are designed to seismic classification SCN1
+L Quality Assurance Program Description ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Testing Program ;; Design Reliability Assurance Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ preliminarily identified as applicable to NHV to meet quality
+K Which NHV function gives HEPA filtration of FHB exhaust? | DL4-RR1 | DL4-RR3 | DL4-RR7 | DL5-PAM1 | 2 | DL4-RR7 is the Fuel Handling Building barrier. @@ DL4-RR7 Fuel Handling Building Barrier
+Z Buildings with RCAs run slightly negative, with airflow toward higher potential contamination and exhaust through the monitored stack. @@ HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination
+Z Leak signals and relief valve opening isolate cells automatically. High radiation indications lead to manual isolation. @@ automatically isolates the SCG trap cell if the relief valve opens
+Z Isolation valves and dampers fail closed. Operators protect the MCR by placing HVAC in recirculation. @@ The valves and dampers are designed to fail closed

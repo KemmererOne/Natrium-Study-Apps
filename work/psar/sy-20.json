@@ -1,0 +1,529 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and monitor types",
+   "eo": [
+    "1",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RMS is a digital system with NSRST and NST functions.",
+     "anchor": "is a digital system with non-safety-related with special treatment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60"
+    },
+    {
+     "t": "p",
+     "text": "It operates continuously and warns so that personnel exposure does not exceed 10 CFR 20 limits.",
+     "anchor": "ensure personnel exposure does not exceed 10 CFR 20 limits",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60"
+    },
+    {
+     "t": "p",
+     "text": "Each monitor sends activity, health, control, and status data to the Digital Radiation Monitor System (DRMS).",
+     "anchor": "Each RMS monitor sends activity, monitor health, control, and status information",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60"
+    },
+    {
+     "t": "p",
+     "text": "The DRMS connects by direct digital link to the AMC, which interfaces with the operator in the MCR.",
+     "anchor": "which provides the interface between the operator in the Main Control Room (MCR) and the DRMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60"
+    },
+    {
+     "t": "p",
+     "text": "Monitors are area (ARM), effluent (ERM), and process and airborne (PRM).",
+     "anchor": "The area designated for ERM locations are at the monitored plant stack",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-61"
+    },
+    {
+     "t": "p",
+     "text": "A tritium sample skid sits on the monitored plant stack.",
+     "anchor": "there is a tritium sample skid located on the monitored plant stack",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-61"
+    },
+    {
+     "t": "p",
+     "text": "There are no liquid effluent monitors, as no liquid effluents are possible in the design.",
+     "anchor": "There are no liquid effluent radiation monitors in the RMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-61"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-6-1",
+     "num": "7.6.6-1",
+     "cap": "RMS Interface Diagram",
+     "alt": "PSAR Rev 1 figure: RMS Interface Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-68"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why are there no liquid effluent radiation monitors?",
+     "o": [
+      "They are in the salt system",
+      "No liquid effluents are possible in the design",
+      "They are NST",
+      "They are in Chapter 12"
+     ],
+     "a": 1,
+     "x": "There are no liquid effluents possible in the design.",
+     "anchor": "There are no liquid effluent radiation monitors in the RMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-61",
+     "eo": "1,3"
+    },
+    {
+     "q": "Which NIC subsystem interfaces with the DRMS?",
+     "o": [
+      "FHC",
+      "CTC",
+      "AMC",
+      "RMC"
+     ],
+     "a": 2,
+     "x": "The DRMS connects to the AMC.",
+     "anchor": "which provides the interface between the operator in the Main Control Room (MCR) and the DRMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60",
+     "eo": "1,3"
+    }
+   ]
+  },
+  {
+   "title": "Locations and interfaces",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "RXB",
+      "RAB",
+      "FHB",
+      "FAB",
+      "NCB",
+      "Emergency Response Facility Primary"
+     ],
+     "anchor": "The areas, buildings, and rooms designated for ARM locations are Reactor Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-61"
+    },
+    {
+     "t": "p",
+     "text": "The DRMS is in the MCR computer room.",
+     "anchor": "The DRMS is located within the MCR computer room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-62"
+    },
+    {
+     "t": "p",
+     "text": "Type C and F PAM monitors are NSRST, with Radiation Indicator Controllers in the NCB cabinet room or divisional RPS cabinet room.",
+     "anchor": "The Type C and F PAM monitors are classified as NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-62"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where is the DRMS?",
+     "o": [
+      "HAA",
+      "In the plant stack",
+      "MCR computer room",
+      "RAB"
+     ],
+     "a": 2,
+     "x": "The DRMS is within the MCR computer room.",
+     "anchor": "The DRMS is located within the MCR computer room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-62",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Functions and automatic features",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Purpose",
+      "Signal goes to"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL4-RR1c",
+        "HAA HVAC operations after a postulated release",
+        "UMC"
+       ],
+       "anchor": "DL4-RR1c Head Access Area (HAA)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63"
+      },
+      {
+       "cells": [
+        "DL4-RR4a",
+        "Close SCG isolation valves on leak detection",
+        "AMC"
+       ],
+       "anchor": "DL4-RR4a Automatically close SCG isolation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63"
+      },
+      {
+       "cells": [
+        "DL4-RR4b",
+        "SCG cells barrier isolation",
+        "UMC"
+       ],
+       "anchor": "DL4-RR4b SCG cells barrier isolation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "Type C and F PAM display",
+        "RPS"
+       ],
+       "anchor": "signals to the RPS for display of Type C and F PAM variables",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "No automatic control actions are provided by the RMS. Setpoints only indicate in the MCR and trigger alarms.",
+     "anchor": "No automatic control actions are provided by RMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64"
+    },
+    {
+     "t": "p",
+     "text": "The automatic closures happen in AMC and UMC, which act on RMS signals.",
+     "anchor": "The RMS detects radioactivity and sends",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63"
+    },
+    {
+     "t": "p",
+     "text": "SCG process gas PRMs are credited for PAM Type C, D, E, and F.",
+     "anchor": "process gas PRMs are credited for PAM Type C, D, E, and F",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-61"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Does the RMS itself take automatic control actions?",
+     "o": [
+      "Only in the HAA",
+      "Yes",
+      "No, it indicates and alarms, and AMC or UMC act",
+      "Only on the stack"
+     ],
+     "a": 2,
+     "x": "No automatic control actions are provided by RMS.",
+     "anchor": "No automatic control actions are provided by RMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64",
+     "eo": "4,6"
+    },
+    {
+     "q": "Where does the RMS send its signal for DL4-RR1c?",
+     "o": [
+      "AMC",
+      "RPS",
+      "UMC",
+      "CTC"
+     ],
+     "a": 2,
+     "x": "The RMS detects radioactivity and sends signals to the UMC.",
+     "anchor": "DL4-RR1c Head Access Area (HAA)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Operator interface and alarms",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "MCR alarms are generated by the AMC when an activity signal from the DRMS exceeds setpoint.",
+     "anchor": "The MCR alarm functions will be generated by the AMC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "ARMs give local alarms, and ERM and PRM monitors can also alarm locally.",
+     "anchor": "The ARMs provide local alarms for the assigned areas",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "The DRMS can do source checks, setpoint control, valve and pump manipulation, and database changes.",
+     "anchor": "such as source check, setpoint control, manipulation of valves and pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "NSRST monitors have stand-alone, isolated Radiation Indicator Controllers.",
+     "anchor": "utilize a stand-alone, isolated interface and display Radiation Indicator Controller",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.1, p. 7.6-61"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What generates the MCR radiation alarm?",
+     "o": [
+      "The RPS",
+      "The AMC",
+      "The UMC",
+      "The ARM"
+     ],
+     "a": 1,
+     "x": "The AMC generates MCR alarms from DRMS signals.",
+     "anchor": "The MCR alarm functions will be generated by the AMC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66",
+     "eo": "5"
+    },
+    {
+     "q": "What backs up the DRMS connection for NSRST monitors?",
+     "o": [
+      "Radiation Indicator Controllers",
+      "RPS SVDUs",
+      "The GVDS",
+      "A paper log"
+     ],
+     "a": 0,
+     "x": "The controllers supplement the DRMS connection.",
+     "anchor": "utilize a stand-alone, isolated interface and display Radiation Indicator Controller",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.1, p. 7.6-61",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Reliability and failures",
+   "eo": [
+    "8",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Redundant monitoring points",
+      "Reliable power from the NUP",
+      "Self-testing for monitor failures",
+      "Quality design process under the QAPD"
+     ],
+     "anchor": "The following design features provide RMS reliability",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.2, p. 7.6-65"
+    },
+    {
+     "t": "p",
+     "text": "NSRST monitors are under surveillance testing and periodic calibration.",
+     "anchor": "under a surveillance testing program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.2, p. 7.6-65"
+    },
+    {
+     "t": "p",
+     "text": "HAA and SCG monitoring points use redundant monitors.",
+     "anchor": "such as the HAA and SCG monitoring points which are implemented on redundant monitors",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "The combined plant stack has two dedicated wide range gas monitors.",
+     "anchor": "the combined plant stack has two dedicated wide range gas monitors",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "Any single component fault does not prevent NSRST functions.",
+     "anchor": "Any single component fault does not prevent the RMS from performing the assigned NSRST functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66"
+    },
+    {
+     "t": "p",
+     "text": "The NUP gives 72-hour battery backup to NSRST monitors for the HAA and SCG.",
+     "anchor": "provides 72-hour battery backup to the NSRST monitors for the HAA and the SCG locations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How long is battery backup for the HAA and SCG monitors?",
+     "o": [
+      "8 hours",
+      "24 hours",
+      "72 hours",
+      "7 days"
+     ],
+     "a": 2,
+     "x": "The NUP provides 72-hour battery backup.",
+     "anchor": "provides 72-hour battery backup to the NSRST monitors for the HAA and the SCG locations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66",
+     "eo": "8,10"
+    },
+    {
+     "q": "How many wide range gas monitors are on the plant stack?",
+     "o": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+     ],
+     "a": 1,
+     "x": "The stack has two dedicated wide range gas monitors.",
+     "anchor": "the combined plant stack has two dedicated wide range gas monitors",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66",
+     "eo": "8,10"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RMS components are seismic class SCN1.",
+     "anchor": "The seismic classification of RMS components is SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64"
+    },
+    {
+     "t": "p",
+     "text": "PDC 64 is met by monitoring NI building atmospheres, sodium and cover gas cleanup spaces, and effluent paths.",
+     "anchor": "the RMS provides a means for monitoring all NI building atmospheres",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.2, p. 7.6-64"
+    },
+    {
+     "t": "p",
+     "text": "PAM is needed for defense-in-depth, to inform response after a postulated release.",
+     "anchor": "Post accident monitoring is required for sufficient defense-in-depth",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.5, p. 7.6-66"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Quality Assurance Program Description",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the RMS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which PDC covers monitoring radioactivity release?",
+     "o": [
+      "PDC 60",
+      "PDC 64",
+      "PDC 19",
+      "PDC 13"
+     ],
+     "a": 1,
+     "x": "PDC 64 is Monitoring radioactivity release.",
+     "anchor": "Consistent with PDC 64, Monitoring radioactivity release",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.2, p. 7.6-64",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Monitors feed the DRMS, the DRMS feeds the AMC, and the AMC raises the MCR alarm.",
+   "anchor": "The MCR alarm functions will be generated by the AMC",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66"
+  },
+  {
+   "text": "The RMS does not act on its own. AMC and UMC close valves and dampers on its signals.",
+   "anchor": "No automatic control actions are provided by RMS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64"
+  },
+  {
+   "text": "HAA and SCG monitors are redundant, with 72-hour battery backup.",
+   "anchor": "provides 72-hour battery backup to the NSRST monitors for the HAA and the SCG locations",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-20",
+ "title": "Radiation Monitoring System",
+ "kind": "system",
+ "subject": "RMS",
+ "sec_note": "Sec. 7.6.6, pp. 7.6-60 to 7.6-68",
+ "intro": "The RMS detects radiation in areas, processes, and effluent. It gives alarms and signals, and other systems take the automatic action.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RMS.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RMS boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RMS.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RMS operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RMS controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RMS automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RMS.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RMS.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RMS.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RMS.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-20-radiation-monitoring-system"
+}

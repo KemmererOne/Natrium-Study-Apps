@@ -1,0 +1,71 @@
+# OP-04 | Emergency Preparedness | topic | emergency preparedness
+range: 11.3-1 11.3-9
+sec: Sec. 11.3, pp. 11.3-1 to 11.3-9
+intro: The emergency plan itself comes at the operating license stage. The PSAR sets out the performance-based approach, who is in charge, and what facilities will exist.
+obj: State the regulatory basis of the emergency preparedness approach.
+obj: Describe the Plume Exposure Pathway Emergency Planning Zone basis.
+obj: Identify who leads the emergency response.
+obj: Identify the roles of federal, state, and local agencies.
+obj: Describe on-site protective measures and protective actions.
+obj: Describe the emergency response facilities and communications.
+obj: Explain how performance is demonstrated.
+
+== Performance-based approach | 1
+S The emergency preparedness plan will be provided at the OL stage. @@ The emergency preparedness plan will be provided at the operating license stage
+S It will be developed using 10 CFR 50.160 and RG 1.242. @@ will be developed utilizing the requirements in 10 CFR 50.160
+S The approach is performance-based, technology-inclusive, risk-informed, and consequence-oriented. @@ a performance-based, technology-inclusive, risk-informed, and consequence-oriented emergency preparedness approach
+S A site-specific PRA will be used to form the plan and inform EPZ size. @@ will be used to formulate the emergency preparedness plan and inform the PEP EPZ size
+S Plan reviews follow 10 CFR 50.54(t), and changes follow 10 CFR 50.54(q). @@ will follow the requirements in 10 CFR 50.54(q)
+K Which rule is the EP plan based on? | 10 CFR 50.160 | 10 CFR 72 | 10 CFR 61 | 10 CFR 100.21 only | 0 | The plan uses 10 CFR 50.160 and RG 1.242. @@ will be developed utilizing the requirements in 10 CFR 50.160
+K Which rule governs changes to an approved plan? | 10 CFR 50.54(q) | 10 CFR 50.59 | 10 CFR 55 | 10 CFR 20 | 0 | Changes follow 10 CFR 50.54(q). @@ will follow the requirements in 10 CFR 50.54(q)
+
+== Emergency Planning Zone | 2
+S RG 1.242 Appendix A was used to determine EPZ size. @@ Appendix A, was used to determine the PEP EPZ size
+S The preliminary analysis supports a PEP EPZ within the EAB, meeting 10 CFR 50.33(g)(2)(i). @@ a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)
+S So there is no requirement for pre-planned off-site protective actions, but capabilities support recommendations to off-site agencies. @@ there is no requirement to develop pre-planned off-site protective actions
+S Security events are not specifically identified in the preliminary analysis. @@ Security events are not specifically identified within the preliminary PEP EPZ sizing analysis
+K Where does the preliminary PEP EPZ fall? | Within the EAB | 10 miles | 50 miles | At the county line | 0 | Preliminary analysis supports a PEP EPZ within the EAB. @@ a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)
+K Are pre-planned off-site protective actions required? | Yes | No | Only for ingestion | Only at night | 1 | Since the EPZ is within the EAB, there is no requirement. @@ there is no requirement to develop pre-planned off-site protective actions
+
+== Emergency Response Organization | 3
+S The Shift Manager functions as the Emergency Director (ED) until duties transfer to an ERF ED. @@ The Shift Manager will function as the Emergency Director (ED)
+S The on-shift health physics person supports the ED until duties transfer to an ERF. @@ The health physics person on-shift will support the ED
+S The ED assumes command and control after an emergency declaration. @@ The ED will assume command and control functions following an emergency declaration
+S ERO staffing depends on the functions needed for postulated emergencies. @@ The ERO and staffing will be determined dependent on the functions needed
+K Who is the initial Emergency Director? | Plant General Manager | Shift Manager | Security Manager | NRC resident | 1 | The Shift Manager functions as ED until transfer to an ERF ED. @@ The Shift Manager will function as the Emergency Director (ED)
+K Who supports the ED with radiological aspects on shift? | Chemistry manager | On-shift health physics person | QA Manager | Fire brigade | 1 | The health physics person on-shift supports the ED. @@ The health physics person on-shift will support the ED
+
+== Government agencies | 4
+S The NRC is the primary authority for radiological events at NRC-licensed facilities. @@ The NRC acts as the primary authority for radiological events
+S For incidents affecting the public, FEMA may coordinate the federal response. @@ the Federal Emergency Management Agency may assume coordination of the federal response
+S Notification protocols are set with the Wyoming Office of Homeland Security, Lincoln County, and Kemmerer. @@ in coordination with the Wyoming Office of Homeland Security
+S Letters of agreement will be submitted with the plan. @@ Letters of agreement will be obtained and submitted with the emergency preparedness plan
+K Who may coordinate the federal response if the public is affected? | FEMA | DOE | EPA | Wyoming OHS | 0 | FEMA may assume coordination, and the NRC stays primary for on-site response. @@ the Federal Emergency Management Agency may assume coordination of the federal response
+
+== Protective measures | 5
+L First aid ;; Moving personnel away from hazardous areas ;; Protective gear ;; Contamination control ;; Establishing restricted areas ;; Site evacuation of non-essential personnel ;; Coordination with the fire protection and security plans @@ The steps for taking protective measures within the site will be procedurally directed
+S The most likely on-site actions are protective equipment, sheltering, or site evacuation. @@ The most likely on-site protective actions include the use of proper personal protective equipment
+S An emergency classification scheme with Emergency Action Levels will come with the plan. @@ emergency classification scheme and associated emergency action levels
+S Medical treatment or decontamination is prioritized by injury severity and contamination level. @@ will be prioritized based on severity of injury and level of contamination
+K What sets priority for treating injured people? | Severity of injury and level of contamination | Job title | Order of arrival | Location | 0 | Priority is based on severity and contamination. @@ will be prioritized based on severity of injury and level of contamination
+K Which is a likely on-site protective action? | Sheltering on-site | Evacuating Kemmerer | Potassium iodide to the county | Reactor restart | 0 | Likely actions include PPE, sheltering, or site evacuation. @@ The most likely on-site protective actions include the use of proper personal protective equipment
+
+== Facilities and communications | 6
+S A primary ERF (on-site) and a backup ERF (off-site) will be available. @@ A primary ERF (ERFP), located on-site, and a backup ERF (ERFB), located off-site, will be available
+S Their functions are alike and similar to a Technical Support Center and Operational Support Center. @@ There are no differences in the functions performed by the ERFP and ERFB
+S ERF staff relieve operators of duties not directly tied to reactor control. @@ will relieve the reactor operators of peripheral duties
+S The ERF is the primary communications center during an emergency. @@ the ERF will be the primary communications center for the plant
+S Dose projections will use real-time meteorological information. @@ Capabilities to provide dose projections using real-time meteorological information
+S Capabilities for 24-hour notification will be provided. @@ Capabilities for 24-hour notification will be provided
+K Where is the backup ERF? | On-site | Off-site | In the MCR | In the RSC | 1 | The ERFB is off-site. @@ A primary ERF (ERFP), located on-site, and a backup ERF (ERFB), located off-site, will be available
+K How do the ERFs help control room staff? | They relieve peripheral duties and communications | They take over reactor control | They run the RPS | They operate rods | 0 | They allow control room personnel to focus on the operational aspects. @@ will relieve the reactor operators of peripheral duties
+
+== Training and performance | 7
+S ERO members get initial training before assignment. @@ Initial training will be provided to individuals before being assigned ERO responsibilities
+S Off-site personnel get site familiarization training. @@ will be provided site familiarization training
+S Drills and exercises demonstrate the functions in 10 CFR 50.160(b)(1)(iii)(A) through (H). @@ Drills and exercises will be used to demonstrate the capabilities
+S Drills, exercises, and real events are critiqued to find weaknesses. @@ will be critiqued to identify weaknesses or deficiencies
+K How is the plan proven acceptable? | By evaluating performance in training, drills, and exercises | By paper review only | By NRC inspection only | It is assumed | 0 | Performance in training, drills, and exercises is evaluated and critiqued. @@ will be proven acceptable by evaluating and critiquing performance in training, drills, and exercises
+Z The plan is performance-based under 10 CFR 50.160, and comes at the OL stage. @@ will be developed utilizing the requirements in 10 CFR 50.160
+Z The preliminary EPZ is within the EAB. @@ a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)
+Z The Shift Manager is the initial Emergency Director. @@ The Shift Manager will function as the Emergency Director (ED)

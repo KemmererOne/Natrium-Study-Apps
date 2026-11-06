@@ -1,0 +1,71 @@
+# SY-01 | Reactor Core System | system | RCC
+range: 7.1-1 7.1-14
+sec: Sec. 7.1.1, pp. 7.1-1 to 7.1-14
+intro: The Reactor Core System is the set of replaceable core assemblies. This lesson covers each assembly type, reactivity control, and what the core must do in an event.
+
+== Purpose and arrangement | 1,2
+S The RCC consists of replaceable core assemblies. It is contained within the RV and is supported and constrained by the Core Barrel Structures. @@ The RCC consists of replaceable core assemblies
+S The reactor is a pool-type, sodium-cooled, fast reactor which operates at near-atmospheric pressure. @@ The reactor is a pool-type, sodium-cooled, fast reactor which operates at near-atmospheric pressure
+T Parameter | Value
+R Core power | 840 MWt @@ Core Power 840 MWt
+R Inlet temperature at 100% power and flow | 680 F (360 C) @@ Inlet Temperature at 100% power and flow 680°F (360°C)
+R Outlet temperature at 100% power and flow | 950 F (510 C) @@ Outlet Temperature at 100% power and flow 950°F (510°C)
+R Core average fast flux fraction | 0.67 @@ Core Average Fast Flux Fraction (End of Equilibrium Cycle) 0.67
+K What are the core inlet and outlet temperatures at 100% power and flow? | 500 F and 800 F | 680 F and 950 F | 750 F and 1050 F | 360 F and 510 F | 1 | Table 7.1.1-1 lists 680 F inlet and 950 F outlet. @@ Outlet Temperature at 100% power and flow 950°F (510°C)
+K What is the rated core power? | 345 MWt | 500 MWt | 840 MWt | 1200 MWt | 2 | Core power is 840 MWt. @@ Core Power 840 MWt
+
+== Core assembly types | 3
+F 7.1.1-2
+T Assembly | Purpose
+R Fuel | Contains the fuel, produces heat, and provides the neutron flux environment @@ The fuel assembly contains the fuel, produces heat, provides the neutron flux environment
+R Reflector | Reflects neutrons into the fueled region, which reduces reactivity loss and limits damage to permanent structures @@ Reflect neutrons into the core's fueled region
+R Shield | Two outermost rows. Absorb radial neutron leakage to limit activation of intermediate sodium @@ Absorb radial neutron leakage outside of the reflector assemblies
+R Material surveillance | Enclose and support material specimens @@ The purpose of the material surveillance assemblies is to provide enclosure and support
+R Neutron source | Produce neutrons for startup and source range measurement when subcritical @@ allows for reactor startup and measurement of source range signals
+R Simulated core | Support sodium fill, non-power initial operations, and recovery of a stuck assembly @@ used to support primary sodium coolant fill and non-power initial operations
+R Compressive | Support the core restraint function and enhance core lock-up @@ The compressive assemblies support the core restraint function
+R Lead test and lead demonstration | Support fuel surveillance and operating experience with advanced fuels @@ gain operating experience with and aid in the transition to advanced fuel designs
+K What is the purpose of the shield assemblies? | Generate startup neutrons | Absorb radial neutron leakage to limit activation of intermediate sodium | Hold material specimens | Store spent fuel | 1 | Shield assemblies absorb radial neutron leakage outside the reflector assemblies. @@ Absorb radial neutron leakage outside of the reflector assemblies
+K Which assembly supports startup and source range measurement? | Neutron source assembly | Reflector assembly | Compressive assembly | Lead test assembly | 0 | Neutron source assemblies allow startup and source range measurement when subcritical. @@ allows for reactor startup and measurement of source range signals
+
+== The fuel pin | 3
+S The initial fuel is a sodium-bonded metal fuel in a tight, hex-packed pin bundle, with pins separated by a wire wrap. @@ The pin bundle is arranged in a tight, hex-packed configuration
+S The pin has shield slugs at the bottom, a sodium-bonded fuel column in the center, and a gas plenum with a tag gas capsule at the top, inside HT9 alloy steel cladding. @@ The fuel pin comprises shield slugs at the bottom
+S Cladding provides a functional containment barrier and resists plenum gas pressure and fuel swelling. @@ The fuel pin cladding provides a functional containment barrier
+S Tag gas identifies assemblies with failed fuel pins, using an online fuel monitoring system. @@ Tag gas is used to identify assemblies containing failed fuel pins
+F 7.1.1-1
+K What is tag gas used for? | Cooling the plenum | Identifying assemblies containing failed fuel pins | Pressurizing the cover gas | Measuring flux | 1 | Tag gas identifies assemblies containing failed fuel pins. @@ Tag gas is used to identify assemblies containing failed fuel pins
+K What cladding material does the fuel pin use? | Zircaloy | 316H stainless | HT9 alloy steel | Inconel | 2 | The pin is contained within an HT9 alloy steel cladding. @@ contained within an HT9 alloy steel cladding
+
+== Reactivity control | 4
+S There are nine primary and four secondary control rod assemblies, which work with the CRD. @@ There are nine primary control rod assemblies and four secondary control rod assemblies
+S Absorber pins hold cladded, helium-bonded, boron carbide pellets. @@ The absorber pins contain cladded, helium-bonded, Boron Carbide absorber pellets
+S Scram insertion has enough worth to shut down the reactor and maintain safe shutdown even with the highest worth rod stuck withdrawn. @@ even if the highest worth rod is stuck in the withdrawn position
+S Secondary control assemblies provide a regulating function to manage small reactivity changes. @@ The secondary control assemblies provide a regulating function
+S Reactor power level, start-up, and shut-down are controlled by operator action. No operator action is required for the DL3 scram functions or to initiate natural circulation for emergency decay heat removal. @@ no operator action is required to perform the DL3 scram functions
+K How many primary and secondary control rod assemblies are there? | 13 and 4 | 9 and 4 | 8 and 5 | 12 and 1 | 1 | There are nine primary and four secondary control rod assemblies. @@ There are nine primary control rod assemblies and four secondary control rod assemblies
+K Scram worth must shut down the reactor under which assumption? | All rods insert fully | The highest worth rod is stuck withdrawn | Two rods are stuck | Secondary rods only are unavailable | 1 | Worth is sufficient even if the highest worth rod is stuck in the withdrawn position. @@ even if the highest worth rod is stuck in the withdrawn position
+
+== Inherent feedback | 6,9
+L Fuel temperature (Doppler) effects ;; Fuel axial expansion and contraction ;; Primary sodium coolant density ;; Control rod driveline axial expansion ;; Radial distortion @@ the reactivity feedback mechanisms include fuel temperature (Doppler) effects
+S The net effect of the prompt acting feedbacks is negative in the power operating range. @@ the net effect of the prompt acting components of these feedback mechanisms is negative
+S The core restraint system maintains the core configuration for passive heat removal flow and for sufficient absorber insertion. @@ The core restraint system maintains the core configuration
+K The net prompt reactivity feedback in the power range is designed to be what? | Positive | Zero | Negative | Dependent on rod position | 2 | The net prompt acting feedback effect is negative in the power operating range. @@ the net effect of the prompt acting components of these feedback mechanisms is negative
+
+== Instrumentation and indications | 5,8
+S XIS senses neutron flux leaking from the core to indicate reactor power. @@ provides instrumentation to sense the neutron flux leaking from the core
+S RIS monitors core temperature, neutron flux, coolant flow rate, and fuel failure through tag gas or coolant activity analysis. @@ fuel failure (via tag gas or coolant activity analysis)
+S RMS ensures radiation release from the core can be detected. @@ ensures that radiation release from the reactor core can be detected
+K How is fuel failure detected? | Tag gas or coolant activity analysis | Rod position change | Reactor head strain gauges | SPS pump speed | 0 | RIS signals cover fuel failure via tag gas or coolant activity analysis. @@ fuel failure (via tag gas or coolant activity analysis)
+
+== Safety significance and special treatment | 9,10
+S The fuel assembly is classified safety-related. @@ The fuel assembly is classified safety-related (SR)
+S The RCC supports scram function DL3-RC1 by keeping component movement within limits needed for control rod release. @@ DL3-RC1 Scram - Gravity Driven Absorber
+S The fuel assemblies maintain natural circulation capability and coolable geometry by limiting structural deformation. @@ The fuel assemblies maintain natural
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the RCC
+N Technical specification details for the core are not given in Sec. 7.1.1. See lesson OP-01.
+K Which is a function of the RCC in passive heat removal? | Driving the PSPs | Maintaining natural circulation capability and coolable geometry | Rejecting heat to air | Isolating the IHX | 1 | Fuel assemblies maintain natural circulation capability and coolable geometry. @@ The fuel assemblies maintain natural
+
+Z The RCC is the set of replaceable core assemblies, rated at 840 MWt. @@ Core Power 840 MWt
+Z Control is nine primary and four secondary rod assemblies with worth to cover a stuck highest worth rod. @@ even if the highest worth rod is stuck in the withdrawn position
+Z Tag gas identifies failed fuel pins. @@ Tag gas is used to identify assemblies containing failed fuel pins

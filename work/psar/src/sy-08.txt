@@ -1,0 +1,94 @@
+# SY-08 | Sodium Processing System | system | SPS
+range: 7.2-41 7.2-57
+sec: Sec. 7.2.4, pp. 7.2-41 to 7.2-57
+intro: The SPS keeps three sodium inventories clean. Its monitoring and purification jobs are not safety functions, but the piping, pump trip, and leak response around them are.
+
+== Purpose and the three loops | 1,2
+S The SPS monitors and removes impurities from the primary sodium, the intermediate sodium, and the EVST sodium. @@ monitors and removes the impurities of the liquid sodium inventories
+S Impurities include cesium, oxygen compounds, hydrogen compounds, debris, and corrosion products. @@ Impurities include cesium, oxygen compounds, hydrogen compounds, debris, and corrosion products
+T Loop | Draws from | Equipment location
+R SPS-P | RV, using a submersible EM pump within the RV | Below grade in the RAB @@ using a submersible electromagnetic (EM) pump within the RV
+R SPS-I | Each IHT loop or the IHT drain tanks | Grade level in the RAB @@ draws intermediate sodium from each Intermediate Heat Transport System (IHT) loop
+R SPS-E | EVST | Below grade in the FHB @@ draws sodium from the EVST and
+S The SPS-I has no cesium trap or associated radiological monitoring. @@ does not contain a cesium trap or associated radiological monitoring
+S The SPS-E contains similar equipment and functions as the SPS-I. @@ The SPS-E contains similar equipment and functions as the SPS-I
+S The monitoring and impurity removal functions are non-safety-related with no special treatment. @@ monitoring and impurity removal functions of SPS are non-safety-related
+F 7.2.4-1
+K Which SPS loop has a cesium trap? | SPS-P | SPS-I | SPS-E | All three | 0 | The SPS-P has a cesium trap. The SPS-I has no cesium trap, and the SPS-E is similar to the SPS-I. @@ does not contain a cesium trap or associated radiological monitoring
+K What is the safety classification of the SPS monitoring and impurity removal functions? | Safety-related | NSRST | Non-safety-related with no special treatment | Safety-significant | 2 | The monitoring and impurity removal functions are NST. @@ monitoring and impurity removal functions of SPS are non-safety-related
+
+== Why impurities matter | 1,4,9
+T Impurity | Enters by | Problem or control
+R Oxygen | Dissolved native oxides from steel, air and moisture ingress, and in-leakage from NSS into the IHT | Oxides can plug small orifices. High oxygen can accelerate corrosion at elevated temperature @@ Oxides can precipitate from the sodium on cold surfaces
+R Hydrogen | Diffusion out of steel and reaction with hydrogen bearing cover gas impurities | Sodium hydride can precipitate on cold surfaces and plug small orifices @@ Sodium hydride can precipitate from solution onto cold surfaces
+R Tritium | Generated from fission in the fuel and neutron capture in the control rods | Reduced with hydrogen in the cold traps @@ Tritium is generated from fission in the fuel and from neutron capture in the control rods
+R Cesium | Failed fuel | Controlled to prevent evaporation into cover gas and migration @@ to prevent evaporation into cover gas and subsequent migration
+S Tritium in the primary coolant diffuses through the intermediate heat exchanger to the intermediate sodium. @@ Tritium from the primary coolant diffuses through the intermediate heat exchanger
+S Heat tracing on SPS piping keeps sodium above minimum temperatures. @@ is accomplished using heat tracing on the SPS piping
+K Which is a stated oxygen source for the IHT sodium? | In-leakage from the NSS | The EVST | Cold trap packing | Argon from the RWG | 0 | Oxygen may enter the IHT through in-leakage from the NSS. @@ Oxygen may enter the IHT through in-leakage from Nuclear Island Salt System
+K How does tritium reach the intermediate sodium? | Through the cold traps | By diffusing through the intermediate heat exchanger | Through the cover gas | From the salt | 1 | Tritium in the primary coolant diffuses through the intermediate heat exchanger. @@ Tritium from the primary coolant diffuses through the intermediate heat exchanger
+
+== Purification equipment | 3,4
+T Component | Removes | How
+R Cold trap | Oxygen and hydrogen | Precipitation at reduced temperature @@ The cold trap removes hydrogen and oxygen from the sodium via precipitation at reduced temperature
+R Cesium trap | Cesium | Reticulated vitreous carbon @@ reticulated vitreous carbon traps as part of the SPS-P process equipment
+R Filter | Solid particulate matter | Sintered metal filters @@ in the form of sintered metal filters
+S In the cold trap, sodium is cooled to precipitate sodium oxide onto high surface area packing media. @@ the sodium is cooled down to precipitate sodium oxide from solution onto high surface area packing media
+S After analysis and purification, sodium flows back into the RV. Isolation valves are on the supply and return lines. @@ Isolation valves are located on the supply and return lines
+F 7.2.4-2
+K What does the cold trap remove? | Cesium | Oxygen and hydrogen | Particulates only | Argon | 1 | The cold trap removes hydrogen and oxygen via precipitation at reduced temperature. @@ The cold trap removes hydrogen and oxygen from the sodium via precipitation at reduced temperature
+K What medium is used in the cesium trap? | Sintered metal | Reticulated vitreous carbon | Activated charcoal | Stainless steel mesh | 1 | Cesium traps use reticulated vitreous carbon. @@ reticulated vitreous carbon traps as part of the SPS-P process equipment
+
+== Monitoring | 3,5,8
+S The key process indicator for sodium purity is the saturation temperature, which correlates directly with impurity concentration. @@ The key process indicator for sodium purity is the saturation temperature
+S The PTI correlates sodium flow rate through a plugging orifice at a given temperature to impurity concentration. @@ PTI operation requires correlating flow rate of the sodium through a plugging orifice
+S The SPS operates with sodium above the saturation temperature to avoid plugging passageways. @@ The SPS operates with the sodium above this saturation temperature
+S Hydrogen meters use a probe and an ion pump, or a similar technology. @@ which employ a probe and an ion pump, or a similar technology
+S The MPS collects samples for laboratory analysis and gives a point-in-time check against PTI data. @@ point-in-time sodium chemistry characterization for comparison against PTI monitoring data
+S Process radiation monitors apply only to the SPS-P. There are two gamma spectrometers. @@ Process radiation monitors only apply to SPS-P
+T Monitor location | What it tells the operator
+R Main bypass line | Cesium content of the process sodium, and whether the cesium trap may need to be brought online @@ indicating whether the cesium trap may need to be brought online
+R Return line downstream of the cesium trap | Effectiveness of the cesium trap @@ is used to monitor the effectiveness of the cesium trap
+S The monitors detect cesium against the normal background of Na-24 gamma rays, the dominant radionuclide in the SPS-P. @@ against the normal background of Na-24 gamma rays
+S The PTI is in the SPS-P Technology Maturation Plan, because more design and testing is needed. @@ by including the PTI in the SPS-P Technology Maturation Plan
+K The bypass line monitor shows rising Cs-137. What does this indicate? | The cesium trap may need to be brought online | The cold trap is plugged | The SPS-P pump must trip | The EVST is leaking | 0 | The bypass monitor indicates whether the cesium trap may need to be brought online. @@ indicating whether the cesium trap may need to be brought online
+K What is the key process indicator for sodium purity? | Sodium level | Saturation temperature | Pump current | Cover gas pressure | 1 | The saturation temperature correlates directly with impurity concentration. @@ The key process indicator for sodium purity is the saturation temperature
+K What is the dominant radionuclide in the SPS-P? | Cs-137 | Na-24 | Ar-41 | Xe-133 | 1 | Monitors detect cesium against the normal background of Na-24, the dominant radionuclide in the SPS-P. @@ against the normal background of Na-24 gamma rays
+
+== Automatic actions | 6,8
+T Function | Class | Action
+R DL3-HR11 | SR | SPS-P pump trips at the hot pool low level setpoint, so RV sodium cannot drain below its safe level @@ DL3-HR11 SPS Pump Trip on Low Primary
+R DL4-RR8 | NSRST | Manual pump trip on low primary sodium level, as a backup to the SR trip @@ The SPS-P pump is manually tripped on
+R DL4-RR3a | NSRST | SPS-P supply isolation valve closes on a leak signal @@ the SPS-P supply isolation valve automatically closes
+R DL4-RR3b | NSRST | SPS-P pumps trip on a leak signal @@ The SPS-P pumps trip on detection of a sodium leak in SPS-P
+R DL4-RR3c | NSRST | Ventilation of the SPS-P cells isolates on a leak signal @@ ventilation of the SPS-P cells is automatically isolated
+S SPS leak detection covers SPS piping, isolation valves, and piping enclosures in the HAA, and is provided by NFP. @@ The SPS includes sodium leak detection for SPS piping, SPS isolation valves
+S Sensors include wire and cable, spark plugs, and mutual inductance types. @@ SPS leak detection uses devices such as wire and cable, spark plugs, and mutual inductance type sensors
+S All SPS SR functions are passive or are executed on a loss of power, and no operator actions are required to support them. @@ No operator actions are required to support SPS SR functions
+K An SPS-P leak signal is received. Which set of automatic actions follows? | Supply valve closes, pumps trip, and cell ventilation isolates | Reactor scrams only | Return valve opens | EVST drains | 0 | Leak detection closes the supply isolation valve, trips the pumps, and isolates cell ventilation. @@ the SPS-P supply isolation valve automatically closes
+K Why does the SPS-P pump trip on low hot pool level? | To protect pump bearings | To keep RV sodium from draining below its safe level | To start the cold trap | To protect the cesium trap | 1 | DL3-HR11 supports primary sodium heat removal by preventing the RV sodium from draining below its safe level. @@ DL3-HR11 SPS Pump Trip on Low Primary
+K What operator action is needed for SPS SR functions? | Manual trip of the pump | Manual valve closure | None | Starting heat tracing | 2 | No operator actions are required to support SPS SR functions. The manual trip is an NSRST backup. @@ No operator actions are required to support SPS SR functions
+
+== Operation and the EVST limit | 4,8
+S The SPS may run continuously whenever monitoring or processing is needed. @@ The SPS may be operated continuously whenever monitoring of liquid sodium
+S The SPS-P and SPS-I may operate in each of the four reactor modes. The SPS-E can operate independent of reactor modes. @@ Operation of the SPS-P and SPS-I may occur in each of the four reactor modes
+S The SPS-E is not used to remove heat from the EVST. Its design prevents removing sodium below the minimum level for EVST residual heat removal. @@ The SPS-E is not utilized to remove heat from the EVST
+S The SPS-E is below grade to reduce personnel exposure if the EVST sodium contains radionuclides. @@ The SPS-E is located below grade to reduce personnel exposure
+F 7.2.4-3
+K May the SPS-P operate in all reactor modes? | Yes, in each of the four reactor modes | Only at power | Only in shutdown | Only in refueling | 0 | SPS-P and SPS-I operation may occur in each of the four reactor modes. @@ Operation of the SPS-P and SPS-I may occur in each of the four reactor modes
+
+== Safety significance | 9,10
+T Function | Class | Purpose
+R DL3-RR1b SPS primary system barrier | SR | Primary coolant boundary from the RES through the isolation valves @@ DL3-RR1b SPS Primary System Barrier (SR)
+R DL3-RR4 EVST barrier | SR | Radionuclide retention in the EVST @@ DL3-RR4 EVST Barrier (SR)
+R DL4-HR1 IAC passive mode operation | NSRST | SPS-I piping prevents leaks or flow disruption so IAC heat removal stays available @@ DL4-HR1 IAC Passive Mode Operation
+R DL2-RR7 primary SPS barrier | NSRST | Passive barrier for primary sodium outside the primary coolant boundary @@ DL2-RR7 Primary SPS Barrier (NSRST)
+R DL2-RR8 intermediate cold trap barrier | NSRST | Retains sodium and radionuclides accumulated in the cold traps @@ DL2-RR8 Intermediate Cold Trap SPS
+R DL4-RR3 SPS cells barrier | NSRST | Enclosures contain radionuclides from an SPS leak @@ DL4-RR3 SPS Cells Barrier (NSRST)
+R DL5-PAM1 post accident monitoring | NSRST | Valve and pump breaker position indication @@ DL5-PAM1 Post Accident Monitoring
+S The DL3-RR1b barrier function does not include isolation valve closure. @@ This function does not include isolation valve closure
+L Quality Assurance Program ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; In-service Testing Program ;; Equipment Qualification Program ;; Post-construction Inspection, Testing, and Analysis Program @@ The following programmatic special treatments are preliminarily identified as relevant to SPS SR and NSRST SSCs
+K Why does SPS-I piping matter to IAC? | It supplies IAC with argon | It must prevent leaks or flow disruption so IAC heat removal remains available | It cools the IAC blowers | It carries IAC instrument air | 1 | DL4-HR1 keeps IAC heat removal available. @@ DL4-HR1 IAC Passive Mode Operation
+Z The SPS-P, SPS-I, and SPS-E clean three sodium inventories. Only the SPS-P has a cesium trap and radiation monitors. @@ does not contain a cesium trap or associated radiological monitoring
+Z Cold traps remove oxygen, hydrogen, and tritium by precipitation. The PTI tracks saturation temperature. @@ The key process indicator for sodium purity is the saturation temperature
+Z The SR trip on low hot pool level protects heat removal. An SPS-P leak closes the supply valve, trips pumps, and isolates cell ventilation. @@ the SPS-P supply isolation valve automatically closes

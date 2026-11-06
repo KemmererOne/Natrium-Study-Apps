@@ -132,8 +132,9 @@ Knowledge checks and question export\
   question text.\
 \
 Launch and navigation\
-- The main index.html is the single landing page, with one Lesson Plans button\
-  like the Flashcards and Quiz buttons. It opens lessons/index.html.\
+- The main index.html is the single landing page, with a Fundamentals Lesson Plans button\
+  and a PSAR Lesson Plans button, like the Flashcards and Quiz buttons. The first opens\
+  lessons/index.html and the second opens psar/index.html.\
 - lessons/index.html lets the user pick a plan from a drop selector, grouped under\
   the handbook headings. Each option shows its status, and the chosen plan shows its\
   title, handbook volume, status and a start button.\
@@ -202,8 +203,7 @@ Open question decisions (Nov 5, 2026)\
 - Decay heat right after shutdown is 7% everywhere (HT-02). NP-04 stays silent on the starting value, and Q56 is\
   flagged, not changed.\
 - Q303, Q304 and Q467 to Q474 are retired from the quiz. Their IDs are never reused.\
-- PSAR statements may supplement NA-02 and MS-05 pages. Natrium control rod count stays off, because the PSAR gives no\
-  number to check it against.\
+- PSAR statements may supplement NA-02 and MS-05 pages.\
 - Word file errors go to the lesson plan owner list in archive/unresolved-items.md. Lessons stay as built.\
 \
 Audit decisions (Nov 6, 2026)\
@@ -213,6 +213,19 @@ Audit decisions (Nov 6, 2026)\
 - Reactor theory items use no thermal neutron or moderator information. Retired items are listed in\
   archive/audit-2026-11.md. Their IDs are never reused.\
 - All lessons are status Reviewed, not Draft. Draft source tags stay where a Word source is itself a draft.\
+\
+PSAR lesson plans (Nov 6, 2026)\
+- psar/ holds 43 lessons written from scratch for NRC exam preparation. Only PSAR Rev 1 is used\
+  (work/text/ML25276A288.txt, PSAR pages only). No Word file, handbook or outside content.\
+- Systems use the ten standard objectives and design basis events use the twelve event objectives.\
+  Where the PSAR cannot teach an objective, the lesson says so. It does not fill the gap.\
+- Lessons are written in work/psar/src/*.txt. Run python3 scripts/psar-author.py, then the normal\
+  lesson build. Never edit psar/ pages by hand. Quotes and statement anchors must match the PSAR.\
+- Progress shares natrium-lessons-progress, with slugs starting psar-. Root sw.js also covers psar/.\
+- The Natrium control rod count may be shown with its PSAR cite: nine primary and four secondary assemblies\
+  (Secs. 1.1.4.1.9, 7.1.1.3.1, 7.2.5.1). This replaces the Nov 5 decision that kept the count off.\
+- PSAR lesson checks export to quiz/questions.js with t "PSAR design basis" and a "PSAR: group" topic. PSAR key facts\
+  are not exported to the flashcards.\
 \
 Stop and report, do not guess, if:\
 - A source file is missing or unreadable.\

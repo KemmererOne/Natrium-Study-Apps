@@ -1,0 +1,86 @@
+# SY-23 | Nuclear Island Auxiliary Electrical Systems | system | NUP and NDC
+range: 7.7-1 7.7-10
+sec: Sec. 7.7.1, pp. 7.7-1 to 7.7-10
+intro: The NUP and NDC give the Nuclear Island uninterruptible AC and DC power. They are not safety related. The safety functions do not depend on them, which is a key design point.
+
+== Purpose and classification | 1,9
+S NUP is the uninterruptible AC system, and NDC is the DC system. Both power NI systems in all modes. @@ The NDC and NUP provide power to NI systems and components during all modes of plant operation
+S Failures of the NUP or NDC do not affect the plant's ability to perform SR functions. @@ Failures of the NUP or NDC do not affect the ability of the plant to perform safety-related (SR) functions
+S Portions in Divisions A, B, C, and D are NSRST, because they power NSRST SSC functions. @@ Certain portions of the NUP and NDC (comprising Divisions A, B, C, and D) are classified as NSRST
+S Electrical systems are otherwise NST. @@ These systems are classified as non-safety-related with no special treatment (NST)
+K Does an NDC failure stop the plant from performing SR functions? | Yes | No | Only in Mode 1 | Only with Division A | 1 | Failures of the NUP or NDC do not affect the ability to perform SR functions. @@ Failures of the NUP or NDC do not affect the ability of the plant to perform safety-related (SR) functions
+K Why are NUP divisions NSRST? | They support NSRST SSC functions | They are SR | They feed the turbine | They are outside the NI | 0 | They provide power to support NSRST SSCs functional requirements. @@ Certain portions of the NUP and NDC (comprising Divisions A, B, C, and D) are classified as NSRST
+
+== Loads and interfaces | 2
+T NUP loads (AC)
+R RPS and PAM cabinets @@ Reactor Protection System and Post-Accident Monitoring cabinets
+R Nuclear Instrumentation System @@ Nuclear Instrumentation System (see Section 7.6.4)
+R Radiation Monitoring System @@ Radiation Monitoring System (see Section 7.6.6)
+R CRD motor controllers for scram follow drive-in @@ Control rod drive motor controllers (for scram follow motor drive-in function)
+R RAC instrumentation @@ Reactor Air Cooling System instrumentation
+R MCR emergency operating lighting @@ Main Control Room emergency operating lighting
+R RPS equipment room and RSC emergency operating lighting @@ equipment rooms (including Remote Shutdown Complex) emergency operating lighting
+T NDC loads (DC)
+R NUP @@ NUP (see Section 7.7.1.3.1)
+R PSP isolation breaker backup trip power @@ Primary Sodium Pump isolation breaker backup trip power
+R ISP isolation breaker backup trip power @@ Intermediate Sodium Pump isolation breaker backup trip power
+R SPS pump isolation breaker backup trip power @@ Sodium Processing System pump isolation breaker backup trip power
+K Which load is on the NUP? | CRD motor controllers for scram follow | PSP main motors | Salt pumps | Turbine lube oil | 0 | NUP feeds CRD motor controllers for the scram follow motor drive-in function. @@ Control rod drive motor controllers (for scram follow motor drive-in function)
+K What does the NDC give the PSP isolation breakers? | Motive power | Backup trip power | Closing power only | Nothing | 1 | NDC provides PSP isolation breaker backup trip power. @@ Primary Sodium Pump isolation breaker backup trip power
+
+== NUP design | 3,4
+S The NUP has four independent divisions, one per RPS division. @@ the NUP comprises four independent divisions (A, B, C, and D)
+L 120 VAC single-phase inverter with integrated static transfer switch (STS) ;; 480/120 VAC bypass Regulating Voltage Transformer (RVT) ;; Two 120 VAC panelboards, one UPS-backed and one not ;; Remote Manual Bypass Switch (RMBS) @@ Each division includes a 120 VAC single-phase inverter
+S In normal operation, the inverter takes 250 VDC from its switchboard and makes regulated 120 VAC for the UPS panelboard. @@ each inverter receives 250 VDC from the respective division 250 VDC switchboard
+S The non-UPS panelboard feeds the same loads as a backup. @@ The non-UPS-backed panelboard feeds the same loads as the UPS-backed panelboard as a backup
+S Each RVT takes 480 VAC from the same NST SDG-backed MCC as that division's normal battery charger. @@ Each division RVT receives 480 VAC power
+F 7.7.1-1
+K What feeds the NUP inverter in normal operation? | 480 VAC from the MCC | 250 VDC from the division switchboard | The diesel directly | The RVT | 1 | Each inverter receives 250 VDC from the division switchboard. @@ each inverter receives 250 VDC from the respective division 250 VDC switchboard
+K What voltage do the NUP panelboards supply? | 24 VDC | 120 VAC | 480 VAC | 4160 VAC | 1 | NUP gives regulated single-phase 120 VAC. @@ Each division includes a 120 VAC single-phase inverter
+
+== NDC design | 3,4
+S The NDC has four independent 250 VDC divisions, one per RPS division. @@ the NDC comprises four independent 250 VDC divisions
+S Each division has a battery bank, a Battery Transfer Switch (BTS), a normal switchboard, and access to two chargers. @@ Each division has one battery bank, a Battery Transfer Switch (BTS), one normal switchboard
+S Each charger can supply its loads while recharging its battery from design minimum to full within 24 hours. @@ to full charge within 24 hours
+S Swing chargers are shared between Divisions A and B, and between C and D. @@ The swing chargers are shared between Divisions A and B DC switchboards
+T Divisions | Battery duty
+R A and B | 72 hours @@ Divisions A and B batteries are sized to supply the respective division loads for 72 hours
+R C and D | 2 hours @@ Divisions C and D batteries are sized to supply the respective division loads for 2 hours
+S Batteries are sealed Valve-Regulated Lead-Acid. @@ The batteries are sealed Valve-Regulated Lead-Acid type
+F 7.7.1-2
+K How long are Division A and B batteries sized for? | 2 hours | 8 hours | 24 hours | 72 hours | 3 | Divisions A and B are sized for 72 hours. @@ Divisions A and B batteries are sized to supply the respective division loads for 72 hours
+K How long are Division C and D batteries sized for? | 2 hours | 8 hours | 24 hours | 72 hours | 0 | Divisions C and D are sized for 2 hours. @@ Divisions C and D batteries are sized to supply the respective division loads for 2 hours
+K Which divisions share a swing charger? | A and C | A and B | B and D | All four | 1 | Swing chargers are shared between A and B, and between C and D. @@ The swing chargers are shared between Divisions A and B DC switchboards
+K What is the NDC battery type? | Flooded lead acid | Sealed Valve-Regulated Lead-Acid | Nickel cadmium | Lithium ion | 1 | The batteries are sealed VRLA. @@ The batteries are sealed Valve-Regulated Lead-Acid type
+
+== Automatic transfers and abnormal response | 6,8
+S If an inverter fails or there is an output overload or short, the STS automatically transfers UPS loads to the RVT. @@ the inverter’s STS initiates an automatic transfer of the AC UPS loads to the RVT
+S For inverter maintenance, loads go to the RVT using the RMBS. @@ the loads can be transferred to the RVT using the RMBS
+S On loss of offsite power, NST SDGs start automatically and power their MCCs. @@ are automatically started to power their associated MCCs
+S Batteries supply uninterrupted power until the SDGs come online. @@ The batteries supply uninterrupted power to the inverters and UPS panelboard loads until the SDGs come online
+S Loss of one NLV MCC loses one charger until the swing charger is on line, and the battery carries the loads. @@ The loss of one NLV MCC results in a loss of function of one charger until the swing charger is brought on line
+S If input voltage and frequency are out of limits, chargers shut down and isolate the NDC, then return automatically. @@ The battery chargers return to operation automatically
+S Charger DC overvoltage protection shuts the charger down before inverter overvoltage protection acts. @@ shuts down the charger automatically before the inverter overvoltage protection is activated
+S The NDC is ungrounded. Ground detection relays send a common trouble alarm to the UMC. @@ The NDC is ungrounded
+K An inverter fails. What happens to the UPS panelboard? | It is lost | The STS automatically transfers it to the RVT | An operator must close the RMBS | The battery feeds it directly | 1 | The STS automatically transfers the UPS loads to the RVT. @@ the inverter’s STS initiates an automatic transfer of the AC UPS loads to the RVT
+K How is an inverter taken out for maintenance? | Using the RMBS | Opening the battery | Tripping the SDG | Using the UMC | 0 | Loads are transferred to the RVT using the RMBS. @@ the loads can be transferred to the RVT using the RMBS
+K An NLV MCC is lost. What carries the division until the swing charger is on line? | The diesel | The battery | The other division | Nothing | 1 | The battery supplies power until the swing charger is operating. @@ The battery supplies uninterruptible power to the system loads until the swing charger is operating
+K Is the NDC grounded? | Solidly grounded | Ungrounded with ground detection | High resistance grounded | Not stated | 1 | The NDC is ungrounded, with ground detection relays. @@ The NDC is ungrounded
+
+== Indications and testing | 5,10
+S Voltmeters and ammeters give continuous monitoring locally and through the UMC. @@ to provide continuous monitoring locally in the equipment rooms and remotely via the UMC
+S A protection or monitoring device operation sends a common trouble signal to the UMC. @@ sends a common trouble signal to the UMC
+S A battery monitoring system watches cell temperature, cell resistance, charging current, float voltage, and room temperature. @@ continuously monitors key battery parameters such as cell temperature
+S The BTS allows battery equalization and discharge testing. @@ has a manually operated BTS to facilitate battery equalization and discharge testing
+K What goes to the UMC when a protection device operates? | A common trouble signal | A scram | An SDG start | A breaker close | 0 | Operation sends a common trouble signal to the UMC. @@ sends a common trouble signal to the UMC
+K Which is monitored by the battery monitoring system? | Float voltage | Reactor power | Sodium level | Stack flow | 0 | Parameters include float voltage. @@ continuously monitors key battery parameters such as cell temperature
+
+== Safety significance | 9,10
+S NUP and NDC support NSRST functions, including scram follow, seismic trip, pump trips, and PAM. @@ DL4-RC3 Control Rod Drive Driveline Scram Follow
+S Safety-significant components are in the NCB substructure. @@ are located within, and protected by, the reinforced concrete Nuclear Island Control Building (NCB) substructure
+S Independence comes from physical separation and electrical isolation, so a single failure affects only one division. @@ ensuring a postulated single failure affects only a single division
+L Design Reliability Assurance Program ;; Equipment Qualification Program ;; Post Construction Inspection, Testing, and Analysis Program ;; Quality Assurance Program Description @@ The following programmatic special treatments are applied to the NDC and NUP
+K A single failure in one NUP division affects how many divisions? | One | Two | Three | All four | 0 | A postulated single failure affects only a single division. @@ ensuring a postulated single failure affects only a single division
+Z NUP and NDC have four divisions matching the RPS, and SR functions do not depend on them. @@ Failures of the NUP or NDC do not affect the ability of the plant to perform safety-related (SR) functions
+Z Inverters run off 250 VDC. The STS moves loads to the RVT automatically on an inverter fault. @@ the inverter’s STS initiates an automatic transfer of the AC UPS loads to the RVT
+Z Divisions A and B batteries last 72 hours, and C and D last 2 hours. @@ Divisions A and B batteries are sized to supply the respective division loads for 72 hours

@@ -1,0 +1,689 @@
+{
+ "concepts": [
+  {
+   "title": "Fundamental Safety Functions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FSFs ensure the cumulative risk objectives of regulatory dose criteria and Quantitative Health Objectives are met.",
+     "anchor": "Fundamental Safety Functions (FSFs) ensure the cumulative risk objectives",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "FSF",
+      "How it is performed"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Retaining radionuclides",
+        "Functional containment strategy"
+       ],
+       "anchor": "accomplished using a functional containment strategy",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-2"
+      },
+      {
+       "cells": [
+        "Controlling heat generation",
+        "Insertion of control rods into the reactor core"
+       ],
+       "anchor": "is performed via insertion of control rods into the reactor core",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-2"
+      },
+      {
+       "cells": [
+        "Controlling heat removal",
+        "Active and passive cooling systems"
+       ],
+       "anchor": "is achieved through active and passive cooling systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-2"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The heat generation and heat removal functions both serve the same barrier, as the next page shows."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is NOT one of the three Fundamental Safety Functions?",
+     "o": [
+      "Maintaining primary pressure",
+      "Retaining radionuclides",
+      "Controlling heat generation",
+      "Controlling heat removal"
+     ],
+     "a": 0,
+     "x": "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal.",
+     "anchor": "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Functional containment",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Functional containment employs diverse passive barriers. They begin at a radionuclide source and include all SSCs between that source and the environment.",
+     "anchor": "begin at a radionuclide source and",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Maintain at least one barrier beyond the cladding, piping, or vessel containing a source that can reliably withstand LBE and DBA conditions, with leakage specified by design or testing",
+      "Keep a minimum total number of required barriers between a source and the environment",
+      "Provide a framework for iteration between safety analysis, design, and PRA"
+     ],
+     "anchor": "The primary goals of the functional containment strategy",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-1-3-1",
+     "num": "1.3-1",
+     "cap": "Diverse Barriers in Functional Containment",
+     "alt": "PSAR Rev 1 figure: Diverse Barriers in Functional Containment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.3, p. 1.3-6"
+    },
+    {
+     "t": "p",
+     "text": "For the fuel, the cladding provides the first safety-related radionuclide retention barrier.",
+     "anchor": "the cladding provides the first safety-related (SR) radionuclide retention barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The Reactor Enclosure System is the next barrier. Its SR portion includes the reactor head, reactor vessel, and associated component interfaces.",
+     "anchor": "The SR portion of this boundary includes the reactor head, reactor vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The guard vessel provides an additional barrier outside the reactor head and reactor vessel SR boundary.",
+     "anchor": "The guard vessel, also a component of the Reactor Enclosure System, provides an additional barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    },
+    {
+     "t": "p",
+     "text": "There are no penetrations through either of the two vessels.",
+     "anchor": "there are no penetrations through either of the two vessels",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3"
+    },
+    {
+     "t": "p",
+     "text": "A fuel assembly that fails during operation is sealed in an SR canister before storage in the Spent Fuel Pool.",
+     "anchor": "it is sealed in an SR canister prior to storage in the Spent Fuel Pool",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the first safety-related radionuclide retention barrier for the fuel?",
+     "o": [
+      "Reactor vessel",
+      "Guard vessel",
+      "Fuel cladding",
+      "Reactor Building"
+     ],
+     "a": 2,
+     "x": "For the fuel, the cladding provides the first SR radionuclide retention barrier.",
+     "anchor": "the cladding provides the first safety-related (SR) radionuclide retention barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2",
+     "eo": "2"
+    },
+    {
+     "q": "What happens to a fuel assembly that fails during operation before it is stored in the Spent Fuel Pool?",
+     "o": [
+      "It is stored in the IHT",
+      "It is vented to the RWG",
+      "It is sealed in an SR canister",
+      "It is returned to the core"
+     ],
+     "a": 2,
+     "x": "A failed assembly is sealed in an SR canister prior to storage in the Spent Fuel Pool.",
+     "anchor": "it is sealed in an SR canister prior to storage in the Spent Fuel Pool",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Inherent features that support containment",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The high boiling point of sodium keeps the core covered by subcooled sodium at near atmospheric pressure during LBEs.",
+     "anchor": "the high boiling point of sodium, which ensures that the reactor core remains covered by subcooled sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3"
+    },
+    {
+     "t": "p",
+     "text": "The low operating pressure of the primary system and cover gas means there is no significant driving force to transport radionuclides.",
+     "anchor": "ensures there is no significant driving force to transport radionuclides",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3"
+    },
+    {
+     "t": "p",
+     "text": "Intermediate coolant pressure is greater than primary coolant pressure, so postulated intermediate leaks send sodium into the primary system rather than primary coolant into the intermediate system.",
+     "anchor": "The intermediate coolant pressure is greater than primary coolant pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why does a leak between the intermediate and primary sodium result in ingress to the primary system?",
+     "o": [
+      "The primary pumps create suction",
+      "Intermediate coolant pressure is greater than primary coolant pressure",
+      "The IHX is below the sodium level",
+      "The cover gas draws sodium in"
+     ],
+     "a": 1,
+     "x": "Intermediate coolant pressure is greater than primary pressure, so leaks go into the primary system.",
+     "anchor": "The intermediate coolant pressure is greater than primary coolant pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Controlling heat generation",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Means",
+      "Type",
+      "How it works"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Power runback",
+        "Active",
+        "Control rod drive motors insert rods on detection of abnormal conditions, and this prevents a scram for a variety of upsets"
+       ],
+       "anchor": "use control rod drive motors to insert control rods upon detection of abnormal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+      },
+      {
+       "cells": [
+        "Scram",
+        "Passive",
+        "Gravity insertion of control rods, performed by the CRD and RPS"
+       ],
+       "anchor": "The scram function results in passive gravity insertion of control rods",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+      },
+      {
+       "cells": [
+        "Driveline scram follow",
+        "DID to scram",
+        "Initiated by the RPS coincident with a scram signal, and drives the rods in with the motors"
+       ],
+       "anchor": "initiated by the Reactor Protection System coincident with a scram signal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+      },
+      {
+       "cells": [
+        "Reactivity feedback",
+        "Inherent",
+        "As temperatures rise, the net negative feedback of the core reduces power"
+       ],
+       "anchor": "As temperatures rise, the net negative feedback of the core reduces power",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The CRD uses two diverse means of inserting two control rod banks of diverse geometrical design.",
+     "anchor": "two diverse means of inserting two control rod banks of diverse geometrical design",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the CRD driveline scram follow feature provide?",
+     "o": [
+      "Normal rod withdrawal",
+      "Rod position indication",
+      "Cover gas sealing",
+      "Defense-in-depth to the scram function"
+     ],
+     "a": 3,
+     "x": "The driveline scram follow feature provides DID to the scram function.",
+     "anchor": "The CRD driveline scram follow feature provides DID to the scram function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4",
+     "eo": "3"
+    },
+    {
+     "q": "What moves the control rods into the core in a scram?",
+     "o": [
+      "Sodium flow",
+      "Cover gas pressure",
+      "Control rod drive motors",
+      "Gravity"
+     ],
+     "a": 3,
+     "x": "The scram function results in passive gravity insertion of control rods.",
+     "anchor": "The scram function results in passive gravity insertion of control rods",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Controlling heat removal",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Two diverse residual heat removal systems, IAC and RAC, perform functions that satisfy this FSF.",
+     "anchor": "Two diverse residual heat removal systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-4"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Mode",
+      "Air flow",
+      "Sodium flow in the IHT"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "IAC active mode 1",
+        "IAC blower",
+        "Forced flow from the Intermediate Sodium Pump"
+       ],
+       "anchor": "One active mode of operation removes heat using the IAC blower and forced flow through the IHT",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-4"
+      },
+      {
+       "cells": [
+        "IAC active mode 2",
+        "IAC blower",
+        "Natural circulation"
+       ],
+       "anchor": "IAC blower and natural circulation flow in the IHT",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-4"
+      },
+      {
+       "cells": [
+        "IAC passive mode",
+        "Natural draft",
+        "Not stated here"
+       ],
+       "anchor": "passive means of performing the FSF of controlling heat removal using natural draft airflow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "IAC is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions.",
+     "anchor": "is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5"
+    },
+    {
+     "t": "p",
+     "text": "RAC uses natural circulation of air around the exterior of the guard vessel. It operates continuously, with no operator actions or moving parts required.",
+     "anchor": "The RAC operates continuously, with no operator actions or moving parts required",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which system operates continuously with no moving parts or operator actions?",
+     "o": [
+      "SCG",
+      "IAC blower mode",
+      "RAC",
+      "IHT"
+     ],
+     "a": 2,
+     "x": "RAC operates continuously, with no operator actions or moving parts required to perform its function.",
+     "anchor": "The RAC operates continuously, with no operator actions or moving parts required",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5",
+     "eo": "3"
+    },
+    {
+     "q": "What is the primary means of heat removal during start-up, shutdown, and off-normal conditions?",
+     "o": [
+      "IAC",
+      "The Energy Island",
+      "The SPS",
+      "RAC"
+     ],
+     "a": 0,
+     "x": "The IAC is the primary means in those conditions.",
+     "anchor": "is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "The five Defense Lines",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Line",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL1",
+        "Prevent off-normal operation and AOOs"
+       ],
+       "anchor": "DL1: Prevent off-normal operation and anticipated operational occurrences",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-1"
+      },
+      {
+       "cells": [
+        "DL2",
+        "Control abnormal operation, detect failures, and prevent DBEs"
+       ],
+       "anchor": "DL2: Control abnormal operation, detect failures, and prevent design basis events",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+      },
+      {
+       "cells": [
+        "DL3",
+        "Control DBEs within the analyzed design basis conditions and prevent BDBEs"
+       ],
+       "anchor": "DL3: Control DBEs within the analyzed design basis conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+      },
+      {
+       "cells": [
+        "DL4",
+        "Control severe plant conditions and mitigate consequences of BDBEs"
+       ],
+       "anchor": "DL4: Control severe plant conditions and mitigate consequences of BDBEs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+      },
+      {
+       "cells": [
+        "DL5",
+        "Deploy adequate offsite protective actions and prevent adverse impact on public health and safety"
+       ],
+       "anchor": "DL5: Deploy adequate offsite protective actions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "DL1 and DL5 include programmatic elements and design features. DL2, DL3, and DL4 include the design functions needed to ensure performance of the FSFs.",
+     "anchor": "DL1 and DL5 include programmatic elements and design features",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Among DLs 2, 3, and 4, two independent and diverse DLs, to the extent practicable, can mitigate any AOO postulated initiating event.",
+     "anchor": "can mitigate any AOO postulated initiating event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which Defense Line deploys adequate offsite protective actions?",
+     "o": [
+      "DL5",
+      "DL2",
+      "DL3",
+      "DL4"
+     ],
+     "a": 0,
+     "x": "DL5 deploys adequate offsite protective actions.",
+     "anchor": "DL5: Deploy adequate offsite protective actions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2",
+     "eo": "4"
+    },
+    {
+     "q": "Which Defense Lines include the design functions necessary to ensure performance of the FSFs?",
+     "o": [
+      "DL1 only",
+      "DL4 and DL5",
+      "DL1 and DL5",
+      "DL2, DL3, and DL4"
+     ],
+     "a": 3,
+     "x": "DL2, DL3, and DL4 include those design functions.",
+     "anchor": "DL2, DL3, and DL4 include the design functions necessary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "SARRDLs",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A SARRDL is a prescribed limit of radionuclide release for systems and components.",
+     "anchor": "A SARRDL is a prescribed limit of radionuclide release for systems and components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "The most limiting LBE does not exceed the siting dose limits at the EAB and LPZ",
+      "The 10 CFR 20.1301 annualized dose limits to the public are not exceeded at the EAB for normal operation and AOOs"
+     ],
+     "anchor": "SARRDLs are established so that",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+    },
+    {
+     "t": "p",
+     "text": "Compliance comes from monitoring and controlling radionuclide inventory during normal operation, so the assumed inventory at the onset of an LBE is not exceeded.",
+     "anchor": "Compliance with the SARRDLs is achieved through monitoring and controlling radionuclide inventory",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is SARRDL compliance achieved?",
+     "o": [
+      "By operator action after an LBE",
+      "By limiting reactor power to 5 percent",
+      "By monitoring and controlling radionuclide inventory during normal operation",
+      "By filtering all stack releases"
+     ],
+     "a": 2,
+     "x": "Compliance is achieved by monitoring and controlling inventory during normal operation.",
+     "anchor": "Compliance with the SARRDLs is achieved through monitoring and controlling radionuclide inventory",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Evaluating defense-in-depth",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The three DID elements are plant capability, programmatic capability, and the integrated DID adequacy evaluation.",
+     "anchor": "The three DID elements, plant capability, programmatic capability, and integrated DID adequacy evaluation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.3, p. 1.3-5"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Evaluation of LBE margin",
+      "Layers of defense evaluation",
+      "Evaluation of single feature reliance",
+      "Evaluation of prevention-mitigation balance"
+     ],
+     "anchor": "The summary of plant capability DID includes the following",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2, p. 4.2-1"
+    },
+    {
+     "t": "p",
+     "text": "The frequency of all DBEs and BDBEs is maintained below 1x10^-2 and 1x10^-4 per plant-year, respectively.",
+     "anchor": "The frequency of all DBEs and BDBEs is maintained below",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Eight risk-significant LBEs are identified.",
+     "anchor": "Eight risk-significant LBEs are identified",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1.2, p. 4.2-3"
+    },
+    {
+     "t": "p",
+     "text": "The single feature review found no dependence on a single feature across the layers for the risk-significant LBEs. One DBA was identified with dependence on a single barrier.",
+     "anchor": "One DBA was identified to have dependence on a single barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1.3, p. 4.2-4"
+    },
+    {
+     "t": "p",
+     "text": "An integrated decision-making process panel uses deterministic and probabilistic inputs to review DID adequacy.",
+     "anchor": "uses deterministic and probabilistic inputs in the review and assessment of the adequacy of the DID",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.3, p. 4.2-5"
+    },
+    {
+     "t": "p",
+     "text": "The DID baseline to support plant operation will be established at the operating license stage.",
+     "anchor": "The DID baseline to support plant operation will be established at the operating license (OL) stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2.1.1, p. 4.2-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is NOT a part of the plant capability DID summary?",
+     "o": [
+      "Prevention-mitigation balance",
+      "Operator license renewal",
+      "LBE margin",
+      "Single feature reliance"
+     ],
+     "a": 1,
+     "x": "The summary covers LBE margin, layers of defense, single feature reliance, and prevention-mitigation balance.",
+     "anchor": "The summary of plant capability DID includes the following",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 4.2, p. 4.2-1",
+     "eo": "6"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal.",
+   "anchor": "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+  },
+  {
+   "text": "Functional containment uses diverse passive barriers, with the cladding first.",
+   "anchor": "functional containment strategy that employs diverse passive barriers",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2"
+  },
+  {
+   "text": "Scram is passive gravity insertion, backed by the driveline scram follow.",
+   "anchor": "The scram function results in passive gravity insertion of control rods",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4"
+  },
+  {
+   "text": "IAC has active and passive modes, and RAC runs continuously with no moving parts.",
+   "anchor": "The RAC operates continuously, with no operator actions or moving parts required",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5"
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal.",
+   "sec": "Sec. 1.3.2",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1"
+  }
+ ],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "PL-02",
+ "title": "Safety Functions and Defense-in-Depth",
+ "kind": "topic",
+ "subject": "safety functions",
+ "sec_note": "Secs. 1.3 and 4.2, pp. 1.3-1 to 1.3-6 and 4.2-1 to 4.2-5",
+ "intro": "Every Natrium event lesson comes back to three Fundamental Safety Functions and five Defense Lines. Learn these first.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the three Fundamental Safety Functions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Describe the functional containment strategy and its barriers.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain how heat generation and heat removal are controlled.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "State the five Defense Lines and how independence is achieved between them.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Explain the purpose of SARRDLs.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Describe the elements of defense-in-depth evaluation.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-pl-02-safety-functions-and-defense-in-depth"
+}

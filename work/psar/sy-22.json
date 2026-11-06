@@ -1,0 +1,351 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and interfaces",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The AST measures ground motion, applies processing and logic, and sends actuation signals to the RTBs through the RPS interface device.",
+     "anchor": "measures ground motion, applies required signal processing and logic",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "It is used in seismic beyond design basis events greater than the SSE, to scram before the peak wave reaches the facility.",
+     "anchor": "to scram the reactor before the peak seismic wave reaches the facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "The RTB interface device is downstream of the RPS logic, where an analog relay matrix isolates the RTB power supply control.",
+     "anchor": "is located downstream of the RPS logic process",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the AST for?",
+     "o": [
+      "Isolate SCG",
+      "Scram before the peak seismic wave reaches the facility",
+      "Trip the turbine",
+      "Close HVAC dampers"
+     ],
+     "a": 1,
+     "x": "It scrams the reactor before the peak seismic wave.",
+     "anchor": "to scram the reactor before the peak seismic wave reaches the facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75",
+     "eo": "1,2"
+    },
+    {
+     "q": "Where does the AST act?",
+     "o": [
+      "On rod motors",
+      "On PSPs",
+      "Upstream of the RPS logic",
+      "On the RTBs, downstream of RPS logic"
+     ],
+     "a": 3,
+     "x": "The RTB interface device is downstream of the RPS logic process.",
+     "anchor": "is located downstream of the RPS logic process",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Components and locations",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Triaxial seismic accelerometers",
+      "Signal processing unit",
+      "Bi-stable unit"
+     ],
+     "anchor": "each channel includes triaxial seismic accelerometers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "There are four channels.",
+     "anchor": "The AST consists of four channels",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "Accelerometers are in boreholes at four locations at 90-degree angles around the RXB.",
+     "anchor": "are located in boreholes at four locations at 90-degree angles around the RXB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "Signal processing is in cabinets in the NCB substructure.",
+     "anchor": "The signal processing takes place in cabinets in the Nuclear Island Control Building substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "Specific cabinet locations will be given at the OL stage.",
+     "anchor": "will be described at the operating license",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-8-1",
+     "num": "7.6.8-1",
+     "cap": "AST Signals and Interface",
+     "alt": "PSAR Rev 1 figure: AST Signals and Interface",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.4, p. 7.6-80"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are AST accelerometers?",
+     "o": [
+      "On the reactor head",
+      "In boreholes around the RXB",
+      "In the MCR",
+      "On the stack"
+     ],
+     "a": 1,
+     "x": "They are in boreholes at four locations around the RXB.",
+     "anchor": "are located in boreholes at four locations at 90-degree angles around the RXB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75",
+     "eo": "3"
+    },
+    {
+     "q": "What are the three parts of an AST channel?",
+     "o": [
+      "Pump, valve, tank",
+      "Display, keyboard, mouse",
+      "Accelerometers, signal processing unit, bi-stable unit",
+      "Relay, fuse, breaker"
+     ],
+     "a": 2,
+     "x": "Each channel has these three parts.",
+     "anchor": "each channel includes triaxial seismic accelerometers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Operation and logic",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If the processing output passes the bi-stable setpoint, the bi-stable outputs an isolated signal to the shunt trip feature in the RTB.",
+     "anchor": "then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "The RTB arrangement gives 2-out-of-4 logic for reactor scram.",
+     "anchor": "The RTB arrangement constitutes 2-out-of-4 logic for the reactor scram function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "One failed channel cannot cause a spurious trip, because two RTBs on different channels are needed.",
+     "anchor": "prevents spurious actuation caused by a failure of a single AST channel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "Its function is DL4-RC4, automatic seismic trip.",
+     "anchor": "DL4-RC4 Automatic seismic trip",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.2.1, p. 7.6-77"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which RTB feature does the AST use?",
+     "o": [
+      "Shunt trip",
+      "Manual lever",
+      "Close coil",
+      "Undervoltage coil"
+     ],
+     "a": 0,
+     "x": "The bi-stable outputs an isolated signal to the shunt trip feature.",
+     "anchor": "then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75",
+     "eo": "4,6"
+    },
+    {
+     "q": "One AST channel fails high. Does the reactor trip?",
+     "o": [
+      "Only at full power",
+      "Only if RPS agrees",
+      "Yes",
+      "No, two RTBs on different channels are needed"
+     ],
+     "a": 3,
+     "x": "The arrangement prevents spurious actuation from a single channel failure.",
+     "anchor": "prevents spurious actuation caused by a failure of a single AST channel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Testing and safety significance",
+   "eo": [
+    "8",
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The AST is NSRST.",
+     "anchor": "The AST is designed to perform a non-safety-related with special treatment (NSRST) function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-75"
+    },
+    {
+     "t": "p",
+     "text": "Its components are seismic class SCN1.",
+     "anchor": "The seismic classification of AST components is SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.3, p. 7.6-78"
+    },
+    {
+     "t": "p",
+     "text": "It conforms to IEEE 338-2022 for testing and calibration.",
+     "anchor": "The AST conforms to IEEE 338-2022 for testing and calibration capabilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.2, p. 7.6-78"
+    },
+    {
+     "t": "p",
+     "text": "IEEE 379-2014 addresses single failure and IEEE 384-2018 addresses independence.",
+     "anchor": "Single failure is addressed by applying IEEE 379-2014",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.3, p. 7.6-78"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Post-construction inspection, testing, and analysis program",
+      "Quality Assurance Program Description"
+     ],
+     "anchor": "are identified as applicable to the AST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-76"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the AST safety classification?",
+     "o": [
+      "Not classified",
+      "SR",
+      "NSRST",
+      "NST"
+     ],
+     "a": 2,
+     "x": "It performs an NSRST function.",
+     "anchor": "The AST is designed to perform a non-safety-related with special treatment (NSRST) function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-75",
+     "eo": "8,9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Four accelerometer channels in boreholes around the RXB feed bi-stables that use the RTB shunt trip.",
+   "anchor": "then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+  },
+  {
+   "text": "The RTB arrangement gives 2-out-of-4 logic, so one bad channel cannot trip the plant.",
+   "anchor": "prevents spurious actuation caused by a failure of a single AST channel",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75"
+  },
+  {
+   "text": "The AST is NSRST function DL4-RC4 and acts for seismic beyond design basis events.",
+   "anchor": "DL4-RC4 Automatic seismic trip",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.8.2.1, p. 7.6-77"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-22",
+ "title": "Anticipatory Automatic Seismic Trip System",
+ "kind": "system",
+ "subject": "AST",
+ "sec_note": "Sec. 7.6.8, pp. 7.6-75 to 7.6-80",
+ "intro": "The AST scrams the reactor before the peak seismic wave arrives. It is NSRST, separate from RPS logic, and acts directly on the reactor trip breakers.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the AST.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the AST boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the AST.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain AST operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the AST controls and indications.",
+   "taught": false
+  },
+  {
+   "number": "6",
+   "text": "Explain the AST automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the AST.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the AST.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the AST.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the AST.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-22-anticipatory-automatic-seismic-trip-system"
+}

@@ -1,0 +1,36 @@
+# EV-08 | Beyond Design Basis Events | event | event
+range: 3.8-1 3.8-25 3.5-1 3.5-10
+sec: Sec. 3.8, starting on p. 3.8-1
+intro: BDBEs are the rare combinations. Compare each to its DBE: they usually add one failure, such as lost IAC modes or a failed normal scram.
+
+== Event initiators and assumptions | 1
+S BDBEs are less likely than DBEs and are not expected to occur in the life of the plant. @@ are rare event sequences that are less likely than design basis events
+S BDBEs take into account the expected response of all SSCs regardless of safety classification. @@ BDBEs take into account the expected response of all structures, systems, or components
+T Family | Example initiators
+R Loss of primary flow | Loss of one PSP, loss of all PSPs, LOOP, loss of a 6.9 kV bus @@ a total loss of primary flow during full power operating conditions
+R Heat removal | Loss of heat sink, Energy Island transient, IHX tube break @@ a loss of heat removal from one intermediate sodium loop during full power operating conditions
+R Reactivity | Control rod withdrawal, reactor or spurious scram @@ the continuous withdrawal of a control rod during full power operating conditions
+R Ex-vessel release | SCG leaks while shutdown @@ SCG leak occurs downstream of the SCG vapor trap cell during low power or shutdown
+R Fuel handling | Drops in the vessel, SFP, or BLTC, PIC sodium-water reaction, loss of EVHM cooling @@ a fuel handling event while moving fuel in the bottom loading transfer cask
+K What frequency band defines BDBEs? | Above 1x10^-2 | 1x10^-4 to 1x10^-2 | 5x10^-7 to 1x10^-4 | Below 1x10^-9 | 2 | Mean frequencies of 5x10^-7 to 1x10^-4 per plant-year are BDBEs. @@ Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs
+
+== Scram backups | 5,9
+T Failure | Backup | What it does
+R Insufficient rods insert, from a trip breaker failure or rods not fully inserting | CRD driveline scram follow | Control rods are driven into the core @@ A Control Rod Drive System (CRD) driveline scram follow occurs
+R Normal scram fails | Alternative shunt trip circuit | Scrams the reactor @@ The alternative shunt trip circuit scrams the reactor
+K An insufficient number of rods insert after a scram signal. What backs this up in the BDBE analysis? | Alternative shunt trip | CRD driveline scram follow | RAC | Operator trip only | 1 | A CRD driveline scram follow drives rods into the core. @@ A Control Rod Drive System (CRD) driveline scram follow occurs
+K The normal reactor scram fails. What scrams the reactor? | The alternative shunt trip circuit | IAC | ISP trip | Runback | 0 | The alternative shunt trip circuit scrams the reactor. @@ The alternative shunt trip circuit scrams the reactor
+
+== Heat removal fallback | 5,9,10
+S With non-passive IAC failed on both trains, the end state is safe shutdown with the IAC passive mode. @@ with the IAC passive mode providing decay heat removal
+S With non-passive and passive IAC failed on both trains, RAC provides decay heat removal. @@ Non-passive and passive IAC cooling fails on both trains
+N Learn the order: IAC non-passive, then IAC passive, then RAC.
+K Both IAC modes fail on both trains after a LOOP. What removes decay heat? | IHT forced flow | RAC | SPS | The Energy Island | 1 | RAC provides decay heat removal. @@ safe shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal
+
+== Where fuel performance limits are not met | 2
+S In DHP-LOOP-4, the fuel performance acceptance criteria are not met. Cladding fails, and a radionuclide release occurs. @@ The fuel performance acceptance criteria are not met for this event
+S Risk-significant BDBEs in the summary table include RFH-FDIV-2, RFH-FDEM-2, and RFH-FDPI-1. @@ RFH-FDIV-2 Fuel Handling Event Occurs While Moving Fuel Assembly Yes
+K Which LOOP BDBE fails to meet the fuel performance acceptance criteria? | DHP-LOOP-2 | DHP-LOOP-3 | DHP-LOOP-4 | SUD-LOOP-1 | 2 | DHP-LOOP-4 uses the alternative shunt trip and cladding fails. @@ The fuel performance acceptance criteria are not met for this event
+
+Z BDBEs add failures to the same event families as DBEs. @@ are rare event sequences that are less likely than design basis events
+Z Scram backups are the driveline scram follow and the alternative shunt trip. @@ The alternative shunt trip circuit scrams the reactor

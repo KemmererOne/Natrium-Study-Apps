@@ -2,8 +2,8 @@
 // scripts/build-lessons.js keeps TOPICS current and bumps VERSION when any of those pages change.
 // flashcards/ and quiz/ have their own service workers, so this one leaves them alone.
 const APP = "site";
-const VERSION = "v25";
-const CONTENT = "c11bd7fdc1fb";
+const VERSION = "v30";
+const CONTENT = "ffc396699907";
 const CACHE = APP + "-" + VERSION;
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap";
@@ -65,7 +65,51 @@ const TOPICS = [
   "./topics/pr-03-electrical-diagrams-and-schematics/",
   "./topics/pr-04-electronic-diagrams-and-schematics/",
   "./topics/pr-05-logic-diagrams/",
-  "./topics/pr-06-engineering-fabrication-construction-and-architectural-drawings/"
+  "./topics/pr-06-engineering-fabrication-construction-and-architectural-drawings/",
+  "./psar/",
+  "./psar/psar-ev-01-anticipated-operational-occurrences/",
+  "./psar/psar-ev-02-loss-of-primary-flow-dbes/",
+  "./psar/psar-ev-03-heat-removal-dbes/",
+  "./psar/psar-ev-04-ex-vessel-release-dbes/",
+  "./psar/psar-ev-05-fuel-handling-dbes/",
+  "./psar/psar-ev-06-local-fuel-fault-dbes/",
+  "./psar/psar-ev-07-design-basis-accidents/",
+  "./psar/psar-ev-08-beyond-design-basis-events/",
+  "./psar/psar-op-01-technical-specifications-and-operating-modes/",
+  "./psar/psar-op-02-organization-and-training/",
+  "./psar/psar-op-03-human-factors-engineering/",
+  "./psar/psar-op-04-emergency-preparedness/",
+  "./psar/psar-op-05-fire-protection-and-sodium-leakage/",
+  "./psar/psar-op-06-radiological-controls/",
+  "./psar/psar-op-07-startup-test-program/",
+  "./psar/psar-pl-01-plant-overview/",
+  "./psar/psar-pl-02-safety-functions-and-defense-in-depth/",
+  "./psar/psar-pl-03-licensing-basis-events/",
+  "./psar/psar-pl-04-safety-classification-and-design-criteria/",
+  "./psar/psar-sy-01-reactor-core-system/",
+  "./psar/psar-sy-02-reactor-enclosure-system/",
+  "./psar/psar-sy-03-primary-heat-transport-system/",
+  "./psar/psar-sy-04-intermediate-heat-transport-system/",
+  "./psar/psar-sy-05-reactor-air-cooling-system/",
+  "./psar/psar-sy-06-intermediate-air-cooling-system/",
+  "./psar/psar-sy-07-sodium-cover-gas-system/",
+  "./psar/psar-sy-08-sodium-processing-system/",
+  "./psar/psar-sy-09-control-rod-drive-system/",
+  "./psar/psar-sy-10-water-pool-fuel-handling-system/",
+  "./psar/psar-sy-11-ex-vessel-fuel-handling-system/",
+  "./psar/psar-sy-12-in-vessel-fuel-handling-system/",
+  "./psar/psar-sy-13-gaseous-radwaste-processing-system/",
+  "./psar/psar-sy-14-nuclear-island-hvac-system/",
+  "./psar/psar-sy-15-nuclear-island-fire-protection-system/",
+  "./psar/psar-sy-16-nuclear-island-control-system/",
+  "./psar/psar-sy-17-reactor-protection-system/",
+  "./psar/psar-sy-18-nuclear-instrumentation-system/",
+  "./psar/psar-sy-19-reactor-instrumentation-system/",
+  "./psar/psar-sy-20-radiation-monitoring-system/",
+  "./psar/psar-sy-21-control-room-and-indications/",
+  "./psar/psar-sy-22-anticipatory-automatic-seismic-trip-system/",
+  "./psar/psar-sy-23-nuclear-island-auxiliary-electrical-systems/",
+  "./psar/psar-sy-24-buildings-and-structures/"
 ];
 const LOCAL = ["./", "./lessons/", "./feedback.js", "./reference/", ...TOPICS];
 const OWN_WORKER = ["flashcards/", "quiz/"].map(p => new URL(p, self.location).pathname);

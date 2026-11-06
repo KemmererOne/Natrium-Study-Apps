@@ -1,0 +1,76 @@
+# SY-24 | Buildings and Structures | system | Nuclear Island buildings
+range: 7.8-1 7.8-37
+sec: Sec. 7.8, pp. 7.8-1 to 7.8-37
+intro: Four buildings make up the Nuclear Island. For each one, learn what it houses and how the part below grade and the part above grade are classified.
+
+== Overview | 1,2
+S The safety-significant NI buildings are the RXB, FHB, RAB, and NCB. @@ which includes the Reactor Building (RXB), Fuel Handling Building (FHB), Reactor Auxiliary Building (RAB), and Nuclear Island Control Building (NCB)
+T Building | Below grade | Above grade
+R RXB | SR | NST @@ The safety-related (SR) RXB substructure provides housing
+R FHB | SR | NSRST @@ The above-grade portion of the FHB, classified as NSRST
+R RAB | NSRST | NSRST @@ Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)
+R NCB | SR | NSRST @@ The below-grade substructure is classified as safety-related (SR)
+S The RXB superstructure is classified NST. @@ The RXB superstructure is therefore classified as non-safety-related with no special treatment (NST)
+K Which building is NSRST both above and below grade? | RXB | FHB | RAB | NCB | 2 | Both portions of the RAB are NSRST. @@ Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)
+K How is the RXB superstructure classified? | SR | NSRST | NST | SCS1 | 2 | The RXB superstructure is NST. @@ The RXB superstructure is therefore classified as non-safety-related with no special treatment (NST)
+
+== Reactor Building | 3,4
+S The SR substructure houses the reactor, RES, and the RAC duct stacks. @@ including the reactor, Reactor Enclosure System (RES), and the duct stacks
+S The RXB is normally unoccupied, with substructure access restricted during normal operation. @@ The RXB is normally unoccupied with access
+S Seismic isolators under the RES and MIRSS sit in a subgrade space. @@ a subgrade space that houses the seismic isolators
+S The HAA contains the reactor head, penetrations, PSPs, and control rod drive assemblies. @@ The HAA contains the reactor head, associated penetrations, the Primary Sodium Pumps
+S Removable planks in the grade slab give access for maintenance and refueling. @@ Portions of the grade slab are removable to provide access to the HAA for maintenance and refueling activities
+S The HAA is a functional containment boundary with a radionuclide retention function. @@ provides a functional containment boundary that performs a radionuclide retention function
+S The superstructure supports a single-failure proof overhead bridge crane. @@ provides structural support for a single-failure proof overhead bridge crane
+K What does the HAA contain? | Reactor head, PSPs, and CRD assemblies | EVST | MCR | Salt tanks | 0 | The HAA contains these items. @@ The HAA contains the reactor head, associated penetrations, the Primary Sodium Pumps
+K Which part of the RXB provides functional containment? | The superstructure | The HAA | The crane | The roof | 1 | The HAA provides a functional containment boundary. @@ provides a functional containment boundary that performs a radionuclide retention function
+K Is the RXB normally occupied? | Yes | No | Only the HAA | Only in Mode 1 | 1 | It is normally unoccupied. @@ The RXB is normally unoccupied with access
+
+== RXB functions | 6,9
+T Function | Role
+R DL3-HR4 | The substructure holds the outer boundary of the RAC air flow path @@ The RXB substructure maintains the outer boundary of the RAC air flow path
+R DL4-RR1 | Ex-RES functional containment includes the guard vessel, HAA walls, and HAA HVAC isolation @@ The ex-RES functional containment boundary includes the guard vessel, the HAA walls, and the HAA HVAC isolation
+R DL4-RR1a | HAA barrier, a sub-function of DL4-RR1 @@ DL4-RR1a HAA Barrier (NSRST)
+S Demand-to-capacity ratios do not exceed 0.80 for design-basis loads, or 1.00 for beyond design basis events. @@ Demand-to-capacity ratios do not exceed 0.80 for design-basis loads
+K What is included in the ex-RES functional containment? | Guard vessel, HAA walls, HAA HVAC isolation | RAB walls | The stack | The turbine building | 0 | Those three make up the boundary. @@ The ex-RES functional containment boundary includes the guard vessel, the HAA walls, and the HAA HVAC isolation
+K Which function does the RXB substructure support for decay heat removal? | RAC air flow path boundary | Salt cooling | Turbine cooling | SPS | 0 | DL3-HR4 uses the RXB as the outer boundary of the RAC air flow path. @@ The RXB substructure maintains the outer boundary of the RAC air flow path
+
+== Fuel Handling Building | 3
+S The FHB houses fuel receipt, refueling, storage, radwaste systems, and the SFP. @@ houses equipment related to fuel receipt, refueling, fuel storage, radioactive waste systems
+S A three foot thick grade slab protects sub-grade areas and supports the Ex-Vessel Handling Machine and Bottom Loading Transfer Cask. @@ three foot thick grade slab
+S The SFP has 5 foot thick walls and a 4 foot thick foundation slab about 51 feet below grade. @@ The SFP has 5 foot thick walls
+S A stainless steel liner and leak chase monitor leakage. @@ is equipped with a stainless steel liner and leak chase system
+S The superstructure is an enveloping barrier supporting negative pressure for radionuclide retention. @@ is designed as an enveloping barrier to support maintaining a negative pressure for radionuclide retention
+S The superstructure is NSRST, seismic class SCN1. @@ The superstructure of the FHB is classified as NSRST and seismic class SCN1
+K How thick are the SFP walls? | 3 feet | 4 feet | 5 feet | 8 feet | 2 | The SFP has 5 foot thick walls. @@ The SFP has 5 foot thick walls
+K What function does the FHB superstructure support? | Negative pressure for radionuclide retention | RAC air flow | Scram | Salt flow | 0 | It is an enveloping barrier for negative pressure. @@ is designed as an enveloping barrier to support maintaining a negative pressure for radionuclide retention
+
+== Reactor Auxiliary Building | 3
+S The RAB takes intermediate sodium from the RXB and transfers heat to the NI Salt System. @@ transfers the heat to the Nuclear Island (NI) Salt System
+S It houses IHT loops, Sodium-Salt Heat Exchangers, ISPs, IHT expansion tanks, SCG, and SPS equipment. @@ Intermediate Heat Transport System (IHT) piping loops and components
+S IAC Air Stack Structures and Equipment sit next to the RAB. @@ Air Stack Structures and Equipment (ASE), discussed in Section 7.2.2, are located adjacent to the RAB
+S The lower level holds the IHT supplemental tank, 62 feet below grade, and has no personnel access from adjacent spaces. @@ is 62 feet below grade, and is inaccessible by personnel from adjacent spaces
+S SPS Cells are designed for slight negative pressure as part of an enveloping boundary. @@ the RAB substructure SPS Cells are designed for the slight negative pressure
+S An automobile tornado missile barrier protects the IAC and IHT. @@ An automobile tornado missile impact barrier is provided to protect the IAC and IHT systems
+S Roof panels at the east end can be removed for crane access to ISPs. @@ two removable roofing panels allowing crane access to remove Intermediate Sodium Pumps
+K Where are the Sodium-Salt Heat Exchangers? | RXB | RAB | FHB | NCB | 1 | The RAB houses IHT piping loops and components, including these. @@ Intermediate Heat Transport System (IHT) piping loops and components
+K How are the ISPs removed? | Through the HAA | Through removable roof panels using a crane | Through the transfer corridor | They are not | 1 | The roof has two removable panels for crane access. @@ two removable roofing panels allowing crane access to remove Intermediate Sodium Pumps
+
+== Nuclear Island Control Building | 3
+S The SR substructure houses the RPS, PSP and ISP breakers, NSRST electrical equipment, and the RSC. @@ including the Reactor Protection System (RPS), Intermediate Sodium Pump and Primary Sodium Pump breakers
+S The NSRST superstructure holds the MCR, and no SR equipment. @@ which does not house any SR equipment
+S Substructure rooms hold NUP and NDC equipment and batteries. @@ NI DC Power Supply System equipment rooms and batteries
+S The superstructure is a one-story steel frame serving as the NI control center. @@ is a one-story steel-framed structure which serves as the control center for the NI
+S A reinforced MCR enclosure protects against chemical, radiological, and weather-related external events. @@ provides protection from chemical, radiological, and weather-related external events
+S The superstructure is designed not to collapse under seismic or tornado loading. @@ The NCB superstructure is designed to not collapse under seismic or tornado loading conditions
+K Which part of the NCB houses the RSC? | Substructure | Superstructure | Roof | It is in the FHB | 0 | The substructure houses the RSC. @@ the NCB substructure includes a location for the RSC
+K Does the NCB superstructure house SR equipment? | Yes | No | Only RPS | Only batteries | 1 | It does not house any SR equipment. @@ which does not house any SR equipment
+
+== Safety significance | 9,10
+S Structures provide load paths and external hazard protection for the SSCs inside. @@ External Hazard Protection for SR SSCs, (SR) and for NSRST SSCs (NSRST)
+S RAB substructure and superstructure are seismic class SCN1, and so is the NCB superstructure. @@ The seismic classification of the NSRST NCB superstructure is SCN1
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Post-Construction Inspection, Testing and Analysis Program @@ are preliminarily identified as applicable to the RXB substructure
+K Which is a function of the SR substructures? | External hazard protection and load path | Reactivity control | Sodium purification | Salt heating | 0 | Substructures provide external hazard protection and load paths. @@ External Hazard Protection for SR SSCs, (SR) and for NSRST SSCs (NSRST)
+Z RXB, FHB, and NCB have SR substructures, and the RAB is NSRST throughout. @@ Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)
+Z The HAA is part of the RXB substructure and is a functional containment boundary. @@ provides a functional containment boundary that performs a radionuclide retention function
+Z The MCR is in the NSRST NCB superstructure, and the RPS and RSC are in the SR NCB substructure. @@ which does not house any SR equipment

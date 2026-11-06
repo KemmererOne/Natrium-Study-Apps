@@ -1,0 +1,62 @@
+# SY-21 | Control Room and Indications | system | Main Control Room and Remote Shutdown Complex
+range: 7.6-69 7.6-74
+sec: Sec. 7.6.7, pp. 7.6-69 to 7.6-74
+intro: This lesson covers where operators work: the MCR, the Remote Shutdown Complex, and the emergency response facilities. There are no safety-related operator actions.
+
+== Purpose and location | 1,2,9
+S The control room and indications satisfy PDC 19 and the emergency plan. @@ are provided that satisfy Principal Design Criterion (PDC) 19, Control Room
+S The MCR is in the NSRST NCB superstructure. @@ The MCR is located within the non-safety-related with special treatment (NSRST) Nuclear Island (NI) Control Building superstructure
+S There are no safety-related operator actions required. @@ There are no safety-related operator actions required
+S NHV controls the environment and protects habitability for radiological, sodium aerosol, and chemical hazards. @@ ensure MCR habitability for radiological, sodium aerosol, and chemical hazards
+S Separation between SR and other equipment is achieved mainly with relays, and an FMEA will confirm that failures cannot inhibit the safety function. @@ is achieved primarily using relays
+K Are safety-related operator actions required? | Yes, within 30 minutes | No | Only at the RSC | Only for scram | 1 | There are no safety-related operator actions required. @@ There are no safety-related operator actions required
+K Which hazards does NHV address for MCR habitability? | Radiological, sodium aerosol, and chemical | Noise only | Flooding only | Seismic | 0 | NHV takes measures for radiological, sodium aerosol, and chemical hazards. @@ ensure MCR habitability for radiological, sodium aerosol, and chemical hazards
+
+== MCR layout | 3,5
+F 7.6.7-1
+T Workstation | Provides
+R RPS workstation | Four SVDUs, one per division, and manual scram and ESF controls @@ The RPS workstation contains four SVDUs
+R GVDS | Wall-mounted VDUs with key parameters and alarms @@ The GVDS is a wall-mounted array of Visual Display Units
+R NI and EI operator workstations | Controls and indications through NIC and EIC @@ The NI and EI operator workstations contain the controls and indications
+R Supervisor workstation | Indications with no controls @@ contains indications (no controls) provided through the NIC and EIC
+R Communications workstation | Listed in the MCR equipment @@ Communications workstation
+S There are two workstations for the NI portion and two for the EI portion. @@ Two operator workstations are provided for the NI portion of the MCR
+S Each desk has four VDUs, a hardwired mouse, and a hardwired keyboard. @@ Each workstation desk contains four commercial VDUs
+S Division A and B SVDUs also display their PAM variables. @@ The Division A and B SVDUs are also capable of displaying Post-Accident Monitoring
+S RPS SVDUs and manual controls are classified NSRST. @@ The RPS divisional SVDUs and manual controls are classified as NSRST
+K What does each RPS SVDU show? | All four divisions | Its own division only | NIC data | EI data | 1 | Each SVDU displays parameters and status of the associated division only. @@ Each RPS divisional SVDU displays parameters and status of the associated RPS division only
+K Does the supervisor workstation have controls? | Yes | No | Only RPS | Only EI | 1 | It contains indications with no controls. @@ contains indications (no controls) provided through the NIC and EIC
+K How many NI operator workstations are in the MCR? | One | Two | Three | Four | 1 | Two are provided for the NI portion. @@ Two operator workstations are provided for the NI portion of the MCR
+K What supports crew situation awareness on the wall? | SVDUs | GVDS | RSC | DRMS | 1 | The GVDS displays key parameters and alarms to support awareness and coordination. @@ The GVDS is a wall-mounted array of Visual Display Units
+
+== Safety Parameter Display System and alarms | 5,8
+L Variables over the full range expected ;; Data trending ;; Indication when limits are approached or exceeded ;; Safety system status @@ The Safety Parameter Display System functionality includes
+S It includes displays that help staff run emergency procedures, severe accident procedures, and site response. @@ executing emergency procedures, severe accident procedures, and site emergency response
+S Alarms indicate deviations from normal limits, loss of safety system availability, and unplanned unavailability of standby equipment. @@ Alarms are provided to indicate deviations from normal operational limits
+K Which is an SPDS function? | Data trending | Rod control | Seismic trip | Fire suppression | 0 | SPDS functionality includes provisions for data trending. @@ Provisions for data trending
+K Which condition has an alarm? | Unplanned unavailability of standby equipment | Shift turnover | Lighting levels | Scheduled maintenance start | 0 | Alarms cover unplanned unavailability of standby equipment. @@ unplanned unavailability of standby equipment
+
+== Remote Shutdown Complex | 3,7,8
+S If the MCR cannot be inhabited, operators evacuate to the RSC. @@ In the event that the MCR cannot be inhabited, operators are evacuated to the Remote Shutdown Complex
+S The RSC is in the Division B RPS Vault, DCS, and CRD cabinet room. @@ The RSC is located in the Division B RPS Vault, Distributed Control System, and control rod drive cabinet room
+S It is NSRST and sits in the SR NCB substructure. @@ The RSC is classified as NSRST and is located in the safety-related NI Control Building substructure
+S A manually started bottled air injection system supports three operators with a 72-hour mission time. @@ has a 72-hour mission time
+S SCBA and hazardous materials suits are stored there for leaving the area. @@ Self-contained breathing apparatus and hazardous materials suits are located in the RSC
+S An intermediate chamber sized for one person allows entry and exit. @@ An intermediate chamber sized for one individual
+S Two RPS SVDUs show Divisions A and B, including their PAM variables. @@ The RSC contains two RPS SVDUs capable of displaying parameters and status
+S The location gives access to equipment able to trip all RTBs and ESF components. @@ capable of tripping all Reactor Trip Breakers and ESF components
+S Trip equipment is also in the PSP and ISP trip breaker rooms, reached with SCBA and suits. @@ Primary Sodium Pump and Intermediate Sodium Pump trip breaker rooms
+K How is the RSC bottled air system started? | Automatically on high radiation | Manually | By the RPS | By NHV | 1 | The bottled air injection system is initiated manually. @@ is initiated manually to provide habitability for three operators
+K How many operators and how long does RSC bottled air support? | Two for 24 hours | Three for 72 hours | Five for 72 hours | Three for 7 days | 1 | It provides for three operators and has a 72-hour mission time. @@ has a 72-hour mission time
+K Which divisions can be viewed at the RSC? | A and B | C and D | All four | None | 0 | The two SVDUs show Divisions A and B. @@ The RSC contains two RPS SVDUs capable of displaying parameters and status
+K Where is the RSC? | RXB | Division B RPS Vault, DCS, and CRD cabinet room | FHB | Outside the protected area | 1 | It is located in the Division B room. @@ The RSC is located in the Division B RPS Vault, Distributed Control System, and control rod drive cabinet room
+
+== Emergency response facilities and safety significance | 9,10
+S Primary and Backup ERF details will be described at the OL stage. @@ will be described at the operating license stage
+S The Primary and Backup ERFs receive data from the NIC. @@ The Primary and Backup ERFs receive data from the NIC
+S The HFE program applies to the MCR and RSC design. @@ is applied to the design of the RSC and equipment described in Section 7.6.7.2.1
+S MCR indications comply with the technologically relevant portions of 10 CFR 50.34(f). @@ comply with the technologically relevant portions of 10 CFR 50.34(f)
+K Where do ERFs get plant data? | The RPS directly | The NIC | The XIS | The AST | 1 | ERFs receive data from the NIC. @@ The Primary and Backup ERFs receive data from the NIC
+Z The MCR is NSRST, and no safety-related operator actions are required. @@ There are no safety-related operator actions required
+Z Four SVDUs and manual controls sit at the RPS workstation, each SVDU for its own division. @@ Each RPS divisional SVDU displays parameters and status of the associated RPS division only
+Z If the MCR is lost, the RSC gives three operators 72 hours on bottled air and access to trip equipment. @@ has a 72-hour mission time

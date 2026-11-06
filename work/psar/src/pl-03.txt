@@ -1,0 +1,67 @@
+# PL-03 | Licensing Basis Events | topic | licensing basis events
+range: 3.1-1 3.1-7 3.3-1 3.3-8 3.4-1 3.4-1 3.5-1 3.5-10 3.6-1 3.6-2 3.7-1 3.7-1 3.8-1 3.8-1 3.9-1 3.9-2 4.1-1 4.1-2 4.2-2 4.2-2
+sec: Secs. 3.1 and 3.3 to 3.9, with Sec. 4.1
+intro: The PSAR uses a risk-informed framework. This lesson explains how events are found, sorted by frequency, analyzed, and judged.
+obj: Describe the role of the PRA in selecting licensing basis events.
+obj: Classify AOOs, DBEs, and BDBEs by frequency, and describe DBAs.
+obj: Explain how analysis assumptions differ between DBAs and other LBEs.
+obj: State the initial conditions and end states used in LBE analysis.
+obj: Explain what makes an LBE risk-significant or a BDBE high-consequence.
+obj: State the three cumulative risk metrics.
+obj: Describe the major accident analysis.
+
+== The PRA and LBE selection | 1
+S The PRA is the plant model that provides an integrated assessment of risk to the public. @@ is the plant model that provides an integrated assessment of risk to the public
+S The NEI 18-04 methodology, endorsed by RG 1.233, is implemented without deviation for LBE selection and evaluation. @@ is implemented without deviation for licensing basis event (LBE) selection and evaluation
+S LBE selection includes the systematic definition, categorization, and evaluation of event sequences. @@ The selection of LBEs includes the systematic definition, categorization, and evaluation of event sequences
+S Radionuclide sources in the PRA include the RES, SPS and SCG, gaseous radwaste, the EVHM, the EVST, spent fuel processing, and the Spent Fuel Pool. @@ The following sources of radionuclides are evaluated by the PRA
+S At the construction permit stage, the PRA is internal events at-power and low-power shutdown only. @@ internal events at-power and low-power shutdown only
+K What methodology is used for LBE selection and evaluation? | NEI 18-04 | 10 CFR 50 Appendix K | NUREG-0800 only | ASME Section III | 0 | NEI 18-04, as endorsed by RG 1.233, is implemented without deviation. @@ is implemented without deviation for licensing basis event (LBE) selection and evaluation
+
+== Event categories | 2
+S BDBEs are event sequences with mean frequencies of 5x10^-7 to 1x10^-4 per plant-year. @@ Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs
+S The DBE frequency ceiling used in the DID evaluation is 1x10^-2 per plant-year, and the BDBE ceiling is 1x10^-4. @@ The frequency of all DBEs and BDBEs
+S Tables 3.5-1, 3.5-2, and 3.5-3 summarize the AOOs, DBEs, and BDBEs. Table 3.5-4 maps DBEs to DBAs and gives each DBA's dose consequence. @@ The table provides a mapping of DBEs to DBAs
+K A sequence with a mean frequency of 1x10^-5 per plant-year is classified as what? | AOO | DBE | BDBE | Outside the LBE range | 2 | Mean frequencies of 5x10^-7 to 1x10^-4 per plant-year are classified as BDBEs. @@ Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs
+
+== Analysis assumptions | 3
+S Bounding parameters are selected for DBAs. @@ Bounding parameters are selected for use in evaluating design basis accidents
+S DBA analyses consider only safety-related SSCs for mitigation. AOO, DBE, and BDBE analyses take into account the expected response of all SSCs, regardless of safety classification. @@ AOO, DBE, and BDBE analyses take into account the expected response of all SSCs
+S AOO, DBE, and BDBE transients use either the conservative DBA approach or a best-estimate plus uncertainty approach. @@ a best-estimate plus uncertainty (BEPU) approach
+S The assumption that a function fails in an LBE description does not necessarily mean the failure resulted from the initiating event. @@ does not necessarily mean the failure was a result of the LBE initiating event
+K Which SSCs are considered for mitigation in DBA analyses? | All SSCs | Only safety-related SSCs | Only NST SSCs | Only Energy Island SSCs | 1 | Only safety-related SSCs are considered for mitigation in DBA analyses. @@ Where only safety-related SSCs are considered for
+
+== Initial conditions and end states | 4
+T Plant condition | Reactor power | Core flow | Core inlet temperature
+R Low power | 5% | 15% | 309.5 C @@ Low Power 5 15 309.5
+R Full power | 100% | 100% | 360.1 C @@ Full Power 100 100 360.1
+S LBEs with releases are evaluated for 30 days. @@ LBEs with releases are evaluated for 30 days
+T End state | Criteria
+R Safe shutdown | Peak cladding temperature below 1157 F (625 C) and stable or decreasing, with K-effective 1.0 (BDBE only) or less and core power stable or reducing @@ Peak Cladding Temperature value below 1157°F (625°C)
+R Safe and stable | Used if there is no scram. K-effective 1.0, with heat removal equal to heat production @@ Heat removal is equal to heat production
+S Transients that rely on passive long-term cooling must also show heat removal exceeds total heat produced. @@ Heat removal exceeds total heat produced
+K What peak cladding temperature limit defines the safe shutdown end state? | 625 C | 510 C | 360.1 C | 883 C | 0 | The safe shutdown state requires peak cladding temperature below 1157 F (625 C), stable or decreasing. @@ Peak Cladding Temperature value below 1157°F (625°C)
+K What full power core inlet temperature is assumed in the LBE analyses? | 309.5 C | 360.1 C | 625 C | 500 C | 1 | Full power assumes 100% power, 100% flow, and 360.1 C core inlet. @@ Full Power 100 100 360.1
+
+== Risk significance | 5
+S LBEs are risk-significant if the site boundary dose exceeds 2.5 mrem over 30 days and the frequency of the dose is within one percent of the F-C target. @@ LBEs are classified as risk-significant if the LBE site boundary dose exceeds 2.5 mrem over 30 days
+S BDBEs are high-consequence if the dose exceeds 10 CFR 50.34 criteria. @@ BDBEs are classified as high-consequence if the dose exceeds 10 CFR 50.34 criteria
+F 3.5-1
+K When is a BDBE classified as high-consequence? | When it involves a scram | When the dose exceeds 10 CFR 50.34 criteria | When sodium leaks | When both IAC trains fail | 1 | BDBEs are high-consequence if the dose exceeds 10 CFR 50.34 criteria. @@ BDBEs are classified as high-consequence if the dose exceeds 10 CFR 50.34 criteria
+
+== Cumulative risk metrics | 6
+T Metric | Target | Result
+R Site boundary dose above 100 mrem | Not more than 1 per plant-year | 3.12x10^-3 per plant-year @@ is 3.12×10-3 per plant-year
+R EAB early fatality risk | 5x10^-7 per plant-year | 0 per plant-year @@ is 0 per plant-year
+R Latent cancer risk | 2x10^-6 per plant-year | 3.86x10^-9 per plant-year @@ is 3.86×10-9 per plant-year
+K What is the target for EAB early fatality risk? | 1 per plant-year | 5x10^-7 per plant-year | 2x10^-6 per plant-year | 1x10^-2 per plant-year | 1 | The EAB early fatality metric target is 5x10^-7 per plant-year. @@ early fatality integrated risk metric target of 5×10-7 per plant-year
+
+== The major accident | 7
+S The major accident is a deterministic analysis that meets 10 CFR 50.34(a)(1)(ii)(D). @@ The Major Accident is a deterministic analysis that meets the requirement of 10 CFR 50.34(a)(1)(ii)(D)
+S For Kemmerer Unit 1, the EAB and LPZ are the same boundary, a 0.25-mile radius from the Reactor Building centerpoint. @@ the Exclusion Area Boundary (EAB) and Low Population Zone (LPZ) are the same boundary
+S The DBA with the maximum core damage and associated in-vessel release was selected as the major accident. @@ The DBA with the maximum core damage and associated in-vessel release
+K What radius defines both the EAB and LPZ for Kemmerer Unit 1? | 0.25 mile | 1 mile | 5 miles | 10 miles | 0 | The EAB and LPZ are the same boundary at a 0.25-mile radius. @@ the Exclusion Area Boundary (EAB) and Low Population Zone (LPZ) are the same boundary
+
+Z PRA-derived event sequences are sorted into AOOs, DBEs, and BDBEs by frequency. @@ Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs
+Z DBAs credit only safety-related SSCs, while other LBEs consider all SSCs. @@ Where only safety-related SSCs are considered for
+Z Safe shutdown requires peak cladding temperature below 625 C and stable or decreasing. @@ Peak Cladding Temperature value below 1157°F (625°C)

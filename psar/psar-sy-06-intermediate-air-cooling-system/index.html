@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Intermediate Air Cooling System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-06-intermediate-air-cooling-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">IAC is the normal way to reject reactor heat at low power and shutdown. Two trains of air heat exchangers sit in the yard, with three modes from fully powered to fully passive. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.2.2, pp. 7.2-13 to 7.2-21</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the IAC.</p><p class="gap">Taught in: <a href="#concept-1">Purpose</a></p><p><span class="num">2</span> Identify the IAC boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-2">Components and boundaries</a></p><p><span class="num">3</span> Identify the major components of the IAC.</p><p class="gap">Taught in: <a href="#concept-2">Components and boundaries</a></p><p><span class="num">4</span> Explain IAC operation.</p><p class="gap">Taught in: <a href="#concept-3">Operating modes</a>, <a href="#concept-4">Dampers and automatic behavior</a></p><p><span class="num">5</span> Describe the IAC controls and indications.</p><p class="gap">Taught in: <a href="#concept-5">Indications</a></p><p><span class="num">6</span> Explain the IAC automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-4">Dampers and automatic behavior</a></p><p><span class="num">7</span> Apply operating procedures for the IAC.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the IAC.</p><p class="gap">Taught in: <a href="#concept-6">Sodium leak and fire protection</a></p><p><span class="num">9</span> Explain the safety significance of the IAC.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the IAC.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose</h2><p class="count">Objectives 1</p><p>IAC transfers heat from the intermediate sodium to the atmosphere. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>IAC is the primary and preferred means of reactor heat removal during low power and shutdown conditions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>It also supports start-up and shutdown transitions to and from NSS cooling. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1</span><span>SY-06-K1</span></div>
+  <p>When is IAC the primary and preferred means of reactor heat removal?</p>
+  <div class="opts"><button type="button" class="opt">A. Only in accidents</button><button type="button" class="opt">B. Only during refueling</button><button type="button" class="opt">C. Full power</button><button type="button" class="opt">D. Low power and shutdown conditions</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. IAC is primary and preferred during low power and shutdown. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K1&amp;body=Item%3A%20SY-06-K1%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20When%20is%20IAC%20the%20primary%20and%20preferred%20means%20of%20reactor%20heat%20removal%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.1%2C%20p.%207.2-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose</a><a class="next" href="#concept-2">Components and boundaries <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Components and boundaries</h2><p class="count">Objectives 2, 3</p><p>IAC has two equal capacity trains. Each has an AHX, air stack, air blower, dampers, and air heater in an ASE structure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>The two ASEs are in the yard on either side of the RAB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>An AHX is in series within each intermediate loop. Sodium is on the tube side and air on the shell side. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>The ASEs have sodium catch pans and leak detection below the AHXs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi8AAAKRBAAAAAB8j/ucAAAfsklEQVR42u3dC3Db5p0gcFDyQ7YsUZItJ7FlU484ae1mJVvbOFEfstPESZ00lOO4VjPr0E2yctPLluojSW+mGyrO4zK9a+nU8t3cXXdlJ07vLmlK2+3MzQ7jUHa9227iLej0fO3GkSm3m71tHgZB8QUQwP++D9SDkigSpCgCJP7fjAUQBD4SP39vfAAZwJAuBBk0QBiEQZjShFFmvH6Pm76cGeTflCJMP8Mw9hPWtO+1trZeTxZicyU7tQA42k7+RCsAxhi64Wmmwkc376fLDte0GBgfibqDGa2e2HBI/aT+qtzORvYYC4a8VUFPxsKsmFqAVDcB42ecABHGwtDzDjMN5P00MAJzIDgDpq4it7M55NABxkYzR/pM4PUepWfU7AgtmVrAADMB08+Q0zy0FC5YyIbR5eBfAldn0PoULlaZEr8Kk2AYX05ns00vmHN2OHf9r+6W7oDYF5Xbf/lZ+b4bk6eynyaAx9nooqmFwGybgKnrXwbQYYfEXWSDfxkI34fveI7/x9sePHc9m7iT/CEw5+zfsuwMfwkutj4FcPBGFSa8uMMB8Z0PfYN8lHjb9T5px8U2D4hbHrydo58s3vWLDR/ddg+o3+L2/9fqitWtChQfZt3ICJywSozFskxkILxEZupqhhk1VUBiPMmHlk4thH0D4zAi8y8kMTBDyX145kaSDDpcA3V1FRbGJloYkrNoVupgqoLVEs2VEaaOpjEYrR6ohYiF2Uc+imZQ0VJP9j1E8mSAfnLcYmGa6yxA1xWmmakaYxhWlzKGwIQruP4JmM96Ohx/UIvH8LLkTvtrUhcTMOFFIsPKzHjBKNUxFjeFWR5nnMPVIuP8Q6UK86+VXLB6bLHS7B6ukusozIBttIoo/XiEfNS3hvgqkXGNLoU6R5gJ0E+OM56BJRLjo+sK0z1WqWzbp0NWstQ3EJjgMghOwHgU5s1/q6RvDtvUfaLJVEEWiSe/OwVDSpU65yQMCNuYpRTGJjFscLnIcAKjwpAyJlg9Wn11oHvABv0UptkZJsmnAtRjpaeXkn3DRCIgMZfpJ8dJYiGJ7Wd0XWE88Qr9yhgCsxz4CRiSChjGor7pVPfpqZpYREnymoTpr+yssyqMGxQ1oXNwiqEw7RLDURhSxnKTMH4Spa2/Wy18E0zbFoaNLCIwLPwfhlmqfi7ZW2ZG6CcTieFaYF6n6wrj0xlmPMWMEZiAwnz/1dfom82+6QkG4p2dUzB15Jsvg2Y7CBZOjUhguFQYMTXFVL36qo+kmAErreBJcEQWE5gANN89VqXCjKcY8snjMD+j6wrD6gujljEJJjBKYaDOHfs6rcUZDhQvHFoycnl8kVrGJJj/7j1VSavrYZrvTiyFP1pSU4ybZJZJGL4KnvCcqIZmAjO6xOvtqU3CkBPnkzDJMoZ+8jiMh64nYXr0gyG1ErNMYW6oU2EGFvcsp5WShaZ7mjIWjS9SYch5kzTC0gZejdrAq2CqUmEWdSybgokzexhPiLlNbfnUksq9ajzFMLd0JLMSaR+RWol+8gQMXU/C7K9k9YKBUxUnl5Eas0+FiTEWmnvECgpDaloKoy5SYUhFQtKUk3QJFrHJLgE5KAXmECl9JmFI7XcdKB2VRwlMRzfpTVSMw5xk7qxIwsTr7mYC9JMnYOh6EmY4xwZhATuRidPAk0RyeaJzkkuDagTSdCLJyQZm7ZUu2omPhJ+SwpebtsvU+mXdetdR5rX9tYXsxYo5d++bN/2iAhY85AojkxLErS/MUYapNuB4jPgf/qawgzav5XzEf/n3HI7g4dAmwiAMwiAMwmBAGIRBGIRBGIRBGIRBGIRBGITBgDAIgzAIgzAIgzAIgzAIgzAYEAZhEAZhEAZhEAZhEAZhEAYDwiAMwiAMwiAMwiAMwiAMwmBAGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGIRBGITBgDAIgzAIgzAIgzAIgzAIgzAYEAZhEAZhEAZhEAZhEAZhEAYDwpQJTKQbYdJ/0XUIkzY895cIkzYsOxZAmDQh/v1XHQiT7nuKnnUIkya8IHpeQZg0wSZ6eIRJF0QP1koIgzCFgHEiTHoYB8IgDMIgDMIgDMIgDMIgDMIgTHFhmpnyCJZCwzDlEgoOk9eh7zNMwFhZyRgwcYZZDAgz+4vWLWJqdIP5EMAnewMGhJGaq/rrHLrB9LDQFPl0m/Fg5G2Lf29pDugGs9pJYNy8z3AwPRWB4eqKYrYr5FQYYZ/NmDBhi0dizq7QDSbs20Rgbr7ZcFkp4YPhFf523WCucI8TmK9/0oCFr1LnIQWgXjBPtzbTrHTGgDBXquSiFjHTYTbB2BCBCXkMB6PUuSPVusHINhDsBEboNhxMeDH4bfqlGOO2fLfZYb8HYWYnmEUA/xkQZlYYKG42KhmYuIVDmHTh0HpAmHQ962IOUJUSzPAK0AnmQ6/vPZA4H3wEcBoUliwTP5O83jcNASMzrF4wL/Z94wR34WMr/BzkRSA44BRseCi2u3GfIWCuLAO9YAYBIs67ZAoT6+coTIL0ZEW7IbIS6Q3oCaNUtaswoYtuCiNXGwaGrwLdYF7sdEG/R67sbINfit1qVhr4klFgttn1gxm8ysF2l1wzchi+ptQIdgKj7GeNAUN7A3pmJfHPatSs1NB6jdgNx8kXchkDpseuLwzv+w6FISgnlWq4RQqEPIaAiVtAR5ij9eueBf40gYm4gWePtTgTDauNUcYMrNcTZmYgXTbFGC1fUYfuY0l0CXTpDZQAjKRLb6AEYEZ1SzDGhtGpN2B8mCtVgDDpQrNbd5i4S35N8XrfgEQA4AOfwirso7rD6NUbSIUJsS9+53t7FvWC3w6xxu2CfWzol7rD6NR9nAbzDnSRv58CeLIWTnKyYP8y8AGdYaIVoD/MEdiThLmpF/YCCHd1Q9ijM4xuvYFUmD7447UURup+GTYSmGYOom59YeK69QZSYXoBTjkITNQ9GqAwtzsh5tQX5kQtGCLFgGQlMHxri4tmpXvXQNSlK4yiX28gFeY58IjtBOZlSNiGfcKf7GcC4SF9U8xfgRFgzsL2VpbAkCzVJNY3CvZ4d4jVAUbkQPoxXPL6QO8wDkPq5qmiLjkWc0aPdswhNzz8bd/uPpdRYGKzv8l39YDZ2g61alVgFBgIzHonoAOMbGuCa40FY4xOZNzVB2c2wq5OD8JMCyHfSVLODO29iilmehhubfaB0I1ZaWY4ALF9vqgTYWaGJpBrWlZy++vbEWZ2XwAMEUpkAvQChzxvJy5/GKvGL48wCJMORp2W+cGbMOu2WbPD0GmZscZdQ5FPX48w0wc/7HCSS9TOujsUYexwF0BXxD3mQZgZMBtJHz/yw6McwsyA6QL4YqThL7CMmQmzF2BtxI3V9ezCl411I0waGKF+FYcw2PJFGIRBGIRBGIQpHRiFjsAoPpBYgEtw6TRI3tOKl0UYoXG7GyIrgK8GqON232fndzwqrN4cQBi7vAb4PuD3gNjD9cJaniXbwi6EscNhOHIB+BPc2DCB6VJhIghDYM7A3SEff859Nsj1flDLt31OuOF2DmHscEpZH3Pwb7c/GuR2bWD5Nzmh6w4sfAnM4/GGVivPrl1PUgyAmpV4FmHsYk3IB7fy7DcdUzBRp+lhRMsq9gLAIM/6WRUmVL+a1FRWbPliyxdhEAZhFiDU4fwYzSGi4c5mU8L4KxAmbei1sKUNc5kOLIH0OkBCfUT+G/T1Ja/3stcLb7+Zd7SydXl7acP00tJAvv4h+nwXsEZuPkBfH+nZ879W93GrdrnyLmLc1qZSh+H7YMwFgSSMG+hrGKX9QWiSrHkXMWB9qdRhjlwgpwEwCUNeT8DIecN8DaxT91eXKMzdIZ/6n8u3dVojbV30NYVZuRUaHxrKN1oOrEqJpxg6sJSEeX3EGnmKo68pzL1X4dqn53HDqYbEZmwYOrDk56ayEn09kZXidhPD0IGlsEP2TMDQ1xMwSo2JYejAktLT4FNhopYG+prAiJb6QBOdMWZWmMnCUocetym7BAiDMAiDMAiTJVxSnwAPH74OCTro8JHsfSNlVouJYXY/1E3ac2LjLmeQjdfC85GbD6TMajExTC80EZhRVlkTcYfX0PtpUme1mBqGPs/7WYAnhG7+ebVjkDKrxcQw9213EJg+2jewnruQsEfaulJmtZgYZu+lTxCYJ+gTpTa9wP/OHXkqdVaLqbPSYXWSGOkzPnlP5GBAzUo8izC98GVa+A6JtXDWJm4BFWZyVouJYfbXPygyFVLLShZ4u7IEopaGlFkt2PLFli/CIAzCIAzCIAzClApMMN08uZX3/xRh0mxTXv3JNstOhEkbpIMVboRJG/5Ub0eYtEHu+RzCzCFjNwFMcI6Z2pmOkVs8JoAJ5JxiAMQGhEkf/tiEMOnDgAth0rdnliJM+nDGZVIYtWrKcALKNeaEUYM/U+t/1GVemGszljLLTQvDOzIeeSJQ1jAZbnfYlfnIqLWsYSJzwkjZpn63mRSGz9YhGmXNCXNbtkMFmylh5Ow3UVxjSphQ9qkew6aE8Wc/NuQyI8yG7MdKNjPCaLlP68YFhUkAvEfW3prjGypsgvx72+vligoT6dZw8MkFheFZqAN4Z8cn5qgU7X5IdD++eU+gqDAzfk8h945WIWASX/DAVpAzwcDxImclv5aDo46FhYn81wzT/XSC2aHl4HxLX60w/NVasT0DTOeW4sOsLdQZzgfmOHwxI8zIPxcfRtsPP9+ysDC3tbbJtcbKSqK2n8A7vKAwv6mF0cAd8K6RYMLa5n5fWFCYf7RDxP2+ZZORYMa0XYT1LyTMREPOUC1fjbdRBIsAY6wugcamW8hjOpj0e898BEikKDDiutnvn2WNBBOvmnm0qwgwYkMaBKmVNQ7MLBeI2BceJq1LTjKFhDmqyYX+WtJCw0gNcwBIrQGDwIwyhQq5wETmjsZplKx0do0eWSm+OJDuSHmXxzBlzGyZiGPhYabJWPNwKUZ1fbZdj+o6XjP7yDM5fHJBYbTdcl70Bl5e4xwF7RJoK/HzHNssYRiNnchRMBtMWNutFBdMBxPXNlD1ozKG8cznG2w1H4y2qd81RoBJuSQp/RQugxxIvAH0eVGXk4+PKizMXVoOlm1GgEm5JPnwt31fgZjTf/9aoXEL1wtj7pijwDBntBwc7TYOjDr4WwugwsAz9HlRvZCwXQkUGCaopVO/sJdo84C5dgLmlGCPOXsBbn2+0GVMREvX9QwYBGbikuTJzyRh5K2C/YyPwJxaV2gYTY+IyTSHJt8hCUs+MJOXJA8N9VKYNrdQsRMIzJij0DBaLjJmxMt3FnBwPlkJ4t0HIOr2q7+MRmGi7oLDaLhklHE0Zn4wuYxNTcHIbNR5jLvALihMKHunwA8LBmPN4TxSYFpWcbGG62AcZj/jXAAYKXvj7XpjwKS29SDdlcvCwkBntkNF60LByAGr7hfc4nPCZJ1slnlO/Txg5F0GgBHnPLv4+iyHboGFgaHDuUaGyZaXstxKkDeMOsxtaBg+c73kZxcGZmDy4lMPw7RDM8O4ae3tk8gflv6BOMNUQIj+CTJMFf2zAoYZpqZYMPKyjBXANbAwMGJjAAww2yEDDAxnShNXHAsEA6qMoWHEDL/Op2R7vMM8aiWxkdMdhhM98tzv9s+dZK60LxwMiKzuMFbRk2GkX6qas/xZme/QQgLgI9KC85G/eXQiiwbznOh5IMPbw3ONypxw5QtzyA2DEHNtnevXdgwCE3z39YzNkYb0l2qj2e9Gnwtma7sK43/PZmiY+AOvZGzYh9MKyC2QL4xsa1Jhors9hoaBZS9mfv/YTWk29jjyhom7DsChzs0upRKMDfNMV5YdevbN2jSg5TLlHDAh30kYHPm/LqmeMyjM+LBFcDyrzzntQ942U2ZgDeQPM9za7KNZKfQTh0Fh+qePGWZo/m/75LQqvOOzMA+YAxBzUJjDSpNBYWaUqocy7Hqw8m8m088rFgfMB6YJZCuFaYJnjAkTmlFb8pkGtuObKx44PTIy8tYjzIYAzAtGU8tXT5jhGYWKkvlXy8X761ssLSt3ap+OXaowS2Zu2A+FDSUKE53V7gw6EQbSDb9JtQhDQuPsTdsRhlQzab52cAhhIJimBydYCw/DfxyA34DE+d72ej/m4DcKK9ENstd7mk4PS3jfJDudBvjAA17v1Xb9YdL2jlcVHuZ43E7qv+DH1sc377nohs8Idr4GdoKwZ/ED9Hqzv+8x0mZcBPLq++UlfezdusOkL2hH2YLDfEW2Sg1wSrbCcfqTVRTmDgIDihVUGLpPrJ+LOdUpJUd0h0lfNUetBYdZB2vj/YEnU2FOsDNgQhfdwp+pMGd1h/mqxkbffGGUWjgQ/vuhzyZhVnZWE5hf28dhOrd0+ztJR+SXYjf0fEOu/PPkBHw9YeQV2roJ84YhIC/zwoO2JMxfj2yiv4u3dhxm5J+7/VfJJ35NqQHpNrn2avKWFz1h5nqIZsRW+BQT/IW8xpGaldjDM7JSQ+s15CudtoL+KWZgrjeWFbqMqYHwLdDmmQYTWjMNhmSkkyL4P7aOTwLVE2bOIf6jhYbZCfEV0M9Ng0ksn4QZrb+ObuZ/3XCdYqkfOq4zTGjOHMPbCwxzROPOyXHWL+oMM3cZm2VQJo+Wby5HKDadYTLUyvsLDCPndEhAX5hohrqHdxYWpqQ6kZlmQhVwUKb0YBZnerPHxDBWDV+r5GDkKoRJHy5WIUzOMjnDKCyd3wQf+IwH48m9jLm4vGAwgp3Ob4o1bjcUzHC+83yXFRJmazuc5GTjpZjcZ4ZfXAMFhKHzm/YasYzJGSaDSz4wdH7TxnKAkddAQWHo/KYFgqmb182iVl0beIKdzm9aoKyUIcSz3zynNwyd3zTsE7jiwgQX553enEWCofObxPrGIqeYFyyBrPvo8DSQWXErxc5K1uWOkoApdhkTd1vXFRAm+ZQUr9cLcOk0yN43El6vzwcS9+EbAGRZOjBBsL5SQBj1tuvP72ndA7D7vu7IzQfev2+DYx2MeV58eJ2whF7eLBWYF8Ca/aFpOcJ0w9eA3pq/NuJWb8+nMINwp9ARKCGYAFhlKArMXuFORwnBFPgxKeNPSaEwux92Rtq6JmB+9Mi9wr1NpoahT0mhMF9+aSjyFEdhmgjM4eMOwf5sbjAKCyNAn3Z1GmgZ/rY3QIvwkoWZzEqSbTwrbYIQOwhNgp0/mBOMYIcn6RwmeRHQMnxV3xApwssABjaOwzwCx2AQ+gS70JA7jFWdzZRMeCSWO8sB5nDU0kDP6P2GT5FT8pPz3JIXTOiiexJmb4nCFLTlK1R2XkPnMNHZTASmoTNAinCEITBfGjlA5zDR2UwEZu1VIEV4cWCUPGDOz4YRFwhmPCvR2UwTWampODBX9uUMc7ZpNky8aiFh6GymSZi+ImWlY/tyhEl9UvnUkTnI5AijWOqPuIFnCUxLvXMw+SiuYpQxx/blBDPtCe4pR2qXKUTL188UI+QCI8wrmpIaj5Fa808xoFeKCRbDhc2/jIEFLmN0hKE/5pJ/rZSPS4nAvM/Opx0DC9yOKdlhh7xCucHIHHxI1t6da86gL0H+XfJ6A2aDibihh4XwDX+efg/ZypPS6kjPHo8JYVY74TtzTRZOwmj5MY3ygxH22eb+UVwzw4R9m5TaDDBtnSaFucI9nhHm9RGTwjzd2oxZKR3MJhgbOhj4E8LMgPmBDQR7rP5ahEnb8i3arxdjlwBhEAZhEAZhEAZhEAZhEAZhEAZhEGa+MM2Z5iFUmBjGAAFhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhEMaQMDn95ImZYDQ+xS+IMAiDMJpgEl4O4C0WvGrgpNfUx9vJPtPD+P9yDbyzo+1qX1vfE5v7Lt/2SBPU+YCvRRg4DLdA2Emfen4cYnY4CI0OeAVh/PCcbIWELQnDsxAMrK2FzyCM/wsrxHYgNirMKAe8r6lXakcY/3vf/LAdpHGYIAdBtulU1I0wfuBP14LQPZ6VfGRDE3+SQxg/DAd2wAVPEib+eWUHNMUaAWFG6zfCv1iugyQM9Ne7oElegTCzAoctX+wSIAzCIAzC6Aaj0IeeKz6QWIBL9DdAJe9pxcsijNC43Q2RFcBXA9Rxu++z8zseFVZvDiCMXV4DfB/we0Ds4XphLelgC/awC2HscBiOXAD+BDc2TGC6VJgIwhCYM3B3yMefc58Ncr0f1PJtnxNuuJ1DGDucUtbHHPzb7Y8GuV0bWP5NTui6AwtfAvN4vKHVyrNr15MUA6BmJZ5FGLtYE/LBrTz7TccUTNRpehjRsoq9ADDIs35WhQnVryY1lRVbvtjyRRiEQZgiwXAIQzqMOHFIcwgtz76PKWHObkeYtGFj9t+jMyWMeNM+G8KkCfw/OR5AmDThJdlxAWHShB/IjkigfGGCM1siNs2Hyo5yrpWCebb9EQZhEAZhEAZhEAZhEAZhEAZhEAZhEAZhECZfGLm+vr6BrAlk2YgwUzDSPefPnyFr8e+d++nPESYFxg7AU5ihCPtbhJmCUdoB/kCzkiu07wmESSl87wTlTrKmNH56/025wEjlDvPbVR12uvp7d261klj21fXf/Tiv6rrcYaTH8mzHlDuM8s0bAzDejlmFMClZSblx5d/S6vqx8+f/CWFSYbqlbRTGjVlpBsznDy9GmDQwArNTba8F3noTYVJrpcofJlcPNdS5ECalVgqMN2TXgvxJhJk9HhMnyeUcwqRkpfHxmNiQ2pnMAcZpeJj/cXtPumnaGlPM+fNvddAGnkN98EkOMB5jw0jbmcb/5smYS7JkJWHzX9PVDad/XV1GMAct/y6QrfiYKwypO/3DouQZ/mtzpa9sYOTN13HZy9W5woCb7JSoCOTZiTQwjNy8T0uFk0GG7HT8mknb/1kuMB1/BfOCgYEB8ud3jT71xe+3faJMYPofzByRlqCe4hdo6vtqI+1kM9qDy6gwfJPGttvcWXHXUUiM88SWcrmVMVqCLjDiYpgnjLzLQ3a6SgJ5ofyk9etcWcD0eOYLs8szbSfl+OLSgZFZSNAH+8wOoXUwXxhfapcA4H837ywdGN4KPLv7vu7Z+7Vw84YZ7xKcUi/RStu2+kqojPlFF4HphbWzE0x3pu+TS18JQuol2tjSQCkVvl8ZnAOmJVMcDTkNO4Q8L9HVX23+SqB0YNaPciQrPTyrhx9ZnymOK45cYKS66mThe2RRycCI9vAQz375paFZTdaMJYyyPBcYkCeL+pKBCbe2dpOsJNlmtkCqM0dyIicYNeQ8cUhXmFFOqaFlzMaZjd4so2dRm2aYiRlV8e+d+/HPSwZmEKCXwhyesdN92WLZoBlGuudXj6kzqoaivj+WfMu3Jlssfu0wDtEVKhcYPmutE2nPFUb0KfBvpQ5zNHs0yzWXMW7gYlMbShvm2uzRHMy1VioHGFnDtw8GtGaliVqppKrr9GHMnT2aeLvWFHP+7/8TrZWU82ffKInqOgHvgXLZ630DEgH4CD6SyVoO/WbFqjkrhT18skjnflsKMDzb44k/tmdRL/jtpD1za+TmAxO7fFtLPFu1wshfvVftRCY2P9VXGjD32+JO+BTAk7UwGHFGpvLPWi3xnNRaK3V8Yz+twhItP+xYVxowvbcmYW7qhcFnYApG1vTltZW+BOZvQVETjEddlgTMGRVG6n4ZflQLkbau8T1i3VriGXOVaXVNYMLfpTBR92hgcAdEnpoYaQh5tMQjtJcvjHwNheFbW1yDVzxTWYnXlElkW/nCwC4K8zIkbIPSuimYoLaIrGUMc4XC9AI0DcIzUcvESO5L2iLaaLouwR5tEe0xHcyMx8/JvvS7HZ9cY00Cs2YGTEv6WurY5JrHJDAzr81K6WXOmC4rzbponV7mQtnB5BGWpInoHdOlmJtmpZhWFmHSlTFpXcowK+UII6d3MSHMzOp6jmbKMdPBdGmL6GXTwezQFtEjWnbi839srfFgXtEW0U7QPxQXZlhbRCtMBxPktMSjWE0Hw/u0xJOwmQ4m7NQST9RhOhhRU1rgWdPBZJ82pLnhW2Ywt2iJ5xkTwmiqr1eYEEZL8SHZTAgT03CRMeQyIQw0ZY9mGMwI863s0dxoShg+62V9bW2dsoPJftq8x5QwcEO2WL4K5oTxZ6mwpRqTwsTXZ37/itukMNA5r7fLGCbzDUuab1cqP5jMtxM8DeaFGc5QisRrTAwjVc393gBrYhg4M2eSiTaBmWFg5VxvbAZzw8z11IsL7SaHgf6hdFuFpWB2GKme1bjRZDAQWxyYuUnucQHCQHjxjOQh9dgBYahMxbRyRmg2louOj5SMN986mZ3kwxVuQJiJ8K263tdHAEbefc5yIwDCpJS3z26uYxjLyrsCgDClEhAGYRAGYRDGDDAyBx+SxVukhn77NH0FH74OCVB86sMxFC9rVpiIG3pYeGfHJwBW7XKRV2LjLmeQjdfC85GbDwirNwfMC7PaCVvpE/2aJCt5NcoqayLu8BroIi8Ee9hlWhhhny358IumhI1YPAvwhNDNPw9WFSZiXpiwb5OojmGu3DZELPoABhXruQsJe6StS7jhds60MFe4x5Mwa95dQWCeAHgONr3A/84deYoTuu4wb+H7dGuzXKtmJdhLYA4D7IUn74kcDKhZiWdNC7MJxobugHcJjLKRFr5DYi2ctYlbQIWJOs0K8wMbOf33LZsAWupdUWaJ1LKSBd6uLIGopUGwy1aTwowHBVu+2CVAGIRBGIRBGIRBGIRBGIRBGIQBplxCoWGay8SlqtAwGBAGYRAGYYoM8/8BhvwPHNeu3l8AAAAASUVORK5CYII=" alt="PSAR Rev 1 figure: IAC Simplified Arrangement"><figcaption>Figure 7.2.2-1. IAC Simplified Arrangement <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-21</cite></figcaption></figure>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose</a><a class="next" href="#check-2">Knowledge check: Components and boundaries <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Components and boundaries</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 2,3</span><span>SY-06-K2</span></div>
+  <p>Which fluid is on the tube side of the AHX?</p>
+  <div class="opts"><button type="button" class="opt">A. Intermediate sodium</button><button type="button" class="opt">B. Salt</button><button type="button" class="opt">C. Primary sodium</button><button type="button" class="opt">D. Air</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Intermediate sodium flows on the tube side. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K2&amp;body=Item%3A%20SY-06-K2%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20Which%20fluid%20is%20on%20the%20tube%20side%20of%20the%20AHX%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.1%2C%20p.%207.2-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Components and boundaries</a><a class="next" href="#concept-3">Operating modes <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operating modes</h2><p class="count">Objectives 4</p><table class="tbl"><thead><tr><th>Mode</th><th>Sodium flow</th><th>Air flow</th><th>Use</th></tr></thead><tbody><tr><td>Active</td><td>Forced, by ISPs</td><td>Forced, by blowers</td><td>Normal operation cooling <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16</cite></td></tr><tr><td>Blower</td><td>Natural circulation</td><td>Forced, by blowers</td><td>Off-normal, when ISPs are unavailable <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></td></tr><tr><td>Passive</td><td>Natural circulation</td><td>Natural convection</td><td>Emergency cooling <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></td></tr></tbody></table>
+<p>IAC is shut down and in standby during Mode 1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16</cite></p>
+<p>A single train in Active Mode or Blower Mode provides the required heat removal for the limiting decay heat load. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+<p>In Passive Mode, the limiting decay heat load needs two trains in operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Components and boundaries</a><a class="next" href="#check-3">Knowledge check: Operating modes <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operating modes</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>SY-06-K3</span></div>
+  <p>Which IAC mode has natural circulation of sodium and forced airflow?</p>
+  <div class="opts"><button type="button" class="opt">A. Standby</button><button type="button" class="opt">B. Active</button><button type="button" class="opt">C. Blower</button><button type="button" class="opt">D. Passive</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Blower Mode uses natural circulation of sodium and forced airflow. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K3&amp;body=Item%3A%20SY-06-K3%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20Which%20IAC%20mode%20has%20natural%20circulation%20of%20sodium%20and%20forced%20airflow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.3%2C%20p.%207.2-17%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>SY-06-K4</span></div>
+  <p>How many trains are needed in Passive Mode for the limiting decay heat load?</p>
+  <div class="opts"><button type="button" class="opt">A. Two</button><button type="button" class="opt">B. Three</button><button type="button" class="opt">C. None</button><button type="button" class="opt">D. One</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Passive Mode provides the required removal with two trains in operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K4&amp;body=Item%3A%20SY-06-K4%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20How%20many%20trains%20are%20needed%20in%20Passive%20Mode%20for%20the%20limiting%20decay%20heat%20load%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.3%2C%20p.%207.2-17%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Operating modes</a><a class="next" href="#concept-4">Dampers and automatic behavior <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Dampers and automatic behavior</h2><p class="count">Objectives 4, 6</p><p>Air dampers above and below the AHXs are normally closed in Mode 1 to limit heat transfer. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>These dampers fail open on loss of power. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>Blower discharge dampers are normally open and fail open. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+<p>No automatic actuations or manual actions are needed for Passive Mode, and no electrical power is needed to start natural convection airflow. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Operating modes</a><a class="next" href="#check-4">Knowledge check: Dampers and automatic behavior <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Dampers and automatic behavior</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 4,6</span><span>SY-06-K5</span></div>
+  <p>What do the AHX dampers do on loss of power?</p>
+  <div class="opts"><button type="button" class="opt">A. Close on spring return after a delay</button><button type="button" class="opt">B. Fail closed</button><button type="button" class="opt">C. Fail open</button><button type="button" class="opt">D. Fail as is</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The dampers fail open on loss of power. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K5&amp;body=Item%3A%20SY-06-K5%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20What%20do%20the%20AHX%20dampers%20do%20on%20loss%20of%20power%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.1%2C%20p.%207.2-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6</span><span>SY-06-K6</span></div>
+  <p>Why are the AHX dampers closed in Mode 1?</p>
+  <div class="opts"><button type="button" class="opt">A. To limit heat transferred from the intermediate sodium</button><button type="button" class="opt">B. To keep sodium from freezing in the stack</button><button type="button" class="opt">C. To block rain</button><button type="button" class="opt">D. To protect the blowers</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. They limit heat transferred from the intermediate sodium when IAC is not required. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K6&amp;body=Item%3A%20SY-06-K6%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20Why%20are%20the%20AHX%20dampers%20closed%20in%20Mode%201%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.1%2C%20p.%207.2-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Dampers and automatic behavior</a><a class="next" href="#concept-5">Indications <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Indications</h2><p class="count">Objectives 5</p><p>IAC parameters are monitored by the NIC, and also by local control panels or local gauges. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-17</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Dampers and automatic behavior</a><a class="next" href="#check-5">Knowledge check: Indications <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Indications</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 5</span><span>SY-06-K7</span></div>
+  <p>Where are IAC parameters monitored?</p>
+  <div class="opts"><button type="button" class="opt">A. Only locally</button><button type="button" class="opt">B. NIC and local panels or gauges</button><button type="button" class="opt">C. RPS only</button><button type="button" class="opt">D. Fire panels</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Parameters are monitored by the NIC and via local panels or gauges. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-17</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K7&amp;body=Item%3A%20SY-06-K7%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20Where%20are%20IAC%20parameters%20monitored%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.5%2C%20p.%207.2-17%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Indications</a><a class="next" href="#concept-6">Sodium leak and fire protection <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Sodium leak and fire protection</h2><p class="count">Objectives 8</p><p>The ASE diverts leakage to collection points and minimizes the surface area of leaked sodium exposed to air. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-14</cite></p>
+<p>There are no water-based suppression systems and no fire water piping in the ASE. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-14</cite></p>
+<p>Weather caps limit water intrusion into the ASE. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-15</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Indications</a><a class="next" href="#check-6">Knowledge check: Sodium leak and fire protection <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Sodium leak and fire protection</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 8</span><span>SY-06-K8</span></div>
+  <p>Why is there no water suppression in the ASE?</p>
+  <div class="opts"><button type="button" class="opt">A. The AHX contains sodium and contact with water is avoided</button><button type="button" class="opt">B. It is outdoors</button><button type="button" class="opt">C. It is NST</button><button type="button" class="opt">D. Cost</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The IAC is designed to avoid contact between sodium and water. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-15</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K8&amp;body=Item%3A%20SY-06-K8%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20Why%20is%20there%20no%20water%20suppression%20in%20the%20ASE%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.2%2C%20p.%207.2-15%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Sodium leak and fire protection</a><a class="next" href="#concept-7">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>DL4-HR1 IAC passive mode operation is NSRST. It removes heat when the ISP and RAC are unavailable. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-16</cite></p>
+<p>Passive Mode is the safety-significant defense-in-depth backup to the SR RAC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></p>
+<p>ASE, air stack, AHX, blower, heater, dampers, screens, and stack cap are NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-19</cite></p>
+<ul><li>Quality Assurance Program Description</li><li>Design Reliability Assurance Program</li><li>Reliability and Integrity Management Program</li><li>Equipment Qualification Program</li><li>Post-Construction Inspection, Testing, and Analysis Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.4, p. 7.2-17</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Sodium leak and fire protection</a><a class="next" href="#check-7">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 9,10</span><span>SY-06-K9</span></div>
+  <p>What is the safety classification of the AHX?</p>
+  <div class="opts"><button type="button" class="opt">A. SR</button><button type="button" class="opt">B. NSRST</button><button type="button" class="opt">C. NST</button><button type="button" class="opt">D. Class 1E</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Table 7.2.2-1 lists the AHX as NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-19</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-06-K9&amp;body=Item%3A%20SY-06-K9%0ALesson%3A%20Intermediate%20Air%20Cooling%20System%0AQuestion%3A%20What%20is%20the%20safety%20classification%20of%20the%20AHX%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.2.5%2C%20p.%207.2-19%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>IAC has two trains and three modes: Active, Blower, and Passive. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></li><li>AHX dampers are closed in Mode 1 and fail open on loss of power. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13</cite></li><li>Passive Mode needs no power and no actions, and is the DID backup to RAC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 17</span></div>
+<h1>Intermediate Air Cooling System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operating modes</a></li><li><a href="#check-3">Knowledge check: Operating modes</a></li><li><a href="#concept-4">Dampers and automatic behavior</a></li><li><a href="#check-4">Knowledge check: Dampers and automatic behavior</a></li><li><a href="#concept-5">Indications</a></li><li><a href="#check-5">Knowledge check: Indications</a></li><li><a href="#concept-6">Sodium leak and fire protection</a></li><li><a href="#check-6">Knowledge check: Sodium leak and fire protection</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.2.2.1, 7.2.2.2, 7.2.2.3, 7.2.2.4, 7.2.2.5</p><p>Pages 7.2-13, 7.2-14, 7.2-15, 7.2-16, 7.2-17, 7.2-19, 7.2-21</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-06&amp;body=Lesson%3A%20SY-06%20Intermediate%20Air%20Cooling%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

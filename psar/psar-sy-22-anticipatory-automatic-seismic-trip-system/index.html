@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Anticipatory Automatic Seismic Trip System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-22-anticipatory-automatic-seismic-trip-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The AST scrams the reactor before the peak seismic wave arrives. It is NSRST, separate from RPS logic, and acts directly on the reactor trip breakers. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.6.8, pp. 7.6-75 to 7.6-80</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the AST.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and interfaces</a></p><p><span class="num">2</span> Identify the AST boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and interfaces</a></p><p><span class="num">3</span> Identify the major components of the AST.</p><p class="gap">Taught in: <a href="#concept-2">Components and locations</a></p><p><span class="num">4</span> Explain AST operation.</p><p class="gap">Taught in: <a href="#concept-3">Operation and logic</a></p><p><span class="num">5</span> Describe the AST controls and indications.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">6</span> Explain the AST automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Operation and logic</a></p><p><span class="num">7</span> Apply operating procedures for the AST.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the AST.</p><p class="gap">Taught in: <a href="#concept-4">Testing and safety significance</a></p><p><span class="num">9</span> Explain the safety significance of the AST.</p><p class="gap">Taught in: <a href="#concept-4">Testing and safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the AST.</p><p class="gap">Taught in: <a href="#concept-4">Testing and safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and interfaces <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and interfaces</h2><p class="count">Objectives 1, 2</p><p>The AST measures ground motion, applies processing and logic, and sends actuation signals to the RTBs through the RPS interface device. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75</cite></p>
+<p>It is used in seismic beyond design basis events greater than the SSE, to scram before the peak wave reaches the facility. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75</cite></p>
+<p>The RTB interface device is downstream of the RPS logic, where an analog relay matrix isolates the RTB power supply control. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and interfaces <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and interfaces</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 1,2</span><span>SY-22-K1</span></div>
+  <p>What is the AST for?</p>
+  <div class="opts"><button type="button" class="opt">A. Isolate SCG</button><button type="button" class="opt">B. Scram before the peak seismic wave reaches the facility</button><button type="button" class="opt">C. Trip the turbine</button><button type="button" class="opt">D. Close HVAC dampers</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. It scrams the reactor before the peak seismic wave. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K1&amp;body=Item%3A%20SY-22-K1%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20What%20is%20the%20AST%20for%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,2</span><span>SY-22-K2</span></div>
+  <p>Where does the AST act?</p>
+  <div class="opts"><button type="button" class="opt">A. On rod motors</button><button type="button" class="opt">B. On PSPs</button><button type="button" class="opt">C. Upstream of the RPS logic</button><button type="button" class="opt">D. On the RTBs, downstream of RPS logic</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The RTB interface device is downstream of the RPS logic process. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K2&amp;body=Item%3A%20SY-22-K2%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20Where%20does%20the%20AST%20act%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and interfaces</a><a class="next" href="#concept-2">Components and locations <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Components and locations</h2><p class="count">Objectives 3</p><ul><li>Triaxial seismic accelerometers</li><li>Signal processing unit</li><li>Bi-stable unit</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+<p>There are four channels. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+<p>Accelerometers are in boreholes at four locations at 90-degree angles around the RXB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75</cite></p>
+<p>Signal processing is in cabinets in the NCB substructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75</cite></p>
+<p>Specific cabinet locations will be given at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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kqLPsGSqgWQbGZZjNEp5OOWNjEp+oHeebI5VfxwLsUrUFZPhjZ4Aq+x+gn79E5Al45LD9d1xLR7XcmGAH/4l2yuu6TlNJVmPmT4Je2LVx2Mhl3Ko/oIsHjgjlCbq2zTJPzxqfMUpP8c9cYFKDu0L+qD0SKpaPsZSyTPnWL2S6bZgyhkSMrB3ewq++aXoE9u8KYDTkBZN7IJ8P4JdNJ4Qb5FC5MVgwk1XHLoZ8AdMrTiZNm/GGQxlRJ8rBYkfiUfFXe20rRl/0LhksiWUaIFQSm1rvwARP2wlztAF2lf9Iu7MscZBSZRESZRESZRESZS8XZKDlpzYn3wttuLE/m1p66DhE/vW9z+wpf/diaZOERQlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlURIlUXKWSDKGrzl57tB4VIcdQfM01ZKgWUl9/UEt7EHX2R+kgvqnzqAFNtWS/A1Igi2SYIck2CEJKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSKImSd42k2meHZMwOSSLZIKkr/wmSakeHdK6jY//JjiD9ZNePCTvhx9Id9HZQN+uUPNkhJOlPJjv20U/OPiM5J34fvYne23/qlKTRaGs7+rQWwTWnV/ZO+D6aBb236159klr+v7uR/0+myN9VgCQpalx3tLHK1bhhHsBQedv4SHto651znTTSgzolG5sXxDcUtchVK0NA5v7cO05y0A3gXPl4O8BHOiXlqsUx50rnsaLGFQA7/5djnKTW6hNNyzYBDO/QJ0nzb9hL82/asIC2rdw5Kf9ENn9SWYgkm2aBtqmR/oJ+L/08JhFRFQdIn/qK1tNLgAyIfeTbPl2S9BfR4vbvgCRtm5OI0Ac0SgzC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" alt="PSAR Rev 1 figure: AST Signals and Interface"><figcaption>Figure 7.6.8-1. AST Signals and Interface <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.4, p. 7.6-80</cite></figcaption></figure>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and interfaces</a><a class="next" href="#check-2">Knowledge check: Components and locations <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Components and locations</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 3</span><span>SY-22-K3</span></div>
+  <p>Where are AST accelerometers?</p>
+  <div class="opts"><button type="button" class="opt">A. On the reactor head</button><button type="button" class="opt">B. In boreholes around the RXB</button><button type="button" class="opt">C. In the MCR</button><button type="button" class="opt">D. On the stack</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. They are in boreholes at four locations around the RXB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K3&amp;body=Item%3A%20SY-22-K3%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20Where%20are%20AST%20accelerometers%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1.2%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 3</span><span>SY-22-K4</span></div>
+  <p>What are the three parts of an AST channel?</p>
+  <div class="opts"><button type="button" class="opt">A. Pump, valve, tank</button><button type="button" class="opt">B. Display, keyboard, mouse</button><button type="button" class="opt">C. Accelerometers, signal processing unit, bi-stable unit</button><button type="button" class="opt">D. Relay, fuse, breaker</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Each channel has these three parts. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K4&amp;body=Item%3A%20SY-22-K4%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20What%20are%20the%20three%20parts%20of%20an%20AST%20channel%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1.1%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Components and locations</a><a class="next" href="#concept-3">Operation and logic <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operation and logic</h2><p class="count">Objectives 4, 6</p><p>If the processing output passes the bi-stable setpoint, the bi-stable outputs an isolated signal to the shunt trip feature in the RTB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+<p>The RTB arrangement gives 2-out-of-4 logic for reactor scram. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+<p>One failed channel cannot cause a spurious trip, because two RTBs on different channels are needed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+<p>Its function is DL4-RC4, automatic seismic trip. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.2.1, p. 7.6-77</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Components and locations</a><a class="next" href="#check-3">Knowledge check: Operation and logic <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operation and logic</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6</span><span>SY-22-K5</span></div>
+  <p>Which RTB feature does the AST use?</p>
+  <div class="opts"><button type="button" class="opt">A. Shunt trip</button><button type="button" class="opt">B. Manual lever</button><button type="button" class="opt">C. Close coil</button><button type="button" class="opt">D. Undervoltage coil</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The bi-stable outputs an isolated signal to the shunt trip feature. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K5&amp;body=Item%3A%20SY-22-K5%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20Which%20RTB%20feature%20does%20the%20AST%20use%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1.1%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,6</span><span>SY-22-K6</span></div>
+  <p>One AST channel fails high. Does the reactor trip?</p>
+  <div class="opts"><button type="button" class="opt">A. Only at full power</button><button type="button" class="opt">B. Only if RPS agrees</button><button type="button" class="opt">C. Yes</button><button type="button" class="opt">D. No, two RTBs on different channels are needed</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The arrangement prevents spurious actuation from a single channel failure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K6&amp;body=Item%3A%20SY-22-K6%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20One%20AST%20channel%20fails%20high.%20Does%20the%20reactor%20trip%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.1.1%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Operation and logic</a><a class="next" href="#concept-4">Testing and safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Testing and safety significance</h2><p class="count">Objectives 8, 9, 10</p><p>The AST is NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-75</cite></p>
+<p>Its components are seismic class SCN1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.3, p. 7.6-78</cite></p>
+<p>It conforms to IEEE 338-2022 for testing and calibration. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.2, p. 7.6-78</cite></p>
+<p>IEEE 379-2014 addresses single failure and IEEE 384-2018 addresses independence. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.3.3, p. 7.6-78</cite></p>
+<ul><li>Design Reliability Assurance Program</li><li>Equipment Qualification Program</li><li>Post-construction inspection, testing, and analysis program</li><li>Quality Assurance Program Description</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-76</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Operation and logic</a><a class="next" href="#check-4">Knowledge check: Testing and safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Testing and safety significance</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 8,9,10</span><span>SY-22-K7</span></div>
+  <p>What is the AST safety classification?</p>
+  <div class="opts"><button type="button" class="opt">A. Not classified</button><button type="button" class="opt">B. SR</button><button type="button" class="opt">C. NSRST</button><button type="button" class="opt">D. NST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. It performs an NSRST function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-22-K7&amp;body=Item%3A%20SY-22-K7%0ALesson%3A%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0AQuestion%3A%20What%20is%20the%20AST%20safety%20classification%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.8.2%2C%20p.%207.6-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Testing and safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Four accelerometer channels in boreholes around the RXB feed bi-stables that use the RTB shunt trip. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></li><li>The RTB arrangement gives 2-out-of-4 logic, so one bad channel cannot trip the plant. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75</cite></li><li>The AST is NSRST function DL4-RC4 and acts for seismic beyond design basis events. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.8.2.1, p. 7.6-77</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Testing and safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 11</span></div>
+<h1>Anticipatory Automatic Seismic Trip System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and interfaces</a></li><li><a href="#check-1">Knowledge check: Purpose and interfaces</a></li><li><a href="#concept-2">Components and locations</a></li><li><a href="#check-2">Knowledge check: Components and locations</a></li><li><a href="#concept-3">Operation and logic</a></li><li><a href="#check-3">Knowledge check: Operation and logic</a></li><li><a href="#concept-4">Testing and safety significance</a></li><li><a href="#check-4">Knowledge check: Testing and safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.6.8.1, 7.6.8.1.1, 7.6.8.1.2, 7.6.8.2, 7.6.8.2.1, 7.6.8.3, 7.6.8.3.2, 7.6.8.3.3, 7.6.8.3.4</p><p>Pages 7.6-75, 7.6-76, 7.6-77, 7.6-78, 7.6-80</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-22&amp;body=Lesson%3A%20SY-22%20Anticipatory%20Automatic%20Seismic%20Trip%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

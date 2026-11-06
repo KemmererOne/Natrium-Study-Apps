@@ -1,0 +1,83 @@
+# SY-12 | In-Vessel Fuel Handling System | system | FHI
+range: 7.3-40 7.3-53
+sec: Sec. 7.3.3, pp. 7.3-40 to 7.3-53
+intro: The FHI moves core assemblies inside the reactor vessel during Mode 4. While installed, its machines become part of the functional containment boundary.
+
+== Purpose and components | 1,2,3
+S The FHI manipulates core assembly positions during Mode 4 refueling and maintains the functional containment boundary when installed. @@ during Mode 4 refueling operations and maintain the functional containment boundary when the equipment is installed
+L Shuffle assemblies in the reactor vessel ;; Move assemblies to or from In-Vessel Storage ;; Receive assemblies from the FHE ;; Discharge assemblies to the FHE @@ shuffle core assemblies within the reactor vessel
+T Component | Role
+R IVTM | Multi-axis pantograph machine on the RPA that moves assemblies in the vessel @@ is a multi-axis pantograph type fuel handling machine
+R RPD | Rotates and restricts motion of the RPA @@ provides the motive force to rotate and restrict motion of the RPA
+R RPJ | Lifts the RPA off its static interface so it can rotate on its bearing @@ is a jacking system which lifts the RPA off its static interface
+R FTL | Vertical lift that raises and lowers assemblies in a CAP @@ is a vertical lift used to raise and lower core assemblies
+R FTLSP | Plug in the FTL bore that is part of the boundary while the FTL is installed or removed @@ comprises part of the functional containment boundary during installation and removal of the FTL
+R IVDC | Local control system for the IVTM and RPD @@ provides local control for the IVTM and the RPD
+F 7.3.3-1
+K How many major components does the FHI have? | Four | Five | Six | Eight | 2 | The FHI is comprised of six major components. @@ The FHI is comprised of six major components
+K Which component rotates the RPA? | RPJ | RPD | FTL | IVDC | 1 | The RPD provides the motive force. The RPJ only lifts the RPA. @@ provides the motive force to rotate and restrict motion of the RPA
+
+== In-Vessel Transfer Machine | 3,4
+S The IVTM, with RPA rotation and IVDC motion control, moves assemblies between the core, In-Vessel Storage, and the FTL. @@ transfers core assemblies between the core, In-Vessel Storage, and the FTL
+S A mechanical grapple grips the handling socket at the top of a core assembly. @@ is equipped with a mechanical grapple assembly
+S It handles one assembly at a time and keeps the assembly vertical. @@ The IVTM handles a single core assembly at a time and maintains a vertical orientation
+S Control shafts run from the drive assembly in the HAA into the vessel. @@ The control shafts extend from the
+S It is installed at the start of an outage in Mode 4, and removed in Mode 4. When out, a shield plug replaces it. @@ When the IVTM is not installed in the reactor it is replaced with a shield plug
+S If the IVTM is dropped in installation or removal, its nozzle flange contacts the RES structure, which keeps it out of the core. @@ the flange contacts the RES structure preventing the IVTM from dropping into the reactor core
+S The grapple finger is in the research and development program. @@ The IVTM grapple finger is part of the research and development program
+F 7.3.3-2
+K What stops a dropped IVTM from falling into the core? | The nozzle flange contacts the RES structure | The grapple | The FTL | A brake on the RPD | 0 | The flange contacts the RES structure and prevents the drop into the core. @@ the flange contacts the RES structure preventing the IVTM from dropping into the reactor core
+K What replaces the IVTM when not installed? | A shield plug | The FTL | Nothing | A CAP | 0 | When not installed it is replaced with a shield plug. @@ When the IVTM is not installed in the reactor it is replaced with a shield plug
+
+== Fuel Transfer Lift | 3,4
+S The FTL moves one assembly at a time, in a CAP, into and out of the reactor. @@ The FTL raises and lowers one core assembly into and out of the reactor at a time
+T FTL position | Interfaces with
+R Raised | EVHM grapple @@ the FTL interfaces with the EVHM grapple
+R Lowered | IVTM grapple @@ the FTL interfaces with the IVTM grapple
+S The FTL is installed in the FTL nozzle at the start of a refueling outage and is not installed in non-outage periods. @@ The FTL is not installed during non-outage periods
+S The FTL extends into the reactor, below the top of the core. @@ The FTL extends into the reactor, below the top of the core
+S FTL lifts are not critical lifts, but the lifting mechanisms have the enhanced features of critical lifts. @@ FTL lifts do not meet the definition of critical lifts
+F 7.3.3-3
+K At the lowered position, the FTL interfaces with which grapple? | EVHM | BLTC | IVTM | PHM | 2 | Lowered is the IVTM grapple, and raised is the EVHM grapple. @@ the FTL interfaces with the IVTM grapple
+K When is the FTL installed? | During refueling outages only | During all modes | Only in Mode 1 | Permanently | 0 | It is not installed during non-outage periods. @@ The FTL is not installed during non-outage periods
+
+== Keeping the boundary during refueling | 2,4,8
+S IVTM and FTL components that form the boundary are SR. @@ Components which form part of the functional containment boundary on the IVTM and FTL are classified as SR
+S Static seals are between stationary parts, and dynamic seals are between shafts and their supports. All seals are redundant, with a primary and a secondary seal. @@ All seals are configured in a redundant sealing arrangement with a primary and secondary seal
+S Each volume between seals gets pressurized argon barrier gas from the SCG, slightly above reactor cover gas pressure. @@ is maintained at a pressure slightly higher than the reactor cover gas system
+S This pressure keeps radionuclides from escaping if a seal fails. @@ to ensure radionuclides do not escape in the event of a seal failure
+S The FHC and IVDC monitor seal barrier gas. @@ The seal barrier gas is monitored by the FHC
+T Step | Boundary action
+R 1 | FTLSP seals the inner bore when the FTL is installed @@ When the FTL is installed, the FTLSP is used to seal its inner bore
+R 2 | CATT and FFV are installed and the FTLSP is removed @@ the core assembly transfer tube and fueling floor valve are installed and the FTLSP is subsequently removed
+R 3 | CATT and FFV extend the boundary up to the refueling floor @@ extend the functional containment boundary up to the refueling floor
+R 4 | After refueling, the FTLSP is reinstalled and the FFV and CATT are removed @@ After refueling is complete the FTLSP is reinstalled
+S The FTLSP uses a redundant pair of static seals with argon barrier gas between them. @@ the FTLSP utilizes a redundant pair of static seals
+K How does barrier gas pressure compare to reactor cover gas? | Slightly higher | Slightly lower | Equal | Atmospheric | 0 | It is kept slightly higher so radionuclides do not escape if a seal fails. @@ is maintained at a pressure slightly higher than the reactor cover gas system
+K What is done just after the CATT and FFV are installed? | FTLSP is removed | FTL is removed | IVTM is removed | RPA is lifted | 0 | The CATT and FFV are installed and the FTLSP is then removed. @@ the core assembly transfer tube and fueling floor valve are installed and the FTLSP is subsequently removed
+K What monitors the seal barrier gas? | RPS | FHC and IVDC | SPS | NHV | 1 | The seal barrier gas is monitored by the FHC and IVDC. @@ The seal barrier gas is monitored by the FHC
+
+== Controls and interlocks | 5,6
+S The IVDC turns FHC commands into motions of the IVTM and RPD. @@ The IVDC takes those commands and translates them into the required motions
+S The IVDC enforces interlocks and dynamically updated safe operating zones of the IVTM. @@ The IVDC controls and enforces interlocks and the dynamically updated safe operating zones of the IVTM
+S Control ranges from remote automatic through the FHC to manual in off-normal operations. @@ which range from remote automatic
+S IVTM and FTL sensors report position, load, and status to the FHC. @@ contains multiple sensors to monitor and report position, load, and other status information to the FHC
+S The FHC is NST and uses PMC human-machine interfaces in the FHB control room. @@ The FHC is a non-safety related with no special treatment system
+K What enforces IVTM safe operating zones? | IVDC | RPS | PMC alone | RMC | 0 | The IVDC controls and enforces interlocks and dynamically updated safe zones. @@ The IVDC controls and enforces interlocks and the dynamically updated safe operating zones of the IVTM
+K What control is available for off-normal operations? | Manual | None | RPS control | Only remote automatic | 0 | In off-normal operations, manual controls are available. @@ In the event of off-normal operations, manual controls are available
+
+== Safety significance | 9,10
+T Component | Safety | Seismic
+R IVTM functional containment components | SR | SCS1 @@ IVTM Functional Containment Components SR SCS1
+R FTL functional containment components | SR | SCS1 @@ FTL Functional Containment Components SR SCS1
+R FTLSP | SR | SCS1 @@ FTLSP SR SCS1
+R IVTM temporary load path components | NSRST | SCN3 @@ IVTM Temporary Load Path Components for Core Assemblies NSRST SCN3
+R FTL temporary load path components | NSRST | SCN3 @@ FTL Temporary Load Path Components for Core Assemblies NSRST SCN3
+R Rotatable Plug Jack (chocks) | NSRST | SCN3 @@ Rotatable Plug Jack (Chocks) NSRST SCN3
+S DL3-RR1f is the SR function for FHI seals to the head, part of the primary coolant boundary barrier function. @@ DL3-RR1f FHI Seal (SR)
+S RG 1.244 on control of heavy loads applies with full conformance. @@ RG 1.244, Revision 0, Control of Heavy Loads at Nuclear Facilities Full Conformance
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program ;; Comprehensive Vibrational Assessment Program @@ The following programmatic special treatments are preliminarily identified as applicable to the FHI
+K What is the classification of the FTLSP? | NSRST | NST | SR | SCN3 | 2 | The FTLSP is SR and SCS1. @@ FTLSP SR SCS1
+Z The IVTM with RPA rotation moves assemblies in the vessel. The FTL lifts them to the EVHM. @@ transfers core assemblies between the core, In-Vessel Storage, and the FTL
+Z FHI equipment is installed and removed in Mode 4, and shield plugs fill the penetrations when it is out. @@ When the IVTM is not installed in the reactor it is replaced with a shield plug
+Z Redundant seals with argon barrier gas above cover gas pressure keep the functional containment boundary. @@ is maintained at a pressure slightly higher than the reactor cover gas system

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Heat Removal DBEs</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-ev-03-heat-removal-dbes">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">These design basis events disturb heat removal: loss of heat sink, Energy Island transients, loss of an IAC train, and an IHX tube break. <cite>PSAR Rev 1 (NAT-9400), Sec. 3.7.2, pp. 3.7-2 to 3.7-5, with Secs. 3.3.4 and 3.9.2</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the event initiator and safety-analysis assumptions.</p><p class="gap">Taught in: <a href="#concept-1">Event initiators and assumptions</a></p><p><span class="num">2</span> Identify the challenged safety functions and acceptance criteria.</p><p class="gap">Taught in: <a href="#concept-2">Challenged functions and acceptance</a></p><p><span class="num">3</span> Describe the event chronology.</p><p class="gap">Taught in: <a href="#concept-3">Event chronology</a></p><p><span class="num">4</span> Predict key parameter trends.</p><p class="gap">Taught in: <a href="#concept-4">Key parameter trends</a></p><p><span class="num">5</span> Identify automatic protective actions.</p><p class="gap">Taught in: <a href="#concept-3">Event chronology</a></p><p><span class="num">6</span> Recognize the event from alarms and indications.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">7</span> Select and apply the appropriate procedure.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Verify operation of credited equipment.</p><p class="gap">Taught in: <a href="#concept-5">Credited equipment and failed functions</a></p><p><span class="num">9</span> Respond to failure of an automatic or mitigating function.</p><p class="gap">Taught in: <a href="#concept-5">Credited equipment and failed functions</a></p><p><span class="num">10</span> Establish and verify the required end state.</p><p class="gap">Taught in: <a href="#concept-6">End state and operator role</a></p><p><span class="num">11</span> Explain the consequences of delayed or incorrect actions.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">12</span> Relate operator actions to the event's technical basis.</p><p class="gap">Taught in: <a href="#concept-6">End state and operator role</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Event initiators and assumptions</h2><p class="count">Objectives 1</p><table class="tbl"><thead><tr><th>DBE</th><th>Initiator</th><th>Condition</th></tr></thead><tbody><tr><td>DHS-ISTL-1 and -2</td><td>Loss of heat removal from one intermediate sodium loop</td><td>Full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></td></tr><tr><td>DHS-RNBK-1 and -3</td><td>Runback demand from a decrease or increase in heat removal from the NSS</td><td>Full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3</cite></td></tr><tr><td>SUD-IACA-1</td><td>Loss of one IAC train</td><td>Low power or shutdown <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4</cite></td></tr><tr><td>IPI-IHEL-BL</td><td>IHX tube break, intermediate sodium leaks into the PHT</td><td>Full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></td></tr><tr><td>SUD-IHEL-BL</td><td>IHX tube break</td><td>Low power or shutdown <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.7.1, p. 3.7-5</cite></td></tr></tbody></table>
+<p>The Energy Island transient DBE is assumed to bound other events that generate reactor power runback signals. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3</cite></p>
+<p>If a runback completes and prevents a scram setpoint from being reached, the event is not classified as an LBE. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Event initiators and assumptions</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1</span><span>EV-03-K1</span></div>
+  <p>When is a heat removal upset not classified as an LBE?</p>
+  <div class="opts"><button type="button" class="opt">A. When it occurs at low power</button><button type="button" class="opt">B. When IAC is in active mode</button><button type="button" class="opt">C. When the PSPs keep running</button><button type="button" class="opt">D. When a runback completes and prevents reaching a scram setpoint</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. A completed runback that prevents a scram setpoint from being reached means the event is not an LBE. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K1&amp;body=Item%3A%20EV-03-K1%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20When%20is%20a%20heat%20removal%20upset%20not%20classified%20as%20an%20LBE%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.1%2C%20p.%203.3-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Event initiators and assumptions</a><a class="next" href="#concept-2">Challenged functions and acceptance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Challenged functions and acceptance</h2><p class="count">Objectives 2</p><p>Fuel performance acceptance criteria are satisfied for these DBEs, and there is no radiological release. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.2, p. 3.7-2</cite></p>
+<p>The reactor vessel is not overfilled in the IHX leak, because the IHT physical arrangement limits the intermediate sodium volume that can drain into the PHT. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Event initiators and assumptions</a><a class="next" href="#check-2">Knowledge check: Challenged functions and acceptance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Challenged functions and acceptance</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>EV-03-K2</span></div>
+  <p>Why is the reactor vessel not overfilled by an IHX tube break?</p>
+  <div class="opts"><button type="button" class="opt">A. The ISPs pump sodium back</button><button type="button" class="opt">B. The IHT physical arrangement limits the volume that can drain into the PHT</button><button type="button" class="opt">C. The vessel has an overflow line</button><button type="button" class="opt">D. The SPS removes the excess</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The IHT physical arrangement limits the volume that can drain to the PHT. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K2&amp;body=Item%3A%20EV-03-K2%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Why%20is%20the%20reactor%20vessel%20not%20overfilled%20by%20an%20IHX%20tube%20break%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.2.6.1%2C%20p.%203.7-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Challenged functions and acceptance</a><a class="next" href="#concept-3">Event chronology <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Event chronology</h2><p class="count">Objectives 3, 5</p><table class="tbl"><thead><tr><th>Step</th><th>Loss of heat sink with RAC (DHS-ISTL-2)</th></tr></thead><tbody><tr><td>1</td><td>Heat removal is lost from one intermediate loop at full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></td></tr><tr><td>2</td><td>Reactor scrams on high high cold pool temperature <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></td></tr><tr><td>3</td><td>PSPs and ISPs trip on high high primary sodium temperature <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></td></tr><tr><td>4</td><td>Non-passive and passive IAC fail on both trains <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2</cite></td></tr><tr><td>5</td><td>Safe shutdown, with RAC removing decay heat <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3</cite></td></tr></tbody></table>
+<table class="tbl"><thead><tr><th>Step</th><th>IHX tube break (IPI-IHEL-BL)</th></tr></thead><tbody><tr><td>1</td><td>Tube break puts intermediate sodium into the PHT, and heat removal is lost from one loop <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></td></tr><tr><td>2</td><td>Reactor scrams on high high primary sodium level, and the ISPs trip on the same signal <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></td></tr><tr><td>3</td><td>Safe shutdown, with the unaffected IAC train in non-passive mode <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Challenged functions and acceptance</a><a class="next" href="#check-3">Knowledge check: Event chronology <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Event chronology</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 3,5</span><span>EV-03-K3</span></div>
+  <p>Which signal scrams the reactor in the loss of heat sink DBE?</p>
+  <div class="opts"><button type="button" class="opt">A. High high cold pool temperature</button><button type="button" class="opt">B. High high primary sodium level</button><button type="button" class="opt">C. Low hot pool level</button><button type="button" class="opt">D. High high flux rate</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The reactor scrams on high high cold pool temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K3&amp;body=Item%3A%20EV-03-K3%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Which%20signal%20scrams%20the%20reactor%20in%20the%20loss%20of%20heat%20sink%20DBE%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.2.1.1%2C%20p.%203.7-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3,5</span><span>EV-03-K4</span></div>
+  <p>Which signal scrams the reactor in the full power IHX tube break?</p>
+  <div class="opts"><button type="button" class="opt">A. Low primary sodium level</button><button type="button" class="opt">B. High high primary sodium level</button><button type="button" class="opt">C. Loss of flow</button><button type="button" class="opt">D. High high cold pool temperature</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Intermediate sodium enters the primary, and the scram is on high high primary sodium level. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K4&amp;body=Item%3A%20EV-03-K4%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Which%20signal%20scrams%20the%20reactor%20in%20the%20full%20power%20IHX%20tube%20break%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.2.6.1%2C%20p.%203.7-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 3,5</span><span>EV-03-K5</span></div>
+  <p>In the Energy Island transient DBE, what happens to the runback?</p>
+  <div class="opts"><button type="button" class="opt">A. It only occurs at low power</button><button type="button" class="opt">B. It always completes</button><button type="button" class="opt">C. A scram occurs before it is complete</button><button type="button" class="opt">D. It is blocked by the RPS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. A runback may be initiated, but a scram occurs before the runback is complete. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K5&amp;body=Item%3A%20EV-03-K5%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20In%20the%20Energy%20Island%20transient%20DBE%2C%20what%20happens%20to%20the%20runback%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.2.3.1%2C%20p.%203.7-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Event chronology</a><a class="next" href="#concept-4">Key parameter trends <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Key parameter trends</h2><p class="count">Objectives 4</p><blockquote>"An increase in heat removal from the primary system results in a decrease in primary sodium temperature, which causes an increase in reactor power." <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></blockquote>
+<blockquote>"A decrease in heat removal from the primary system results in an increase in primary sodium temperature, which causes a decrease in reactor power." <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5</cite></blockquote>
+<table class="tbl"><thead><tr><th>Disturbance</th><th>Sodium temperature</th><th>Reactor power</th></tr></thead><tbody><tr><td>More heat removed</td><td>Falls</td><td>Rises <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></td></tr><tr><td>Less heat removed</td><td>Rises</td><td>Falls <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Event chronology</a><a class="next" href="#check-4">Knowledge check: Key parameter trends <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Key parameter trends</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>EV-03-K6</span></div>
+  <p>Heat removal from the primary suddenly increases. What does reactor power do before a runback or scram?</p>
+  <div class="opts"><button type="button" class="opt">A. It falls</button><button type="button" class="opt">B. It stays constant</button><button type="button" class="opt">C. It increases</button><button type="button" class="opt">D. It oscillates</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Sodium temperature falls, which causes an increase in reactor power. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K6&amp;body=Item%3A%20EV-03-K6%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Heat%20removal%20from%20the%20primary%20suddenly%20increases.%20What%20does%20reactor%20power%20do%20before%20a%20runback%20or%20scram%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.1%2C%20p.%203.3-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>EV-03-K7</span></div>
+  <p>Heat removal from the primary decreases. Which pair is correct?</p>
+  <div class="opts"><button type="button" class="opt">A. Temperature up, power down</button><button type="button" class="opt">B. Temperature up, power up</button><button type="button" class="opt">C. Temperature down, power up</button><button type="button" class="opt">D. Temperature down, power down</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. A decrease in heat removal raises primary sodium temperature, which decreases reactor power. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K7&amp;body=Item%3A%20EV-03-K7%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Heat%20removal%20from%20the%20primary%20decreases.%20Which%20pair%20is%20correct%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.2%2C%20p.%203.3-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Key parameter trends</a><a class="next" href="#concept-5">Credited equipment and failed functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Credited equipment and failed functions</h2><p class="count">Objectives 8, 9</p><p>In the loss of heat sink with RAC, the thermal capacity of the piping, components, and intermediate sodium in the remaining loop is assumed to be available. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3</cite></p>
+<p>In the shutdown IAC train loss, the unaffected train provides decay heat removal in passive mode after non-passive cooling fails on that train. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4</cite></p>
+<p>The matching DBAs credit RAC for decay heat removal. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Key parameter trends</a><a class="next" href="#check-5">Knowledge check: Credited equipment and failed functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Credited equipment and failed functions</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 8,9</span><span>EV-03-K8</span></div>
+  <p>What provides decay heat removal in SUD-IACA-1?</p>
+  <div class="opts"><button type="button" class="opt">A. RAC only</button><button type="button" class="opt">B. The unaffected IAC train in passive mode</button><button type="button" class="opt">C. The failed train in blower mode</button><button type="button" class="opt">D. The ISPs</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Decay heat removal is provided by the unaffected IAC train in passive mode. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K8&amp;body=Item%3A%20EV-03-K8%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20What%20provides%20decay%20heat%20removal%20in%20SUD-IACA-1%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.2.5.1%2C%20p.%203.7-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Credited equipment and failed functions</a><a class="next" href="#concept-6">End state and operator role <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>End state and operator role</h2><p class="count">Objectives 10, 12</p><p>The shutdown IAC event can end safe and stable at low power, or in safe shutdown. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4</cite></p>
+<p>The safe and stable end state applies if the transient does not result in a reactor scram. It requires K-effective of 1.0 and heat removal equal to heat production. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Credited equipment and failed functions</a><a class="next" href="#check-6">Knowledge check: End state and operator role <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: End state and operator role</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 10,12</span><span>EV-03-K9</span></div>
+  <p>Which end state applies when a transient does not cause a scram?</p>
+  <div class="opts"><button type="button" class="opt">A. Hot standby</button><button type="button" class="opt">B. Safe shutdown</button><button type="button" class="opt">C. Cold shutdown</button><button type="button" class="opt">D. Safe and stable</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. If the transient does not result in a scram, the safe and stable end state is used. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-03-K9&amp;body=Item%3A%20EV-03-K9%0ALesson%3A%20Heat%20Removal%20DBEs%0AQuestion%3A%20Which%20end%20state%20applies%20when%20a%20transient%20does%20not%20cause%20a%20scram%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.3%2C%20p.%203.3-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> End state and operator role</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Heat removal upsets change sodium temperature first, and reactivity feedback then moves power the opposite way. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></li><li>Loss of heat sink scrams on high high cold pool temperature. An IHX tube break scrams on high high primary sodium level. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2</cite></li><li>A completed runback that prevents a scram setpoint means the event is not an LBE. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: End state and operator role</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 15</span></div>
+<h1>Heat Removal DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Credited equipment and failed functions</a></li><li><a href="#check-5">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-6">End state and operator role</a></li><li><a href="#check-6">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 3.3.4.1.1, 3.3.4.1.2, 3.3.4.3, 3.7.1.2.2, 3.7.1.3.1, 3.7.2.1.1, 3.7.2.2.1, 3.7.2.3.1, 3.7.2.5.1, 3.7.2.6.1, 3.7.2.7.1</p><p>Pages 3.3-5, 3.3-7, 3.7-2, 3.7-3, 3.7-4, 3.7-5</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20EV-03&amp;body=Lesson%3A%20EV-03%20Heat%20Removal%20DBEs%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

@@ -1,0 +1,137 @@
+{
+ "groups": [
+  {
+   "title": "Plant and Safety Basis",
+   "lessons": [
+    "PL-01",
+    "PL-02",
+    "PL-03",
+    "PL-04"
+   ]
+  },
+  {
+   "title": "Nuclear Heat Supply Systems",
+   "lessons": [
+    "SY-01",
+    "SY-02",
+    "SY-03",
+    "SY-04"
+   ]
+  },
+  {
+   "title": "Reactor Auxiliary Systems",
+   "lessons": [
+    "SY-05",
+    "SY-06",
+    "SY-07",
+    "SY-08",
+    "SY-09"
+   ]
+  },
+  {
+   "title": "Fuel Handling Systems",
+   "lessons": [
+    "SY-10",
+    "SY-11",
+    "SY-12"
+   ]
+  },
+  {
+   "title": "Radwaste and Ancillary Systems",
+   "lessons": [
+    "SY-13",
+    "SY-14",
+    "SY-15"
+   ]
+  },
+  {
+   "title": "Instrumentation and Control",
+   "lessons": [
+    "SY-16",
+    "SY-17",
+    "SY-18",
+    "SY-19",
+    "SY-20",
+    "SY-21",
+    "SY-22"
+   ]
+  },
+  {
+   "title": "Electrical and Structures",
+   "lessons": [
+    "SY-23",
+    "SY-24"
+   ]
+  },
+  {
+   "title": "Licensing Basis Events",
+   "lessons": [
+    "EV-01",
+    "EV-02",
+    "EV-03",
+    "EV-04",
+    "EV-05",
+    "EV-06",
+    "EV-07",
+    "EV-08"
+   ]
+  },
+  {
+   "title": "Operations and Programs",
+   "lessons": [
+    "OP-01",
+    "OP-02",
+    "OP-03",
+    "OP-04",
+    "OP-05",
+    "OP-06",
+    "OP-07"
+   ]
+  }
+ ],
+ "titles": {
+  "PL-01": "Plant Overview",
+  "PL-02": "Safety Functions and Defense-in-Depth",
+  "PL-03": "Licensing Basis Events",
+  "PL-04": "Safety Classification and Design Criteria",
+  "SY-01": "Reactor Core System",
+  "SY-02": "Reactor Enclosure System",
+  "SY-03": "Primary Heat Transport System",
+  "SY-04": "Intermediate Heat Transport System",
+  "SY-05": "Reactor Air Cooling System",
+  "SY-06": "Intermediate Air Cooling System",
+  "SY-07": "Sodium Cover Gas System",
+  "SY-08": "Sodium Processing System",
+  "SY-09": "Control Rod Drive System",
+  "SY-10": "Water Pool Fuel Handling System",
+  "SY-11": "Ex-Vessel Fuel Handling System",
+  "SY-12": "In-Vessel Fuel Handling System",
+  "SY-13": "Gaseous Radwaste Processing System",
+  "SY-14": "NI HVAC System",
+  "SY-15": "NI Fire Protection System",
+  "SY-16": "Nuclear Island Control System",
+  "SY-17": "Reactor Protection System",
+  "SY-18": "Nuclear Instrumentation System",
+  "SY-19": "Reactor Instrumentation System",
+  "SY-20": "Radiation Monitoring System",
+  "SY-21": "Control Room and Indications",
+  "SY-22": "Anticipatory Automatic Seismic Trip System",
+  "SY-23": "NI Auxiliary Electrical Systems",
+  "SY-24": "Buildings and Structures",
+  "EV-01": "Anticipated Operational Occurrences",
+  "EV-02": "Loss of Primary Flow DBEs",
+  "EV-03": "Heat Removal DBEs",
+  "EV-04": "Ex-Vessel Release DBEs",
+  "EV-05": "Fuel Handling DBEs",
+  "EV-06": "Local Fuel Fault DBEs",
+  "EV-07": "Design Basis Accidents",
+  "EV-08": "Beyond Design Basis Events",
+  "OP-01": "Technical Specifications and Operating Modes",
+  "OP-02": "Organization and Training",
+  "OP-03": "Human Factors Engineering",
+  "OP-04": "Emergency Preparedness",
+  "OP-05": "Fire Protection and Sodium Leakage",
+  "OP-06": "Radiological Controls",
+  "OP-07": "Startup Test Program"
+ }
+}

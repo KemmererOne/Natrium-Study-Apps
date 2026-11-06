@@ -1,0 +1,479 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "IAC transfers heat from the intermediate sodium to the atmosphere.",
+     "anchor": "transfers heat from the intermediate sodium (described in Section 7.1.4) to the atmosphere",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "IAC is the primary and preferred means of reactor heat removal during low power and shutdown conditions.",
+     "anchor": "is the primary and preferred means of reactor heat removal during low power and shutdown conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "It also supports start-up and shutdown transitions to and from NSS cooling.",
+     "anchor": "for transition to and from Nuclear Island Salt System cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When is IAC the primary and preferred means of reactor heat removal?",
+     "o": [
+      "Only in accidents",
+      "Only during refueling",
+      "Full power",
+      "Low power and shutdown conditions"
+     ],
+     "a": 3,
+     "x": "IAC is primary and preferred during low power and shutdown.",
+     "anchor": "is the primary and preferred means of reactor heat removal during low power and shutdown conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Components and boundaries",
+   "eo": [
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "IAC has two equal capacity trains. Each has an AHX, air stack, air blower, dampers, and air heater in an ASE structure.",
+     "anchor": "consists of two equal capacity trains",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "The two ASEs are in the yard on either side of the RAB.",
+     "anchor": "The two ASEs are located in the yard area on either side of the Reactor Auxiliary Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "An AHX is in series within each intermediate loop. Sodium is on the tube side and air on the shell side.",
+     "anchor": "Intermediate sodium flows on the tube-side of the AHX with airflow on the shell-side",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "The ASEs have sodium catch pans and leak detection below the AHXs.",
+     "anchor": "provisions for sodium catch pans and leak detection below the AHXs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-2-1",
+     "num": "7.2.2-1",
+     "cap": "IAC Simplified Arrangement",
+     "alt": "PSAR Rev 1 figure: IAC Simplified Arrangement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-21"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which fluid is on the tube side of the AHX?",
+     "o": [
+      "Intermediate sodium",
+      "Salt",
+      "Primary sodium",
+      "Air"
+     ],
+     "a": 0,
+     "x": "Intermediate sodium flows on the tube side.",
+     "anchor": "Intermediate sodium flows on the tube-side of the AHX with airflow on the shell-side",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13",
+     "eo": "2,3"
+    }
+   ]
+  },
+  {
+   "title": "Operating modes",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Mode",
+      "Sodium flow",
+      "Air flow",
+      "Use"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Active",
+        "Forced, by ISPs",
+        "Forced, by blowers",
+        "Normal operation cooling"
+       ],
+       "anchor": "IAC Active Mode provides normal operation cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16"
+      },
+      {
+       "cells": [
+        "Blower",
+        "Natural circulation",
+        "Forced, by blowers",
+        "Off-normal, when ISPs are unavailable"
+       ],
+       "anchor": "IAC Blower Mode provides off-normal operation cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+      },
+      {
+       "cells": [
+        "Passive",
+        "Natural circulation",
+        "Natural convection",
+        "Emergency cooling"
+       ],
+       "anchor": "IAC Passive Mode provides emergency operation cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "IAC is shut down and in standby during Mode 1.",
+     "anchor": "The IAC is shut down and available in standby while the plant is operating in Mode-1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-16"
+    },
+    {
+     "t": "p",
+     "text": "A single train in Active Mode or Blower Mode provides the required heat removal for the limiting decay heat load.",
+     "anchor": "A single train of IAC operating in Blower Mode provides the required heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+    },
+    {
+     "t": "p",
+     "text": "In Passive Mode, the limiting decay heat load needs two trains in operation.",
+     "anchor": "with two trains in operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which IAC mode has natural circulation of sodium and forced airflow?",
+     "o": [
+      "Standby",
+      "Active",
+      "Blower",
+      "Passive"
+     ],
+     "a": 2,
+     "x": "Blower Mode uses natural circulation of sodium and forced airflow.",
+     "anchor": "IAC Blower Mode provides off-normal operation cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17",
+     "eo": "4"
+    },
+    {
+     "q": "How many trains are needed in Passive Mode for the limiting decay heat load?",
+     "o": [
+      "Two",
+      "Three",
+      "None",
+      "One"
+     ],
+     "a": 0,
+     "x": "Passive Mode provides the required removal with two trains in operation.",
+     "anchor": "with two trains in operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Dampers and automatic behavior",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Air dampers above and below the AHXs are normally closed in Mode 1 to limit heat transfer.",
+     "anchor": "are normally closed during Mode-1 operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "These dampers fail open on loss of power.",
+     "anchor": "The dampers fail open on loss of power",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "Blower discharge dampers are normally open and fail open.",
+     "anchor": "The blower discharge dampers are normally open and fail open",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+    },
+    {
+     "t": "p",
+     "text": "No automatic actuations or manual actions are needed for Passive Mode, and no electrical power is needed to start natural convection airflow.",
+     "anchor": "No electrical power is required to initiate natural convection airflow across the AHX",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What do the AHX dampers do on loss of power?",
+     "o": [
+      "Close on spring return after a delay",
+      "Fail closed",
+      "Fail open",
+      "Fail as is"
+     ],
+     "a": 2,
+     "x": "The dampers fail open on loss of power.",
+     "anchor": "The dampers fail open on loss of power",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13",
+     "eo": "4,6"
+    },
+    {
+     "q": "Why are the AHX dampers closed in Mode 1?",
+     "o": [
+      "To limit heat transferred from the intermediate sodium",
+      "To keep sodium from freezing in the stack",
+      "To block rain",
+      "To protect the blowers"
+     ],
+     "a": 0,
+     "x": "They limit heat transferred from the intermediate sodium when IAC is not required.",
+     "anchor": "to limit heat transferred from the intermediate sodium when the IAC is not required",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Indications",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "IAC parameters are monitored by the NIC, and also by local control panels or local gauges.",
+     "anchor": "are monitored by the Nuclear Island Control System (NIC)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are IAC parameters monitored?",
+     "o": [
+      "Only locally",
+      "NIC and local panels or gauges",
+      "RPS only",
+      "Fire panels"
+     ],
+     "a": 1,
+     "x": "Parameters are monitored by the NIC and via local panels or gauges.",
+     "anchor": "are monitored by the Nuclear Island Control System (NIC)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-17",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Sodium leak and fire protection",
+   "eo": [
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The ASE diverts leakage to collection points and minimizes the surface area of leaked sodium exposed to air.",
+     "anchor": "by diverting leakage to collection points",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-14"
+    },
+    {
+     "t": "p",
+     "text": "There are no water-based suppression systems and no fire water piping in the ASE.",
+     "anchor": "There are no water-based suppression systems and no fire water piping in the ASE",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-14"
+    },
+    {
+     "t": "p",
+     "text": "Weather caps limit water intrusion into the ASE.",
+     "anchor": "are provided with weather caps to limit water intrusion",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-15"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why is there no water suppression in the ASE?",
+     "o": [
+      "The AHX contains sodium and contact with water is avoided",
+      "It is outdoors",
+      "It is NST",
+      "Cost"
+     ],
+     "a": 0,
+     "x": "The IAC is designed to avoid contact between sodium and water.",
+     "anchor": "the IAC is designed and located to avoid contact between sodium and water",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-15",
+     "eo": "8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "DL4-HR1 IAC passive mode operation is NSRST. It removes heat when the ISP and RAC are unavailable.",
+     "anchor": "DL4-HR1 IAC Passive Mode Operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-16"
+    },
+    {
+     "t": "p",
+     "text": "Passive Mode is the safety-significant defense-in-depth backup to the SR RAC.",
+     "anchor": "provides the safety-significant defense-in-depth backup to the SR Reactor Air Cooling System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+    },
+    {
+     "t": "p",
+     "text": "ASE, air stack, AHX, blower, heater, dampers, screens, and stack cap are NSRST.",
+     "anchor": "ASE, Air Stack NSRST SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-19"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the IAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.4, p. 7.2-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the safety classification of the AHX?",
+     "o": [
+      "SR",
+      "NSRST",
+      "NST",
+      "Class 1E"
+     ],
+     "a": 1,
+     "x": "Table 7.2.2-1 lists the AHX as NSRST.",
+     "anchor": "AHX NSRST SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-19",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "IAC has two trains and three modes: Active, Blower, and Passive.",
+   "anchor": "consists of two equal capacity trains",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+  },
+  {
+   "text": "AHX dampers are closed in Mode 1 and fail open on loss of power.",
+   "anchor": "The dampers fail open on loss of power",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13"
+  },
+  {
+   "text": "Passive Mode needs no power and no actions, and is the DID backup to RAC.",
+   "anchor": "provides the safety-significant defense-in-depth backup to the SR Reactor Air Cooling System",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-06",
+ "title": "Intermediate Air Cooling System",
+ "kind": "system",
+ "subject": "IAC",
+ "sec_note": "Sec. 7.2.2, pp. 7.2-13 to 7.2-21",
+ "intro": "IAC is the normal way to reject reactor heat at low power and shutdown. Two trains of air heat exchangers sit in the yard, with three modes from fully powered to fully passive.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the IAC.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the IAC boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the IAC.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain IAC operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the IAC controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the IAC automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the IAC.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the IAC.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the IAC.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the IAC.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-06-intermediate-air-cooling-system"
+}

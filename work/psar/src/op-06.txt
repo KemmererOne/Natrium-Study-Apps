@@ -1,0 +1,66 @@
+# OP-06 | Radiological Controls | topic | radiological controls
+range: 9.2-1 9.2-1 10.1-1 10.5-4
+sec: Sec. 9.2 and Ch. 10, pp. 9.2-1 and 10.1-1 to 10.5-4
+intro: Full programs come at the operating license stage. The PSAR gives the commitments, the design features that keep dose low, and a preliminary dose estimate.
+obj: State the requirements for the Radiation Protection Program and ALARA.
+obj: Describe access controls for High and Very High Radiation Areas.
+obj: Identify the major radiation sources by building.
+obj: Describe design features that maintain exposure ALARA.
+obj: Describe contamination control principles.
+obj: Use the preliminary dose assessment to compare organizations.
+
+== Radiation Protection Program and ALARA | 1
+S The RPP will be in place before radioactive material is received on-site. @@ will be developed and implemented prior to receiving radioactive materials on-site
+S It ensures 10 CFR 19.12 and 10 CFR 20 are met. @@ The RPP will be developed to ensure 10 CFR 19.12 and 10 CFR 20 requirements are met
+S All personnel maintain ALARA practices, and may halt any operation they judge radiologically unsafe. @@ have the authority to halt any operation which, in their judgment, is radiologically unsafe
+S The ALARA program meets 10 CFR 20.1101 and follows RG 8.10. @@ will be implemented to meet the requirements of 10 CFR 20.1101
+S Surveys and monitoring meet 10 CFR 20 Subpart F. @@ The RPP meets the requirements outlined in 10 CFR 20, Subpart F
+S Air measurements and bioassays confirm internal exposures stay within 10 CFR 20 Subpart C limits. @@ Measurements of airborne radioactive material and bioassays
+K Who may halt a radiologically unsafe operation? | Only RP technicians | All personnel | Only the PGM | Only the CRS | 1 | All personnel have this authority. @@ have the authority to halt any operation which, in their judgment, is radiologically unsafe
+K When must the RPP be in place? | Before receiving radioactive materials on-site | At first criticality | At commercial operation | At the first outage | 0 | It is implemented prior to receiving radioactive materials. @@ will be developed and implemented prior to receiving radioactive materials on-site
+K What is used to determine internal exposure? | Airborne measurements and bioassays | Pocket dosimeters only | Stack monitors | Area monitors only | 0 | Those two are named. @@ Measurements of airborne radioactive material and bioassays
+
+== High and Very High Radiation Areas | 2
+S HRA and VHRA access follows RG 8.38. @@ will conform with Regulatory Guide 8.38, Revision 1
+L Training of workers ;; Job planning ;; Pre-job surveys ;; Pre-job briefing ;; Radiation work permits or equivalent ;; Radiation protection coverage ;; Measuring and alarming dosimeters ;; Posting ;; Physical barriers ;; Locks @@ Training of workers
+S Access to VHRAs is generally forbidden unless there is a sound operational or safety reason. @@ access to VHRAs will be forbidden unless there is a sound operational or safety reason for entering
+K When may a VHRA be entered? | Any time with a dosimeter | Only for a sound operational or safety reason | Only at night | Never | 1 | Access is generally forbidden unless there is a sound reason. @@ access to VHRAs will be forbidden unless there is a sound operational or safety reason for entering
+
+== Major radiation sources | 3
+S Sources come from fission in fuel and neutron activation products, including tritium. @@ neutron activation products, including tritium generated as a result of exposure to neutrons
+T Building | System | Source
+R RXB | RES | Active core @@ Reactor Enclosure System (RES) Active core
+R RXB | PHT | Activated sodium, fission and activation products @@ Primary Heat Transport System (PHT) Activated sodium, fission and activation
+R RAB | IHT | Activated sodium, tritium @@ Intermediate Heat Transport System (IHT) Activated sodium, tritium
+R RAB | SPS | Activated sodium, fission and activation products, tritium @@ Sodium Processing System (SPS) Activated sodium, fission and activation
+R FHB | FHE | Fresh and irradiated fuel assemblies, non-fuel components @@ Ex-Vessel Fuel Handling System (FHE) Fresh and irradiated fuel assemblies
+R FHB | FHP | Irradiated core assemblies @@ Water Pool Fuel Handling System (FHP) Irradiated core assemblies
+K What radiation source is listed for the IHT? | Active core | Activated sodium and tritium | Irradiated core assemblies | None | 1 | Table 10.3-1 lists activated sodium and tritium. @@ Intermediate Heat Transport System (IHT) Activated sodium, tritium
+
+== Design features for ALARA | 4
+L Reducing time spent in radiation areas ;; Reducing maintenance frequency ;; Improving access to components ;; Reducing production, distribution, and retention of activated products @@ ALARA principles are applied throughout design and construction
+S Shield assemblies absorb radial neutron leakage to limit activation of intermediate sodium. @@ contains shield assemblies that absorb radial neutron leakage
+S The SPS removes cesium from the PHT using Reticulated Vitreous Carbon traps. @@ The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps
+S A central location remotely controls fuel handling equipment. @@ utilizes a central location to remotely control fuel handling equipment
+S Negative pressure gradients carry contamination toward higher contamination areas. @@ Flow created by negative pressure gradients carries contamination away from lower contamination areas
+K What limits activation of intermediate sodium? | Shield assemblies | RAC | Cold traps | Stack filters | 0 | Shield assemblies absorb radial neutron leakage. @@ contains shield assemblies that absorb radial neutron leakage
+K What removes cesium from the PHT? | RVC traps in the SPS | Cold traps in IHT | HEPA filters | NSS | 0 | The SPS uses Reticulated Vitreous Carbon traps. @@ The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps
+
+== Contamination control | 5
+S The design minimizes contamination and waste, and eases decommissioning, per 10 CFR 20.1406. @@ consistent with the requirements in 10 Code of Federal Regulations 20.1406
+L Minimization of leaks and spills ;; Adequate leak detection ;; Avoiding release from undetected leaks ;; Reducing need to decontaminate ;; Periodic review of practices @@ Minimization of leaks and spills and provisions of containment
+K Which regulation covers minimizing contamination? | 10 CFR 20.1406 | 10 CFR 50.54 | 10 CFR 55 | 10 CFR 73 | 0 | The design is consistent with 10 CFR 20.1406. @@ consistent with the requirements in 10 Code of Federal Regulations 20.1406
+
+== Preliminary dose assessment | 6
+T Case or group | Person-rem per year
+R Routine online total | 67.5 @@ Security Security Patrols 15 Total 67.5
+R Operations on-shift, routine | 17.5 @@ General Reactor Operations On-shift 17.5
+R Refueling total | 197.5 @@ Support Staff 47 Total 197.5
+R Maintenance, refueling | 72 @@ Maintenance 72
+R Operations, refueling | 35 @@ Operations 35
+S The Operations group includes Shift Managers, Control Room Supervisors, Reactor Operators, and Non-Licensed Operators. @@ The Operations organization includes Shift Managers, Control Room Supervisors, Reactor Operators, and Non-Licensed Operators
+K Which group has the highest refueling estimate? | Operations | Maintenance | Security | Engineering | 1 | Table 10.5-2 lists Maintenance at 72 person-rem. @@ Maintenance 72
+K What is the routine online total estimate? | 17.5 | 67.5 | 197.5 | 500 | 1 | Table 10.5-1 totals 67.5 person-rem per year. @@ Security Security Patrols 15 Total 67.5
+Z The RPP and ALARA program meet 10 CFR 19.12 and 20, and details come at the OL stage. @@ The RPP will be developed to ensure 10 CFR 19.12 and 10 CFR 20 requirements are met
+Z Everyone can halt an operation they judge radiologically unsafe. @@ have the authority to halt any operation which, in their judgment, is radiologically unsafe
+Z Shielding, SPS cesium removal, and remote fuel handling keep exposure ALARA. @@ The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps

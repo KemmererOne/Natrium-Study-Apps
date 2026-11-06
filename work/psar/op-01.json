@@ -1,0 +1,693 @@
+{
+ "concepts": [
+  {
+   "title": "Operating modes",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Each mode is defined by sodium temperature, CRD status, and reactor cooling mechanism.",
+     "anchor": "Each operating mode is defined in terms of an inclusive combination of sodium temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2, p. 11.5-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Mode",
+      "Title",
+      "CRD status",
+      "Cooling",
+      "Sodium temperature"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "High Power Operation",
+        "More than one CRA coupled",
+        "NSS",
+        "N/A"
+       ],
+       "anchor": "1 High Power Operation More than one CRA NSS (1) N/A",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      },
+      {
+       "cells": [
+        "2",
+        "Low Power Operation",
+        "More than one CRA coupled",
+        "IAC",
+        "N/A"
+       ],
+       "anchor": "2 Low Power Operation More than one CRA IAC (2) N/A",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      },
+      {
+       "cells": [
+        "3",
+        "Shutdown",
+        "No more than one CRA coupled",
+        "N/A",
+        "Above 400 F (204 C)"
+       ],
+       "anchor": "3 Shutdown No more than one CRA N/A > 400 °F (204°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      },
+      {
+       "cells": [
+        "4",
+        "Refuel",
+        "No more than one CRA coupled",
+        "N/A",
+        "400 F (204 C) or below"
+       ],
+       "anchor": "4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What separates Mode 1 from Mode 2?",
+     "o": [
+      "Reactor cooling mechanism, NSS or IAC",
+      "Sodium temperature",
+      "Number of pumps",
+      "CRD status"
+     ],
+     "a": 0,
+     "x": "Mode 1 cools through the NSS, and Mode 2 through the IAC.",
+     "anchor": "1 High Power Operation More than one CRA NSS (1) N/A",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10",
+     "eo": "1"
+    },
+    {
+     "q": "What separates Mode 3 from Mode 4?",
+     "o": [
+      "Sodium temperature at 400 F",
+      "Cooling mechanism",
+      "Number of coupled CRAs",
+      "RTB position"
+     ],
+     "a": 0,
+     "x": "Mode 3 is above 400 F, and Mode 4 is at or below it.",
+     "anchor": "4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10",
+     "eo": "1"
+    },
+    {
+     "q": "The plant is at 450 F with one CRA coupled. What mode?",
+     "o": [
+      "Mode 3",
+      "Mode 4",
+      "Mode 1",
+      "Mode 2"
+     ],
+     "a": 0,
+     "x": "No more than one CRA coupled and above 400 F is Mode 3.",
+     "anchor": "3 Shutdown No more than one CRA N/A > 400 °F (204°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10",
+     "eo": "1"
+    },
+    {
+     "q": "Which modes have more than one CRA coupled?",
+     "o": [
+      "Modes 1 and 2",
+      "Modes 2 and 3",
+      "Modes 3 and 4",
+      "All"
+     ],
+     "a": 0,
+     "x": "Modes 1 and 2 have more than one CRA coupled.",
+     "anchor": "2 Low Power Operation More than one CRA IAC (2) N/A",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Mode descriptions and transitions",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Mode 1 is entered from Mode 2 during startup when heat removal transfers from the IAC to the NSS through the SHXs.",
+     "anchor": "Mode-1 is entered from Mode-2 during startup when heat removal is transferred from the IAC to the NSS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.1, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Mode 2 is entered in startup when the reactor scram breakers are closed and more than one CRA is coupled.",
+     "anchor": "Mode-2 is entered during startup when the reactor scram breakers are closed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Mode 2 supports rod withdrawal to critical and power ascension within IAC heat removal capability.",
+     "anchor": "supports control rod withdrawal to a critical state and power ascension within the heat removal capabilities of the IAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Mode 2 is not required during a shutdown. A scram before Mode 2 conditions lets the plant go directly from Mode 1 to Mode 3.",
+     "anchor": "the plant can transition directly from Mode-1 to Mode-3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-2"
+    },
+    {
+     "t": "p",
+     "text": "Mode 3 is a transition state. The primary coolant boundary is established during startup in Mode 3.",
+     "anchor": "The primary coolant boundary is established during startup in Mode-3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2"
+    },
+    {
+     "t": "p",
+     "text": "Mode 3 supports plant heatup through PSP operation.",
+     "anchor": "Mode-3 supports plant heatup through Primary Sodium Pump (PSP) operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2"
+    },
+    {
+     "t": "p",
+     "text": "In Modes 3 and 4, one CRA may be coupled and manipulated for testing.",
+     "anchor": "One CRA may be coupled to its CRDM driveline and manipulated to support testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2"
+    },
+    {
+     "t": "p",
+     "text": "In Mode 4, hot pool temperature is lowered below 400 F (204 C).",
+     "anchor": "Primary sodium hot pool temperature is lowered to the refueling temperature below 400°F (204°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-2"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Transition",
+      "Marker"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Mode 2 to Mode 1",
+        "IAC blower off, and top and bottom dampers closed and latched"
+       ],
+       "anchor": "as denoted by the IAC blower being off and the top and bottom dampers being closed and latched",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      },
+      {
+       "cells": [
+        "Mode 1 to Mode 2",
+        "NSS isolation valves closed"
+       ],
+       "anchor": "as denoted by the NSS isolation valves being closed",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What marks the transition from Mode 2 to Mode 1?",
+     "o": [
+      "Power at 100%",
+      "Second PSP start",
+      "IAC blower off, dampers closed and latched",
+      "NSS valves closed"
+     ],
+     "a": 2,
+     "x": "Table 11.5-2 note 1 gives this marker.",
+     "anchor": "as denoted by the IAC blower being off and the top and bottom dampers being closed and latched",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10",
+     "eo": "2"
+    },
+    {
+     "q": "A scram occurs in Mode 1 before Mode 2 conditions are met. Where does the plant go?",
+     "o": [
+      "Stays in Mode 1",
+      "Must enter Mode 2 first",
+      "Directly to Mode 3",
+      "Directly to Mode 4"
+     ],
+     "a": 2,
+     "x": "The plant can transition directly from Mode 1 to Mode 3.",
+     "anchor": "the plant can transition directly from Mode-1 to Mode-3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-2",
+     "eo": "2"
+    },
+    {
+     "q": "Which mode supports heatup through PSP operation?",
+     "o": [
+      "Mode 2",
+      "Mode 3",
+      "Mode 4",
+      "Mode 1"
+     ],
+     "a": 1,
+     "x": "Mode 3 supports heatup through PSP operation.",
+     "anchor": "Mode-3 supports plant heatup through Primary Sodium Pump (PSP) operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2",
+     "eo": "2"
+    },
+    {
+     "q": "Why is no more than one CRA coupled in Modes 3 and 4?",
+     "o": [
+      "To keep enough CRAs inserted to hold the reactor shutdown",
+      "To save power",
+      "To allow IAC flow",
+      "To cool the head"
+     ],
+     "a": 0,
+     "x": "This ensures a sufficient number of CRAs are inserted.",
+     "anchor": "which ensures a sufficient number of CRAs are inserted to maintain the reactor shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Technical Specification structure",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Table 11.5-1 lists probable subjects as required by 10 CFR 50.34(a)(5).",
+     "anchor": "In accordance with the requirements of 10 CFR 50.34(a)(5)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "The full set will be submitted at the OL stage.",
+     "anchor": "The full set of technical specifications that address the requirements of 10 CFR 50.36 will be submitted at the operating license (OL) stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Format is planned to be consistent with NUREG-1431.",
+     "anchor": "are planned to be consistent with NUREG-1431",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Use and Application",
+      "Safety Limits",
+      "Limiting Conditions for Operation and Surveillance Requirements",
+      "Design Features",
+      "Administrative Controls"
+     ],
+     "anchor": "are planned to be consistent with NUREG-1431",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Use and Application gives definitions, modes for LCO applicability, logical connectors, completion time, and frequency.",
+     "anchor": "explains the meaning of logical connectors",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When is the full Tech Spec set submitted?",
+     "o": [
+      "At the OL stage",
+      "After fuel load",
+      "After first refuel",
+      "With the PSAR"
+     ],
+     "a": 0,
+     "x": "The full set is submitted at the OL stage.",
+     "anchor": "The full set of technical specifications that address the requirements of 10 CFR 50.36 will be submitted at the operating license (OL) stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1",
+     "eo": "3"
+    },
+    {
+     "q": "Which section defines completion time convention?",
+     "o": [
+      "Use and Application",
+      "Design Features",
+      "Administrative Controls",
+      "Safety Limits"
+     ],
+     "a": 0,
+     "x": "Use and Application establishes the completion time convention.",
+     "anchor": "establishes the completion time convention",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Safety Limits",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Safety limits protect the integrity of barriers that guard against uncontrolled release of radioactivity.",
+     "anchor": "are limits upon important process variables that are found to be necessary to reasonably protect the integrity of certain physical barriers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "LSSSs are settings for automatic protective devices. A setting must make protective action correct the situation before a Safety Limit is exceeded.",
+     "anchor": "automatic protective action will correct the abnormal situation before a SL is exceeded",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "Probable SL subjects are fuel cladding temperature and peak fuel temperature.",
+     "anchor": "probable subjects of the SLs are fuel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "Cladding temperature limits protect against thermal creep and wall thinning from fuel-cladding chemical and eutectic interactions.",
+     "anchor": "creep and thinning of the cladding",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "Peak fuel temperature limits protect against melting.",
+     "anchor": "Peak fuel temperature limits protect against melting",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "Cycle-specific limits are in the Core Operating Limits Report (COLR).",
+     "anchor": "Core Operating Limits Report (COLR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    },
+    {
+     "t": "p",
+     "text": "A violation gives direction to restore compliance and shut down the reactor.",
+     "anchor": "Direction is provided to restore",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4"
+    },
+    {
+     "t": "p",
+     "text": "A setpoint control program, consistent with Option B of TSTF-493, replaces explicit LSSS values.",
+     "anchor": "in lieu of specifying explicit values for the LSSSs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What are the probable Safety Limit subjects?",
+     "o": [
+      "Fuel cladding temperature and peak fuel temperature",
+      "Hot pool level",
+      "PSP speed",
+      "RAC flow"
+     ],
+     "a": 0,
+     "x": "These two are named.",
+     "anchor": "probable subjects of the SLs are fuel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3",
+     "eo": "4"
+    },
+    {
+     "q": "What does the peak fuel temperature limit protect against?",
+     "o": [
+      "Rod bow",
+      "Corrosion",
+      "Sodium boiling",
+      "Melting"
+     ],
+     "a": 3,
+     "x": "Peak fuel temperature limits protect against melting.",
+     "anchor": "Peak fuel temperature limits protect against melting",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3",
+     "eo": "4"
+    },
+    {
+     "q": "Where do cycle-specific Safety Limit values appear?",
+     "o": [
+      "PSAR",
+      "COLR",
+      "SVDU",
+      "ODCM"
+     ],
+     "a": 1,
+     "x": "They are in the COLR.",
+     "anchor": "Core Operating Limits Report (COLR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Limiting Conditions for Operation",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "LCOs are the lowest functional capability or performance levels of equipment required for safe operation.",
+     "anchor": "LCOs are the lowest functional capability or performance levels of equipment required for safe operation of the facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4"
+    },
+    {
+     "t": "p",
+     "text": "Surveillance requirements cover test, calibration, or inspection.",
+     "anchor": "Surveillance requirements are requirements relating to test, calibration, or inspection",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Section",
+      "Subject",
+      "Example variables"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "3.1",
+        "Reactivity Control Systems",
+        "Scram capability and rod alignment limits"
+       ],
+       "anchor": "The reactivity control systems are the",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-5"
+      },
+      {
+       "cells": [
+        "3.2",
+        "Power Distribution Limits",
+        "Hot channel factors"
+       ],
+       "anchor": "The probable subject of LCOs are hot channel factors",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-6"
+      },
+      {
+       "cells": [
+        "3.3",
+        "Instrumentation",
+        "RPS, XIS, RIS, and reactor trip switchgear"
+       ],
+       "anchor": "reactor trip switchgear",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-6"
+      },
+      {
+       "cells": [
+        "3.4",
+        "Primary Heat Transport System",
+        "Temperature, leakage, flow rate, PSP coastdown time"
+       ],
+       "anchor": "PSP coastdown time",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7"
+      },
+      {
+       "cells": [
+        "3.5",
+        "Reactor Air Cooling System",
+        "Intake and exhaust temperatures and flow rates"
+       ],
+       "anchor": "intake/exhaust temperatures",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7"
+      },
+      {
+       "cells": [
+        "3.6",
+        "Functional Containment",
+        "System and component leakage"
+       ],
+       "anchor": "LCOs include system/component leakage",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7"
+      },
+      {
+       "cells": [
+        "3.7",
+        "Refueling Operations",
+        "Sealing, flow paths, heat removal for FHI, FHE, FHP"
+       ],
+       "anchor": "sealing capability for subsystems performing barrier functions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-8"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a proposed LCO variable for the RAC?",
+     "o": [
+      "Intake and exhaust flow rates",
+      "Stack height",
+      "Damper color",
+      "Salt temperature"
+     ],
+     "a": 0,
+     "x": "LCO 3.5 variables include intake and exhaust temperatures and flow rates.",
+     "anchor": "intake/exhaust temperatures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7",
+     "eo": "5"
+    },
+    {
+     "q": "Which is a proposed PHT LCO variable?",
+     "o": [
+      "Diesel fuel",
+      "PSP coastdown time",
+      "Stack flow",
+      "EVST level"
+     ],
+     "a": 1,
+     "x": "PSP coastdown time is listed.",
+     "anchor": "PSP coastdown time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7",
+     "eo": "5"
+    },
+    {
+     "q": "Where would functional containment leakage appear?",
+     "o": [
+      "LCO 3.6",
+      "LCO 3.7",
+      "LCO 3.1",
+      "LCO 3.3"
+     ],
+     "a": 0,
+     "x": "Section 3.6 is Functional Containment.",
+     "anchor": "LCOs include system/component leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Administrative controls",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Design Features are items that would significantly affect safety if altered, and will be given at the OL stage.",
+     "anchor": "which, if altered or modified, would have a significant effect on safety",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Delineation of responsibility",
+      "Description of organization",
+      "Unit staff qualifications",
+      "Requirements for procedures",
+      "Programs and manuals, including a setpoint control program",
+      "Reporting requirements, including a COLR"
+     ],
+     "anchor": "Probable administrative controls include",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-9"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a probable administrative control?",
+     "o": [
+      "PSP coastdown",
+      "Fuel temperature",
+      "Setpoint control program",
+      "Rod alignment limit"
+     ],
+     "a": 2,
+     "x": "Programs and manuals include a setpoint control program.",
+     "anchor": "programs and manuals, to include a setpoint control program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-9",
+     "eo": "6"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Modes 1 and 2 have more than one CRA coupled, cooled by NSS and IAC. Modes 3 and 4 split at 400 F.",
+   "anchor": "4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10"
+  },
+  {
+   "text": "Probable Safety Limits are fuel cladding temperature and peak fuel temperature, with values in the COLR.",
+   "anchor": "probable subjects of the SLs are fuel",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3"
+  },
+  {
+   "text": "The full Technical Specifications come at the OL stage, in a format consistent with NUREG-1431.",
+   "anchor": "are planned to be consistent with NUREG-1431",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-01",
+ "title": "Technical Specifications and Operating Modes",
+ "kind": "topic",
+ "subject": "technical specifications",
+ "sec_note": "Sec. 11.5, pp. 11.5-1 to 11.5-10",
+ "intro": "The full Technical Specifications come at the operating license stage. The PSAR gives the proposed subjects and defines the four operating modes. Learn the modes cold.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "Define the four operating modes and what separates each one.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Describe how the plant moves between modes.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "State the planned Technical Specification sections.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Identify the proposed Safety Limits and their bases.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Identify the probable subjects of Limiting Conditions for Operation.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "State the probable administrative controls.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-01-technical-specifications-and-operating-modes"
+}

@@ -1,0 +1,713 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and components",
+   "eo": [
+    "1",
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FHI manipulates core assembly positions during Mode 4 refueling and maintains the functional containment boundary when installed.",
+     "anchor": "during Mode 4 refueling operations and maintain the functional containment boundary when the equipment is installed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Shuffle assemblies in the reactor vessel",
+      "Move assemblies to or from In-Vessel Storage",
+      "Receive assemblies from the FHE",
+      "Discharge assemblies to the FHE"
+     ],
+     "anchor": "shuffle core assemblies within the reactor vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Role"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "IVTM",
+        "Multi-axis pantograph machine on the RPA that moves assemblies in the vessel"
+       ],
+       "anchor": "is a multi-axis pantograph type fuel handling machine",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+      },
+      {
+       "cells": [
+        "RPD",
+        "Rotates and restricts motion of the RPA"
+       ],
+       "anchor": "provides the motive force to rotate and restrict motion of the RPA",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      },
+      {
+       "cells": [
+        "RPJ",
+        "Lifts the RPA off its static interface so it can rotate on its bearing"
+       ],
+       "anchor": "is a jacking system which lifts the RPA off its static interface",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      },
+      {
+       "cells": [
+        "FTL",
+        "Vertical lift that raises and lowers assemblies in a CAP"
+       ],
+       "anchor": "is a vertical lift used to raise and lower core assemblies",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      },
+      {
+       "cells": [
+        "FTLSP",
+        "Plug in the FTL bore that is part of the boundary while the FTL is installed or removed"
+       ],
+       "anchor": "comprises part of the functional containment boundary during installation and removal of the FTL",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-42"
+      },
+      {
+       "cells": [
+        "IVDC",
+        "Local control system for the IVTM and RPD"
+       ],
+       "anchor": "provides local control for the IVTM and the RPD",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      }
+     ]
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-3-1",
+     "num": "7.3.3-1",
+     "cap": "FHI General Arrangement within Reactor Vessel",
+     "alt": "PSAR Rev 1 figure: FHI General Arrangement within Reactor Vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-51"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many major components does the FHI have?",
+     "o": [
+      "Four",
+      "Five",
+      "Six",
+      "Eight"
+     ],
+     "a": 2,
+     "x": "The FHI is comprised of six major components.",
+     "anchor": "The FHI is comprised of six major components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40",
+     "eo": "1,2,3"
+    },
+    {
+     "q": "Which component rotates the RPA?",
+     "o": [
+      "IVDC",
+      "RPJ",
+      "RPD",
+      "FTL"
+     ],
+     "a": 2,
+     "x": "The RPD provides the motive force. The RPJ only lifts the RPA.",
+     "anchor": "provides the motive force to rotate and restrict motion of the RPA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41",
+     "eo": "1,2,3"
+    }
+   ]
+  },
+  {
+   "title": "In-Vessel Transfer Machine",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The IVTM, with RPA rotation and IVDC motion control, moves assemblies between the core, In-Vessel Storage, and the FTL.",
+     "anchor": "transfers core assemblies between the core, In-Vessel Storage, and the FTL",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "p",
+     "text": "A mechanical grapple grips the handling socket at the top of a core assembly.",
+     "anchor": "is equipped with a mechanical grapple assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "p",
+     "text": "It handles one assembly at a time and keeps the assembly vertical.",
+     "anchor": "The IVTM handles a single core assembly at a time and maintains a vertical orientation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "p",
+     "text": "Control shafts run from the drive assembly in the HAA into the vessel.",
+     "anchor": "The control shafts extend from the",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "p",
+     "text": "It is installed at the start of an outage in Mode 4, and removed in Mode 4. When out, a shield plug replaces it.",
+     "anchor": "When the IVTM is not installed in the reactor it is replaced with a shield plug",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "p",
+     "text": "If the IVTM is dropped in installation or removal, its nozzle flange contacts the RES structure, which keeps it out of the core.",
+     "anchor": "the flange contacts the RES structure preventing the IVTM from dropping into the reactor core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-45"
+    },
+    {
+     "t": "p",
+     "text": "The grapple finger is in the research and development program.",
+     "anchor": "The IVTM grapple finger is part of the research and development program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-3-2",
+     "num": "7.3.3-2",
+     "cap": "IVTM Primary Components and Motions",
+     "alt": "PSAR Rev 1 figure: IVTM Primary Components and Motions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-52"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What stops a dropped IVTM from falling into the core?",
+     "o": [
+      "The nozzle flange contacts the RES structure",
+      "The grapple",
+      "The FTL",
+      "A brake on the RPD"
+     ],
+     "a": 0,
+     "x": "The flange contacts the RES structure and prevents the drop into the core.",
+     "anchor": "the flange contacts the RES structure preventing the IVTM from dropping into the reactor core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-45",
+     "eo": "3,4"
+    },
+    {
+     "q": "What replaces the IVTM when not installed?",
+     "o": [
+      "Nothing",
+      "A CAP",
+      "A shield plug",
+      "The FTL"
+     ],
+     "a": 2,
+     "x": "When not installed it is replaced with a shield plug.",
+     "anchor": "When the IVTM is not installed in the reactor it is replaced with a shield plug",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Fuel Transfer Lift",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FTL moves one assembly at a time, in a CAP, into and out of the reactor.",
+     "anchor": "The FTL raises and lowers one core assembly into and out of the reactor at a time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+    },
+    {
+     "t": "table",
+     "head": [
+      "FTL position",
+      "Interfaces with"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Raised",
+        "EVHM grapple"
+       ],
+       "anchor": "the FTL interfaces with the EVHM grapple",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      },
+      {
+       "cells": [
+        "Lowered",
+        "IVTM grapple"
+       ],
+       "anchor": "the FTL interfaces with the IVTM grapple",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The FTL is installed in the FTL nozzle at the start of a refueling outage and is not installed in non-outage periods.",
+     "anchor": "The FTL is not installed during non-outage periods",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+    },
+    {
+     "t": "p",
+     "text": "The FTL extends into the reactor, below the top of the core.",
+     "anchor": "The FTL extends into the reactor, below the top of the core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "p",
+     "text": "FTL lifts are not critical lifts, but the lifting mechanisms have the enhanced features of critical lifts.",
+     "anchor": "FTL lifts do not meet the definition of critical lifts",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-3-3",
+     "num": "7.3.3-3",
+     "cap": "FTL Primary Components",
+     "alt": "PSAR Rev 1 figure: FTL Primary Components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-53"
+    }
+   ],
+   "checks": [
+    {
+     "q": "At the lowered position, the FTL interfaces with which grapple?",
+     "o": [
+      "PHM",
+      "EVHM",
+      "BLTC",
+      "IVTM"
+     ],
+     "a": 3,
+     "x": "Lowered is the IVTM grapple, and raised is the EVHM grapple.",
+     "anchor": "the FTL interfaces with the IVTM grapple",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41",
+     "eo": "3,4"
+    },
+    {
+     "q": "When is the FTL installed?",
+     "o": [
+      "During all modes",
+      "Only in Mode 1",
+      "Permanently",
+      "During refueling outages only"
+     ],
+     "a": 3,
+     "x": "It is not installed during non-outage periods.",
+     "anchor": "The FTL is not installed during non-outage periods",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Keeping the boundary during refueling",
+   "eo": [
+    "2",
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "IVTM and FTL components that form the boundary are SR.",
+     "anchor": "Components which form part of the functional containment boundary on the IVTM and FTL are classified as SR",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "p",
+     "text": "Static seals are between stationary parts, and dynamic seals are between shafts and their supports. All seals are redundant, with a primary and a secondary seal.",
+     "anchor": "All seals are configured in a redundant sealing arrangement with a primary and secondary seal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "p",
+     "text": "Each volume between seals gets pressurized argon barrier gas from the SCG, slightly above reactor cover gas pressure.",
+     "anchor": "is maintained at a pressure slightly higher than the reactor cover gas system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "p",
+     "text": "This pressure keeps radionuclides from escaping if a seal fails.",
+     "anchor": "to ensure radionuclides do not escape in the event of a seal failure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "p",
+     "text": "The FHC and IVDC monitor seal barrier gas.",
+     "anchor": "The seal barrier gas is monitored by the FHC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "Boundary action"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "FTLSP seals the inner bore when the FTL is installed"
+       ],
+       "anchor": "When the FTL is installed, the FTLSP is used to seal its inner bore",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47"
+      },
+      {
+       "cells": [
+        "2",
+        "CATT and FFV are installed and the FTLSP is removed"
+       ],
+       "anchor": "the core assembly transfer tube and fueling floor valve are installed and the FTLSP is subsequently removed",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47"
+      },
+      {
+       "cells": [
+        "3",
+        "CATT and FFV extend the boundary up to the refueling floor"
+       ],
+       "anchor": "extend the functional containment boundary up to the refueling floor",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47"
+      },
+      {
+       "cells": [
+        "4",
+        "After refueling, the FTLSP is reinstalled and the FFV and CATT are removed"
+       ],
+       "anchor": "After refueling is complete the FTLSP is reinstalled",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The FTLSP uses a redundant pair of static seals with argon barrier gas between them.",
+     "anchor": "the FTLSP utilizes a redundant pair of static seals",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-42"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How does barrier gas pressure compare to reactor cover gas?",
+     "o": [
+      "Equal",
+      "Atmospheric",
+      "Slightly higher",
+      "Slightly lower"
+     ],
+     "a": 2,
+     "x": "It is kept slightly higher so radionuclides do not escape if a seal fails.",
+     "anchor": "is maintained at a pressure slightly higher than the reactor cover gas system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46",
+     "eo": "2,4,8"
+    },
+    {
+     "q": "What is done just after the CATT and FFV are installed?",
+     "o": [
+      "RPA is lifted",
+      "FTLSP is removed",
+      "FTL is removed",
+      "IVTM is removed"
+     ],
+     "a": 1,
+     "x": "The CATT and FFV are installed and the FTLSP is then removed.",
+     "anchor": "the core assembly transfer tube and fueling floor valve are installed and the FTLSP is subsequently removed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47",
+     "eo": "2,4,8"
+    },
+    {
+     "q": "What monitors the seal barrier gas?",
+     "o": [
+      "SPS",
+      "NHV",
+      "RPS",
+      "FHC and IVDC"
+     ],
+     "a": 3,
+     "x": "The seal barrier gas is monitored by the FHC and IVDC.",
+     "anchor": "The seal barrier gas is monitored by the FHC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46",
+     "eo": "2,4,8"
+    }
+   ]
+  },
+  {
+   "title": "Controls and interlocks",
+   "eo": [
+    "5",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The IVDC turns FHC commands into motions of the IVTM and RPD.",
+     "anchor": "The IVDC takes those commands and translates them into the required motions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+    },
+    {
+     "t": "p",
+     "text": "The IVDC enforces interlocks and dynamically updated safe operating zones of the IVTM.",
+     "anchor": "The IVDC controls and enforces interlocks and the dynamically updated safe operating zones of the IVTM",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+    },
+    {
+     "t": "p",
+     "text": "Control ranges from remote automatic through the FHC to manual in off-normal operations.",
+     "anchor": "which range from remote automatic",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41"
+    },
+    {
+     "t": "p",
+     "text": "IVTM and FTL sensors report position, load, and status to the FHC.",
+     "anchor": "contains multiple sensors to monitor and report position, load, and other status information to the FHC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-47"
+    },
+    {
+     "t": "p",
+     "text": "The FHC is NST and uses PMC human-machine interfaces in the FHB control room.",
+     "anchor": "The FHC is a non-safety related with no special treatment system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-48"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What enforces IVTM safe operating zones?",
+     "o": [
+      "PMC alone",
+      "RMC",
+      "IVDC",
+      "RPS"
+     ],
+     "a": 2,
+     "x": "The IVDC controls and enforces interlocks and dynamically updated safe zones.",
+     "anchor": "The IVDC controls and enforces interlocks and the dynamically updated safe operating zones of the IVTM",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41",
+     "eo": "5,6"
+    },
+    {
+     "q": "What control is available for off-normal operations?",
+     "o": [
+      "Only remote automatic",
+      "Manual",
+      "None",
+      "RPS control"
+     ],
+     "a": 1,
+     "x": "In off-normal operations, manual controls are available.",
+     "anchor": "In the event of off-normal operations, manual controls are available",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-47",
+     "eo": "5,6"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Safety",
+      "Seismic"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "IVTM functional containment components",
+        "SR",
+        "SCS1"
+       ],
+       "anchor": "IVTM Functional Containment Components SR SCS1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      },
+      {
+       "cells": [
+        "FTL functional containment components",
+        "SR",
+        "SCS1"
+       ],
+       "anchor": "FTL Functional Containment Components SR SCS1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      },
+      {
+       "cells": [
+        "FTLSP",
+        "SR",
+        "SCS1"
+       ],
+       "anchor": "FTLSP SR SCS1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      },
+      {
+       "cells": [
+        "IVTM temporary load path components",
+        "NSRST",
+        "SCN3"
+       ],
+       "anchor": "IVTM Temporary Load Path Components for Core Assemblies NSRST SCN3",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      },
+      {
+       "cells": [
+        "FTL temporary load path components",
+        "NSRST",
+        "SCN3"
+       ],
+       "anchor": "FTL Temporary Load Path Components for Core Assemblies NSRST SCN3",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      },
+      {
+       "cells": [
+        "Rotatable Plug Jack (chocks)",
+        "NSRST",
+        "SCN3"
+       ],
+       "anchor": "Rotatable Plug Jack (Chocks) NSRST SCN3",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "DL3-RR1f is the SR function for FHI seals to the head, part of the primary coolant boundary barrier function.",
+     "anchor": "DL3-RR1f FHI Seal (SR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.2, p. 7.3-44"
+    },
+    {
+     "t": "p",
+     "text": "RG 1.244 on control of heavy loads applies with full conformance.",
+     "anchor": "RG 1.244, Revision 0, Control of Heavy Loads at Nuclear Facilities Full Conformance",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.2, p. 7.3-44"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program",
+      "Comprehensive Vibrational Assessment Program"
+     ],
+     "anchor": "The following programmatic special treatments are preliminarily identified as applicable to the FHI",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.4, p. 7.3-47"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the classification of the FTLSP?",
+     "o": [
+      "NST",
+      "SR",
+      "SCN3",
+      "NSRST"
+     ],
+     "a": 1,
+     "x": "The FTLSP is SR and SCS1.",
+     "anchor": "FTLSP SR SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The IVTM with RPA rotation moves assemblies in the vessel. The FTL lifts them to the EVHM.",
+   "anchor": "transfers core assemblies between the core, In-Vessel Storage, and the FTL",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+  },
+  {
+   "text": "FHI equipment is installed and removed in Mode 4, and shield plugs fill the penetrations when it is out.",
+   "anchor": "When the IVTM is not installed in the reactor it is replaced with a shield plug",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40"
+  },
+  {
+   "text": "Redundant seals with argon barrier gas above cover gas pressure keep the functional containment boundary.",
+   "anchor": "is maintained at a pressure slightly higher than the reactor cover gas system",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-12",
+ "title": "In-Vessel Fuel Handling System",
+ "kind": "system",
+ "subject": "FHI",
+ "sec_note": "Sec. 7.3.3, pp. 7.3-40 to 7.3-53",
+ "intro": "The FHI moves core assemblies inside the reactor vessel during Mode 4. While installed, its machines become part of the functional containment boundary.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the FHI.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the FHI boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the FHI.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain FHI operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the FHI controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the FHI automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the FHI.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the FHI.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the FHI.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the FHI.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-12-in-vessel-fuel-handling-system"
+}

@@ -1,0 +1,777 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and subsystems",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FHP gives a water-based environment for intermediate-term storage of spent fuel and stores non-fuel irradiated core assemblies before disposal.",
+     "anchor": "provides a water-based environment for the intermediate-term storage of spent fuel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "p",
+     "text": "It provides core assembly cooling, spent fuel reactivity control, fission product containment, and radiation shielding.",
+     "anchor": "The FHP provides core assembly cooling, spent fuel reactivity control",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Subsystem",
+      "Job"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "SFP, Spent Fuel Pool",
+        "Water-filled, lined concrete pool below grade in the FHB substructure"
+       ],
+       "anchor": "is a water-filled, concrete pool located below-grade within the Fuel Handling Building",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+      },
+      {
+       "cells": [
+        "PIC, Pool Immersion Cell",
+        "Moves core assemblies from a sodium environment to water"
+       ],
+       "anchor": "transitions core assemblies being stored in a sodium environment to a water-filled environment",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+      },
+      {
+       "cells": [
+        "FPC, Fuel Pool Cooling",
+        "Normal cooling for the SFP"
+       ],
+       "anchor": "The FPC is the normal cooling system for the SFP",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+      },
+      {
+       "cells": [
+        "FPP, Fuel Pool Purification",
+        "Filters and purifies SFP water"
+       ],
+       "anchor": "Filtration and purification of the SFP water is provided by the FPP",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-3"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The SFP has three operational zones: the PIC cavity, the cask loading pit, and the fuel storage area.",
+     "anchor": "the PIC cavity, the cask loading pit, and the fuel storage area",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-1-1",
+     "num": "7.3.1-1",
+     "cap": "FHP Top-Down View",
+     "alt": "PSAR Rev 1 figure: FHP Top-Down View",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.5, p. 7.3-15"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which FHP subsystem moves assemblies from sodium to water?",
+     "o": [
+      "SFP",
+      "PIC",
+      "FPC",
+      "FPP"
+     ],
+     "a": 1,
+     "x": "The PIC transitions core assemblies from a sodium environment to a water-filled environment.",
+     "anchor": "transitions core assemblies being stored in a sodium environment to a water-filled environment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2",
+     "eo": "1,2"
+    },
+    {
+     "q": "Which is one of the three SFP zones?",
+     "o": [
+      "Transfer tube",
+      "Drip pan",
+      "Cask loading pit",
+      "Head access area"
+     ],
+     "a": 2,
+     "x": "The zones are the PIC cavity, the cask loading pit, and the fuel storage area.",
+     "anchor": "the PIC cavity, the cask loading pit, and the fuel storage area",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Spent fuel pool and racks",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SFP is sized for ten years of spent fuel from normal operation plus other core assemblies.",
+     "anchor": "The SFP is sized to provide storage for ten years of spent fuel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "Total water inventory is approximately 574,000 gallons.",
+     "anchor": "The total SFP water inventory is approximately 574,000 gallons",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "A full SFP heat load is approximately 225 kilowatts.",
+     "anchor": "approximately 225 kilowatts for a full SFP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "The fuel storage area holds seven intact fuel racks and one failed fuel rack.",
+     "anchor": "contains seven storage racks for core assembly storage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "p",
+     "text": "The stainless steel liner has a leak chase system. There are no pool wall penetrations below the elevation of stored core assemblies.",
+     "anchor": "There are no pool wall penetrations below the elevation of the stored core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "The SFP does not use soluble boron. Racks hold fuel subcritical by geometry control and fixed borated neutron absorbers.",
+     "anchor": "Since the SFP does not employ soluble boron",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "p",
+     "text": "The racks do not rely on specific zoning of fuel assemblies to stay subcritical.",
+     "anchor": "The storage racks do not rely upon specific zoning of fuel assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-1-2",
+     "num": "7.3.1-2",
+     "cap": "SFP Side View",
+     "alt": "PSAR Rev 1 figure: SFP Side View",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.5, p. 7.3-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How does the SFP maintain subcriticality?",
+     "o": [
+      "Control rods",
+      "Fuel zoning",
+      "Soluble boron",
+      "Geometry control and fixed borated absorbers"
+     ],
+     "a": 3,
+     "x": "The SFP has no soluble boron. It uses spacing and fixed borated neutron absorbers.",
+     "anchor": "Since the SFP does not employ soluble boron",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1",
+     "eo": "3,4"
+    },
+    {
+     "q": "What is the approximate SFP water inventory?",
+     "o": [
+      "57,400 gallons",
+      "225,000 gallons",
+      "574,000 gallons",
+      "1,000,000 gallons"
+     ],
+     "a": 2,
+     "x": "Total inventory is approximately 574,000 gallons.",
+     "anchor": "The total SFP water inventory is approximately 574,000 gallons",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Pool immersion cell",
+   "eo": [
+    "3",
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The BLTC transfers core assemblies into the PIC, where a cleaning vessel gives a controlled environment to chemically clean and remove residual sodium.",
+     "anchor": "provides a controlled environment within the PIC to chemically clean and remove residual sodium coolant",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The cleaning vessel isolates assemblies from the surroundings to prevent sodium-water interactions.",
+     "anchor": "isolates core assemblies from the surrounding environment to prevent sodium-water interactions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "During cleaning, heat passes through the cleaning vessel to the SFP water.",
+     "anchor": "heat is passively transferred through the cleaning vessel to the SFP water",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "Gaseous effluent is filtered and sent to the FHB portion of the NI HVAC. Liquid effluent goes to the FPP.",
+     "anchor": "while liquid effluent is transferred to the FPP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "After cleaning and rinsing, the PIC elevator lowers the assembly, and a horizontal trolley moves it upright to the cask loading pit.",
+     "anchor": "the PIC uses a horizontal trolley to transfer the core assembly upright to the cask loading pit area",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Interlock or indication",
+      "Prevents"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Pressure and flow sensors",
+        "Give positive indication that excess water is purged before an assembly transfers into the PIC"
+       ],
+       "anchor": "to provide positive indication that the cleaning vessel has been purged of excess water",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9"
+      },
+      {
+       "cells": [
+        "PIC rinse water pump interlock",
+        "Inadvertent pump operation that adds excess water to the cleaning vessel"
+       ],
+       "anchor": "the PIC rinse water pump design includes an interlock",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9"
+      },
+      {
+       "cells": [
+        "PIC basket lock interlock",
+        "Lowering the cleaning vessel into the SFP before residual sodium is removed"
+       ],
+       "anchor": "The lock disengagement involves an interlock to prevent lowering of the cleaning vessel",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-10"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the PIC basket lock interlock prevent?",
+     "o": [
+      "Opening the fueling floor valve",
+      "Moving the PHM",
+      "Lowering the cleaning vessel into the SFP before residual sodium is removed",
+      "Rinse pump start"
+     ],
+     "a": 2,
+     "x": "Lock disengagement involves an interlock so the vessel cannot be lowered before sodium removal.",
+     "anchor": "The lock disengagement involves an interlock to prevent lowering of the cleaning vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-10",
+     "eo": "3,4,6"
+    },
+    {
+     "q": "Why does the rinse water pump have an interlock?",
+     "o": [
+      "To prevent adding excess water to the cleaning vessel",
+      "To protect pump seals",
+      "To keep the pool level high",
+      "To limit dose"
+     ],
+     "a": 0,
+     "x": "The interlock prevents inadvertent pump operation that could introduce excess water.",
+     "anchor": "the PIC rinse water pump design includes an interlock",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9",
+     "eo": "3,4,6"
+    }
+   ]
+  },
+  {
+   "title": "Failed fuel",
+   "eo": [
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A fuel assembly with indicated cladding damage is sealed in an FFC inerted with helium.",
+     "anchor": "encapsulate a fuel assembly with indicated fuel pin cladding damage inside an FFC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "No sodium cleaning occurs. The failed assembly goes directly into the FFC from the BLTC.",
+     "anchor": "No sodium cleaning occurs for a failed fuel assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The FFC prevents metallic uranium-water interactions and sodium-water reactions that can occur due to cladding failure in sodium-bonded fuel.",
+     "anchor": "prevent metallic uranium-water interactions and sodium-water reactions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "Closure welds are done after the canister is voided and back-filled, while the FFC is in the PIC basket.",
+     "anchor": "closure welds are performed while the FFC is contained in the PIC basket",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-10"
+    },
+    {
+     "t": "p",
+     "text": "If a spent fuel assembly fails in the SFP, the PIC can bring it back for canisterization.",
+     "anchor": "the PIC includes design features to transport the failed fuel assembly back to the PIC for canisterization",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-10"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is a failed fuel assembly treated before entering the FFC?",
+     "o": [
+      "No sodium cleaning occurs",
+      "Stored in the EVST",
+      "Chemically cleaned",
+      "Rinsed in the PIC"
+     ],
+     "a": 0,
+     "x": "No sodium cleaning occurs for a failed fuel assembly. It goes directly into the FFC.",
+     "anchor": "No sodium cleaning occurs for a failed fuel assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2",
+     "eo": "4,8"
+    },
+    {
+     "q": "What gas inerts the FFC?",
+     "o": [
+      "Helium",
+      "Nitrogen",
+      "Air",
+      "Argon"
+     ],
+     "a": 0,
+     "x": "The FFC is inerted with helium.",
+     "anchor": "inside an FFC that is inerted with",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2",
+     "eo": "4,8"
+    }
+   ]
+  },
+  {
+   "title": "Normal cooling and purification",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FPC is NST. It has two independent trains that send heat to the NI Water System.",
+     "anchor": "The FPC consists of two independent cooling trains",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "Each train is sized for the entire SFP heat load.",
+     "anchor": "Each train is sized to remove the entire heat load of the SFP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The FPP is a single purification train with anion and cation exchange resins.",
+     "anchor": "The FPP consists of a single purification train",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-3"
+    },
+    {
+     "t": "p",
+     "text": "FPC and FPP suction and discharge lines are located to prevent draining the SFP below a minimum safe level.",
+     "anchor": "The suction and discharge lines of the FPC are located to prevent draining",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many FPC trains are needed to remove the entire SFP heat load?",
+     "o": [
+      "Four",
+      "One",
+      "Two",
+      "Three"
+     ],
+     "a": 1,
+     "x": "Each of the two trains is sized to remove the entire heat load.",
+     "anchor": "Each train is sized to remove the entire heat load of the SFP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2",
+     "eo": "3,4"
+    },
+    {
+     "q": "An FPC line ruptures. What protects the pool level?",
+     "o": [
+      "Manual valves only",
+      "A second liner",
+      "Automatic isolation by the RPS",
+      "Location of the suction and discharge lines"
+     ],
+     "a": 3,
+     "x": "The lines are located to prevent draining below a minimum safe level.",
+     "anchor": "The suction and discharge lines of the FPC are located to prevent draining",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Loss of cooling and makeup",
+   "eo": [
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If normal cooling is unavailable, core assemblies are cooled passively by natural circulation in the SFP.",
+     "anchor": "then core assemblies are passively cooled by natural circulation within the SFP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5"
+    },
+    {
+     "t": "p",
+     "text": "If active cooling is lost, the SFP relies on evaporation and redundant makeup systems.",
+     "anchor": "the SFP relies on evaporation to passively cool spent fuel assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-7"
+    },
+    {
+     "t": "p",
+     "text": "The water volume cools spent fuel for at least 7 days without makeup at a full SFP heat load.",
+     "anchor": "The water volume of the SFP cools spent fuel for at least 7 days without makeup",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "Normal makeup comes from the NI Water System. Emergency makeup comes from offsite sources through an external fill leg.",
+     "anchor": "Makeup water is provided from a connection to NI Water System during normal operations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+    },
+    {
+     "t": "p",
+     "text": "No powered SSCs are needed for emergency makeup through the fill leg.",
+     "anchor": "No powered SSCs are required to provide emergency makeup water via the exterior fill leg",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6"
+    },
+    {
+     "t": "p",
+     "text": "SFP level sensors start refill on low level during normal operation and also support PAM.",
+     "anchor": "The SFP water level sensors initiate SFP refill upon detection of low water level during normal operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.5, p. 7.3-11"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Both FPC trains are lost with a full pool. How long does the SFP cool fuel without makeup?",
+     "o": [
+      "24 hours",
+      "At least 72 hours",
+      "At least 7 days",
+      "At least 30 days"
+     ],
+     "a": 2,
+     "x": "The water volume cools spent fuel for at least 7 days without makeup.",
+     "anchor": "The water volume of the SFP cools spent fuel for at least 7 days without makeup",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8",
+     "eo": "4,8"
+    },
+    {
+     "q": "What powered equipment does emergency makeup through the exterior fill leg need?",
+     "o": [
+      "The PHM",
+      "FPC pumps",
+      "The NI Water System",
+      "None"
+     ],
+     "a": 3,
+     "x": "No powered SSCs are required.",
+     "anchor": "No powered SSCs are required to provide emergency makeup water via the exterior fill leg",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6",
+     "eo": "4,8"
+    }
+   ]
+  },
+  {
+   "title": "Handling and controls",
+   "eo": [
+    "3",
+    "5",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The PHM is a gantry-and-hoist crane that moves assemblies underwater from the cask loading pit to the racks.",
+     "anchor": "with the pool handling machine (PHM) gantry-and-hoist style crane",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+    },
+    {
+     "t": "p",
+     "text": "A mechanical positive control system ensures core assemblies cannot be dropped.",
+     "anchor": "A mechanical positive control system ensures core assemblies cannot be dropped",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9"
+    },
+    {
+     "t": "p",
+     "text": "PHM vertical motion limits and interlocks keep a minimum water height above core assemblies for shielding.",
+     "anchor": "The PHM vertical motion limits and interlocks ensure that core assemblies have a minimum water height",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9"
+    },
+    {
+     "t": "p",
+     "text": "The PHM is operated locally, and its data is monitored by the FHC.",
+     "anchor": "The PHM is operated locally and the equipment data is monitored by FHC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.5, p. 7.3-11"
+    },
+    {
+     "t": "p",
+     "text": "The FHC monitors and controls fuel handling from the Fuel Handling Control Room. It is NST.",
+     "anchor": "classified as non-safety-related with no special treatment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The SFP has redundant level and temperature instruments.",
+     "anchor": "The SFP contains redundant level and temperature instruments",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.5, p. 7.3-11"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What keeps minimum water shielding over an assembly on the PHM?",
+     "o": [
+      "Operator judgment alone",
+      "The FHC safety function",
+      "Pool liner height",
+      "Vertical motion limits and interlocks"
+     ],
+     "a": 3,
+     "x": "Vertical motion limits and interlocks ensure a minimum water height.",
+     "anchor": "The PHM vertical motion limits and interlocks ensure that core assemblies have a minimum water height",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9",
+     "eo": "3,5,6"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "FHP support"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR10 passive heat removal",
+        "SR",
+        "Natural circulation in the SFP if normal cooling is unavailable"
+       ],
+       "anchor": "DL3-HR10 Passive Heat Removal in FHP",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5"
+      },
+      {
+       "cells": [
+        "DL3-HR13 heat removal in the FFC",
+        "SR",
+        "Cold wall conduction from the FFC to the SFP"
+       ],
+       "anchor": "cooled (SR) passively via cold wall conduction from the FFC to the SFP",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5"
+      },
+      {
+       "cells": [
+        "DL3-RR8 FFC barrier",
+        "SR",
+        "Radionuclide confinement and no sodium-water interaction with the pool"
+       ],
+       "anchor": "DL3-RR8 Failed Fuel Canister Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5"
+      },
+      {
+       "cells": [
+        "DL3-RR5a BLTC transfer barrier",
+        "SR",
+        "Containment barrier in a BLTC to PIC transfer"
+       ],
+       "anchor": "DL3-RR5a BLTC Transfer Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5"
+      },
+      {
+       "cells": [
+        "DL4-HR4 emergency makeup",
+        "NSRST",
+        "External connection with unobstructed flow"
+       ],
+       "anchor": "DL4-HR4 FHP Emergency Makeup",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6"
+      },
+      {
+       "cells": [
+        "DL2-RR2 PIC radionuclide boundary",
+        "NSRST",
+        "Functional containment when an assembly is in the PIC"
+       ],
+       "anchor": "DL2-RR2 PIC Radionuclide Boundary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6"
+      },
+      {
+       "cells": [
+        "DL5-PAM1 post accident monitoring",
+        "NSRST",
+        "SFP level and temperature signals"
+       ],
+       "anchor": "DL5-PAM1 Post Accident Monitoring",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "RG 1.13 conformance is partial. Normal makeup is not Seismic Category I, and the design precludes a full core offload into the SFP.",
+     "anchor": "the design precludes a full core offload into the SFP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Equipment Qualification Program",
+      "Design Reliability Assurance Program",
+      "Post Construction Inspection, Testing, and Analysis Program",
+      "Reliability and Integrity Management Program"
+     ],
+     "anchor": "The programmatic special treatments, described in Section 8.0, that are applicable to FHP include",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.4, p. 7.3-10"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which FHP function is safety-related?",
+     "o": [
+      "Normal FPC cooling",
+      "Passive heat removal in the SFP",
+      "Emergency makeup",
+      "FPP purification"
+     ],
+     "a": 1,
+     "x": "DL3-HR10 is SR. FPC is NST, and emergency makeup is NSRST.",
+     "anchor": "DL3-HR10 Passive Heat Removal in FHP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The PIC cleans sodium off assemblies and moves them into the pool. Failed fuel skips cleaning and goes into a helium-filled FFC.",
+   "anchor": "No sodium cleaning occurs for a failed fuel assembly",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2"
+  },
+  {
+   "text": "The SFP stays subcritical through rack geometry and fixed borated absorbers, with no soluble boron.",
+   "anchor": "Since the SFP does not employ soluble boron",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1"
+  },
+  {
+   "text": "FPC is the normal cooling. The SR function is passive, and the pool lasts at least 7 days without makeup.",
+   "anchor": "The water volume of the SFP cools spent fuel for at least 7 days without makeup",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-10",
+ "title": "Water Pool Fuel Handling System",
+ "kind": "system",
+ "subject": "FHP",
+ "sec_note": "Sec. 7.3.1, pp. 7.3-1 to 7.3-16",
+ "intro": "The FHP is where spent fuel ends up. It takes assemblies out of sodium, cleans them, and stores them under water with passive cooling as the safety function.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the FHP.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the FHP boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the FHP.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain FHP operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the FHP controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the FHP automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the FHP.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the FHP.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the FHP.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the FHP.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-10-water-pool-fuel-handling-system"
+}

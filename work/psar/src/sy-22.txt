@@ -1,0 +1,40 @@
+# SY-22 | Anticipatory Automatic Seismic Trip System | system | AST
+range: 7.6-75 7.6-80
+sec: Sec. 7.6.8, pp. 7.6-75 to 7.6-80
+intro: The AST scrams the reactor before the peak seismic wave arrives. It is NSRST, separate from RPS logic, and acts directly on the reactor trip breakers.
+
+== Purpose and interfaces | 1,2
+S The AST measures ground motion, applies processing and logic, and sends actuation signals to the RTBs through the RPS interface device. @@ measures ground motion, applies required signal processing and logic
+S It is used in seismic beyond design basis events greater than the SSE, to scram before the peak wave reaches the facility. @@ to scram the reactor before the peak seismic wave reaches the facility
+S The RTB interface device is downstream of the RPS logic, where an analog relay matrix isolates the RTB power supply control. @@ is located downstream of the RPS logic process
+K What is the AST for? | Scram before the peak seismic wave reaches the facility | Trip the turbine | Close HVAC dampers | Isolate SCG | 0 | It scrams the reactor before the peak seismic wave. @@ to scram the reactor before the peak seismic wave reaches the facility
+K Where does the AST act? | Upstream of the RPS logic | On the RTBs, downstream of RPS logic | On rod motors | On PSPs | 1 | The RTB interface device is downstream of the RPS logic process. @@ is located downstream of the RPS logic process
+
+== Components and locations | 3
+L Triaxial seismic accelerometers ;; Signal processing unit ;; Bi-stable unit @@ each channel includes triaxial seismic accelerometers
+S There are four channels. @@ The AST consists of four channels
+S Accelerometers are in boreholes at four locations at 90-degree angles around the RXB. @@ are located in boreholes at four locations at 90-degree angles around the RXB
+S Signal processing is in cabinets in the NCB substructure. @@ The signal processing takes place in cabinets in the Nuclear Island Control Building substructure
+S Specific cabinet locations will be given at the OL stage. @@ will be described at the operating license
+F 7.6.8-1
+K Where are AST accelerometers? | On the reactor head | In boreholes around the RXB | In the MCR | On the stack | 1 | They are in boreholes at four locations around the RXB. @@ are located in boreholes at four locations at 90-degree angles around the RXB
+K What are the three parts of an AST channel? | Accelerometers, signal processing unit, bi-stable unit | Relay, fuse, breaker | Pump, valve, tank | Display, keyboard, mouse | 0 | Each channel has these three parts. @@ each channel includes triaxial seismic accelerometers
+
+== Operation and logic | 4,6
+S If the processing output passes the bi-stable setpoint, the bi-stable outputs an isolated signal to the shunt trip feature in the RTB. @@ then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB
+S The RTB arrangement gives 2-out-of-4 logic for reactor scram. @@ The RTB arrangement constitutes 2-out-of-4 logic for the reactor scram function
+S One failed channel cannot cause a spurious trip, because two RTBs on different channels are needed. @@ prevents spurious actuation caused by a failure of a single AST channel
+S Its function is DL4-RC4, automatic seismic trip. @@ DL4-RC4 Automatic seismic trip
+K Which RTB feature does the AST use? | Undervoltage coil | Shunt trip | Manual lever | Close coil | 1 | The bi-stable outputs an isolated signal to the shunt trip feature. @@ then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB
+K One AST channel fails high. Does the reactor trip? | Yes | No, two RTBs on different channels are needed | Only at full power | Only if RPS agrees | 1 | The arrangement prevents spurious actuation from a single channel failure. @@ prevents spurious actuation caused by a failure of a single AST channel
+
+== Testing and safety significance | 8,9,10
+S The AST is NSRST. @@ The AST is designed to perform a non-safety-related with special treatment (NSRST) function
+S Its components are seismic class SCN1. @@ The seismic classification of AST components is SCN1
+S It conforms to IEEE 338-2022 for testing and calibration. @@ The AST conforms to IEEE 338-2022 for testing and calibration capabilities
+S IEEE 379-2014 addresses single failure and IEEE 384-2018 addresses independence. @@ Single failure is addressed by applying IEEE 379-2014
+L Design Reliability Assurance Program ;; Equipment Qualification Program ;; Post-construction inspection, testing, and analysis program ;; Quality Assurance Program Description @@ are identified as applicable to the AST
+K What is the AST safety classification? | SR | NSRST | NST | Not classified | 1 | It performs an NSRST function. @@ The AST is designed to perform a non-safety-related with special treatment (NSRST) function
+Z Four accelerometer channels in boreholes around the RXB feed bi-stables that use the RTB shunt trip. @@ then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB
+Z The RTB arrangement gives 2-out-of-4 logic, so one bad channel cannot trip the plant. @@ prevents spurious actuation caused by a failure of a single AST channel
+Z The AST is NSRST function DL4-RC4 and acts for seismic beyond design basis events. @@ DL4-RC4 Automatic seismic trip

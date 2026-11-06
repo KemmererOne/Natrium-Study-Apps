@@ -1,0 +1,64 @@
+# SY-13 | Gaseous Radwaste Processing System | system | RWG
+range: 7.4-1 7.4-9
+sec: Sec. 7.4.1, pp. 7.4-1 to 7.4-9
+intro: The RWG delays and filters waste gas until short-lived isotopes decay, then sends a monitored release to the plant stack.
+
+== Purpose and classification | 1,2,9
+S The RWG processes gaseous waste from the primary SCG and the SCG exhaust distribution cabinet. @@ processes the gaseous waste streams from the primary Sodium Cover Gas System
+S It gives holdup for decay of short-lived isotopes such as argon-41. @@ holdup for the decay of short-lived radioactive isotopes such as argon-41
+S Charcoal beds give enhanced decay of longer lived isotopes like xenon and krypton before stack discharge. @@ provide enhanced decay of longer lived isotopes like xenon and krypton
+S The discharge is diluted by NHV airflow, and the combined exhaust is monitored and recorded. @@ RWG discharge to the plant stack is diluted by airflow from
+S The RWG is NSRST because it supports the retain radionuclides fundamental safety function. @@ supports the retain radionuclides fundamental safety function
+S Reactor operation and safe shutdown do not require the RWG. Its failure does not compromise any SR system or component. @@ The failure of the RWG does not compromise any safety-related system or component
+S Liquid radwaste and solid radwaste are NST systems described in Secs. 9.1 and 9.3. @@ The Liquid Radwaste Processing System is classified as non-safety-related with no special treatment
+K What is the RWG classification? | SR | NSRST | NST | Not classified | 1 | The RWG is NSRST. @@ supports the retain radionuclides fundamental safety function
+K The RWG fails at power. What is the effect on safe shutdown? | Reactor must scram | Safe shutdown is not prevented | Decay heat removal is lost | Scram gas is lost | 1 | Failure of the RWG does not prevent the safe shutdown of the plant. @@ does not prevent the safe shutdown of the plant
+
+== Flow path | 3,4
+S The RWG is below grade in the FHB. It is a once-through, ambient temperature charcoal adsorber delay system. @@ is a once-through, ambient temperature charcoal adsorber delay system
+T Step | Component | Job
+R 1 | Vacuum tank | Receives waste gas and gives short-term vacuum if compressor service is interrupted @@ The tank provides a short-term source of vacuum
+R 2 | Particulate filter | Upstream of each compressor @@ A particulate filter is located upstream of each RWG compressor
+R 3 | Compressor | One of two in parallel makes the vacuum @@ Vacuum is created by one of two compressors
+R 4 | Aftercooler | Chilled water from the NI Water System cools the gas @@ The waste gas stream (tube side) is cooled by chilled water
+R 5 | Holdup tank | Delays flow 24 hours for argon-41 decay @@ which is designed to delay flow for 24 hours allowing decay of argon-41
+R 6 | Pressure reducing valve | Prevents high pressure in the charcoal beds @@ to prevent high pressure within the charcoal adsorber beds
+R 7 | Charcoal adsorber beds | Four in parallel, optimized for xenon and krypton retention @@ There are four charcoal adsorber beds configured in parallel
+R 8 | NHV plant stack | Monitored effluent path to the environment @@ which provides the monitored effluent path to the environment
+S The holdup tank is baffled to minimize gas mixing and maximize retention time. @@ The tank is baffled to minimize gas mixing and maximize retention time
+S HEPA filters are upstream and downstream of each charcoal bed. @@ High efficiency particulate air filters are located upstream and downstream of each charcoal adsorber bed
+F 7.4.1-1
+K How long does the holdup tank delay flow? | 1 hour | 8 hours | 24 hours | 72 hours | 2 | The tank delays flow for 24 hours to allow decay of argon-41. @@ which is designed to delay flow for 24 hours allowing decay of argon-41
+K What do the charcoal beds retain? | Argon-41 only | Xenon and krypton | Cesium | Tritium | 1 | The charcoal is optimized for xenon and krypton retention. @@ activated charcoal optimized for xenon and krypton retention
+K How are the charcoal beds arranged? | Four in series | Four in parallel | Two in series | One bed | 1 | There are four beds in parallel. @@ There are four charcoal adsorber beds configured in parallel
+
+== Automatic features | 5,6,8
+S A single compressor starts when vacuum pressure reaches a setpoint. @@ a single compressor starts when vacuum pressure reaches a setpoint
+S On compressor failure, the failed compressor isolates and the alternate starts. @@ the failed compressor is isolated and the alternate compressor starts
+S A high aftercooler outlet temperature alarms to alert the operator of inadequate cooling. @@ indicating inadequate cooling, an alarm will be triggered
+S A filter with high differential pressure from particulate buildup can be isolated and replaced. @@ can be isolated and replaced when a high differential pressure exists
+S Radiation monitors on each charcoal bed discharge isolate flow on high radiation. @@ flow is isolated in the event of high radiation
+S Radioactivity readings give automatic termination of releases as necessary. Valves for this are designed to fail closed. @@ Valves used for automatic termination of release are designed to fail closed
+S Radiation readouts are in the MCR, with more readouts in controlled areas. @@ Radiation monitoring readouts are located in the main control room
+S The Auxiliary Monitoring and Control System sends control signals and receives flow, pressure, and temperature data. @@ provides control signal and receives instrument data from the RWG for flow, pressure, and temperature
+K The running compressor fails. What happens? | RWG stops | Failed compressor isolates and the alternate starts | Reactor scrams | Waste gas vents to the stack unprocessed | 1 | The failed compressor is isolated and the alternate compressor starts. @@ the failed compressor is isolated and the alternate compressor starts
+K A charcoal bed discharge monitor reads high. What happens? | Flow is isolated | Flow increases | Tank bypass opens | Only a log entry | 0 | Flow is isolated in the event of high radiation. @@ flow is isolated in the event of high radiation
+K What is the failure position of release termination valves? | Open | Closed | As is | Throttled | 1 | They are designed to fail closed. @@ Valves used for automatic termination of release are designed to fail closed
+K An aftercooler outlet temperature alarm comes in. What does it indicate? | Inadequate cooling | Charcoal fire | Holdup tank full | A sodium leak | 0 | A high setpoint alarm indicates inadequate cooling. @@ indicating inadequate cooling, an alarm will be triggered
+
+== Modes and power | 4,9
+S The RWG is operable in all modes of reactor operation. @@ The RWG is operable in all modes of reactor operation
+S It is not required to mitigate design basis events or accidents. It operates during normal operations and AOOs. @@ is not required to mitigate the consequences of design basis events or design basis accidents
+S It does not need power for any NSRST function. @@ The RWG does not need power for any NSRST function
+K Does the RWG need power for its NSRST function? | Yes, from the batteries | No | Yes, from the NLV | Only in Mode 1 | 1 | The RWG does not need power for any NSRST function. @@ The RWG does not need power for any NSRST function
+
+== Safety significance | 9,10
+S DL2-RR4 is the RWG function: RWG components, including seals, form a radionuclide confinement boundary that prevents uncontrolled release. @@ radionuclide confinement boundary which prevents the uncontrolled release of radionuclides
+S The design conforms to RG 8.8 with shielded cubicles and remotely operated equipment for ALARA. @@ including shielded cubicles and remotely operated equipment
+S RWG conformance to RG 1.143 is partial. @@ Partial Conformance. The RWG is designed in conformance with RG 1.143
+S A cost-benefit analysis will be done at the OL stage. @@ A cost-benefit analysis will be performed at the OL stage
+L Equipment Qualification Program ;; Quality Assurance Program ;; Design Reliability Assurance Program ;; Post-Construction Inspection, Testing, and Analysis Program ;; Reliability and Integrity Management Program @@ The following programmatic special treatments are preliminarily identified as applicable to the RWG
+K What does DL2-RR4 require of the RWG? | Forced flow | A radionuclide confinement boundary | Heat removal | Reactivity control | 1 | RWG components, including seals, form a radionuclide confinement boundary. @@ radionuclide confinement boundary which prevents the uncontrolled release of radionuclides
+Z Waste gas goes through a vacuum tank, compressor, 24 hour holdup tank, and four charcoal beds to the monitored stack. @@ There are four charcoal adsorber beds configured in parallel
+Z High radiation isolates charcoal bed flow, and release termination valves fail closed. @@ Valves used for automatic termination of release are designed to fail closed
+Z The RWG is NSRST, is not needed for safe shutdown, and needs no power for its NSRST function. @@ The RWG does not need power for any NSRST function

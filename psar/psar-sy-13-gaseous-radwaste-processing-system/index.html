@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Gaseous Radwaste Processing System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-13-gaseous-radwaste-processing-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The RWG delays and filters waste gas until short-lived isotopes decay, then sends a monitored release to the plant stack. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.4.1, pp. 7.4-1 to 7.4-9</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the RWG.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and classification</a></p><p><span class="num">2</span> Identify the RWG boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and classification</a></p><p><span class="num">3</span> Identify the major components of the RWG.</p><p class="gap">Taught in: <a href="#concept-2">Flow path</a></p><p><span class="num">4</span> Explain RWG operation.</p><p class="gap">Taught in: <a href="#concept-2">Flow path</a>, <a href="#concept-4">Modes and power</a></p><p><span class="num">5</span> Describe the RWG controls and indications.</p><p class="gap">Taught in: <a href="#concept-3">Automatic features</a></p><p><span class="num">6</span> Explain the RWG automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Automatic features</a></p><p><span class="num">7</span> Apply operating procedures for the RWG.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the RWG.</p><p class="gap">Taught in: <a href="#concept-3">Automatic features</a></p><p><span class="num">9</span> Explain the safety significance of the RWG.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and classification</a>, <a href="#concept-4">Modes and power</a>, <a href="#concept-5">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the RWG.</p><p class="gap">Taught in: <a href="#concept-5">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and classification <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and classification</h2><p class="count">Objectives 1, 2, 9</p><p>The RWG processes gaseous waste from the primary SCG and the SCG exhaust distribution cabinet. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>It gives holdup for decay of short-lived isotopes such as argon-41. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>Charcoal beds give enhanced decay of longer lived isotopes like xenon and krypton before stack discharge. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>The discharge is diluted by NHV airflow, and the combined exhaust is monitored and recorded. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>The RWG is NSRST because it supports the retain radionuclides fundamental safety function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>Reactor operation and safe shutdown do not require the RWG. Its failure does not compromise any SR system or component. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+<p>Liquid radwaste and solid radwaste are NST systems described in Secs. 9.1 and 9.3. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4, p. 7.4-1</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and classification <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and classification</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,2,9</span><span>SY-13-K1</span></div>
+  <p>What is the RWG classification?</p>
+  <div class="opts"><button type="button" class="opt">A. NST</button><button type="button" class="opt">B. Not classified</button><button type="button" class="opt">C. SR</button><button type="button" class="opt">D. NSRST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The RWG is NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K1&amp;body=Item%3A%20SY-13-K1%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20What%20is%20the%20RWG%20classification%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.1%2C%20p.%207.4-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,2,9</span><span>SY-13-K2</span></div>
+  <p>The RWG fails at power. What is the effect on safe shutdown?</p>
+  <div class="opts"><button type="button" class="opt">A. Decay heat removal is lost</button><button type="button" class="opt">B. Scram gas is lost</button><button type="button" class="opt">C. Reactor must scram</button><button type="button" class="opt">D. Safe shutdown is not prevented</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Failure of the RWG does not prevent the safe shutdown of the plant. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K2&amp;body=Item%3A%20SY-13-K2%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20The%20RWG%20fails%20at%20power.%20What%20is%20the%20effect%20on%20safe%20shutdown%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.1%2C%20p.%207.4-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and classification</a><a class="next" href="#concept-2">Flow path <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Flow path</h2><p class="count">Objectives 3, 4</p><p>The RWG is below grade in the FHB. It is a once-through, ambient temperature charcoal adsorber delay system. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-4</cite></p>
+<table class="tbl"><thead><tr><th>Step</th><th>Component</th><th>Job</th></tr></thead><tbody><tr><td>1</td><td>Vacuum tank</td><td>Receives waste gas and gives short-term vacuum if compressor service is interrupted <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-4</cite></td></tr><tr><td>2</td><td>Particulate filter</td><td>Upstream of each compressor <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></td></tr><tr><td>3</td><td>Compressor</td><td>One of two in parallel makes the vacuum <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-4</cite></td></tr><tr><td>4</td><td>Aftercooler</td><td>Chilled water from the NI Water System cools the gas <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></td></tr><tr><td>5</td><td>Holdup tank</td><td>Delays flow 24 hours for argon-41 decay <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></td></tr><tr><td>6</td><td>Pressure reducing valve</td><td>Prevents high pressure in the charcoal beds <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></td></tr><tr><td>7</td><td>Charcoal adsorber beds</td><td>Four in parallel, optimized for xenon and krypton retention <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></td></tr><tr><td>8</td><td>NHV plant stack</td><td>Monitored effluent path to the environment <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-6</cite></td></tr></tbody></table>
+<p>The holdup tank is baffled to minimize gas mixing and maximize retention time. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>HEPA filters are upstream and downstream of each charcoal bed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: Gaseous Radwaste Processing System Overview"><figcaption>Figure 7.4.1-1. Gaseous Radwaste Processing System Overview <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-9</cite></figcaption></figure>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and classification</a><a class="next" href="#check-2">Knowledge check: Flow path <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Flow path</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 3,4</span><span>SY-13-K3</span></div>
+  <p>How long does the holdup tank delay flow?</p>
+  <div class="opts"><button type="button" class="opt">A. 1 hour</button><button type="button" class="opt">B. 8 hours</button><button type="button" class="opt">C. 24 hours</button><button type="button" class="opt">D. 72 hours</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The tank delays flow for 24 hours to allow decay of argon-41. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K3&amp;body=Item%3A%20SY-13-K3%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20How%20long%20does%20the%20holdup%20tank%20delay%20flow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3,4</span><span>SY-13-K4</span></div>
+  <p>What do the charcoal beds retain?</p>
+  <div class="opts"><button type="button" class="opt">A. Argon-41 only</button><button type="button" class="opt">B. Xenon and krypton</button><button type="button" class="opt">C. Cesium</button><button type="button" class="opt">D. Tritium</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The charcoal is optimized for xenon and krypton retention. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K4&amp;body=Item%3A%20SY-13-K4%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20What%20do%20the%20charcoal%20beds%20retain%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3,4</span><span>SY-13-K5</span></div>
+  <p>How are the charcoal beds arranged?</p>
+  <div class="opts"><button type="button" class="opt">A. Four in series</button><button type="button" class="opt">B. Four in parallel</button><button type="button" class="opt">C. Two in series</button><button type="button" class="opt">D. One bed</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. There are four beds in parallel. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K5&amp;body=Item%3A%20SY-13-K5%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20How%20are%20the%20charcoal%20beds%20arranged%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Flow path</a><a class="next" href="#concept-3">Automatic features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Automatic features</h2><p class="count">Objectives 5, 6, 8</p><p>A single compressor starts when vacuum pressure reaches a setpoint. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>On compressor failure, the failed compressor isolates and the alternate starts. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>A high aftercooler outlet temperature alarms to alert the operator of inadequate cooling. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>A filter with high differential pressure from particulate buildup can be isolated and replaced. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>Radiation monitors on each charcoal bed discharge isolate flow on high radiation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+<p>Radioactivity readings give automatic termination of releases as necessary. Valves for this are designed to fail closed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7</cite></p>
+<p>Radiation readouts are in the MCR, with more readouts in controlled areas. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7</cite></p>
+<p>The Auxiliary Monitoring and Control System sends control signals and receives flow, pressure, and temperature data. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Flow path</a><a class="next" href="#check-3">Knowledge check: Automatic features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Automatic features</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-13-K6</span></div>
+  <p>The running compressor fails. What happens?</p>
+  <div class="opts"><button type="button" class="opt">A. Waste gas vents to the stack unprocessed</button><button type="button" class="opt">B. RWG stops</button><button type="button" class="opt">C. Failed compressor isolates and the alternate starts</button><button type="button" class="opt">D. Reactor scrams</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The failed compressor is isolated and the alternate compressor starts. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K6&amp;body=Item%3A%20SY-13-K6%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20The%20running%20compressor%20fails.%20What%20happens%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-13-K7</span></div>
+  <p>A charcoal bed discharge monitor reads high. What happens?</p>
+  <div class="opts"><button type="button" class="opt">A. Only a log entry</button><button type="button" class="opt">B. Flow is isolated</button><button type="button" class="opt">C. Flow increases</button><button type="button" class="opt">D. Tank bypass opens</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Flow is isolated in the event of high radiation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K7&amp;body=Item%3A%20SY-13-K7%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20A%20charcoal%20bed%20discharge%20monitor%20reads%20high.%20What%20happens%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-13-K8</span></div>
+  <p>What is the failure position of release termination valves?</p>
+  <div class="opts"><button type="button" class="opt">A. Throttled</button><button type="button" class="opt">B. Open</button><button type="button" class="opt">C. Closed</button><button type="button" class="opt">D. As is</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. They are designed to fail closed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K8&amp;body=Item%3A%20SY-13-K8%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20What%20is%20the%20failure%20position%20of%20release%20termination%20valves%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.5%2C%20p.%207.4-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-13-K9</span></div>
+  <p>An aftercooler outlet temperature alarm comes in. What does it indicate?</p>
+  <div class="opts"><button type="button" class="opt">A. A sodium leak</button><button type="button" class="opt">B. Inadequate cooling</button><button type="button" class="opt">C. Charcoal fire</button><button type="button" class="opt">D. Holdup tank full</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. A high setpoint alarm indicates inadequate cooling. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K9&amp;body=Item%3A%20SY-13-K9%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20An%20aftercooler%20outlet%20temperature%20alarm%20comes%20in.%20What%20does%20it%20indicate%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Automatic features</a><a class="next" href="#concept-4">Modes and power <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Modes and power</h2><p class="count">Objectives 4, 9</p><p>The RWG is operable in all modes of reactor operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.2, p. 7.4-6</cite></p>
+<p>It is not required to mitigate design basis events or accidents. It operates during normal operations and AOOs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.2, p. 7.4-6</cite></p>
+<p>It does not need power for any NSRST function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-6</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Automatic features</a><a class="next" href="#check-4">Knowledge check: Modes and power <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Modes and power</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 4,9</span><span>SY-13-K10</span></div>
+  <p>Does the RWG need power for its NSRST function?</p>
+  <div class="opts"><button type="button" class="opt">A. Yes, from the batteries</button><button type="button" class="opt">B. No</button><button type="button" class="opt">C. Yes, from the NLV</button><button type="button" class="opt">D. Only in Mode 1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The RWG does not need power for any NSRST function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K10&amp;body=Item%3A%20SY-13-K10%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20Does%20the%20RWG%20need%20power%20for%20its%20NSRST%20function%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.3.1%2C%20p.%207.4-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Modes and power</a><a class="next" href="#concept-5">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>DL2-RR4 is the RWG function: RWG components, including seals, form a radionuclide confinement boundary that prevents uncontrolled release. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-3</cite></p>
+<p>The design conforms to RG 8.8 with shielded cubicles and remotely operated equipment for ALARA. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-4</cite></p>
+<p>RWG conformance to RG 1.143 is partial. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-4</cite></p>
+<p>A cost-benefit analysis will be done at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-3</cite></p>
+<ul><li>Equipment Qualification Program</li><li>Quality Assurance Program</li><li>Design Reliability Assurance Program</li><li>Post-Construction Inspection, Testing, and Analysis Program</li><li>Reliability and Integrity Management Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.4, p. 7.4-6</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Modes and power</a><a class="next" href="#check-5">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 9,10</span><span>SY-13-K11</span></div>
+  <p>What does DL2-RR4 require of the RWG?</p>
+  <div class="opts"><button type="button" class="opt">A. Heat removal</button><button type="button" class="opt">B. Reactivity control</button><button type="button" class="opt">C. Forced flow</button><button type="button" class="opt">D. A radionuclide confinement boundary</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. RWG components, including seals, form a radionuclide confinement boundary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-13-K11&amp;body=Item%3A%20SY-13-K11%0ALesson%3A%20Gaseous%20Radwaste%20Processing%20System%0AQuestion%3A%20What%20does%20DL2-RR4%20require%20of%20the%20RWG%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.4.1.2%2C%20p.%207.4-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Waste gas goes through a vacuum tank, compressor, 24 hour holdup tank, and four charcoal beds to the monitored stack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5</cite></li><li>High radiation isolates charcoal bed flow, and release termination valves fail closed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7</cite></li><li>The RWG is NSRST, is not needed for safe shutdown, and needs no power for its NSRST function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-6</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 13</span></div>
+<h1>Gaseous Radwaste Processing System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and classification</a></li><li><a href="#check-1">Knowledge check: Purpose and classification</a></li><li><a href="#concept-2">Flow path</a></li><li><a href="#check-2">Knowledge check: Flow path</a></li><li><a href="#concept-3">Automatic features</a></li><li><a href="#check-3">Knowledge check: Automatic features</a></li><li><a href="#concept-4">Modes and power</a></li><li><a href="#check-4">Knowledge check: Modes and power</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.4, 7.4.1.1, 7.4.1.2, 7.4.1.3.1, 7.4.1.3.2, 7.4.1.4, 7.4.1.5</p><p>Pages 7.4-1, 7.4-3, 7.4-4, 7.4-5, 7.4-6, 7.4-7, 7.4-9</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-13&amp;body=Lesson%3A%20SY-13%20Gaseous%20Radwaste%20Processing%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

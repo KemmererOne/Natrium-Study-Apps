@@ -1,0 +1,36 @@
+# EV-06 | Local Fuel Fault DBEs | event | event
+range: 3.7-15 3.7-16 3.3-2 3.3-2 3.3-6 3.3-6
+sec: Sec. 3.7.5, pp. 3.7-15 to 3.7-16, with Secs. 3.3.1.3 and 3.3.4.1.5
+intro: A local fuel fault damages fuel without moving bulk plant parameters. Operators, not automatic trips, end this event.
+
+== Event initiator and assumptions | 1
+S The initiator is a blockage of fuel subchannels or another localized fault in the core during full power operation, resulting in fuel damage. @@ a blockage of fuel subchannels or other localized faults within the reactor core
+S Partial flow blockage is evaluated because of the tight pin spacing, high power density, and high burnup of sodium fast reactor assemblies. @@ namely the tight spacing of fuel pins, high power density, and high burnup
+L Debris circulated in the primary sodium ;; Failure of wire-wrapped spacers ;; Swelling or bowing of the fuel pins @@ may be initiated due to an accumulation of debris
+S The assumption that an entire assembly failed is conservative and deterministic. @@ The assumption that an entire fuel assembly failed due to the event is conservative
+K Which is a stated cause of partial flow blockage? | Loss of offsite power | Failure of wire-wrapped spacers | IAC blower failure | Cover gas leak | 1 | Causes are debris, failed wire-wrapped spacers, and swelling or bowing of pins. @@ a failure of wire-wrapped spacers
+
+== Challenged functions | 2
+S The event challenges cladding, so retention depends on the barriers past the fuel. Functional containment barriers perform their functions, but a release occurs. @@ barriers successfully perform their radionuclide retention functions, but a radionuclide release occurs
+S Mean 30-day EAB TEDE is 5.70E-03 rem. @@ 82E-03 5.70E-03 9.87E-03
+K In LFF-SAO-BL, is there a release? | No, because the cladding holds | Yes, though barriers perform their functions | Only with vessel failure | Only at low power | 1 | Barriers perform their functions, but a radionuclide release occurs. @@ barriers successfully perform their radionuclide retention functions, but a radionuclide release occurs
+
+== Event chronology and trends | 3,4
+T Step | LFF-SAO-BL
+R 1 | Local fault at full power causes fuel damage @@ resulting in fuel damage
+R 2 | Operators manually shut down on exceeding failed fuel activity limits @@ Operators manually shutdown the reactor due to exceeding failed fuel activity limits
+R 3 | Safe shutdown with IAC non-passive mode @@ with the IAC non-passive mode providing decay heat removal
+S The fault does not cause primary sodium temperature to increase outside nominal operating conditions. @@ does not cause the primary sodium temperature to increase outside of nominal operating conditions
+K How does primary sodium temperature respond to a local fuel fault? | It rises to the scram setpoint | It stays within nominal operating conditions | It drops sharply | It oscillates | 1 | The fault does not cause temperature to increase outside nominal conditions. @@ does not cause the primary sodium temperature to increase outside of nominal operating conditions
+
+== Protective action and operator role | 5,12
+S Operators may scram the reactor if needed for failed fuel activity, but a scram is not required to keep consequences within analyzed limits. @@ a scram is not required to maintain the LBE consequences within analyzed limits
+K Why do operators shut down in LFF-SAO-BL? | High high flux | Failed fuel activity limits are exceeded | Loss of flow | Low sodium level | 1 | Operators shut down manually due to exceeding failed fuel activity limits. @@ Operators manually shutdown the reactor due to exceeding failed fuel activity limits
+
+== End state and source term | 10
+S Eighty percent of the released non-noble gas radionuclides are postulated to enter the cover gas in bubbles without pool scrubbing. @@ Eighty percent of released non-noble gas radionuclides
+S Release from the primary boundary is 1 percent of cover gas volume per day, then 10 percent of HAA volume per day to the environment. @@ at an assumed rate of 10 percent of the HAA volume per day
+K What fraction of non-noble gas radionuclides is assumed to bypass pool scrubbing? | 1 percent | 10 percent | 50 percent | 80 percent | 3 | Eighty percent are postulated to enter the cover gas without scrubbing. @@ Eighty percent of released non-noble gas radionuclides
+
+Z Local faults damage fuel without moving bulk sodium temperature. @@ does not cause the primary sodium temperature to increase outside of nominal operating conditions
+Z Failed fuel activity limits drive manual shutdown. @@ Operators manually shutdown the reactor due to exceeding failed fuel activity limits

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Reactor Protection System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-17-reactor-protection-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The RPS is the safety-related logic that scrams the reactor and trips pumps. Four divisions, two-out-of-four voting, and de-energize to trip are the three ideas to master. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.6.3, pp. 7.6-18 to 7.6-35</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the RPS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and divisions</a></p><p><span class="num">2</span> Identify the RPS boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and divisions</a></p><p><span class="num">3</span> Identify the major components of the RPS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and divisions</a></p><p><span class="num">4</span> Explain RPS operation.</p><p class="gap">Taught in: <a href="#concept-2">Signal path and voting</a>, <a href="#concept-5">De-energize to trip</a></p><p><span class="num">5</span> Describe the RPS controls and indications.</p><p class="gap">Taught in: <a href="#concept-7">Manual actions and indications</a></p><p><span class="num">6</span> Explain the RPS automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Reactor scram functions</a>, <a href="#concept-4">ESF pump trips</a>, <a href="#concept-5">De-energize to trip</a></p><p><span class="num">7</span> Apply operating procedures for the RPS.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the RPS.</p><p class="gap">Taught in: <a href="#concept-5">De-energize to trip</a>, <a href="#concept-6">Testing and single failure</a></p><p><span class="num">9</span> Explain the safety significance of the RPS.</p><p class="gap">Taught in: <a href="#concept-8">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the RPS.</p><p class="gap">Taught in: <a href="#concept-6">Testing and single failure</a>, <a href="#concept-8">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and divisions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and divisions</h2><p class="count">Objectives 1, 2, 3</p><p>The RPS takes plant instrument signals, applies logic, and generates outputs for reactor scram and ESF actuations. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<p>It is arranged into four redundant divisions, A, B, C, and D. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<p>Each process variable is measured by four redundant instruments or groups of instruments. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<p>RPS equipment is in four division-specific vaults, DCS, and CRD cabinet rooms in the NCB substructure, and in the MCR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19</cite></p>
+<p>The vault and cabinet rooms contain RPS electronics cabinets and reactor trip breakers (RTBs). <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19</cite></p>
+<p>The RPS uses the RadICS platform. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.1, p. 7.6-19</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and divisions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and divisions</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-17-K1</span></div>
+  <p>How many RPS divisions are there?</p>
+  <div class="opts"><button type="button" class="opt">A. Four</button><button type="button" class="opt">B. Eight</button><button type="button" class="opt">C. Two</button><button type="button" class="opt">D. Three</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. There are four redundant divisions: A, B, C, and D. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K1&amp;body=Item%3A%20SY-17-K1%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20How%20many%20RPS%20divisions%20are%20there%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1%2C%20p.%207.6-18%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-17-K2</span></div>
+  <p>Where are the RPS divisions located?</p>
+  <div class="opts"><button type="button" class="opt">A. RXB head access area</button><button type="button" class="opt">B. Division-specific vaults in the NCB substructure</button><button type="button" class="opt">C. RAB</button><button type="button" class="opt">D. FHB</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Equipment is in the division-specific vault and cabinet rooms in the NCB substructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K2&amp;body=Item%3A%20SY-17-K2%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Where%20are%20the%20RPS%20divisions%20located%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1.2%2C%20p.%207.6-19%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and divisions</a><a class="next" href="#concept-2">Signal path and voting <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Signal path and voting</h2><p class="count">Objectives 4</p><table class="tbl"><thead><tr><th>Step</th><th>What happens</th></tr></thead><tbody><tr><td>1</td><td>Each division receives analog signals from one division of sensors <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr><tr><td>2</td><td>The safety function chassis converts signals to digital and applies logic <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr><tr><td>3</td><td>Variables are compared to setpoints in that division <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr><tr><td>4</td><td>A division above setpoint asserts a divisional vote <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr><tr><td>5</td><td>Each division shares its vote with all other divisions <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr><tr><td>6</td><td>With two or more votes on the same parameter, a division generates its output <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></td></tr></tbody></table>
+<p>The RPS actuates when at least 2 out of the 4 divisions determine action is required. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and divisions</a><a class="next" href="#check-2">Knowledge check: Signal path and voting <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Signal path and voting</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>SY-17-K3</span></div>
+  <p>When does a division generate its output?</p>
+  <div class="opts"><button type="button" class="opt">A. When two or more divisions vote on the same parameter</button><button type="button" class="opt">B. When any two parameters in one division trip</button><button type="button" class="opt">C. When all four divisions vote</button><button type="button" class="opt">D. When its own variable passes setpoint</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Two or more votes must be on the same input parameter. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K3&amp;body=Item%3A%20SY-17-K3%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20When%20does%20a%20division%20generate%20its%20output%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1%2C%20p.%207.6-18%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4</span><span>SY-17-K4</span></div>
+  <p>Division A votes on high flux, and Division B votes on high hot pool temperature. Do they combine to scram?</p>
+  <div class="opts"><button type="button" class="opt">A. Only at full power</button><button type="button" class="opt">B. Only if C agrees</button><button type="button" class="opt">C. Yes</button><button type="button" class="opt">D. No, the votes must be on the same parameter</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The vote is parameter-specific. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K4&amp;body=Item%3A%20SY-17-K4%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Division%20A%20votes%20on%20high%20flux%2C%20and%20Division%20B%20votes%20on%20high%20hot%20pool%20temperature.%20Do%20they%20combine%20to%20scram%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1%2C%20p.%207.6-18%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Signal path and voting</a><a class="next" href="#concept-3">Reactor scram functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactor scram functions</h2><p class="count">Objectives 6</p><table class="tbl"><thead><tr><th>Function</th><th>Scram on</th><th>Inputs</th></tr></thead><tbody><tr><td>DL3-RC1a</td><td>High-high neutron flux, power range high setpoint</td><td>XIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1b</td><td>High-high hot pool temperature</td><td>RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1c</td><td>High-high primary sodium level</td><td>RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1d</td><td>High-high power-to-flow ratio</td><td>XIS, plus PSP speed and current from RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1e</td><td>High-high cold pool temperature</td><td>RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1f</td><td>High-high positive neutron flux rate</td><td>XIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1g</td><td>High-high negative neutron flux rate</td><td>XIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1h</td><td>Low-low primary sodium level</td><td>RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></td></tr><tr><td>DL3-RC1i</td><td>Low power, high neutron flux, power range low setpoint</td><td>XIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr><tr><td>DL3-RC1j</td><td>Loss of primary sodium flow</td><td>PSP speed and current from RIS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr><tr><td>DL3-RC2</td><td>Loss of power: outputs fail to the safe state</td><td>None <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr></tbody></table>
+<p>Primary sodium flow is calculated by the RPS from PSP speed and current. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Signal path and voting</a><a class="next" href="#check-3">Knowledge check: Reactor scram functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactor scram functions</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 6</span><span>SY-17-K5</span></div>
+  <p>How does the RPS determine primary sodium flow?</p>
+  <div class="opts"><button type="button" class="opt">A. From IHT flow</button><button type="button" class="opt">B. From neutron flux</button><button type="button" class="opt">C. A flowmeter in the hot pool</button><button type="button" class="opt">D. Calculated from PSP speed and current</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. RPS calculates flow from PSP speed and current inputs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K5&amp;body=Item%3A%20SY-17-K5%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20How%20does%20the%20RPS%20determine%20primary%20sodium%20flow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.1%2C%20p.%207.6-23%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 6</span><span>SY-17-K6</span></div>
+  <p>Which scram uses both XIS and pump inputs?</p>
+  <div class="opts"><button type="button" class="opt">A. Power-to-flow ratio</button><button type="button" class="opt">B. Low-low level</button><button type="button" class="opt">C. High-high cold pool temperature</button><button type="button" class="opt">D. High-high flux</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. DL3-RC1d uses neutron flux and calculated primary flow. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K6&amp;body=Item%3A%20SY-17-K6%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Which%20scram%20uses%20both%20XIS%20and%20pump%20inputs%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.1%2C%20p.%207.6-23%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>SY-17-K7</span></div>
+  <p>Which is a reactor scram parameter?</p>
+  <div class="opts"><button type="button" class="opt">A. Low EVST temperature</button><button type="button" class="opt">B. High RAC stack flow</button><button type="button" class="opt">C. High-high negative flux rate</button><button type="button" class="opt">D. High IHT pressure</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. DL3-RC1g is a scram on high-high negative neutron flux rate. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K7&amp;body=Item%3A%20SY-17-K7%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Which%20is%20a%20reactor%20scram%20parameter%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.1%2C%20p.%207.6-23%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Reactor scram functions</a><a class="next" href="#concept-4">ESF pump trips <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>ESF pump trips</h2><p class="count">Objectives 6</p><p>RPS ESF functions trip pump breakers, because stopping the pump is evaluated as the safe state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<table class="tbl"><thead><tr><th>Function</th><th>Trip</th><th>Conditions</th></tr></thead><tbody><tr><td>DL3-HR2</td><td>PSPs</td><td>Scram signal, cold pool temperature above setpoint, and flux below setpoint <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr><tr><td>DL3-HR3</td><td>ISPs</td><td>Scram signal, cold pool temperature above setpoint, and flux below setpoint <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr><tr><td>DL3-HR11</td><td>SPS-P pump</td><td>Low primary sodium level in the hot pool <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr><tr><td>DL3-HR12</td><td>ISPs</td><td>High-high primary sodium level, with scram and flux inputs <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Reactor scram functions</a><a class="next" href="#check-4">Knowledge check: ESF pump trips <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: ESF pump trips</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>SY-17-K8</span></div>
+  <p>What three conditions trip the PSPs under DL3-HR2?</p>
+  <div class="opts"><button type="button" class="opt">A. Seismic trip, high level, low flow</button><button type="button" class="opt">B. Manual switch only</button><button type="button" class="opt">C. Scram signal, cold pool temperature above setpoint, flux below setpoint</button><button type="button" class="opt">D. Low level, high flux, scram</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. DL3-HR2 needs a scram signal, high cold pool temperature, and low flux. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K8&amp;body=Item%3A%20SY-17-K8%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20What%20three%20conditions%20trip%20the%20PSPs%20under%20DL3-HR2%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.1%2C%20p.%207.6-24%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 6</span><span>SY-17-K9</span></div>
+  <p>What is the safe state for RPS ESF functions?</p>
+  <div class="opts"><button type="button" class="opt">A. Valves open</button><button type="button" class="opt">B. Pumps at half speed</button><button type="button" class="opt">C. Pumps running</button><button type="button" class="opt">D. Pumps stopped</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Tripping pump breakers to stop the pump is evaluated as the safe state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K9&amp;body=Item%3A%20SY-17-K9%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20What%20is%20the%20safe%20state%20for%20RPS%20ESF%20functions%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-28%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> ESF pump trips</a><a class="next" href="#concept-5">De-energize to trip <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>De-energize to trip</h2><p class="count">Objectives 4, 6, 8</p><p>In normal operation, the RPS keeps voltage on the RTB undervoltage coils, which holds RTBs closed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>Closed RTBs keep power on CRD solenoid valve coils, which keep argon pressure to hold the rods. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>On loss of incoming power, RTBs open, CRD argon vents, and rods drop by gravity. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>ESF circuits also de-energize to trip. On loss of power, relay contacts open and pump breakers trip. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>On a critical fault found by self-diagnostics, the system places all outputs in the safe, tripped state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>Range-checking detects loss of power at a transmitting system, and the RPS places the associated outputs in the safe state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+<p>Once started, the sequence of protective actions continues to completion. Deliberate operator action is required to return the RPS to normal. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.3, p. 7.6-32</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: ESF pump trips</a><a class="next" href="#check-5">Knowledge check: De-energize to trip <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: De-energize to trip</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,6,8</span><span>SY-17-K10</span></div>
+  <p>RPS incoming power is lost. What happens?</p>
+  <div class="opts"><button type="button" class="opt">A. Motors drive rods out</button><button type="button" class="opt">B. RTBs stay closed</button><button type="button" class="opt">C. Nothing</button><button type="button" class="opt">D. RTBs open and rods drop by gravity</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The circuit is de-energize to trip. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K10&amp;body=Item%3A%20SY-17-K10%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20RPS%20incoming%20power%20is%20lost.%20What%20happens%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-28%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6,8</span><span>SY-17-K11</span></div>
+  <p>Self-diagnostics find a critical fault. What does the RPS do?</p>
+  <div class="opts"><button type="button" class="opt">A. Places all outputs in the safe state</button><button type="button" class="opt">B. Reboots</button><button type="button" class="opt">C. Bypasses the division</button><button type="button" class="opt">D. Alarms only</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The system places all outputs to the safe, tripped state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K11&amp;body=Item%3A%20SY-17-K11%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Self-diagnostics%20find%20a%20critical%20fault.%20What%20does%20the%20RPS%20do%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-28%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,6,8</span><span>SY-17-K12</span></div>
+  <p>What is needed to return the RPS to normal after an actuation?</p>
+  <div class="opts"><button type="button" class="opt">A. Parameter below setpoint</button><button type="button" class="opt">B. Reset by the NIC</button><button type="button" class="opt">C. Time delay</button><button type="button" class="opt">D. Deliberate operator action</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Deliberate operator action is required. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.3, p. 7.6-32</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K12&amp;body=Item%3A%20SY-17-K12%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20What%20is%20needed%20to%20return%20the%20RPS%20to%20normal%20after%20an%20actuation%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.3.3%2C%20p.%207.6-32%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> De-energize to trip</a><a class="next" href="#concept-6">Testing and single failure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Testing and single failure</h2><p class="count">Objectives 8, 10</p><p>Any division can be out of service for testing at any time without loss of any safety function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></p>
+<p>The RPS withstands a single failure in any operating division, even with one division out for testing. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></p>
+<p>Testing and calibration can occur during power operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31</cite></p>
+<ul><li>Cross-checking between redundant channels</li><li>Introducing and varying substitute input</li><li>Perturbing the monitored variable</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31</cite></p>
+<p>Setpoints follow ANSI/ISA 67.04.01-2018 as endorsed by RG 1.105. The setpoint control program is in Table 11.5-1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2, p. 7.6-20</cite></p>
+<p>Bypassed and inoperable status indication conforms to RG 1.47. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2, p. 7.6-21</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: De-energize to trip</a><a class="next" href="#check-6">Knowledge check: Testing and single failure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Testing and single failure</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 8,10</span><span>SY-17-K13</span></div>
+  <p>One division is out for testing and another has a single failure. Is the safety function kept?</p>
+  <div class="opts"><button type="button" class="opt">A. Only ESF</button><button type="button" class="opt">B. Yes</button><button type="button" class="opt">C. No</button><button type="button" class="opt">D. Only scram</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The RPS is designed to withstand a single failure even when one division is out for testing. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K13&amp;body=Item%3A%20SY-17-K13%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20One%20division%20is%20out%20for%20testing%20and%20another%20has%20a%20single%20failure.%20Is%20the%20safety%20function%20kept%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-27%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 8,10</span><span>SY-17-K14</span></div>
+  <p>Which is a listed way to check a channel?</p>
+  <div class="opts"><button type="button" class="opt">A. Polling the NIC</button><button type="button" class="opt">B. Cross-checking redundant channels</button><button type="button" class="opt">C. Replacing the sensor</button><button type="button" class="opt">D. Rebooting the DCS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Checks include cross-checking, substitute input, and perturbing the variable. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K14&amp;body=Item%3A%20SY-17-K14%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Which%20is%20a%20listed%20way%20to%20check%20a%20channel%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.3.2%2C%20p.%207.6-31%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Testing and single failure</a><a class="next" href="#concept-7">Manual actions and indications <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Manual actions and indications</h2><p class="count">Objectives 5</p><p>Manual initiation of each scram and ESF function is available from the MCR, but it is not credited in the safety analysis. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<p>Manual control circuits are diverse from the RPS automatic logic. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<table class="tbl"><thead><tr><th>Function</th><th>Class</th><th>Action</th></tr></thead><tbody><tr><td>DL4-RC3 scram follow</td><td>NSRST</td><td>Failsafe signal to drive rods in on any scram, independent of RTB demand <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25</cite></td></tr><tr><td>DL4-RC4 automatic seismic trip</td><td>NSRST</td><td>Opens RTBs on an AST demand <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25</cite></td></tr><tr><td>DL4-HR6, HR7</td><td>NSRST</td><td>PSPs and ISPs tripped on manual switch <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25</cite></td></tr><tr><td>DL4-RR8</td><td>NSRST</td><td>SPS-P pump tripped on manual switch <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25</cite></td></tr><tr><td>DL5-PAM1</td><td>NSRST</td><td>Display of Type B, C, and F PAM variables <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25</cite></td></tr></tbody></table>
+<p>Each division has its own SVDU in the MCR that shows only that division. The RSC has SVDUs fed from Divisions A and B. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+<p>PAM-only chassis in Divisions A and B process variables not used for safety functions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-19</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Testing and single failure</a><a class="next" href="#check-7">Knowledge check: Manual actions and indications <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Manual actions and indications</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 5</span><span>SY-17-K15</span></div>
+  <p>Are manual scram functions credited in the safety analysis?</p>
+  <div class="opts"><button type="button" class="opt">A. Only at the RSC</button><button type="button" class="opt">B. Yes</button><button type="button" class="opt">C. No</button><button type="button" class="opt">D. Only for AOOs</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Manual functions are not credited in the safety analysis. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K15&amp;body=Item%3A%20SY-17-K15%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Are%20manual%20scram%20functions%20credited%20in%20the%20safety%20analysis%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1%2C%20p.%207.6-18%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 5</span><span>SY-17-K16</span></div>
+  <p>Scram follow starts when how many RPS divisions send a demand?</p>
+  <div class="opts"><button type="button" class="opt">A. All four</button><button type="button" class="opt">B. One</button><button type="button" class="opt">C. At least 2 of 4</button><button type="button" class="opt">D. At least 3 of 4</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The CRD system starts scram follow when at least 2 of 4 divisions send a demand signal. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-29</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K16&amp;body=Item%3A%20SY-17-K16%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Scram%20follow%20starts%20when%20how%20many%20RPS%20divisions%20send%20a%20demand%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-29%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 5</span><span>SY-17-K17</span></div>
+  <p>Which SVDUs are in the RSC?</p>
+  <div class="opts"><button type="button" class="opt">A. Fed from Divisions A and B</button><button type="button" class="opt">B. Division D only</button><button type="button" class="opt">C. None</button><button type="button" class="opt">D. All four divisions</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The RSC has redundant SVDUs fed from Divisions A and B. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K17&amp;body=Item%3A%20SY-17-K17%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20Which%20SVDUs%20are%20in%20the%20RSC%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.1.2%2C%20p.%207.6-19%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Manual actions and indications</a><a class="next" href="#concept-8">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-8">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>The DL3 functions are SR, and DL4 and DL5 functions are NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-22</cite></p>
+<p>The RPS keeps analytical limits from being exceeded for AOOs not mitigated by DL2 functions, and for design basis events. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></p>
+<p>Each division sits in its own 3-hour fire rated vault room. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-26</cite></p>
+<table class="tbl"><thead><tr><th>Equipment</th><th>Safety</th><th>Seismic</th></tr></thead><tbody><tr><td>RPS division cabinets A to D</td><td>SR</td><td>SCS1 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></td></tr><tr><td>Reactor trip breaker panels</td><td>SR</td><td>SCS1 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></td></tr><tr><td>Divisional SVDUs</td><td>NSRST</td><td>SCN1 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></td></tr><tr><td>Manual switch panels</td><td>NSRST</td><td>SCN1 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></td></tr><tr><td>Data gateway cabinet</td><td>NST</td><td>None <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></td></tr></tbody></table>
+<p>Many reliability and testing details will be given at the OL stage as RadICS plant-specific action items. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.1, p. 7.6-19</cite></p>
+
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Manual actions and indications</a><a class="next" href="#check-8">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-8">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 9,10</span><span>SY-17-K18</span></div>
+  <p>What fire rating do the RPS vault room walls have?</p>
+  <div class="opts"><button type="button" class="opt">A. 1 hour</button><button type="button" class="opt">B. 2 hours</button><button type="button" class="opt">C. 3 hours</button><button type="button" class="opt">D. 4 hours</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The vault walls are 3-hour fire rated. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-26</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K18&amp;body=Item%3A%20SY-17-K18%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20What%20fire%20rating%20do%20the%20RPS%20vault%20room%20walls%20have%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.2.2%2C%20p.%207.6-26%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 9,10</span><span>SY-17-K19</span></div>
+  <p>What is the classification of the RPS manual switch panels?</p>
+  <div class="opts"><button type="button" class="opt">A. NSRST</button><button type="button" class="opt">B. NST</button><button type="button" class="opt">C. None</button><button type="button" class="opt">D. SR</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Manual switch panels are NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-17-K19&amp;body=Item%3A%20SY-17-K19%0ALesson%3A%20Reactor%20Protection%20System%0AQuestion%3A%20What%20is%20the%20classification%20of%20the%20RPS%20manual%20switch%20panels%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.3.3.4%2C%20p.%207.6-35%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 18 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Four divisions vote parameter by parameter, and 2 out of 4 on the same parameter actuates. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27</cite></li><li>Scram and ESF circuits are de-energize to trip, and critical faults go to the safe state. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28</cite></li><li>A division can be out for test with no loss of function. Manual functions are diverse and not credited. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 19 of 19</span></div>
+<h1>Reactor Protection System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and divisions</a></li><li><a href="#check-1">Knowledge check: Purpose and divisions</a></li><li><a href="#concept-2">Signal path and voting</a></li><li><a href="#check-2">Knowledge check: Signal path and voting</a></li><li><a href="#concept-3">Reactor scram functions</a></li><li><a href="#check-3">Knowledge check: Reactor scram functions</a></li><li><a href="#concept-4">ESF pump trips</a></li><li><a href="#check-4">Knowledge check: ESF pump trips</a></li><li><a href="#concept-5">De-energize to trip</a></li><li><a href="#check-5">Knowledge check: De-energize to trip</a></li><li><a href="#concept-6">Testing and single failure</a></li><li><a href="#check-6">Knowledge check: Testing and single failure</a></li><li><a href="#concept-7">Manual actions and indications</a></li><li><a href="#check-7">Knowledge check: Manual actions and indications</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.6.3.1, 7.6.3.1.1, 7.6.3.1.2, 7.6.3.2, 7.6.3.2.1, 7.6.3.2.2, 7.6.3.3.2, 7.6.3.3.3, 7.6.3.3.4</p><p>Pages 7.6-18, 7.6-19, 7.6-20, 7.6-21, 7.6-22, 7.6-23, 7.6-24, 7.6-25, 7.6-26, 7.6-27, 7.6-28, 7.6-29, 7.6-31, 7.6-32, 7.6-35</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-17&amp;body=Lesson%3A%20SY-17%20Reactor%20Protection%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

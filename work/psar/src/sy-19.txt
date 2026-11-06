@@ -1,0 +1,59 @@
+# SY-19 | Reactor Instrumentation System | system | RIS
+range: 7.6-48 7.6-59
+sec: Sec. 7.6.5, pp. 7.6-48 to 7.6-59
+intro: The RIS is the set of non-nuclear sensors in or near the reactor vessel. It measures pool temperature, level, and pump data, and has no displays or logic of its own.
+
+== Purpose and architecture | 1,2,3
+S The RIS measures selected parameters in or near the reactor vessel and sends signals to the RPS and NIC. @@ contains instrumentation to measure selected parameters in or near the reactor vessel
+S A channel is a single sensor plus its cabling and signal amplification electronics. @@ where a channel is defined as a single sensor and its associated cabling and signal amplification electronics
+S The RIS has four redundant, independent divisions for parameters that give SR inputs to the RPS. @@ has four redundant and independent divisions for parameters that provide SR inputs to the RPS
+S Signal splitters duplicate SR inputs and send them to the NIC as NSRST and NST signals. @@ Signal splitters are used to duplicate the SR inputs
+S No information displays are part of the RIS. @@ No information displays are part of the RIS
+F 7.6.5-1
+K What is an RIS channel? | A division of the RPS | A single sensor and its cabling and amplification electronics | A display | A data highway | 1 | The PSAR defines a channel that way. @@ where a channel is defined as a single sensor and its associated cabling and signal amplification electronics
+K How do SR RIS signals reach the NIC? | Through signal splitters | Through direct parallel wires | They do not | Through the XIS | 0 | Signal splitters duplicate the SR inputs. @@ Signal splitters are used to duplicate the SR inputs
+
+== Monitored variables | 3,5
+T Variable | Instruments | Class
+R Primary sodium hot pool temperature | 4 | SR @@ Primary Sodium Hot Pool Temperature 4 SR
+R Primary sodium hot pool level | 4 | SR @@ Primary Sodium Hot Pool Level 4 SR
+R Primary sodium cold pool temperature | 8 | SR @@ Primary Sodium Cold Pool Temperature 8 SR
+R PSP shaft speed | 8 | SR @@ PSP Shaft Speed 8 SR
+R PSP current detector | 8 | SR @@ PSP Current Detector 8 SR
+R Reactor vessel to guard vessel liquid sodium detection | 3 | NSRST @@ Reactor Vessel-Guard Vessel Liquid 3 NSRST
+R Core exit temperature | 15 | NSRST @@ Core Exit Temperature 15 NSRST
+R Reactor head temperature | 3 | NST @@ Reactor Head Temperature 3 NST
+K How many core exit temperature instruments does the RIS have? | 3 | 4 | 8 | 15 | 3 | Table 7.6.5-1 lists 15, classified NSRST. @@ Core Exit Temperature 15 NSRST
+K Which RIS variable is NST? | Hot pool level | PSP shaft speed | Reactor head temperature | Cold pool temperature | 2 | Reactor head temperature is NST. @@ Reactor Head Temperature 3 NST
+K How many cold pool temperature instruments are there? | 4 | 8 | 3 | 15 | 1 | The table lists 8, classified SR. @@ Primary Sodium Cold Pool Temperature 8 SR
+
+== Functions supported | 4,6
+T Function | RIS input to the RPS
+R DL3-RC1b | Hot pool temperature @@ DL3-RC1b Reactor scram on RIS includes sensors that monitor primary sodium hot
+R DL3-RC1c | Hot pool level, high-high @@ DL3-RC1c Reactor scram on RIS includes sensors that monitor primary sodium hot
+R DL3-RC1d | PSP speed and current @@ DL3-RC1d Reactor scram on RIS includes sensors that monitor primary sodium pump
+R DL3-RC1e | Cold pool temperature @@ DL3-RC1e Reactor scram on RIS includes sensors that monitor primary sodium cold
+R DL3-RC1h | Hot pool level, low-low @@ DL3-RC1h Reactor scram on RIS includes sensors that monitor primary sodium hot
+R DL3-RC1j | PSP speed and current @@ DL3-RC1j Reactor scram on loss RIS includes sensors that monitor PSP speed and PSP
+S The RIS also gives Type B, C, and F PAM variables to the RPS. @@ RIS includes sensors that monitor Type B, C, and F
+S It provides signals to control PHT and PSP flow, start power runback, and inhibit rod withdrawal in NST DL2 functions. @@ initiate power runback, and inhibit rod withdrawal in support of NST DL2 functions
+K Which RIS measurements feed the loss of primary flow scram? | Hot pool level | PSP speed and current | Core exit temperature | Head temperature | 1 | DL3-RC1j uses PSP speed and current. @@ DL3-RC1j Reactor scram on loss RIS includes sensors that monitor PSP speed and PSP
+K Which DL2 action can RIS signals support? | Inhibit rod withdrawal | Seismic trip | Close RTBs | Start FPC | 0 | RIS signals support power runback and rod withdrawal inhibit. @@ initiate power runback, and inhibit rod withdrawal in support of NST DL2 functions
+
+== Testing and failure | 8,10
+S SR portions can be tested and calibrated during power operation with no loss of SR functions at the system level. @@ are capable of testing and calibration during power operation without loss of SR functions at the system level
+S SR equipment is designed for timely recognition, location, adjustment, repair, and replacement of malfunctions. @@ is designed to facilitate timely recognition, location, adjustment, repair, and replacement of malfunctioning equipment
+S Inputs to the NIC are electronically isolated from RPS inputs, so control failures do not impact the RPS. @@ are electronically isolated and independent of the inputs to the RPS
+S Removing any RIS division will not impact protection or control functions. @@ which ensure that removal of any RIS division will not impact the protection or control functions
+S SR channels give the same outputs for the same inputs within a known cycle time. @@ the same set of inputs will produce the same outputs within a known, guaranteed cycle time
+K An NIC control failure occurs. What is the effect on the RPS through the RIS? | RPS signals are lost | None, inputs are isolated | RPS trips | Divisions merge | 1 | NIC inputs are electronically isolated and independent of RPS inputs. @@ are electronically isolated and independent of the inputs to the RPS
+
+== Safety significance | 9,10
+S Safety-significant RIS equipment is seismic class SCS1. @@ commensurate with a seismic classification of SCS1
+S Safety-significant portions sit in the RXB and NCB substructures. @@ Safety-significant portions of the RIS are located in the RXB and Nuclear Island Control Building (NCB) substructures
+S NCB equipment is in division-specific 3-hour fire rated rooms. @@ RIS equipment in the NCB is located in a division-specific, 3-hour fire rated room
+L Design Reliability Assurance Program ;; Equipment Qualification Program ;; Post-construction inspection, testing, and analysis program ;; Quality Assurance Program Description ;; Human Factors Engineering Program Plan @@ The following programmatic special treatments are identified as applicable to the RIS
+K What seismic class applies to safety-significant RIS equipment? | SCS1 | SCN1 | SCN3 | None | 0 | The RIS is assigned SCS1 special treatment. @@ commensurate with a seismic classification of SCS1
+Z The RIS is a collection of channels in or near the vessel, with four SR divisions where the RPS needs them. @@ has four redundant and independent divisions for parameters that provide SR inputs to the RPS
+Z It gives the RPS temperature, level, and PSP speed and current, and has no displays. @@ No information displays are part of the RIS
+Z Signal splitters isolate control from protection, so NIC failures do not reach the RPS. @@ are electronically isolated and independent of the inputs to the RPS

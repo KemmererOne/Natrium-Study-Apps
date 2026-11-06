@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Human Factors Engineering</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-op-03-human-factors-engineering">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">Human factors engineering shapes the displays, procedures, and training you will use. Many methods sit in NAT-2965-A. The PSAR gives the framework. <cite>PSAR Rev 1 (NAT-9400), Sec. 11.2, pp. 11.2-1 to 11.2-28</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the goal and scope of the HFE program.</p><p class="gap">Taught in: <a href="#concept-1">Goal and scope</a></p><p><span class="num">2</span> Identify the technical elements of the HFE program.</p><p class="gap">Taught in: <a href="#concept-2">Technical elements</a></p><p><span class="num">3</span> Explain operating experience review and treatment of important human actions.</p><p class="gap">Taught in: <a href="#concept-3">Operating experience and human actions</a></p><p><span class="num">4</span> Describe verification and validation of the human-system interface.</p><p class="gap">Taught in: <a href="#concept-4">Verification and validation</a></p><p><span class="num">5</span> Describe training program development.</p><p class="gap">Taught in: <a href="#concept-5">Training development</a></p><p><span class="num">6</span> State the purposes of human performance monitoring.</p><p class="gap">Taught in: <a href="#concept-6">Human performance monitoring</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Goal and scope <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Goal and scope</h2><p class="count">Objectives 1</p><p>The goal is an integrated program that reduces risks and consequences influenced by human interactions. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.1, p. 11.2-1</cite></p>
+<p>An HSI is any region or point at which a person interacts with a system, equipment, or component. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3</cite></p>
+<p>The scope includes both a part-task and a full-scope simulator. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3</cite></p>
+<p>HSI design aims for safe, efficient, reliable operator performance in normal, abnormal, and accident conditions. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.9, p. 11.2-9</cite></p>
+<p>The HFE Style Guide is based on NUREG-0700. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.9, p. 11.2-10</cite></p>
+<p>HFE rigor is graded, with more emphasis on interactions that are safety critical or hazardous. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Goal and scope <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Goal and scope</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1</span><span>OP-03-K1</span></div>
+  <p>What is an HSI?</p>
+  <div class="opts"><button type="button" class="opt">A. A control room</button><button type="button" class="opt">B. A procedure</button><button type="button" class="opt">C. Any point where a person interacts with a system, equipment, or component</button><button type="button" class="opt">D. Only a computer screen</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. That is the PSAR definition. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K1&amp;body=Item%3A%20OP-03-K1%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20What%20is%20an%20HSI%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.1.2%2C%20p.%2011.2-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-03-K2</span></div>
+  <p>How is HFE effort applied?</p>
+  <div class="opts"><button type="button" class="opt">A. Graded, with more rigor for critical interactions</button><button type="button" class="opt">B. Only to the MCR</button><button type="button" class="opt">C. Only after construction</button><button type="button" class="opt">D. Equally everywhere</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Application is graded. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K2&amp;body=Item%3A%20OP-03-K2%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20How%20is%20HFE%20effort%20applied%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.3%2C%20p.%2011.2-18%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Goal and scope</a><a class="next" href="#concept-2">Technical elements <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Technical elements</h2><p class="count">Objectives 2</p><table class="tbl"><thead><tr><th>Element</th><th>What it does</th></tr></thead><tbody><tr><td>Operating experience review</td><td>Brings lessons from past events into the design <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Functional requirements analysis</td><td>Finds functions needed to achieve plant goals <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Allocation of function</td><td>Assigns functions to technology or human <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Task analysis</td><td>Breaks functions into tasks and steps <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Staffing analysis</td><td>Sets numbers and roles of personnel <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Treatment of important human actions</td><td>Confirms claimed actions are achievable <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>HSI design</td><td>Turns requirements and analysis into HSIs <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></td></tr><tr><td>Procedure development</td><td>Makes usable, validated documents <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6</cite></td></tr><tr><td>Training program development</td><td>Makes relevant, validated training <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6</cite></td></tr></tbody></table>
+<p>Procedures should be technically accurate, comprehensive, explicit, easy to use, and validated. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Goal and scope</a><a class="next" href="#check-2">Knowledge check: Technical elements <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Technical elements</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>OP-03-K3</span></div>
+  <p>Which element assigns functions to human or technology?</p>
+  <div class="opts"><button type="button" class="opt">A. Task analysis</button><button type="button" class="opt">B. Allocation of function</button><button type="button" class="opt">C. Staffing analysis</button><button type="button" class="opt">D. OER</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Allocation of function assigns functions to system or human. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K3&amp;body=Item%3A%20OP-03-K3%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20Which%20element%20assigns%20functions%20to%20human%20or%20technology%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.1.4%2C%20p.%2011.2-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 2</span><span>OP-03-K4</span></div>
+  <p>Which element makes sure claimed operator actions are achievable?</p>
+  <div class="opts"><button type="button" class="opt">A. Treatment of important human actions</button><button type="button" class="opt">B. OER</button><button type="button" class="opt">C. HSI design</button><button type="button" class="opt">D. Staffing</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. That element ensures claimed actions are achievable. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K4&amp;body=Item%3A%20OP-03-K4%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20Which%20element%20makes%20sure%20claimed%20operator%20actions%20are%20achievable%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.1.4%2C%20p.%2011.2-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Technical elements</a><a class="next" href="#concept-3">Operating experience and human actions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operating experience and human actions</h2><p class="count">Objectives 3</p><p>OER lessons improve the design early in the process. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.2, p. 11.2-14</cite></p>
+<p>It includes sodium-cooled facilities such as the Fast Flux Test Facility. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.2, p. 11.2-16</cite></p>
+<p>Recognized issues include Three Mile Island, Chernobyl, and Fukushima Daiichi. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.4, p. 11.2-17</cite></p>
+<p>Plant personnel interviews supplement OE. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.5, p. 11.2-17</cite></p>
+<p>Human reliability analysis looks at the potential for, and mechanisms of, human error. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-19</cite></p>
+<p>The minimum set of controls, displays, and alarms comes from emergency procedure guidelines and important actions in the PRA. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.12, p. 11.2-11</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Technical elements</a><a class="next" href="#check-3">Knowledge check: Operating experience and human actions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operating experience and human actions</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 3</span><span>OP-03-K5</span></div>
+  <p>Which sodium facility is named in the OER?</p>
+  <div class="opts"><button type="button" class="opt">A. Monju</button><button type="button" class="opt">B. Phenix</button><button type="button" class="opt">C. Fast Flux Test Facility</button><button type="button" class="opt">D. Fermi 1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The PSAR names the Fast Flux Test Facility. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.2, p. 11.2-16</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K5&amp;body=Item%3A%20OP-03-K5%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20Which%20sodium%20facility%20is%20named%20in%20the%20OER%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.2.2.2%2C%20p.%2011.2-16%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>OP-03-K6</span></div>
+  <p>What does human reliability analysis evaluate?</p>
+  <div class="opts"><button type="button" class="opt">A. Pump reliability</button><button type="button" class="opt">B. Sodium chemistry</button><button type="button" class="opt">C. Weather</button><button type="button" class="opt">D. Potential for and mechanisms of human error</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. That is what it seeks to evaluate. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-19</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K6&amp;body=Item%3A%20OP-03-K6%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20What%20does%20human%20reliability%20analysis%20evaluate%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.3%2C%20p.%2011.2-19%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Operating experience and human actions</a><a class="next" href="#concept-4">Verification and validation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Verification and validation</h2><p class="count">Objectives 4</p><p>HF V&amp;V has two major activities: HF verification and Integrated System Validation (ISV). <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+<p>A team independent of design development does it. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+<p>Task Support Verification checks that HSIs have what tasks need, and no unnecessary features. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+<p>ISV is an integrated, dynamic, performance-based test. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Operating experience and human actions</a><a class="next" href="#check-4">Knowledge check: Verification and validation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Verification and validation</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>OP-03-K7</span></div>
+  <p>Who performs HF V&amp;V?</p>
+  <div class="opts"><button type="button" class="opt">A. The NRC</button><button type="button" class="opt">B. Designers of the HSI</button><button type="button" class="opt">C. A team independent from design development</button><button type="button" class="opt">D. Vendors</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. HF V&amp;V is conducted by an independent HFE team. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K7&amp;body=Item%3A%20OP-03-K7%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20Who%20performs%20HF%20V%26V%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.1.4%2C%20p.%2011.2-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>OP-03-K8</span></div>
+  <p>What does Task Support Verification also check for?</p>
+  <div class="opts"><button type="button" class="opt">A. Pump speed</button><button type="button" class="opt">B. Cost</button><button type="button" class="opt">C. Unnecessary features</button><button type="button" class="opt">D. Paint color</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. It verifies no unnecessary features. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K8&amp;body=Item%3A%20OP-03-K8%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20What%20does%20Task%20Support%20Verification%20also%20check%20for%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.1.4%2C%20p.%2011.2-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Verification and validation</a><a class="next" href="#concept-5">Training development <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Training development</h2><p class="count">Objectives 5</p><p>Training development follows the systematic approach to training. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.2, p. 11.2-23</cite></p>
+<p>Training gives assurance that personnel have the skills, knowledge, and abilities for their roles. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6</cite></p>
+<p>It defines training from a task analysis. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.1, p. 11.2-22</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Verification and validation</a><a class="next" href="#check-5">Knowledge check: Training development <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Training development</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 5</span><span>OP-03-K9</span></div>
+  <p>What method does training development follow?</p>
+  <div class="opts"><button type="button" class="opt">A. On-the-job only</button><button type="button" class="opt">B. Vendor manuals</button><button type="button" class="opt">C. Peer tutoring</button><button type="button" class="opt">D. Systematic approach to training</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. It follows the fundamentals of the systematic approach to training. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.2, p. 11.2-23</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K9&amp;body=Item%3A%20OP-03-K9%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20What%20method%20does%20training%20development%20follow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.6.2.2%2C%20p.%2011.2-23%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Training development</a><a class="next" href="#concept-6">Human performance monitoring <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Human performance monitoring</h2><p class="count">Objectives 6</p><p>HPM links design HFE methods with monitoring during operation, and is fully developed at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7, p. 11.2-25</cite></p>
+<ul><li>Keep safety standards as changes are made</li><li>Detect deterioration of task performance from latent or slow-developing issues</li><li>Assure the safety bases stay valid in operation</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7.1, p. 11.2-25</cite></p>
+<ul><li>Data collection</li><li>Importance screening</li><li>Event analysis to determine causes</li><li>Trend analysis</li><li>Corrective action development</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26</cite></p>
+<p>Collected data is anonymized to keep the program free of blame. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Training development</a><a class="next" href="#check-6">Knowledge check: Human performance monitoring <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Human performance monitoring</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 6</span><span>OP-03-K10</span></div>
+  <p>Why is HPM data anonymized?</p>
+  <div class="opts"><button type="button" class="opt">A. To save storage</button><button type="button" class="opt">B. For security</button><button type="button" class="opt">C. It is not</button><button type="button" class="opt">D. To avoid blame culture</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Data is anonymized and sanitized to ensure no blame culture. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-03-K10&amp;body=Item%3A%20OP-03-K10%0ALesson%3A%20Human%20Factors%20Engineering%0AQuestion%3A%20Why%20is%20HPM%20data%20anonymized%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.2.7.2%2C%20p.%2011.2-26%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Human performance monitoring</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>HFE reduces risk from human interactions, with rigor graded to importance. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18</cite></li><li>An independent team performs V&amp;V, ending in Integrated System Validation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7</cite></li><li>HPM checks that performance stays acceptable in operation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.2.7.1, p. 11.2-25</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Human performance monitoring</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 15</span></div>
+<h1>Human Factors Engineering</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Goal and scope</a></li><li><a href="#check-1">Knowledge check: Goal and scope</a></li><li><a href="#concept-2">Technical elements</a></li><li><a href="#check-2">Knowledge check: Technical elements</a></li><li><a href="#concept-3">Operating experience and human actions</a></li><li><a href="#check-3">Knowledge check: Operating experience and human actions</a></li><li><a href="#concept-4">Verification and validation</a></li><li><a href="#check-4">Knowledge check: Verification and validation</a></li><li><a href="#concept-5">Training development</a></li><li><a href="#check-5">Knowledge check: Training development</a></li><li><a href="#concept-6">Human performance monitoring</a></li><li><a href="#check-6">Knowledge check: Human performance monitoring</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 11.2.1.1, 11.2.1.2, 11.2.1.4, 11.2.1.9, 11.2.1.12, 11.2.2, 11.2.2.2.2, 11.2.2.2.4, 11.2.2.2.5, 11.2.3, 11.2.6.2.1, 11.2.6.2.2, 11.2.7, 11.2.7.1, 11.2.7.2</p><p>Pages 11.2-1, 11.2-3, 11.2-5, 11.2-6, 11.2-7, 11.2-9, 11.2-10, 11.2-11, 11.2-14, 11.2-16, 11.2-17, 11.2-18, 11.2-19, 11.2-22, 11.2-23, 11.2-25, 11.2-26</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20OP-03&amp;body=Lesson%3A%20OP-03%20Human%20Factors%20Engineering%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

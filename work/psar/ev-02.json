@@ -1,0 +1,549 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiators and assumptions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A DBE is an infrequent event sequence, less likely than an AOO and not expected in the life of the plant.",
+     "anchor": "infrequent event sequences that are less likely than anticipated",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "Event sequences with mean frequencies of 1x10-4 to 1x10-2 per plant-year are classified as DBEs.",
+     "anchor": "mean frequencies of 1x10-4 per plant-year to 1x10-2 per plant-year are classified as DBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "DBE analysis takes into account the expected response of all structures, systems, and components, regardless of safety classification.",
+     "anchor": "take into account the expected responses of all structures, systems, or components within the",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Initiator",
+      "Initial condition"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DHP-L1PP-2",
+        "Partial loss of primary flow from loss of a single PSP",
+        "Full power"
+       ],
+       "anchor": "The postulated initiating event is a partial loss of primary flow due to the loss of a single Primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "DHP-LOOP-1",
+        "Loss of offsite power",
+        "Full power"
+       ],
+       "anchor": "The postulated initiating event is a loss of offsite power during full power operating conditions,",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "SUD-LOOP-1",
+        "Loss of offsite power",
+        "Low power"
+       ],
+       "anchor": "The postulated initiating event is a loss of offsite power during low power operating",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Full power analysis starts at 100 percent reactor power, 100 percent core flow, and 360.1°C core inlet temperature.",
+     "anchor": "Full Power 100 100 360.1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7"
+    },
+    {
+     "t": "p",
+     "text": "Low power analysis starts at 5 percent reactor power, 15 percent core flow, and 309.5°C core inlet temperature.",
+     "anchor": "Low Power 5 15 309.5",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What frequency band defines a DBE?",
+     "o": [
+      "Below 1x10-7 per plant-year",
+      "Above 1x10-2 per plant-year",
+      "1x10-4 to 1x10-2 per plant-year",
+      "1x10-7 to 1x10-4 per plant-year"
+     ],
+     "a": 2,
+     "x": "Mean frequencies of 1x10-4 to 1x10-2 per plant-year are classified as DBEs.",
+     "anchor": "mean frequencies of 1x10-4 per plant-year to 1x10-2 per plant-year are classified as DBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1",
+     "eo": "1"
+    },
+    {
+     "q": "Which equipment does DBE analysis take into account?",
+     "o": [
+      "All SSCs regardless of safety classification",
+      "Only passive SSCs",
+      "Safety-related SSCs only",
+      "Non-safety-related SSCs only"
+     ],
+     "a": 0,
+     "x": "DBEs take into account the expected response of all SSCs. DBAs are the events limited to safety-related SSCs.",
+     "anchor": "take into account the expected responses of all structures, systems, or components within the",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Challenged functions and acceptance",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Core flow reduction raises primary sodium temperature until the reactor scrams, so the core must be shut down and its heat carried away.",
+     "anchor": "primary sodium temperature increases due to the core flow reduction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6"
+    },
+    {
+     "t": "p",
+     "text": "For all three events, the fuel performance acceptance criteria are satisfied, fuel integrity is maintained for the peak fuel pin, and there is no radiological release.",
+     "anchor": "fuel integrity is maintained for",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.2, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "The safe shutdown end state requires peak cladding temperature below 1157°F (625°C) and stable or decreasing.",
+     "anchor": "Peak Cladding Temperature value below 1157°F (625°C) and is stable or decreasing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the radiological result for the three loss of primary flow DBEs?",
+     "o": [
+      "A release below the EAB limit",
+      "No radiological release",
+      "A cover gas release only",
+      "A release held in the HAA"
+     ],
+     "a": 1,
+     "x": "Acceptance criteria are satisfied, fuel integrity is maintained, and no release occurs.",
+     "anchor": "there is no radiological release for this licensing basis event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.2, p. 3.7-1",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Event chronology",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "One PSP lost (DHP-L1PP-2)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "One PSP is lost at full power"
+       ],
+       "anchor": "due to the loss of a single Primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "2",
+        "Reactor scrams on high high power-to-flow ratio"
+       ],
+       "anchor": "A reactor scram on high high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "3",
+        "The unaffected PSP and the ISPs trip on high high primary sodium temperature"
+       ],
+       "anchor": "The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "4",
+        "Non-passive and passive IAC cooling fail on both trains"
+       ],
+       "anchor": "Non-passive and passive Intermediate Air Cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "5",
+        "Reactor reaches safe shutdown with RAC removing decay heat"
+       ],
+       "anchor": "shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "In the loss of offsite power at full power, the reactor scrams on high high power-to-flow ratio, non-passive IAC fails on both trains, and IAC passive mode removes decay heat.",
+     "anchor": "The final conditions result in the reactor in safe shutdown with the IAC passive mode",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "At low power the reactor scrams because of the loss of primary flow, not on power-to-flow ratio.",
+     "anchor": "The reactor scrams due to the loss of primary flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What trips the unaffected PSP in DHP-L1PP-2?",
+     "o": [
+      "Low sodium level",
+      "Manual action",
+      "Low cold pool temperature",
+      "High high primary sodium temperature"
+     ],
+     "a": 3,
+     "x": "The unaffected PSP and the ISPs trip on high high primary sodium temperature.",
+     "anchor": "The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1",
+     "eo": "3"
+    },
+    {
+     "q": "In DHP-LOOP-1, what removes decay heat at the end state?",
+     "o": [
+      "IAC active mode",
+      "The steam plant",
+      "The SPS",
+      "IAC passive mode"
+     ],
+     "a": 3,
+     "x": "Non-passive IAC fails on both trains, so IAC passive mode provides decay heat removal.",
+     "anchor": "The final conditions result in the reactor in safe shutdown with the IAC passive mode",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Key parameter trends",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Primary sodium temperature rises from the flow reduction, then falls after the scram.",
+     "anchor": "primary sodium temperature increases due to the core flow reduction and decreases after the reactor scrams",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "note",
+     "text": "Study point: expect two temperature rises when the pumps trip. The first ends at the scram. The second can follow pump coast down, before natural circulation is established."
+    }
+   ],
+   "checks": [
+    {
+     "q": "After the PSPs coast down, what can primary sodium temperature do?",
+     "o": [
+      "Rise as the core moves to natural circulation, then fall",
+      "Fall without limit",
+      "Oscillate until restart",
+      "Stay flat"
+     ],
+     "a": 0,
+     "x": "Temperature may increase after coast down, then decrease once natural circulation is established and decay heat falls.",
+     "anchor": "then decreases after natural circulation cooling is established and decay heat decreases",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Automatic protective actions",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Scram on loss of flow or high high power-to-flow ratio",
+      "PSPs and ISPs reduce speed if a scram occurs",
+      "Remaining PSPs and ISPs trip if the high high primary sodium temperature setpoints are reached"
+     ],
+     "anchor": "results in a scram on loss of flow or high high power-to-flow ratio",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which signals does the PSAR give for a scram after loss of primary flow?",
+     "o": [
+      "High radiation or seismic",
+      "High salt temperature",
+      "High cover gas pressure or low level",
+      "Loss of flow or high high power-to-flow ratio"
+     ],
+     "a": 3,
+     "x": "The loss of one or both PSPs results in a scram on loss of flow or high high power-to-flow ratio.",
+     "anchor": "results in a scram on loss of flow or high high power-to-flow ratio",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Credited equipment and failed functions",
+   "eo": [
+    "8",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RAC and the available modes of IAC remove decay heat.",
+     "anchor": "The decay heat removal is provided by RAC and available modes of IAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+    },
+    {
+     "t": "p",
+     "text": "When passive and non-passive IAC are unavailable, the thermal capacity of the piping, components, and intermediate sodium in the intermediate loops is assumed available.",
+     "anchor": "when the passive and non-passive modes of IAC are unavailable",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Failure assumed",
+      "What carries decay heat"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Non-passive IAC fails on both trains",
+        "IAC passive mode"
+       ],
+       "anchor": "The final conditions result in the reactor in safe shutdown with the IAC passive mode",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1"
+      },
+      {
+       "cells": [
+        "Non-passive and passive IAC fail on both trains",
+        "RAC"
+       ],
+       "anchor": "Non-passive and passive Intermediate Air Cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "A function failed in an LBE description was not necessarily failed by the initiating event.",
+     "anchor": "The assumption that a function fails in the LBE description does not necessarily mean the failure was a result",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1, p. 3.3-4"
+    },
+    {
+     "t": "note",
+     "text": "Study point: read these events as a ladder. Each DBE removes one more means of cooling, and the next means carries the heat."
+    }
+   ],
+   "checks": [
+    {
+     "q": "If all IAC modes fail in DHP-L1PP-2, what removes decay heat?",
+     "o": [
+      "SCG",
+      "NHV",
+      "RAC",
+      "SPS"
+     ],
+     "a": 2,
+     "x": "RAC provides decay heat removal when non-passive and passive IAC fail on both trains.",
+     "anchor": "shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1",
+     "eo": "8,9"
+    }
+   ]
+  },
+  {
+   "title": "End state and operator role",
+   "eo": [
+    "10",
+    "12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "All three events end with the reactor in safe shutdown.",
+     "anchor": "The final conditions result in the reactor in",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "Operator actions are not required to mitigate DBEs unless the DBE description says otherwise.",
+     "anchor": "Operator actions are not required to mitigate DBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "Each DBE here is the most limiting DBE mapped to a matching DBA, where only safety-related equipment is credited.",
+     "anchor": "This is the most limiting DBE that mapped to the DHP-L1PP-CN design basis accident",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+    },
+    {
+     "t": "p",
+     "text": "In the DBA versions of these events, RAC is the decay heat removal system in all three cases.",
+     "anchor": "The final conditions result in the reactor in safe shutdown with the RAC providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.9.1.2.1, p. 3.9-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Are operator actions required to mitigate the loss of primary flow DBEs?",
+     "o": [
+      "Yes, within 30 minutes",
+      "Yes, within 72 hours",
+      "No, unless noted in the DBE description",
+      "Only at low power"
+     ],
+     "a": 2,
+     "x": "Operator actions are not required to mitigate DBEs unless otherwise noted in the description.",
+     "anchor": "Operator actions are not required to mitigate DBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1",
+     "eo": "10,12"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Loss of flow DBEs scram on high high power-to-flow ratio at full power, or on loss of primary flow at low power.",
+   "anchor": "A reactor scram on high high",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+  },
+  {
+   "text": "Temperature can rise a second time after pump coast down, until natural circulation is established.",
+   "anchor": "then decreases after natural circulation cooling is established and decay heat decreases",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+  },
+  {
+   "text": "RAC is the last means of decay heat removal in the sequence, and these events produce no radiological release.",
+   "anchor": "shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1"
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The primary sodium temperature may increase after the PSP coast down is complete as the core transitions to natural circulation cooling, then decreases after natural circulation cooling is established and decay heat decreases.",
+   "sec": "Sec. 3.3.4.1.1",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+  }
+ ],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-02",
+ "title": "Loss of Primary Flow DBEs",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.7.1, pp. 3.7-1 to 3.7-2, with Secs. 3.3.4 and 3.9.1",
+ "intro": "Three design basis events start with lost primary flow: one pump lost, offsite power lost at full power, and offsite power lost at low power.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": true
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-ev-02-loss-of-primary-flow-dbes"
+}

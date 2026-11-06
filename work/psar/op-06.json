@@ -1,0 +1,515 @@
+{
+ "concepts": [
+  {
+   "title": "Radiation Protection Program and ALARA",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RPP will be in place before radioactive material is received on-site.",
+     "anchor": "will be developed and implemented prior to receiving radioactive materials on-site",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.3.2, p. 10.1-1"
+    },
+    {
+     "t": "p",
+     "text": "It ensures 10 CFR 19.12 and 10 CFR 20 are met.",
+     "anchor": "The RPP will be developed to ensure 10 CFR 19.12 and 10 CFR 20 requirements are met",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.3.2, p. 10.1-1"
+    },
+    {
+     "t": "p",
+     "text": "All personnel maintain ALARA practices, and may halt any operation they judge radiologically unsafe.",
+     "anchor": "have the authority to halt any operation which, in their judgment, is radiologically unsafe",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1, p. 10.1-2"
+    },
+    {
+     "t": "p",
+     "text": "The ALARA program meets 10 CFR 20.1101 and follows RG 8.10.",
+     "anchor": "will be implemented to meet the requirements of 10 CFR 20.1101",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.2, p. 10.2-1"
+    },
+    {
+     "t": "p",
+     "text": "Surveys and monitoring meet 10 CFR 20 Subpart F.",
+     "anchor": "The RPP meets the requirements outlined in 10 CFR 20, Subpart F",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.1, p. 10.1-2"
+    },
+    {
+     "t": "p",
+     "text": "Air measurements and bioassays confirm internal exposures stay within 10 CFR 20 Subpart C limits.",
+     "anchor": "Measurements of airborne radioactive material and bioassays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.2, p. 10.1-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who may halt a radiologically unsafe operation?",
+     "o": [
+      "All personnel",
+      "Only the PGM",
+      "Only the CRS",
+      "Only RP technicians"
+     ],
+     "a": 0,
+     "x": "All personnel have this authority.",
+     "anchor": "have the authority to halt any operation which, in their judgment, is radiologically unsafe",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1, p. 10.1-2",
+     "eo": "1"
+    },
+    {
+     "q": "When must the RPP be in place?",
+     "o": [
+      "At the first outage",
+      "Before receiving radioactive materials on-site",
+      "At first criticality",
+      "At commercial operation"
+     ],
+     "a": 1,
+     "x": "It is implemented prior to receiving radioactive materials.",
+     "anchor": "will be developed and implemented prior to receiving radioactive materials on-site",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.3.2, p. 10.1-1",
+     "eo": "1"
+    },
+    {
+     "q": "What is used to determine internal exposure?",
+     "o": [
+      "Stack monitors",
+      "Area monitors only",
+      "Airborne measurements and bioassays",
+      "Pocket dosimeters only"
+     ],
+     "a": 2,
+     "x": "Those two are named.",
+     "anchor": "Measurements of airborne radioactive material and bioassays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.2, p. 10.1-2",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "High and Very High Radiation Areas",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "HRA and VHRA access follows RG 8.38.",
+     "anchor": "will conform with Regulatory Guide 8.38, Revision 1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.3, p. 10.1-2"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Training of workers",
+      "Job planning",
+      "Pre-job surveys",
+      "Pre-job briefing",
+      "Radiation work permits or equivalent",
+      "Radiation protection coverage",
+      "Measuring and alarming dosimeters",
+      "Posting",
+      "Physical barriers",
+      "Locks"
+     ],
+     "anchor": "Training of workers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.3, p. 10.1-2"
+    },
+    {
+     "t": "p",
+     "text": "Access to VHRAs is generally forbidden unless there is a sound operational or safety reason.",
+     "anchor": "access to VHRAs will be forbidden unless there is a sound operational or safety reason for entering",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.3, p. 10.1-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When may a VHRA be entered?",
+     "o": [
+      "Only for a sound operational or safety reason",
+      "Only at night",
+      "Never",
+      "Any time with a dosimeter"
+     ],
+     "a": 0,
+     "x": "Access is generally forbidden unless there is a sound reason.",
+     "anchor": "access to VHRAs will be forbidden unless there is a sound operational or safety reason for entering",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1.3, p. 10.1-3",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Major radiation sources",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Sources come from fission in fuel and neutron activation products, including tritium.",
+     "anchor": "neutron activation products, including tritium generated as a result of exposure to neutrons",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-2"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Building",
+      "System",
+      "Source"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RXB",
+        "RES",
+        "Active core"
+       ],
+       "anchor": "Reactor Enclosure System (RES) Active core",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      },
+      {
+       "cells": [
+        "RXB",
+        "PHT",
+        "Activated sodium, fission and activation products"
+       ],
+       "anchor": "Primary Heat Transport System (PHT) Activated sodium, fission and activation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      },
+      {
+       "cells": [
+        "RAB",
+        "IHT",
+        "Activated sodium, tritium"
+       ],
+       "anchor": "Intermediate Heat Transport System (IHT) Activated sodium, tritium",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      },
+      {
+       "cells": [
+        "RAB",
+        "SPS",
+        "Activated sodium, fission and activation products, tritium"
+       ],
+       "anchor": "Sodium Processing System (SPS) Activated sodium, fission and activation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      },
+      {
+       "cells": [
+        "FHB",
+        "FHE",
+        "Fresh and irradiated fuel assemblies, non-fuel components"
+       ],
+       "anchor": "Ex-Vessel Fuel Handling System (FHE) Fresh and irradiated fuel assemblies",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      },
+      {
+       "cells": [
+        "FHB",
+        "FHP",
+        "Irradiated core assemblies"
+       ],
+       "anchor": "Water Pool Fuel Handling System (FHP) Irradiated core assemblies",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What radiation source is listed for the IHT?",
+     "o": [
+      "Activated sodium and tritium",
+      "Irradiated core assemblies",
+      "None",
+      "Active core"
+     ],
+     "a": 0,
+     "x": "Table 10.3-1 lists activated sodium and tritium.",
+     "anchor": "Intermediate Heat Transport System (IHT) Activated sodium, tritium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Design features for ALARA",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Reducing time spent in radiation areas",
+      "Reducing maintenance frequency",
+      "Improving access to components",
+      "Reducing production, distribution, and retention of activated products"
+     ],
+     "anchor": "ALARA principles are applied throughout design and construction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3, p. 10.3-1"
+    },
+    {
+     "t": "p",
+     "text": "Shield assemblies absorb radial neutron leakage to limit activation of intermediate sodium.",
+     "anchor": "contains shield assemblies that absorb radial neutron leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.1, p. 10.4-1"
+    },
+    {
+     "t": "p",
+     "text": "The SPS removes cesium from the PHT using Reticulated Vitreous Carbon traps.",
+     "anchor": "The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.2, p. 10.4-1"
+    },
+    {
+     "t": "p",
+     "text": "A central location remotely controls fuel handling equipment.",
+     "anchor": "utilizes a central location to remotely control fuel handling equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.3, p. 10.4-1"
+    },
+    {
+     "t": "p",
+     "text": "Negative pressure gradients carry contamination toward higher contamination areas.",
+     "anchor": "Flow created by negative pressure gradients carries contamination away from lower contamination areas",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.3, p. 10.3-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What limits activation of intermediate sodium?",
+     "o": [
+      "Stack filters",
+      "Shield assemblies",
+      "RAC",
+      "Cold traps"
+     ],
+     "a": 1,
+     "x": "Shield assemblies absorb radial neutron leakage.",
+     "anchor": "contains shield assemblies that absorb radial neutron leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.1, p. 10.4-1",
+     "eo": "4"
+    },
+    {
+     "q": "What removes cesium from the PHT?",
+     "o": [
+      "Cold traps in IHT",
+      "HEPA filters",
+      "NSS",
+      "RVC traps in the SPS"
+     ],
+     "a": 3,
+     "x": "The SPS uses Reticulated Vitreous Carbon traps.",
+     "anchor": "The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.2, p. 10.4-1",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Contamination control",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The design minimizes contamination and waste, and eases decommissioning, per 10 CFR 20.1406.",
+     "anchor": "consistent with the requirements in 10 Code of Federal Regulations 20.1406",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.2, p. 9.2-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Minimization of leaks and spills",
+      "Adequate leak detection",
+      "Avoiding release from undetected leaks",
+      "Reducing need to decontaminate",
+      "Periodic review of practices"
+     ],
+     "anchor": "Minimization of leaks and spills and provisions of containment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.2, p. 9.2-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which regulation covers minimizing contamination?",
+     "o": [
+      "10 CFR 20.1406",
+      "10 CFR 50.54",
+      "10 CFR 55",
+      "10 CFR 73"
+     ],
+     "a": 0,
+     "x": "The design is consistent with 10 CFR 20.1406.",
+     "anchor": "consistent with the requirements in 10 Code of Federal Regulations 20.1406",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 9.2, p. 9.2-1",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Preliminary dose assessment",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Case or group",
+      "Person-rem per year"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Routine online total",
+        "67.5"
+       ],
+       "anchor": "Security Security Patrols 15 Total 67.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-3"
+      },
+      {
+       "cells": [
+        "Operations on-shift, routine",
+        "17.5"
+       ],
+       "anchor": "General Reactor Operations On-shift 17.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-3"
+      },
+      {
+       "cells": [
+        "Refueling total",
+        "197.5"
+       ],
+       "anchor": "Support Staff 47 Total 197.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-4"
+      },
+      {
+       "cells": [
+        "Maintenance, refueling",
+        "72"
+       ],
+       "anchor": "Maintenance 72",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-4"
+      },
+      {
+       "cells": [
+        "Operations, refueling",
+        "35"
+       ],
+       "anchor": "Operations 35",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The Operations group includes Shift Managers, Control Room Supervisors, Reactor Operators, and Non-Licensed Operators.",
+     "anchor": "The Operations organization includes Shift Managers, Control Room Supervisors, Reactor Operators, and Non-Licensed Operators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.2, p. 10.5-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which group has the highest refueling estimate?",
+     "o": [
+      "Security",
+      "Engineering",
+      "Operations",
+      "Maintenance"
+     ],
+     "a": 3,
+     "x": "Table 10.5-2 lists Maintenance at 72 person-rem.",
+     "anchor": "Maintenance 72",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-4",
+     "eo": "6"
+    },
+    {
+     "q": "What is the routine online total estimate?",
+     "o": [
+      "17.5",
+      "67.5",
+      "197.5",
+      "500"
+     ],
+     "a": 1,
+     "x": "Table 10.5-1 totals 67.5 person-rem per year.",
+     "anchor": "Security Security Patrols 15 Total 67.5",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-3",
+     "eo": "6"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The RPP and ALARA program meet 10 CFR 19.12 and 20, and details come at the OL stage.",
+   "anchor": "The RPP will be developed to ensure 10 CFR 19.12 and 10 CFR 20 requirements are met",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 9.3.2, p. 10.1-1"
+  },
+  {
+   "text": "Everyone can halt an operation they judge radiologically unsafe.",
+   "anchor": "have the authority to halt any operation which, in their judgment, is radiologically unsafe",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 10.1, p. 10.1-2"
+  },
+  {
+   "text": "Shielding, SPS cesium removal, and remote fuel handling keep exposure ALARA.",
+   "anchor": "The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 10.4.2, p. 10.4-1"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-06",
+ "title": "Radiological Controls",
+ "kind": "topic",
+ "subject": "radiological controls",
+ "sec_note": "Sec. 9.2 and Ch. 10, pp. 9.2-1 and 10.1-1 to 10.5-4",
+ "intro": "Full programs come at the operating license stage. The PSAR gives the commitments, the design features that keep dose low, and a preliminary dose estimate.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the requirements for the Radiation Protection Program and ALARA.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Describe access controls for High and Very High Radiation Areas.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major radiation sources by building.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Describe design features that maintain exposure ALARA.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe contamination control principles.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Use the preliminary dose assessment to compare organizations.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-06-radiological-controls"
+}

@@ -1,0 +1,592 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and arrangement",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RCC consists of replaceable core assemblies. It is contained within the RV and is supported and constrained by the Core Barrel Structures.",
+     "anchor": "The RCC consists of replaceable core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1"
+    },
+    {
+     "t": "p",
+     "text": "The reactor is a pool-type, sodium-cooled, fast reactor which operates at near-atmospheric pressure.",
+     "anchor": "The reactor is a pool-type, sodium-cooled, fast reactor which operates at near-atmospheric pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Parameter",
+      "Value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Core power",
+        "840 MWt"
+       ],
+       "anchor": "Core Power 840 MWt",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12"
+      },
+      {
+       "cells": [
+        "Inlet temperature at 100% power and flow",
+        "680 F (360 C)"
+       ],
+       "anchor": "Inlet Temperature at 100% power and flow 680°F (360°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12"
+      },
+      {
+       "cells": [
+        "Outlet temperature at 100% power and flow",
+        "950 F (510 C)"
+       ],
+       "anchor": "Outlet Temperature at 100% power and flow 950°F (510°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12"
+      },
+      {
+       "cells": [
+        "Core average fast flux fraction",
+        "0.67"
+       ],
+       "anchor": "Core Average Fast Flux Fraction (End of Equilibrium Cycle) 0.67",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What are the core inlet and outlet temperatures at 100% power and flow?",
+     "o": [
+      "500 F and 800 F",
+      "680 F and 950 F",
+      "750 F and 1050 F",
+      "360 F and 510 F"
+     ],
+     "a": 1,
+     "x": "Table 7.1.1-1 lists 680 F inlet and 950 F outlet.",
+     "anchor": "Outlet Temperature at 100% power and flow 950°F (510°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12",
+     "eo": "1,2"
+    },
+    {
+     "q": "What is the rated core power?",
+     "o": [
+      "345 MWt",
+      "500 MWt",
+      "840 MWt",
+      "1200 MWt"
+     ],
+     "a": 2,
+     "x": "Core power is 840 MWt.",
+     "anchor": "Core Power 840 MWt",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Core assembly types",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-1-2",
+     "num": "7.1.1-2",
+     "cap": "Illustration of Reactor Core Loading Pattern",
+     "alt": "PSAR Rev 1 figure: Illustration of Reactor Core Loading Pattern",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-14"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Assembly",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Fuel",
+        "Contains the fuel, produces heat, and provides the neutron flux environment"
+       ],
+       "anchor": "The fuel assembly contains the fuel, produces heat, provides the neutron flux environment",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-2"
+      },
+      {
+       "cells": [
+        "Reflector",
+        "Reflects neutrons into the fueled region, which reduces reactivity loss and limits damage to permanent structures"
+       ],
+       "anchor": "Reflect neutrons into the core's fueled region",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+      },
+      {
+       "cells": [
+        "Shield",
+        "Two outermost rows. Absorb radial neutron leakage to limit activation of intermediate sodium"
+       ],
+       "anchor": "Absorb radial neutron leakage outside of the reflector assemblies",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+      },
+      {
+       "cells": [
+        "Material surveillance",
+        "Enclose and support material specimens"
+       ],
+       "anchor": "The purpose of the material surveillance assemblies is to provide enclosure and support",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4"
+      },
+      {
+       "cells": [
+        "Neutron source",
+        "Produce neutrons for startup and source range measurement when subcritical"
+       ],
+       "anchor": "allows for reactor startup and measurement of source range signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4"
+      },
+      {
+       "cells": [
+        "Simulated core",
+        "Support sodium fill, non-power initial operations, and recovery of a stuck assembly"
+       ],
+       "anchor": "used to support primary sodium coolant fill and non-power initial operations",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4"
+      },
+      {
+       "cells": [
+        "Compressive",
+        "Support the core restraint function and enhance core lock-up"
+       ],
+       "anchor": "The compressive assemblies support the core restraint function",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4"
+      },
+      {
+       "cells": [
+        "Lead test and lead demonstration",
+        "Support fuel surveillance and operating experience with advanced fuels"
+       ],
+       "anchor": "gain operating experience with and aid in the transition to advanced fuel designs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-5"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the purpose of the shield assemblies?",
+     "o": [
+      "Generate startup neutrons",
+      "Absorb radial neutron leakage to limit activation of intermediate sodium",
+      "Hold material specimens",
+      "Store spent fuel"
+     ],
+     "a": 1,
+     "x": "Shield assemblies absorb radial neutron leakage outside the reflector assemblies.",
+     "anchor": "Absorb radial neutron leakage outside of the reflector assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3",
+     "eo": "3"
+    },
+    {
+     "q": "Which assembly supports startup and source range measurement?",
+     "o": [
+      "Neutron source assembly",
+      "Reflector assembly",
+      "Compressive assembly",
+      "Lead test assembly"
+     ],
+     "a": 0,
+     "x": "Neutron source assemblies allow startup and source range measurement when subcritical.",
+     "anchor": "allows for reactor startup and measurement of source range signals",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "The fuel pin",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The initial fuel is a sodium-bonded metal fuel in a tight, hex-packed pin bundle, with pins separated by a wire wrap.",
+     "anchor": "The pin bundle is arranged in a tight, hex-packed configuration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+    },
+    {
+     "t": "p",
+     "text": "The pin has shield slugs at the bottom, a sodium-bonded fuel column in the center, and a gas plenum with a tag gas capsule at the top, inside HT9 alloy steel cladding.",
+     "anchor": "The fuel pin comprises shield slugs at the bottom",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+    },
+    {
+     "t": "p",
+     "text": "Cladding provides a functional containment barrier and resists plenum gas pressure and fuel swelling.",
+     "anchor": "The fuel pin cladding provides a functional containment barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+    },
+    {
+     "t": "p",
+     "text": "Tag gas identifies assemblies with failed fuel pins, using an online fuel monitoring system.",
+     "anchor": "Tag gas is used to identify assemblies containing failed fuel pins",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-1-1",
+     "num": "7.1.1-1",
+     "cap": "Core Assembly Configuration",
+     "alt": "PSAR Rev 1 figure: Core Assembly Configuration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-13"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is tag gas used for?",
+     "o": [
+      "Pressurizing the cover gas",
+      "Measuring flux",
+      "Cooling the plenum",
+      "Identifying assemblies containing failed fuel pins"
+     ],
+     "a": 3,
+     "x": "Tag gas identifies assemblies containing failed fuel pins.",
+     "anchor": "Tag gas is used to identify assemblies containing failed fuel pins",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3",
+     "eo": "3"
+    },
+    {
+     "q": "What cladding material does the fuel pin use?",
+     "o": [
+      "HT9 alloy steel",
+      "Inconel",
+      "Zircaloy",
+      "316H stainless"
+     ],
+     "a": 0,
+     "x": "The pin is contained within an HT9 alloy steel cladding.",
+     "anchor": "contained within an HT9 alloy steel cladding",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Reactivity control",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "There are nine primary and four secondary control rod assemblies, which work with the CRD.",
+     "anchor": "There are nine primary control rod assemblies and four secondary control rod assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-9"
+    },
+    {
+     "t": "p",
+     "text": "Absorber pins hold cladded, helium-bonded, boron carbide pellets.",
+     "anchor": "The absorber pins contain cladded, helium-bonded, Boron Carbide absorber pellets",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+    },
+    {
+     "t": "p",
+     "text": "Scram insertion has enough worth to shut down the reactor and maintain safe shutdown even with the highest worth rod stuck withdrawn.",
+     "anchor": "even if the highest worth rod is stuck in the withdrawn position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+    },
+    {
+     "t": "p",
+     "text": "Secondary control assemblies provide a regulating function to manage small reactivity changes.",
+     "anchor": "The secondary control assemblies provide a regulating function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+    },
+    {
+     "t": "p",
+     "text": "Reactor power level, start-up, and shut-down are controlled by operator action. No operator action is required for the DL3 scram functions or to initiate natural circulation for emergency decay heat removal.",
+     "anchor": "no operator action is required to perform the DL3 scram functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3, p. 7.1-9"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many primary and secondary control rod assemblies are there?",
+     "o": [
+      "13 and 4",
+      "9 and 4",
+      "8 and 5",
+      "12 and 1"
+     ],
+     "a": 1,
+     "x": "There are nine primary and four secondary control rod assemblies.",
+     "anchor": "There are nine primary control rod assemblies and four secondary control rod assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-9",
+     "eo": "4"
+    },
+    {
+     "q": "Scram worth must shut down the reactor under which assumption?",
+     "o": [
+      "All rods insert fully",
+      "The highest worth rod is stuck withdrawn",
+      "Two rods are stuck",
+      "Secondary rods only are unavailable"
+     ],
+     "a": 1,
+     "x": "Worth is sufficient even if the highest worth rod is stuck in the withdrawn position.",
+     "anchor": "even if the highest worth rod is stuck in the withdrawn position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Inherent feedback",
+   "eo": [
+    "6",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Fuel temperature (Doppler) effects",
+      "Fuel axial expansion and contraction",
+      "Primary sodium coolant density",
+      "Control rod driveline axial expansion",
+      "Radial distortion"
+     ],
+     "anchor": "the reactivity feedback mechanisms include fuel temperature (Doppler) effects",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-6"
+    },
+    {
+     "t": "p",
+     "text": "The net effect of the prompt acting feedbacks is negative in the power operating range.",
+     "anchor": "the net effect of the prompt acting components of these feedback mechanisms is negative",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-6"
+    },
+    {
+     "t": "p",
+     "text": "The core restraint system maintains the core configuration for passive heat removal flow and for sufficient absorber insertion.",
+     "anchor": "The core restraint system maintains the core configuration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "The net prompt reactivity feedback in the power range is designed to be what?",
+     "o": [
+      "Negative",
+      "Dependent on rod position",
+      "Positive",
+      "Zero"
+     ],
+     "a": 0,
+     "x": "The net prompt acting feedback effect is negative in the power operating range.",
+     "anchor": "the net effect of the prompt acting components of these feedback mechanisms is negative",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-6",
+     "eo": "6,9"
+    }
+   ]
+  },
+  {
+   "title": "Instrumentation and indications",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "XIS senses neutron flux leaking from the core to indicate reactor power.",
+     "anchor": "provides instrumentation to sense the neutron flux leaking from the core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-10"
+    },
+    {
+     "t": "p",
+     "text": "RIS monitors core temperature, neutron flux, coolant flow rate, and fuel failure through tag gas or coolant activity analysis.",
+     "anchor": "fuel failure (via tag gas or coolant activity analysis)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-10"
+    },
+    {
+     "t": "p",
+     "text": "RMS ensures radiation release from the core can be detected.",
+     "anchor": "ensures that radiation release from the reactor core can be detected",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-11"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is fuel failure detected?",
+     "o": [
+      "SPS pump speed",
+      "Tag gas or coolant activity analysis",
+      "Rod position change",
+      "Reactor head strain gauges"
+     ],
+     "a": 1,
+     "x": "RIS signals cover fuel failure via tag gas or coolant activity analysis.",
+     "anchor": "fuel failure (via tag gas or coolant activity analysis)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-10",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance and special treatment",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The fuel assembly is classified safety-related.",
+     "anchor": "The fuel assembly is classified safety-related (SR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-2"
+    },
+    {
+     "t": "p",
+     "text": "The RCC supports scram function DL3-RC1 by keeping component movement within limits needed for control rod release.",
+     "anchor": "DL3-RC1 Scram - Gravity Driven Absorber",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-7"
+    },
+    {
+     "t": "p",
+     "text": "The fuel assemblies maintain natural circulation capability and coolable geometry by limiting structural deformation.",
+     "anchor": "The fuel assemblies maintain natural",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the RCC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.4, p. 7.1-10"
+    },
+    {
+     "t": "note",
+     "text": "Technical specification details for the core are not given in Sec. 7.1.1. See lesson OP-01."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a function of the RCC in passive heat removal?",
+     "o": [
+      "Isolating the IHX",
+      "Driving the PSPs",
+      "Maintaining natural circulation capability and coolable geometry",
+      "Rejecting heat to air"
+     ],
+     "a": 2,
+     "x": "Fuel assemblies maintain natural circulation capability and coolable geometry.",
+     "anchor": "The fuel assemblies maintain natural",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-7",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The RCC is the set of replaceable core assemblies, rated at 840 MWt.",
+   "anchor": "Core Power 840 MWt",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12"
+  },
+  {
+   "text": "Control is nine primary and four secondary rod assemblies with worth to cover a stuck highest worth rod.",
+   "anchor": "even if the highest worth rod is stuck in the withdrawn position",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+  },
+  {
+   "text": "Tag gas identifies failed fuel pins.",
+   "anchor": "Tag gas is used to identify assemblies containing failed fuel pins",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-01",
+ "title": "Reactor Core System",
+ "kind": "system",
+ "subject": "RCC",
+ "sec_note": "Sec. 7.1.1, pp. 7.1-1 to 7.1-14",
+ "intro": "The Reactor Core System is the set of replaceable core assemblies. This lesson covers each assembly type, reactivity control, and what the core must do in an event.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RCC.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RCC boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RCC.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RCC operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RCC controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RCC automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RCC.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RCC.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RCC.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RCC.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-01-reactor-core-system"
+}

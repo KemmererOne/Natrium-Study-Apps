@@ -138,7 +138,7 @@ ${lessonSources.map(s => `      <article class="src">
         <h3>${esc(s.doc)}</h3>
         <dl><div><dt>File</dt><dd class="mono">${esc(s.file)}</dd></div></dl>
         <ul class="plain">
-${s.lessons.map(l => `          <li><a href="../topics/${esc(l.slug)}/">${esc(l.module)} ${esc(l.title)}</a>: ${esc(l.label)} ${esc(l.pages.join(", "))}</li>`).join("\n")}
+${s.lessons.map(l => `          <li><a href="../${esc(l.dir || "topics")}/${esc(l.slug)}/">${esc(l.module)} ${esc(l.title)}</a>: ${esc(l.label)} ${esc(l.pages.join(", "))}</li>`).join("\n")}
         </ul>
       </article>`).join("\n")}
     </section>`;

@@ -4,16 +4,17 @@
 const fs = require("fs"), path = require("path");
 const ROOT = path.join(__dirname, ".."), read = f => fs.readFileSync(path.join(ROOT, f), "utf8");
 const errors = [], fail = m => errors.push(m);
-const dirs = fs.readdirSync(path.join(ROOT, "topics"), { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name);
+const list = base => fs.readdirSync(path.join(ROOT, base), { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name);
+const dirs = list("topics"), psarDirs = list("psar");
 let pages = 0;
-for (const d of dirs) {
-  const html = read(`topics/${d}/index.html`);
+for (const [base, d] of [...dirs.map(d => ["topics", d]), ...psarDirs.map(d => ["psar", d])]) {
+  const html = read(`${base}/${d}/index.html`);
   if (/<link\b|<script[^>]+src=|\bsrc="(?!data:image\/png)|url\(http/.test(html)) fail(`${d}: loads an outside file`);
   for (const m of html.matchAll(/<img\b[^>]*>/g)) if (!/ alt="[^"]{10,}"/.test(m[0])) fail(`${d}: image with no alt text`);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]));
   for (const m of html.matchAll(/href="#([^"]+)"/g)) if (!ids.has(m[1])) fail(`${d}: broken page link #${m[1]}`);
   for (const m of html.matchAll(/href="(\.\.[^"#]*)/g)) {
-    const t = path.resolve(ROOT, "topics", d, m[1]);
+    const t = path.resolve(ROOT, base, d, m[1]);
     if (!fs.existsSync(path.join(t, "index.html")) && !fs.existsSync(t)) fail(`${d}: broken link ${m[1]}`);
   }
   for (const s of html.split('<section class="page"').slice(1)) {
@@ -40,6 +41,13 @@ for (const d of dirs) {
   if (!sw.includes(`./topics/${d}/`)) fail(`sw.js: topic not cached: ${d}`);
 }
 if (!sw.includes('"./lessons/"')) fail("sw.js: lesson plans page not cached");
-console.log(`${dirs.length} topics, ${pages} pages checked, ${errors.length} problems`);
+if (!landing.includes('class="big" href="psar/"')) fail("landing: no PSAR Lesson Plans button");
+const psarPlans = read("psar/index.html");
+for (const d of psarDirs) {
+  if (!psarPlans.includes(`value="../psar/${d}/"`)) fail(`psar: no option for built lesson ${d}`);
+  if (!sw.includes(`./psar/${d}/`)) fail(`sw.js: PSAR lesson not cached: ${d}`);
+  if (!read(`psar/${d}/index.html`).includes('class="mark"')) fail(`psar: ${d} has no completion button`);
+}
+console.log(`${dirs.length} topics, ${psarDirs.length} PSAR lessons, ${pages} pages checked, ${errors.length} problems`);
 errors.forEach(e => console.log("  " + e));
 process.exit(errors.length ? 1 : 0);

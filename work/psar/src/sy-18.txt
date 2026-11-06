@@ -1,0 +1,68 @@
+# SY-18 | Nuclear Instrumentation System | system | XIS
+range: 7.6-36 7.6-47
+sec: Sec. 7.6.4, pp. 7.6-36 to 7.6-47
+intro: The XIS measures neutron leakage outside the core and turns it into a power signal for the RPS and NIC. It is analog, with one detector per division.
+
+== Purpose and detectors | 1,3
+S The XIS senses neutron flux leakage from the core during fuel movement, startup, power operations, shutdown, and accident conditions. @@ provides instrumentation to sense neutron flux leakage from the core during fuel movement
+S Neutron leakage is proportional to reactor flux, so it can be converted to a power indication. @@ Neutron leakage is proportional to reactor flux
+S It uses a High Temperature Fission Chamber with a high voltage probe. @@ The XIS uses a High Temperature Fission Chamber to measure the neutron flux in the reactor
+S The signal is converted to source, wide, and power range signals. @@ converted to source, wide, and power range signals
+S There is one detector per division, four in total, each in its own drywell. @@ There is one High Temperature Fission Chamber detector for each division (four total)
+S The drywells are on the outside perimeter of the Core Barrel Structure outer barrel. @@ are located on the outside perimeter of the Core Barrel Structure outer barrel
+K What detector does the XIS use? | BF3 counter | High Temperature Fission Chamber | Ion chamber in the core | Self-powered detector | 1 | The XIS uses a High Temperature Fission Chamber. @@ The XIS uses a High Temperature Fission Chamber to measure the neutron flux in the reactor
+K How many XIS detectors are there? | One | Two | Four | Eight | 2 | There is one detector for each division, four total. @@ There is one High Temperature Fission Chamber detector for each division (four total)
+K Which three ranges does the XIS produce? | Source, wide, and power | Low, mid, and high | Startup, intermediate, and full | Count, rate, and level | 0 | The signal is converted to source, wide, and power range signals. @@ converted to source, wide, and power range signals
+
+== Architecture and locations | 2,4
+S Each XIS division is separate and independent, and the four divisions match the four RPS divisions. @@ the four XIS divisions correspond to the four RPS divisions
+S Each XIS division interfaces with the corresponding RPS division only. @@ interfaces with the corresponding RPS division only
+S XIS signals sent to the RPS reach the plant data bus through the RPS data gateway. @@ are made available to the plant data bus via the RPS data gateway
+S NIC subsystems such as RMC and CTC get isolated hardwired signals from the XIS. @@ are provided with isolated hardwired signals from XIS
+T Equipment | Location
+R Detectors | Individual drywells external and adjacent to the core @@ The XIS detectors are located in individual drywells external and adjacent to the core
+R Field amplifier enclosures | RXB Head Access Area @@ XIS field amplifier enclosures located in the Reactor Building (RXB) Head Access Area
+R Electronics enclosures | NCB substructure @@ XIS electronics enclosures located in the Nuclear Island Control Building (NCB) Substructure
+R Audible count rate monitors | MCR and FHCR @@ The XIS Audible Count Rate monitors are located in both the MCR and FHCR
+F 7.6.4-1
+K Where are the XIS field amplifiers? | MCR | RXB Head Access Area | NCB substructure | Inside the reactor vessel | 1 | Field amplifier enclosures are in the RXB Head Access Area. @@ XIS field amplifier enclosures located in the Reactor Building (RXB) Head Access Area
+K How do RMC and CTC get XIS signals? | Over the DCS bus from RPS | Isolated hardwired signals | Through a data diode only | They do not | 1 | They are provided with isolated hardwired signals. @@ are provided with isolated hardwired signals from XIS
+
+== Functions supported | 6
+T Function | Purpose
+R DL3-RC1a | Scram on high-high neutron flux @@ DL3-RC1a Reactor scram on high-high
+R DL3-RC1d | Scram on high-high power-to-flow ratio @@ DL3-RC1d Reactor scram on high-high
+R DL3-RC1f | Scram on high-high positive neutron flux rate @@ DL3-RC1f Reactor scram on high-high
+R DL3-RC1g | Scram on high-high negative neutron flux rate @@ DL3-RC1g Reactor scram on high-high
+R DL3-RC1i | Scram on low power, high neutron flux @@ DL3-RC1i Reactor scram on low power, high
+R DL3-HR2 | PSP trip on high-high primary sodium temperature @@ DL3- HR2 PSP trip on high-high primary
+R DL3-HR3 | ISP trip on high-high primary sodium temperature @@ DL3-HR3 Intermediate Sodium Pump (ISP)
+R DL3-HR12 | ISP trip on high-high primary sodium level @@ DL3-HR12 ISP trip on high-high primary
+R DL5-PAM1 | Type B and D PAM variables @@ send signals to the RPS and NIC for display as Type B and D PAM variables
+S In each of these functions, the XIS monitors neutron flux and sends signals to the RPS. @@ XIS includes sensors that monitor neutron flux
+K Which PAM types does the XIS support? | Type A and B | Type B and D | Type C and F | Type E only | 1 | XIS flux is displayed as Type B and D PAM variables. @@ send signals to the RPS and NIC for display as Type B and D PAM variables
+K Why does the XIS feed the ISP trip functions? | Flux is a condition in the RPS trip logic | It measures ISP speed | It measures level | It does not | 0 | XIS sensors send flux signals to the RPS for DL3-HR3 and DL3-HR12. @@ DL3-HR12 ISP trip on high-high primary
+
+== Indications and calibration | 5,8
+S XIS status and data display through the RPS and NIC. @@ The XIS operational aspects are displayed via the RPS and NIC
+S NST audible count rate devices in the MCR and FHCR give source range indication by sound. @@ provide operators with source range indication via an audible signal
+S Power range and wide range channels need periodic calorimetric adjustments. @@ The power range and wide range channels require periodic calorimetric adjustments
+S These align XIS readouts with power determined from core thermal power calculations. @@ These adjustments align the XIS readouts to match power levels determined by accurate calorimetric calculations
+S Electronics modules perform continuous self-diagnostics, and a critical fault places all outputs in the safe state. @@ the system places all outputs to the safe state
+S Any division can be out for testing with no loss of safety function. @@ The system design allows for any division to be taken out of service for testing at any time
+S XIS channels are included in the overall bypass schemes for Maintenance Bypass. @@ are included in the overall bypass schemes for placing SR channels into Maintenance Bypass
+K What aligns power and wide range readouts to true power? | Audible count rate | Calorimetric adjustments | RPS voting | Source range overlap | 1 | Periodic calorimetric adjustments align XIS readouts. @@ The power range and wide range channels require periodic calorimetric adjustments
+K An XIS module finds a critical fault. What happens? | Outputs go to the safe state | Outputs hold last value | Alarm only | The division reboots | 0 | The system places all outputs to the safe state. @@ the system places all outputs to the safe state
+
+== Safety significance | 9,10
+S The XIS is an SR system supporting SR, NSRST, and NST functions. @@ The XIS is an SR system supporting SR, non-safety-related with special treatment
+S XIS components are seismic class SCS1. @@ The seismic classification of XIS components is SCS1
+S The XIS is currently an analog design with no software in SR functions, so there are no credible common-cause failures as required by IEEE 603. @@ The XIS is currently designed as an analog system that does not contain software to perform any SR functions
+S Power comes from four NSRST divisions of the NUP. @@ The NUP power feeds to XIS are organized into four NSRST divisions
+S NCB equipment is in division-specific 3-hour fire rated rooms. @@ XIS equipment in the NCB is located in a division-specific, 3-hour fire rated room
+L Quality Assurance Program Description ;; Human Factors Engineering Program Plan ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Acceptance Program ;; Design Reliability Assurance Program @@ are preliminarily identified as applicable to the XIS to meet quality, design, reliability, and performance requirements
+K Is XIS analog or digital? | Digital | Analog | Hybrid with software in SR functions | Not stated | 1 | The XIS is currently designed as an analog system. @@ The XIS is currently designed as an analog system that does not contain software to perform any SR functions
+K Which system powers the XIS? | NUP | Offsite direct | Diesel only | RPS | 0 | The XIS is powered from the NUP, in four NSRST divisions. @@ The NUP power feeds to XIS are organized into four NSRST divisions
+Z Four fission chambers in drywells outside the core barrel feed four matched RPS divisions. @@ There is one High Temperature Fission Chamber detector for each division (four total)
+Z Signals go to the RPS for protection and isolated hardwire to the NIC for control. @@ are provided with isolated hardwired signals from XIS
+Z The XIS is analog, SR, and SCS1, and calorimetric adjustments keep it aligned with true power. @@ The power range and wide range channels require periodic calorimetric adjustments

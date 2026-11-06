@@ -1,0 +1,577 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and scope",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SCG controls, monitors, and supplies inert argon gas in the RXB, RAB, and FHB.",
+     "anchor": "controls, monitors, and supplies inert argon gas to various systems and components throughout",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "It comprises the Primary SCG and the Intermediate SCG.",
+     "anchor": "The SCG comprises the Primary SCG and the Intermediate SCG",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "Both receive purified argon from the NGA, with design conditions of 250 psig and 110 F. Local accumulators add inventory if NGA supply is disrupted.",
+     "anchor": "Local argon accumulators are located directly downstream of the NGA supply",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "SCG piping that penetrates the RES, up to and including the first isolation valve, is part of the primary coolant boundary.",
+     "anchor": "SCG piping that penetrates the RES, up to and including the first isolation valve",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-31"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-3-1",
+     "num": "7.2.3-1",
+     "cap": "Primary Cover Gas System Block Diagram",
+     "alt": "PSAR Rev 1 figure: Primary Cover Gas System Block Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.5, p. 7.2-39"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What supplies purified argon to the SCG?",
+     "o": [
+      "SPS",
+      "RWG",
+      "NGA",
+      "NHV"
+     ],
+     "a": 2,
+     "x": "The SCG receives high pressure, purified argon from the NGA.",
+     "anchor": "receives high pressure, purified argon from the Nuclear Island Argon Gas Distribution and Storage System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Primary SCG flow path",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "All gas entering the RV exhausts through a single port in normal operation.",
+     "anchor": "All gas entering the RV is exhausted through a single port during normal operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "In the primary filter skid, gas goes through the vapor trap (a preheater and vapor condenser), then an aerosol filter to remove sodium vapors and aerosols.",
+     "anchor": "the gas passes through the vapor trap which consists of a preheater and vapor condenser",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "If cesium is present, gas goes through a cesium vapor filter before exhausting to the RWG.",
+     "anchor": "If cesium is present the gas is routed through a cesium vapor filter",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "RV-GV annulus gas is generally recycled in a closed loop and exhausts only to relieve high pressure, to RWG or NHV depending on activity.",
+     "anchor": "is generally recycled in a closed loop and only exhausts to relieve high pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    },
+    {
+     "t": "p",
+     "text": "The highest delivered pressure is to the scram cylinders, which sets the minimum NGA delivered pressure.",
+     "anchor": "The highest delivered pressure from the Primary SCG is to the SCRAM cylinders",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which Primary SCG user sets the minimum delivered pressure by NGA?",
+     "o": [
+      "PSP seals",
+      "SCRAM cylinders",
+      "RV cover gas",
+      "Lube oil skids"
+     ],
+     "a": 1,
+     "x": "The highest delivered pressure is to the SCRAM cylinders.",
+     "anchor": "The highest delivered pressure from the Primary SCG is to the SCRAM cylinders",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22",
+     "eo": "3,4"
+    },
+    {
+     "q": "What removes sodium vapor from the exhaust?",
+     "o": [
+      "Vapor trap and aerosol filter",
+      "NHV",
+      "Holdup tank",
+      "Cesium filter only"
+     ],
+     "a": 0,
+     "x": "Gas passes through the vapor trap and an aerosol filter to remove sodium vapors and aerosols.",
+     "anchor": "the gas passes through the vapor trap which consists of a preheater and vapor condenser",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Pressure relationships",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RV cover gas stays at a slight positive pressure relative to the HAA.",
+     "anchor": "Maintaining a slight positive pressure within the RV cover gas relative to the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-33"
+    },
+    {
+     "t": "p",
+     "text": "GV pressure is kept above HAA pressure and below reactor pressure.",
+     "anchor": "Maintaining GV pressure above HAA pressure and below reactor pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34"
+    },
+    {
+     "t": "p",
+     "text": "A minimum flow in the main feed line prevents sodium and radioisotope diffusion that could impact overpressure protection.",
+     "anchor": "A minimum flow is maintained in the main feed line at all times",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28"
+    },
+    {
+     "t": "p",
+     "text": "Heat tracing keeps sodium in the exhaust from freezing and plugging when the condenser and filters are unavailable.",
+     "anchor": "heat tracing maintains the sodium content at sufficient temperatures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How does GV pressure compare to the HAA and reactor?",
+     "o": [
+      "Below both",
+      "Above HAA and below reactor",
+      "Above both",
+      "Equal to HAA"
+     ],
+     "a": 1,
+     "x": "The SCG maintains GV pressure above HAA pressure and below reactor pressure.",
+     "anchor": "Maintaining GV pressure above HAA pressure and below reactor pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Intermediate SCG",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "ISP tanks",
+      "IHT drain tanks",
+      "IHT tank bubbler tubes",
+      "ISP gas barriers",
+      "ISP lube oil skids",
+      "Aerosol filter and sample line purges"
+     ],
+     "anchor": "The Intermediate SCG distributes the gas to the required locations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.2, p. 7.2-23"
+    },
+    {
+     "t": "p",
+     "text": "Gas through the ISP gas barrier prevents sodium deposition.",
+     "anchor": "Gas is introduced through the ISP gas barrier to prevent sodium deposition",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.2, p. 7.2-23"
+    },
+    {
+     "t": "p",
+     "text": "Gas passes through drain tanks and aerosol filters, then out through an oil bubbler to NHV.",
+     "anchor": "The gas is then discharged through an oil bubbler to NHV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.2, p. 7.2-23"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-3-2",
+     "num": "7.2.3-2",
+     "cap": "Intermediate Cover Gas System Block Diagram",
+     "alt": "PSAR Rev 1 figure: Intermediate Cover Gas System Block Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.5, p. 7.2-40"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where does the Intermediate SCG discharge?",
+     "o": [
+      "To the RWG holdup tank",
+      "To the reactor",
+      "To the stack with no filter",
+      "Through an oil bubbler to NHV"
+     ],
+     "a": 3,
+     "x": "Gas is discharged through an oil bubbler to NHV.",
+     "anchor": "The gas is then discharged through an oil bubbler to NHV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.2, p. 7.2-23",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Failed fuel monitoring",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Impurity monitoring for hydrogen, oxygen, nitrogen, and methane",
+      "Gas sampling",
+      "Gamma spectroscopy and radiation monitoring for failed fuel",
+      "Tag gas monitoring for failed fuel localization"
+     ],
+     "anchor": "Impurity monitoring for hydrogen, oxygen, nitrogen, and methane",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34"
+    },
+    {
+     "t": "p",
+     "text": "The exhaust stream is monitored for fission products. With no fission gas, it goes directly to the RWG vacuum tank.",
+     "anchor": "the gas is discharged directly to the RWG vacuum tank",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34"
+    },
+    {
+     "t": "p",
+     "text": "If an increase in fission gas is detected, the stream goes to the tag gas analysis cabinet, where xenon and krypton are concentrated.",
+     "anchor": "the gas stream is routed to the tag gas analysis cabinet",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What happens when an increase in fission gas is detected?",
+     "o": [
+      "The cover gas is isolated",
+      "The reactor scrams automatically",
+      "The gas stream is routed to the tag gas analysis cabinet",
+      "The RV is vented to the HAA"
+     ],
+     "a": 2,
+     "x": "An increase indicates a new breach, and gas is routed to the tag gas analysis cabinet.",
+     "anchor": "the gas stream is routed to the tag gas analysis cabinet",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Detecting an RV leak",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Annulus argon is monitored continuously for oxygen content, radioactivity, and filter pressure drop.",
+     "anchor": "The argon gas is monitored continuously during operation for oxygen content, radioactivity",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Indicator",
+      "Change on an RV leak",
+      "Why"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Oxygen",
+        "Drops",
+        "Sodium or vapor oxidizes"
+       ],
+       "anchor": "the diatomic oxygen content is expected to drop",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35"
+      },
+      {
+       "cells": [
+        "Activity",
+        "May increase",
+        "Argon-41, Neon-23, fission products, or sodium radioisotopes enter the annulus"
+       ],
+       "anchor": "activity in the annulus may increase",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35"
+      },
+      {
+       "cells": [
+        "Filter pressure drop",
+        "Increases",
+        "Sodium aerosols or oxide accumulate"
+       ],
+       "anchor": "an increase in pressure drop across a filter may also indicate a leak",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which trend in the RV-GV annulus gas indicates an RV sodium leak?",
+     "o": [
+      "Oxygen dropping",
+      "Filter pressure drop falling",
+      "Argon flow rising",
+      "Oxygen rising"
+     ],
+     "a": 0,
+     "x": "Oxygen drops as sodium or sodium vapor oxidizes.",
+     "anchor": "the diatomic oxygen content is expected to drop",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Overpressure protection",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "On overpressure, SCG relief valves open and discharge to a holdup volume.",
+     "anchor": "the SCG relief valves open and discharge sodium vapor/aerosols, argon, and other effluents",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-27"
+    },
+    {
+     "t": "p",
+     "text": "The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication.",
+     "anchor": "The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-31"
+    },
+    {
+     "t": "p",
+     "text": "DL3-RR7 covers RV internal overpressure and RV external overpressure, meaning the RV-GV annulus and CRDM housings.",
+     "anchor": "DL3-RR7 RES Pressure Relief (SR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-30"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What isolates the vapor trap cell?",
+     "o": [
+      "High cover gas oxygen",
+      "Low level",
+      "A relief valve open indication",
+      "A manual switch only"
+     ],
+     "a": 2,
+     "x": "The cell is isolated on a primary coolant overpressure relief valve open indication.",
+     "anchor": "The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-31",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RR1c SCG primary system barrier",
+        "SR",
+        "Piping to the isolation valves forms part of the primary coolant boundary"
+       ],
+       "anchor": "DL3-RR1c SCG Primary System Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-30"
+      },
+      {
+       "cells": [
+        "DL3-RR7 RES pressure relief",
+        "SR",
+        "Overpressure protection for the RV"
+       ],
+       "anchor": "DL3-RR7 RES Pressure Relief (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-30"
+      },
+      {
+       "cells": [
+        "DL2-RR10 Primary SCG barrier",
+        "NSRST",
+        "Radionuclide barrier past the isolation valves"
+       ],
+       "anchor": "DL2-RR10 Primary SCG Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-30"
+      },
+      {
+       "cells": [
+        "DL4-RR4 SCG cells barriers",
+        "NSRST",
+        "Vapor trap cell is a low leakage barrier"
+       ],
+       "anchor": "DL4-RR4 SCG Cells Barriers (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-30"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "NSRST",
+        "RV and GV pressure, isolation and relief valve position, cover gas radiation"
+       ],
+       "anchor": "Post Accident Monitoring",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-31"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "In-service Testing Program",
+      "Equipment Qualification Program",
+      "Post-construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as relevant to SCG SR and NSRST SSCs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.4, p. 7.2-36"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a PAM variable from the SCG?",
+     "o": [
+      "Reactor Vessel Pressure",
+      "Cold pool level",
+      "RAC flow",
+      "ISP speed"
+     ],
+     "a": 0,
+     "x": "The SCG provides RV pressure, GV pressure, valve positions, and cover gas radiation.",
+     "anchor": "Reactor Vessel Pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The SCG supplies argon, and it has primary and intermediate parts.",
+   "anchor": "The SCG comprises the Primary SCG and the Intermediate SCG",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.1, p. 7.2-22"
+  },
+  {
+   "text": "Tag gas analysis follows a detected rise in fission gas.",
+   "anchor": "the gas stream is routed to the tag gas analysis cabinet",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34"
+  },
+  {
+   "text": "An RV leak shows as oxygen drop, activity rise, and filter pressure drop rise.",
+   "anchor": "the diatomic oxygen content is expected to drop",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-07",
+ "title": "Sodium Cover Gas System",
+ "kind": "system",
+ "subject": "SCG",
+ "sec_note": "Sec. 7.2.3, pp. 7.2-22 to 7.2-40",
+ "intro": "The SCG supplies inert argon across the plant. It keeps air out, relieves overpressure, watches for leaks, and finds failed fuel.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the SCG.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the SCG boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the SCG.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain SCG operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the SCG controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the SCG automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the SCG.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the SCG.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the SCG.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the SCG.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-07-sodium-cover-gas-system"
+}

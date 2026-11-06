@@ -1,0 +1,48 @@
+# EV-04 | Ex-Vessel Release DBEs | event | event
+range: 3.7-5 3.7-10 3.3-6 3.3-6 3.5-3 3.5-4
+sec: Sec. 3.7.3, pp. 3.7-5 to 3.7-10
+intro: These DBEs start outside the vessel: leaks from the cover gas, sodium processing, and waste gas systems. Cladding is not failed, but radionuclides can move.
+
+== Event initiators and assumptions | 1
+T DBE | Initiator | Condition
+R RRS-CGR-BL | SCG leak in the SCG primary coolant boundary piping | Full power, low power, or shutdown @@ leak occurs in the SCG primary coolant boundary piping during full power
+R RRS-CGR-1 | SCG leak downstream of the vapor trap cell | Full power, low power, or shutdown @@ An SCG leak occurs downstream of the SCG vapor trap cell during full power
+R RRS-ISPL-BL | SPS leak that releases precipitated tritium from the SPS-I cold trap | Full power, low power, or shutdown @@ that releases precipitated tritium from the Intermediate SPS (SPS-I) cold trap
+R RRS-SPLX-BL | SPS leak inboard of the isolation valves, within the HAA | Full power, low power, or shutdown @@ inboard of the SPS isolation valves within the HAA
+R RRS-SPLA-BL | SPS leak within the RAB | Full power, low power, or shutdown @@ a leak in the SPS system within the RAB
+R RRS-RWG-1 | Waste gas holdup tank leak into the FHB | Full power through refueling @@ a leak from a radioactive waste gas holdup tank into the Fuel Handling Building
+R RRS-RWG-2 | Waste gas holdup tank leak to the plant stack | Full power through refueling @@ a leak from a radioactive waste gas holdup tank to the plant stack
+K Which DBE releases precipitated tritium? | RRS-CGR-BL | RRS-ISPL-BL | RRS-RWG-2 | RRS-SPLA-BL | 1 | RRS-ISPL-BL releases precipitated tritium from the SPS-I cold trap. @@ that releases precipitated tritium from the Intermediate SPS (SPS-I) cold trap
+
+== Source term assumptions | 1,2
+T DBE | Key assumption
+R SCG leaks | Instantaneous release of the cover gas inventory into the HAA compartment @@ modeled as an instantaneous release of the radionuclide inventory from the cover gas volume
+R SCG leaks | For 30 minutes the HAA exhausts at 400 cfm with NHV filtration, then NHV isolates and the HAA leaks to the RXB at 10 percent volume per day @@ the HAA is slowly exhausted to the environment through the Nuclear Island Heating
+R SPS cold trap | Release from one cold trap over 24 hours, with the RAB released instantaneously @@ is assumed to occur over the course of 24 hours
+R SPS-P in the RAB | Airborne activated sodium equal to 20 gallons of system fluid @@ dose equivalent to 20 gallons of system fluid
+R RWG to FHB | Vault discharges at 500 cfm with NHV filtration @@ at a rate of 500 cfm with NHV filtration
+R RWG to stack | Release through the vent stack with filtration over 10 minutes @@ over a 10-minute period
+S Most SPS piping slopes down toward the reactor, which minimizes potential leakage volume. @@ most of the piping is sloped down towards the reactor
+K In the SCG leak DBEs, what happens at 30 minutes? | The reactor scrams | The HAA NHV system is isolated | RAC starts | The PSPs trip | 1 | At 30 minutes the HAA NHV system is isolated and the HAA begins to leak to the RXB. @@ At 30 minutes, the HAA NHV system is isolated
+K Why is the SPS piping sloped toward the reactor? | To aid natural circulation | To minimize the potential leakage volume | To vent cover gas | To drain the cold trap | 1 | Sloping minimizes the potential leakage volume from a break. @@ minimizing the potential leakage volume
+
+== Challenged functions and results | 2
+S The challenged FSF is retaining radionuclides. Functional containment barriers perform their retention functions in the SCG and SPS-P DBEs. @@ Functional containment barriers successfully perform their radionuclide retention functions
+T DBE | Mean 30-day EAB TEDE (rem)
+R RRS-CGR-BL and -1 | 5.75E-03 @@ 2.27E-03 5.75E-03 9.37E-03
+R RRS-ISPL-BL | 1.04E-02 @@ 5.93E-03 1.04E-02 2.04E-02
+R RRS-SPLX-BL and RRS-SPLA-BL | 1.99E-02 @@ 1.15E-02 1.99E-02 3.98E-02
+R RRS-RWG-1 | 5.62E-04 @@ 2.14E-04 5.62E-04 1.03E-03
+N Read the table as an order of magnitude comparison. These results are preliminary PSAR values.
+K Which of these has the highest mean 30-day EAB TEDE? | RRS-CGR-1 | RRS-ISPL-BL | RRS-SPLA-BL | RRS-RWG-1 | 2 | The SPS-P leak values are 1.99E-02 rem mean. @@ 1.15E-02 1.99E-02 3.98E-02
+
+== Automatic protective action and chronology | 3,5
+T Step | SPS-P leak (RRS-SPLA-BL)
+R 1 | Leak in the SPS within the RAB @@ a leak in the SPS system within the RAB
+R 2 | SPS pump trips on low primary sodium level @@ The SPS pump trips on low primary sodium level
+R 3 | Loss of primary sodium inventory is terminated @@ terminating the loss of primary sodium inventory
+R 4 | SPS cell leaks to the RAB at 10 percent volume per day @@ The SPS cell leaks at 10 percent volume per day to the RAB
+K What stops the loss of primary sodium inventory in an SPS-P leak? | RPS scram | SPS pump trip on low primary sodium level | Manual valve closure | HAA isolation | 1 | The SPS pump trips on low primary sodium level, terminating inventory loss. @@ The SPS pump trips on low primary sodium level
+
+Z These DBEs challenge radionuclide retention, with no fuel cladding failure. @@ Fuel cladding is not failed, but a radionuclide release
+Z SPS-P leaks are stopped by the SPS pump trip on low primary sodium level. @@ The SPS pump trips on low primary sodium level

@@ -1,0 +1,920 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and path of a core assembly",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FHE moves new core assemblies from receipt through inspection and conditioning to the reactor vessel.",
+     "anchor": "transfers new core assemblies from the point of receipt through inspection and conditioning",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1, p. 7.3-17"
+    },
+    {
+     "t": "p",
+     "text": "It keeps an assembly in an inert environment from the NAPS to the reactor, and from the reactor until the assembly is in the PIC and lowered into the SFP.",
+     "anchor": "is designed to convey a core assembly in an inert environment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1, p. 7.3-17"
+    },
+    {
+     "t": "p",
+     "text": "The shielded, inert transfer provides radiation shielding, radionuclide retention, and a medium for decay heat removal.",
+     "anchor": "provides radiation shielding, radionuclide retention, and a medium for removal of decay heat",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1, p. 7.3-17"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Moves or does"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "EVHM",
+        "Moves CAPs between the reactor vessel in the RXB and the EVST in the FHB"
+       ],
+       "anchor": "between the reactor vessel located in the Reactor Building (RXB) and the EVST located in the Fuel Handling Building",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-17"
+      },
+      {
+       "cells": [
+        "BLTC",
+        "Moves assemblies between the NAPS, PIC, and EVST"
+       ],
+       "anchor": "between the NAPS, Pool Immersion Cell and the EVST located in the FHB",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.2, p. 7.3-19"
+      },
+      {
+       "cells": [
+        "EVST",
+        "Temporary storage for new and irradiated assemblies"
+       ],
+       "anchor": "temporary storage for new components in route to the reactor",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-20"
+      },
+      {
+       "cells": [
+        "NAPS",
+        "Preconditions and stores new assemblies"
+       ],
+       "anchor": "New assemblies are preconditioned in the NAPS",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32"
+      },
+      {
+       "cells": [
+        "PRC",
+        "Hot cell for pin removal from LDAs and LTAs"
+       ],
+       "anchor": "is a hot cell located below grade along the EVHM travel path",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.7, p. 7.3-22"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "FHE interfaces with the FHI for in-vessel handling and the FHP for fuel pool handling.",
+     "anchor": "FHE equipment interfaces with the In-Vessel Fuel Handling System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2, p. 7.3-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which machine moves assemblies between the reactor vessel and the EVST?",
+     "o": [
+      "PHM",
+      "IVTM",
+      "BLTC",
+      "EVHM"
+     ],
+     "a": 3,
+     "x": "The EVHM transfers CAPs between the reactor vessel and the EVST.",
+     "anchor": "between the reactor vessel located in the Reactor Building (RXB) and the EVST located in the Fuel Handling Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-17",
+     "eo": "1,2"
+    },
+    {
+     "q": "Which machine delivers assemblies to the PIC?",
+     "o": [
+      "PHM",
+      "FTL",
+      "EVHM",
+      "BLTC"
+     ],
+     "a": 3,
+     "x": "The BLTC moves assemblies between the NAPS, PIC, and EVST.",
+     "anchor": "between the NAPS, Pool Immersion Cell and the EVST located in the FHB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.2, p. 7.3-19",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Ex-Vessel Handling Machine",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The EVHM is a rail-mounted, shielded, sealable vessel transport system.",
+     "anchor": "is a rail-mounted, shielded, sealable, vessel transport system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-17"
+    },
+    {
+     "t": "p",
+     "text": "The shielded cask assembly gives shielding and pressure boundary management, keeps an argon inert environment, and keeps fuel within design temperatures.",
+     "anchor": "The shielded cask assembly has three primary functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "The EVHM grapple does not directly handle any reactor core assemblies. It handles the CAP.",
+     "anchor": "The grapple does not directly handle any reactor core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "Each CAP is filled with liquid sodium and acts as the heat sink and conduction path.",
+     "anchor": "Each CAP is filled with liquid sodium and acts as the heat sink and conduction path",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19"
+    },
+    {
+     "t": "p",
+     "text": "A passive siphon lowers the CAP sodium level as it leaves the sodium, to minimize spillage.",
+     "anchor": "has a passive liquid sodium siphon feature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19"
+    },
+    {
+     "t": "p",
+     "text": "The cask is lead and B4C.",
+     "anchor": "is comprised of lead and B4C",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-28"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-2-1",
+     "num": "7.3.2-1",
+     "cap": "Ex-Vessel Handling Machine Primary Components",
+     "alt": "PSAR Rev 1 figure: Ex-Vessel Handling Machine Primary Components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-37"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the EVHM grapple handle?",
+     "o": [
+      "The FTL",
+      "The core assembly directly",
+      "The CAP",
+      "Only shield plugs"
+     ],
+     "a": 2,
+     "x": "The grapple interfaces with a CAP and does not directly handle core assemblies.",
+     "anchor": "The grapple does not directly handle any reactor core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18",
+     "eo": "3,4"
+    },
+    {
+     "q": "Why does the CAP have a siphon?",
+     "o": [
+      "To lower sodium level and minimize spillage",
+      "To fill the CAP faster",
+      "To cool the grapple",
+      "To vent argon"
+     ],
+     "a": 0,
+     "x": "The siphon lowers the level, which minimizes spillage.",
+     "anchor": "Lowering the liquid sodium level in the CAP minimizes spillage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Cask cooling on loss of power",
+   "eo": [
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In EVHM cooling operations, exhaust blowers pull air through the annulus between the main shielding cask and the cold wall.",
+     "anchor": "the exhaust blower fans continuously pull air through the annulus between the Main Shielding Cask and the cold wall",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "For heating, dampers shut and resistive heaters energize.",
+     "anchor": "dampers contained within the air channels will shut and resistive heaters are energized",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "If the EVHM loses its plant side power, the dampers fail open and natural convection keeps cooling.",
+     "anchor": "If the EVHM loses its plant side power connection, the dampers fail open",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "The EVHM passive heat removal system has a maximum heat capacity of 15.2 kW.",
+     "anchor": "The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19"
+    },
+    {
+     "t": "p",
+     "text": "The EVHM passive system is designed for core assemblies 7 days after shutdown.",
+     "anchor": "The EVHM passive cooling system is designed to handle core assemblies 7 days after shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+    },
+    {
+     "t": "p",
+     "text": "The BLTC handles assemblies only after a storage time in the EVST. It is designed for a 1.2 kW assembly.",
+     "anchor": "The BLTC handles discharged core assemblies following a specified storage time in the EVST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30"
+    },
+    {
+     "t": "p",
+     "text": "The BLTC dampers also fail open on loss of plant power.",
+     "anchor": "If the BLTC losses plant power the dampers fail open",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.2, p. 7.3-20"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Carrier",
+      "Design heat load"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "EVHM",
+        "15.2 kW"
+       ],
+       "anchor": "The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19"
+      },
+      {
+       "cells": [
+        "BLTC",
+        "1.2 kW"
+       ],
+       "anchor": "The BLTC is designed to accommodate the maximum cladding temperature of a 1.2 kW fuel assembly",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "The EVHM loses plant power during a transfer. How is the assembly cooled?",
+     "o": [
+      "The hoist lowers it into the sodium",
+      "Argon flow increases",
+      "Dampers fail open and natural convection cools",
+      "Batteries run the blowers"
+     ],
+     "a": 2,
+     "x": "The dampers fail open and natural convection maintains cooling.",
+     "anchor": "If the EVHM loses its plant side power connection, the dampers fail open",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18",
+     "eo": "4,8"
+    },
+    {
+     "q": "Which carrier is designed for the higher assembly heat load?",
+     "o": [
+      "EVHM",
+      "BLTC",
+      "They are equal",
+      "Neither is limited"
+     ],
+     "a": 0,
+     "x": "EVHM is 15.2 kW and the BLTC is 1.2 kW.",
+     "anchor": "The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19",
+     "eo": "4,8"
+    },
+    {
+     "q": "How long after shutdown can the EVHM passive system handle assemblies?",
+     "o": [
+      "24 hours",
+      "7 days",
+      "30 days",
+      "1 year"
+     ],
+     "a": 1,
+     "x": "It is designed for core assemblies 7 days after shutdown.",
+     "anchor": "The EVHM passive cooling system is designed to handle core assemblies 7 days after shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18",
+     "eo": "4,8"
+    }
+   ]
+  },
+  {
+   "title": "Ex-Vessel Storage Tank",
+   "eo": [
+    "3",
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The EVST is a sodium-filled tank with a rotating carousel and storage for 100 core assemblies in CAPs.",
+     "anchor": "Storage positions are provided for 100 core assemblies within CAPs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-20"
+    },
+    {
+     "t": "p",
+     "text": "The carousel holds assemblies in a subcritical array by geometry.",
+     "anchor": "in an array with a subcritical configuration by geometry",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21"
+    },
+    {
+     "t": "p",
+     "text": "The striker plate protects the EVST from accidentally dropped external loads.",
+     "anchor": "The striker plate protects the EVST's functional and confinement capabilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-20"
+    },
+    {
+     "t": "p",
+     "text": "In a main vessel leak, the guard vessel captures sodium while main vessel level stays above the fueled portion of the assemblies.",
+     "anchor": "the guard vessel captures the leaked liquid sodium while maintaining the sodium level in the main vessel above the fueled portion",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21"
+    },
+    {
+     "t": "p",
+     "text": "The EVST is designed for a maximum decay heat of 216 kW and a normal decay heat of 136 kW.",
+     "anchor": "The EVST is designed for a maximum decay heat load of 216 kW",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+    },
+    {
+     "t": "p",
+     "text": "Passive heat removal uses inlet and outlet stacks and ducts to circulate air through the EVST vault. Natural convection carries heat to the atmosphere, the ultimate heat sink.",
+     "anchor": "utilizing inlet and outlet stacks and ducts to circulate air into and out of the EVST vault",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+    },
+    {
+     "t": "p",
+     "text": "Passive cooling keeps cladding below the maximum pin cladding temperature of 1157 F.",
+     "anchor": "temperatures below the maximum pin cladding temperature of 1157 degrees Fahrenheit",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30"
+    },
+    {
+     "t": "p",
+     "text": "Penetrations are above the minimum safe sodium level.",
+     "anchor": "Penetrations on the EVST are above the minimum safe sodium level",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21"
+    },
+    {
+     "t": "p",
+     "text": "A failure of the NST cooling and temperature control systems would not stop the SR passive heat removal function.",
+     "anchor": "would not prevent the EVST from performing its SR passive heat removal function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21"
+    },
+    {
+     "t": "p",
+     "text": "Isolation valves on the main vessel close on detection of a leak or on loss of power.",
+     "anchor": "equipped with isolation valves that close upon a detection of a leak or a loss of power",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30"
+    },
+    {
+     "t": "p",
+     "text": "With little decay heat, trace heaters on the guard vessel and the sodium processing loop keep sodium temperature in limits.",
+     "anchor": "Electrical trace heaters on the exterior of the guard vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-2-3",
+     "num": "7.3.2-3",
+     "cap": "Ex-Vessel Storage Tank Primary Components",
+     "alt": "PSAR Rev 1 figure: Ex-Vessel Storage Tank Primary Components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-39"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is the EVST carousel kept subcritical?",
+     "o": [
+      "Control rods",
+      "Sodium level",
+      "Soluble boron",
+      "Geometry"
+     ],
+     "a": 3,
+     "x": "The carousel gives a subcritical configuration by geometry.",
+     "anchor": "in an array with a subcritical configuration by geometry",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21",
+     "eo": "3,4,8"
+    },
+    {
+     "q": "The EVST main vessel leaks. What happens to level?",
+     "o": [
+      "Guard vessel captures sodium and level stays above the fueled portion",
+      "Level falls below the fuel",
+      "Fuel must be moved first",
+      "The tank drains to the SPS"
+     ],
+     "a": 0,
+     "x": "The guard vessel keeps the level above the fueled portion.",
+     "anchor": "the guard vessel captures the leaked liquid sodium while maintaining the sodium level in the main vessel above the fueled portion",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21",
+     "eo": "3,4,8"
+    },
+    {
+     "q": "What closes the EVST isolation valves?",
+     "o": [
+      "Leak detection or loss of power",
+      "High sodium temperature",
+      "Operator action only",
+      "Low argon flow"
+     ],
+     "a": 0,
+     "x": "The valves close on detection of a leak or a loss of power.",
+     "anchor": "equipped with isolation valves that close upon a detection of a leak or a loss of power",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30",
+     "eo": "3,4,8"
+    },
+    {
+     "q": "What is the EVST maximum decay heat load?",
+     "o": [
+      "15.2 kW",
+      "136 kW",
+      "216 kW",
+      "225 kW"
+     ],
+     "a": 2,
+     "x": "Maximum is 216 kW, and normal is 136 kW.",
+     "anchor": "The EVST is designed for a maximum decay heat load of 216 kW",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29",
+     "eo": "3,4,8"
+    }
+   ]
+  },
+  {
+   "title": "Boundaries during transfer",
+   "eo": [
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FFV is a temporary closure that allows transfers at ports while keeping an inert containment boundary.",
+     "anchor": "is a temporary closure and opening device used during refueling and maintenance operations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.5, p. 7.3-22"
+    },
+    {
+     "t": "p",
+     "text": "The FFV normal internal range is 250 to 400 F and 0.3 to 0.4 psig.",
+     "anchor": "normal operating internal temperature range of 250 degrees Fahrenheit to 400 degrees Fahrenheit",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.5, p. 7.3-22"
+    },
+    {
+     "t": "p",
+     "text": "The CATT gives an inert passage between the EVHM and the reactor vessel and is installed only during Mode 4.",
+     "anchor": "The CATT is installed only during Mode 4, plant refueling operations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22"
+    },
+    {
+     "t": "p",
+     "text": "CATT argon holds a positive pressure, and its seals are redundant.",
+     "anchor": "The CATT has redundant sealing capabilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22"
+    },
+    {
+     "t": "p",
+     "text": "The CATT cavity minimum temperature is 400 F, which prevents sodium solidification.",
+     "anchor": "The minimum temperature in the CATT internal cavity is 400 degrees Fahrenheit",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22"
+    },
+    {
+     "t": "p",
+     "text": "In Modes 1, 2, and 3, the functional containment boundary is coincident with the primary coolant boundary.",
+     "anchor": "In Modes 1, 2, and 3, the functional containment boundary is coincident with the Primary Coolant Boundary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+    },
+    {
+     "t": "p",
+     "text": "Each BLTC inflatable seal is designed to stay inflated for 72 hours on loss of primary argon supply.",
+     "anchor": "Each inflatable seal is designed to remain inflated for 72 hours",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-28"
+    },
+    {
+     "t": "p",
+     "text": "The EVHM and BLTC use rail-based seismic restraints that limit uplift or tipping.",
+     "anchor": "rail-based, seismic restraints that limit uplifting or tipping",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-3-2-2",
+     "num": "7.3.2-2",
+     "cap": "Bottom Loading Transfer Cask Primary Components",
+     "alt": "PSAR Rev 1 figure: Bottom Loading Transfer Cask Primary Components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-38"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When is the CATT installed?",
+     "o": [
+      "All modes",
+      "Only for startup",
+      "Only during Mode 4",
+      "Modes 1 and 2"
+     ],
+     "a": 2,
+     "x": "The CATT is installed only during Mode 4 refueling operations.",
+     "anchor": "The CATT is installed only during Mode 4, plant refueling operations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22",
+     "eo": "2,3"
+    },
+    {
+     "q": "What is the minimum temperature in the CATT cavity?",
+     "o": [
+      "250 F",
+      "400 F",
+      "1157 F",
+      "120 F"
+     ],
+     "a": 1,
+     "x": "The minimum is 400 F to prevent sodium solidification.",
+     "anchor": "The minimum temperature in the CATT internal cavity is 400 degrees Fahrenheit",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22",
+     "eo": "2,3"
+    },
+    {
+     "q": "How long is a BLTC inflatable seal designed to stay inflated after loss of primary argon?",
+     "o": [
+      "7 days",
+      "72 hours",
+      "24 hours",
+      "8 hours"
+     ],
+     "a": 1,
+     "x": "Each inflatable seal is designed for 72 hours.",
+     "anchor": "Each inflatable seal is designed to remain inflated for 72 hours",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-28",
+     "eo": "2,3"
+    }
+   ]
+  },
+  {
+   "title": "Other stations",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The NAPS holds 8 core assemblies and prevents criticality by a subcritical geometry. It is NST.",
+     "anchor": "The NAPS is designed with a capacity for 8 core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32"
+    },
+    {
+     "t": "p",
+     "text": "The ARIS on the FHB operating floor holds assemblies for new fuel receipt inspection.",
+     "anchor": "It is used as a fixture to hold the core assemblies in place for new fuel receipt inspection",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32"
+    },
+    {
+     "t": "p",
+     "text": "In the PRC, a sodium holding tank under the FFV receives an LDA or LTA in a CAP. Heat leaves by free convection.",
+     "anchor": "Heat is transferred from the LDA or LTA, through the liquid sodium and out of the tank via free convection",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.7, p. 7.3-23"
+    },
+    {
+     "t": "p",
+     "text": "The PEM is a remotely operated handling device that removes pins from the LTA.",
+     "anchor": "The PEM, which is a remotely operated mechanical handling device",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the capacity of the NAPS?",
+     "o": [
+      "8 assemblies",
+      "100 assemblies",
+      "1 assembly",
+      "50 assemblies"
+     ],
+     "a": 0,
+     "x": "The NAPS has a capacity for 8 core assemblies.",
+     "anchor": "The NAPS is designed with a capacity for 8 core assemblies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Controls and interlocks",
+   "eo": [
+    "5",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fuel handling during refueling is controlled by a series of interlocks. EVHM and BLTC controls and interlocks prevent load drops and handling accidents.",
+     "anchor": "The handling of fuel during refueling is controlled by a series of interlocks",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33"
+    },
+    {
+     "t": "p",
+     "text": "The carousel positioning system is semi-automatic. Interlocks stop repositioning when damage would result.",
+     "anchor": "A system of interlocks prevents repositioning when damage would result",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33"
+    },
+    {
+     "t": "p",
+     "text": "It verifies that all transfer port plugs are in place, or that the grapple is fully retracted or not at the port with the FFV closed.",
+     "anchor": "verifies automatically that all transfer port plugs are in place",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Carousel is stopped",
+      "Position agrees with the address requested, except in MANUAL",
+      "Carousel position aligns a storage location with an open port",
+      "EVHM or BLTC is over the correct floor valve"
+     ],
+     "anchor": "These interlocks require that the carousel is stopped",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33"
+    },
+    {
+     "t": "p",
+     "text": "Operators use human-machine interface units in the FHB control room, which are part of the PMC.",
+     "anchor": "through multiple human-machine interface units located in the FHB control room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33"
+    },
+    {
+     "t": "p",
+     "text": "Hoist motors, gearboxes, and brakes are outside the hoist enclosure and can be manually moved to lower the load without breaking the containment barrier.",
+     "anchor": "These components are capable of being manually manipulated, to lower the load",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+    },
+    {
+     "t": "p",
+     "text": "EVST temperature sensors let operators see whether cladding limits are being approached.",
+     "anchor": "to determine if the fuel cladding temperature limits are being approached",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-26"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is required by the BLTC-EVHM lockout interlock?",
+     "o": [
+      "Reactor in Mode 1",
+      "Carousel stopped",
+      "EVST sodium at 400 F",
+      "FPC running"
+     ],
+     "a": 1,
+     "x": "The interlock requires that the carousel is stopped, among other conditions.",
+     "anchor": "These interlocks require that the carousel is stopped",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33",
+     "eo": "5,6"
+    },
+    {
+     "q": "A hoist fails with a load raised. What does the design allow?",
+     "o": [
+      "Manually lowering the load without breaking the barrier",
+      "Dropping the load into the EVST",
+      "Opening the cask to the floor",
+      "Nothing until power returns"
+     ],
+     "a": 0,
+     "x": "Hoist components can be manually manipulated to lower the load.",
+     "anchor": "These components are capable of being manually manipulated, to lower the load",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29",
+     "eo": "5,6"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR6, HR7, HR8, HR9",
+        "SR",
+        "Passive heat removal in the EVHM, EVST, BLTC, and PRC"
+       ],
+       "anchor": "DL3-HR8 Passive Heat Removal in BLTC",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-25"
+      },
+      {
+       "cells": [
+        "DL3-RR3 EVHM cask barrier",
+        "SR",
+        "Containment when fuel is in the cask and when mated"
+       ],
+       "anchor": "DL3-RR3 EVHM Cask Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-25"
+      },
+      {
+       "cells": [
+        "DL3-RR3a EVHM transfer barrier",
+        "SR",
+        "EVST, EVHM, CATT, FFV, and FTA form the temporary contain function"
+       ],
+       "anchor": "DL3-RR3a EVHM Transfer Barrier Function",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-25"
+      },
+      {
+       "cells": [
+        "DL3-RR4 EVST barrier",
+        "SR",
+        "Radionuclide barrier through the isolation valves. Closure is not needed"
+       ],
+       "anchor": "Valve closure is not needed to meet SR function",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-25"
+      },
+      {
+       "cells": [
+        "DL3-RR5, RR5a BLTC barriers",
+        "SR",
+        "Containment in the cask and during transfers"
+       ],
+       "anchor": "DL3-RR5 BLTC Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-26"
+      },
+      {
+       "cells": [
+        "DL3-RR6 PRC cell barrier",
+        "SR",
+        "Barrier for releases from fuel damaged during pin removal"
+       ],
+       "anchor": "DL3-RR6 PRC Cell Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-26"
+      },
+      {
+       "cells": [
+        "DL4-RR5 EVST guard tank",
+        "NSRST",
+        "Defense in depth backup barrier"
+       ],
+       "anchor": "DL4-RR5 EVST Guard Tank Leak Prevention",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-26"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "NSRST",
+        "EVST bulk sodium temperature indication"
+       ],
+       "anchor": "DL5-PAM1 Post Accident Monitoring (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.2, p. 7.3-26"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The EVST guard vessel is NSRST, while the EVST pressure vessel and rotating carousel are SR.",
+     "anchor": "EVST Guard Vessel NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-35"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "The following programmatic special treatments are preliminarily identified as applicable to the FHE",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.4, p. 7.3-32"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the classification of the EVST guard vessel?",
+     "o": [
+      "NSRST",
+      "NST",
+      "SCS1",
+      "SR"
+     ],
+     "a": 0,
+     "x": "The guard vessel is NSRST.",
+     "anchor": "EVST Guard Vessel NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-35",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The FHE keeps assemblies in a shielded, inert environment. On the EVHM they ride in sodium-filled CAPs.",
+   "anchor": "provides radiation shielding, radionuclide retention, and a medium for removal of decay heat",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1, p. 7.3-17"
+  },
+  {
+   "text": "Cask dampers fail open on loss of power, so natural convection keeps cooling.",
+   "anchor": "If the EVHM loses its plant side power connection, the dampers fail open",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18"
+  },
+  {
+   "text": "The EVST holds 100 assemblies in a subcritical geometry and removes up to 216 kW passively.",
+   "anchor": "The EVST is designed for a maximum decay heat load of 216 kW",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-11",
+ "title": "Ex-Vessel Fuel Handling System",
+ "kind": "system",
+ "subject": "FHE",
+ "sec_note": "Sec. 7.3.2, pp. 7.3-17 to 7.3-39",
+ "intro": "The FHE carries core assemblies between the reactor, the EVST, and the pool. Every step stays inert and shielded, and every carrier can cool fuel without power.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the FHE.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the FHE boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the FHE.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain FHE operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the FHE controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the FHE automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the FHE.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the FHE.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the FHE.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the FHE.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-11-ex-vessel-fuel-handling-system"
+}

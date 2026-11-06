@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Organization and Training</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-op-02-organization-and-training">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">This lesson covers who runs the plant, who reports to whom, and the rules that apply to you as a licensed operator. <cite>PSAR Rev 1 (NAT-9400), Sec. 11.1, pp. 11.1-5 to 11.1-13</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> Describe the operating organization and who is responsible for it.</p><p class="gap">Taught in: <a href="#concept-1">Operating organization</a></p><p><span class="num">2</span> State the responsibilities of the managers who report to the Plant General Manager.</p><p class="gap">Taught in: <a href="#concept-2">Plant General Manager and direct reports</a></p><p><span class="num">3</span> Explain how independent oversight is arranged.</p><p class="gap">Taught in: <a href="#concept-3">Independent oversight</a></p><p><span class="num">4</span> State the qualification and training requirements for operators.</p><p class="gap">Taught in: <a href="#concept-4">Qualification and training</a></p><p><span class="num">5</span> Apply the conduct of operations rules for control room activities.</p><p class="gap">Taught in: <a href="#concept-5">Conduct of operations</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Operating organization <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operating organization</h2><p class="count">Objectives 1</p><p>USO is responsible for the safe operation of Kemmerer Unit 1. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></p>
+<p>It establishes an Operating Organization before pre-operational testing. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></p>
+<p>The PGM and Director of Operations are responsible for the Operating Organization. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></p>
+<ul><li>Engineering</li><li>Quality assurance, audit, and surveillance</li><li>Plant sciences (chemistry and radiation protection)</li><li>Commissioning support</li><li>Training</li><li>Maintenance</li><li>Operations</li><li>Outside contractual support</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-5</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: Operating Organization and Technical Support"><figcaption>Figure 11.1-4. Operating Organization and Technical Support <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-13</cite></figcaption></figure>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Operating organization <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operating organization</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1</span><span>OP-02-K1</span></div>
+  <p>Who is responsible for safe operation of Kemmerer Unit 1?</p>
+  <div class="opts"><button type="button" class="opt">A. The NRC</button><button type="button" class="opt">B. TerraPower only</button><button type="button" class="opt">C. USO</button><button type="button" class="opt">D. BPC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. USO is responsible for safe operation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K1&amp;body=Item%3A%20OP-02-K1%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Who%20is%20responsible%20for%20safe%20operation%20of%20Kemmerer%20Unit%201%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4%2C%20p.%2011.1-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-02-K2</span></div>
+  <p>When is the Operating Organization established?</p>
+  <div class="opts"><button type="button" class="opt">A. Before pre-operational testing</button><button type="button" class="opt">B. After fuel load</button><button type="button" class="opt">C. At first criticality</button><button type="button" class="opt">D. At commercial operation</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. It is established prior to pre-operational testing. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K2&amp;body=Item%3A%20OP-02-K2%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20When%20is%20the%20Operating%20Organization%20established%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4%2C%20p.%2011.1-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Operating organization</a><a class="next" href="#concept-2">Plant General Manager and direct reports <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Plant General Manager and direct reports</h2><p class="count">Objectives 2</p><table class="tbl"><thead><tr><th>Position</th><th>Reports to</th><th>Responsible for</th></tr></thead><tbody><tr><td>Plant General Manager</td><td>CNO</td><td>Daily operations, overall occupational and public radiation safety <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1, p. 11.1-6</cite></td></tr><tr><td>Director of Operations</td><td>PGM</td><td>On-site operations and operations support personnel <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.1, p. 11.1-6</cite></td></tr><tr><td>Director of Maintenance</td><td>PGM</td><td>Plant maintenance and work control <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.2, p. 11.1-6</cite></td></tr><tr><td>Station Sciences Manager</td><td>PGM</td><td>Chemistry and radiation protection programs <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.3, p. 11.1-6</cite></td></tr><tr><td>Director of Training</td><td>PGM</td><td>Qualification and continuing training <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.4, p. 11.1-7</cite></td></tr><tr><td>Security Manager</td><td>PGM</td><td>Physical security plan, access authorization, FFD <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.5, p. 11.1-7</cite></td></tr><tr><td>Director of Organizational Effectiveness</td><td>PGM</td><td>Emergency planning, licensing, regulatory assurance, occupational health <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.6, p. 11.1-7</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Operating organization</a><a class="next" href="#check-2">Knowledge check: Plant General Manager and direct reports <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Plant General Manager and direct reports</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-02-K3</span></div>
+  <p>Who has overall responsibility for occupational and public radiation safety?</p>
+  <div class="opts"><button type="button" class="opt">A. CNO</button><button type="button" class="opt">B. Station Sciences Manager</button><button type="button" class="opt">C. PGM</button><button type="button" class="opt">D. Director of Operations</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The PGM has overall responsibility. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1, p. 11.1-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K3&amp;body=Item%3A%20OP-02-K3%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Who%20has%20overall%20responsibility%20for%20occupational%20and%20public%20radiation%20safety%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4.1%2C%20p.%2011.1-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>OP-02-K4</span></div>
+  <p>Who is responsible for emergency planning?</p>
+  <div class="opts"><button type="button" class="opt">A. Security Manager</button><button type="button" class="opt">B. Director of Organizational Effectiveness</button><button type="button" class="opt">C. Director of Training</button><button type="button" class="opt">D. Director of Operations</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. That director covers emergency planning, licensing, regulatory assurance, and occupational health. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.6, p. 11.1-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K4&amp;body=Item%3A%20OP-02-K4%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Who%20is%20responsible%20for%20emergency%20planning%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4.1.6%2C%20p.%2011.1-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>OP-02-K5</span></div>
+  <p>Who runs the fitness-for-duty program?</p>
+  <div class="opts"><button type="button" class="opt">A. Director of Training</button><button type="button" class="opt">B. Security Manager</button><button type="button" class="opt">C. PGM</button><button type="button" class="opt">D. QA Manager</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The Security Manager is responsible for FFD. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.5, p. 11.1-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K5&amp;body=Item%3A%20OP-02-K5%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Who%20runs%20the%20fitness-for-duty%20program%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4.1.5%2C%20p.%2011.1-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Plant General Manager and direct reports</a><a class="next" href="#concept-3">Independent oversight <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Independent oversight</h2><p class="count">Objectives 3</p><p>The Director of Nuclear Oversight reports to the CNO and manages audits, quality control, and employee concerns. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7</cite></p>
+<p>The QA Manager reports to that director and supervises QC inspections, NDE, and QA audits. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.2.1, p. 11.1-7</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Plant General Manager and direct reports</a><a class="next" href="#check-3">Knowledge check: Independent oversight <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Independent oversight</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 3</span><span>OP-02-K6</span></div>
+  <p>To whom does the Director of Nuclear Oversight report?</p>
+  <div class="opts"><button type="button" class="opt">A. CNO</button><button type="button" class="opt">B. Director of Operations</button><button type="button" class="opt">C. QA Manager</button><button type="button" class="opt">D. PGM</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The director reports to the CNO, not the PGM. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K6&amp;body=Item%3A%20OP-02-K6%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20To%20whom%20does%20the%20Director%20of%20Nuclear%20Oversight%20report%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.4.2%2C%20p.%2011.1-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Independent oversight</a><a class="next" href="#concept-4">Qualification and training <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Qualification and training</h2><p class="count">Objectives 4</p><p>Qualifications meet ANSI/ANS-3.1-2014, as endorsed by RG 1.8. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.1, p. 11.1-8</cite></p>
+<p>The operator training and requalification plan follows 10 CFR 55 and 10 CFR 50.120. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+<p>Qualification includes a comprehensive written exam and an operating test, as required by 10 CFR 55. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+<p>Training programs meeting 10 CFR 50.120 will be in place within 18 months prior to fuel load. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+<p>The requalification plan will be provided at the OLA stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Independent oversight</a><a class="next" href="#check-4">Knowledge check: Qualification and training <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Qualification and training</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>OP-02-K7</span></div>
+  <p>What does operator qualification include?</p>
+  <div class="opts"><button type="button" class="opt">A. Interview only</button><button type="button" class="opt">B. Simulator only</button><button type="button" class="opt">C. Written exam and operating test</button><button type="button" class="opt">D. Written exam only</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. It includes a comprehensive written exam and an operating test. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K7&amp;body=Item%3A%20OP-02-K7%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20What%20does%20operator%20qualification%20include%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.2%2C%20p.%2011.1-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>OP-02-K8</span></div>
+  <p>When must 10 CFR 50.120 training programs be in place?</p>
+  <div class="opts"><button type="button" class="opt">A. At commercial operation</button><button type="button" class="opt">B. At construction start</button><button type="button" class="opt">C. Within 18 months prior to fuel load</button><button type="button" class="opt">D. After fuel load</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. They are in place within 18 months prior to fuel load. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K8&amp;body=Item%3A%20OP-02-K8%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20When%20must%2010%20CFR%2050.120%20training%20programs%20be%20in%20place%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.2%2C%20p.%2011.1-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>OP-02-K9</span></div>
+  <p>Which standard covers personnel qualification?</p>
+  <div class="opts"><button type="button" class="opt">A. NUREG-0711</button><button type="button" class="opt">B. ACI 349</button><button type="button" class="opt">C. ANSI/ANS-3.1-2014</button><button type="button" class="opt">D. IEEE 603</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Qualifications meet ANSI/ANS-3.1-2014. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.1, p. 11.1-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K9&amp;body=Item%3A%20OP-02-K9%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Which%20standard%20covers%20personnel%20qualification%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.1%2C%20p.%2011.1-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Qualification and training</a><a class="next" href="#concept-5">Conduct of operations <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Conduct of operations</h2><p class="count">Objectives 5</p><p>Site operations are controlled through the MCR, with some activities coordinated from the online/outage control center. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8</cite></p>
+<p>Maintenance, surveillances, and removal or restoration of safety-significant SSCs may not start without Control Room Supervisor approval. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8</cite></p>
+<p>Rules of practice incorporate RG 1.114. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+<p>Reactivity controls are only manipulated by licensed operators and senior operators, except as allowed for training. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+<p>Other apparatus that may affect reactivity or power needs the knowledge and consent of the operator or Control Room Supervisor at the controls. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+<p>Operators and technicians are expected to follow approved procedures and technical specifications. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+<p>Staffing requirements in 10 CFR 50.54(k) and (m) will be given at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Qualification and training</a><a class="next" href="#check-5">Knowledge check: Conduct of operations <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Conduct of operations</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 5</span><span>OP-02-K10</span></div>
+  <p>Who approves the start of a surveillance?</p>
+  <div class="opts"><button type="button" class="opt">A. Director of Maintenance</button><button type="button" class="opt">B. PGM</button><button type="button" class="opt">C. QA Manager</button><button type="button" class="opt">D. Control Room Supervisor</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. They may not commence without Control Room Supervisor approval. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K10&amp;body=Item%3A%20OP-02-K10%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Who%20approves%20the%20start%20of%20a%20surveillance%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.3%2C%20p.%2011.1-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 5</span><span>OP-02-K11</span></div>
+  <p>A trainee wants to move a rod under instruction. What allows it?</p>
+  <div class="opts"><button type="button" class="opt">A. It is never allowed</button><button type="button" class="opt">B. 10 CFR 55 training allowance</button><button type="button" class="opt">C. PGM verbal approval</button><button type="button" class="opt">D. Maintenance order</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Only licensed staff manipulate reactivity controls, except as allowed for training under 10 CFR 55. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K11&amp;body=Item%3A%20OP-02-K11%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20A%20trainee%20wants%20to%20move%20a%20rod%20under%20instruction.%20What%20allows%20it%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.3%2C%20p.%2011.1-9%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 5</span><span>OP-02-K12</span></div>
+  <p>Equipment other than controls may affect power. What is needed to operate it?</p>
+  <div class="opts"><button type="button" class="opt">A. Knowledge and consent of the operator or CRS at the controls</button><button type="button" class="opt">B. A work order only</button><button type="button" class="opt">C. NRC approval</button><button type="button" class="opt">D. Nothing</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. 10 CFR 50.54 requires knowledge and consent. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-02-K12&amp;body=Item%3A%20OP-02-K12%0ALesson%3A%20Organization%20and%20Training%0AQuestion%3A%20Equipment%20other%20than%20controls%20may%20affect%20power.%20What%20is%20needed%20to%20operate%20it%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.1.5.3%2C%20p.%2011.1-9%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Conduct of operations</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>USO owns safe operation. The PGM and Director of Operations answer for the Operating Organization. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6</cite></li><li>Nuclear Oversight reports to the CNO, independent of the PGM line. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7</cite></li><li>The Control Room Supervisor approves work on safety-significant SSCs, and only licensed staff move reactivity controls. <cite>PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Conduct of operations</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 13</span></div>
+<h1>Organization and Training</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating organization</a></li><li><a href="#check-1">Knowledge check: Operating organization</a></li><li><a href="#concept-2">Plant General Manager and direct reports</a></li><li><a href="#check-2">Knowledge check: Plant General Manager and direct reports</a></li><li><a href="#concept-3">Independent oversight</a></li><li><a href="#check-3">Knowledge check: Independent oversight</a></li><li><a href="#concept-4">Qualification and training</a></li><li><a href="#check-4">Knowledge check: Qualification and training</a></li><li><a href="#concept-5">Conduct of operations</a></li><li><a href="#check-5">Knowledge check: Conduct of operations</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 11.1.4, 11.1.4.1, 11.1.4.1.1, 11.1.4.1.2, 11.1.4.1.3, 11.1.4.1.4, 11.1.4.1.5, 11.1.4.1.6, 11.1.4.2, 11.1.4.2.1, 11.1.5.1, 11.1.5.2, 11.1.5.3</p><p>Pages 11.1-5, 11.1-6, 11.1-7, 11.1-8, 11.1-9, 11.1-13</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20OP-02&amp;body=Lesson%3A%20OP-02%20Organization%20and%20Training%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

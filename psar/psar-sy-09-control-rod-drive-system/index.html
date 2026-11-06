@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Control Rod Drive System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-09-control-rod-drive-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The CRD moves the control rods and lets them go. The motor gives fine control and fast insertion. The scram itself needs only gas venting and gravity. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.2.5, pp. 7.2-58 to 7.2-71</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the CRD.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and layout</a></p><p><span class="num">2</span> Identify the CRD boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and layout</a>, <a href="#concept-6">Housing, seals, and purge</a></p><p><span class="num">3</span> Identify the major components of the CRD.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and layout</a>, <a href="#concept-2">Latching the rod</a>, <a href="#concept-6">Housing, seals, and purge</a></p><p><span class="num">4</span> Explain CRD operation.</p><p class="gap">Taught in: <a href="#concept-2">Latching the rod</a>, <a href="#concept-3">Normal rod motion</a>, <a href="#concept-4">Scram</a></p><p><span class="num">5</span> Describe the CRD controls and indications.</p><p class="gap">Taught in: <a href="#concept-3">Normal rod motion</a>, <a href="#concept-5">Position indication and instruments</a></p><p><span class="num">6</span> Explain the CRD automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-4">Scram</a></p><p><span class="num">7</span> Apply operating procedures for the CRD.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the CRD.</p><p class="gap">Taught in: <a href="#concept-5">Position indication and instruments</a>, <a href="#concept-6">Housing, seals, and purge</a></p><p><span class="num">9</span> Explain the safety significance of the CRD.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the CRD.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and layout <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and layout</h2><p class="count">Objectives 1, 2, 3</p><p>The CRD has 13 identical control rod drives: 9 for the primary control rod assemblies and 4 for the secondary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The CRD supports normal reactivity control and reactor scram. Portions of it provide a primary coolant boundary function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<ul><li>CRDM and housing</li><li>Motor drive assembly</li><li>Motor controller</li><li>Driveline assembly</li><li>Scram valve and cylinder assembly</li><li>Seals</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>All of the CRD except the motor controller is in the HAA of the RXB substructure. The motor controller is in the NCB substructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The CRDM housings are welded to and supported by penetrations in the RPA. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: CRD/RPA Cross-Sectional Layout"><figcaption>Figure 7.2.5-1. CRD/RPA Cross-Sectional Layout <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-71</cite></figcaption></figure>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and layout <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and layout</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-09-K1</span></div>
+  <p>How many control rod drives are there?</p>
+  <div class="opts"><button type="button" class="opt">A. 9</button><button type="button" class="opt">B. 4</button><button type="button" class="opt">C. 13</button><button type="button" class="opt">D. 16</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. There are 13 identical drives, 9 primary and 4 secondary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K1&amp;body=Item%3A%20SY-09-K1%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20How%20many%20control%20rod%20drives%20are%20there%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-09-K2</span></div>
+  <p>Where are the CRD motor controllers?</p>
+  <div class="opts"><button type="button" class="opt">A. HAA</button><button type="button" class="opt">B. NCB substructure</button><button type="button" class="opt">C. RPA</button><button type="button" class="opt">D. RAB</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The motor controller is in the NCB substructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K2&amp;body=Item%3A%20SY-09-K2%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20Where%20are%20the%20CRD%20motor%20controllers%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and layout</a><a class="next" href="#concept-2">Latching the rod <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Latching the rod</h2><p class="count">Objectives 3, 4</p><p>The driveline is directly coupled to the CRA through a pneumatically controlled latching mechanism in normal operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The latch engages when the scram valve and cylinder assembly is pressurized with inert gas from the SCG. It releases when gas pressure vents. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The assembly has three electric solenoid-operated pilot valves that supply gas to a piston and cylinder. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The scram valves are fail-safe, de-energize to vent, and are controlled by the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and layout</a><a class="next" href="#check-2">Knowledge check: Latching the rod <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Latching the rod</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 3,4</span><span>SY-09-K3</span></div>
+  <p>What holds the CRA latched to the driveline?</p>
+  <div class="opts"><button type="button" class="opt">A. Magnet current</button><button type="button" class="opt">B. Motor torque</button><button type="button" class="opt">C. Spring force</button><button type="button" class="opt">D. Gas pressure in the scram cylinder</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Pressurizing the assembly engages the latch, and venting releases it. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K3&amp;body=Item%3A%20SY-09-K3%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20holds%20the%20CRA%20latched%20to%20the%20driveline%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 3,4</span><span>SY-09-K4</span></div>
+  <p>What supplies gas to the scram cylinders?</p>
+  <div class="opts"><button type="button" class="opt">A. SCG</button><button type="button" class="opt">B. NHV</button><button type="button" class="opt">C. IAC</button><button type="button" class="opt">D. RWG</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Inert gas is supplied by the SCG. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K4&amp;body=Item%3A%20SY-09-K4%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20supplies%20gas%20to%20the%20scram%20cylinders%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Latching the rod</a><a class="next" href="#concept-3">Normal rod motion <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Normal rod motion</h2><p class="count">Objectives 4, 5</p><p>The CRD positions CRAs for start-up, power control, power shaping, and shutdown from RMC demand signals. The RMC is a subsystem of the NIC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>Independent drives allow individual CRA positioning, and a fault in one drive does not affect the others. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>A ball screw drive assembly converts motor rotation to driveline linear motion. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>An electro-mechanical brake prevents driveline motion unless a demand signal is present. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>High speed motor-driven insertion provides power run-back capability. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+<p>The motor controller and drive are powered from the Nuclear Island Uninterruptible AC Power Supply System. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Latching the rod</a><a class="next" href="#check-3">Knowledge check: Normal rod motion <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Normal rod motion</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,5</span><span>SY-09-K5</span></div>
+  <p>What prevents driveline motion with no demand signal?</p>
+  <div class="opts"><button type="button" class="opt">A. An electro-mechanical brake</button><button type="button" class="opt">B. The scram valves</button><button type="button" class="opt">C. Ball screw friction</button><button type="button" class="opt">D. The latch</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. An electro-mechanical brake prevents driveline motion unless a demand signal is present. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K5&amp;body=Item%3A%20SY-09-K5%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20prevents%20driveline%20motion%20with%20no%20demand%20signal%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,5</span><span>SY-09-K6</span></div>
+  <p>Which capability provides power run-back?</p>
+  <div class="opts"><button type="button" class="opt">A. High speed motor-driven insertion</button><button type="button" class="opt">B. Driveline uncoupling</button><button type="button" class="opt">C. SCG venting</button><button type="button" class="opt">D. Gravity scram</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. High speed motor-driven CRA insertion provides power run-back capability. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K6&amp;body=Item%3A%20SY-09-K6%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20Which%20capability%20provides%20power%20run-back%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Normal rod motion</a><a class="next" href="#concept-4">Scram <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Scram</h2><p class="count">Objectives 4, 6</p><p>Scram starts on two out of four scram signals from the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></p>
+<p>The RPS signal de-energizes the scram SOVs, which vent the cylinder and disengage the CRA. The CRA inserts by gravity. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>Two of the three scram valves are enough to vent the cylinder, so failure of one valve does not prevent scram or cause a spurious scram. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-62</cite></p>
+<p>The scram valves also vent on loss of power to the SOV. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></p>
+<p>The scram valve and cylinder assembly is inside the CRDM housing and is not exposed to primary sodium. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></p>
+<p>The RPS signal also starts driveline scram follow, where the motor drives the driveline down at maximum insertion speed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>Scram follow gives assurance that the CRA is fully inserted and provides insertion position indication. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Normal rod motion</a><a class="next" href="#check-4">Knowledge check: Scram <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Scram</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 4,6</span><span>SY-09-K7</span></div>
+  <p>How many of the three scram valves must actuate to release a CRA?</p>
+  <div class="opts"><button type="button" class="opt">A. One</button><button type="button" class="opt">B. Two</button><button type="button" class="opt">C. Three</button><button type="button" class="opt">D. Four</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Two of three is sufficient, so a single valve failure does not prevent scram. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K7&amp;body=Item%3A%20SY-09-K7%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20How%20many%20of%20the%20three%20scram%20valves%20must%20actuate%20to%20release%20a%20CRA%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.3%2C%20p.%207.2-65%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6</span><span>SY-09-K8</span></div>
+  <p>What inserts the CRA in the SR scram function?</p>
+  <div class="opts"><button type="button" class="opt">A. Gravity</button><button type="button" class="opt">B. Argon pressure</button><button type="button" class="opt">C. Sodium flow</button><button type="button" class="opt">D. Motor drive</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The released CRA inserts into the core by gravity. Motor scram follow is NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K8&amp;body=Item%3A%20SY-09-K8%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20inserts%20the%20CRA%20in%20the%20SR%20scram%20function%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-59%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,6</span><span>SY-09-K9</span></div>
+  <p>Power is lost to the scram SOVs. What happens?</p>
+  <div class="opts"><button type="button" class="opt">A. The brake sets</button><button type="button" class="opt">B. The motor inserts rods only</button><button type="button" class="opt">C. Rods hold position</button><button type="button" class="opt">D. Valves vent and the CRAs release</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Scram valves vent the scram cylinder on loss of power to the SOV. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K9&amp;body=Item%3A%20SY-09-K9%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20Power%20is%20lost%20to%20the%20scram%20SOVs.%20What%20happens%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.3%2C%20p.%207.2-65%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 4,6</span><span>SY-09-K10</span></div>
+  <p>What is the purpose of driveline scram follow?</p>
+  <div class="opts"><button type="button" class="opt">A. Hold the rod out</button><button type="button" class="opt">B. Assure full insertion and provide insertion indication</button><button type="button" class="opt">C. Unlatch the CRA</button><button type="button" class="opt">D. Vent the cylinder</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Scram follow provides assurance of full insertion and position indication. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K10&amp;body=Item%3A%20SY-09-K10%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20is%20the%20purpose%20of%20driveline%20scram%20follow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-59%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Scram</a><a class="next" href="#concept-5">Position indication and instruments <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Position indication and instruments</h2><p class="count">Objectives 5, 8</p><p>Coupled CRA position goes to the RMC through motor shaft and ball screw revolutions monitoring and a linear position transducer. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>CRA scram insertion is indicated by full driveline scram follow insertion position. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>The CRDM also has scram valve position indication and thermocouples that interface with the NIC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-65</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Scram</a><a class="next" href="#check-5">Knowledge check: Position indication and instruments <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Position indication and instruments</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 5,8</span><span>SY-09-K11</span></div>
+  <p>After a scram, what indicates CRA insertion?</p>
+  <div class="opts"><button type="button" class="opt">A. Reactor power alone</button><button type="button" class="opt">B. RPA rotation</button><button type="button" class="opt">C. Full driveline scram follow insertion position</button><button type="button" class="opt">D. Scram cylinder pressure</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. CRA scram insertion is indicated by full driveline scram follow insertion position. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K11&amp;body=Item%3A%20SY-09-K11%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20After%20a%20scram%2C%20what%20indicates%20CRA%20insertion%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-59%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Position indication and instruments</a><a class="next" href="#concept-6">Housing, seals, and purge <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Housing, seals, and purge</h2><p class="count">Objectives 2, 3, 8</p><p>The CRDM housing is a lower housing flanged to an upper housing, with a top access plate. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>Metallic seals and bellows keep cover gas and aerosolized sodium from entering the lower housing. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>The housing runs with an inert gas purge and static overpressure from the SCG, so leakage flows into the cover gas space. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>Purge gas flow monitors in the SCG supply line identify leakage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+<p>The CRDMs are cooled by the ambient environment of the HAA. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-64</cite></p>
+<table class="tbl"><thead><tr><th>Component</th><th>Design temperature (F)</th><th>Design pressure (psig)</th></tr></thead><tbody><tr><td>CRDM housing</td><td>150 upper. Lower under development</td><td>30 upper, 60 lower <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69</cite></td></tr><tr><td>Driveline assembly</td><td>1080</td><td>80 <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69</cite></td></tr><tr><td>Scram valve and cylinder assembly</td><td>400</td><td>300 <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Position indication and instruments</a><a class="next" href="#check-6">Knowledge check: Housing, seals, and purge <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Housing, seals, and purge</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 2,3,8</span><span>SY-09-K12</span></div>
+  <p>Which way does seal or bellows leakage flow?</p>
+  <div class="opts"><button type="button" class="opt">A. Into the cover gas space</button><button type="button" class="opt">B. Into the motor</button><button type="button" class="opt">C. Into the NCB</button><button type="button" class="opt">D. Out to the HAA</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The purge and static overpressure direct leakage into the cover gas space. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K12&amp;body=Item%3A%20SY-09-K12%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20Which%20way%20does%20seal%20or%20bellows%20leakage%20flow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-59%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 2,3,8</span><span>SY-09-K13</span></div>
+  <p>What identifies seal leakage?</p>
+  <div class="opts"><button type="button" class="opt">A. The RPS</button><button type="button" class="opt">B. A plugging temperature indicator</button><button type="button" class="opt">C. The motor controller</button><button type="button" class="opt">D. Purge gas flow monitors in the SCG supply line</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Purge gas flow monitors identify leakage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K13&amp;body=Item%3A%20SY-09-K13%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20identifies%20seal%20leakage%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.1%2C%20p.%207.2-59%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Housing, seals, and purge</a><a class="next" href="#concept-7">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><table class="tbl"><thead><tr><th>Function</th><th>Class</th><th>CRD support</th></tr></thead><tbody><tr><td>DL3-RC1, DL3-RC2 scram</td><td>SR</td><td>Releases the CRAs for gravity insertion on a scram signal or loss of power <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63</cite></td></tr><tr><td>DL4-RC3 scram follow</td><td>NSRST</td><td>Motor-driven insertion and indication of full insertion <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63</cite></td></tr><tr><td>DL3-RR1 primary coolant boundary</td><td>SR</td><td>CRDM housing forms part of the boundary <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63</cite></td></tr></tbody></table>
+<table class="tbl"><thead><tr><th>Component</th><th>Classification</th></tr></thead><tbody><tr><td>Motor drive assembly and controller</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67</cite></td></tr><tr><td>Scram valve and cylinder assembly</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67</cite></td></tr><tr><td>Driveline assembly</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67</cite></td></tr><tr><td>CRDM housing assembly</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67</cite></td></tr></tbody></table>
+<p>SR components are seismic class SCS1, and NSRST components are SCN1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-64</cite></p>
+<ul><li>Quality Assurance Program</li><li>Design Reliability Assurance Program</li><li>Equipment Qualification Program</li><li>Post-Construction Inspection, Testing, and Analysis Program</li><li>Comprehensive Vibration Assessment Program</li><li>Reliability and Integrity Management Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.4, p. 7.2-65</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Housing, seals, and purge</a><a class="next" href="#check-7">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 9,10</span><span>SY-09-K14</span></div>
+  <p>What is the classification of the CRD motor drive assembly?</p>
+  <div class="opts"><button type="button" class="opt">A. NST</button><button type="button" class="opt">B. SCS1</button><button type="button" class="opt">C. SR</button><button type="button" class="opt">D. NSRST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The motor drive assembly and controller are NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-09-K14&amp;body=Item%3A%20SY-09-K14%0ALesson%3A%20Control%20Rod%20Drive%20System%0AQuestion%3A%20What%20is%20the%20classification%20of%20the%20CRD%20motor%20drive%20assembly%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.2.5.5%2C%20p.%207.2-67%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>The 13 drives use a gas-held latch. Venting the cylinder releases the CRA to insert by gravity. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></li><li>Two of three fail-safe scram valves are enough. A scram starts on two of four RPS signals. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65</cite></li><li>The motor gives fine control, run-back, and NSRST scram follow, which also confirms full insertion. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 17</span></div>
+<h1>Control Rod Drive System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Latching the rod</a></li><li><a href="#check-2">Knowledge check: Latching the rod</a></li><li><a href="#concept-3">Normal rod motion</a></li><li><a href="#check-3">Knowledge check: Normal rod motion</a></li><li><a href="#concept-4">Scram</a></li><li><a href="#check-4">Knowledge check: Scram</a></li><li><a href="#concept-5">Position indication and instruments</a></li><li><a href="#check-5">Knowledge check: Position indication and instruments</a></li><li><a href="#concept-6">Housing, seals, and purge</a></li><li><a href="#check-6">Knowledge check: Housing, seals, and purge</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.2.5.1, 7.2.5.2, 7.2.5.3, 7.2.5.4, 7.2.5.5</p><p>Pages 7.2-58, 7.2-59, 7.2-62, 7.2-63, 7.2-64, 7.2-65, 7.2-67, 7.2-69, 7.2-71</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-09&amp;body=Lesson%3A%20SY-09%20Control%20Rod%20Drive%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

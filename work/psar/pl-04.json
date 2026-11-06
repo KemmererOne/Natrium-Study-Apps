@@ -1,0 +1,356 @@
+{
+ "concepts": [
+  {
+   "title": "How classification works",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Classification follows NEI 18-04, endorsed by RG 1.233.",
+     "anchor": "Safety classification of structures, systems, or components (SSCs) is performed in accordance with NEI 18-04",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1"
+    },
+    {
+     "t": "p",
+     "text": "PRA Safety Functions are initially assigned to systems, and a structured approach identifies the SSCs that perform them.",
+     "anchor": "Safety Functions are initially assigned to systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1"
+    },
+    {
+     "t": "p",
+     "text": "The safety significance of a PRA Safety Function determines the classification of the SSCs credited to perform it.",
+     "anchor": "The safety significance of a PRA Safety Function determines the safety classification",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What determines the safety classification of an SSC?",
+     "o": [
+      "Its seismic category only",
+      "Its cost",
+      "The safety significance of the PRA Safety Function it is credited to perform",
+      "Its location"
+     ],
+     "a": 2,
+     "x": "The safety significance of a PRA Safety Function determines the classification.",
+     "anchor": "The safety significance of a PRA Safety Function determines the safety classification",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "SR, NSRST, and NST",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Class",
+      "Meaning"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "SR",
+        "PRA safety functions credited to keep the consequence of a DBE, or the frequency of a high-consequence BDBE, inside the F-C Target, and to conservatively ensure 10 CFR 50.34 dose requirements can be met"
+       ],
+       "anchor": "credited to maintain the consequence of one or more design basis events",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.1, p. 5.2-1"
+      },
+      {
+       "cells": [
+        "NSRST",
+        "Non-SR PSFs that are risk-significant or required for DID adequacy"
+       ],
+       "anchor": "are the non-SR PSFs that are risk-significant or are required for defense-in-depth",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.2, p. 5.2-1"
+      },
+      {
+       "cells": [
+        "NST",
+        "PSFs that are not SR or NSRST. They are not safety-significant and are not listed in Chapter 5"
+       ],
+       "anchor": "NST functions are not safety-significant and are not listed in this chapter",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.3, p. 5.2-1"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "An SSC is risk-significant if its function is needed to keep any LBE inside the F-C Target, or if the total frequency of LBEs with the SSC failed is within one percent of any of the three cumulative risk targets.",
+     "anchor": "SSCs are classified as risk-significant if the SSC function is necessary to keep any LBEs inside the F-C Target",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.2, p. 5.2-1"
+    },
+    {
+     "t": "p",
+     "text": "The term SR function is synonymous with required safety function in NEI 18-04.",
+     "anchor": "The term SR function is synonymous with the term required safety function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.1, p. 5.2-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "A non-SR function required for defense-in-depth adequacy is classified as what?",
+     "o": [
+      "NST",
+      "DBHL",
+      "SR",
+      "NSRST"
+     ],
+     "a": 3,
+     "x": "NSRST functions are non-SR PSFs that are risk-significant or required for DID adequacy.",
+     "anchor": "are the non-SR PSFs that are risk-significant or are required for defense-in-depth",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.2, p. 5.2-1",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "An example SR function",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "DL3-RC1 is scram by gravity driven absorber insertion by latch release.",
+     "anchor": "DL3-RC1 Scram - Gravity Driven Absorber",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.3, p. 5.2-2"
+    },
+    {
+     "t": "list",
+     "items": [
+      "CRD: releases the control rod assemblies on a scram signal from the RPS",
+      "RCC: control rod assemblies insert to a depth and within a time limit",
+      "RES: provides support and position control so rod release is uninhibited",
+      "RPS: generates a scram signal on exceeding a scram setpoint"
+     ],
+     "anchor": "Upon receipt of a scram signal from RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.3, p. 5.2-2"
+    },
+    {
+     "t": "note",
+     "text": "One SR function often spans several systems. When you study a system, ask which function it is credited for."
+    }
+   ],
+   "checks": [
+    {
+     "q": "In SR function DL3-RC1, what does the Reactor Enclosure System provide?",
+     "o": [
+      "Neutron signals",
+      "The scram signal",
+      "Structural support and position control so rod release is uninhibited",
+      "Rod drive power"
+     ],
+     "a": 2,
+     "x": "RES provides structural support and position control preventing binding.",
+     "anchor": "RES shall provide structural support and position control",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.3, p. 5.2-2",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Design basis hazard levels",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "DBHLs specify the severity of hazards SR SSCs are designed to withstand with no adverse impact on their SR functions.",
+     "anchor": "are a design specification of the level of severity or intensity of hazards",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1, p. 6.1-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Wind and tornado",
+      "External flood",
+      "Internal flood",
+      "Missiles",
+      "Pipe rupture",
+      "Seismic",
+      "Extreme winter precipitation",
+      "Internal fire"
+     ],
+     "anchor": "Table 6.1-1 Design Basis Hazard Levels",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.3.2, p. 6.1-8"
+    },
+    {
+     "t": "p",
+     "text": "The design basis earthquake is the safe shutdown earthquake.",
+     "anchor": "The design basis earthquake is the safe shutdown earthquake (SSE)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1.6, p. 6.1-4"
+    },
+    {
+     "t": "p",
+     "text": "SR structures are located below grade, and they are damp-proofed and waterproofed to minimize groundwater intrusion.",
+     "anchor": "SR structures are located below grade and are damp-proofed and waterproofed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1.2, p. 6.1-1"
+    },
+    {
+     "t": "p",
+     "text": "Internal flood sources considered include sodium, molten salt, oil, and water systems.",
+     "anchor": "flooding sources from sodium, molten salt, oil, and water systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1.3, p. 6.1-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the design basis earthquake?",
+     "o": [
+      "A 1x10^-7 event",
+      "The operating basis earthquake",
+      "The safe shutdown earthquake",
+      "The site response spectrum"
+     ],
+     "a": 2,
+     "x": "The design basis earthquake is the SSE.",
+     "anchor": "The design basis earthquake is the safe shutdown earthquake (SSE)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1.6, p. 6.1-4",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "SRDC",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SRDC are design criteria needed to fulfill the Required Functional Design Criteria for SSCs selected to perform SR functions.",
+     "anchor": "The SRDC are design criteria that are necessary to fulfill the Required Functional Design Criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.2, p. 6.1-5"
+    },
+    {
+     "t": "p",
+     "text": "The Required Functional Design Criteria are compared to the Principal Design Criteria in Section 5.3 to confirm the PDC are complete.",
+     "anchor": "are compared to the Principal Design Criteria (PDC) in Section 5.3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.2, p. 6.1-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What do the SRDC fulfill?",
+     "o": [
+      "The Required Functional Design Criteria",
+      "The Energy Island specifications",
+      "The fire protection plan",
+      "The emergency plan"
+     ],
+     "a": 0,
+     "x": "SRDC are necessary to fulfill the Required Functional Design Criteria.",
+     "anchor": "The SRDC are design criteria that are necessary to fulfill the Required Functional Design Criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.2, p. 6.1-5",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Non-safety interactions",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "The failure does not cause the SSC to strike an SR SSC",
+      "The failure does not adversely impact an SR function",
+      "The SSC is analyzed and designed to prevent its failure under DBHL conditions"
+     ],
+     "anchor": "DBHL-related interactions between NSRST or NST SSCs and SR SSCs are prevented by at least one of the following criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.3, p. 6.1-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is an accepted way to prevent a DBHL interaction between an NST SSC and an SR SSC?",
+     "o": [
+      "Design the NST SSC to prevent its failure under DBHL conditions",
+      "Add operator rounds",
+      "Remove the DBHL",
+      "Reclassify the hazard"
+     ],
+     "a": 0,
+     "x": "One criterion is that the SSC is analyzed and designed to prevent its failure under DBHL conditions.",
+     "anchor": "is analyzed and designed to prevent its failure under DBHL conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.3, p. 6.1-5",
+     "eo": "5"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Classification comes from the safety significance of the PRA Safety Function.",
+   "anchor": "The safety significance of a PRA Safety Function determines the safety classification",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1"
+  },
+  {
+   "text": "NSRST functions are non-SR but risk-significant or required for DID.",
+   "anchor": "are the non-SR PSFs that are risk-significant or are required for defense-in-depth",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 5.2.2, p. 5.2-1"
+  },
+  {
+   "text": "DBHLs set the hazard severity SR SSCs must withstand.",
+   "anchor": "are a design specification of the level of severity or intensity of hazards",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 6.1.1, p. 6.1-1"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "PL-04",
+ "title": "Safety Classification and Design Criteria",
+ "kind": "topic",
+ "subject": "safety classification",
+ "sec_note": "Chapter 5 and Sec. 6.1, pp. 5.1-1 to 5.5-1 and 6.1-1 to 6.1-7",
+ "intro": "Why is one system safety-related and another not? The classification depends on the function credited in the safety analysis.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "Describe how SSCs are classified.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Define SR, NSRST, and NST functions.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain design basis hazard levels.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Describe the Safety Related Design Criteria.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Explain how non-safety SSCs are kept from harming SR SSCs.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-pl-04-safety-classification-and-design-criteria"
+}

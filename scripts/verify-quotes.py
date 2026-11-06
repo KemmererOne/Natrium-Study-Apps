@@ -51,6 +51,16 @@ def word_slide(file, where):
     end = next((i for i in range(start + 1, len(lines)) if re.match(r"# \d", lines[i])), len(lines))
     return norm(" ".join(lines[start:end]))
 
+psar = {}
+def psar_pages():
+    """PSAR text by printed page label, read once."""
+    if not psar:
+        raw = open("work/text/ML25276A288.txt", errors="replace").read().split("\f")
+        for p in raw:
+            m = re.search(r"SUBJECT TO DOE.*?\s(\d+\.\d+-\d+)\s", p)
+            if m: psar.setdefault(m[1], norm(p))
+    return psar
+
 def check_cite(cite):
     """Return the text to search for a cite, or None if the cite is not a real location."""
     m = CITE.match(cite or "")
@@ -66,8 +76,7 @@ def check_cite(cite):
         return norm(raw[int(n[2]) - 1]) if int(n[2]) <= len(raw) else None
     s = PSAR.match(cite or "")
     if s:
-        raw = open("work/text/ML25276A288.txt", errors="replace").read().split("\f")
-        return next((norm(p) for p in raw if re.search(r"SUBJECT TO DOE.*?\s" + re.escape(s[1]) + r"\s", p)), None)
+        return psar_pages().get(s[1])
     w = WORD.match(cite or "")
     if w and os.path.exists(f"work/text/{w[1][:-5]}.txt"):
         return word_slide(w[1], w[2])
@@ -85,7 +94,7 @@ def walk(node, path, out):
 failed = bad_cites = quotes = cites = figures = 0
 log = []
 remove = "--remove" in sys.argv
-for path in sorted(glob.glob("work/topics/*.json")):
+for path in sorted(glob.glob("work/topics/*.json") + [p for p in glob.glob("work/psar/*.json") if not p.endswith("plan.json")]):
     topic = json.load(open(path, encoding="utf8"))
     name = os.path.basename(path)
     keep = []
@@ -99,6 +108,19 @@ for path in sorted(glob.glob("work/topics/*.json")):
             log.append(f"{datetime.date.today()} {name} {p['id']} {why} | {p['cite']} | {p['quote']}")
         else:
             keep.append(p)
+    # PSAR lessons: every statement, table row and check carries an anchor that must be on its cited page
+    def anchors(node):
+        if isinstance(node, dict):
+            if "anchor" in node: yield node
+            for v in node.values(): yield from anchors(v)
+        elif isinstance(node, list):
+            for v in node: yield from anchors(v)
+    for node in anchors({k: topic.get(k) for k in ("concepts", "summary")} if path.startswith("work/psar") else {}):
+        cites += 1
+        text = check_cite(node.get("cite"))
+        if text is None or norm(node["anchor"]) not in text:
+            bad_cites += 1
+            print(f"ANCHOR NOT ON PAGE {name}: {node.get('cite')}: {node['anchor'][:70]}")
     statements = []
     walk({k: v for k, v in topic.items() if k in ("concepts", "examples", "summary", "blend_notes", "word_sequence")}, "topic", statements)
     for where, node in statements:

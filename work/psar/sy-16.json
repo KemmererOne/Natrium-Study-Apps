@@ -1,0 +1,873 @@
+{
+ "concepts": [
+  {
+   "title": "I&C architecture",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "I&C systems provide automatic actuation for licensing-basis events and manual actuation for defense-in-depth.",
+     "anchor": "provide automatic actuation in response to licensing-basis events",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1, p. 7.6-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Independence",
+      "Communications and logical independence",
+      "Redundancy",
+      "Diversity",
+      "System Integrity",
+      "Reliable I&C",
+      "Human Factors Engineering"
+     ],
+     "anchor": "The I&C system architecture incorporates the following fundamental I&C design principles",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2, p. 7.6-2"
+    },
+    {
+     "t": "p",
+     "text": "There are no direct digital data communications from NSRST and NST systems to SR systems.",
+     "anchor": "There are no direct digital data communications from either the NSRST and NST systems to the SR systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2"
+    },
+    {
+     "t": "p",
+     "text": "One-way communication from SR systems goes through isolated hardwire or data-diode and gateways.",
+     "anchor": "is via isolated hardwire or through data-diode and gateways",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2"
+    },
+    {
+     "t": "p",
+     "text": "SR I&C systems have no inter-divisional communications except RPS voting.",
+     "anchor": "do not have inter-divisional communications with the exception of the RPS voting",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2"
+    },
+    {
+     "t": "table",
+     "head": [
+      "System",
+      "Class",
+      "Defense lines"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RMC",
+        "NST",
+        "DL2, DL4, DL5"
+       ],
+       "anchor": "Nuclear Island Rod NST DL2, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "CTC",
+        "NSRST",
+        "DL2, DL4, DL5"
+       ],
+       "anchor": "Nuclear Island Coolant NSRST DL2, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "UMC",
+        "NSRST",
+        "DL2, DL4, DL5"
+       ],
+       "anchor": "Nuclear Island Utility NSRST DL2, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "AMC",
+        "NSRST",
+        "DL2, DL4, DL5"
+       ],
+       "anchor": "Nuclear Island Auxiliary NSRST DL2, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "PMC",
+        "NST",
+        "DL2, DL4, DL5"
+       ],
+       "anchor": "Nuclear Island Plant NST DL2, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "FHC",
+        "NST",
+        "None identified"
+       ],
+       "anchor": "No DLs identified",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "RPS",
+        "SR",
+        "DL3, DL4, DL5"
+       ],
+       "anchor": "Reactor Protection SR DL3, DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "XIS",
+        "SR",
+        "DL2, DL3, DL5"
+       ],
+       "anchor": "Nuclear Instrumentation SR DL2, DL3, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "RIS",
+        "SR",
+        "DL2, DL3, DL4, DL5"
+       ],
+       "anchor": "Reactor Instrumentation SR DL2, DL3, DL4,DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "AST",
+        "NSRST",
+        "DL4"
+       ],
+       "anchor": "Anticipatory Automatic NSRST DL4",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      },
+      {
+       "cells": [
+        "RMS",
+        "NSRST",
+        "DL4, DL5"
+       ],
+       "anchor": "Radiation Monitoring NSRST DL4, DL5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Can an NST system send digital data directly to an SR system?",
+     "o": [
+      "No",
+      "Only for testing",
+      "Only from the PMC",
+      "Yes, through the DCS"
+     ],
+     "a": 0,
+     "x": "There are no direct digital data communications from NSRST and NST systems to SR systems.",
+     "anchor": "There are no direct digital data communications from either the NSRST and NST systems to the SR systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2",
+     "eo": "1,2"
+    },
+    {
+     "q": "Which I&C system is classified SR?",
+     "o": [
+      "PMC",
+      "CTC",
+      "AMC",
+      "XIS"
+     ],
+     "a": 3,
+     "x": "RPS, XIS, and RIS are SR.",
+     "anchor": "Nuclear Instrumentation SR DL2, DL3, DL5",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "NIC subsystems",
+   "eo": [
+    "1",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The NIC is digital and runs on a Nuclear Island Distributed Control System (DCS). Some vendor supplied controls run outside the DCS.",
+     "anchor": "These are referred to as “vendor supplied” control systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Subsystem",
+      "Monitors and controls"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "AMC",
+        "NI auxiliary systems such as radwaste, SCG, and SPS"
+       ],
+       "anchor": "The AMC monitors and controls Nuclear Island (NI) auxiliary systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+      },
+      {
+       "cells": [
+        "CTC",
+        "PHT, IHT, salt, IAC, and Energy Island Salt System flow control"
+       ],
+       "anchor": "The CTC monitors and controls",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+      },
+      {
+       "cells": [
+        "FHC",
+        "Fuel handling systems"
+       ],
+       "anchor": "The FHC monitors and controls the sub-systems and sub-components of the fuel handling systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+      },
+      {
+       "cells": [
+        "PMC",
+        "Plant wide information, display, and manual command devices"
+       ],
+       "anchor": "which are used to execute plant wide monitoring and operating functions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+      },
+      {
+       "cells": [
+        "RMC",
+        "CRD control and rod position"
+       ],
+       "anchor": "The RMC monitors and controls the sub-systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6"
+      },
+      {
+       "cells": [
+        "UMC",
+        "Auxiliary electrical and ancillary systems such as NHV and the standby diesel generator"
+       ],
+       "anchor": "The UMC monitors and controls the various auxiliary electrical and ancillary systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-7"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The NIC as a whole is not classified.",
+     "anchor": "The NIC as a whole is not classified",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8"
+    },
+    {
+     "t": "p",
+     "text": "The data highway, HSI bus, DCS infrastructure, HSIs, and VDUs are NST, and NSRST functions do not rely on them.",
+     "anchor": "NSRST functions do not rely on these NST components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-2-1",
+     "num": "7.6.2-1",
+     "cap": "Nuclear Island Control System Block Diagram",
+     "alt": "PSAR Rev 1 figure: Nuclear Island Control System Block Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which subsystem controls the SPS?",
+     "o": [
+      "UMC",
+      "RMC",
+      "CTC",
+      "AMC"
+     ],
+     "a": 3,
+     "x": "The AMC monitors and controls NI auxiliary systems, including SPS.",
+     "anchor": "The AMC monitors and controls Nuclear Island (NI) auxiliary systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6",
+     "eo": "1,3"
+    },
+    {
+     "q": "Which subsystem controls the NHV?",
+     "o": [
+      "PMC",
+      "AMC",
+      "CTC",
+      "UMC"
+     ],
+     "a": 3,
+     "x": "The UMC controls auxiliary electrical and ancillary systems, including NHV.",
+     "anchor": "The UMC monitors and controls the various auxiliary electrical and ancillary systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-7",
+     "eo": "1,3"
+    },
+    {
+     "q": "An HSI fails. Do NSRST functions depend on it?",
+     "o": [
+      "Only DL4 functions",
+      "Only in Mode 1",
+      "Yes",
+      "No, NSRST functions do not rely on NST components"
+     ],
+     "a": 3,
+     "x": "HSIs are NST, and NSRST functions do not rely on these components.",
+     "anchor": "NSRST functions do not rely on these NST components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8",
+     "eo": "1,3"
+    }
+   ]
+  },
+  {
+   "title": "NSRST automatic functions",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Subsystem",
+      "Input",
+      "Action"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL4-RR3a",
+        "AMC",
+        "Sodium leak signal from NFP",
+        "Closes SPS-P supply isolation valve"
+       ],
+       "anchor": "DL4-RR3a SPS supply valve AMC receives sodium leak detection signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9"
+      },
+      {
+       "cells": [
+        "DL4-RR3b",
+        "AMC",
+        "Sodium leak signal from NFP",
+        "Trips the SPS-P pump"
+       ],
+       "anchor": "DL4-RR3b SPS pump trip on leak AMC receives sodium leak detection signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9"
+      },
+      {
+       "cells": [
+        "DL4-RR4a",
+        "AMC",
+        "Radioactivity signal from RMS",
+        "Closes SCG RV exhaust isolation valves downstream of the vapor cell"
+       ],
+       "anchor": "DL4-RR4a Automatically close AMC receives radioactivity indication signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9"
+      },
+      {
+       "cells": [
+        "DL2-HR2",
+        "CTC",
+        "Low IHT expansion tank level",
+        "Trips the ISPs"
+       ],
+       "anchor": "DL2-HR2 Intermediate sodium CTC receives IHT expansion tank level signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10"
+      },
+      {
+       "cells": [
+        "DL4-HR2",
+        "CTC",
+        "High-high primary hot pool temperature from RIS",
+        "Trips the PSPs, as automatic backup"
+       ],
+       "anchor": "DL4-HR2 Primary sodium pump CTC receives primary sodium hot pool temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10"
+      },
+      {
+       "cells": [
+        "DL4-HR3",
+        "CTC",
+        "High-high primary hot pool temperature from RIS",
+        "Trips the ISPs, as automatic backup"
+       ],
+       "anchor": "DL4-HR3 ISP pump trip CTC receives primary sodium hot pool temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10"
+      },
+      {
+       "cells": [
+        "DL4-RR1c",
+        "UMC",
+        "Radioactivity signal from RMS",
+        "Closes HAA isolation valves"
+       ],
+       "anchor": "The UMC receives radioactivity indication signals from",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10"
+      },
+      {
+       "cells": [
+        "DL4-RR3c",
+        "UMC",
+        "Sodium leak signal from NFP",
+        "Closes NHV dampers to the SPS-P cells"
+       ],
+       "anchor": "DL4-RR3c SPS cells barrier The UMC receives sodium leak detection signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11"
+      },
+      {
+       "cells": [
+        "DL4-RR4b",
+        "UMC",
+        "Radioactivity signal from RMS",
+        "Isolates the SCG vapor trap cells"
+       ],
+       "anchor": "DL4-RR4b SCG cells barrier The UMC receives radioactivity indication signals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11"
+      },
+      {
+       "cells": [
+        "DL4-RR4c",
+        "UMC",
+        "RV relief valve position",
+        "Isolates the SCG vapor trap cells"
+       ],
+       "anchor": "DL4-RR4c Vapor trap cell isolation The UMC receives",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which subsystem trips the ISPs on low IHT expansion tank level?",
+     "o": [
+      "CTC",
+      "UMC",
+      "RPS",
+      "AMC"
+     ],
+     "a": 0,
+     "x": "CTC function DL2-HR2 trips the ISPs.",
+     "anchor": "DL2-HR2 Intermediate sodium CTC receives IHT expansion tank level signals",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10",
+     "eo": "6"
+    },
+    {
+     "q": "What does the CTC do on high-high hot pool temperature?",
+     "o": [
+      "Closes HAA valves",
+      "Scrams the reactor",
+      "Trips the PSPs and ISPs",
+      "Starts the SPS"
+     ],
+     "a": 2,
+     "x": "DL4-HR2 and DL4-HR3 trip the PSPs and ISPs.",
+     "anchor": "DL4-HR2 Primary sodium pump CTC receives primary sodium hot pool temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10",
+     "eo": "6"
+    },
+    {
+     "q": "The UMC receives high radioactivity from the RMS for the HAA. What does it do?",
+     "o": [
+      "Trips the PSPs",
+      "Scrams the reactor",
+      "Starts FPC",
+      "Closes HAA isolation valves"
+     ],
+     "a": 3,
+     "x": "The UMC sends signals to the NHV to close the HAA isolation valves.",
+     "anchor": "HAA isolation valves if a setpoint is exceeded",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Reactivity limits and power runback",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Reactivity control in normal operation and AOOs is through power runback performed by RMC and CTC.",
+     "anchor": "through power runback performed by RMC and CTC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+    },
+    {
+     "t": "p",
+     "text": "RMC and CRD control maximum rod withdrawal speed to limit the reactivity insertion rate.",
+     "anchor": "the RMC and Control Rod Drive System control the maximum rod withdrawal speed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+    },
+    {
+     "t": "p",
+     "text": "A CRD control interlock prevents withdrawing more than one rod at a time.",
+     "anchor": "A Control Rod Drive System control interlock prevents withdrawal of more than one rod at a time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+    },
+    {
+     "t": "p",
+     "text": "A brake holds the rod at any selected position.",
+     "anchor": "also includes a brake to hold the control rod assembly at any selected position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the CRD control interlock prevent?",
+     "o": [
+      "Withdrawal of more than one rod at a time",
+      "Inserting rods",
+      "Scram",
+      "Power runback"
+     ],
+     "a": 0,
+     "x": "The interlock prevents withdrawal of more than one rod at a time.",
+     "anchor": "A Control Rod Drive System control interlock prevents withdrawal of more than one rod at a time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12",
+     "eo": "4,6"
+    },
+    {
+     "q": "Which subsystems perform power runback?",
+     "o": [
+      "PMC and FHC",
+      "AMC and UMC",
+      "RPS and XIS",
+      "RMC and CTC"
+     ],
+     "a": 3,
+     "x": "The NIC gives reactivity control through power runback by RMC and CTC.",
+     "anchor": "through power runback performed by RMC and CTC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Separation from the RPS",
+   "eo": [
+    "2",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "There is no direct communication from NIC systems to the RPS.",
+     "anchor": "There is no direct communication from NIC systems to the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+    },
+    {
+     "t": "p",
+     "text": "The RPS sends data through a one-way data diode to the plant data highway, through an RPS-NIC gateway.",
+     "anchor": "the RPS sends data via a one-way data diode to the plant data highway",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.1.1, p. 7.6-8"
+    },
+    {
+     "t": "p",
+     "text": "Hardwired signals use an isolation device.",
+     "anchor": "an isolation device is provided to ensure that the NIC does not have an adverse impact on the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.3, p. 7.6-15"
+    },
+    {
+     "t": "p",
+     "text": "Where diversity is required, redundant sensors are used: one for SR, one for NSRST or NST.",
+     "anchor": "redundant sensors are utilized where one sensor provides a signal to the SR I&C system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15"
+    },
+    {
+     "t": "p",
+     "text": "A shared SR sensor goes through an isolating signal splitter.",
+     "anchor": "the sensor information is routed through a signal splitter",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is an SR sensor shared with NST systems?",
+     "o": [
+      "Through an isolating signal splitter",
+      "Over the DCS bus",
+      "It is not allowed",
+      "Direct parallel wiring"
+     ],
+     "a": 0,
+     "x": "A signal splitter provides isolation.",
+     "anchor": "the sensor information is routed through a signal splitter",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15",
+     "eo": "2,9"
+    }
+   ]
+  },
+  {
+   "title": "Operator interface",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NIC display and control functions on HSIs are NST.",
+     "anchor": "Display and control functions on the NIC are NST functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15"
+    },
+    {
+     "t": "p",
+     "text": "Where display is an NSRST function, a separate NSRST display device is provided.",
+     "anchor": "a separate NSRST display device is provided",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15"
+    },
+    {
+     "t": "p",
+     "text": "NSRST manual actuation uses a hardwired switch. Operators can also actuate from an MCR HSI, but that is NST.",
+     "anchor": "the NSRST manual actuation is performed using a hardwired switch",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15"
+    },
+    {
+     "t": "p",
+     "text": "The NIC acquires and displays PAM Type D and E variables. RPS PAM variables are also sent to the NIC, so all are displayed there.",
+     "anchor": "so that all PAM variables are displayed on the NIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16"
+    },
+    {
+     "t": "p",
+     "text": "The Safety Parameter Display System is a set of screens on NIC HSIs. It is not a stand-alone system.",
+     "anchor": "is a set of screens that are available from the NIC HSIs and is not a stand-alone system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16"
+    },
+    {
+     "t": "p",
+     "text": "There are no Type A PAM variables in the I&C design.",
+     "anchor": "There are no Type A Post-Accident Monitoring variables in the I&C design",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is an NSRST manual actuation performed?",
+     "o": [
+      "With a hardwired switch",
+      "Through the PMC",
+      "By the RPS",
+      "From an HSI only"
+     ],
+     "a": 0,
+     "x": "The NSRST manual actuation is performed using a hardwired switch.",
+     "anchor": "the NSRST manual actuation is performed using a hardwired switch",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15",
+     "eo": "5"
+    },
+    {
+     "q": "What is the Safety Parameter Display System?",
+     "o": [
+      "A stand-alone SR computer",
+      "A set of screens on NIC HSIs",
+      "A hardwired panel",
+      "An RPS module"
+     ],
+     "a": 1,
+     "x": "It is a set of screens on NIC HSIs and not a stand-alone system.",
+     "anchor": "is a set of screens that are available from the NIC HSIs and is not a stand-alone system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Reliability and failures",
+   "eo": [
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "With a redundant IO module and controller, the only common failure point is the physical termination of the field device.",
+     "anchor": "the only common failure point is the physical termination of the field device",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14"
+    },
+    {
+     "t": "p",
+     "text": "No single failure on the HSI bus or plant data highway will fail the network.",
+     "anchor": "no single failure in a device on those networks will cause a failure of the network",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14"
+    },
+    {
+     "t": "p",
+     "text": "Multiple HSIs and VDUs mean loss of one does not affect access to information or operations.",
+     "anchor": "a complete failure of one of these devices does not affect the ability of operators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14"
+    },
+    {
+     "t": "p",
+     "text": "No part of the NIC is required to operate during or after a seismic event.",
+     "anchor": "No part of the NIC or its sub-systems is required to operate during or after a seismic event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.1, p. 7.6-14"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Is the NIC required to operate after a seismic event?",
+     "o": [
+      "Only CTC",
+      "Only AMC",
+      "Yes",
+      "No"
+     ],
+     "a": 3,
+     "x": "No part of the NIC or its sub-systems is required to operate during or after a seismic event.",
+     "anchor": "No part of the NIC or its sub-systems is required to operate during or after a seismic event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.1, p. 7.6-14",
+     "eo": "8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NSRST subsystems are the AMC, CTC, and UMC. Their components are seismic class SCN3.",
+     "anchor": "The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Quality Assurance Program Description",
+      "Post-construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the NSRST NIC subsystems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13"
+    },
+    {
+     "t": "p",
+     "text": "The Human Factors Engineering Program Plan applies to the NIC DCS and all subsystems.",
+     "anchor": "is identified as a programmatic special treatment applicable to the NIC DCS and all NIC subsystems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13"
+    },
+    {
+     "t": "p",
+     "text": "I&C security is addressed through the physical and cyber security programs in Sec. 11.6.",
+     "anchor": "Security for I&C systems is addressed through the physical security and cyber security programs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.4, p. 7.6-15"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which NIC subsystems are NSRST?",
+     "o": [
+      "None",
+      "PMC, RMC, FHC",
+      "AMC, CTC, UMC",
+      "All of them"
+     ],
+     "a": 2,
+     "x": "AMC, CTC, and UMC have NSRST functions.",
+     "anchor": "The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The NIC is a group of subsystems. AMC, CTC, and UMC are NSRST, and PMC, RMC, and FHC are NST.",
+   "anchor": "The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13"
+  },
+  {
+   "text": "Nothing digital goes from the NIC to the RPS. The RPS sends data one way through a data diode.",
+   "anchor": "There is no direct communication from NIC systems to the RPS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12"
+  },
+  {
+   "text": "CTC trips pumps as automatic backups, and NSRST manual actions use hardwired switches.",
+   "anchor": "the NSRST manual actuation is performed using a hardwired switch",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-16",
+ "title": "Nuclear Island Control System",
+ "kind": "system",
+ "subject": "NIC",
+ "sec_note": "Secs. 7.6.1 and 7.6.2, pp. 7.6-1 to 7.6-17",
+ "intro": "The NIC is the plant's digital control layer. It is not one classified system. It is a group of subsystems, and only some carry NSRST functions.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the NIC.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the NIC boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the NIC.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain NIC operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the NIC controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the NIC automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the NIC.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the NIC.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the NIC.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the NIC.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-16-nuclear-island-control-system"
+}

@@ -1,0 +1,60 @@
+# SY-05 | Reactor Air Cooling System | system | RAC
+range: 7.2-1 7.2-12
+sec: Sec. 7.2.1, pp. 7.2-1 to 7.2-12
+intro: RAC is the always-on passive heat removal path. Air rises past the guard vessel and leaves through tall stacks. There is nothing to start and nothing to stop.
+
+== Purpose | 1
+S RAC supports passive reactor decay heat removal by natural convection air flow and heat rejection to the atmosphere. @@ supports passive reactor decay heat removal by natural convection air flow
+S With the PHT and RES, it provides the long-term emergency core cooling function. @@ provides the long-term emergency core cooling function
+S RAC is continuously in operation and requires no actuations or operator action to perform its heat removal safety function. @@ requires no automatic or manual actuations or operator action
+K What must an operator do to start RAC? | Open the inlet louvers | Start the blower | Nothing, it is continuously in operation | Align IHT flow | 2 | RAC is continuously in operation and requires no actuations or operator action. @@ requires no automatic or manual actuations or operator action
+
+== Components and boundaries | 2,3
+L Four inlet stacks and four outlet stacks ;; Collector Cylinder Assembly (CCA) ;; Inlet and outlet ducting @@ The RAC consists of four inlet and four outlet stacks
+S RAC is integrated into the RXB substructure. Two inlet and two outlet stacks stand on each of the north and south sides. @@ with two inlet and two outlet stacks on each side
+S Stack outlets are higher than the inlets, which limits recirculation of air. @@ The stack outlets are at a higher elevation than the stack inlets
+S Inlet stacks terminate at least 30 feet above grade. @@ The inlet stacks terminate a minimum of 30 feet above grade
+S Fixed louvers protect the inlets, and chimney cowls protect the outlets. @@ protected by a chimney cowl configured to mitigate wind effects
+F 7.2.1-1
+K How many RAC inlet and outlet stacks are there? | Two and two | Four and four | Six and six | One and one | 1 | RAC consists of four inlet and four outlet stacks. @@ The RAC consists of four inlet and four outlet stacks
+
+== Operation | 4
+S The riser annulus is formed by the collector cylinder and the GV. @@ A riser annulus, formed by the collector cylinder and the GV
+S Heated air in the riser rises, drawing ambient air through the inlets and down the downcomer annulus. @@ The rising air draws ambient air in through the inlet stack openings
+S The collector cylinder is heated by thermal radiation from the GV outer surface. Air is heated by convection from the GV and collector cylinder. @@ The collector cylinder is heated by thermal radiation heat transfer from the GV outer surface
+K How is the collector cylinder heated? | Electric heaters | Thermal radiation from the GV outer surface | Sodium piping | Hot stack gas | 1 | It is heated by thermal radiation heat transfer from the GV outer surface. @@ The collector cylinder is heated by thermal radiation heat transfer from the GV outer surface
+
+== Self-regulating capacity | 4,8
+S Without heat removal to the IHT, sodium near the RV wall gets hotter, the GV gets hotter, radiation increases, and air flow and temperature rise. @@ the coolant temperature near the RV wall increases
+S RAC heat removal capacity increases or decreases based on the heat removal requirements. @@ RAC heat removal capacity increases or decreases based on the heat removal requirements
+S When heat goes from the PHT to the IHT, the GV is cooler and RAC removes less heat. @@ the GV surface temperature is lower, and the heat removal by the RAC is reduced
+K What happens to RAC heat removal when heat transfer to the IHT is lost? | It stops | It increases as GV temperature rises | It stays constant | It reverses | 1 | Higher GV temperature increases radiation and air flow, so heat rejection increases. @@ increasing overall heat rejection to the atmosphere
+
+== Indications | 5
+S RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored. @@ The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored
+S Each inlet stack has a temperature instrument, and each outlet stack has temperature and mass flow instruments. @@ Each inlet stack contains a temperature instrument
+S Signal output goes directly to the RPS, with redundant instruments on a separate division. @@ Signal output is routed directly to the Reactor Protection System
+S The parameters are IEEE 497-2016 variable Types B and D for PAM. @@ The measured parameters are IEEE 497-2016 variable Types B and D for PAM
+K Which RAC parameters are monitored? | Blower amps | Inlet temperature, outlet temperature, and outlet mass flow rate | Damper position | Sodium level | 1 | Those three parameters indicate heat removal performance. @@ The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored
+
+== Degradation and hazards | 8
+S Redundant stacks with common plenums compensate for potential blockage of a stack opening. @@ to compensate for potential blockage in a stack inlet or outlet opening
+S Continuous operation and monitoring give indication of performance degradation. @@ provides indication of RAC performance degradation
+S The inlet louvers have provisions for temporary fine screens in severe small debris or dust conditions. @@ temporary installation of fine screens
+S The design includes features for remote vacuuming of the internal air flow path during outages. @@ remote vacuuming of the internal air flow path
+S RAC air activation produces N-16 and Ar-41 gaseous effluents, and outlet flow is monitored to quantify discharge. @@ results in N-16 and Ar-41 gaseous effluents from RAC
+K What compensates for blockage of a single RAC stack opening? | A standby blower | Redundant stacks with common plenums | Operator cleaning only | Dampers | 1 | Redundant stacks with common plenums compensate for potential blockage. @@ to compensate for potential blockage in a stack inlet or outlet opening
+K What gaseous effluents come from activation of RAC air? | Xe-133 and Kr-88 | N-16 and Ar-41 | I-131 and Cs-137 | H-3 and Na-24 | 1 | Activation of air results in N-16 and Ar-41. @@ results in N-16 and Ar-41 gaseous effluents from RAC
+
+== Safety significance | 9,10
+T Function | Class | Purpose
+R DL3-HR4 Inherent RAC operation | SR | Passive emergency core cooling, operating continuously @@ provides passive emergency core
+R DL5-PAM1 Post-accident monitoring | NSRST | RAC performance variables for PAM @@ RAC performance variables are monitored to
+S RAC structures are SR. Inlet and outlet temperature and flow instruments are NSRST. @@ Inlet temperature instrumentation NSRST
+S RAC is a passive system with no active components. @@ The RAC is designed as a passive system with no active components
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the RAC
+K What is the safety classification of the RAC outlet mass flow instrumentation? | SR | NSRST | NST | Unclassified | 1 | Table 7.2.1-1 lists it as NSRST. @@ Outlet mass flow instrumentation NSRST
+
+Z RAC is passive, continuous, and needs no operator action. @@ requires no automatic or manual actuations or operator action
+Z Its heat removal rises and falls with GV temperature. @@ RAC heat removal capacity increases or decreases based on the heat removal requirements
+Z Inlet and outlet temperature and outlet mass flow show its performance. @@ The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored

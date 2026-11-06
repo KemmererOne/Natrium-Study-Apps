@@ -1,0 +1,684 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and safety features",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RES supports the reactor core and contains the primary sodium coolant.",
+     "anchor": "The RES supports the reactor core and contains the primary sodium coolant",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-15"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Low-pressure, pool-type design with no boundary penetrations below the primary coolant operating level",
+      "Integral primary heat transport system inside the RV",
+      "Seismic isolation of the reactor from the supporting structure",
+      "Location in a subgrade reinforced concrete structure",
+      "Passive emergency core cooling by natural circulation and natural convection air cooling"
+     ],
+     "anchor": "a low-pressure, pool-type reactor design with no boundary penetrations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-15"
+    },
+    {
+     "t": "p",
+     "text": "The RES provides radionuclide retention, reactivity control, and reactor heat removal functions.",
+     "anchor": "The RES provides radionuclide retention, reactivity control, and reactor heat removal functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-15"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-1",
+     "num": "7.1.2-1",
+     "cap": "Simplified Reactor Enclosure System General Arrangement",
+     "alt": "PSAR Rev 1 figure: Simplified Reactor Enclosure System General Arrangement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-39"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are penetrations through the RES primary coolant boundary located?",
+     "o": [
+      "Below the sodium level",
+      "In the reactor head above the primary coolant level",
+      "In the guard vessel",
+      "In the vessel bottom head"
+     ],
+     "a": 1,
+     "x": "Penetrations are located in the reactor head above the primary coolant level.",
+     "anchor": "are located in the reactor head above the primary coolant level",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Boundaries and interfaces",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The primary coolant boundary includes portions of systems enclosing the primary coolant volume and cover gas volume.",
+     "anchor": "forms a portion of the primary coolant boundary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-15"
+    },
+    {
+     "t": "list",
+     "items": [
+      "RXB",
+      "RCC",
+      "PHT",
+      "CRD",
+      "RAC",
+      "Fuel Handling Systems",
+      "SCG",
+      "SPS",
+      "I&C systems"
+     ],
+     "anchor": "The RES interfaces with the RXB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-16"
+    },
+    {
+     "t": "p",
+     "text": "The HAA Seal and Well Seal preserve the RAC air flowpath and limit leakage to the HAA.",
+     "anchor": "to preserve the integrity of the RAC air flowpath and to limit leakage to the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-10",
+     "num": "7.1.2-10",
+     "cap": "Simplified Diagram of Well Seal and HAA Seal",
+     "alt": "PSAR Rev 1 figure: Simplified Diagram of Well Seal and HAA Seal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-48"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What do the HAA Seal and Well Seal preserve?",
+     "o": [
+      "The RAC air flowpath integrity and limit leakage to the HAA",
+      "Sodium level",
+      "IHX tube integrity",
+      "The primary pump seals"
+     ],
+     "a": 0,
+     "x": "They preserve the RAC air flowpath and limit leakage to the HAA.",
+     "anchor": "to preserve the integrity of the RAC air flowpath and to limit leakage to the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Reactor vessel and head",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RV is a vertical cylindrical shell with an integrally welded torispherical bottom head.",
+     "anchor": "The RV is a vertical, right-circular cylindrical shell design",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16"
+    },
+    {
+     "t": "p",
+     "text": "The RV hangs from the flat, disc-shaped reactor head through a pressure-retaining structural weld.",
+     "anchor": "The RV is supported by the flat, disc-shaped reactor head",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16"
+    },
+    {
+     "t": "p",
+     "text": "The RV and reactor head are austenitic stainless steel, for compatibility with liquid sodium.",
+     "anchor": "are constructed of austenitic stainless steel for compatibility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Item",
+      "Preliminary value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RV outside diameter",
+        "415.5 in"
+       ],
+       "anchor": "RV outside diameter 415.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-37"
+      },
+      {
+       "cells": [
+        "GV outside diameter",
+        "433.5 in"
+       ],
+       "anchor": "GV outside diameter 433.5",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-37"
+      },
+      {
+       "cells": [
+        "RV wall thickness",
+        "2 in"
+       ],
+       "anchor": "RV wall thickness 2",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-37"
+      },
+      {
+       "cells": [
+        "Reactor head thickness",
+        "12 in"
+       ],
+       "anchor": "Reactor Head thickness 12",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-37"
+      },
+      {
+       "cells": [
+        "RV design temperature",
+        "1050 F"
+       ],
+       "anchor": "Reactor Vessel SA-240 316H",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-38"
+      }
+     ]
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-2",
+     "num": "7.1.2-2",
+     "cap": "Simplified Reactor Head Configuration",
+     "alt": "PSAR Rev 1 figure: Simplified Reactor Head Configuration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-40"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is the reactor vessel supported?",
+     "o": [
+      "On the guard vessel floor",
+      "By the core barrel",
+      "On a skirt at the bottom",
+      "By the reactor head through a structural weld at the top of the shell"
+     ],
+     "a": 3,
+     "x": "The RV is supported through a structural weld between the top of the shell and the reactor head.",
+     "anchor": "The RV is supported through a structural weld between the top of the shell and the reactor head",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Rotatable plug and upper internals",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The UIS sits above the core. It guides the CRDM drivelines and places core exit temperature monitoring instrumentation.",
+     "anchor": "provides shroud tubes as guides to locate control rod drive mechanism",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.2, p. 7.1-17"
+    },
+    {
+     "t": "p",
+     "text": "During plant operation, the RPA is locked in place and is not rotatable.",
+     "anchor": "During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-29"
+    },
+    {
+     "t": "p",
+     "text": "During refueling, the RPA is disconnected from the mounting flange and elevated to allow rotation.",
+     "anchor": "the RPA is disconnected from the reactor head mounting flange and elevated",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-29"
+    },
+    {
+     "t": "p",
+     "text": "With the RPA in the refueling position and the drivelines unlatched and fully retracted, the UIS rotates with the plug.",
+     "anchor": "the UIS rotates with the rotatable plug",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.2, p. 7.1-17"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-3",
+     "num": "7.1.2-3",
+     "cap": "Simplified Rotatable Plug Assembly General Arrangement",
+     "alt": "PSAR Rev 1 figure: Simplified Rotatable Plug Assembly General Arrangement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-41"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the state of the RPA during plant operation?",
+     "o": [
+      "Elevated",
+      "Removed",
+      "Rotating slowly",
+      "Locked in place and not rotatable"
+     ],
+     "a": 3,
+     "x": "During plant operation the RPA is locked and not rotatable.",
+     "anchor": "During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-29",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Sodium pools and flow path",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The hot pool liner separates the hot and cold pools and directs hot sodium toward the IHX inlets.",
+     "anchor": "separates the hot and cold pools of the primary sodium coolant and directs hot primary sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-30"
+    },
+    {
+     "t": "p",
+     "text": "Stratification minimizes heat transfer between pools, increases thermal efficiency, and reduces thermal gradients.",
+     "anchor": "minimizes heat transfer between pools, increases thermal efficiency",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-30"
+    },
+    {
+     "t": "p",
+     "text": "The core inlet plenum receives cold coolant from the PSP discharge pipe.",
+     "anchor": "The core inlet plenum receives cold coolant flow from the PSP discharge pipe",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-31"
+    },
+    {
+     "t": "p",
+     "text": "The core barrels limit flow through the IVS to that needed to remove stored assembly decay heat.",
+     "anchor": "limits the flow through the IVS to that needed to remove stored assembly decay heat",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-31"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-9",
+     "num": "7.1.2-9",
+     "cap": "Sodium Pool Regions",
+     "alt": "PSAR Rev 1 figure: Sodium Pool Regions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-47"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-8",
+     "num": "7.1.2-8",
+     "cap": "Primary Coolant Flowpath",
+     "alt": "PSAR Rev 1 figure: Primary Coolant Flowpath",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-46"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What region is formed between the hot and cold pools?",
+     "o": [
+      "The warm sodium pool region",
+      "The core inlet plenum",
+      "The annulus",
+      "The cover gas space"
+     ],
+     "a": 0,
+     "x": "The liners form a thermally insulated cavity called the warm sodium pool region.",
+     "anchor": "referred to as the warm sodium pool region",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-30",
+     "eo": "4"
+    },
+    {
+     "q": "Where is In-Vessel Storage located?",
+     "o": [
+      "Above the reactor head",
+      "In the guard vessel annulus",
+      "In the hot pool liner",
+      "Between the inner and outer core barrel"
+     ],
+     "a": 3,
+     "x": "The IVS is located between the inner and outer core barrel.",
+     "anchor": "the IVS (located between the inner and outer core barrel)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-31",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Guard vessel",
+   "eo": [
+    "3",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The GV provides a defense-in-depth coolant and functional containment boundary if the RV leaks.",
+     "anchor": "which provides a defense-in-depth coolant and functional containment boundary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.3, p. 7.1-17"
+    },
+    {
+     "t": "p",
+     "text": "The RV-GV annulus is inerted with argon gas from the SCG to minimize sodium-air reaction.",
+     "anchor": "The annular space is inerted with argon gas minimizing the potential for sodium-air reaction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.3, p. 7.1-18"
+    },
+    {
+     "t": "p",
+     "text": "If the RV leaks, the equilibrium RV and GV sodium level remains above the IHX inlets, so heat still reaches the intermediate system or RAC.",
+     "anchor": "sodium level remains above the level of the IHX inlets",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32"
+    },
+    {
+     "t": "p",
+     "text": "The GV also keeps sodium away from RXB concrete and the surrounding atmosphere.",
+     "anchor": "The GV minimizes the potential for sodium contact with RXB concrete",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-6",
+     "num": "7.1.2-6",
+     "cap": "Simplified Guard Vessel General Arrangement",
+     "alt": "PSAR Rev 1 figure: Simplified Guard Vessel General Arrangement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-44"
+    }
+   ],
+   "checks": [
+    {
+     "q": "After an RV leak into the guard vessel, where does the sodium level settle?",
+     "o": [
+      "At the bottom of the annulus",
+      "At the reactor head",
+      "Below the core",
+      "Above the IHX inlets"
+     ],
+     "a": 3,
+     "x": "The equilibrium level remains above the IHX inlets.",
+     "anchor": "sodium level remains above the level of the IHX inlets",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32",
+     "eo": "3,8"
+    },
+    {
+     "q": "What fills the RV-GV annulus?",
+     "o": [
+      "Air",
+      "Argon",
+      "Sodium",
+      "Nitrogen"
+     ],
+     "a": 1,
+     "x": "The annular space is inerted with argon gas.",
+     "anchor": "The annular space is inerted with argon gas minimizing the potential for sodium-air reaction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.3, p. 7.1-18",
+     "eo": "3,8"
+    }
+   ]
+  },
+  {
+   "title": "Supports and seismic isolation",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RSS transmits loads to the RXB substructure through RSBs, the MIRSS, and seismic isolators.",
+     "anchor": "The RSS structural load path consists of RSBs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.4, p. 7.1-18"
+    },
+    {
+     "t": "p",
+     "text": "The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath.",
+     "anchor": "The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-2-7",
+     "num": "7.1.2-7",
+     "cap": "Simplified Reactor Support Structure Arrangement",
+     "alt": "PSAR Rev 1 figure: Simplified Reactor Support Structure Arrangement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-45"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which structure also forms a part of the RAC air flowpath?",
+     "o": [
+      "The MIRSS",
+      "The core barrel",
+      "The RPA",
+      "The UIS"
+     ],
+     "a": 0,
+     "x": "The MIRSS supports the RAC CCA and forms a part of the RAC air flowpath.",
+     "anchor": "The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Abnormal conditions and automatic response",
+   "eo": [
+    "6",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The cover gas space accommodates increased inventory from IHX leakage, and the RPS initiates scram and ISP trip on high primary coolant level.",
+     "anchor": "The cover gas space accommodates increased primary coolant inventory due to IHX leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.2, p. 7.1-24"
+    },
+    {
+     "t": "p",
+     "text": "The IHT is maintained at a higher pressure than the primary coolant in normal operation, AOOs, shutdown, and accident conditions.",
+     "anchor": "The IHT is maintained at a higher pressure than the primary coolant",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.2, p. 7.1-24"
+    },
+    {
+     "t": "p",
+     "text": "If forced primary flow is not available, the RES configuration passively establishes natural circulation.",
+     "anchor": "In the event that forced primary coolant flow is not available",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-28"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What automatic actions occur on a high primary coolant level from IHX leakage?",
+     "o": [
+      "Runback only",
+      "Reactor scram and ISP trip",
+      "SPS start",
+      "RAC isolation"
+     ],
+     "a": 1,
+     "x": "The RPS initiates reactor scram and Intermediate Sodium Pump trip on high primary coolant level.",
+     "anchor": "initiates reactor scram and Intermediate Sodium Pump trip on a high primary coolant level condition",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.2, p. 7.1-24",
+     "eo": "6,8"
+    }
+   ]
+  },
+  {
+   "title": "Instrumentation",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RES supports monitoring instrumentation with drywells, thermowells, penetrations, and sealing surfaces. It also gives access for sodium leakage monitoring.",
+     "anchor": "by providing drywells and thermowells, penetrations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-34"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the RES provide for instrumentation?",
+     "o": [
+      "Neutron detectors",
+      "Scram logic",
+      "Drywells, thermowells, and penetrations",
+      "Control room displays"
+     ],
+     "a": 2,
+     "x": "The RES physically supports instruments by providing drywells, thermowells, and penetrations.",
+     "anchor": "by providing drywells and thermowells, penetrations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-34",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance and programs",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The GV supports SR function DL3-HR4 by providing a heat transfer path from the RV to the RAC.",
+     "anchor": "The GV supports the SR DL3-HR4 function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32"
+    },
+    {
+     "t": "p",
+     "text": "The GV supports NSRST function DL4-RR1 as a boundary if the RV leaks.",
+     "anchor": "The GV supports the NSRST DL4-RR1 function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Comprehensive Vibration Assessment Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the RES",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.4, p. 7.1-34"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which SR function does the GV support?",
+     "o": [
+      "DL3-HR4 heat transfer path from the RV to the RAC",
+      "Cover gas purification",
+      "Sodium processing",
+      "Scram"
+     ],
+     "a": 0,
+     "x": "The GV supports the SR DL3-HR4 function.",
+     "anchor": "The GV supports the SR DL3-HR4 function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The RES holds the pool, has no penetrations below the sodium level, and is seismically isolated.",
+   "anchor": "a low-pressure, pool-type reactor design with no boundary penetrations",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.1, p. 7.1-15"
+  },
+  {
+   "text": "The GV is a backup boundary with an argon annulus and a heat transfer path to RAC.",
+   "anchor": "The GV supports the SR DL3-HR4 function",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32"
+  },
+  {
+   "text": "The RPA is locked during operation and rotates only for refueling.",
+   "anchor": "During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-29"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-02",
+ "title": "Reactor Enclosure System",
+ "kind": "system",
+ "subject": "RES",
+ "sec_note": "Sec. 7.1.2, pp. 7.1-15 to 7.1-49",
+ "intro": "The Reactor Enclosure System is the vessel, head, internals, guard vessel, and supports. It holds the pool, forms a barrier, and shapes the flow path.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RES.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RES boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RES.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RES operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RES controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RES automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RES.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RES.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RES.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RES.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-02-reactor-enclosure-system"
+}

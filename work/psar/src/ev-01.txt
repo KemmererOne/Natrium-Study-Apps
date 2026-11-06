@@ -1,0 +1,38 @@
+# EV-01 | Anticipated Operational Occurrences | event | event
+range: 3.6-1 3.6-4 3.3-5 3.3-7
+sec: Sec. 3.6, pp. 3.6-1 to 3.6-4
+intro: AOOs are the events the plant expects to see in its life. Learn the set first, because every DBE builds on the same initiators with more failures added.
+
+== What an AOO is | 1
+Q Anticipated operational occurrences (AOOs) are anticipated event sequences expected to occur one or more times during the life of the plant.
+S Event sequences with mean frequencies of 1x10-2 per plant-year and greater are classified as AOOs. @@ 1x10-2 per plant-year and greater are classified as AOOs
+S AOOs take into account the expected responses of all SSCs regardless of safety classification. @@ AOOs take into account the expected
+K What frequency classifies an event sequence as an AOO? | 1x10-2 per plant-year and greater | 1x10-4 to 1x10-2 per plant-year | Below 1x10-4 per plant-year | Exactly once per plant life | 0 | Mean frequencies of 1x10-2 per plant-year and greater are classified as AOOs. @@ 1x10-2 per plant-year and greater are classified as AOOs
+
+== The AOO set | 1,3,5
+T AOO | Initiator | Scram signal
+R DHP-L1PP-BL | Loss of one PSP at full power | High high power-to-flow ratio @@ A reactor scram on high high power-to-flow ratio occurs. The final conditions result in the reactor in safe
+R DHP-LOOP-BL | Loss of offsite power at full power | High high power-to-flow ratio @@ resulting in a reactor scram on high high power-to-flow ratio
+R SUD-LOOP-BL | Loss of offsite power at low power | Loss of primary flow @@ The reactor scrams due to the loss of primary flow
+R OTH-LMAC-BL | Loss of a 6.9 kV bus, which loses one PSP and one ISP | High high power-to-flow ratio @@ The loss of the bus results in the loss of one Primary Sodium Pump and one
+R DHS-ISTL-BL | Loss of heat removal from one intermediate loop | High high cold pool temperature @@ scram on high high cold pool temperature
+R RPD-CW1ACS-BL | Continuous withdrawal of a control rod | High high power range neutron flux or high high power-to-flow ratio @@ scram on high high power range neutron flux or high high
+R RPD-SS-BL | Reactor scram or spurious scram | None beyond the initiator @@ The postulated initiating event is a reactor scram or spurious scram
+K Loss of a primary 6.9 kilovolt bus loses which pumps? | Both PSPs | One PSP and one ISP | Both ISPs | One SPS pump | 1 | The loss of the bus results in the loss of one PSP and one ISP. @@ The loss of the bus results in the loss of one Primary Sodium Pump and one
+K A control rod withdraws continuously at full power. Which scram signals does the PSAR name? | High high cold pool temperature | Low primary sodium level | High high power range neutron flux or high high power-to-flow ratio | High radiation | 2 | The AOO scrams on high high power range neutron flux or high high power-to-flow ratio. @@ scram on high high power range neutron flux or high high
+
+== Fuel handling AOOs | 1,2
+S Fuel handling AOOs cover damage to a test pin in the Pin Removal Cell, loss of spent fuel pool cooling, and loss of EVST active cooling. @@ Fuel Damage While Handling an LTA or LDA Test Pin
+S Spent fuel pool cooling is restored before the pool boils, and no fuel damage occurs. @@ restored prior to Spent Fuel Pool boiling and no fuel damage occurs
+S In the loss of EVST active cooling, EVST passive cooling is available and no fuel damage occurs. @@ cooling is available, and no fuel damage occurs
+S The test pin AOO assumes rupture of the cladding of seven pins: the pin being removed and the six surrounding pins. @@ removed from the assembly and the six surrounding pins
+K Why does the test pin AOO assume seven damaged pins? | The assembly has seven rows | The pin being removed plus the six surrounding pins | Seven pins fit in the cell | It is a regulatory minimum | 1 | Seven pins account for the pin being removed and the six surrounding pins. @@ removed from the assembly and the six surrounding pins
+
+== End states and operator role | 10,12
+S Most reactor AOOs end in safe shutdown with IAC in non-passive mode removing decay heat. @@ The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal
+S Operator actions are not required to mitigate AOOs unless otherwise noted. @@ Operator actions are not required to mitigate AOOs
+S For the reactor AOOs, fuel integrity is maintained and there is no radiological release. @@ the peak fuel pin and there is no radiological release
+K What is the usual decay heat removal path at the end of a reactor AOO? | IAC in non-passive mode | RAC only | IAC passive mode only | The steam plant | 0 | The AOO end state is safe shutdown with IAC in non-passive mode. DBEs remove that path. @@ The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal
+
+Z AOOs have mean frequencies of 1x10-2 per plant-year and greater. @@ 1x10-2 per plant-year and greater are classified as AOOs
+Z Reactor AOOs end in safe shutdown on non-passive IAC with no radiological release. @@ The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal

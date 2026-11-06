@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Reactor Instrumentation System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-19-reactor-instrumentation-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The RIS is the set of non-nuclear sensors in or near the reactor vessel. It measures pool temperature, level, and pump data, and has no displays or logic of its own. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.6.5, pp. 7.6-48 to 7.6-59</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the RIS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and architecture</a></p><p><span class="num">2</span> Identify the RIS boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and architecture</a></p><p><span class="num">3</span> Identify the major components of the RIS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and architecture</a>, <a href="#concept-2">Monitored variables</a></p><p><span class="num">4</span> Explain RIS operation.</p><p class="gap">Taught in: <a href="#concept-3">Functions supported</a></p><p><span class="num">5</span> Describe the RIS controls and indications.</p><p class="gap">Taught in: <a href="#concept-2">Monitored variables</a></p><p><span class="num">6</span> Explain the RIS automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Functions supported</a></p><p><span class="num">7</span> Apply operating procedures for the RIS.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the RIS.</p><p class="gap">Taught in: <a href="#concept-4">Testing and failure</a></p><p><span class="num">9</span> Explain the safety significance of the RIS.</p><p class="gap">Taught in: <a href="#concept-5">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the RIS.</p><p class="gap">Taught in: <a href="#concept-4">Testing and failure</a>, <a href="#concept-5">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and architecture <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and architecture</h2><p class="count">Objectives 1, 2, 3</p><p>The RIS measures selected parameters in or near the reactor vessel and sends signals to the RPS and NIC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48</cite></p>
+<p>A channel is a single sensor plus its cabling and signal amplification electronics. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48</cite></p>
+<p>The RIS has four redundant, independent divisions for parameters that give SR inputs to the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48</cite></p>
+<p>Signal splitters duplicate SR inputs and send them to the NIC as NSRST and NST signals. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48</cite></p>
+<p>No information displays are part of the RIS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-55</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: Reactor Instrumentation System Block Diagram"><figcaption>Figure 7.6.5-1. Reactor Instrumentation System Block Diagram <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-59</cite></figcaption></figure>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and architecture <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and architecture</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-19-K1</span></div>
+  <p>What is an RIS channel?</p>
+  <div class="opts"><button type="button" class="opt">A. A data highway</button><button type="button" class="opt">B. A division of the RPS</button><button type="button" class="opt">C. A single sensor and its cabling and amplification electronics</button><button type="button" class="opt">D. A display</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The PSAR defines a channel that way. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K1&amp;body=Item%3A%20SY-19-K1%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20What%20is%20an%20RIS%20channel%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.1%2C%20p.%207.6-48%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1,2,3</span><span>SY-19-K2</span></div>
+  <p>How do SR RIS signals reach the NIC?</p>
+  <div class="opts"><button type="button" class="opt">A. Through signal splitters</button><button type="button" class="opt">B. Through direct parallel wires</button><button type="button" class="opt">C. They do not</button><button type="button" class="opt">D. Through the XIS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Signal splitters duplicate the SR inputs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K2&amp;body=Item%3A%20SY-19-K2%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20How%20do%20SR%20RIS%20signals%20reach%20the%20NIC%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.1.1%2C%20p.%207.6-48%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and architecture</a><a class="next" href="#concept-2">Monitored variables <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Monitored variables</h2><p class="count">Objectives 3, 5</p><table class="tbl"><thead><tr><th>Variable</th><th>Instruments</th><th>Class</th></tr></thead><tbody><tr><td>Primary sodium hot pool temperature</td><td>4</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>Primary sodium hot pool level</td><td>4</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>Primary sodium cold pool temperature</td><td>8</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>PSP shaft speed</td><td>8</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>PSP current detector</td><td>8</td><td>SR <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>Reactor vessel to guard vessel liquid sodium detection</td><td>3</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>Core exit temperature</td><td>15</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr><tr><td>Reactor head temperature</td><td>3</td><td>NST <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and architecture</a><a class="next" href="#check-2">Knowledge check: Monitored variables <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Monitored variables</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 3,5</span><span>SY-19-K3</span></div>
+  <p>How many core exit temperature instruments does the RIS have?</p>
+  <div class="opts"><button type="button" class="opt">A. 3</button><button type="button" class="opt">B. 4</button><button type="button" class="opt">C. 8</button><button type="button" class="opt">D. 15</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Table 7.6.5-1 lists 15, classified NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K3&amp;body=Item%3A%20SY-19-K3%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20How%20many%20core%20exit%20temperature%20instruments%20does%20the%20RIS%20have%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.3.4%2C%20p.%207.6-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 3,5</span><span>SY-19-K4</span></div>
+  <p>Which RIS variable is NST?</p>
+  <div class="opts"><button type="button" class="opt">A. Reactor head temperature</button><button type="button" class="opt">B. Cold pool temperature</button><button type="button" class="opt">C. Hot pool level</button><button type="button" class="opt">D. PSP shaft speed</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Reactor head temperature is NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K4&amp;body=Item%3A%20SY-19-K4%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20Which%20RIS%20variable%20is%20NST%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.3.4%2C%20p.%207.6-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3,5</span><span>SY-19-K5</span></div>
+  <p>How many cold pool temperature instruments are there?</p>
+  <div class="opts"><button type="button" class="opt">A. 4</button><button type="button" class="opt">B. 8</button><button type="button" class="opt">C. 3</button><button type="button" class="opt">D. 15</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The table lists 8, classified SR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K5&amp;body=Item%3A%20SY-19-K5%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20How%20many%20cold%20pool%20temperature%20instruments%20are%20there%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.3.4%2C%20p.%207.6-58%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Monitored variables</a><a class="next" href="#concept-3">Functions supported <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Functions supported</h2><p class="count">Objectives 4, 6</p><table class="tbl"><thead><tr><th>Function</th><th>RIS input to the RPS</th></tr></thead><tbody><tr><td>DL3-RC1b</td><td>Hot pool temperature <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr><tr><td>DL3-RC1c</td><td>Hot pool level, high-high <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr><tr><td>DL3-RC1d</td><td>PSP speed and current <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr><tr><td>DL3-RC1e</td><td>Cold pool temperature <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr><tr><td>DL3-RC1h</td><td>Hot pool level, low-low <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr><tr><td>DL3-RC1j</td><td>PSP speed and current <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></td></tr></tbody></table>
+<p>The RIS also gives Type B, C, and F PAM variables to the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51</cite></p>
+<p>It provides signals to control PHT and PSP flow, start power runback, and inhibit rod withdrawal in NST DL2 functions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Monitored variables</a><a class="next" href="#check-3">Knowledge check: Functions supported <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Functions supported</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6</span><span>SY-19-K6</span></div>
+  <p>Which RIS measurements feed the loss of primary flow scram?</p>
+  <div class="opts"><button type="button" class="opt">A. PSP speed and current</button><button type="button" class="opt">B. Core exit temperature</button><button type="button" class="opt">C. Head temperature</button><button type="button" class="opt">D. Hot pool level</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. DL3-RC1j uses PSP speed and current. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K6&amp;body=Item%3A%20SY-19-K6%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20Which%20RIS%20measurements%20feed%20the%20loss%20of%20primary%20flow%20scram%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.2.1%2C%20p.%207.6-50%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 4,6</span><span>SY-19-K7</span></div>
+  <p>Which DL2 action can RIS signals support?</p>
+  <div class="opts"><button type="button" class="opt">A. Start FPC</button><button type="button" class="opt">B. Inhibit rod withdrawal</button><button type="button" class="opt">C. Seismic trip</button><button type="button" class="opt">D. Close RTBs</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. RIS signals support power runback and rod withdrawal inhibit. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K7&amp;body=Item%3A%20SY-19-K7%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20Which%20DL2%20action%20can%20RIS%20signals%20support%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.2.1%2C%20p.%207.6-51%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Functions supported</a><a class="next" href="#concept-4">Testing and failure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Testing and failure</h2><p class="count">Objectives 8, 10</p><p>SR portions can be tested and calibrated during power operation with no loss of SR functions at the system level. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.2, p. 7.6-54</cite></p>
+<p>SR equipment is designed for timely recognition, location, adjustment, repair, and replacement of malfunctions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.2, p. 7.6-54</cite></p>
+<p>Inputs to the NIC are electronically isolated from RPS inputs, so control failures do not impact the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53</cite></p>
+<p>Removing any RIS division will not impact protection or control functions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53</cite></p>
+<p>SR channels give the same outputs for the same inputs within a known cycle time. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-56</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Functions supported</a><a class="next" href="#check-4">Knowledge check: Testing and failure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Testing and failure</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 8,10</span><span>SY-19-K8</span></div>
+  <p>An NIC control failure occurs. What is the effect on the RPS through the RIS?</p>
+  <div class="opts"><button type="button" class="opt">A. Divisions merge</button><button type="button" class="opt">B. RPS signals are lost</button><button type="button" class="opt">C. None, inputs are isolated</button><button type="button" class="opt">D. RPS trips</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. NIC inputs are electronically isolated and independent of RPS inputs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K8&amp;body=Item%3A%20SY-19-K8%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20An%20NIC%20control%20failure%20occurs.%20What%20is%20the%20effect%20on%20the%20RPS%20through%20the%20RIS%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.2.2%2C%20p.%207.6-53%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Testing and failure</a><a class="next" href="#concept-5">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>Safety-significant RIS equipment is seismic class SCS1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.1, p. 7.6-53</cite></p>
+<p>Safety-significant portions sit in the RXB and NCB substructures. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.2, p. 7.6-48</cite></p>
+<p>NCB equipment is in division-specific 3-hour fire rated rooms. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-51</cite></p>
+<ul><li>Design Reliability Assurance Program</li><li>Equipment Qualification Program</li><li>Post-construction inspection, testing, and analysis program</li><li>Quality Assurance Program Description</li><li>Human Factors Engineering Program Plan</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2, p. 7.6-48</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Testing and failure</a><a class="next" href="#check-5">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 9,10</span><span>SY-19-K9</span></div>
+  <p>What seismic class applies to safety-significant RIS equipment?</p>
+  <div class="opts"><button type="button" class="opt">A. SCS1</button><button type="button" class="opt">B. SCN1</button><button type="button" class="opt">C. SCN3</button><button type="button" class="opt">D. None</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The RIS is assigned SCS1 special treatment. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.1, p. 7.6-53</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-19-K9&amp;body=Item%3A%20SY-19-K9%0ALesson%3A%20Reactor%20Instrumentation%20System%0AQuestion%3A%20What%20seismic%20class%20applies%20to%20safety-significant%20RIS%20equipment%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.5.3.1%2C%20p.%207.6-53%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>The RIS is a collection of channels in or near the vessel, with four SR divisions where the RPS needs them. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48</cite></li><li>It gives the RPS temperature, level, and PSP speed and current, and has no displays. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-55</cite></li><li>Signal splitters isolate control from protection, so NIC failures do not reach the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 13</span></div>
+<h1>Reactor Instrumentation System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and architecture</a></li><li><a href="#check-1">Knowledge check: Purpose and architecture</a></li><li><a href="#concept-2">Monitored variables</a></li><li><a href="#check-2">Knowledge check: Monitored variables</a></li><li><a href="#concept-3">Functions supported</a></li><li><a href="#check-3">Knowledge check: Functions supported</a></li><li><a href="#concept-4">Testing and failure</a></li><li><a href="#check-4">Knowledge check: Testing and failure</a></li><li><a href="#concept-5">Safety significance</a></li><li><a href="#check-5">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.6.5.1, 7.6.5.1.1, 7.6.5.1.2, 7.6.5.2, 7.6.5.2.1, 7.6.5.2.2, 7.6.5.3.1, 7.6.5.3.2, 7.6.5.3.3, 7.6.5.3.4</p><p>Pages 7.6-48, 7.6-50, 7.6-51, 7.6-53, 7.6-54, 7.6-55, 7.6-56, 7.6-58, 7.6-59</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-19&amp;body=Lesson%3A%20SY-19%20Reactor%20Instrumentation%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

@@ -1,0 +1,325 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiators and assumptions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "BDBEs are less likely than DBEs and are not expected to occur in the life of the plant.",
+     "anchor": "are rare event sequences that are less likely than design basis events",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1"
+    },
+    {
+     "t": "p",
+     "text": "BDBEs take into account the expected response of all SSCs regardless of safety classification.",
+     "anchor": "BDBEs take into account the expected response of all structures, systems, or components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Family",
+      "Example initiators"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Loss of primary flow",
+        "Loss of one PSP, loss of all PSPs, LOOP, loss of a 6.9 kV bus"
+       ],
+       "anchor": "a total loss of primary flow during full power operating conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.4.1, p. 3.8-2"
+      },
+      {
+       "cells": [
+        "Heat removal",
+        "Loss of heat sink, Energy Island transient, IHX tube break"
+       ],
+       "anchor": "a loss of heat removal from one intermediate sodium loop during full power operating conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.2.1.1, p. 3.8-5"
+      },
+      {
+       "cells": [
+        "Reactivity",
+        "Control rod withdrawal, reactor or spurious scram"
+       ],
+       "anchor": "the continuous withdrawal of a control rod during full power operating conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.3.1.1, p. 3.8-8"
+      },
+      {
+       "cells": [
+        "Ex-vessel release",
+        "SCG leaks while shutdown"
+       ],
+       "anchor": "SCG leak occurs downstream of the SCG vapor trap cell during low power or shutdown",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.4.2.1, p. 3.8-11"
+      },
+      {
+       "cells": [
+        "Fuel handling",
+        "Drops in the vessel, SFP, or BLTC, PIC sodium-water reaction, loss of EVHM cooling"
+       ],
+       "anchor": "a fuel handling event while moving fuel in the bottom loading transfer cask",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.5.8.1, p. 3.8-17"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What frequency band defines BDBEs?",
+     "o": [
+      "Above 1x10^-2",
+      "1x10^-4 to 1x10^-2",
+      "5x10^-7 to 1x10^-4",
+      "Below 1x10^-9"
+     ],
+     "a": 2,
+     "x": "Mean frequencies of 5x10^-7 to 1x10^-4 per plant-year are BDBEs.",
+     "anchor": "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Scram backups",
+   "eo": [
+    "5",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Failure",
+      "Backup",
+      "What it does"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Insufficient rods insert, from a trip breaker failure or rods not fully inserting",
+        "CRD driveline scram follow",
+        "Control rods are driven into the core"
+       ],
+       "anchor": "A Control Rod Drive System (CRD) driveline scram follow occurs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.2.1, p. 3.8-1"
+      },
+      {
+       "cells": [
+        "Normal scram fails",
+        "Alternative shunt trip circuit",
+        "Scrams the reactor"
+       ],
+       "anchor": "The alternative shunt trip circuit scrams the reactor",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.3.1, p. 3.8-2"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "An insufficient number of rods insert after a scram signal. What backs this up in the BDBE analysis?",
+     "o": [
+      "CRD driveline scram follow",
+      "RAC",
+      "Operator trip only",
+      "Alternative shunt trip"
+     ],
+     "a": 0,
+     "x": "A CRD driveline scram follow drives rods into the core.",
+     "anchor": "A Control Rod Drive System (CRD) driveline scram follow occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.2.1, p. 3.8-1",
+     "eo": "5,9"
+    },
+    {
+     "q": "The normal reactor scram fails. What scrams the reactor?",
+     "o": [
+      "IAC",
+      "ISP trip",
+      "Runback",
+      "The alternative shunt trip circuit"
+     ],
+     "a": 3,
+     "x": "The alternative shunt trip circuit scrams the reactor.",
+     "anchor": "The alternative shunt trip circuit scrams the reactor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.3.1, p. 3.8-2",
+     "eo": "5,9"
+    }
+   ]
+  },
+  {
+   "title": "Heat removal fallback",
+   "eo": [
+    "5",
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "With non-passive IAC failed on both trains, the end state is safe shutdown with the IAC passive mode.",
+     "anchor": "with the IAC passive mode providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.1.1, p. 3.8-1"
+    },
+    {
+     "t": "p",
+     "text": "With non-passive and passive IAC failed on both trains, RAC provides decay heat removal.",
+     "anchor": "Non-passive and passive IAC cooling fails on both trains",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.5.1, p. 3.8-2"
+    },
+    {
+     "t": "note",
+     "text": "Learn the order: IAC non-passive, then IAC passive, then RAC."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Both IAC modes fail on both trains after a LOOP. What removes decay heat?",
+     "o": [
+      "IHT forced flow",
+      "RAC",
+      "SPS",
+      "The Energy Island"
+     ],
+     "a": 1,
+     "x": "RAC provides decay heat removal.",
+     "anchor": "safe shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.5.1, p. 3.8-2",
+     "eo": "5,9,10"
+    }
+   ]
+  },
+  {
+   "title": "Where fuel performance limits are not met",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In DHP-LOOP-4, the fuel performance acceptance criteria are not met. Cladding fails, and a radionuclide release occurs.",
+     "anchor": "The fuel performance acceptance criteria are not met for this event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.6.1, p. 3.8-3"
+    },
+    {
+     "t": "p",
+     "text": "Risk-significant BDBEs in the summary table include RFH-FDIV-2, RFH-FDEM-2, and RFH-FDPI-1.",
+     "anchor": "RFH-FDIV-2 Fuel Handling Event Occurs While Moving Fuel Assembly Yes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.2, p. 3.5-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which LOOP BDBE fails to meet the fuel performance acceptance criteria?",
+     "o": [
+      "DHP-LOOP-4",
+      "SUD-LOOP-1",
+      "DHP-LOOP-2",
+      "DHP-LOOP-3"
+     ],
+     "a": 0,
+     "x": "DHP-LOOP-4 uses the alternative shunt trip and cladding fails.",
+     "anchor": "The fuel performance acceptance criteria are not met for this event",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.6.1, p. 3.8-3",
+     "eo": "2"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "BDBEs add failures to the same event families as DBEs.",
+   "anchor": "are rare event sequences that are less likely than design basis events",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1"
+  },
+  {
+   "text": "Scram backups are the driveline scram follow and the alternative shunt trip.",
+   "anchor": "The alternative shunt trip circuit scrams the reactor",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.8.1.3.1, p. 3.8-2"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-08",
+ "title": "Beyond Design Basis Events",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.8, starting on p. 3.8-1",
+ "intro": "BDBEs are the rare combinations. Compare each to its DBE: they usually add one failure, such as lost IAC modes or a failed normal scram.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": false
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": false
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": false
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": true
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": false
+  }
+ ],
+ "slug": "psar-ev-08-beyond-design-basis-events"
+}

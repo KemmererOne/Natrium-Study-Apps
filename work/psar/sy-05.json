@@ -1,0 +1,480 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RAC supports passive reactor decay heat removal by natural convection air flow and heat rejection to the atmosphere.",
+     "anchor": "supports passive reactor decay heat removal by natural convection air flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "With the PHT and RES, it provides the long-term emergency core cooling function.",
+     "anchor": "provides the long-term emergency core cooling function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "RAC is continuously in operation and requires no actuations or operator action to perform its heat removal safety function.",
+     "anchor": "requires no automatic or manual actuations or operator action",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What must an operator do to start RAC?",
+     "o": [
+      "Open the inlet louvers",
+      "Start the blower",
+      "Nothing, it is continuously in operation",
+      "Align IHT flow"
+     ],
+     "a": 2,
+     "x": "RAC is continuously in operation and requires no actuations or operator action.",
+     "anchor": "requires no automatic or manual actuations or operator action",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Components and boundaries",
+   "eo": [
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Four inlet stacks and four outlet stacks",
+      "Collector Cylinder Assembly (CCA)",
+      "Inlet and outlet ducting"
+     ],
+     "anchor": "The RAC consists of four inlet and four outlet stacks",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "RAC is integrated into the RXB substructure. Two inlet and two outlet stacks stand on each of the north and south sides.",
+     "anchor": "with two inlet and two outlet stacks on each side",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "Stack outlets are higher than the inlets, which limits recirculation of air.",
+     "anchor": "The stack outlets are at a higher elevation than the stack inlets",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "Inlet stacks terminate at least 30 feet above grade.",
+     "anchor": "The inlet stacks terminate a minimum of 30 feet above grade",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "Fixed louvers protect the inlets, and chimney cowls protect the outlets.",
+     "anchor": "protected by a chimney cowl configured to mitigate wind effects",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-1-1",
+     "num": "7.2.1-1",
+     "cap": "Simplified RAC Airflow Diagram",
+     "alt": "PSAR Rev 1 figure: Simplified RAC Airflow Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-12"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many RAC inlet and outlet stacks are there?",
+     "o": [
+      "Six and six",
+      "One and one",
+      "Two and two",
+      "Four and four"
+     ],
+     "a": 3,
+     "x": "RAC consists of four inlet and four outlet stacks.",
+     "anchor": "The RAC consists of four inlet and four outlet stacks",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1",
+     "eo": "2,3"
+    }
+   ]
+  },
+  {
+   "title": "Operation",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The riser annulus is formed by the collector cylinder and the GV.",
+     "anchor": "A riser annulus, formed by the collector cylinder and the GV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Heated air in the riser rises, drawing ambient air through the inlets and down the downcomer annulus.",
+     "anchor": "The rising air draws ambient air in through the inlet stack openings",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-2"
+    },
+    {
+     "t": "p",
+     "text": "The collector cylinder is heated by thermal radiation from the GV outer surface. Air is heated by convection from the GV and collector cylinder.",
+     "anchor": "The collector cylinder is heated by thermal radiation heat transfer from the GV outer surface",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is the collector cylinder heated?",
+     "o": [
+      "Sodium piping",
+      "Hot stack gas",
+      "Electric heaters",
+      "Thermal radiation from the GV outer surface"
+     ],
+     "a": 3,
+     "x": "It is heated by thermal radiation heat transfer from the GV outer surface.",
+     "anchor": "The collector cylinder is heated by thermal radiation heat transfer from the GV outer surface",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-2",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Self-regulating capacity",
+   "eo": [
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Without heat removal to the IHT, sodium near the RV wall gets hotter, the GV gets hotter, radiation increases, and air flow and temperature rise.",
+     "anchor": "the coolant temperature near the RV wall increases",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7"
+    },
+    {
+     "t": "p",
+     "text": "RAC heat removal capacity increases or decreases based on the heat removal requirements.",
+     "anchor": "RAC heat removal capacity increases or decreases based on the heat removal requirements",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7"
+    },
+    {
+     "t": "p",
+     "text": "When heat goes from the PHT to the IHT, the GV is cooler and RAC removes less heat.",
+     "anchor": "the GV surface temperature is lower, and the heat removal by the RAC is reduced",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What happens to RAC heat removal when heat transfer to the IHT is lost?",
+     "o": [
+      "It stops",
+      "It increases as GV temperature rises",
+      "It stays constant",
+      "It reverses"
+     ],
+     "a": 1,
+     "x": "Higher GV temperature increases radiation and air flow, so heat rejection increases.",
+     "anchor": "increasing overall heat rejection to the atmosphere",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7",
+     "eo": "4,8"
+    }
+   ]
+  },
+  {
+   "title": "Indications",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored.",
+     "anchor": "The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7"
+    },
+    {
+     "t": "p",
+     "text": "Each inlet stack has a temperature instrument, and each outlet stack has temperature and mass flow instruments.",
+     "anchor": "Each inlet stack contains a temperature instrument",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7"
+    },
+    {
+     "t": "p",
+     "text": "Signal output goes directly to the RPS, with redundant instruments on a separate division.",
+     "anchor": "Signal output is routed directly to the Reactor Protection System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7"
+    },
+    {
+     "t": "p",
+     "text": "The parameters are IEEE 497-2016 variable Types B and D for PAM.",
+     "anchor": "The measured parameters are IEEE 497-2016 variable Types B and D for PAM",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which RAC parameters are monitored?",
+     "o": [
+      "Damper position",
+      "Sodium level",
+      "Blower amps",
+      "Inlet temperature, outlet temperature, and outlet mass flow rate"
+     ],
+     "a": 3,
+     "x": "Those three parameters indicate heat removal performance.",
+     "anchor": "The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Degradation and hazards",
+   "eo": [
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Redundant stacks with common plenums compensate for potential blockage of a stack opening.",
+     "anchor": "to compensate for potential blockage in a stack inlet or outlet opening",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6"
+    },
+    {
+     "t": "p",
+     "text": "Continuous operation and monitoring give indication of performance degradation.",
+     "anchor": "provides indication of RAC performance degradation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6"
+    },
+    {
+     "t": "p",
+     "text": "The inlet louvers have provisions for temporary fine screens in severe small debris or dust conditions.",
+     "anchor": "temporary installation of fine screens",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+    },
+    {
+     "t": "p",
+     "text": "The design includes features for remote vacuuming of the internal air flow path during outages.",
+     "anchor": "remote vacuuming of the internal air flow path",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6"
+    },
+    {
+     "t": "p",
+     "text": "RAC air activation produces N-16 and Ar-41 gaseous effluents, and outlet flow is monitored to quantify discharge.",
+     "anchor": "results in N-16 and Ar-41 gaseous effluents from RAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.2, p. 7.2-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What compensates for blockage of a single RAC stack opening?",
+     "o": [
+      "Operator cleaning only",
+      "Dampers",
+      "A standby blower",
+      "Redundant stacks with common plenums"
+     ],
+     "a": 3,
+     "x": "Redundant stacks with common plenums compensate for potential blockage.",
+     "anchor": "to compensate for potential blockage in a stack inlet or outlet opening",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6",
+     "eo": "8"
+    },
+    {
+     "q": "What gaseous effluents come from activation of RAC air?",
+     "o": [
+      "I-131 and Cs-137",
+      "H-3 and Na-24",
+      "Xe-133 and Kr-88",
+      "N-16 and Ar-41"
+     ],
+     "a": 3,
+     "x": "Activation of air results in N-16 and Ar-41.",
+     "anchor": "results in N-16 and Ar-41 gaseous effluents from RAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.2, p. 7.2-4",
+     "eo": "8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR4 Inherent RAC operation",
+        "SR",
+        "Passive emergency core cooling, operating continuously"
+       ],
+       "anchor": "provides passive emergency core",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.2, p. 7.2-4"
+      },
+      {
+       "cells": [
+        "DL5-PAM1 Post-accident monitoring",
+        "NSRST",
+        "RAC performance variables for PAM"
+       ],
+       "anchor": "RAC performance variables are monitored to",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.2, p. 7.2-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "RAC structures are SR. Inlet and outlet temperature and flow instruments are NSRST.",
+     "anchor": "Inlet temperature instrumentation NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-9"
+    },
+    {
+     "t": "p",
+     "text": "RAC is a passive system with no active components.",
+     "anchor": "The RAC is designed as a passive system with no active components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the RAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.4, p. 7.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the safety classification of the RAC outlet mass flow instrumentation?",
+     "o": [
+      "NST",
+      "Unclassified",
+      "SR",
+      "NSRST"
+     ],
+     "a": 3,
+     "x": "Table 7.2.1-1 lists it as NSRST.",
+     "anchor": "Outlet mass flow instrumentation NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-9",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "RAC is passive, continuous, and needs no operator action.",
+   "anchor": "requires no automatic or manual actuations or operator action",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1"
+  },
+  {
+   "text": "Its heat removal rises and falls with GV temperature.",
+   "anchor": "RAC heat removal capacity increases or decreases based on the heat removal requirements",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7"
+  },
+  {
+   "text": "Inlet and outlet temperature and outlet mass flow show its performance.",
+   "anchor": "The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-05",
+ "title": "Reactor Air Cooling System",
+ "kind": "system",
+ "subject": "RAC",
+ "sec_note": "Sec. 7.2.1, pp. 7.2-1 to 7.2-12",
+ "intro": "RAC is the always-on passive heat removal path. Air rises past the guard vessel and leaves through tall stacks. There is nothing to start and nothing to stop.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RAC.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RAC boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RAC.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RAC operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RAC controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RAC automatic features and interlocks.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RAC.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RAC.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RAC.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RAC.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-05-reactor-air-cooling-system"
+}

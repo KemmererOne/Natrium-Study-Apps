@@ -1,0 +1,76 @@
+# OP-05 | Fire Protection and Sodium Leakage | topic | fire protection
+range: 8.2-1 8.2-8
+sec: Sec. 8.2, pp. 8.2-1 to 8.2-8
+intro: Sodium fires change the fire protection picture. Passive features do the work, and water stays away from sodium. This lesson pairs with SY-15.
+obj: State the fire protection defense-in-depth approach for conventional and sodium fires.
+obj: Describe the sodium leak design features.
+obj: Explain how each category of sodium leak is handled.
+obj: Describe how leak sizes and locations are postulated.
+obj: Explain the fire safe shutdown strategy.
+obj: State the preliminary firefighting strategies and the role of operators and responders.
+
+== Defense in depth | 1
+S The design provides defense in depth through prevention, detection, containment, suppression, and safe shutdown. @@ takes into account prevention, detection, containment, suppression, and the ability to maintain safe shutdown
+S Requirements consider both conventional and sodium fires. @@ for both conventional and sodium fires
+S The sodium fire strategy uses leak prevention, detection, and passive mitigation. @@ utilizes leak prevention, detection and passive mitigation
+S The radiological sodium strategy uses passive features, and adds active features only where necessary. @@ only add active features (e.g., inert gas flooding systems) where necessary
+K What does the sodium fire strategy rely on? | Water sprays | Leak prevention, detection, and passive mitigation | Offsite crews only | Halon | 1 | It uses leak prevention, detection, and passive mitigation. @@ utilizes leak prevention, detection and passive mitigation
+
+== Sodium leak design features | 2
+T Feature | What it does
+R Cells | Rooms with limited leak rate and known oxygen volume, inerted or de facto inerted @@ Cells are rooms with a limited leak rate and known oxygen volume
+R Guard pipes | Full secondary pressure boundary for radiological sodium @@ Guard pipes act as a full secondary pressure boundary
+R Guard enclosures | Like guard pipes, but with a drainpipe to a collection location @@ except that a drainpipe to an acceptable collection location is attached
+R Clamshells | Guard enclosures placed where pipe inspections are needed @@ A clamshell is a form of guard enclosure placed specifically where piping inspections are expected
+R Catch pans | Steel-lined volumes for the design-basis leak plus margin @@ Catch pans are a steel-lined volume designed to retain the design-basis sodium leak volume plus margin
+R Inerted guard vessels | Prevent sodium-air and sodium-concrete reactions @@ Inerted guard vessels are used as part of individual system design
+R Leakage detectors | Detect liquid sodium, aerosols, and reaction products @@ Leakage detection equipment for liquid sodium, sodium aerosols, and reaction products
+S Clamshells in the HAA drain leaked IHT sodium to the RAB pipe chase, so a leak inside is not a leak into the HAA. @@ a leak from the piping within the clamshell is not a leak into the HAA
+S Suppression decks are used on catch pans where oxygen volume cannot be limited. @@ Suppression decks are applied to catch pans where the environmental oxygen volume cannot be limited
+S Conventional fire detection in non-inerted fire areas gives supplemental leak detection. @@ Conventional fire detection installed in non-inerted fire areas provides supplemental sodium leak detection
+K What is the difference between a guard pipe and a guard enclosure? | A guard enclosure has a drainpipe | Guard pipes are plastic | Guard enclosures are inerted | None | 0 | Guard enclosures act similarly, except that a drainpipe is attached. @@ except that a drainpipe to an acceptable collection location is attached
+K Where does a clamshell in the HAA drain? | HAA floor | RAB pipe chase | Reactor vessel | Outside | 1 | Clamshells allow leaked sodium to flow to the RAB pipe chase. @@ are designed to allow leaked sodium to flow into the RAB pipe chase
+K When does a catch pan get a suppression deck? | Always | Where oxygen volume cannot be limited | In inerted cells | Never | 1 | Suppression decks are applied where environmental oxygen cannot be limited. @@ Suppression decks are applied to catch pans where the environmental oxygen volume cannot be limited
+
+== Leak categories | 3
+T Category | Handling
+R Operational leakage | Mechanical joint leak, less than design basis, into a catch pan with no deck @@ Operational leakage occurs from a mechanical joint or component
+R Into a guard enclosure | Contained and drained to a catch pan through a heat traced line @@ Design basis sodium leakage is contained within the guard enclosure
+R Within a process cell | Contained or drained, with sloped floors and steel plates to a catch pan @@ Each process cell is designed to contain or drain design basis leakage for the cell
+R Beyond design basis | Evaluated against the Quantitative Health Objectives @@ will be evaluated for acceptable consequences with respect to the Quantitative Health Objectives
+S Leaked radiological sodium stays within the process cell. Non-radiological sodium may drain to lower catch pans or vaults. @@ Leaked radiological sodium is contained within the process cell
+S Detection of small leaks helps prevent large leaks. @@ Detection of small leaks helps prevent large leaks from occurring
+K Why are guard enclosure drain lines heat traced? | To minimize sodium freezing | To ignite sodium | To warm the room | To measure flow | 0 | Drain lines are heat traced to minimize sodium freezing. @@ are heat traced, where needed, to minimize sodium freezing
+K Where does leaked radiological sodium stay? | In the process cell | In a lower vault | In the stack | In the MCR | 0 | It is contained within the process cell. @@ Leaked radiological sodium is contained within the process cell
+
+== Leak postulation | 4
+S Leaks are postulated for all piping that normally contains sodium. @@ Leaks are postulated for all piping that normally contain sodium
+S Design basis leakage cracks are Dt/4 for seismic piping, and full circumferential breaks for non-seismic piping. @@ a Dt/4 crack for seismically qualified piping and a full-circumferential break for non-seismically qualified piping
+S Sodium and salt systems are evaluated as moderate energy systems. @@ Liquid sodium containing systems are evaluated as moderate energy systems
+S SSCs in the HAA are protected from the worst-case leak regardless of stress. @@ SSCs in the HAA are protected from the worst-case leak, regardless of stress
+S A top of pipe spray could make a faster, hotter fire. A bottom leak could make a larger volume flood. @@ could create a faster, hotter fire that directly impacts some SSCs
+K What leak size is postulated for seismically qualified piping? | Full circumferential break | Dt/4 crack | 1 inch hole | None | 1 | It is bounded by a Dt/4 crack. @@ a Dt/4 crack for seismically qualified piping and a full-circumferential break for non-seismically qualified piping
+K Why are smaller pipes considered? | Sodium and salt leaks can have more significant effects | They are cheaper | BTP 3-4 requires it | They are seismic | 0 | Leaks in smaller pipes are considered due to potentially more significant environmental effects. @@ Due to the potentially more significant environmental effects of sodium and salt leaks
+
+== Fire safe shutdown | 5
+S Redundant trains of safety-significant and safe shutdown SSCs are in separate fire areas. @@ Redundant trains of Safety-Significant and safe shutdown SSCs are located in separate fire areas
+S Damage from any single fire is limited to a single fire area. @@ Damage caused by any single fire is limited to a single fire area
+S The design limits fire damage to a single train. @@ The design limits fire damage to a single train of safety-significant SSCs
+S Fire analyses and fire PRA will be done for the operating license application. @@ will be performed as part of the operating license application
+K What does the design assume about equipment in a fire area? | All of it is inoperable | Only half fails | None fails | Only cables fail | 0 | A safe shutdown path is kept while assuming all equipment in any one fire area is rendered inoperable. @@ while assuming all equipment in any one fire area is rendered inoperable by the fire
+
+== Firefighting strategy | 6
+S There is no active or manual fire suppression for large sodium fires. @@ There is no active or manual fire suppression for large sodium fires
+S Sodium leaks and fires are mitigated passively by NNA features. @@ Sodium leaks and resulting sodium fires are mitigated by passive means
+S Class D extinguishers with Sodium Chloride-based dry powder are staged for personnel protection. @@ Class D fire extinguishers containing Sodium Chloride-based dry powder
+S Incipient conventional fires in the RAB and RXB use Class A, B, or C extinguishers. @@ manual firefighting methods using Class A, B, or C fire extinguishers are used
+S Beyond the incipient stage, offsite responders with specialized training are requested. @@ offsite responders with specialized training are requested to respond
+S Deep-seated sodium fires are contained in NNA features and are passively self-suppressing. @@ are passively self-suppressing
+S The RXB and RAB have no water-based suppression, to avoid sodium-water interaction. @@ do not contain water-based fire suppression systems to avoid sodium-water interaction
+S A Fire Protection Program will be developed at the OL stage to meet 10 CFR 50.48(a). @@ A Fire Protection Program for operations will be developed at the operating license stage
+K What is used to fight a large sodium fire? | Water | No active or manual suppression, passive features mitigate it | CO2 flood | Foam | 1 | There is no active or manual fire suppression for large sodium fires. @@ There is no active or manual fire suppression for large sodium fires
+K Which extinguisher is staged in sodium areas? | Class A | Class B | Class C | Class D | 3 | Class D with Sodium Chloride-based dry powder is staged. @@ Class D fire extinguishers containing Sodium Chloride-based dry powder
+K Why is there no water suppression in the RXB and RAB? | Cost | To avoid sodium-water interaction | Freezing | Weight | 1 | They avoid sodium-water interaction. @@ do not contain water-based fire suppression systems to avoid sodium-water interaction
+Z Sodium fires are handled by leak prevention, detection, and passive mitigation. @@ utilizes leak prevention, detection and passive mitigation
+Z Guard pipes, enclosures, cells, and catch pans contain and collect sodium. @@ Catch pans are a steel-lined volume designed to retain the design-basis sodium leak volume plus margin
+Z No water suppression in RXB and RAB. Class D extinguishers protect personnel. @@ do not contain water-based fire suppression systems to avoid sodium-water interaction

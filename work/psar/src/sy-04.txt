@@ -1,0 +1,61 @@
+# SY-04 | Intermediate Heat Transport System | system | IHT
+range: 7.1-75 7.1-85 7.1-63 7.1-63
+sec: Sec. 7.1.4, pp. 7.1-75 to 7.1-85
+intro: The IHT carries heat from the IHXs to the salt system at power and to the air heat exchangers at low power and shutdown. It has two loops, and either pumped or natural circulation flow.
+
+== Purpose | 1
+S The IHT transports heat to the NSS for electrical power generation and energy storage during normal operation. @@ transports heat from the primary coolant to the Nuclear Island Salt System (NSS)
+S It transports heat to the IAC for rejection to the atmosphere during start-up and shutdown, as the normal and preferred means of reactor cooling. @@ as the normal and preferred means of providing reactor cooling
+S On loss of pumped flow, the IHT provides natural circulation for decay heat removal through the IAC AHXs. @@ In the event of a loss of pumped flow
+K What is the normal and preferred means of reactor cooling during start-up and shutdown? | RAC | Transport of heat through the IHT to the IAC | The Energy Island | SPS cooling | 1 | IHT to IAC is the normal and preferred means. @@ as the normal and preferred means of providing reactor cooling
+
+== Components and boundaries | 2,3
+S Each of the two loops has an ISP, an array of SHXs, and interconnecting piping. Each loop connects to one IHX and one IAC AHX. @@ Each loop includes an Intermediate Sodium Pump (ISP), an array of Sodium-Salt Heat Exchangers
+S Supporting equipment includes expansion tanks and a drain subsystem. @@ The IHT supporting equipment includes expansion tanks and a drain subsystem
+S Loop piping and components are in the Reactor Auxiliary Building, except piping in the Reactor Building to the IHX nozzles and yard piping to the AHXs. @@ The system loop piping and components are located within the Reactor Auxiliary Building
+S The expansion tank interfaces with the SCG for an inert cover gas and overpressure protection, and with the SPS for sodium processing. @@ to prevent sodium-air interaction and to provide IHT over-pressure protection
+S IHT piping in the HAA has a continuous leak guard as a secondary barrier. @@ includes a continuous leak guard enclosing the pipe as a secondary barrier
+F 7.1.4-1
+K What does each IHT loop connect to? | One IHX and one IAC AHX | Both IHXs | Both PSPs | RAC ducts | 0 | Each loop connects to one PHT IHX and one IAC AHX. @@ Each intermediate loop connects to one Primary Heat Transport System
+K What protects HAA equipment from an IHT pipe leak? | A continuous leak guard around the pipe | Water sprays | The HAA Seal | Argon purge only | 0 | The piping in the HAA has a continuous leak guard. @@ includes a continuous leak guard enclosing the pipe as a secondary barrier
+
+== Operation and pressure relationships | 4
+S ISP speed controls loop flow, through an adjustable speed drive that varies frequency and voltage. @@ Intermediate loop sodium flow rate is controlled by controlling ISP speed
+S IAC Active Mode uses ISP flow. When ISPs are not available, Blower Mode and Passive Mode use natural circulation of intermediate sodium. @@ the IHT is designed to support IAC heat rejection in Blower Mode and Passive Mode through natural circulation
+S The elevation difference between the IHX and the higher AHX drives natural circulation flow. @@ provides the potential energy to drive natural circulation flow
+T Boundary | Pressure relationship | Leak direction
+R IHX | IHT above PHT | Intermediate into primary @@ The intermediate sodium of IHT is maintained at higher pressure
+R SHX | IHT below NSS | Salt into intermediate @@ IHT pressure is maintained at a lower pressure than NSS
+K In an SHX leak, which way does the coolant flow? | Sodium into salt | Salt into the intermediate loop | Air into salt | Sodium into primary | 1 | IHT pressure is lower than NSS, so NSS coolant flows to the intermediate loop. @@ IHT pressure is maintained at a lower pressure than NSS
+K What drives natural circulation in the IHT? | The ISP pony motor | Elevation difference between the IHX and the AHX | SPS flow | Cover gas pressure | 1 | The elevation difference provides the potential energy. @@ provides the potential energy to drive natural circulation flow
+
+== Automatic features | 6
+T Trip condition | ISPs tripped
+R Low level in an IHT expansion tank | Associated ISP @@ Low level in an IHT expansion tank (trips associated ISP)
+R High-High primary sodium level | Both @@ High-High primary sodium level (trips both ISPs)
+R High-High primary sodium temperature | Both @@ High-High primary sodium temperature (trips both ISPs)
+S Two trip circuit breakers are in series in the power supply to each ISP motor. @@ Two trip circuit breakers are installed in series
+S The siphon-break feature limits intermediate sodium entering the primary system in an IHX leak, to prevent reactor vessel overfill. @@ siphon-break feature is designed to limit the volume of intermediate sodium
+K Which condition trips only the associated ISP? | High-High primary sodium level | High-High primary sodium temperature | Low level in an IHT expansion tank | Reactor scram | 2 | Low expansion tank level trips the associated ISP. @@ Low level in an IHT expansion tank (trips associated ISP)
+K What prevents reactor vessel overfill in an IHX leak? | The intermediate loop siphon-break feature | The RAC | Hot pool liner | SPS pump | 0 | The siphon-break feature limits the sodium introduced to prevent overfill. @@ siphon-break feature is designed to limit the volume of intermediate sodium
+
+== Functions and classification | 9,10
+T Function | Classification | Purpose
+R DL2-HR2 ISP trip on low IHT level | NSRST | Limit loss of intermediate sodium from leakage @@ automatically tripped to limit loss of
+R DL3-HR3 ISP trip on high high primary sodium temperature | SR | Limit heat addition to primary coolant @@ DL3-HR3 ISP Trip on High High
+R DL3-HR12 ISP trip on high high primary sodium level | SR | Limit intermediate flow into the primary through IHX tube leakage @@ DL3-HR12 ISP Trip on High High
+R DL4-HR7 Manual ISP trip | NSRST | Operator backup to the SR automatic trip @@ DL4-HR7 Manual ISP Trip
+R DL4-HR1 IAC passive mode operation | NSRST | Natural circulation to the AHX when ISP and RAC are unavailable @@ DL4-HR1 IAC Passive Mode
+S IHT piping, tanks, and SHXs are NSRST. The ISP trip circuit breaker and trip actuator are SR. @@ ISP Trip Circuit Breaker, Trip SR SCS1
+S No manual operator actions or automatic actuations are needed for the IHT passive heat removal function. @@ No manual operator actions or automatic actuations are required for the IHT to perform its passive heat removal
+K What is the classification of the ISP trip circuit breaker? | NST | NSRST | SR | Not classified | 2 | Table 7.1.4-1 lists the ISP trip circuit breaker as SR. @@ ISP Trip Circuit Breaker, Trip SR SCS1
+K What does manual ISP trip back up? | The SR automatic trip | SPS | The PSP trip | RAC | 0 | DL4-HR7 is an operator manual trip as backup to the SR automatic trip. @@ DL4-HR7 Manual ISP Trip
+
+== Indications and abnormal conditions | 5,8
+S The IHT provides instrumentation for expansion tank level signals and ISP trip circuit breaker status. @@ provides instrumentation required for expansion tank level signals and ISP trip circuit breaker status
+S Sodium-salt reaction effects from an SHX leak are the subject of research and development. @@ The effects of the sodium-salt reaction due to a postulated leak in the SHX
+K Which IHT indication helps diagnose sodium loss from a loop? | Expansion tank level | Rod position | Neutron flux | Stack flow | 0 | The IHT provides expansion tank level signals. @@ provides instrumentation required for expansion tank level signals and ISP trip circuit breaker status
+
+Z The IHT has two loops, each with an ISP, SHXs, and connections to one IHX and one AHX. @@ Each loop includes an Intermediate Sodium Pump (ISP), an array of Sodium-Salt Heat Exchangers
+Z IHT pressure sits above primary and below salt. @@ IHT pressure is maintained at a lower pressure than NSS
+Z ISP trips are on low expansion tank level, and high high primary sodium level or temperature. @@ High-High primary sodium level (trips both ISPs)

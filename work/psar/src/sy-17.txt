@@ -1,0 +1,108 @@
+# SY-17 | Reactor Protection System | system | RPS
+range: 7.6-18 7.6-35
+sec: Sec. 7.6.3, pp. 7.6-18 to 7.6-35
+intro: The RPS is the safety-related logic that scrams the reactor and trips pumps. Four divisions, two-out-of-four voting, and de-energize to trip are the three ideas to master.
+
+== Purpose and divisions | 1,2,3
+S The RPS takes plant instrument signals, applies logic, and generates outputs for reactor scram and ESF actuations. @@ automatically generates output signals to initiate safety functions, including reactor scram
+S It is arranged into four redundant divisions, A, B, C, and D. @@ are arranged into four redundant divisions (A, B, C, and D)
+S Each process variable is measured by four redundant instruments or groups of instruments. @@ is measured by four redundant instruments or groups of instruments
+S RPS equipment is in four division-specific vaults, DCS, and CRD cabinet rooms in the NCB substructure, and in the MCR. @@ RPS equipment is located in the four division-specific RPS vault
+S The vault and cabinet rooms contain RPS electronics cabinets and reactor trip breakers (RTBs). @@ contain RPS electronics cabinets and reactor trip breakers
+S The RPS uses the RadICS platform. @@ The RadICS platform as described in the RadICS Topical Report
+K How many RPS divisions are there? | Two | Three | Four | Eight | 2 | There are four redundant divisions: A, B, C, and D. @@ are arranged into four redundant divisions (A, B, C, and D)
+K Where are the RPS divisions located? | RXB head access area | Division-specific vaults in the NCB substructure | RAB | FHB | 1 | Equipment is in the division-specific vault and cabinet rooms in the NCB substructure. @@ RPS equipment is located in the four division-specific RPS vault
+
+== Signal path and voting | 4
+T Step | What happens
+R 1 | Each division receives analog signals from one division of sensors @@ Each division of RPS receives analog input signals from one associated division of sensing instruments
+R 2 | The safety function chassis converts signals to digital and applies logic @@ input signals are converted to digital form
+R 3 | Variables are compared to setpoints in that division @@ Processed variables are compared to established setpoints within that division of RPS
+R 4 | A division above setpoint asserts a divisional vote @@ then the RPS division asserts a divisional vote
+R 5 | Each division shares its vote with all other divisions @@ Each division shares its division and parameter-specific vote with all other divisions
+R 6 | With two or more votes on the same parameter, a division generates its output @@ has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter
+S The RPS actuates when at least 2 out of the 4 divisions determine action is required. @@ when at least 2 out of the 4 divisions independently determine
+K When does a division generate its output? | When its own variable passes setpoint | When two or more divisions vote on the same parameter | When any two parameters in one division trip | When all four divisions vote | 1 | Two or more votes must be on the same input parameter. @@ has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter
+K Division A votes on high flux, and Division B votes on high hot pool temperature. Do they combine to scram? | Yes | No, the votes must be on the same parameter | Only at full power | Only if C agrees | 1 | The vote is parameter-specific. @@ has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter
+
+== Reactor scram functions | 6
+T Function | Scram on | Inputs
+R DL3-RC1a | High-high neutron flux, power range high setpoint | XIS @@ DL3-RC1a Reactor scram on high-high
+R DL3-RC1b | High-high hot pool temperature | RIS @@ DL3-RC1b Reactor scram on high-high hot
+R DL3-RC1c | High-high primary sodium level | RIS @@ DL3-RC1c Reactor scram on high-high
+R DL3-RC1d | High-high power-to-flow ratio | XIS, plus PSP speed and current from RIS @@ DL3-RC1d Reactor scram on high-high
+R DL3-RC1e | High-high cold pool temperature | RIS @@ DL3-RC1e Reactor scram on high-high cold
+R DL3-RC1f | High-high positive neutron flux rate | XIS @@ DL3-RC1f Reactor scram on high-high
+R DL3-RC1g | High-high negative neutron flux rate | XIS @@ DL3-RC1g Reactor scram on high-high
+R DL3-RC1h | Low-low primary sodium level | RIS @@ DL3-RC1h Reactor scram on low-low primary
+R DL3-RC1i | Low power, high neutron flux, power range low setpoint | XIS @@ DL3-RC1i Reactor scram on low power, high
+R DL3-RC1j | Loss of primary sodium flow | PSP speed and current from RIS @@ DL3-RC1j Reactor scram on loss of primary
+R DL3-RC2 | Loss of power: outputs fail to the safe state | None @@ DL3-RC2 Reactor scram on loss of power
+S Primary sodium flow is calculated by the RPS from PSP speed and current. @@ primary sodium pump (PSP) speed and current inputs from the RIS and calculates primary sodium flow
+K How does the RPS determine primary sodium flow? | A flowmeter in the hot pool | Calculated from PSP speed and current | From IHT flow | From neutron flux | 1 | RPS calculates flow from PSP speed and current inputs. @@ primary sodium pump (PSP) speed and current inputs from the RIS and calculates primary sodium flow
+K Which scram uses both XIS and pump inputs? | High-high flux | Power-to-flow ratio | Low-low level | High-high cold pool temperature | 1 | DL3-RC1d uses neutron flux and calculated primary flow. @@ DL3-RC1d Reactor scram on high-high
+K Which is a reactor scram parameter? | High-high negative flux rate | High IHT pressure | Low EVST temperature | High RAC stack flow | 0 | DL3-RC1g is a scram on high-high negative neutron flux rate. @@ DL3-RC1g Reactor scram on high-high
+
+== ESF pump trips | 6
+S RPS ESF functions trip pump breakers, because stopping the pump is evaluated as the safe state. @@ All RPS ESF functions execute the tripping of pump breakers to stop the associated pump
+T Function | Trip | Conditions
+R DL3-HR2 | PSPs | Scram signal, cold pool temperature above setpoint, and flux below setpoint @@ DL3- HR2 PSP trip on high-high primary
+R DL3-HR3 | ISPs | Scram signal, cold pool temperature above setpoint, and flux below setpoint @@ DL3-HR3 Intermediate sodium pump (ISP)
+R DL3-HR11 | SPS-P pump | Low primary sodium level in the hot pool @@ DL3-HR11 Sodium processing system (SPS)
+R DL3-HR12 | ISPs | High-high primary sodium level, with scram and flux inputs @@ DL3-HR12 ISP trip on high-high primary
+K What three conditions trip the PSPs under DL3-HR2? | Scram signal, cold pool temperature above setpoint, flux below setpoint | Low level, high flux, scram | Seismic trip, high level, low flow | Manual switch only | 0 | DL3-HR2 needs a scram signal, high cold pool temperature, and low flux. @@ DL3- HR2 PSP trip on high-high primary
+K What is the safe state for RPS ESF functions? | Pumps running | Pumps stopped | Valves open | Pumps at half speed | 1 | Tripping pump breakers to stop the pump is evaluated as the safe state. @@ All RPS ESF functions execute the tripping of pump breakers to stop the associated pump
+
+== De-energize to trip | 4,6,8
+S In normal operation, the RPS keeps voltage on the RTB undervoltage coils, which holds RTBs closed. @@ the RPS maintains voltage on the RTB undervoltage coils to keep RTBs in the closed position
+S Closed RTBs keep power on CRD solenoid valve coils, which keep argon pressure to hold the rods. @@ maintaining power to the CRD solenoid operated valve coils
+S On loss of incoming power, RTBs open, CRD argon vents, and rods drop by gravity. @@ venting CRD argon and allowing rods to drop fully into the core via gravity
+S ESF circuits also de-energize to trip. On loss of power, relay contacts open and pump breakers trip. @@ tripping the pump breakers, and stopping pump rotation
+S On a critical fault found by self-diagnostics, the system places all outputs in the safe, tripped state. @@ the system places all outputs to the safe (tripped) state
+S Range-checking detects loss of power at a transmitting system, and the RPS places the associated outputs in the safe state. @@ loss of power at the transmitting system is detected by RPS range-checking
+S Once started, the sequence of protective actions continues to completion. Deliberate operator action is required to return the RPS to normal. @@ Deliberate operator action is required to return the RPS to normal
+K RPS incoming power is lost. What happens? | Nothing | RTBs open and rods drop by gravity | Motors drive rods out | RTBs stay closed | 1 | The circuit is de-energize to trip. @@ venting CRD argon and allowing rods to drop fully into the core via gravity
+K Self-diagnostics find a critical fault. What does the RPS do? | Alarms only | Places all outputs in the safe state | Reboots | Bypasses the division | 1 | The system places all outputs to the safe, tripped state. @@ the system places all outputs to the safe (tripped) state
+K What is needed to return the RPS to normal after an actuation? | Time delay | Deliberate operator action | Parameter below setpoint | Reset by the NIC | 1 | Deliberate operator action is required. @@ Deliberate operator action is required to return the RPS to normal
+
+== Testing and single failure | 8,10
+S Any division can be out of service for testing at any time without loss of any safety function. @@ The system design allows for any division to be taken out of service for testing at any time
+S The RPS withstands a single failure in any operating division, even with one division out for testing. @@ even when one division has been taken out of service for testing
+S Testing and calibration can occur during power operation. @@ The RPS is capable of testing and calibration during power operation
+L Cross-checking between redundant channels ;; Introducing and varying substitute input ;; Perturbing the monitored variable @@ cross-checking between redundant channels with available readouts
+S Setpoints follow ANSI/ISA 67.04.01-2018 as endorsed by RG 1.105. The setpoint control program is in Table 11.5-1. @@ The setpoint control program is described in Section 2.0 of Table 11.5-1
+S Bypassed and inoperable status indication conforms to RG 1.47. @@ RG 1.47, Revision 1, Bypassed and Inoperable Status Indication
+K One division is out for testing and another has a single failure. Is the safety function kept? | Yes | No | Only scram | Only ESF | 0 | The RPS is designed to withstand a single failure even when one division is out for testing. @@ even when one division has been taken out of service for testing
+K Which is a listed way to check a channel? | Cross-checking redundant channels | Replacing the sensor | Rebooting the DCS | Polling the NIC | 0 | Checks include cross-checking, substitute input, and perturbing the variable. @@ cross-checking between redundant channels with available readouts
+
+== Manual actions and indications | 5
+S Manual initiation of each scram and ESF function is available from the MCR, but it is not credited in the safety analysis. @@ although these manual functions are not credited in the safety analysis
+S Manual control circuits are diverse from the RPS automatic logic. @@ These manual reactor scram and ESF control circuits are diverse from the RPS automatic logic
+T Function | Class | Action
+R DL4-RC3 scram follow | NSRST | Failsafe signal to drive rods in on any scram, independent of RTB demand @@ DL4-RC3 CRD driveline scram follow
+R DL4-RC4 automatic seismic trip | NSRST | Opens RTBs on an AST demand @@ DL4-RC4 Automatic seismic trip
+R DL4-HR6, HR7 | NSRST | PSPs and ISPs tripped on manual switch @@ DL4-HR6 Manual PSP trip
+R DL4-RR8 | NSRST | SPS-P pump tripped on manual switch @@ DL4-RR8 Manual SPS pump trip on low
+R DL5-PAM1 | NSRST | Display of Type B, C, and F PAM variables @@ The RPS supports the display of Type B, C, and F PAM variables
+S Each division has its own SVDU in the MCR that shows only that division. The RSC has SVDUs fed from Divisions A and B. @@ Each divisional SVDU displays parameters and status of the associated RPS division only
+S PAM-only chassis in Divisions A and B process variables not used for safety functions. @@ a separate, PAM-only, chassis in RPS Divisions A and B
+K Are manual scram functions credited in the safety analysis? | Yes | No | Only for AOOs | Only at the RSC | 1 | Manual functions are not credited in the safety analysis. @@ although these manual functions are not credited in the safety analysis
+K Scram follow starts when how many RPS divisions send a demand? | One | At least 2 of 4 | At least 3 of 4 | All four | 1 | The CRD system starts scram follow when at least 2 of 4 divisions send a demand signal. @@ when at least 2 of 4 RPS divisions send a demand signal
+K Which SVDUs are in the RSC? | All four divisions | Fed from Divisions A and B | Division D only | None | 1 | The RSC has redundant SVDUs fed from Divisions A and B. @@ The Remote Shutdown Complex is provided with redundant SVDUs which are fed from Divisions A and B
+
+== Safety significance | 9,10
+S The DL3 functions are SR, and DL4 and DL5 functions are NSRST. @@ are designated as SR (for DL3 functions) or NSRST (for DL4 and DL5 functions)
+S The RPS keeps analytical limits from being exceeded for AOOs not mitigated by DL2 functions, and for design basis events. @@ when the RPS senses an AOO which has not been mitigated by DL2 functions as designed
+S Each division sits in its own 3-hour fire rated vault room. @@ Locating each SR RPS division in its own 3-hour fire rated vault room
+T Equipment | Safety | Seismic
+R RPS division cabinets A to D | SR | SCS1 @@ RPS Division A Cabinet SR SCS1
+R Reactor trip breaker panels | SR | SCS1 @@ RTB Enclosure Panel A1 SR SCS1
+R Divisional SVDUs | NSRST | SCN1 @@ RPS Division A SVDU NSRST SCN1
+R Manual switch panels | NSRST | SCN1 @@ RPS Division A Manual NSRST SCN1
+R Data gateway cabinet | NST | None @@ RPS Data Gateway Cabinet NST None
+S Many reliability and testing details will be given at the OL stage as RadICS plant-specific action items. @@ will be provided at the OL stage
+K What fire rating do the RPS vault room walls have? | 1 hour | 2 hours | 3 hours | 4 hours | 2 | The vault walls are 3-hour fire rated. @@ The RPS vault room walls are all 3-hour fire rated
+K What is the classification of the RPS manual switch panels? | SR | NSRST | NST | None | 1 | Manual switch panels are NSRST. @@ RPS Division A Manual NSRST SCN1
+Z Four divisions vote parameter by parameter, and 2 out of 4 on the same parameter actuates. @@ when at least 2 out of the 4 divisions independently determine
+Z Scram and ESF circuits are de-energize to trip, and critical faults go to the safe state. @@ the system places all outputs to the safe (tripped) state
+Z A division can be out for test with no loss of function. Manual functions are diverse and not credited. @@ although these manual functions are not credited in the safety analysis

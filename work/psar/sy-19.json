@@ -1,0 +1,522 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and architecture",
+   "eo": [
+    "1",
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RIS measures selected parameters in or near the reactor vessel and sends signals to the RPS and NIC.",
+     "anchor": "contains instrumentation to measure selected parameters in or near the reactor vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48"
+    },
+    {
+     "t": "p",
+     "text": "A channel is a single sensor plus its cabling and signal amplification electronics.",
+     "anchor": "where a channel is defined as a single sensor and its associated cabling and signal amplification electronics",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48"
+    },
+    {
+     "t": "p",
+     "text": "The RIS has four redundant, independent divisions for parameters that give SR inputs to the RPS.",
+     "anchor": "has four redundant and independent divisions for parameters that provide SR inputs to the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48"
+    },
+    {
+     "t": "p",
+     "text": "Signal splitters duplicate SR inputs and send them to the NIC as NSRST and NST signals.",
+     "anchor": "Signal splitters are used to duplicate the SR inputs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48"
+    },
+    {
+     "t": "p",
+     "text": "No information displays are part of the RIS.",
+     "anchor": "No information displays are part of the RIS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-55"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-5-1",
+     "num": "7.6.5-1",
+     "cap": "Reactor Instrumentation System Block Diagram",
+     "alt": "PSAR Rev 1 figure: Reactor Instrumentation System Block Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-59"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is an RIS channel?",
+     "o": [
+      "A data highway",
+      "A division of the RPS",
+      "A single sensor and its cabling and amplification electronics",
+      "A display"
+     ],
+     "a": 2,
+     "x": "The PSAR defines a channel that way.",
+     "anchor": "where a channel is defined as a single sensor and its associated cabling and signal amplification electronics",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48",
+     "eo": "1,2,3"
+    },
+    {
+     "q": "How do SR RIS signals reach the NIC?",
+     "o": [
+      "Through signal splitters",
+      "Through direct parallel wires",
+      "They do not",
+      "Through the XIS"
+     ],
+     "a": 0,
+     "x": "Signal splitters duplicate the SR inputs.",
+     "anchor": "Signal splitters are used to duplicate the SR inputs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48",
+     "eo": "1,2,3"
+    }
+   ]
+  },
+  {
+   "title": "Monitored variables",
+   "eo": [
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Variable",
+      "Instruments",
+      "Class"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Primary sodium hot pool temperature",
+        "4",
+        "SR"
+       ],
+       "anchor": "Primary Sodium Hot Pool Temperature 4 SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "Primary sodium hot pool level",
+        "4",
+        "SR"
+       ],
+       "anchor": "Primary Sodium Hot Pool Level 4 SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "Primary sodium cold pool temperature",
+        "8",
+        "SR"
+       ],
+       "anchor": "Primary Sodium Cold Pool Temperature 8 SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "PSP shaft speed",
+        "8",
+        "SR"
+       ],
+       "anchor": "PSP Shaft Speed 8 SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "PSP current detector",
+        "8",
+        "SR"
+       ],
+       "anchor": "PSP Current Detector 8 SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "Reactor vessel to guard vessel liquid sodium detection",
+        "3",
+        "NSRST"
+       ],
+       "anchor": "Reactor Vessel-Guard Vessel Liquid 3 NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "Core exit temperature",
+        "15",
+        "NSRST"
+       ],
+       "anchor": "Core Exit Temperature 15 NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      },
+      {
+       "cells": [
+        "Reactor head temperature",
+        "3",
+        "NST"
+       ],
+       "anchor": "Reactor Head Temperature 3 NST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many core exit temperature instruments does the RIS have?",
+     "o": [
+      "3",
+      "4",
+      "8",
+      "15"
+     ],
+     "a": 3,
+     "x": "Table 7.6.5-1 lists 15, classified NSRST.",
+     "anchor": "Core Exit Temperature 15 NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58",
+     "eo": "3,5"
+    },
+    {
+     "q": "Which RIS variable is NST?",
+     "o": [
+      "Reactor head temperature",
+      "Cold pool temperature",
+      "Hot pool level",
+      "PSP shaft speed"
+     ],
+     "a": 0,
+     "x": "Reactor head temperature is NST.",
+     "anchor": "Reactor Head Temperature 3 NST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58",
+     "eo": "3,5"
+    },
+    {
+     "q": "How many cold pool temperature instruments are there?",
+     "o": [
+      "4",
+      "8",
+      "3",
+      "15"
+     ],
+     "a": 1,
+     "x": "The table lists 8, classified SR.",
+     "anchor": "Primary Sodium Cold Pool Temperature 8 SR",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58",
+     "eo": "3,5"
+    }
+   ]
+  },
+  {
+   "title": "Functions supported",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "RIS input to the RPS"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RC1b",
+        "Hot pool temperature"
+       ],
+       "anchor": "DL3-RC1b Reactor scram on RIS includes sensors that monitor primary sodium hot",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      },
+      {
+       "cells": [
+        "DL3-RC1c",
+        "Hot pool level, high-high"
+       ],
+       "anchor": "DL3-RC1c Reactor scram on RIS includes sensors that monitor primary sodium hot",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      },
+      {
+       "cells": [
+        "DL3-RC1d",
+        "PSP speed and current"
+       ],
+       "anchor": "DL3-RC1d Reactor scram on RIS includes sensors that monitor primary sodium pump",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      },
+      {
+       "cells": [
+        "DL3-RC1e",
+        "Cold pool temperature"
+       ],
+       "anchor": "DL3-RC1e Reactor scram on RIS includes sensors that monitor primary sodium cold",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      },
+      {
+       "cells": [
+        "DL3-RC1h",
+        "Hot pool level, low-low"
+       ],
+       "anchor": "DL3-RC1h Reactor scram on RIS includes sensors that monitor primary sodium hot",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      },
+      {
+       "cells": [
+        "DL3-RC1j",
+        "PSP speed and current"
+       ],
+       "anchor": "DL3-RC1j Reactor scram on loss RIS includes sensors that monitor PSP speed and PSP",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The RIS also gives Type B, C, and F PAM variables to the RPS.",
+     "anchor": "RIS includes sensors that monitor Type B, C, and F",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51"
+    },
+    {
+     "t": "p",
+     "text": "It provides signals to control PHT and PSP flow, start power runback, and inhibit rod withdrawal in NST DL2 functions.",
+     "anchor": "initiate power runback, and inhibit rod withdrawal in support of NST DL2 functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which RIS measurements feed the loss of primary flow scram?",
+     "o": [
+      "PSP speed and current",
+      "Core exit temperature",
+      "Head temperature",
+      "Hot pool level"
+     ],
+     "a": 0,
+     "x": "DL3-RC1j uses PSP speed and current.",
+     "anchor": "DL3-RC1j Reactor scram on loss RIS includes sensors that monitor PSP speed and PSP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50",
+     "eo": "4,6"
+    },
+    {
+     "q": "Which DL2 action can RIS signals support?",
+     "o": [
+      "Start FPC",
+      "Inhibit rod withdrawal",
+      "Seismic trip",
+      "Close RTBs"
+     ],
+     "a": 1,
+     "x": "RIS signals support power runback and rod withdrawal inhibit.",
+     "anchor": "initiate power runback, and inhibit rod withdrawal in support of NST DL2 functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Testing and failure",
+   "eo": [
+    "8",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "SR portions can be tested and calibrated during power operation with no loss of SR functions at the system level.",
+     "anchor": "are capable of testing and calibration during power operation without loss of SR functions at the system level",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.2, p. 7.6-54"
+    },
+    {
+     "t": "p",
+     "text": "SR equipment is designed for timely recognition, location, adjustment, repair, and replacement of malfunctions.",
+     "anchor": "is designed to facilitate timely recognition, location, adjustment, repair, and replacement of malfunctioning equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.2, p. 7.6-54"
+    },
+    {
+     "t": "p",
+     "text": "Inputs to the NIC are electronically isolated from RPS inputs, so control failures do not impact the RPS.",
+     "anchor": "are electronically isolated and independent of the inputs to the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53"
+    },
+    {
+     "t": "p",
+     "text": "Removing any RIS division will not impact protection or control functions.",
+     "anchor": "which ensure that removal of any RIS division will not impact the protection or control functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53"
+    },
+    {
+     "t": "p",
+     "text": "SR channels give the same outputs for the same inputs within a known cycle time.",
+     "anchor": "the same set of inputs will produce the same outputs within a known, guaranteed cycle time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-56"
+    }
+   ],
+   "checks": [
+    {
+     "q": "An NIC control failure occurs. What is the effect on the RPS through the RIS?",
+     "o": [
+      "Divisions merge",
+      "RPS signals are lost",
+      "None, inputs are isolated",
+      "RPS trips"
+     ],
+     "a": 2,
+     "x": "NIC inputs are electronically isolated and independent of RPS inputs.",
+     "anchor": "are electronically isolated and independent of the inputs to the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53",
+     "eo": "8,10"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Safety-significant RIS equipment is seismic class SCS1.",
+     "anchor": "commensurate with a seismic classification of SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.1, p. 7.6-53"
+    },
+    {
+     "t": "p",
+     "text": "Safety-significant portions sit in the RXB and NCB substructures.",
+     "anchor": "Safety-significant portions of the RIS are located in the RXB and Nuclear Island Control Building (NCB) substructures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.2, p. 7.6-48"
+    },
+    {
+     "t": "p",
+     "text": "NCB equipment is in division-specific 3-hour fire rated rooms.",
+     "anchor": "RIS equipment in the NCB is located in a division-specific, 3-hour fire rated room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-51"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Post-construction inspection, testing, and analysis program",
+      "Quality Assurance Program Description",
+      "Human Factors Engineering Program Plan"
+     ],
+     "anchor": "The following programmatic special treatments are identified as applicable to the RIS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2, p. 7.6-48"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What seismic class applies to safety-significant RIS equipment?",
+     "o": [
+      "SCS1",
+      "SCN1",
+      "SCN3",
+      "None"
+     ],
+     "a": 0,
+     "x": "The RIS is assigned SCS1 special treatment.",
+     "anchor": "commensurate with a seismic classification of SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.1, p. 7.6-53",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The RIS is a collection of channels in or near the vessel, with four SR divisions where the RPS needs them.",
+   "anchor": "has four redundant and independent divisions for parameters that provide SR inputs to the RPS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48"
+  },
+  {
+   "text": "It gives the RPS temperature, level, and PSP speed and current, and has no displays.",
+   "anchor": "No information displays are part of the RIS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.3, p. 7.6-55"
+  },
+  {
+   "text": "Signal splitters isolate control from protection, so NIC failures do not reach the RPS.",
+   "anchor": "are electronically isolated and independent of the inputs to the RPS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-19",
+ "title": "Reactor Instrumentation System",
+ "kind": "system",
+ "subject": "RIS",
+ "sec_note": "Sec. 7.6.5, pp. 7.6-48 to 7.6-59",
+ "intro": "The RIS is the set of non-nuclear sensors in or near the reactor vessel. It measures pool temperature, level, and pump data, and has no displays or logic of its own.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RIS.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RIS boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RIS.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RIS operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RIS controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RIS automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RIS.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RIS.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RIS.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RIS.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-19-reactor-instrumentation-system"
+}

@@ -1,0 +1,61 @@
+# OP-02 | Organization and Training | topic | organization and training
+range: 11.1-1 11.1-13
+sec: Sec. 11.1, pp. 11.1-5 to 11.1-13
+intro: This lesson covers who runs the plant, who reports to whom, and the rules that apply to you as a licensed operator.
+obj: Describe the operating organization and who is responsible for it.
+obj: State the responsibilities of the managers who report to the Plant General Manager.
+obj: Explain how independent oversight is arranged.
+obj: State the qualification and training requirements for operators.
+obj: Apply the conduct of operations rules for control room activities.
+
+== Operating organization | 1
+S USO is responsible for the safe operation of Kemmerer Unit 1. @@ USO is responsible for the safe operation of Kemmerer Unit 1
+S It establishes an Operating Organization before pre-operational testing. @@ establishes an Operating Organization prior to pre-operational testing
+S The PGM and Director of Operations are responsible for the Operating Organization. @@ The PGM and Director of Operations are responsible for the Operating Organization
+L Engineering ;; Quality assurance, audit, and surveillance ;; Plant sciences (chemistry and radiation protection) ;; Commissioning support ;; Training ;; Maintenance ;; Operations ;; Outside contractual support @@ necessary to support required functions for the safe operation of the plant
+F 11.1-4
+K Who is responsible for safe operation of Kemmerer Unit 1? | TerraPower only | USO | BPC | The NRC | 1 | USO is responsible for safe operation. @@ USO is responsible for the safe operation of Kemmerer Unit 1
+K When is the Operating Organization established? | Before pre-operational testing | After fuel load | At first criticality | At commercial operation | 0 | It is established prior to pre-operational testing. @@ establishes an Operating Organization prior to pre-operational testing
+
+== Plant General Manager and direct reports | 2
+T Position | Reports to | Responsible for
+R Plant General Manager | CNO | Daily operations, overall occupational and public radiation safety @@ The PGM has overall responsibility for occupational and public radiation safety
+R Director of Operations | PGM | On-site operations and operations support personnel @@ provides oversight for the on-site operations and operations support personnel
+R Director of Maintenance | PGM | Plant maintenance and work control @@ is responsible for plant maintenance and work control
+R Station Sciences Manager | PGM | Chemistry and radiation protection programs @@ oversees the management of the chemistry and radiation protection programs
+R Director of Training | PGM | Qualification and continuing training @@ is responsible for the qualification and continuing training of operations
+R Security Manager | PGM | Physical security plan, access authorization, FFD @@ is responsible for the execution of the physical security plan
+R Director of Organizational Effectiveness | PGM | Emergency planning, licensing, regulatory assurance, occupational health @@ is responsible for emergency planning, licensing, regulatory assurance, and occupational health
+K Who has overall responsibility for occupational and public radiation safety? | Station Sciences Manager | PGM | Director of Operations | CNO | 1 | The PGM has overall responsibility. @@ The PGM has overall responsibility for occupational and public radiation safety
+K Who is responsible for emergency planning? | Security Manager | Director of Organizational Effectiveness | Director of Training | Director of Operations | 1 | That director covers emergency planning, licensing, regulatory assurance, and occupational health. @@ is responsible for emergency planning, licensing, regulatory assurance, and occupational health
+K Who runs the fitness-for-duty program? | Director of Training | Security Manager | PGM | QA Manager | 1 | The Security Manager is responsible for FFD. @@ access authorization and the fitness-for-duty (FFD) program
+
+== Independent oversight | 3
+S The Director of Nuclear Oversight reports to the CNO and manages audits, quality control, and employee concerns. @@ is responsible for the overall management and coordination of independent nuclear oversight
+S The QA Manager reports to that director and supervises QC inspections, NDE, and QA audits. @@ The QA Manager reports to the Director of Nuclear Oversight
+K To whom does the Director of Nuclear Oversight report? | PGM | CNO | Director of Operations | QA Manager | 1 | The director reports to the CNO, not the PGM. @@ The Director of Nuclear Oversight reports to the CNO
+
+== Qualification and training | 4
+S Qualifications meet ANSI/ANS-3.1-2014, as endorsed by RG 1.8. @@ meet the qualification requirements described in ANSI/ANS-3.1-2014
+S The operator training and requalification plan follows 10 CFR 55 and 10 CFR 50.120. @@ will be developed and implemented in accordance with 10 CFR 55 and 10 CFR 50.120
+S Qualification includes a comprehensive written exam and an operating test, as required by 10 CFR 55. @@ passing a comprehensive written exam and an operating test as required by 10 CFR 55
+S Training programs meeting 10 CFR 50.120 will be in place within 18 months prior to fuel load. @@ within 18 months prior to fuel load
+S The requalification plan will be provided at the OLA stage. @@ will be provided at the OLA stage
+K What does operator qualification include? | Written exam and operating test | Written exam only | Interview only | Simulator only | 0 | It includes a comprehensive written exam and an operating test. @@ passing a comprehensive written exam and an operating test as required by 10 CFR 55
+K When must 10 CFR 50.120 training programs be in place? | At construction start | Within 18 months prior to fuel load | After fuel load | At commercial operation | 1 | They are in place within 18 months prior to fuel load. @@ within 18 months prior to fuel load
+K Which standard covers personnel qualification? | ANSI/ANS-3.1-2014 | IEEE 603 | NUREG-0711 | ACI 349 | 0 | Qualifications meet ANSI/ANS-3.1-2014. @@ meet the qualification requirements described in ANSI/ANS-3.1-2014
+
+== Conduct of operations | 5
+S Site operations are controlled through the MCR, with some activities coordinated from the online/outage control center. @@ Site operations are controlled through the Main Control Room (MCR)
+S Maintenance, surveillances, and removal or restoration of safety-significant SSCs may not start without Control Room Supervisor approval. @@ may not commence without approval of the Control Room Supervisor
+S Rules of practice incorporate RG 1.114. @@ Guidance to Operators at the Controls and to Senior Operators in the Control Room
+S Reactivity controls are only manipulated by licensed operators and senior operators, except as allowed for training. @@ Reactivity controls are only manipulated by licensed operators and senior operators
+S Other apparatus that may affect reactivity or power needs the knowledge and consent of the operator or Control Room Supervisor at the controls. @@ shall be operated only with the knowledge and consent of the operator or the Control Room Supervisor
+S Operators and technicians are expected to follow approved procedures and technical specifications. @@ operate the plant in accordance with approved procedures and adhere to technical specifications
+S Staffing requirements in 10 CFR 50.54(k) and (m) will be given at the OL stage. @@ The staffing requirements in 10 CFR 50.54(k) and (m)
+K Who approves the start of a surveillance? | Control Room Supervisor | Director of Maintenance | PGM | QA Manager | 0 | They may not commence without Control Room Supervisor approval. @@ may not commence without approval of the Control Room Supervisor
+K A trainee wants to move a rod under instruction. What allows it? | 10 CFR 55 training allowance | PGM verbal approval | Maintenance order | It is never allowed | 0 | Only licensed staff manipulate reactivity controls, except as allowed for training under 10 CFR 55. @@ except as allowed for training under 10 CFR 55
+K Equipment other than controls may affect power. What is needed to operate it? | Knowledge and consent of the operator or CRS at the controls | A work order only | NRC approval | Nothing | 0 | 10 CFR 50.54 requires knowledge and consent. @@ shall be operated only with the knowledge and consent of the operator or the Control Room Supervisor
+Z USO owns safe operation. The PGM and Director of Operations answer for the Operating Organization. @@ The PGM and Director of Operations are responsible for the Operating Organization
+Z Nuclear Oversight reports to the CNO, independent of the PGM line. @@ The Director of Nuclear Oversight reports to the CNO
+Z The Control Room Supervisor approves work on safety-significant SSCs, and only licensed staff move reactivity controls. @@ may not commence without approval of the Control Room Supervisor

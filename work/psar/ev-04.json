@@ -1,0 +1,435 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiators and assumptions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Initiator",
+      "Condition"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RRS-CGR-BL",
+        "SCG leak in the SCG primary coolant boundary piping",
+        "Full power, low power, or shutdown"
+       ],
+       "anchor": "leak occurs in the SCG primary coolant boundary piping during full power",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.1, p. 3.7-5"
+      },
+      {
+       "cells": [
+        "RRS-CGR-1",
+        "SCG leak downstream of the vapor trap cell",
+        "Full power, low power, or shutdown"
+       ],
+       "anchor": "An SCG leak occurs downstream of the SCG vapor trap cell during full power",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.2.1, p. 3.7-6"
+      },
+      {
+       "cells": [
+        "RRS-ISPL-BL",
+        "SPS leak that releases precipitated tritium from the SPS-I cold trap",
+        "Full power, low power, or shutdown"
+       ],
+       "anchor": "that releases precipitated tritium from the Intermediate SPS (SPS-I) cold trap",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.3.1, p. 3.7-7"
+      },
+      {
+       "cells": [
+        "RRS-SPLX-BL",
+        "SPS leak inboard of the isolation valves, within the HAA",
+        "Full power, low power, or shutdown"
+       ],
+       "anchor": "inboard of the SPS isolation valves within the HAA",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "RRS-SPLA-BL",
+        "SPS leak within the RAB",
+        "Full power, low power, or shutdown"
+       ],
+       "anchor": "a leak in the SPS system within the RAB",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.1, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "RRS-RWG-1",
+        "Waste gas holdup tank leak into the FHB",
+        "Full power through refueling"
+       ],
+       "anchor": "a leak from a radioactive waste gas holdup tank into the Fuel Handling Building",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.6.1, p. 3.7-9"
+      },
+      {
+       "cells": [
+        "RRS-RWG-2",
+        "Waste gas holdup tank leak to the plant stack",
+        "Full power through refueling"
+       ],
+       "anchor": "a leak from a radioactive waste gas holdup tank to the plant stack",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.7.1, p. 3.7-10"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which DBE releases precipitated tritium?",
+     "o": [
+      "RRS-ISPL-BL",
+      "RRS-RWG-2",
+      "RRS-SPLA-BL",
+      "RRS-CGR-BL"
+     ],
+     "a": 0,
+     "x": "RRS-ISPL-BL releases precipitated tritium from the SPS-I cold trap.",
+     "anchor": "that releases precipitated tritium from the Intermediate SPS (SPS-I) cold trap",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.3.1, p. 3.7-7",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Source term assumptions",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Key assumption"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "SCG leaks",
+        "Instantaneous release of the cover gas inventory into the HAA compartment"
+       ],
+       "anchor": "modeled as an instantaneous release of the radionuclide inventory from the cover gas volume",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.2, p. 3.7-6"
+      },
+      {
+       "cells": [
+        "SCG leaks",
+        "For 30 minutes the HAA exhausts at 400 cfm with NHV filtration, then NHV isolates and the HAA leaks to the RXB at 10 percent volume per day"
+       ],
+       "anchor": "the HAA is slowly exhausted to the environment through the Nuclear Island Heating",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.2, p. 3.7-6"
+      },
+      {
+       "cells": [
+        "SPS cold trap",
+        "Release from one cold trap over 24 hours, with the RAB released instantaneously"
+       ],
+       "anchor": "is assumed to occur over the course of 24 hours",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.3.2, p. 3.7-7"
+      },
+      {
+       "cells": [
+        "SPS-P in the RAB",
+        "Airborne activated sodium equal to 20 gallons of system fluid"
+       ],
+       "anchor": "dose equivalent to 20 gallons of system fluid",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.2, p. 3.7-9"
+      },
+      {
+       "cells": [
+        "RWG to FHB",
+        "Vault discharges at 500 cfm with NHV filtration"
+       ],
+       "anchor": "at a rate of 500 cfm with NHV filtration",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.6.2, p. 3.7-9"
+      },
+      {
+       "cells": [
+        "RWG to stack",
+        "Release through the vent stack with filtration over 10 minutes"
+       ],
+       "anchor": "over a 10-minute period",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.7.2, p. 3.7-10"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Most SPS piping slopes down toward the reactor, which minimizes potential leakage volume.",
+     "anchor": "most of the piping is sloped down towards the reactor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.2, p. 3.7-8"
+    }
+   ],
+   "checks": [
+    {
+     "q": "In the SCG leak DBEs, what happens at 30 minutes?",
+     "o": [
+      "The HAA NHV system is isolated",
+      "RAC starts",
+      "The PSPs trip",
+      "The reactor scrams"
+     ],
+     "a": 0,
+     "x": "At 30 minutes the HAA NHV system is isolated and the HAA begins to leak to the RXB.",
+     "anchor": "At 30 minutes, the HAA NHV system is isolated",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.2, p. 3.7-6",
+     "eo": "1,2"
+    },
+    {
+     "q": "Why is the SPS piping sloped toward the reactor?",
+     "o": [
+      "To vent cover gas",
+      "To drain the cold trap",
+      "To aid natural circulation",
+      "To minimize the potential leakage volume"
+     ],
+     "a": 3,
+     "x": "Sloping minimizes the potential leakage volume from a break.",
+     "anchor": "minimizing the potential leakage volume",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.2, p. 3.7-8",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Challenged functions and results",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The challenged FSF is retaining radionuclides. Functional containment barriers perform their retention functions in the SCG and SPS-P DBEs.",
+     "anchor": "Functional containment barriers successfully perform their radionuclide retention functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.1, p. 3.7-5"
+    },
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Mean 30-day EAB TEDE (rem)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RRS-CGR-BL and -1",
+        "5.75E-03"
+       ],
+       "anchor": "2.27E-03 5.75E-03 9.37E-03",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.3, p. 3.7-6"
+      },
+      {
+       "cells": [
+        "RRS-ISPL-BL",
+        "1.04E-02"
+       ],
+       "anchor": "5.93E-03 1.04E-02 2.04E-02",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.3.3, p. 3.7-7"
+      },
+      {
+       "cells": [
+        "RRS-SPLX-BL and RRS-SPLA-BL",
+        "1.99E-02"
+       ],
+       "anchor": "1.15E-02 1.99E-02 3.98E-02",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.3, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "RRS-RWG-1",
+        "5.62E-04"
+       ],
+       "anchor": "2.14E-04 5.62E-04 1.03E-03",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.6.3, p. 3.7-9"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Read the table as an order of magnitude comparison. These results are preliminary PSAR values."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which of these has the highest mean 30-day EAB TEDE?",
+     "o": [
+      "RRS-SPLA-BL",
+      "RRS-RWG-1",
+      "RRS-CGR-1",
+      "RRS-ISPL-BL"
+     ],
+     "a": 0,
+     "x": "The SPS-P leak values are 1.99E-02 rem mean.",
+     "anchor": "1.15E-02 1.99E-02 3.98E-02",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.3, p. 3.7-8",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Automatic protective action and chronology",
+   "eo": [
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "SPS-P leak (RRS-SPLA-BL)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Leak in the SPS within the RAB"
+       ],
+       "anchor": "a leak in the SPS system within the RAB",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.1, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "2",
+        "SPS pump trips on low primary sodium level"
+       ],
+       "anchor": "The SPS pump trips on low primary sodium level",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "3",
+        "Loss of primary sodium inventory is terminated"
+       ],
+       "anchor": "terminating the loss of primary sodium inventory",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8"
+      },
+      {
+       "cells": [
+        "4",
+        "SPS cell leaks to the RAB at 10 percent volume per day"
+       ],
+       "anchor": "The SPS cell leaks at 10 percent volume per day to the RAB",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.2, p. 3.7-9"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What stops the loss of primary sodium inventory in an SPS-P leak?",
+     "o": [
+      "RPS scram",
+      "SPS pump trip on low primary sodium level",
+      "Manual valve closure",
+      "HAA isolation"
+     ],
+     "a": 1,
+     "x": "The SPS pump trips on low primary sodium level, terminating inventory loss.",
+     "anchor": "The SPS pump trips on low primary sodium level",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8",
+     "eo": "3,5"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "These DBEs challenge radionuclide retention, with no fuel cladding failure.",
+   "anchor": "Fuel cladding is not failed, but a radionuclide release",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.1, p. 3.7-5"
+  },
+  {
+   "text": "SPS-P leaks are stopped by the SPS pump trip on low primary sodium level.",
+   "anchor": "The SPS pump trips on low primary sodium level",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-04",
+ "title": "Ex-Vessel Release DBEs",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.7.3, pp. 3.7-5 to 3.7-10",
+ "intro": "These DBEs start outside the vessel: leaks from the cover gas, sodium processing, and waste gas systems. Cladding is not failed, but radionuclides can move.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": false
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": false
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": false
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": false
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": false
+  }
+ ],
+ "slug": "psar-ev-04-ex-vessel-release-dbes"
+}

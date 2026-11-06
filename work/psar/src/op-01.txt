@@ -1,0 +1,84 @@
+# OP-01 | Technical Specifications and Operating Modes | topic | technical specifications
+range: 11.5-1 11.5-10
+sec: Sec. 11.5, pp. 11.5-1 to 11.5-10
+intro: The full Technical Specifications come at the operating license stage. The PSAR gives the proposed subjects and defines the four operating modes. Learn the modes cold.
+obj: Define the four operating modes and what separates each one.
+obj: Describe how the plant moves between modes.
+obj: State the planned Technical Specification sections.
+obj: Identify the proposed Safety Limits and their bases.
+obj: Identify the probable subjects of Limiting Conditions for Operation.
+obj: State the probable administrative controls.
+
+== Operating modes | 1
+S Each mode is defined by sodium temperature, CRD status, and reactor cooling mechanism. @@ Each operating mode is defined in terms of an inclusive combination of sodium temperature
+T Mode | Title | CRD status | Cooling | Sodium temperature
+R 1 | High Power Operation | More than one CRA coupled | NSS | N/A @@ 1 High Power Operation More than one CRA NSS (1) N/A
+R 2 | Low Power Operation | More than one CRA coupled | IAC | N/A @@ 2 Low Power Operation More than one CRA IAC (2) N/A
+R 3 | Shutdown | No more than one CRA coupled | N/A | Above 400 F (204 C) @@ 3 Shutdown No more than one CRA N/A > 400 °F (204°C)
+R 4 | Refuel | No more than one CRA coupled | N/A | 400 F (204 C) or below @@ 4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)
+K What separates Mode 1 from Mode 2? | CRD status | Reactor cooling mechanism, NSS or IAC | Sodium temperature | Number of pumps | 1 | Mode 1 cools through the NSS, and Mode 2 through the IAC. @@ 1 High Power Operation More than one CRA NSS (1) N/A
+K What separates Mode 3 from Mode 4? | Sodium temperature at 400 F | Cooling mechanism | Number of coupled CRAs | RTB position | 0 | Mode 3 is above 400 F, and Mode 4 is at or below it. @@ 4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)
+K The plant is at 450 F with one CRA coupled. What mode? | Mode 1 | Mode 2 | Mode 3 | Mode 4 | 2 | No more than one CRA coupled and above 400 F is Mode 3. @@ 3 Shutdown No more than one CRA N/A > 400 °F (204°C)
+K Which modes have more than one CRA coupled? | Modes 1 and 2 | Modes 2 and 3 | Modes 3 and 4 | All | 0 | Modes 1 and 2 have more than one CRA coupled. @@ 2 Low Power Operation More than one CRA IAC (2) N/A
+
+== Mode descriptions and transitions | 2
+S Mode 1 is entered from Mode 2 during startup when heat removal transfers from the IAC to the NSS through the SHXs. @@ Mode-1 is entered from Mode-2 during startup when heat removal is transferred from the IAC to the NSS
+S Mode 2 is entered in startup when the reactor scram breakers are closed and more than one CRA is coupled. @@ Mode-2 is entered during startup when the reactor scram breakers are closed
+S Mode 2 supports rod withdrawal to critical and power ascension within IAC heat removal capability. @@ supports control rod withdrawal to a critical state and power ascension within the heat removal capabilities of the IAC
+S Mode 2 is not required during a shutdown. A scram before Mode 2 conditions lets the plant go directly from Mode 1 to Mode 3. @@ the plant can transition directly from Mode-1 to Mode-3
+S Mode 3 is a transition state. The primary coolant boundary is established during startup in Mode 3. @@ The primary coolant boundary is established during startup in Mode-3
+S Mode 3 supports plant heatup through PSP operation. @@ Mode-3 supports plant heatup through Primary Sodium Pump (PSP) operation
+S In Modes 3 and 4, one CRA may be coupled and manipulated for testing. @@ One CRA may be coupled to its CRDM driveline and manipulated to support testing
+S In Mode 4, hot pool temperature is lowered below 400 F (204 C). @@ Primary sodium hot pool temperature is lowered to the refueling temperature below 400°F (204°C)
+T Transition | Marker
+R Mode 2 to Mode 1 | IAC blower off, and top and bottom dampers closed and latched @@ as denoted by the IAC blower being off and the top and bottom dampers being closed and latched
+R Mode 1 to Mode 2 | NSS isolation valves closed @@ as denoted by the NSS isolation valves being closed
+K What marks the transition from Mode 2 to Mode 1? | IAC blower off, dampers closed and latched | NSS valves closed | Power at 100% | Second PSP start | 0 | Table 11.5-2 note 1 gives this marker. @@ as denoted by the IAC blower being off and the top and bottom dampers being closed and latched
+K A scram occurs in Mode 1 before Mode 2 conditions are met. Where does the plant go? | Must enter Mode 2 first | Directly to Mode 3 | Directly to Mode 4 | Stays in Mode 1 | 1 | The plant can transition directly from Mode 1 to Mode 3. @@ the plant can transition directly from Mode-1 to Mode-3
+K Which mode supports heatup through PSP operation? | Mode 1 | Mode 2 | Mode 3 | Mode 4 | 2 | Mode 3 supports heatup through PSP operation. @@ Mode-3 supports plant heatup through Primary Sodium Pump (PSP) operation
+K Why is no more than one CRA coupled in Modes 3 and 4? | To keep enough CRAs inserted to hold the reactor shutdown | To save power | To allow IAC flow | To cool the head | 0 | This ensures a sufficient number of CRAs are inserted. @@ which ensures a sufficient number of CRAs are inserted to maintain the reactor shutdown
+
+== Technical Specification structure | 3
+S Table 11.5-1 lists probable subjects as required by 10 CFR 50.34(a)(5). @@ In accordance with the requirements of 10 CFR 50.34(a)(5)
+S The full set will be submitted at the OL stage. @@ The full set of technical specifications that address the requirements of 10 CFR 50.36 will be submitted at the operating license (OL) stage
+S Format is planned to be consistent with NUREG-1431. @@ are planned to be consistent with NUREG-1431
+L Use and Application ;; Safety Limits ;; Limiting Conditions for Operation and Surveillance Requirements ;; Design Features ;; Administrative Controls @@ are planned to be consistent with NUREG-1431
+S Use and Application gives definitions, modes for LCO applicability, logical connectors, completion time, and frequency. @@ explains the meaning of logical connectors
+K When is the full Tech Spec set submitted? | With the PSAR | At the OL stage | After fuel load | After first refuel | 1 | The full set is submitted at the OL stage. @@ The full set of technical specifications that address the requirements of 10 CFR 50.36 will be submitted at the operating license (OL) stage
+K Which section defines completion time convention? | Safety Limits | Use and Application | Design Features | Administrative Controls | 1 | Use and Application establishes the completion time convention. @@ establishes the completion time convention
+
+== Safety Limits | 4
+S Safety limits protect the integrity of barriers that guard against uncontrolled release of radioactivity. @@ are limits upon important process variables that are found to be necessary to reasonably protect the integrity of certain physical barriers
+S LSSSs are settings for automatic protective devices. A setting must make protective action correct the situation before a Safety Limit is exceeded. @@ automatic protective action will correct the abnormal situation before a SL is exceeded
+S Probable SL subjects are fuel cladding temperature and peak fuel temperature. @@ probable subjects of the SLs are fuel
+S Cladding temperature limits protect against thermal creep and wall thinning from fuel-cladding chemical and eutectic interactions. @@ creep and thinning of the cladding
+S Peak fuel temperature limits protect against melting. @@ Peak fuel temperature limits protect against melting
+S Cycle-specific limits are in the Core Operating Limits Report (COLR). @@ Core Operating Limits Report (COLR)
+S A violation gives direction to restore compliance and shut down the reactor. @@ Direction is provided to restore
+S A setpoint control program, consistent with Option B of TSTF-493, replaces explicit LSSS values. @@ in lieu of specifying explicit values for the LSSSs
+K What are the probable Safety Limit subjects? | Fuel cladding temperature and peak fuel temperature | Hot pool level | PSP speed | RAC flow | 0 | These two are named. @@ probable subjects of the SLs are fuel
+K What does the peak fuel temperature limit protect against? | Sodium boiling | Melting | Rod bow | Corrosion | 1 | Peak fuel temperature limits protect against melting. @@ Peak fuel temperature limits protect against melting
+K Where do cycle-specific Safety Limit values appear? | PSAR | COLR | SVDU | ODCM | 1 | They are in the COLR. @@ Core Operating Limits Report (COLR)
+
+== Limiting Conditions for Operation | 5
+S LCOs are the lowest functional capability or performance levels of equipment required for safe operation. @@ LCOs are the lowest functional capability or performance levels of equipment required for safe operation of the facility
+S Surveillance requirements cover test, calibration, or inspection. @@ Surveillance requirements are requirements relating to test, calibration, or inspection
+T Section | Subject | Example variables
+R 3.1 | Reactivity Control Systems | Scram capability and rod alignment limits @@ The reactivity control systems are the
+R 3.2 | Power Distribution Limits | Hot channel factors @@ The probable subject of LCOs are hot channel factors
+R 3.3 | Instrumentation | RPS, XIS, RIS, and reactor trip switchgear @@ reactor trip switchgear
+R 3.4 | Primary Heat Transport System | Temperature, leakage, flow rate, PSP coastdown time @@ PSP coastdown time
+R 3.5 | Reactor Air Cooling System | Intake and exhaust temperatures and flow rates @@ intake/exhaust temperatures
+R 3.6 | Functional Containment | System and component leakage @@ LCOs include system/component leakage
+R 3.7 | Refueling Operations | Sealing, flow paths, heat removal for FHI, FHE, FHP @@ sealing capability for subsystems performing barrier functions
+K Which is a proposed LCO variable for the RAC? | Intake and exhaust flow rates | Stack height | Damper color | Salt temperature | 0 | LCO 3.5 variables include intake and exhaust temperatures and flow rates. @@ intake/exhaust temperatures
+K Which is a proposed PHT LCO variable? | PSP coastdown time | Stack flow | EVST level | Diesel fuel | 0 | PSP coastdown time is listed. @@ PSP coastdown time
+K Where would functional containment leakage appear? | LCO 3.1 | LCO 3.3 | LCO 3.6 | LCO 3.7 | 2 | Section 3.6 is Functional Containment. @@ LCOs include system/component leakage
+
+== Administrative controls | 6
+S Design Features are items that would significantly affect safety if altered, and will be given at the OL stage. @@ which, if altered or modified, would have a significant effect on safety
+L Delineation of responsibility ;; Description of organization ;; Unit staff qualifications ;; Requirements for procedures ;; Programs and manuals, including a setpoint control program ;; Reporting requirements, including a COLR @@ Probable administrative controls include
+K Which is a probable administrative control? | Setpoint control program | Rod alignment limit | PSP coastdown | Fuel temperature | 0 | Programs and manuals include a setpoint control program. @@ programs and manuals, to include a setpoint control program
+Z Modes 1 and 2 have more than one CRA coupled, cooled by NSS and IAC. Modes 3 and 4 split at 400 F. @@ 4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)
+Z Probable Safety Limits are fuel cladding temperature and peak fuel temperature, with values in the COLR. @@ probable subjects of the SLs are fuel
+Z The full Technical Specifications come at the OL stage, in a format consistent with NUREG-1431. @@ are planned to be consistent with NUREG-1431

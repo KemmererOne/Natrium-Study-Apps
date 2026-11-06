@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Loss of Primary Flow DBEs</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-ev-02-loss-of-primary-flow-dbes">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">Three design basis events start with lost primary flow: one pump lost, offsite power lost at full power, and offsite power lost at low power. <cite>PSAR Rev 1 (NAT-9400), Sec. 3.7.1, pp. 3.7-1 to 3.7-2, with Secs. 3.3.4 and 3.9.1</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the event initiator and safety-analysis assumptions.</p><p class="gap">Taught in: <a href="#concept-1">Event initiators and assumptions</a></p><p><span class="num">2</span> Identify the challenged safety functions and acceptance criteria.</p><p class="gap">Taught in: <a href="#concept-2">Challenged functions and acceptance</a></p><p><span class="num">3</span> Describe the event chronology.</p><p class="gap">Taught in: <a href="#concept-3">Event chronology</a></p><p><span class="num">4</span> Predict key parameter trends.</p><p class="gap">Taught in: <a href="#concept-4">Key parameter trends</a></p><p><span class="num">5</span> Identify automatic protective actions.</p><p class="gap">Taught in: <a href="#concept-5">Automatic protective actions</a></p><p><span class="num">6</span> Recognize the event from alarms and indications.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">7</span> Select and apply the appropriate procedure.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Verify operation of credited equipment.</p><p class="gap">Taught in: <a href="#concept-6">Credited equipment and failed functions</a></p><p><span class="num">9</span> Respond to failure of an automatic or mitigating function.</p><p class="gap">Taught in: <a href="#concept-6">Credited equipment and failed functions</a></p><p><span class="num">10</span> Establish and verify the required end state.</p><p class="gap">Taught in: <a href="#concept-7">End state and operator role</a></p><p><span class="num">11</span> Explain the consequences of delayed or incorrect actions.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">12</span> Relate operator actions to the event's technical basis.</p><p class="gap">Taught in: <a href="#concept-7">End state and operator role</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Event initiators and assumptions</h2><p class="count">Objectives 1</p><p>A DBE is an infrequent event sequence, less likely than an AOO and not expected in the life of the plant. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+<p>Event sequences with mean frequencies of 1×10<sup>-4</sup> to 1×10<sup>-2</sup> per plant-year are classified as DBEs. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+<p>DBE analysis takes into account the expected response of all structures, systems, and components, regardless of safety classification. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+<table class="tbl"><thead><tr><th>DBE</th><th>Initiator</th><th>Initial condition</th></tr></thead><tbody><tr><td>DHP-L1PP-2</td><td>Partial loss of primary flow from loss of a single PSP</td><td>Full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr><tr><td>DHP-LOOP-1</td><td>Loss of offsite power</td><td>Full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1</cite></td></tr><tr><td>SUD-LOOP-1</td><td>Loss of offsite power</td><td>Low power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2</cite></td></tr></tbody></table>
+<p>Full power analysis starts at 100 percent reactor power, 100 percent core flow, and 360.1°C core inlet temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7</cite></p>
+<p>Low power analysis starts at 5 percent reactor power, 15 percent core flow, and 309.5°C core inlet temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Event initiators and assumptions</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1</span><span>EV-02-K1</span></div>
+  <p>What frequency band defines a DBE?</p>
+  <div class="opts"><button type="button" class="opt">A. Below 1×10<sup>-7</sup> per plant-year</button><button type="button" class="opt">B. Above 1×10<sup>-2</sup> per plant-year</button><button type="button" class="opt">C. 1×10<sup>-4</sup> to 1×10<sup>-2</sup> per plant-year</button><button type="button" class="opt">D. 1×10<sup>-7</sup> to 1×10<sup>-4</sup> per plant-year</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Mean frequencies of 1×10<sup>-4</sup> to 1×10<sup>-2</sup> per plant-year are classified as DBEs. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K1&amp;body=Item%3A%20EV-02-K1%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20What%20frequency%20band%20defines%20a%20DBE%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>EV-02-K2</span></div>
+  <p>Which equipment does DBE analysis take into account?</p>
+  <div class="opts"><button type="button" class="opt">A. All SSCs regardless of safety classification</button><button type="button" class="opt">B. Only passive SSCs</button><button type="button" class="opt">C. Safety-related SSCs only</button><button type="button" class="opt">D. Non-safety-related SSCs only</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. DBEs take into account the expected response of all SSCs. DBAs are the events limited to safety-related SSCs. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K2&amp;body=Item%3A%20EV-02-K2%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20Which%20equipment%20does%20DBE%20analysis%20take%20into%20account%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Event initiators and assumptions</a><a class="next" href="#concept-2">Challenged functions and acceptance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Challenged functions and acceptance</h2><p class="count">Objectives 2</p><p>Core flow reduction raises primary sodium temperature until the reactor scrams, so the core must be shut down and its heat carried away. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6</cite></p>
+<p>For all three events, the fuel performance acceptance criteria are satisfied, fuel integrity is maintained for the peak fuel pin, and there is no radiological release. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.2, p. 3.7-1</cite></p>
+<p>The safe shutdown end state requires peak cladding temperature below 1157°F (625°C) and stable or decreasing. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Event initiators and assumptions</a><a class="next" href="#check-2">Knowledge check: Challenged functions and acceptance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Challenged functions and acceptance</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>EV-02-K3</span></div>
+  <p>What is the radiological result for the three loss of primary flow DBEs?</p>
+  <div class="opts"><button type="button" class="opt">A. A release below the EAB limit</button><button type="button" class="opt">B. No radiological release</button><button type="button" class="opt">C. A cover gas release only</button><button type="button" class="opt">D. A release held in the HAA</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Acceptance criteria are satisfied, fuel integrity is maintained, and no release occurs. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.2, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K3&amp;body=Item%3A%20EV-02-K3%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20What%20is%20the%20radiological%20result%20for%20the%20three%20loss%20of%20primary%20flow%20DBEs%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.1.1.2%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Challenged functions and acceptance</a><a class="next" href="#concept-3">Event chronology <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Event chronology</h2><p class="count">Objectives 3</p><table class="tbl"><thead><tr><th>Step</th><th>One PSP lost (DHP-L1PP-2)</th></tr></thead><tbody><tr><td>1</td><td>One PSP is lost at full power <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr><tr><td>2</td><td>Reactor scrams on high high power-to-flow ratio <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr><tr><td>3</td><td>The unaffected PSP and the ISPs trip on high high primary sodium temperature <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr><tr><td>4</td><td>Non-passive and passive IAC cooling fail on both trains <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr><tr><td>5</td><td>Reactor reaches safe shutdown with RAC removing decay heat <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr></tbody></table>
+<p>In the loss of offsite power at full power, the reactor scrams on high high power-to-flow ratio, non-passive IAC fails on both trains, and IAC passive mode removes decay heat. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1</cite></p>
+<p>At low power the reactor scrams because of the loss of primary flow, not on power-to-flow ratio. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Challenged functions and acceptance</a><a class="next" href="#check-3">Knowledge check: Event chronology <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Event chronology</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>EV-02-K4</span></div>
+  <p>What trips the unaffected PSP in DHP-L1PP-2?</p>
+  <div class="opts"><button type="button" class="opt">A. Low sodium level</button><button type="button" class="opt">B. Manual action</button><button type="button" class="opt">C. Low cold pool temperature</button><button type="button" class="opt">D. High high primary sodium temperature</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The unaffected PSP and the ISPs trip on high high primary sodium temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K4&amp;body=Item%3A%20EV-02-K4%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20What%20trips%20the%20unaffected%20PSP%20in%20DHP-L1PP-2%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.1.1.1%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>EV-02-K5</span></div>
+  <p>In DHP-LOOP-1, what removes decay heat at the end state?</p>
+  <div class="opts"><button type="button" class="opt">A. IAC active mode</button><button type="button" class="opt">B. The steam plant</button><button type="button" class="opt">C. The SPS</button><button type="button" class="opt">D. IAC passive mode</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Non-passive IAC fails on both trains, so IAC passive mode provides decay heat removal. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K5&amp;body=Item%3A%20EV-02-K5%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20In%20DHP-LOOP-1%2C%20what%20removes%20decay%20heat%20at%20the%20end%20state%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.1.2.1%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Event chronology</a><a class="next" href="#concept-4">Key parameter trends <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Key parameter trends</h2><p class="count">Objectives 4</p><p>Primary sodium temperature rises from the flow reduction, then falls after the scram. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6</cite></p>
+<blockquote>"The primary sodium temperature may increase after the PSP coast down is complete as the core transitions to natural circulation cooling, then decreases after natural circulation cooling is established and decay heat decreases." <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></blockquote>
+<p class="study">Study point: expect two temperature rises when the pumps trip. The first ends at the scram. The second can follow pump coast down, before natural circulation is established.</p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Event chronology</a><a class="next" href="#check-4">Knowledge check: Key parameter trends <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Key parameter trends</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>EV-02-K6</span></div>
+  <p>After the PSPs coast down, what can primary sodium temperature do?</p>
+  <div class="opts"><button type="button" class="opt">A. Rise as the core moves to natural circulation, then fall</button><button type="button" class="opt">B. Fall without limit</button><button type="button" class="opt">C. Oscillate until restart</button><button type="button" class="opt">D. Stay flat</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Temperature may increase after coast down, then decrease once natural circulation is established and decay heat falls. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K6&amp;body=Item%3A%20EV-02-K6%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20After%20the%20PSPs%20coast%20down%2C%20what%20can%20primary%20sodium%20temperature%20do%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.1%2C%20p.%203.3-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Key parameter trends</a><a class="next" href="#concept-5">Automatic protective actions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Automatic protective actions</h2><p class="count">Objectives 5</p><ul><li>Scram on loss of flow or high high power-to-flow ratio</li><li>PSPs and ISPs reduce speed if a scram occurs</li><li>Remaining PSPs and ISPs trip if the high high primary sodium temperature setpoints are reached</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Key parameter trends</a><a class="next" href="#check-5">Knowledge check: Automatic protective actions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Automatic protective actions</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 5</span><span>EV-02-K7</span></div>
+  <p>Which signals does the PSAR give for a scram after loss of primary flow?</p>
+  <div class="opts"><button type="button" class="opt">A. High radiation or seismic</button><button type="button" class="opt">B. High salt temperature</button><button type="button" class="opt">C. High cover gas pressure or low level</button><button type="button" class="opt">D. Loss of flow or high high power-to-flow ratio</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The loss of one or both PSPs results in a scram on loss of flow or high high power-to-flow ratio. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K7&amp;body=Item%3A%20EV-02-K7%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20Which%20signals%20does%20the%20PSAR%20give%20for%20a%20scram%20after%20loss%20of%20primary%20flow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.4%2C%20p.%203.3-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Automatic protective actions</a><a class="next" href="#concept-6">Credited equipment and failed functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Credited equipment and failed functions</h2><p class="count">Objectives 8, 9</p><p>RAC and the available modes of IAC remove decay heat. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+<p>When passive and non-passive IAC are unavailable, the thermal capacity of the piping, components, and intermediate sodium in the intermediate loops is assumed available. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></p>
+<table class="tbl"><thead><tr><th>Failure assumed</th><th>What carries decay heat</th></tr></thead><tbody><tr><td>Non-passive IAC fails on both trains</td><td>IAC passive mode <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1</cite></td></tr><tr><td>Non-passive and passive IAC fail on both trains</td><td>RAC <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></td></tr></tbody></table>
+<p>A function failed in an LBE description was not necessarily failed by the initiating event. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1, p. 3.3-4</cite></p>
+<p class="study">Study point: read these events as a ladder. Each DBE removes one more means of cooling, and the next means carries the heat.</p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Automatic protective actions</a><a class="next" href="#check-6">Knowledge check: Credited equipment and failed functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Credited equipment and failed functions</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 8,9</span><span>EV-02-K8</span></div>
+  <p>If all IAC modes fail in DHP-L1PP-2, what removes decay heat?</p>
+  <div class="opts"><button type="button" class="opt">A. SCG</button><button type="button" class="opt">B. NHV</button><button type="button" class="opt">C. RAC</button><button type="button" class="opt">D. SPS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. RAC provides decay heat removal when non-passive and passive IAC fail on both trains. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K8&amp;body=Item%3A%20EV-02-K8%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20If%20all%20IAC%20modes%20fail%20in%20DHP-L1PP-2%2C%20what%20removes%20decay%20heat%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.1.1.1%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Credited equipment and failed functions</a><a class="next" href="#concept-7">End state and operator role <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>End state and operator role</h2><p class="count">Objectives 10, 12</p><p>All three events end with the reactor in safe shutdown. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></p>
+<p>Operator actions are not required to mitigate DBEs unless the DBE description says otherwise. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+<p>Each DBE here is the most limiting DBE mapped to a matching DBA, where only safety-related equipment is credited. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></p>
+<p>In the DBA versions of these events, RAC is the decay heat removal system in all three cases. <cite>PSAR Rev 1, ML25276A288, Sec. 3.9.1.2.1, p. 3.9-1</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Credited equipment and failed functions</a><a class="next" href="#check-7">Knowledge check: End state and operator role <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: End state and operator role</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 10,12</span><span>EV-02-K9</span></div>
+  <p>Are operator actions required to mitigate the loss of primary flow DBEs?</p>
+  <div class="opts"><button type="button" class="opt">A. Yes, within 30 minutes</button><button type="button" class="opt">B. Yes, within 72 hours</button><button type="button" class="opt">C. No, unless noted in the DBE description</button><button type="button" class="opt">D. Only at low power</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Operator actions are not required to mitigate DBEs unless otherwise noted in the description. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-02-K9&amp;body=Item%3A%20EV-02-K9%0ALesson%3A%20Loss%20of%20Primary%20Flow%20DBEs%0AQuestion%3A%20Are%20operator%20actions%20required%20to%20mitigate%20the%20loss%20of%20primary%20flow%20DBEs%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7%2C%20p.%203.7-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> End state and operator role</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Loss of flow DBEs scram on high high power-to-flow ratio at full power, or on loss of primary flow at low power. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></li><li>Temperature can rise a second time after pump coast down, until natural circulation is established. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5</cite></li><li>RAC is the last means of decay heat removal in the sequence, and these events produce no radiological release. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: End state and operator role</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 17</span></div>
+<h1>Loss of Primary Flow DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Challenged functions and acceptance</a></li><li><a href="#check-2">Knowledge check: Challenged functions and acceptance</a></li><li><a href="#concept-3">Event chronology</a></li><li><a href="#check-3">Knowledge check: Event chronology</a></li><li><a href="#concept-4">Key parameter trends</a></li><li><a href="#check-4">Knowledge check: Key parameter trends</a></li><li><a href="#concept-5">Automatic protective actions</a></li><li><a href="#check-5">Knowledge check: Automatic protective actions</a></li><li><a href="#concept-6">Credited equipment and failed functions</a></li><li><a href="#check-6">Knowledge check: Credited equipment and failed functions</a></li><li><a href="#concept-7">End state and operator role</a></li><li><a href="#check-7">Knowledge check: End state and operator role</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 3.3.4.1, 3.3.4.1.1, 3.3.4.1.4, 3.3.4.2, 3.3.4.3, 3.7, 3.7.1.1.1, 3.7.1.1.2, 3.7.1.2.1, 3.7.1.3.1, 3.9.1.2.1</p><p>Pages 3.3-4, 3.3-5, 3.3-6, 3.3-7, 3.7-1, 3.7-2, 3.9-1</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20EV-02&amp;body=Lesson%3A%20EV-02%20Loss%20of%20Primary%20Flow%20DBEs%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

@@ -1,0 +1,510 @@
+{
+ "concepts": [
+  {
+   "title": "Performance-based approach",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The emergency preparedness plan will be provided at the OL stage.",
+     "anchor": "The emergency preparedness plan will be provided at the operating license stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1"
+    },
+    {
+     "t": "p",
+     "text": "It will be developed using 10 CFR 50.160 and RG 1.242.",
+     "anchor": "will be developed utilizing the requirements in 10 CFR 50.160",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1"
+    },
+    {
+     "t": "p",
+     "text": "The approach is performance-based, technology-inclusive, risk-informed, and consequence-oriented.",
+     "anchor": "a performance-based, technology-inclusive, risk-informed, and consequence-oriented emergency preparedness approach",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-1"
+    },
+    {
+     "t": "p",
+     "text": "A site-specific PRA will be used to form the plan and inform EPZ size.",
+     "anchor": "will be used to formulate the emergency preparedness plan and inform the PEP EPZ size",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-1"
+    },
+    {
+     "t": "p",
+     "text": "Plan reviews follow 10 CFR 50.54(t), and changes follow 10 CFR 50.54(q).",
+     "anchor": "will follow the requirements in 10 CFR 50.54(q)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which rule is the EP plan based on?",
+     "o": [
+      "10 CFR 50.160",
+      "10 CFR 72",
+      "10 CFR 61",
+      "10 CFR 100.21 only"
+     ],
+     "a": 0,
+     "x": "The plan uses 10 CFR 50.160 and RG 1.242.",
+     "anchor": "will be developed utilizing the requirements in 10 CFR 50.160",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1",
+     "eo": "1"
+    },
+    {
+     "q": "Which rule governs changes to an approved plan?",
+     "o": [
+      "10 CFR 50.54(q)",
+      "10 CFR 50.59",
+      "10 CFR 55",
+      "10 CFR 20"
+     ],
+     "a": 0,
+     "x": "Changes follow 10 CFR 50.54(q).",
+     "anchor": "will follow the requirements in 10 CFR 50.54(q)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-3",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Emergency Planning Zone",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RG 1.242 Appendix A was used to determine EPZ size.",
+     "anchor": "Appendix A, was used to determine the PEP EPZ size",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3"
+    },
+    {
+     "t": "p",
+     "text": "The preliminary analysis supports a PEP EPZ within the EAB, meeting 10 CFR 50.33(g)(2)(i).",
+     "anchor": "a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3"
+    },
+    {
+     "t": "p",
+     "text": "So there is no requirement for pre-planned off-site protective actions, but capabilities support recommendations to off-site agencies.",
+     "anchor": "there is no requirement to develop pre-planned off-site protective actions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6"
+    },
+    {
+     "t": "p",
+     "text": "Security events are not specifically identified in the preliminary analysis.",
+     "anchor": "Security events are not specifically identified within the preliminary PEP EPZ sizing analysis",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where does the preliminary PEP EPZ fall?",
+     "o": [
+      "50 miles",
+      "At the county line",
+      "Within the EAB",
+      "10 miles"
+     ],
+     "a": 2,
+     "x": "Preliminary analysis supports a PEP EPZ within the EAB.",
+     "anchor": "a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3",
+     "eo": "2"
+    },
+    {
+     "q": "Are pre-planned off-site protective actions required?",
+     "o": [
+      "Yes",
+      "No",
+      "Only for ingestion",
+      "Only at night"
+     ],
+     "a": 1,
+     "x": "Since the EPZ is within the EAB, there is no requirement.",
+     "anchor": "there is no requirement to develop pre-planned off-site protective actions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Emergency Response Organization",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Shift Manager functions as the Emergency Director (ED) until duties transfer to an ERF ED.",
+     "anchor": "The Shift Manager will function as the Emergency Director (ED)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4"
+    },
+    {
+     "t": "p",
+     "text": "The on-shift health physics person supports the ED until duties transfer to an ERF.",
+     "anchor": "The health physics person on-shift will support the ED",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4"
+    },
+    {
+     "t": "p",
+     "text": "The ED assumes command and control after an emergency declaration.",
+     "anchor": "The ED will assume command and control functions following an emergency declaration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4"
+    },
+    {
+     "t": "p",
+     "text": "ERO staffing depends on the functions needed for postulated emergencies.",
+     "anchor": "The ERO and staffing will be determined dependent on the functions needed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4, p. 11.3-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who is the initial Emergency Director?",
+     "o": [
+      "Security Manager",
+      "NRC resident",
+      "Plant General Manager",
+      "Shift Manager"
+     ],
+     "a": 3,
+     "x": "The Shift Manager functions as ED until transfer to an ERF ED.",
+     "anchor": "The Shift Manager will function as the Emergency Director (ED)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4",
+     "eo": "3"
+    },
+    {
+     "q": "Who supports the ED with radiological aspects on shift?",
+     "o": [
+      "Fire brigade",
+      "Chemistry manager",
+      "On-shift health physics person",
+      "QA Manager"
+     ],
+     "a": 2,
+     "x": "The health physics person on-shift supports the ED.",
+     "anchor": "The health physics person on-shift will support the ED",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Government agencies",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The NRC is the primary authority for radiological events at NRC-licensed facilities.",
+     "anchor": "The NRC acts as the primary authority for radiological events",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.5.1, p. 11.3-5"
+    },
+    {
+     "t": "p",
+     "text": "For incidents affecting the public, FEMA may coordinate the federal response.",
+     "anchor": "the Federal Emergency Management Agency may assume coordination of the federal response",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.5.1, p. 11.3-5"
+    },
+    {
+     "t": "p",
+     "text": "Notification protocols are set with the Wyoming Office of Homeland Security, Lincoln County, and Kemmerer.",
+     "anchor": "in coordination with the Wyoming Office of Homeland Security",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.5.2, p. 11.3-5"
+    },
+    {
+     "t": "p",
+     "text": "Letters of agreement will be submitted with the plan.",
+     "anchor": "Letters of agreement will be obtained and submitted with the emergency preparedness plan",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.5.2, p. 11.3-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who may coordinate the federal response if the public is affected?",
+     "o": [
+      "DOE",
+      "EPA",
+      "Wyoming OHS",
+      "FEMA"
+     ],
+     "a": 3,
+     "x": "FEMA may assume coordination, and the NRC stays primary for on-site response.",
+     "anchor": "the Federal Emergency Management Agency may assume coordination of the federal response",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.5.1, p. 11.3-5",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Protective measures",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "First aid",
+      "Moving personnel away from hazardous areas",
+      "Protective gear",
+      "Contamination control",
+      "Establishing restricted areas",
+      "Site evacuation of non-essential personnel",
+      "Coordination with the fire protection and security plans"
+     ],
+     "anchor": "The steps for taking protective measures within the site will be procedurally directed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.1, p. 11.3-5"
+    },
+    {
+     "t": "p",
+     "text": "The most likely on-site actions are protective equipment, sheltering, or site evacuation.",
+     "anchor": "The most likely on-site protective actions include the use of proper personal protective equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6"
+    },
+    {
+     "t": "p",
+     "text": "An emergency classification scheme with Emergency Action Levels will come with the plan.",
+     "anchor": "emergency classification scheme and associated emergency action levels",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.2, p. 11.3-6"
+    },
+    {
+     "t": "p",
+     "text": "Medical treatment or decontamination is prioritized by injury severity and contamination level.",
+     "anchor": "will be prioritized based on severity of injury and level of contamination",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.7, p. 11.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What sets priority for treating injured people?",
+     "o": [
+      "Severity of injury and level of contamination",
+      "Job title",
+      "Order of arrival",
+      "Location"
+     ],
+     "a": 0,
+     "x": "Priority is based on severity and contamination.",
+     "anchor": "will be prioritized based on severity of injury and level of contamination",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.7, p. 11.3-6",
+     "eo": "5"
+    },
+    {
+     "q": "Which is a likely on-site protective action?",
+     "o": [
+      "Sheltering on-site",
+      "Evacuating Kemmerer",
+      "Potassium iodide to the county",
+      "Reactor restart"
+     ],
+     "a": 0,
+     "x": "Likely actions include PPE, sheltering, or site evacuation.",
+     "anchor": "The most likely on-site protective actions include the use of proper personal protective equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Facilities and communications",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A primary ERF (on-site) and a backup ERF (off-site) will be available.",
+     "anchor": "A primary ERF (ERFP), located on-site, and a backup ERF (ERFB), located off-site, will be available",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7"
+    },
+    {
+     "t": "p",
+     "text": "Their functions are alike and similar to a Technical Support Center and Operational Support Center.",
+     "anchor": "There are no differences in the functions performed by the ERFP and ERFB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7"
+    },
+    {
+     "t": "p",
+     "text": "ERF staff relieve operators of duties not directly tied to reactor control.",
+     "anchor": "will relieve the reactor operators of peripheral duties",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7"
+    },
+    {
+     "t": "p",
+     "text": "The ERF is the primary communications center during an emergency.",
+     "anchor": "the ERF will be the primary communications center for the plant",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7"
+    },
+    {
+     "t": "p",
+     "text": "Dose projections will use real-time meteorological information.",
+     "anchor": "Capabilities to provide dose projections using real-time meteorological information",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.2.1, p. 11.3-7"
+    },
+    {
+     "t": "p",
+     "text": "Capabilities for 24-hour notification will be provided.",
+     "anchor": "Capabilities for 24-hour notification will be provided",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where is the backup ERF?",
+     "o": [
+      "On-site",
+      "Off-site",
+      "In the MCR",
+      "In the RSC"
+     ],
+     "a": 1,
+     "x": "The ERFB is off-site.",
+     "anchor": "A primary ERF (ERFP), located on-site, and a backup ERF (ERFB), located off-site, will be available",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7",
+     "eo": "6"
+    },
+    {
+     "q": "How do the ERFs help control room staff?",
+     "o": [
+      "They relieve peripheral duties and communications",
+      "They take over reactor control",
+      "They run the RPS",
+      "They operate rods"
+     ],
+     "a": 0,
+     "x": "They allow control room personnel to focus on the operational aspects.",
+     "anchor": "will relieve the reactor operators of peripheral duties",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Training and performance",
+   "eo": [
+    "7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "ERO members get initial training before assignment.",
+     "anchor": "Initial training will be provided to individuals before being assigned ERO responsibilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.8, p. 11.3-6"
+    },
+    {
+     "t": "p",
+     "text": "Off-site personnel get site familiarization training.",
+     "anchor": "will be provided site familiarization training",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.8, p. 11.3-6"
+    },
+    {
+     "t": "p",
+     "text": "Drills and exercises demonstrate the functions in 10 CFR 50.160(b)(1)(iii)(A) through (H).",
+     "anchor": "Drills and exercises will be used to demonstrate the capabilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.10, p. 11.3-8"
+    },
+    {
+     "t": "p",
+     "text": "Drills, exercises, and real events are critiqued to find weaknesses.",
+     "anchor": "will be critiqued to identify weaknesses or deficiencies",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.10, p. 11.3-8"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is the plan proven acceptable?",
+     "o": [
+      "By NRC inspection only",
+      "It is assumed",
+      "By evaluating performance in training, drills, and exercises",
+      "By paper review only"
+     ],
+     "a": 2,
+     "x": "Performance in training, drills, and exercises is evaluated and critiqued.",
+     "anchor": "will be proven acceptable by evaluating and critiquing performance in training, drills, and exercises",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1",
+     "eo": "7"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The plan is performance-based under 10 CFR 50.160, and comes at the OL stage.",
+   "anchor": "will be developed utilizing the requirements in 10 CFR 50.160",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1"
+  },
+  {
+   "text": "The preliminary EPZ is within the EAB.",
+   "anchor": "a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3"
+  },
+  {
+   "text": "The Shift Manager is the initial Emergency Director.",
+   "anchor": "The Shift Manager will function as the Emergency Director (ED)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-04",
+ "title": "Emergency Preparedness",
+ "kind": "topic",
+ "subject": "emergency preparedness",
+ "sec_note": "Sec. 11.3, pp. 11.3-1 to 11.3-9",
+ "intro": "The emergency plan itself comes at the operating license stage. The PSAR sets out the performance-based approach, who is in charge, and what facilities will exist.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the regulatory basis of the emergency preparedness approach.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Describe the Plume Exposure Pathway Emergency Planning Zone basis.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify who leads the emergency response.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Identify the roles of federal, state, and local agencies.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe on-site protective measures and protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Describe the emergency response facilities and communications.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Explain how performance is demonstrated.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-04-emergency-preparedness"
+}

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Startup Test Program</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-op-07-startup-test-program">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">Chapter 12 describes how the plant goes from construction to full power. Know the four stages, who does each, and what happens in each. <cite>PSAR Rev 1 (NAT-9400), Ch. 12, pp. 12.1-1 to 12.6-1</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the objectives of the Post-Construction Inspection, Testing, and Analysis Program.</p><p class="gap">Taught in: <a href="#concept-1">Program objectives</a></p><p><span class="num">2</span> Identify the four stages and who performs each.</p><p class="gap">Taught in: <a href="#concept-2">Stages and roles</a></p><p><span class="num">3</span> Describe construction, component, and system testing.</p><p class="gap">Taught in: <a href="#concept-3">Construction, component, and system testing</a></p><p><span class="num">4</span> Describe initial fuel load, low power, and power ascension testing.</p><p class="gap">Taught in: <a href="#concept-4">Initial startup testing</a></p><p><span class="num">5</span> Explain first-of-a-kind testing.</p><p class="gap">Taught in: <a href="#concept-5">First-of-a-kind testing</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Program objectives <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Program objectives</h2><p class="count">Objectives 1</p><p>The primary objective is to show the plant was built as designed and that safety-significant SSCs perform consistent with the design. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1</cite></p>
+<p>It also shows that fuel load, criticality, and power ascension are done in a controlled and safe manner. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1</cite></p>
+<p>It gives assurance that operators know the procedures and are prepared to operate safely. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1</cite></p>
+<p>A graded approach is used. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Program objectives <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Program objectives</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-07-K1</span></div>
+  <p>What is a PITAP objective for operators?</p>
+  <div class="opts"><button type="button" class="opt">A. That they know the procedures and are prepared</button><button type="button" class="opt">B. That they design tests</button><button type="button" class="opt">C. That they build systems</button><button type="button" class="opt">D. That they approve licenses</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The program gives assurance that personnel are knowledgeable and prepared. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K1&amp;body=Item%3A%20OP-07-K1%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20What%20is%20a%20PITAP%20objective%20for%20operators%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.1%2C%20p.%2012.1-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Program objectives</a><a class="next" href="#concept-2">Stages and roles <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Stages and roles</h2><p class="count">Objectives 2</p><table class="tbl"><thead><tr><th>Stage</th><th>Testing</th><th>Performed by</th></tr></thead><tbody><tr><td>1</td><td>Construction testing</td><td>Construction organization <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></td></tr><tr><td>2</td><td>Component testing</td><td>Construction start-up group <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></td></tr><tr><td>3</td><td>System testing</td><td>Construction start-up group <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></td></tr><tr><td>4</td><td>Initial startup testing</td><td>Licensed operators <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></td></tr></tbody></table>
+<p>The design organization owns test objectives, prerequisites, safety precautions, and acceptance criteria. <cite>PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1</cite></p>
+<p>The commissioning team determines test sequence and scheduling. <cite>PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1</cite></p>
+<p>In Stage 4, trained operations personnel do the work with approved procedures. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1</cite></p>
+<p>RG 1.68 informs planning and execution. <cite>PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Program objectives</a><a class="next" href="#check-2">Knowledge check: Stages and roles <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Stages and roles</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 2</span><span>OP-07-K2</span></div>
+  <p>Who performs Stage 2 component testing?</p>
+  <div class="opts"><button type="button" class="opt">A. Operations</button><button type="button" class="opt">B. NRC</button><button type="button" class="opt">C. Construction organization</button><button type="button" class="opt">D. Construction start-up group</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Stage 2 is performed by the construction start-up group. <cite>PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K2&amp;body=Item%3A%20OP-07-K2%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20Who%20performs%20Stage%202%20component%20testing%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.1%2C%20p.%2012.1-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-07-K3</span></div>
+  <p>Who sets test acceptance criteria?</p>
+  <div class="opts"><button type="button" class="opt">A. Operators</button><button type="button" class="opt">B. QA Manager</button><button type="button" class="opt">C. Design organization</button><button type="button" class="opt">D. Commissioning team</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The design organization is responsible for them. <cite>PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K3&amp;body=Item%3A%20OP-07-K3%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20Who%20sets%20test%20acceptance%20criteria%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.2%2C%20p.%2012.2-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>OP-07-K4</span></div>
+  <p>Who sets test sequence?</p>
+  <div class="opts"><button type="button" class="opt">A. Design organization</button><button type="button" class="opt">B. Commissioning team</button><button type="button" class="opt">C. NRC</button><button type="button" class="opt">D. Vendor</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. The commissioning team determines sequence and scheduling. <cite>PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K4&amp;body=Item%3A%20OP-07-K4%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20Who%20sets%20test%20sequence%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.2%2C%20p.%2012.2-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Stages and roles</a><a class="next" href="#concept-3">Construction, component, and system testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Construction, component, and system testing</h2><p class="count">Objectives 3</p><ul><li>Cable separation, continuity, megger, and high potential testing</li><li>Non-destructive testing of welds</li><li>Hydrostatic testing of piping</li><li>Hanger and pipe support inspections</li><li>Pump and valve alignments</li><li>Cleaning and flushing</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 12.3, p. 12.3-1</cite></p>
+<p>Preoperational testing covers Stages 2 and 3. <cite>PSAR Rev 1, ML25276A288, Sec. 12.4, p. 12.4-1</cite></p>
+<ul><li>System flushing and cleanliness verification</li><li>Electrical equipment testing</li><li>Loop checks and calibrations</li><li>Control system checks</li><li>Instrument calibrations</li><li>Individual component testing</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 12.4.1, p. 12.4-1</cite></p>
+<p>Component testing shows a component is ready to move from a static to a dynamic state. <cite>PSAR Rev 1, ML25276A288, Sec. 12.4.1, p. 12.4-1</cite></p>
+<p>Stage 3 covers individual system testing, then integrated system testing. <cite>PSAR Rev 1, ML25276A288, Sec. 12.4, p. 12.4-1</cite></p>
+<p>Stage 3 starts the test review group, which manages procedure changes and reviews results. <cite>PSAR Rev 1, ML25276A288, Sec. 12.4.2, p. 12.4-1</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Stages and roles</a><a class="next" href="#check-3">Knowledge check: Construction, component, and system testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Construction, component, and system testing</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 3</span><span>OP-07-K5</span></div>
+  <p>Which is construction testing?</p>
+  <div class="opts"><button type="button" class="opt">A. Integrated system test</button><button type="button" class="opt">B. Hydrostatic testing of piping</button><button type="button" class="opt">C. Rod worth measurement</button><button type="button" class="opt">D. Power ascension</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Stage 1 includes hydrostatic testing. <cite>PSAR Rev 1, ML25276A288, Sec. 12.3, p. 12.3-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K5&amp;body=Item%3A%20OP-07-K5%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20Which%20is%20construction%20testing%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.3%2C%20p.%2012.3-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3</span><span>OP-07-K6</span></div>
+  <p>When does the test review group start?</p>
+  <div class="opts"><button type="button" class="opt">A. Stage 2</button><button type="button" class="opt">B. Stage 3</button><button type="button" class="opt">C. Stage 4</button><button type="button" class="opt">D. Stage 1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. System testing commences the use of the test review group. <cite>PSAR Rev 1, ML25276A288, Sec. 12.4.2, p. 12.4-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K6&amp;body=Item%3A%20OP-07-K6%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20When%20does%20the%20test%20review%20group%20start%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.4.2%2C%20p.%2012.4-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Construction, component, and system testing</a><a class="next" href="#concept-4">Initial startup testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Initial startup testing</h2><p class="count">Objectives 4</p><p>Details of Phase 2 testing will be given at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1</cite></p>
+<p>Fuel load starts after preoperational testing, handover to operations, and issuance of the operating license and operator licenses. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+<p>Post-core hot function testing comes after fuel load and before criticality. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+<p>Low-power physics tests verify selected core design parameters. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.2, p. 12.5-1</cite></p>
+<ul><li>Reactivity control system rod worth</li><li>Neutron monitoring operation and calibration</li><li>Neutron flux distribution</li><li>Neutron and gamma radiation surveys</li><li>Operability of alarms and low power protective features</li><li>Reactivity control system performance</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 12.5.2, p. 12.5-1</cite></p>
+<p>Power ascension shows the plant operates as designed in steady state and, as practicable, in anticipated transients. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.3, p. 12.5-2</cite></p>
+<p>Test hold points review results and confirm prerequisites before the next step. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Construction, component, and system testing</a><a class="next" href="#check-4">Knowledge check: Initial startup testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Initial startup testing</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 4</span><span>OP-07-K7</span></div>
+  <p>What must be done before fuel load?</p>
+  <div class="opts"><button type="button" class="opt">A. Power ascension</button><button type="button" class="opt">B. Low power physics</button><button type="button" class="opt">C. Criticality</button><button type="button" class="opt">D. Preoperational testing, handover to operations, and license issuance</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Those conditions come first. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K7&amp;body=Item%3A%20OP-07-K7%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20What%20must%20be%20done%20before%20fuel%20load%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.5.1%2C%20p.%2012.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 4</span><span>OP-07-K8</span></div>
+  <p>When is post-core hot function testing done?</p>
+  <div class="opts"><button type="button" class="opt">A. Before fuel load</button><button type="button" class="opt">B. After fuel load and before criticality</button><button type="button" class="opt">C. During power ascension</button><button type="button" class="opt">D. After full power</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. It follows fuel loading and comes before initial criticality. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K8&amp;body=Item%3A%20OP-07-K8%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20When%20is%20post-core%20hot%20function%20testing%20done%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.5.1%2C%20p.%2012.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>OP-07-K9</span></div>
+  <p>What are test hold points for?</p>
+  <div class="opts"><button type="button" class="opt">A. Reviewing results before moving on</button><button type="button" class="opt">B. Stopping the reactor</button><button type="button" class="opt">C. Fueling</button><button type="button" class="opt">D. Outages</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. They review results and confirm prerequisites. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K9&amp;body=Item%3A%20OP-07-K9%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20What%20are%20test%20hold%20points%20for%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.5.1%2C%20p.%2012.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Initial startup testing</a><a class="next" href="#concept-5">First-of-a-kind testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>First-of-a-kind testing</h2><p class="count">Objectives 5</p><p>FOAK components are tested to the extent practical. <cite>PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1</cite></p>
+<p>Special tests may be done at the Sodium Test and Fill Facility. <cite>PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1</cite></p>
+<p>FOAK testing is marked on test abstracts. <cite>PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Initial startup testing</a><a class="next" href="#check-5">Knowledge check: First-of-a-kind testing <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: First-of-a-kind testing</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 5</span><span>OP-07-K10</span></div>
+  <p>Where may special FOAK tests occur?</p>
+  <div class="opts"><button type="button" class="opt">A. The RSC</button><button type="button" class="opt">B. NRC headquarters</button><button type="button" class="opt">C. Sodium Test and Fill Facility</button><button type="button" class="opt">D. The MCR</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. They may be performed at that facility. <cite>PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-07-K10&amp;body=Item%3A%20OP-07-K10%0ALesson%3A%20Startup%20Test%20Program%0AQuestion%3A%20Where%20may%20special%20FOAK%20tests%20occur%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2012.6%2C%20p.%2012.6-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> First-of-a-kind testing</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Stages 1 to 3 belong to construction and start-up groups. Stage 4 belongs to operations. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1</cite></li><li>Fuel load needs preoperational testing, handover, and licenses. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></li><li>Hold points control each step of startup testing. <cite>PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: First-of-a-kind testing</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 13</span></div>
+<h1>Startup Test Program</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Program objectives</a></li><li><a href="#check-1">Knowledge check: Program objectives</a></li><li><a href="#concept-2">Stages and roles</a></li><li><a href="#check-2">Knowledge check: Stages and roles</a></li><li><a href="#concept-3">Construction, component, and system testing</a></li><li><a href="#check-3">Knowledge check: Construction, component, and system testing</a></li><li><a href="#concept-4">Initial startup testing</a></li><li><a href="#check-4">Knowledge check: Initial startup testing</a></li><li><a href="#concept-5">First-of-a-kind testing</a></li><li><a href="#check-5">Knowledge check: First-of-a-kind testing</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 12.1, 12.2, 12.3, 12.4, 12.4.1, 12.4.2, 12.5, 12.5.1, 12.5.2, 12.5.3, 12.6</p><p>Pages 12.1-1, 12.1-2, 12.2-1, 12.3-1, 12.4-1, 12.5-1, 12.5-2, 12.6-1</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20OP-07&amp;body=Lesson%3A%20OP-07%20Startup%20Test%20Program%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Nuclear Island Control System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-16-nuclear-island-control-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The NIC is the plant's digital control layer. It is not one classified system. It is a group of subsystems, and only some carry NSRST functions. <cite>PSAR Rev 1 (NAT-9400), Secs. 7.6.1 and 7.6.2, pp. 7.6-1 to 7.6-17</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the NIC.</p><p class="gap">Taught in: <a href="#concept-1">I&amp;C architecture</a>, <a href="#concept-2">NIC subsystems</a></p><p><span class="num">2</span> Identify the NIC boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">I&amp;C architecture</a>, <a href="#concept-5">Separation from the RPS</a></p><p><span class="num">3</span> Identify the major components of the NIC.</p><p class="gap">Taught in: <a href="#concept-2">NIC subsystems</a></p><p><span class="num">4</span> Explain NIC operation.</p><p class="gap">Taught in: <a href="#concept-4">Reactivity limits and power runback</a></p><p><span class="num">5</span> Describe the NIC controls and indications.</p><p class="gap">Taught in: <a href="#concept-6">Operator interface</a></p><p><span class="num">6</span> Explain the NIC automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">NSRST automatic functions</a>, <a href="#concept-4">Reactivity limits and power runback</a></p><p><span class="num">7</span> Apply operating procedures for the NIC.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the NIC.</p><p class="gap">Taught in: <a href="#concept-7">Reliability and failures</a></p><p><span class="num">9</span> Explain the safety significance of the NIC.</p><p class="gap">Taught in: <a href="#concept-5">Separation from the RPS</a>, <a href="#concept-8">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the NIC.</p><p class="gap">Taught in: <a href="#concept-8">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">I&amp;C architecture <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>I&amp;C architecture</h2><p class="count">Objectives 1, 2</p><p>I&amp;C systems provide automatic actuation for licensing-basis events and manual actuation for defense-in-depth. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1, p. 7.6-1</cite></p>
+<ul><li>Independence</li><li>Communications and logical independence</li><li>Redundancy</li><li>Diversity</li><li>System Integrity</li><li>Reliable I&amp;C</li><li>Human Factors Engineering</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2, p. 7.6-2</cite></p>
+<p>There are no direct digital data communications from NSRST and NST systems to SR systems. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2</cite></p>
+<p>One-way communication from SR systems goes through isolated hardwire or data-diode and gateways. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2</cite></p>
+<p>SR I&amp;C systems have no inter-divisional communications except RPS voting. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2</cite></p>
+<table class="tbl"><thead><tr><th>System</th><th>Class</th><th>Defense lines</th></tr></thead><tbody><tr><td>RMC</td><td>NST</td><td>DL2, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>CTC</td><td>NSRST</td><td>DL2, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>UMC</td><td>NSRST</td><td>DL2, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>AMC</td><td>NSRST</td><td>DL2, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>PMC</td><td>NST</td><td>DL2, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>FHC</td><td>NST</td><td>None identified <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>RPS</td><td>SR</td><td>DL3, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>XIS</td><td>SR</td><td>DL2, DL3, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>RIS</td><td>SR</td><td>DL2, DL3, DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>AST</td><td>NSRST</td><td>DL4 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr><tr><td>RMS</td><td>NSRST</td><td>DL4, DL5 <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: I&amp;C architecture <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: I&amp;C architecture</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1,2</span><span>SY-16-K1</span></div>
+  <p>Can an NST system send digital data directly to an SR system?</p>
+  <div class="opts"><button type="button" class="opt">A. No</button><button type="button" class="opt">B. Only for testing</button><button type="button" class="opt">C. Only from the PMC</button><button type="button" class="opt">D. Yes, through the DCS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. There are no direct digital data communications from NSRST and NST systems to SR systems. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K1&amp;body=Item%3A%20SY-16-K1%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Can%20an%20NST%20system%20send%20digital%20data%20directly%20to%20an%20SR%20system%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.1.2.1%2C%20p.%207.6-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,2</span><span>SY-16-K2</span></div>
+  <p>Which I&amp;C system is classified SR?</p>
+  <div class="opts"><button type="button" class="opt">A. PMC</button><button type="button" class="opt">B. CTC</button><button type="button" class="opt">C. AMC</button><button type="button" class="opt">D. XIS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. RPS, XIS, and RIS are SR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K2&amp;body=Item%3A%20SY-16-K2%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20I%26C%20system%20is%20classified%20SR%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.1.2.1%2C%20p.%207.6-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> I&amp;C architecture</a><a class="next" href="#concept-2">NIC subsystems <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>NIC subsystems</h2><p class="count">Objectives 1, 3</p><p>The NIC is digital and runs on a Nuclear Island Distributed Control System (DCS). Some vendor supplied controls run outside the DCS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></p>
+<table class="tbl"><thead><tr><th>Subsystem</th><th>Monitors and controls</th></tr></thead><tbody><tr><td>AMC</td><td>NI auxiliary systems such as radwaste, SCG, and SPS <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></td></tr><tr><td>CTC</td><td>PHT, IHT, salt, IAC, and Energy Island Salt System flow control <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></td></tr><tr><td>FHC</td><td>Fuel handling systems <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></td></tr><tr><td>PMC</td><td>Plant wide information, display, and manual command devices <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></td></tr><tr><td>RMC</td><td>CRD control and rod position <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></td></tr><tr><td>UMC</td><td>Auxiliary electrical and ancillary systems such as NHV and the standby diesel generator <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-7</cite></td></tr></tbody></table>
+<p>The NIC as a whole is not classified. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8</cite></p>
+<p>The data highway, HSI bus, DCS infrastructure, HSIs, and VDUs are NST, and NSRST functions do not rely on them. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: Nuclear Island Control System Block Diagram"><figcaption>Figure 7.6.2-1. Nuclear Island Control System Block Diagram <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-17</cite></figcaption></figure>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: I&amp;C architecture</a><a class="next" href="#check-2">Knowledge check: NIC subsystems <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: NIC subsystems</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,3</span><span>SY-16-K3</span></div>
+  <p>Which subsystem controls the SPS?</p>
+  <div class="opts"><button type="button" class="opt">A. UMC</button><button type="button" class="opt">B. RMC</button><button type="button" class="opt">C. CTC</button><button type="button" class="opt">D. AMC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The AMC monitors and controls NI auxiliary systems, including SPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K3&amp;body=Item%3A%20SY-16-K3%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20subsystem%20controls%20the%20SPS%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.1%2C%20p.%207.6-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,3</span><span>SY-16-K4</span></div>
+  <p>Which subsystem controls the NHV?</p>
+  <div class="opts"><button type="button" class="opt">A. PMC</button><button type="button" class="opt">B. AMC</button><button type="button" class="opt">C. CTC</button><button type="button" class="opt">D. UMC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The UMC controls auxiliary electrical and ancillary systems, including NHV. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K4&amp;body=Item%3A%20SY-16-K4%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20subsystem%20controls%20the%20NHV%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.1%2C%20p.%207.6-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,3</span><span>SY-16-K5</span></div>
+  <p>An HSI fails. Do NSRST functions depend on it?</p>
+  <div class="opts"><button type="button" class="opt">A. Only DL4 functions</button><button type="button" class="opt">B. Only in Mode 1</button><button type="button" class="opt">C. Yes</button><button type="button" class="opt">D. No, NSRST functions do not rely on NST components</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. HSIs are NST, and NSRST functions do not rely on these components. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K5&amp;body=Item%3A%20SY-16-K5%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20An%20HSI%20fails.%20Do%20NSRST%20functions%20depend%20on%20it%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2%2C%20p.%207.6-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> NIC subsystems</a><a class="next" href="#concept-3">NSRST automatic functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>NSRST automatic functions</h2><p class="count">Objectives 6</p><table class="tbl"><thead><tr><th>Function</th><th>Subsystem</th><th>Input</th><th>Action</th></tr></thead><tbody><tr><td>DL4-RR3a</td><td>AMC</td><td>Sodium leak signal from NFP</td><td>Closes SPS-P supply isolation valve <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9</cite></td></tr><tr><td>DL4-RR3b</td><td>AMC</td><td>Sodium leak signal from NFP</td><td>Trips the SPS-P pump <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9</cite></td></tr><tr><td>DL4-RR4a</td><td>AMC</td><td>Radioactivity signal from RMS</td><td>Closes SCG RV exhaust isolation valves downstream of the vapor cell <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-9</cite></td></tr><tr><td>DL2-HR2</td><td>CTC</td><td>Low IHT expansion tank level</td><td>Trips the ISPs <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></td></tr><tr><td>DL4-HR2</td><td>CTC</td><td>High-high primary hot pool temperature from RIS</td><td>Trips the PSPs, as automatic backup <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></td></tr><tr><td>DL4-HR3</td><td>CTC</td><td>High-high primary hot pool temperature from RIS</td><td>Trips the ISPs, as automatic backup <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></td></tr><tr><td>DL4-RR1c</td><td>UMC</td><td>Radioactivity signal from RMS</td><td>Closes HAA isolation valves <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></td></tr><tr><td>DL4-RR3c</td><td>UMC</td><td>Sodium leak signal from NFP</td><td>Closes NHV dampers to the SPS-P cells <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11</cite></td></tr><tr><td>DL4-RR4b</td><td>UMC</td><td>Radioactivity signal from RMS</td><td>Isolates the SCG vapor trap cells <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11</cite></td></tr><tr><td>DL4-RR4c</td><td>UMC</td><td>RV relief valve position</td><td>Isolates the SCG vapor trap cells <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-11</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: NIC subsystems</a><a class="next" href="#check-3">Knowledge check: NSRST automatic functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: NSRST automatic functions</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 6</span><span>SY-16-K6</span></div>
+  <p>Which subsystem trips the ISPs on low IHT expansion tank level?</p>
+  <div class="opts"><button type="button" class="opt">A. CTC</button><button type="button" class="opt">B. UMC</button><button type="button" class="opt">C. RPS</button><button type="button" class="opt">D. AMC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. CTC function DL2-HR2 trips the ISPs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K6&amp;body=Item%3A%20SY-16-K6%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20subsystem%20trips%20the%20ISPs%20on%20low%20IHT%20expansion%20tank%20level%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2.1%2C%20p.%207.6-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>SY-16-K7</span></div>
+  <p>What does the CTC do on high-high hot pool temperature?</p>
+  <div class="opts"><button type="button" class="opt">A. Closes HAA valves</button><button type="button" class="opt">B. Scrams the reactor</button><button type="button" class="opt">C. Trips the PSPs and ISPs</button><button type="button" class="opt">D. Starts the SPS</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. DL4-HR2 and DL4-HR3 trip the PSPs and ISPs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K7&amp;body=Item%3A%20SY-16-K7%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20What%20does%20the%20CTC%20do%20on%20high-high%20hot%20pool%20temperature%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2.1%2C%20p.%207.6-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 6</span><span>SY-16-K8</span></div>
+  <p>The UMC receives high radioactivity from the RMS for the HAA. What does it do?</p>
+  <div class="opts"><button type="button" class="opt">A. Trips the PSPs</button><button type="button" class="opt">B. Scrams the reactor</button><button type="button" class="opt">C. Starts FPC</button><button type="button" class="opt">D. Closes HAA isolation valves</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The UMC sends signals to the NHV to close the HAA isolation valves. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K8&amp;body=Item%3A%20SY-16-K8%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20The%20UMC%20receives%20high%20radioactivity%20from%20the%20RMS%20for%20the%20HAA.%20What%20does%20it%20do%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2.1%2C%20p.%207.6-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> NSRST automatic functions</a><a class="next" href="#concept-4">Reactivity limits and power runback <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactivity limits and power runback</h2><p class="count">Objectives 4, 6</p><p>Reactivity control in normal operation and AOOs is through power runback performed by RMC and CTC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+<p>RMC and CRD control maximum rod withdrawal speed to limit the reactivity insertion rate. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+<p>A CRD control interlock prevents withdrawing more than one rod at a time. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+<p>A brake holds the rod at any selected position. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: NSRST automatic functions</a><a class="next" href="#check-4">Knowledge check: Reactivity limits and power runback <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactivity limits and power runback</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4,6</span><span>SY-16-K9</span></div>
+  <p>What does the CRD control interlock prevent?</p>
+  <div class="opts"><button type="button" class="opt">A. Withdrawal of more than one rod at a time</button><button type="button" class="opt">B. Inserting rods</button><button type="button" class="opt">C. Scram</button><button type="button" class="opt">D. Power runback</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The interlock prevents withdrawal of more than one rod at a time. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K9&amp;body=Item%3A%20SY-16-K9%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20What%20does%20the%20CRD%20control%20interlock%20prevent%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2.2%2C%20p.%207.6-12%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,6</span><span>SY-16-K10</span></div>
+  <p>Which subsystems perform power runback?</p>
+  <div class="opts"><button type="button" class="opt">A. PMC and FHC</button><button type="button" class="opt">B. AMC and UMC</button><button type="button" class="opt">C. RPS and XIS</button><button type="button" class="opt">D. RMC and CTC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The NIC gives reactivity control through power runback by RMC and CTC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K10&amp;body=Item%3A%20SY-16-K10%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20subsystems%20perform%20power%20runback%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.2.2%2C%20p.%207.6-12%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Reactivity limits and power runback</a><a class="next" href="#concept-5">Separation from the RPS <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Separation from the RPS</h2><p class="count">Objectives 2, 9</p><p>There is no direct communication from NIC systems to the RPS. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></p>
+<p>The RPS sends data through a one-way data diode to the plant data highway, through an RPS-NIC gateway. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.1.1, p. 7.6-8</cite></p>
+<p>Hardwired signals use an isolation device. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.3, p. 7.6-15</cite></p>
+<p>Where diversity is required, redundant sensors are used: one for SR, one for NSRST or NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15</cite></p>
+<p>A shared SR sensor goes through an isolating signal splitter. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Reactivity limits and power runback</a><a class="next" href="#check-5">Knowledge check: Separation from the RPS <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Separation from the RPS</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 2,9</span><span>SY-16-K11</span></div>
+  <p>How is an SR sensor shared with NST systems?</p>
+  <div class="opts"><button type="button" class="opt">A. Through an isolating signal splitter</button><button type="button" class="opt">B. Over the DCS bus</button><button type="button" class="opt">C. It is not allowed</button><button type="button" class="opt">D. Direct parallel wiring</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. A signal splitter provides isolation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K11&amp;body=Item%3A%20SY-16-K11%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20How%20is%20an%20SR%20sensor%20shared%20with%20NST%20systems%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.3.5%2C%20p.%207.6-15%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Separation from the RPS</a><a class="next" href="#concept-6">Operator interface <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operator interface</h2><p class="count">Objectives 5</p><p>NIC display and control functions on HSIs are NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15</cite></p>
+<p>Where display is an NSRST function, a separate NSRST display device is provided. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15</cite></p>
+<p>NSRST manual actuation uses a hardwired switch. Operators can also actuate from an MCR HSI, but that is NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15</cite></p>
+<p>The NIC acquires and displays PAM Type D and E variables. RPS PAM variables are also sent to the NIC, so all are displayed there. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16</cite></p>
+<p>The Safety Parameter Display System is a set of screens on NIC HSIs. It is not a stand-alone system. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16</cite></p>
+<p>There are no Type A PAM variables in the I&amp;C design. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-3</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Separation from the RPS</a><a class="next" href="#check-6">Knowledge check: Operator interface <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operator interface</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 5</span><span>SY-16-K12</span></div>
+  <p>How is an NSRST manual actuation performed?</p>
+  <div class="opts"><button type="button" class="opt">A. With a hardwired switch</button><button type="button" class="opt">B. Through the PMC</button><button type="button" class="opt">C. By the RPS</button><button type="button" class="opt">D. From an HSI only</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The NSRST manual actuation is performed using a hardwired switch. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K12&amp;body=Item%3A%20SY-16-K12%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20How%20is%20an%20NSRST%20manual%20actuation%20performed%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.4%2C%20p.%207.6-15%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 5</span><span>SY-16-K13</span></div>
+  <p>What is the Safety Parameter Display System?</p>
+  <div class="opts"><button type="button" class="opt">A. A stand-alone SR computer</button><button type="button" class="opt">B. A set of screens on NIC HSIs</button><button type="button" class="opt">C. A hardwired panel</button><button type="button" class="opt">D. An RPS module</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. It is a set of screens on NIC HSIs and not a stand-alone system. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K13&amp;body=Item%3A%20SY-16-K13%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20What%20is%20the%20Safety%20Parameter%20Display%20System%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.4%2C%20p.%207.6-16%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Operator interface</a><a class="next" href="#concept-7">Reliability and failures <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reliability and failures</h2><p class="count">Objectives 8</p><p>With a redundant IO module and controller, the only common failure point is the physical termination of the field device. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14</cite></p>
+<p>No single failure on the HSI bus or plant data highway will fail the network. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14</cite></p>
+<p>Multiple HSIs and VDUs mean loss of one does not affect access to information or operations. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.2, p. 7.6-14</cite></p>
+<p>No part of the NIC is required to operate during or after a seismic event. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.1, p. 7.6-14</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Operator interface</a><a class="next" href="#check-7">Knowledge check: Reliability and failures <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reliability and failures</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 8</span><span>SY-16-K14</span></div>
+  <p>Is the NIC required to operate after a seismic event?</p>
+  <div class="opts"><button type="button" class="opt">A. Only CTC</button><button type="button" class="opt">B. Only AMC</button><button type="button" class="opt">C. Yes</button><button type="button" class="opt">D. No</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. No part of the NIC or its sub-systems is required to operate during or after a seismic event. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.1, p. 7.6-14</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K14&amp;body=Item%3A%20SY-16-K14%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Is%20the%20NIC%20required%20to%20operate%20after%20a%20seismic%20event%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.3.1%2C%20p.%207.6-14%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Reliability and failures</a><a class="next" href="#concept-8">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-8">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>NSRST subsystems are the AMC, CTC, and UMC. Their components are seismic class SCN3. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13</cite></p>
+<ul><li>Design Reliability Assurance Program</li><li>Equipment Qualification Program</li><li>Quality Assurance Program Description</li><li>Post-construction Inspection, Testing, and Analysis Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13</cite></p>
+<p>The Human Factors Engineering Program Plan applies to the NIC DCS and all subsystems. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13</cite></p>
+<p>I&amp;C security is addressed through the physical and cyber security programs in Sec. 11.6. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.4, p. 7.6-15</cite></p>
+
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Reliability and failures</a><a class="next" href="#check-8">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-8">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 9,10</span><span>SY-16-K15</span></div>
+  <p>Which NIC subsystems are NSRST?</p>
+  <div class="opts"><button type="button" class="opt">A. None</button><button type="button" class="opt">B. PMC, RMC, FHC</button><button type="button" class="opt">C. AMC, CTC, UMC</button><button type="button" class="opt">D. All of them</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. AMC, CTC, and UMC have NSRST functions. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-16-K15&amp;body=Item%3A%20SY-16-K15%0ALesson%3A%20Nuclear%20Island%20Control%20System%0AQuestion%3A%20Which%20NIC%20subsystems%20are%20NSRST%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.6.2.3%2C%20p.%207.6-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-8"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 18 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>The NIC is a group of subsystems. AMC, CTC, and UMC are NSRST, and PMC, RMC, and FHC are NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13</cite></li><li>Nothing digital goes from the NIC to the RPS. The RPS sends data one way through a data diode. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12</cite></li><li>CTC trips pumps as automatic backups, and NSRST manual actions use hardwired switches. <cite>PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-8"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 19 of 19</span></div>
+<h1>Nuclear Island Control System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">I&amp;C architecture</a></li><li><a href="#check-1">Knowledge check: I&amp;C architecture</a></li><li><a href="#concept-2">NIC subsystems</a></li><li><a href="#check-2">Knowledge check: NIC subsystems</a></li><li><a href="#concept-3">NSRST automatic functions</a></li><li><a href="#check-3">Knowledge check: NSRST automatic functions</a></li><li><a href="#concept-4">Reactivity limits and power runback</a></li><li><a href="#check-4">Knowledge check: Reactivity limits and power runback</a></li><li><a href="#concept-5">Separation from the RPS</a></li><li><a href="#check-5">Knowledge check: Separation from the RPS</a></li><li><a href="#concept-6">Operator interface</a></li><li><a href="#check-6">Knowledge check: Operator interface</a></li><li><a href="#concept-7">Reliability and failures</a></li><li><a href="#check-7">Knowledge check: Reliability and failures</a></li><li><a href="#concept-8">Safety significance</a></li><li><a href="#check-8">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.6.1, 7.6.1.2, 7.6.1.2.1, 7.6.2.1, 7.6.2.1.1, 7.6.2.2, 7.6.2.2.1, 7.6.2.2.2, 7.6.2.3, 7.6.2.3.1, 7.6.2.3.2, 7.6.2.3.3, 7.6.2.3.4, 7.6.2.3.5, 7.6.2.4</p><p>Pages 7.6-1, 7.6-2, 7.6-3, 7.6-5, 7.6-6, 7.6-7, 7.6-8, 7.6-9, 7.6-10, 7.6-11, 7.6-12, 7.6-13, 7.6-14, 7.6-15, 7.6-16, 7.6-17</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-16&amp;body=Lesson%3A%20SY-16%20Nuclear%20Island%20Control%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

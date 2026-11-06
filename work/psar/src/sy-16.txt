@@ -1,0 +1,100 @@
+# SY-16 | Nuclear Island Control System | system | NIC
+range: 7.6-1 7.6-17
+sec: Secs. 7.6.1 and 7.6.2, pp. 7.6-1 to 7.6-17
+intro: The NIC is the plant's digital control layer. It is not one classified system. It is a group of subsystems, and only some carry NSRST functions.
+
+== I&C architecture | 1,2
+S I&C systems provide automatic actuation for licensing-basis events and manual actuation for defense-in-depth. @@ provide automatic actuation in response to licensing-basis events
+L Independence ;; Communications and logical independence ;; Redundancy ;; Diversity ;; System Integrity ;; Reliable I&C ;; Human Factors Engineering @@ The I&C system architecture incorporates the following fundamental I&C design principles
+S There are no direct digital data communications from NSRST and NST systems to SR systems. @@ There are no direct digital data communications from either the NSRST and NST systems to the SR systems
+S One-way communication from SR systems goes through isolated hardwire or data-diode and gateways. @@ is via isolated hardwire or through data-diode and gateways
+S SR I&C systems have no inter-divisional communications except RPS voting. @@ do not have inter-divisional communications with the exception of the RPS voting
+T System | Class | Defense lines
+R RMC | NST | DL2, DL4, DL5 @@ Nuclear Island Rod NST DL2, DL4, DL5
+R CTC | NSRST | DL2, DL4, DL5 @@ Nuclear Island Coolant NSRST DL2, DL4, DL5
+R UMC | NSRST | DL2, DL4, DL5 @@ Nuclear Island Utility NSRST DL2, DL4, DL5
+R AMC | NSRST | DL2, DL4, DL5 @@ Nuclear Island Auxiliary NSRST DL2, DL4, DL5
+R PMC | NST | DL2, DL4, DL5 @@ Nuclear Island Plant NST DL2, DL4, DL5
+R FHC | NST | None identified @@ No DLs identified
+R RPS | SR | DL3, DL4, DL5 @@ Reactor Protection SR DL3, DL4, DL5
+R XIS | SR | DL2, DL3, DL5 @@ Nuclear Instrumentation SR DL2, DL3, DL5
+R RIS | SR | DL2, DL3, DL4, DL5 @@ Reactor Instrumentation SR DL2, DL3, DL4,DL5
+R AST | NSRST | DL4 @@ Anticipatory Automatic NSRST DL4
+R RMS | NSRST | DL4, DL5 @@ Radiation Monitoring NSRST DL4, DL5
+K Can an NST system send digital data directly to an SR system? | Yes, through the DCS | No | Only for testing | Only from the PMC | 1 | There are no direct digital data communications from NSRST and NST systems to SR systems. @@ There are no direct digital data communications from either the NSRST and NST systems to the SR systems
+K Which I&C system is classified SR? | CTC | AMC | XIS | PMC | 2 | RPS, XIS, and RIS are SR. @@ Nuclear Instrumentation SR DL2, DL3, DL5
+
+== NIC subsystems | 1,3
+S The NIC is digital and runs on a Nuclear Island Distributed Control System (DCS). Some vendor supplied controls run outside the DCS. @@ These are referred to as “vendor supplied” control systems
+T Subsystem | Monitors and controls
+R AMC | NI auxiliary systems such as radwaste, SCG, and SPS @@ The AMC monitors and controls Nuclear Island (NI) auxiliary systems
+R CTC | PHT, IHT, salt, IAC, and Energy Island Salt System flow control @@ The CTC monitors and controls
+R FHC | Fuel handling systems @@ The FHC monitors and controls the sub-systems and sub-components of the fuel handling systems
+R PMC | Plant wide information, display, and manual command devices @@ which are used to execute plant wide monitoring and operating functions
+R RMC | CRD control and rod position @@ The RMC monitors and controls the sub-systems
+R UMC | Auxiliary electrical and ancillary systems such as NHV and the standby diesel generator @@ The UMC monitors and controls the various auxiliary electrical and ancillary systems
+S The NIC as a whole is not classified. @@ The NIC as a whole is not classified
+S The data highway, HSI bus, DCS infrastructure, HSIs, and VDUs are NST, and NSRST functions do not rely on them. @@ NSRST functions do not rely on these NST components
+F 7.6.2-1
+K Which subsystem controls the SPS? | CTC | AMC | UMC | RMC | 1 | The AMC monitors and controls NI auxiliary systems, including SPS. @@ The AMC monitors and controls Nuclear Island (NI) auxiliary systems
+K Which subsystem controls the NHV? | AMC | CTC | UMC | PMC | 2 | The UMC controls auxiliary electrical and ancillary systems, including NHV. @@ The UMC monitors and controls the various auxiliary electrical and ancillary systems
+K An HSI fails. Do NSRST functions depend on it? | Yes | No, NSRST functions do not rely on NST components | Only DL4 functions | Only in Mode 1 | 1 | HSIs are NST, and NSRST functions do not rely on these components. @@ NSRST functions do not rely on these NST components
+
+== NSRST automatic functions | 6
+T Function | Subsystem | Input | Action
+R DL4-RR3a | AMC | Sodium leak signal from NFP | Closes SPS-P supply isolation valve @@ DL4-RR3a SPS supply valve AMC receives sodium leak detection signals
+R DL4-RR3b | AMC | Sodium leak signal from NFP | Trips the SPS-P pump @@ DL4-RR3b SPS pump trip on leak AMC receives sodium leak detection signals
+R DL4-RR4a | AMC | Radioactivity signal from RMS | Closes SCG RV exhaust isolation valves downstream of the vapor cell @@ DL4-RR4a Automatically close AMC receives radioactivity indication signals
+R DL2-HR2 | CTC | Low IHT expansion tank level | Trips the ISPs @@ DL2-HR2 Intermediate sodium CTC receives IHT expansion tank level signals
+R DL4-HR2 | CTC | High-high primary hot pool temperature from RIS | Trips the PSPs, as automatic backup @@ DL4-HR2 Primary sodium pump CTC receives primary sodium hot pool temperature
+R DL4-HR3 | CTC | High-high primary hot pool temperature from RIS | Trips the ISPs, as automatic backup @@ DL4-HR3 ISP pump trip CTC receives primary sodium hot pool temperature
+R DL4-RR1c | UMC | Radioactivity signal from RMS | Closes HAA isolation valves @@ The UMC receives radioactivity indication signals from
+R DL4-RR3c | UMC | Sodium leak signal from NFP | Closes NHV dampers to the SPS-P cells @@ DL4-RR3c SPS cells barrier The UMC receives sodium leak detection signals
+R DL4-RR4b | UMC | Radioactivity signal from RMS | Isolates the SCG vapor trap cells @@ DL4-RR4b SCG cells barrier The UMC receives radioactivity indication signals
+R DL4-RR4c | UMC | RV relief valve position | Isolates the SCG vapor trap cells @@ DL4-RR4c Vapor trap cell isolation The UMC receives
+K Which subsystem trips the ISPs on low IHT expansion tank level? | AMC | CTC | UMC | RPS | 1 | CTC function DL2-HR2 trips the ISPs. @@ DL2-HR2 Intermediate sodium CTC receives IHT expansion tank level signals
+K What does the CTC do on high-high hot pool temperature? | Scrams the reactor | Trips the PSPs and ISPs | Starts the SPS | Closes HAA valves | 1 | DL4-HR2 and DL4-HR3 trip the PSPs and ISPs. @@ DL4-HR2 Primary sodium pump CTC receives primary sodium hot pool temperature
+K The UMC receives high radioactivity from the RMS for the HAA. What does it do? | Closes HAA isolation valves | Trips the PSPs | Scrams the reactor | Starts FPC | 0 | The UMC sends signals to the NHV to close the HAA isolation valves. @@ HAA isolation valves if a setpoint is exceeded
+
+== Reactivity limits and power runback | 4,6
+S Reactivity control in normal operation and AOOs is through power runback performed by RMC and CTC. @@ through power runback performed by RMC and CTC
+S RMC and CRD control maximum rod withdrawal speed to limit the reactivity insertion rate. @@ the RMC and Control Rod Drive System control the maximum rod withdrawal speed
+S A CRD control interlock prevents withdrawing more than one rod at a time. @@ A Control Rod Drive System control interlock prevents withdrawal of more than one rod at a time
+S A brake holds the rod at any selected position. @@ also includes a brake to hold the control rod assembly at any selected position
+K What does the CRD control interlock prevent? | Withdrawal of more than one rod at a time | Inserting rods | Scram | Power runback | 0 | The interlock prevents withdrawal of more than one rod at a time. @@ A Control Rod Drive System control interlock prevents withdrawal of more than one rod at a time
+K Which subsystems perform power runback? | RPS and XIS | RMC and CTC | PMC and FHC | AMC and UMC | 1 | The NIC gives reactivity control through power runback by RMC and CTC. @@ through power runback performed by RMC and CTC
+
+== Separation from the RPS | 2,9
+S There is no direct communication from NIC systems to the RPS. @@ There is no direct communication from NIC systems to the RPS
+S The RPS sends data through a one-way data diode to the plant data highway, through an RPS-NIC gateway. @@ the RPS sends data via a one-way data diode to the plant data highway
+S Hardwired signals use an isolation device. @@ an isolation device is provided to ensure that the NIC does not have an adverse impact on the RPS
+S Where diversity is required, redundant sensors are used: one for SR, one for NSRST or NST. @@ redundant sensors are utilized where one sensor provides a signal to the SR I&C system
+S A shared SR sensor goes through an isolating signal splitter. @@ the sensor information is routed through a signal splitter
+K How is an SR sensor shared with NST systems? | Direct parallel wiring | Through an isolating signal splitter | Over the DCS bus | It is not allowed | 1 | A signal splitter provides isolation. @@ the sensor information is routed through a signal splitter
+
+== Operator interface | 5
+S NIC display and control functions on HSIs are NST. @@ Display and control functions on the NIC are NST functions
+S Where display is an NSRST function, a separate NSRST display device is provided. @@ a separate NSRST display device is provided
+S NSRST manual actuation uses a hardwired switch. Operators can also actuate from an MCR HSI, but that is NST. @@ the NSRST manual actuation is performed using a hardwired switch
+S The NIC acquires and displays PAM Type D and E variables. RPS PAM variables are also sent to the NIC, so all are displayed there. @@ so that all PAM variables are displayed on the NIC
+S The Safety Parameter Display System is a set of screens on NIC HSIs. It is not a stand-alone system. @@ is a set of screens that are available from the NIC HSIs and is not a stand-alone system
+S There are no Type A PAM variables in the I&C design. @@ There are no Type A Post-Accident Monitoring variables in the I&C design
+K How is an NSRST manual actuation performed? | From an HSI only | With a hardwired switch | Through the PMC | By the RPS | 1 | The NSRST manual actuation is performed using a hardwired switch. @@ the NSRST manual actuation is performed using a hardwired switch
+K What is the Safety Parameter Display System? | A stand-alone SR computer | A set of screens on NIC HSIs | A hardwired panel | An RPS module | 1 | It is a set of screens on NIC HSIs and not a stand-alone system. @@ is a set of screens that are available from the NIC HSIs and is not a stand-alone system
+
+== Reliability and failures | 8
+S With a redundant IO module and controller, the only common failure point is the physical termination of the field device. @@ the only common failure point is the physical termination of the field device
+S No single failure on the HSI bus or plant data highway will fail the network. @@ no single failure in a device on those networks will cause a failure of the network
+S Multiple HSIs and VDUs mean loss of one does not affect access to information or operations. @@ a complete failure of one of these devices does not affect the ability of operators
+S No part of the NIC is required to operate during or after a seismic event. @@ No part of the NIC or its sub-systems is required to operate during or after a seismic event
+K Is the NIC required to operate after a seismic event? | Yes | No | Only CTC | Only AMC | 1 | No part of the NIC or its sub-systems is required to operate during or after a seismic event. @@ No part of the NIC or its sub-systems is required to operate during or after a seismic event
+
+== Safety significance | 9,10
+S NSRST subsystems are the AMC, CTC, and UMC. Their components are seismic class SCN3. @@ The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3
+L Design Reliability Assurance Program ;; Equipment Qualification Program ;; Quality Assurance Program Description ;; Post-construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the NSRST NIC subsystems
+S The Human Factors Engineering Program Plan applies to the NIC DCS and all subsystems. @@ is identified as a programmatic special treatment applicable to the NIC DCS and all NIC subsystems
+S I&C security is addressed through the physical and cyber security programs in Sec. 11.6. @@ Security for I&C systems is addressed through the physical security and cyber security programs
+K Which NIC subsystems are NSRST? | PMC, RMC, FHC | AMC, CTC, UMC | All of them | None | 1 | AMC, CTC, and UMC have NSRST functions. @@ The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3
+Z The NIC is a group of subsystems. AMC, CTC, and UMC are NSRST, and PMC, RMC, and FHC are NST. @@ The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3
+Z Nothing digital goes from the NIC to the RPS. The RPS sends data one way through a data diode. @@ There is no direct communication from NIC systems to the RPS
+Z CTC trips pumps as automatic backups, and NSRST manual actions use hardwired switches. @@ the NSRST manual actuation is performed using a hardwired switch

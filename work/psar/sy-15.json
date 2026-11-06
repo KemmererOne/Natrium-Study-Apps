@@ -1,0 +1,773 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and the four systems",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The primary purpose of the NFP is to mitigate the effects of fire within and around the NI facilities.",
+     "anchor": "The primary purpose of the NFP is to mitigate the effects of fire",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+    },
+    {
+     "t": "table",
+     "head": [
+      "System",
+      "Job",
+      "Class"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "NFD",
+        "Distributes fire water for hydrants and water-based suppression",
+        "NST"
+       ],
+       "anchor": "distributes fire water for fire hydrants and water-based fire suppression",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+      },
+      {
+       "cells": [
+        "NFS",
+        "Suppresses and controls fire with water, clean agents, and chemical means",
+        "NST"
+       ],
+       "anchor": "suppresses and controls fire with water, clean agents, and chemical means",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+      },
+      {
+       "cells": [
+        "NFA",
+        "Detects smoke and fire, monitors suppression, notifies personnel",
+        "NST"
+       ],
+       "anchor": "detects smoke and fire, monitors and controls suppression systems",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+      },
+      {
+       "cells": [
+        "NNA",
+        "Detects, collects, and contains sodium leaks",
+        "NSRST"
+       ],
+       "anchor": "NNA is non-safety-related with special treatment (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "NNA strategy is to mitigate the effects of a sodium fire once a leak has occurred. Leak prevention is outside its scope.",
+     "anchor": "Leak prevention is outside the scope of NNA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+    },
+    {
+     "t": "p",
+     "text": "The Fire Protection Program and Fire Hazards Analysis will be provided at the operating license stage.",
+     "anchor": "The Fire Protection Program and Fire Hazards Analysis will be provided at the operating license stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3, p. 7.5-12"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which NFP system is NSRST?",
+     "o": [
+      "NFS",
+      "NFA",
+      "NNA",
+      "NFD"
+     ],
+     "a": 2,
+     "x": "NNA is NSRST. The other three are NST.",
+     "anchor": "NNA is non-safety-related with special treatment (NSRST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10",
+     "eo": "1,2"
+    },
+    {
+     "q": "Is sodium leak prevention in the scope of NNA?",
+     "o": [
+      "No, it is addressed by other systems",
+      "Only for the IHT",
+      "Only in the RXB",
+      "Yes, it is the main function"
+     ],
+     "a": 0,
+     "x": "Leak prevention is outside the scope of NNA.",
+     "anchor": "Leak prevention is outside the scope of NNA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Fire water supply",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fire water comes from the Energy Island Fire Protection System (EFP).",
+     "anchor": "The water supply to the NFD is from the Energy Island Fire Protection System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+    },
+    {
+     "t": "p",
+     "text": "There are two fire water storage tanks with a minimum of 300,000 gallons each. Either can be refilled in 8 hours or less.",
+     "anchor": "with a minimum of 300,000 gallons each",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "There are two fire pumps: a primary electric motor pump and a backup diesel engine driven pump.",
+     "anchor": "a primary electric motor pump and a backup diesel engine driven pump",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "A jockey pump keeps required pressure in normal conditions.",
+     "anchor": "A jockey pump is also installed in the system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "The pumps have a 3-hour fire rated separation.",
+     "anchor": "a 3-hour fire rated separation between the pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the minimum capacity of each fire water tank?",
+     "o": [
+      "100,000 gallons",
+      "300,000 gallons",
+      "574,000 gallons",
+      "1,000,000 gallons"
+     ],
+     "a": 1,
+     "x": "Each tank holds a minimum of 300,000 gallons.",
+     "anchor": "with a minimum of 300,000 gallons each",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13",
+     "eo": "3,4"
+    },
+    {
+     "q": "Which fire pump is the backup?",
+     "o": [
+      "NI Water pump",
+      "Electric motor pump",
+      "Diesel engine driven pump",
+      "Jockey pump"
+     ],
+     "a": 2,
+     "x": "The primary is electric and the backup is diesel.",
+     "anchor": "a primary electric motor pump and a backup diesel engine driven pump",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Suppression and where water is kept out",
+   "eo": [
+    "3",
+    "4",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Water-based suppression is in buildings where sodium is not present.",
+     "anchor": "The water-based suppression systems are located in buildings where sodium is not present",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "The RXB and RAB contain sodium, are not sprinklered, and do not contain fire water.",
+     "anchor": "are the Reactor Building and the Reactor Auxiliary Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "The FHB contains sodium but has separated sprinklered areas, such as radwaste handling areas and truck bays.",
+     "anchor": "such as radwaste handling areas and truck bays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "Preaction systems are used where water-filled piping is not desirable.",
+     "anchor": "are used where water-filled piping is not desirable",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13"
+    },
+    {
+     "t": "p",
+     "text": "Clean agent systems serve areas where water would be detrimental.",
+     "anchor": "are located where fire suppression is required but water would be detrimental",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14"
+    },
+    {
+     "t": "p",
+     "text": "Four independent clean agent systems serve the NCB substructure, one for each RPS division.",
+     "anchor": "There are four independent clean agent systems in the NI Control Building substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14"
+    },
+    {
+     "t": "p",
+     "text": "Class D extinguishers are in areas containing sodium.",
+     "anchor": "Class D fire extinguishers are provided in areas containing sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which buildings contain no fire water?",
+     "o": [
+      "NCB only",
+      "RXB and RAB",
+      "FHB and NCB",
+      "RAB and FHB"
+     ],
+     "a": 1,
+     "x": "The RXB and RAB are not sprinklered and do not contain fire water.",
+     "anchor": "are the Reactor Building and the Reactor Auxiliary Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13",
+     "eo": "3,4,9"
+    },
+    {
+     "q": "How is the RPS protected from fire?",
+     "o": [
+      "One clean agent system for each RPS division",
+      "Foam",
+      "Class D extinguishers only",
+      "Wet pipe sprinklers"
+     ],
+     "a": 0,
+     "x": "One clean agent system is provided for each RPS division.",
+     "anchor": "One system is provided for each Reactor Protection System division",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14",
+     "eo": "3,4,9"
+    },
+    {
+     "q": "What fire extinguisher is provided for sodium areas?",
+     "o": [
+      "Class D",
+      "Class A only",
+      "Class B",
+      "Class C"
+     ],
+     "a": 0,
+     "x": "Class D extinguishers are provided in areas containing sodium.",
+     "anchor": "Class D fire extinguishers are provided in areas containing sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14",
+     "eo": "3,4,9"
+    }
+   ]
+  },
+  {
+   "title": "Detection and alarm",
+   "eo": [
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NFA has initiation devices, notification appliances, control equipment, and wiring.",
+     "anchor": "consists of initiation devices",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.3, p. 7.5-14"
+    },
+    {
+     "t": "p",
+     "text": "Each building has its own Fire Alarm Control Panel. Panels are networked to the NFA workstation in the MCR.",
+     "anchor": "Each building has its own Fire Alarm Control Panel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.5, p. 7.5-17"
+    },
+    {
+     "t": "p",
+     "text": "NFA and NNA have internal batteries for when power is not available.",
+     "anchor": "The NFA has internal system storage batteries",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.3, p. 7.5-14"
+    },
+    {
+     "t": "p",
+     "text": "Normal NFP operation is standby.",
+     "anchor": "Normal system operation is standby mode",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17"
+    },
+    {
+     "t": "p",
+     "text": "When smoke is detected in a duct, the NHV air handling unit shuts down and local smoke dampers close.",
+     "anchor": "When smoke is detected in a duct, the associated NHV air handling unit is shut down",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17"
+    },
+    {
+     "t": "p",
+     "text": "NFA also has trouble and supervisory modes.",
+     "anchor": "The NFA also has trouble and supervisory modes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17"
+    },
+    {
+     "t": "p",
+     "text": "Sprinklers activate individually at their temperature, and clean agent systems activate on a signal from the NFA.",
+     "anchor": "Automatic sprinklers activate individually",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Smoke is detected in a duct. What is the automatic response?",
+     "o": [
+      "Clean agent releases plant-wide",
+      "Reactor scrams",
+      "Air handling unit speeds up",
+      "Air handling unit shuts down and smoke dampers close"
+     ],
+     "a": 3,
+     "x": "The unit shuts down and local smoke dampers close where installed.",
+     "anchor": "When smoke is detected in a duct, the associated NHV air handling unit is shut down",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17",
+     "eo": "3,5"
+    }
+   ]
+  },
+  {
+   "title": "Sodium leak strategy",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NNA detects leaked sodium, collects it, and drains it to catch pans, while giving operators early notice.",
+     "anchor": "giving operators early notification of a leak so they can take necessary action",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-14"
+    },
+    {
+     "t": "p",
+     "text": "The overall strategy uses passive features and adds active ones only where necessary.",
+     "anchor": "The overall sodium fire strategy is to use passive prevention and mitigation features",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Feature",
+      "Description"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Cell",
+        "Room with limited leak rate and known oxygen volume, either inerted or de facto inerted after a leak"
+       ],
+       "anchor": "Cells are rooms with a limited leak rate and known oxygen volume",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+      },
+      {
+       "cells": [
+        "Guard pipe",
+        "Fully redundant pipe that acts as a full secondary pressure boundary"
+       ],
+       "anchor": "Guard pipes are fully redundant pipes designed to the same conditions as the protected pipe",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+      },
+      {
+       "cells": [
+        "Guard enclosure",
+        "Like a guard pipe, with a drainpipe to a collection location"
+       ],
+       "anchor": "Guard enclosures act similarly to guard pipes",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+      },
+      {
+       "cells": [
+        "Clamshell",
+        "Guard enclosure placed where piping inspections are expected"
+       ],
+       "anchor": "A clamshell is a form of guard enclosure placed specifically where piping inspections are expected",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+      },
+      {
+       "cells": [
+        "Catch pan",
+        "Steel-lined volume that permanently retains a design-basis leak volume"
+       ],
+       "anchor": "Catch pans are a steel-lined volume designed to permanently retain design-basis sodium leak volume",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+      },
+      {
+       "cells": [
+        "Suppression deck",
+        "Applied to catch pans where oxygen volume cannot be limited"
+       ],
+       "anchor": "Suppression decks will be applied to catch pans where the environmental oxygen volume cannot be limited",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Primary SPS cells in the RAB are inerted. IHT cells in the RAB are not.",
+     "anchor": "inerted cells for portions of the primary SPS within the RAB and non-inerted cells for portions of the IHT",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+    },
+    {
+     "t": "p",
+     "text": "Intermediate sodium leaks in the HAA must be fully contained and removed from the HAA.",
+     "anchor": "fully contain sodium leakage from the intermediate sodium SSCs within the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15"
+    },
+    {
+     "t": "p",
+     "text": "Containment features are sized for the maximum leak volume plus 20%, and catch pan calculations use 25%.",
+     "anchor": "To provide additional margin, 25% is used in the catch pan sizing calculations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is a clamshell?",
+     "o": [
+      "A guard enclosure placed where inspections are expected",
+      "A catch pan lid",
+      "A fire damper",
+      "An argon valve"
+     ],
+     "a": 0,
+     "x": "A clamshell is a form of guard enclosure placed where piping inspections are expected.",
+     "anchor": "A clamshell is a form of guard enclosure placed specifically where piping inspections are expected",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15",
+     "eo": "3,4"
+    },
+    {
+     "q": "When does a catch pan get a suppression deck?",
+     "o": [
+      "Only in inerted cells",
+      "Never",
+      "Always",
+      "Where oxygen volume cannot be limited"
+     ],
+     "a": 3,
+     "x": "Suppression decks are applied where the environmental oxygen volume cannot be limited.",
+     "anchor": "Suppression decks will be applied to catch pans where the environmental oxygen volume cannot be limited",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16",
+     "eo": "3,4"
+    },
+    {
+     "q": "What margin is used in catch pan sizing calculations?",
+     "o": [
+      "10%",
+      "20%",
+      "25%",
+      "50%"
+     ],
+     "a": 2,
+     "x": "25% is used in catch pan sizing.",
+     "anchor": "To provide additional margin, 25% is used in the catch pan sizing calculations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Sodium leak detection",
+   "eo": [
+    "5",
+    "6",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Detectors are in leak mitigative features, at vulnerable valves, and inside catch pans.",
+     "anchor": "Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+    },
+    {
+     "t": "p",
+     "text": "Detectors are generally conductivity based with a self-test function.",
+     "anchor": "Detectors will generally be based on conductivity detection with a self-",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+    },
+    {
+     "t": "p",
+     "text": "Smoke detection is used where sodium reactions may occur, such as IAC stacks.",
+     "anchor": "In areas where sodium reactions may occur",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+    },
+    {
+     "t": "p",
+     "text": "Leak detector activation alarms in the MCR through the NIC.",
+     "anchor": "The sodium leak detectors activate an alarm within the MCR upon detection of sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Signal path",
+      "Action"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL4-RR3a",
+        "NNA to AMC",
+        "AMC closes the SPS-P supply valve"
+       ],
+       "anchor": "automatically closes Primary SPS (SPS-P) valve",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+      },
+      {
+       "cells": [
+        "DL4-RR3b",
+        "NNA to AMC",
+        "AMC trips SPS-P pumps"
+       ],
+       "anchor": "AMC automatically trips SPS-P pumps",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+      },
+      {
+       "cells": [
+        "DL4-RR3c",
+        "NNA to UMC",
+        "UMC closes NHV dampers"
+       ],
+       "anchor": "UMC automatically closes NI Heating, Ventilation, and Air Conditioning System (NHV) dampers",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "An SPS-P leak signal goes to the AMC. What does the AMC do?",
+     "o": [
+      "Closes the SPS-P supply valve and trips pumps",
+      "Closes NHV dampers",
+      "Scrams the reactor",
+      "Starts fire pumps"
+     ],
+     "a": 0,
+     "x": "AMC closes the supply valve and trips SPS-P pumps. UMC closes NHV dampers.",
+     "anchor": "AMC automatically trips SPS-P pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12",
+     "eo": "5,6,8"
+    },
+    {
+     "q": "Which control system closes NHV dampers on an SPS cell leak?",
+     "o": [
+      "RPS",
+      "FHC",
+      "AMC",
+      "UMC"
+     ],
+     "a": 3,
+     "x": "UMC automatically closes NHV dampers.",
+     "anchor": "UMC automatically closes NI Heating, Ventilation, and Air Conditioning System (NHV) dampers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12",
+     "eo": "5,6,8"
+    },
+    {
+     "q": "What kind of detector is used at IAC stacks?",
+     "o": [
+      "Flow",
+      "Conductivity only",
+      "Smoke detection",
+      "Radiation"
+     ],
+     "a": 2,
+     "x": "Smoke detection is provided where sodium reactions may occur, such as IAC stacks.",
+     "anchor": "In areas where sodium reactions may occur",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16",
+     "eo": "5,6,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Equipment",
+      "Classification"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "IHX nozzle clamshell and guard enclosure",
+        "NSRST"
+       ],
+       "anchor": "IHX Nozzle Clamshell & Guard Enclosure NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.5, p. 7.5-20"
+      },
+      {
+       "cells": [
+        "IHX nozzle clamshell leak detection",
+        "NSRST"
+       ],
+       "anchor": "IHX Nozzle Clamshell Leak Detection NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.5, p. 7.5-20"
+      },
+      {
+       "cells": [
+        "IHX nozzle clamshell and guard enclosure drain lines",
+        "NSRST"
+       ],
+       "anchor": "IHX Nozzle Clamshell & Guard Enclosure Drain Lines NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.5, p. 7.5-20"
+      },
+      {
+       "cells": [
+        "SPS-P sodium leak detectors",
+        "NSRST"
+       ],
+       "anchor": "SPS-P Sodium Leak Detectors NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.5, p. 7.5-20"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "NNA classification may change at the operating license stage as the fire analysis and PRA mature.",
+     "anchor": "As the fire analysis and PRA matures, the safety classification and defense line allocations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+    },
+    {
+     "t": "p",
+     "text": "The NFP is in full conformance with RG 1.189.",
+     "anchor": "The NFP is designed to Regulatory Guide (RG) 1.189, Revision 5",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program",
+      "Design Reliability Assurance Program",
+      "Testing Program"
+     ],
+     "anchor": "preliminarily identified as applicable to NFP to meet quality",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.4, p. 7.5-17"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why might NNA classifications change?",
+     "o": [
+      "The NRC waives them",
+      "Sodium type changes",
+      "The reactor power changes",
+      "The fire analysis and PRA mature"
+     ],
+     "a": 3,
+     "x": "Classification may change at the operating license stage as analysis matures.",
+     "anchor": "As the fire analysis and PRA matures, the safety classification and defense line allocations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "NFD, NFS, and NFA are NST. NNA is NSRST and mitigates sodium leaks after they occur.",
+   "anchor": "NNA is non-safety-related with special treatment (NSRST)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+  },
+  {
+   "text": "The RXB and RAB hold no fire water. The RPS divisions have clean agent, and sodium areas have Class D extinguishers.",
+   "anchor": "are the Reactor Building and the Reactor Auxiliary Building",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13"
+  },
+  {
+   "text": "Leaks alarm in the MCR. AMC closes the SPS-P supply valve and trips pumps, and UMC closes NHV dampers.",
+   "anchor": "AMC automatically trips SPS-P pumps",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-15",
+ "title": "Nuclear Island Fire Protection System",
+ "kind": "system",
+ "subject": "NFP",
+ "sec_note": "Sec. 7.5.2, pp. 7.5-10 to 7.5-20",
+ "intro": "The NFP is four systems. Three are conventional fire protection. The fourth, NNA, deals with sodium, and sodium buildings are kept free of fire water.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the NFP.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the NFP boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the NFP.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain NFP operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the NFP controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the NFP automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the NFP.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the NFP.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the NFP.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the NFP.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-15-nuclear-island-fire-protection-system"
+}

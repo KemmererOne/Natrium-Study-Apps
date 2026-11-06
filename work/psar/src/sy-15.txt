@@ -1,0 +1,91 @@
+# SY-15 | Nuclear Island Fire Protection System | system | NFP
+range: 7.5-10 7.5-20
+sec: Sec. 7.5.2, pp. 7.5-10 to 7.5-20
+intro: The NFP is four systems. Three are conventional fire protection. The fourth, NNA, deals with sodium, and sodium buildings are kept free of fire water.
+
+== Purpose and the four systems | 1,2
+S The primary purpose of the NFP is to mitigate the effects of fire within and around the NI facilities. @@ The primary purpose of the NFP is to mitigate the effects of fire
+T System | Job | Class
+R NFD | Distributes fire water for hydrants and water-based suppression | NST @@ distributes fire water for fire hydrants and water-based fire suppression
+R NFS | Suppresses and controls fire with water, clean agents, and chemical means | NST @@ suppresses and controls fire with water, clean agents, and chemical means
+R NFA | Detects smoke and fire, monitors suppression, notifies personnel | NST @@ detects smoke and fire, monitors and controls suppression systems
+R NNA | Detects, collects, and contains sodium leaks | NSRST @@ NNA is non-safety-related with special treatment (NSRST)
+S NNA strategy is to mitigate the effects of a sodium fire once a leak has occurred. Leak prevention is outside its scope. @@ Leak prevention is outside the scope of NNA
+S The Fire Protection Program and Fire Hazards Analysis will be provided at the operating license stage. @@ The Fire Protection Program and Fire Hazards Analysis will be provided at the operating license stage
+K Which NFP system is NSRST? | NFD | NFS | NFA | NNA | 3 | NNA is NSRST. The other three are NST. @@ NNA is non-safety-related with special treatment (NSRST)
+K Is sodium leak prevention in the scope of NNA? | Yes, it is the main function | No, it is addressed by other systems | Only for the IHT | Only in the RXB | 1 | Leak prevention is outside the scope of NNA. @@ Leak prevention is outside the scope of NNA
+
+== Fire water supply | 3,4
+S Fire water comes from the Energy Island Fire Protection System (EFP). @@ The water supply to the NFD is from the Energy Island Fire Protection System
+S There are two fire water storage tanks with a minimum of 300,000 gallons each. Either can be refilled in 8 hours or less. @@ with a minimum of 300,000 gallons each
+S There are two fire pumps: a primary electric motor pump and a backup diesel engine driven pump. @@ a primary electric motor pump and a backup diesel engine driven pump
+S A jockey pump keeps required pressure in normal conditions. @@ A jockey pump is also installed in the system
+S The pumps have a 3-hour fire rated separation. @@ a 3-hour fire rated separation between the pumps
+K What is the minimum capacity of each fire water tank? | 100,000 gallons | 300,000 gallons | 574,000 gallons | 1,000,000 gallons | 1 | Each tank holds a minimum of 300,000 gallons. @@ with a minimum of 300,000 gallons each
+K Which fire pump is the backup? | Electric motor pump | Diesel engine driven pump | Jockey pump | NI Water pump | 1 | The primary is electric and the backup is diesel. @@ a primary electric motor pump and a backup diesel engine driven pump
+
+== Suppression and where water is kept out | 3,4,9
+S Water-based suppression is in buildings where sodium is not present. @@ The water-based suppression systems are located in buildings where sodium is not present
+S The RXB and RAB contain sodium, are not sprinklered, and do not contain fire water. @@ are the Reactor Building and the Reactor Auxiliary Building
+S The FHB contains sodium but has separated sprinklered areas, such as radwaste handling areas and truck bays. @@ such as radwaste handling areas and truck bays
+S Preaction systems are used where water-filled piping is not desirable. @@ are used where water-filled piping is not desirable
+S Clean agent systems serve areas where water would be detrimental. @@ are located where fire suppression is required but water would be detrimental
+S Four independent clean agent systems serve the NCB substructure, one for each RPS division. @@ There are four independent clean agent systems in the NI Control Building substructure
+S Class D extinguishers are in areas containing sodium. @@ Class D fire extinguishers are provided in areas containing sodium
+K Which buildings contain no fire water? | RXB and RAB | FHB and NCB | RAB and FHB | NCB only | 0 | The RXB and RAB are not sprinklered and do not contain fire water. @@ are the Reactor Building and the Reactor Auxiliary Building
+K How is the RPS protected from fire? | Wet pipe sprinklers | One clean agent system for each RPS division | Foam | Class D extinguishers only | 1 | One clean agent system is provided for each RPS division. @@ One system is provided for each Reactor Protection System division
+K What fire extinguisher is provided for sodium areas? | Class A only | Class B | Class C | Class D | 3 | Class D extinguishers are provided in areas containing sodium. @@ Class D fire extinguishers are provided in areas containing sodium
+
+== Detection and alarm | 3,5
+S NFA has initiation devices, notification appliances, control equipment, and wiring. @@ consists of initiation devices
+S Each building has its own Fire Alarm Control Panel. Panels are networked to the NFA workstation in the MCR. @@ Each building has its own Fire Alarm Control Panel
+S NFA and NNA have internal batteries for when power is not available. @@ The NFA has internal system storage batteries
+S Normal NFP operation is standby. @@ Normal system operation is standby mode
+S When smoke is detected in a duct, the NHV air handling unit shuts down and local smoke dampers close. @@ When smoke is detected in a duct, the associated NHV air handling unit is shut down
+S NFA also has trouble and supervisory modes. @@ The NFA also has trouble and supervisory modes
+S Sprinklers activate individually at their temperature, and clean agent systems activate on a signal from the NFA. @@ Automatic sprinklers activate individually
+K Smoke is detected in a duct. What is the automatic response? | Air handling unit shuts down and smoke dampers close | Clean agent releases plant-wide | Reactor scrams | Air handling unit speeds up | 0 | The unit shuts down and local smoke dampers close where installed. @@ When smoke is detected in a duct, the associated NHV air handling unit is shut down
+
+== Sodium leak strategy | 3,4
+S NNA detects leaked sodium, collects it, and drains it to catch pans, while giving operators early notice. @@ giving operators early notification of a leak so they can take necessary action
+S The overall strategy uses passive features and adds active ones only where necessary. @@ The overall sodium fire strategy is to use passive prevention and mitigation features
+T Feature | Description
+R Cell | Room with limited leak rate and known oxygen volume, either inerted or de facto inerted after a leak @@ Cells are rooms with a limited leak rate and known oxygen volume
+R Guard pipe | Fully redundant pipe that acts as a full secondary pressure boundary @@ Guard pipes are fully redundant pipes designed to the same conditions as the protected pipe
+R Guard enclosure | Like a guard pipe, with a drainpipe to a collection location @@ Guard enclosures act similarly to guard pipes
+R Clamshell | Guard enclosure placed where piping inspections are expected @@ A clamshell is a form of guard enclosure placed specifically where piping inspections are expected
+R Catch pan | Steel-lined volume that permanently retains a design-basis leak volume @@ Catch pans are a steel-lined volume designed to permanently retain design-basis sodium leak volume
+R Suppression deck | Applied to catch pans where oxygen volume cannot be limited @@ Suppression decks will be applied to catch pans where the environmental oxygen volume cannot be limited
+S Primary SPS cells in the RAB are inerted. IHT cells in the RAB are not. @@ inerted cells for portions of the primary SPS within the RAB and non-inerted cells for portions of the IHT
+S Intermediate sodium leaks in the HAA must be fully contained and removed from the HAA. @@ fully contain sodium leakage from the intermediate sodium SSCs within the HAA
+S Containment features are sized for the maximum leak volume plus 20%, and catch pan calculations use 25%. @@ To provide additional margin, 25% is used in the catch pan sizing calculations
+K What is a clamshell? | A guard enclosure placed where inspections are expected | A catch pan lid | A fire damper | An argon valve | 0 | A clamshell is a form of guard enclosure placed where piping inspections are expected. @@ A clamshell is a form of guard enclosure placed specifically where piping inspections are expected
+K When does a catch pan get a suppression deck? | Always | Where oxygen volume cannot be limited | Only in inerted cells | Never | 1 | Suppression decks are applied where the environmental oxygen volume cannot be limited. @@ Suppression decks will be applied to catch pans where the environmental oxygen volume cannot be limited
+K What margin is used in catch pan sizing calculations? | 10% | 20% | 25% | 50% | 2 | 25% is used in catch pan sizing. @@ To provide additional margin, 25% is used in the catch pan sizing calculations
+
+== Sodium leak detection | 5,6,8
+S Detectors are in leak mitigative features, at vulnerable valves, and inside catch pans. @@ Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans
+S Detectors are generally conductivity based with a self-test function. @@ Detectors will generally be based on conductivity detection with a self-
+S Smoke detection is used where sodium reactions may occur, such as IAC stacks. @@ In areas where sodium reactions may occur
+S Leak detector activation alarms in the MCR through the NIC. @@ The sodium leak detectors activate an alarm within the MCR upon detection of sodium
+T Function | Signal path | Action
+R DL4-RR3a | NNA to AMC | AMC closes the SPS-P supply valve @@ automatically closes Primary SPS (SPS-P) valve
+R DL4-RR3b | NNA to AMC | AMC trips SPS-P pumps @@ AMC automatically trips SPS-P pumps
+R DL4-RR3c | NNA to UMC | UMC closes NHV dampers @@ UMC automatically closes NI Heating, Ventilation, and Air Conditioning System (NHV) dampers
+K An SPS-P leak signal goes to the AMC. What does the AMC do? | Closes the SPS-P supply valve and trips pumps | Closes NHV dampers | Scrams the reactor | Starts fire pumps | 0 | AMC closes the supply valve and trips SPS-P pumps. UMC closes NHV dampers. @@ AMC automatically trips SPS-P pumps
+K Which control system closes NHV dampers on an SPS cell leak? | AMC | UMC | RPS | FHC | 1 | UMC automatically closes NHV dampers. @@ UMC automatically closes NI Heating, Ventilation, and Air Conditioning System (NHV) dampers
+K What kind of detector is used at IAC stacks? | Conductivity only | Smoke detection | Radiation | Flow | 1 | Smoke detection is provided where sodium reactions may occur, such as IAC stacks. @@ In areas where sodium reactions may occur
+
+== Safety significance | 9,10
+T Equipment | Classification
+R IHX nozzle clamshell and guard enclosure | NSRST @@ IHX Nozzle Clamshell & Guard Enclosure NSRST
+R IHX nozzle clamshell leak detection | NSRST @@ IHX Nozzle Clamshell Leak Detection NSRST
+R IHX nozzle clamshell and guard enclosure drain lines | NSRST @@ IHX Nozzle Clamshell & Guard Enclosure Drain Lines NSRST
+R SPS-P sodium leak detectors | NSRST @@ SPS-P Sodium Leak Detectors NSRST
+S NNA classification may change at the operating license stage as the fire analysis and PRA mature. @@ As the fire analysis and PRA matures, the safety classification and defense line allocations
+S The NFP is in full conformance with RG 1.189. @@ The NFP is designed to Regulatory Guide (RG) 1.189, Revision 5
+L Quality Assurance Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program ;; Design Reliability Assurance Program ;; Testing Program @@ preliminarily identified as applicable to NFP to meet quality
+K Why might NNA classifications change? | The fire analysis and PRA mature | The NRC waives them | Sodium type changes | The reactor power changes | 0 | Classification may change at the operating license stage as analysis matures. @@ As the fire analysis and PRA matures, the safety classification and defense line allocations
+Z NFD, NFS, and NFA are NST. NNA is NSRST and mitigates sodium leaks after they occur. @@ NNA is non-safety-related with special treatment (NSRST)
+Z The RXB and RAB hold no fire water. The RPS divisions have clean agent, and sodium areas have Class D extinguishers. @@ are the Reactor Building and the Reactor Auxiliary Building
+Z Leaks alarm in the MCR. AMC closes the SPS-P supply valve and trips pumps, and UMC closes NHV dampers. @@ AMC automatically trips SPS-P pumps

@@ -1,0 +1,716 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and boundaries",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The primary function of the PHT is to transport heat from the reactor core to the IHT.",
+     "anchor": "The primary function of the PHT is to transport heat from the reactor core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50"
+    },
+    {
+     "t": "p",
+     "text": "A safety-significant function is to keep primary sodium temperatures within limits that preclude damage to the reactor, fuel, or internals.",
+     "anchor": "maintain primary sodium temperatures within design limits",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50"
+    },
+    {
+     "t": "p",
+     "text": "The PHT includes two IHXs, two PSPs, and three sodium pools inside the RV. PSP flanges, IHX flanges, and PSP motors are above the reactor head.",
+     "anchor": "The PSP flanges, IHX flanges, and PSP motors are located above the reactor head",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50"
+    },
+    {
+     "t": "p",
+     "text": "PSP isolation circuit breakers are in the Nuclear Island Control Building, and the PSP adjustable speed drives are in the Nuclear Island Electrical Building.",
+     "anchor": "The PSP adjustable speed drives are located in the Nuclear Island Electrical Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-3-1",
+     "num": "7.1.3-1",
+     "cap": "Simplified PHT Flow Diagram",
+     "alt": "PSAR Rev 1 figure: Simplified PHT Flow Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-71"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are the PSP isolation circuit breakers located?",
+     "o": [
+      "Nuclear Island Electrical Building",
+      "Nuclear Island Control Building",
+      "Reactor head",
+      "Energy Island"
+     ],
+     "a": 1,
+     "x": "The PSP isolation circuit breakers are located in the Nuclear Island Control Building.",
+     "anchor": "The PSP isolation circuit breakers are located in the Nuclear Island Control Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Primary Sodium Pumps",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The PSPs are two identical vertical centrifugal pumps on opposite sides of the RV. They draw from the cold pool and discharge into the core inlet plenum.",
+     "anchor": "The PSPs are two identical vertically-oriented centrifugal pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.1, p. 7.1-60"
+    },
+    {
+     "t": "p",
+     "text": "The pump shaft is sealed near the support flange to prevent sodium and cover gas leakage, and the seal also limits air and moisture leakage into the RV.",
+     "anchor": "The seal also limits leakage of both air and moisture into the RV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.1, p. 7.1-60"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Parameter",
+      "Nominal value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Flow at full power",
+        "40,000 gpm"
+       ],
+       "anchor": "Flow @ Full Power Operating Point 40,000 gpm",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67"
+      },
+      {
+       "cells": [
+        "Pump head at full power",
+        "300 ft"
+       ],
+       "anchor": "Pump Head @ Full Power Operating Point 300 ft",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67"
+      },
+      {
+       "cells": [
+        "Coastdown halving time",
+        "3.5 to 5 s"
+       ],
+       "anchor": "Coastdown Halving Time 3.5 - 5 s",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67"
+      },
+      {
+       "cells": [
+        "Design temperature",
+        "1,050 F"
+       ],
+       "anchor": "Design Temperature 1,050°F",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67"
+      }
+     ]
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-3-3",
+     "num": "7.1.3-3",
+     "cap": "Sectional View of Installed Primary Sodium Pump",
+     "alt": "PSAR Rev 1 figure: Sectional View of Installed Primary Sodium Pump",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-73"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where do the PSPs take suction?",
+     "o": [
+      "Warm pool",
+      "Core inlet plenum",
+      "Hot pool",
+      "Cold pool"
+     ],
+     "a": 3,
+     "x": "The PSPs draw sodium from the cold pool and discharge into the core inlet plenum.",
+     "anchor": "by drawing sodium from the cold pool and discharging into the reactor core inlet plenum",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.1, p. 7.1-60",
+     "eo": "3"
+    },
+    {
+     "q": "What is the PSP coastdown halving time?",
+     "o": [
+      "0.5 to 1 s",
+      "3.5 to 5 s",
+      "20 to 30 s",
+      "60 s"
+     ],
+     "a": 1,
+     "x": "Table 7.1.3-3 lists a coastdown halving time of 3.5 to 5 s.",
+     "anchor": "Coastdown Halving Time 3.5 - 5 s",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Intermediate Heat Exchangers",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The IHXs are vertical, counter-flow, single-pass, straight-tube heat exchangers with a floating lower head.",
+     "anchor": "The IHXs are vertical, counter-flow, single-pass, straight-tube type heat exchangers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.1, p. 7.1-62"
+    },
+    {
+     "t": "p",
+     "text": "Primary sodium is on the shell side and intermediate sodium is on the tube side.",
+     "anchor": "Flow in the IHX includes the primary sodium on the shell side and the intermediate sodium on the tube side",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.1, p. 7.1-63"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Parameter",
+      "Nominal value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Rated capacity",
+        "425 MWth each"
+       ],
+       "anchor": "Rated capacity 1,450 MBtu/hr (425 MWth)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-69"
+      },
+      {
+       "cells": [
+        "Primary inlet and outlet",
+        "950 F and 680 F"
+       ],
+       "anchor": "Nominal Primary Sodium Inlet Temperature 950°F (510°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-69"
+      },
+      {
+       "cells": [
+        "Intermediate inlet and outlet",
+        "620 F and 910 F"
+       ],
+       "anchor": "Nominal Intermediate Sodium Outlet Temperature 910°F (490°C)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-69"
+      }
+     ]
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-3-4",
+     "num": "7.1.3-4",
+     "cap": "Intermediate Heat Exchangers",
+     "alt": "PSAR Rev 1 figure: Intermediate Heat Exchangers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-74"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which fluid is on the tube side of the IHX?",
+     "o": [
+      "Primary sodium",
+      "Intermediate sodium",
+      "Salt",
+      "Air"
+     ],
+     "a": 1,
+     "x": "Intermediate sodium is on the tube side.",
+     "anchor": "Flow in the IHX includes the primary sodium on the shell side and the intermediate sodium on the tube side",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.1, p. 7.1-63",
+     "eo": "3"
+    },
+    {
+     "q": "What is the nominal intermediate sodium outlet temperature of the IHX?",
+     "o": [
+      "620 F",
+      "680 F",
+      "910 F",
+      "950 F"
+     ],
+     "a": 2,
+     "x": "Table 7.1.3-5 lists 910 F.",
+     "anchor": "Nominal Intermediate Sodium Outlet Temperature 910°F (490°C)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-69",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Normal operation",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "During normal operation, in Modes 1, 2, 3, and 4, the PSPs drive flow from the cold pool, through the core to the hot pool, and through the IHX to the cold pool.",
+     "anchor": "in all modes of operation (Modes 1, 2, 3, and 4), the PSPs provide motive force",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58"
+    },
+    {
+     "t": "p",
+     "text": "The PSPs are the only PHT components that need operator inputs to change state in normal operation.",
+     "anchor": "The PSPs are the only PHT components that require operator inputs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Condition",
+      "PSP operation"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Full power",
+        "Full flow"
+       ],
+       "anchor": "While at full power, the PSPs operate at full flow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+      },
+      {
+       "cells": [
+        "Refueling and shutdown",
+        "Low flow"
+       ],
+       "anchor": "During refueling and shutdown, the PSPs operate at low flow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+      },
+      {
+       "cells": [
+        "Extended shutdown",
+        "Variable flow, to provide heat that keeps sodium liquid"
+       ],
+       "anchor": "to provide heat to maintain the sodium inventory in a liquid state",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+      },
+      {
+       "cells": [
+        "Startup",
+        "Raise sodium to hot zero power temperature, then reduce to minimum and increase with power"
+       ],
+       "anchor": "During startup of the reactor, the PSPs raise the primary sodium temperature to the hot zero power temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "During extended shutdowns with no decay heat, how do the PSPs help?",
+     "o": [
+      "They operate at variable flow to provide heat that keeps sodium liquid",
+      "They reverse flow",
+      "They run at full flow",
+      "They stop to save sodium"
+     ],
+     "a": 0,
+     "x": "The PSPs operate at variable flow rates to provide heat to keep the inventory liquid.",
+     "anchor": "to provide heat to maintain the sodium inventory in a liquid state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Response to runback, scram, and LOOP",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Event",
+      "PSP response"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Power runback",
+        "Both PSPs gradually reduce flow to follow reactor power. Power-to-flow ratio stays at or below one"
+       ],
+       "anchor": "The power-to-flow ratio is kept less than or equal to one during the power runback",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58"
+      },
+      {
+       "cells": [
+        "Reactor scram",
+        "PSPs ramp down on a predefined curve to minimum flow"
+       ],
+       "anchor": "the PSPs are ramped down using a predefined ramp down curve to minimum flow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+      },
+      {
+       "cells": [
+        "Loss of offsite power",
+        "Coastdown starts immediately when power is lost"
+       ],
+       "anchor": "coastdown is initiated immediately when power is lost to the PSPs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-62"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "After a LOOP, pumps go to minimum flow if power returns from the standby diesel generators. If not, flow reduces to natural circulation rates.",
+     "anchor": "the pumps transition to a minimum flow if power is restored via the standby diesel generators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-59"
+    },
+    {
+     "t": "p",
+     "text": "During an LBE, the PSPs are automatically controlled by the NIC or the RPS.",
+     "anchor": "During LBEs, the PSPs are automatically controlled by the NIC or the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61"
+    }
+   ],
+   "checks": [
+    {
+     "q": "During a power runback, the power-to-flow ratio is kept at what value?",
+     "o": [
+      "Above 1.2",
+      "Less than or equal to one",
+      "Exactly 0.5",
+      "Uncontrolled"
+     ],
+     "a": 1,
+     "x": "The ratio is kept less than or equal to one.",
+     "anchor": "The power-to-flow ratio is kept less than or equal to one during the power runback",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58",
+     "eo": "4,6"
+    },
+    {
+     "q": "After a reactor scram, the PSPs do what?",
+     "o": [
+      "Reverse",
+      "Trip immediately in all cases",
+      "Ramp down on a predefined curve to minimum flow",
+      "Stay at full flow"
+     ],
+     "a": 2,
+     "x": "PSPs ramp down on a predefined curve to minimum flow.",
+     "anchor": "the PSPs are ramped down using a predefined ramp down curve to minimum flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Automatic trip and natural circulation",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "PSP trip function DL3-HR2 uses a combination of low neutron flux signal, an existing scram signal, and cold pool temperature at the high high setpoint.",
+     "anchor": "trip on a combination of a",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56"
+    },
+    {
+     "t": "p",
+     "text": "In a PSP trip, rotational inertia gives coastdown flow for a smooth transition to natural circulation without flow reversal in the fuel channels.",
+     "anchor": "have sufficient rotational inertia to provide coastdown flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56"
+    },
+    {
+     "t": "p",
+     "text": "A natural flow path exists through the PSPs when the shaft is stopped.",
+     "anchor": "a natural flow path through them exists when the shaft is stopped",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-62"
+    },
+    {
+     "t": "p",
+     "text": "During natural circulation the flow path is unchanged. If heat transfer to the IHT is not available, all decay heat goes to RAC.",
+     "anchor": "if heat transfer to IHT is not available, all decay heat is transferred to RAC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-51"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-3-2",
+     "num": "7.1.3-2",
+     "cap": "Simplified RAC and PHT Process Flow Diagram",
+     "alt": "PSAR Rev 1 figure: Simplified RAC and PHT Process Flow Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-72"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which signals combine to trip the PSP breakers under DL3-HR2?",
+     "o": [
+      "Low level only",
+      "Low neutron flux, a scram signal, and cold pool high high temperature",
+      "Loss of offsite power and low flow",
+      "High flux rate and level"
+     ],
+     "a": 1,
+     "x": "The trip uses low neutron flux, a scram signal, and cold pool temperature at the high high setpoint.",
+     "anchor": "trip on a combination of a",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56",
+     "eo": "6"
+    },
+    {
+     "q": "What is the purpose of the PSP rotational inertia?",
+     "o": [
+      "To reduce seal leakage",
+      "To reduce vibration",
+      "To raise pump head",
+      "Coastdown flow for a smooth transition to natural circulation"
+     ],
+     "a": 3,
+     "x": "Inertia provides coastdown flow for a smooth transition to natural circulation.",
+     "anchor": "have sufficient rotational inertia to provide coastdown flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Indications and abnormal conditions",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Parameter",
+      "Safety-significant signal"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Cold pool and hot pool sodium temperature",
+        "Yes"
+       ],
+       "anchor": "Cold Pool Primary Sodium Temperature Yes",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-65"
+      },
+      {
+       "cells": [
+        "Hot pool sodium level",
+        "Yes"
+       ],
+       "anchor": "Hot Pool Primary Sodium Level Yes",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-65"
+      },
+      {
+       "cells": [
+        "PSP speed and current",
+        "Yes"
+       ],
+       "anchor": "PSP Speed (Primary Sodium Flow) Yes",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-65"
+      },
+      {
+       "cells": [
+        "PSP voltage and frequency, pump tank level",
+        "No"
+       ],
+       "anchor": "PSP Voltage (Primary Sodium Flow) No",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-65"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "RIS includes instrumentation for PHT parameters processed by the RPS. The Coolant Temperature Monitoring and Control System, in the NIC, monitors and controls PHT flow functions.",
+     "anchor": "monitors and controls PHT flow functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.4, p. 7.1-59"
+    },
+    {
+     "t": "p",
+     "text": "Intermediate leakage into primary sodium is detected by IHT expansion tank level decrease and PHT hot pool level increase.",
+     "anchor": "would be detected by IHT expansion tank level decrease",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What two trends indicate an IHX tube leak?",
+     "o": [
+      "Both levels up",
+      "Both levels down",
+      "Hot pool level down, expansion tank level up",
+      "IHT expansion tank level down, hot pool level up"
+     ],
+     "a": 3,
+     "x": "Leakage is detected by expansion tank level decrease and hot pool level increase.",
+     "anchor": "would be detected by IHT expansion tank level decrease",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "No operator actions are required to implement PHT SR functions.",
+     "anchor": "No operator actions are required to implement PHT SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58"
+    },
+    {
+     "t": "list",
+     "items": [
+      "DL3-HR1: PSP coastdown",
+      "DL3-HR2: PSP trip on high high primary sodium temperature",
+      "DL3-HR5: natural circulation of sodium"
+     ],
+     "anchor": "DL3-HR1 PSP Coastdown (SR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56"
+    },
+    {
+     "t": "p",
+     "text": "PSP isolation circuit breakers are designed to permit periodic testing.",
+     "anchor": "The PSP isolation circuit breakers are designed to permit periodic testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-55"
+    },
+    {
+     "t": "p",
+     "text": "High point vents are not required to maintain core cooling.",
+     "anchor": "High point vents are not required to maintain core cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-57"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Comprehensive Vibration Assessment Program",
+      "Post-construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the PHT",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.3, p. 7.1-59"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Are operator actions required to implement PHT SR functions?",
+     "o": [
+      "No",
+      "Only at low power",
+      "Yes, a manual PSP trip",
+      "Yes, valve alignment"
+     ],
+     "a": 0,
+     "x": "No operator actions are required to implement PHT SR functions.",
+     "anchor": "No operator actions are required to implement PHT SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "PSPs take suction from the cold pool and discharge to the core inlet plenum.",
+   "anchor": "by drawing sodium from the cold pool and discharging into the reactor core inlet plenum",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.1, p. 7.1-60"
+  },
+  {
+   "text": "PSP inertia gives a smooth transition to natural circulation.",
+   "anchor": "have sufficient rotational inertia to provide coastdown flow",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56"
+  },
+  {
+   "text": "IHX leakage goes from intermediate to primary, seen as expansion tank level down and hot pool level up.",
+   "anchor": "would be detected by IHT expansion tank level decrease",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-03",
+ "title": "Primary Heat Transport System",
+ "kind": "system",
+ "subject": "PHT",
+ "sec_note": "Sec. 7.1.3, pp. 7.1-50 to 7.1-74",
+ "intro": "The PHT moves core heat to the intermediate loops. It has two pumps, two heat exchangers, and three sodium pools, and it keeps working by natural circulation when the pumps stop.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the PHT.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the PHT boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the PHT.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain PHT operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the PHT controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the PHT automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the PHT.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the PHT.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the PHT.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the PHT.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-03-primary-heat-transport-system"
+}

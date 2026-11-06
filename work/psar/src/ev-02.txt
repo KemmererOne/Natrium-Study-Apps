@@ -1,0 +1,66 @@
+# EV-02 | Loss of Primary Flow DBEs | event | event
+range: 3.7-1 3.7-2 3.3-4 3.3-7 3.9-1 3.9-2 3.6-1 3.6-1
+sec: Sec. 3.7.1, pp. 3.7-1 to 3.7-2, with Secs. 3.3.4 and 3.9.1
+intro: Three design basis events start with lost primary flow: one pump lost, offsite power lost at full power, and offsite power lost at low power.
+
+== Event initiators and assumptions | 1
+S A DBE is an infrequent event sequence, less likely than an AOO and not expected in the life of the plant. @@ infrequent event sequences that are less likely than anticipated
+S Event sequences with mean frequencies of 1x10-4 to 1x10-2 per plant-year are classified as DBEs. @@ mean frequencies of 1x10-4 per plant-year to 1x10-2 per plant-year are classified as DBEs
+S DBE analysis takes into account the expected response of all structures, systems, and components, regardless of safety classification. @@ take into account the expected responses of all structures, systems, or components within the
+T DBE | Initiator | Initial condition
+R DHP-L1PP-2 | Partial loss of primary flow from loss of a single PSP | Full power @@ The postulated initiating event is a partial loss of primary flow due to the loss of a single Primary
+R DHP-LOOP-1 | Loss of offsite power | Full power @@ The postulated initiating event is a loss of offsite power during full power operating conditions,
+R SUD-LOOP-1 | Loss of offsite power | Low power @@ The postulated initiating event is a loss of offsite power during low power operating
+S Full power analysis starts at 100 percent reactor power, 100 percent core flow, and 360.1°C core inlet temperature. @@ Full Power 100 100 360.1
+S Low power analysis starts at 5 percent reactor power, 15 percent core flow, and 309.5°C core inlet temperature. @@ Low Power 5 15 309.5
+K What frequency band defines a DBE? | Above 1x10-2 per plant-year | 1x10-4 to 1x10-2 per plant-year | 1x10-7 to 1x10-4 per plant-year | Below 1x10-7 per plant-year | 1 | Mean frequencies of 1x10-4 to 1x10-2 per plant-year are classified as DBEs. @@ mean frequencies of 1x10-4 per plant-year to 1x10-2 per plant-year are classified as DBEs
+K Which equipment does DBE analysis take into account? | Safety-related SSCs only | Non-safety-related SSCs only | All SSCs regardless of safety classification | Only passive SSCs | 2 | DBEs take into account the expected response of all SSCs. DBAs are the events limited to safety-related SSCs. @@ take into account the expected responses of all structures, systems, or components within the
+
+== Challenged functions and acceptance | 2
+S Core flow reduction raises primary sodium temperature until the reactor scrams, so the core must be shut down and its heat carried away. @@ primary sodium temperature increases due to the core flow reduction
+S For all three events, the fuel performance acceptance criteria are satisfied, fuel integrity is maintained for the peak fuel pin, and there is no radiological release. @@ fuel integrity is maintained for
+S The safe shutdown end state requires peak cladding temperature below 1157°F (625°C) and stable or decreasing. @@ Peak Cladding Temperature value below 1157°F (625°C) and is stable or decreasing
+K What is the radiological result for the three loss of primary flow DBEs? | A release below the EAB limit | No radiological release | A cover gas release only | A release held in the HAA | 1 | Acceptance criteria are satisfied, fuel integrity is maintained, and no release occurs. @@ there is no radiological release for this licensing basis event
+
+== Event chronology | 3
+T Step | One PSP lost (DHP-L1PP-2)
+R 1 | One PSP is lost at full power @@ due to the loss of a single Primary
+R 2 | Reactor scrams on high high power-to-flow ratio @@ A reactor scram on high high
+R 3 | The unaffected PSP and the ISPs trip on high high primary sodium temperature @@ The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on
+R 4 | Non-passive and passive IAC cooling fail on both trains @@ Non-passive and passive Intermediate Air Cooling
+R 5 | Reactor reaches safe shutdown with RAC removing decay heat @@ shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal
+S In the loss of offsite power at full power, the reactor scrams on high high power-to-flow ratio, non-passive IAC fails on both trains, and IAC passive mode removes decay heat. @@ The final conditions result in the reactor in safe shutdown with the IAC passive mode
+S At low power the reactor scrams because of the loss of primary flow, not on power-to-flow ratio. @@ The reactor scrams due to the loss of primary flow
+K What trips the unaffected PSP in DHP-L1PP-2? | Low cold pool temperature | High high primary sodium temperature | Low sodium level | Manual action | 1 | The unaffected PSP and the ISPs trip on high high primary sodium temperature. @@ The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on
+K In DHP-LOOP-1, what removes decay heat at the end state? | IAC passive mode | IAC active mode | The steam plant | The SPS | 0 | Non-passive IAC fails on both trains, so IAC passive mode provides decay heat removal. @@ The final conditions result in the reactor in safe shutdown with the IAC passive mode
+
+== Key parameter trends | 4
+S Primary sodium temperature rises from the flow reduction, then falls after the scram. @@ primary sodium temperature increases due to the core flow reduction and decreases after the reactor scrams
+Q The primary sodium temperature may increase after the PSP coast down is complete as the core transitions to natural circulation cooling, then decreases after natural circulation cooling is established and decay heat decreases.
+N Study point: expect two temperature rises when the pumps trip. The first ends at the scram. The second can follow pump coast down, before natural circulation is established.
+K After the PSPs coast down, what can primary sodium temperature do? | Stay flat | Rise as the core moves to natural circulation, then fall | Fall without limit | Oscillate until restart | 1 | Temperature may increase after coast down, then decrease once natural circulation is established and decay heat falls. @@ then decreases after natural circulation cooling is established and decay heat decreases
+
+== Automatic protective actions | 5
+L Scram on loss of flow or high high power-to-flow ratio ;; PSPs and ISPs reduce speed if a scram occurs ;; Remaining PSPs and ISPs trip if the high high primary sodium temperature setpoints are reached @@ results in a scram on loss of flow or high high power-to-flow ratio
+K Which signals does the PSAR give for a scram after loss of primary flow? | High cover gas pressure or low level | Loss of flow or high high power-to-flow ratio | High radiation or seismic | High salt temperature | 1 | The loss of one or both PSPs results in a scram on loss of flow or high high power-to-flow ratio. @@ results in a scram on loss of flow or high high power-to-flow ratio
+
+== Credited equipment and failed functions | 8,9
+S RAC and the available modes of IAC remove decay heat. @@ The decay heat removal is provided by RAC and available modes of IAC
+S When passive and non-passive IAC are unavailable, the thermal capacity of the piping, components, and intermediate sodium in the intermediate loops is assumed available. @@ when the passive and non-passive modes of IAC are unavailable
+T Failure assumed | What carries decay heat
+R Non-passive IAC fails on both trains | IAC passive mode @@ The final conditions result in the reactor in safe shutdown with the IAC passive mode
+R Non-passive and passive IAC fail on both trains | RAC @@ Non-passive and passive Intermediate Air Cooling
+S A function failed in an LBE description was not necessarily failed by the initiating event. @@ The assumption that a function fails in the LBE description does not necessarily mean the failure was a result
+N Study point: read these events as a ladder. Each DBE removes one more means of cooling, and the next means carries the heat.
+K If all IAC modes fail in DHP-L1PP-2, what removes decay heat? | RAC | SPS | SCG | NHV | 0 | RAC provides decay heat removal when non-passive and passive IAC fail on both trains. @@ shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal
+
+== End state and operator role | 10,12
+S All three events end with the reactor in safe shutdown. @@ The final conditions result in the reactor in
+S Operator actions are not required to mitigate DBEs unless the DBE description says otherwise. @@ Operator actions are not required to mitigate DBEs
+S Each DBE here is the most limiting DBE mapped to a matching DBA, where only safety-related equipment is credited. @@ This is the most limiting DBE that mapped to the DHP-L1PP-CN design basis accident
+S In the DBA versions of these events, RAC is the decay heat removal system in all three cases. @@ The final conditions result in the reactor in safe shutdown with the RAC providing decay heat removal
+K Are operator actions required to mitigate the loss of primary flow DBEs? | Yes, within 30 minutes | Yes, within 72 hours | No, unless noted in the DBE description | Only at low power | 2 | Operator actions are not required to mitigate DBEs unless otherwise noted in the description. @@ Operator actions are not required to mitigate DBEs
+
+Z Loss of flow DBEs scram on high high power-to-flow ratio at full power, or on loss of primary flow at low power. @@ A reactor scram on high high
+Z Temperature can rise a second time after pump coast down, until natural circulation is established. @@ then decreases after natural circulation cooling is established and decay heat decreases
+Z RAC is the last means of decay heat removal in the sequence, and these events produce no radiological release. @@ shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal

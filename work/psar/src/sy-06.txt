@@ -1,0 +1,58 @@
+# SY-06 | Intermediate Air Cooling System | system | IAC
+range: 7.2-13 7.2-21
+sec: Sec. 7.2.2, pp. 7.2-13 to 7.2-21
+intro: IAC is the normal way to reject reactor heat at low power and shutdown. Two trains of air heat exchangers sit in the yard, with three modes from fully powered to fully passive.
+
+== Purpose | 1
+S IAC transfers heat from the intermediate sodium to the atmosphere. @@ transfers heat from the intermediate sodium (described in Section 7.1.4) to the atmosphere
+S IAC is the primary and preferred means of reactor heat removal during low power and shutdown conditions. @@ is the primary and preferred means of reactor heat removal during low power and shutdown conditions
+S It also supports start-up and shutdown transitions to and from NSS cooling. @@ for transition to and from Nuclear Island Salt System cooling
+K When is IAC the primary and preferred means of reactor heat removal? | Full power | Low power and shutdown conditions | Only in accidents | Only during refueling | 1 | IAC is primary and preferred during low power and shutdown. @@ is the primary and preferred means of reactor heat removal during low power and shutdown conditions
+
+== Components and boundaries | 2,3
+S IAC has two equal capacity trains. Each has an AHX, air stack, air blower, dampers, and air heater in an ASE structure. @@ consists of two equal capacity trains
+S The two ASEs are in the yard on either side of the RAB. @@ The two ASEs are located in the yard area on either side of the Reactor Auxiliary Building
+S An AHX is in series within each intermediate loop. Sodium is on the tube side and air on the shell side. @@ Intermediate sodium flows on the tube-side of the AHX with airflow on the shell-side
+S The ASEs have sodium catch pans and leak detection below the AHXs. @@ provisions for sodium catch pans and leak detection below the AHXs
+F 7.2.2-1
+K Which fluid is on the tube side of the AHX? | Air | Intermediate sodium | Salt | Primary sodium | 1 | Intermediate sodium flows on the tube side. @@ Intermediate sodium flows on the tube-side of the AHX with airflow on the shell-side
+
+== Operating modes | 4
+T Mode | Sodium flow | Air flow | Use
+R Active | Forced, by ISPs | Forced, by blowers | Normal operation cooling @@ IAC Active Mode provides normal operation cooling
+R Blower | Natural circulation | Forced, by blowers | Off-normal, when ISPs are unavailable @@ IAC Blower Mode provides off-normal operation cooling
+R Passive | Natural circulation | Natural convection | Emergency cooling @@ IAC Passive Mode provides emergency operation cooling
+S IAC is shut down and in standby during Mode 1. @@ The IAC is shut down and available in standby while the plant is operating in Mode-1
+S A single train in Active Mode or Blower Mode provides the required heat removal for the limiting decay heat load. @@ A single train of IAC operating in Blower Mode provides the required heat removal
+S In Passive Mode, the limiting decay heat load needs two trains in operation. @@ with two trains in operation
+K Which IAC mode has natural circulation of sodium and forced airflow? | Active | Blower | Passive | Standby | 1 | Blower Mode uses natural circulation of sodium and forced airflow. @@ IAC Blower Mode provides off-normal operation cooling
+K How many trains are needed in Passive Mode for the limiting decay heat load? | One | Two | Three | None | 1 | Passive Mode provides the required removal with two trains in operation. @@ with two trains in operation
+
+== Dampers and automatic behavior | 4,6
+S Air dampers above and below the AHXs are normally closed in Mode 1 to limit heat transfer. @@ are normally closed during Mode-1 operation
+S These dampers fail open on loss of power. @@ The dampers fail open on loss of power
+S Blower discharge dampers are normally open and fail open. @@ The blower discharge dampers are normally open and fail open
+S No automatic actuations or manual actions are needed for Passive Mode, and no electrical power is needed to start natural convection airflow. @@ No electrical power is required to initiate natural convection airflow across the AHX
+K What do the AHX dampers do on loss of power? | Fail closed | Fail open | Fail as is | Close on spring return after a delay | 1 | The dampers fail open on loss of power. @@ The dampers fail open on loss of power
+K Why are the AHX dampers closed in Mode 1? | To limit heat transferred from the intermediate sodium | To keep sodium from freezing in the stack | To block rain | To protect the blowers | 0 | They limit heat transferred from the intermediate sodium when IAC is not required. @@ to limit heat transferred from the intermediate sodium when the IAC is not required
+
+== Indications | 5
+S IAC parameters are monitored by the NIC, and also by local control panels or local gauges. @@ are monitored by the Nuclear Island Control System (NIC)
+K Where are IAC parameters monitored? | Only locally | NIC and local panels or gauges | RPS only | Fire panels | 1 | Parameters are monitored by the NIC and via local panels or gauges. @@ are monitored by the Nuclear Island Control System (NIC)
+
+== Sodium leak and fire protection | 8
+S The ASE diverts leakage to collection points and minimizes the surface area of leaked sodium exposed to air. @@ by diverting leakage to collection points
+S There are no water-based suppression systems and no fire water piping in the ASE. @@ There are no water-based suppression systems and no fire water piping in the ASE
+S Weather caps limit water intrusion into the ASE. @@ are provided with weather caps to limit water intrusion
+K Why is there no water suppression in the ASE? | Cost | The AHX contains sodium and contact with water is avoided | It is outdoors | It is NST | 1 | The IAC is designed to avoid contact between sodium and water. @@ the IAC is designed and located to avoid contact between sodium and water
+
+== Safety significance | 9,10
+S DL4-HR1 IAC passive mode operation is NSRST. It removes heat when the ISP and RAC are unavailable. @@ DL4-HR1 IAC Passive Mode Operation
+S Passive Mode is the safety-significant defense-in-depth backup to the SR RAC. @@ provides the safety-significant defense-in-depth backup to the SR Reactor Air Cooling System
+S ASE, air stack, AHX, blower, heater, dampers, screens, and stack cap are NSRST. @@ ASE, Air Stack NSRST SCN1
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the IAC
+K What is the safety classification of the AHX? | SR | NSRST | NST | Class 1E | 1 | Table 7.2.2-1 lists the AHX as NSRST. @@ AHX NSRST SCN1
+
+Z IAC has two trains and three modes: Active, Blower, and Passive. @@ consists of two equal capacity trains
+Z AHX dampers are closed in Mode 1 and fail open on loss of power. @@ The dampers fail open on loss of power
+Z Passive Mode needs no power and no actions, and is the DID backup to RAC. @@ provides the safety-significant defense-in-depth backup to the SR Reactor Air Cooling System

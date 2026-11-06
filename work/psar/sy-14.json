@@ -1,0 +1,635 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and layout",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The NHV is allocated per building. It provides fresh air and controls exhaust from all NI buildings.",
+     "anchor": "is allocated on a per building basis within the nuclear island",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1"
+    },
+    {
+     "t": "p",
+     "text": "The RAB, RXB, FHB, and FAB have RCAs, where airflow goes from lesser to higher potential contamination.",
+     "anchor": "HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1"
+    },
+    {
+     "t": "p",
+     "text": "The NCB does not contain RCAs.",
+     "anchor": "The Nuclear Island Control Building (NCB) does not contain RCAs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1"
+    },
+    {
+     "t": "p",
+     "text": "The NHV is NSRST to support radionuclide retention and MCR isolation.",
+     "anchor": "to support radionuclide retentions functions described in Section 7.5.1.2",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1"
+    },
+    {
+     "t": "p",
+     "text": "The controlled combined release path from the FHB, RXB, RAB, and FAB through the monitored plant stack is an NSRST function.",
+     "anchor": "through the monitored plant stack is an NSRST function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which way does RCA airflow go?",
+     "o": [
+      "Straight to the stack with no filter",
+      "Higher to lesser contamination",
+      "Lesser to higher potential contamination",
+      "It is not controlled"
+     ],
+     "a": 2,
+     "x": "Airflow goes from areas of lesser to areas of higher potential contamination.",
+     "anchor": "HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1",
+     "eo": "1,2"
+    },
+    {
+     "q": "Which building has no RCAs?",
+     "o": [
+      "FHB",
+      "RXB",
+      "RAB",
+      "NCB"
+     ],
+     "a": 3,
+     "x": "The NCB does not contain RCAs.",
+     "anchor": "The Nuclear Island Control Building (NCB) does not contain RCAs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Reactor Building",
+   "eo": [
+    "3",
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RXB HVAC keeps the building at slightly negative pressure with NST HEPA exhaust units. Exhaust goes to the monitored stack.",
+     "anchor": "The RXB HVAC equipment maintains the building at slightly negative pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "HAA isolation uses one inboard and one outboard air operated valve pair for each penetration.",
+     "anchor": "the double isolation arrangement of one inboard and one outboard air operated valve pair",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "The below grade SCG vapor trap cell is slightly negative with an inerted atmosphere and is monitored for SCG leakage.",
+     "anchor": "The below grade SCG vapor trap cell is maintained at slightly negative pressure with inerted atmosphere",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "The reactor overpressure protection release point is the SCG trap cell.",
+     "anchor": "The reactor overpressure protection release point is the SCG trap cell",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "The trap cell is automatically isolated on leakage indication in the MCR.",
+     "anchor": "The SCG trap cell is automatically isolated upon leakage indication in the MCR",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "The NHV cooling loop isolates automatically on reactor vessel relief valve position.",
+     "anchor": "The cooling loop is automatically isolated based on the position indication of the reactor vessel relief valves",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the release point for reactor overpressure protection?",
+     "o": [
+      "Plant stack",
+      "RWG holdup tank",
+      "HAA",
+      "SCG trap cell"
+     ],
+     "a": 3,
+     "x": "The reactor overpressure protection release point is the SCG trap cell.",
+     "anchor": "The reactor overpressure protection release point is the SCG trap cell",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5",
+     "eo": "3,4,6"
+    },
+    {
+     "q": "How is each HAA penetration isolated?",
+     "o": [
+      "A HEPA filter",
+      "One damper",
+      "An inboard and an outboard valve",
+      "Manual blank"
+     ],
+     "a": 2,
+     "x": "There is one inboard and one outboard air operated valve pair for each penetration.",
+     "anchor": "the double isolation arrangement of one inboard and one outboard air operated valve pair",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5",
+     "eo": "3,4,6"
+    }
+   ]
+  },
+  {
+   "title": "Reactor Auxiliary Building",
+   "eo": [
+    "3",
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RAB HVAC also keeps the building slightly negative, using NST HEPA exhaust units to the monitored stack.",
+     "anchor": "The RAB HVAC equipment maintains the building at slightly negative pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "Below grade SPS cells are slightly negative with inerted atmosphere during operations.",
+     "anchor": "Below grade SPS cells are maintained at slightly negative pressure with inerted atmosphere",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    },
+    {
+     "t": "p",
+     "text": "SPS cell leak detectors connect to an NFP sodium leak detection control panel. It sends signals to the utility monitoring and control system for cell isolation.",
+     "anchor": "transmits the sodium leak detection signals to the nuclear island utility monitoring and control system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is SPS cell isolation signaled?",
+     "o": [
+      "From the NACP through the utility monitoring and control system",
+      "From the RPS",
+      "By manual action only",
+      "From the FHC"
+     ],
+     "a": 0,
+     "x": "The NACP transmits leak signals to the utility monitoring and control system.",
+     "anchor": "transmits the sodium leak detection signals to the nuclear island utility monitoring and control system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6",
+     "eo": "3,4,6"
+    }
+   ]
+  },
+  {
+   "title": "Fuel Handling Building",
+   "eo": [
+    "3",
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "FHB normal exhaust goes through two 50 percent HEPA filtration units.",
+     "anchor": "The FHB normal exhaust is provided through two 50 percent HEPA filtration units",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "Differential pressure monitors on the main working floor control exhaust flow to keep the FHB slightly negative.",
+     "anchor": "Exhaust flow is controlled by differential pressure monitors installed on the main FHB working floor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "All FHB exhaust goes through welded ductwork, HEPA filters, and the monitored stack.",
+     "anchor": "through welded ductwork, HEPA filters and out the monitored plant stack",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "High radiation on HEPA filter discharge alarms in the MCR for manual operator action.",
+     "anchor": "Indication of high radiation on the HEPA filter discharge alarms in the M",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many FHB exhaust filter units does normal exhaust use?",
+     "o": [
+      "One 100 percent unit",
+      "Two 50 percent units",
+      "Three 50 percent units",
+      "Four 25 percent units"
+     ],
+     "a": 1,
+     "x": "Normal exhaust is through two 50 percent HEPA filtration units.",
+     "anchor": "The FHB normal exhaust is provided through two 50 percent HEPA filtration units",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6",
+     "eo": "3,4,8"
+    }
+   ]
+  },
+  {
+   "title": "Control room habitability",
+   "eo": [
+    "4",
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Sodium monitors, toxic chemical sensors, and a radiation monitor continually sample the MCR fresh air intake.",
+     "anchor": "Sodium monitors, toxic chemical sensors, and a radiation monitor continually sample the MCR fresh air intake",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "On an elevated hazard, an MCR alarm alerts operators to place MCR HVAC units in recirculation and deenergize the below grade HVAC systems.",
+     "anchor": "to place the MCR HVAC units in recirculation mode and deenergize the below grade HVAC systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "Deenergizing below grade HVAC prevents similar hazards in the remote shutdown facility.",
+     "anchor": "to prevent similar hazards in the remote shutdown facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "Recirculation credits NSRST HEPA filters to minimize operator dose.",
+     "anchor": "Recirculation mode of the MCR HVAC credits the NSRST high efficiency particulate air",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6"
+    },
+    {
+     "t": "p",
+     "text": "If MCR personnel evacuate to the RSC, a manually operated compressed breathable air bottle rack supports post accident monitoring.",
+     "anchor": "a manually operated compressed breathable air bottle rack",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "The MCR intake sodium monitor alarms. What does the PSAR say operators do?",
+     "o": [
+      "Start the RSC fans",
+      "Nothing, it isolates by itself",
+      "Evacuate at once",
+      "Place MCR HVAC in recirculation and deenergize below grade HVAC"
+     ],
+     "a": 3,
+     "x": "The alarm alerts operators to place units in recirculation and deenergize below grade HVAC.",
+     "anchor": "to place the MCR HVAC units in recirculation mode and deenergize the below grade HVAC systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6",
+     "eo": "4,5,8"
+    },
+    {
+     "q": "What provides a habitable environment for monitoring in the RSC?",
+     "o": [
+      "A dedicated chiller",
+      "FHB exhaust",
+      "Compressed breathable air bottles",
+      "Recirculation HEPA filters"
+     ],
+     "a": 2,
+     "x": "NHV provides a manually operated compressed breathable air bottle rack.",
+     "anchor": "a manually operated compressed breathable air bottle rack",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4",
+     "eo": "4,5,8"
+    }
+   ]
+  },
+  {
+   "title": "Automatic versus manual isolation",
+   "eo": [
+    "5",
+    "6",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Condition",
+      "Response"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "SPS-P leak detection signal",
+        "SPS-P cells isolate automatically"
+       ],
+       "anchor": "On a leak detection signal, isolation at the",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "SCG cell leak detection signal",
+        "NHV isolates the SCG cell penetrations"
+       ],
+       "anchor": "integrity of the SCG cell barrier by isolation of the NHV penetrations",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "RV relief valve open",
+        "Control system isolates the SCG trap cell automatically"
+       ],
+       "anchor": "automatically isolates the SCG trap cell if the relief valve opens",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+      },
+      {
+       "cells": [
+        "High radiation after a postulated release",
+        "Indication in the MCR. Operators evaluate and may manually isolate the HAA HVAC"
+       ],
+       "anchor": "evaluate the condition and initiate a manual isolation of the HAA HVAC system",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+      },
+      {
+       "cells": [
+        "High radiation in SPS cells HVAC",
+        "Indication. Operators evaluate and may manually isolate SPS cells"
+       ],
+       "anchor": "initiate a manual isolation of the SPS cells",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+      },
+      {
+       "cells": [
+        "High radiation in SCG trap cell HVAC",
+        "Indication. Operators evaluate and may manually isolate"
+       ],
+       "anchor": "initiate a manual isolation of the SCG trap cell",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+      },
+      {
+       "cells": [
+        "Radiation, toxic chemical, or sodium vapor in MCR intake",
+        "Indication. Operators evaluate and may manually isolate"
+       ],
+       "anchor": "initiate a manual isolation of the control room HVAC system",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Isolation dampers and valves have NST power from the NLV and fail closed when power is not available.",
+     "anchor": "The valves and dampers are designed to fail closed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "The RV pressure relief valve opens. What happens to the SCG trap cell?",
+     "o": [
+      "It isolates automatically",
+      "Operators must isolate it",
+      "It vents to the HAA",
+      "Nothing"
+     ],
+     "a": 0,
+     "x": "The control system monitors valve position and automatically isolates the trap cell.",
+     "anchor": "automatically isolates the SCG trap cell if the relief valve opens",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7",
+     "eo": "5,6,8"
+    },
+    {
+     "q": "High radiation is indicated in the SPS cells HVAC. What is the response?",
+     "o": [
+      "Automatic isolation only",
+      "Automatic scram",
+      "Operators evaluate and manually isolate as necessary",
+      "The cells purge to the HAA"
+     ],
+     "a": 2,
+     "x": "Operations personnel evaluate the condition and initiate a manual isolation, as necessary.",
+     "anchor": "initiate a manual isolation of the SPS cells",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7",
+     "eo": "5,6,8"
+    },
+    {
+     "q": "Power is lost to NHV isolation valves. What is their position?",
+     "o": [
+      "Fail closed",
+      "Fail open",
+      "As is",
+      "Modulating"
+     ],
+     "a": 0,
+     "x": "Valves and dampers are designed to fail closed.",
+     "anchor": "The valves and dampers are designed to fail closed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5",
+     "eo": "5,6,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "NHV support"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL4-RR1, RR1a, RR1c",
+        "NSRST",
+        "Isolate the HAA barrier by closing penetration isolation valves"
+       ],
+       "anchor": "DL4-RR1a HAA Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "DL4-RR3, RR3c",
+        "NSRST",
+        "SPS cells barrier and isolation on leak detection"
+       ],
+       "anchor": "DL4-RR3 SPS Cells Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "DL4-RR4, RR4b",
+        "NSRST",
+        "SCG cell barrier and isolation on leak detection"
+       ],
+       "anchor": "DL4-RR4 SCG Cells Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "DL4-RR4c",
+        "NSRST",
+        "Vapor trap cell isolation on overpressure relief valve open"
+       ],
+       "anchor": "DL4-RR4c Vapor Trap Cell Isolation on",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "DL4-RR7",
+        "NSRST",
+        "HEPA filtration of all FHB exhaust"
+       ],
+       "anchor": "DL4-RR7 Fuel Handling Building Barrier",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "NSRST",
+        "Conditioned air in the MCR, air bottles in the RSC"
+       ],
+       "anchor": "DL5-PAM1 Post Accident Monitoring",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The NSRST portions are seismic class SCN1.",
+     "anchor": "The NSRST portions of NHV are designed to seismic classification SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-5"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Reliability and Integrity Management Program",
+      "Equipment Qualification Program",
+      "Testing Program",
+      "Design Reliability Assurance Program",
+      "Post-Construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "preliminarily identified as applicable to NHV to meet quality",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.4, p. 7.5-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which NHV function gives HEPA filtration of FHB exhaust?",
+     "o": [
+      "DL5-PAM1",
+      "DL4-RR1",
+      "DL4-RR3",
+      "DL4-RR7"
+     ],
+     "a": 3,
+     "x": "DL4-RR7 is the Fuel Handling Building barrier.",
+     "anchor": "DL4-RR7 Fuel Handling Building Barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Buildings with RCAs run slightly negative, with airflow toward higher potential contamination and exhaust through the monitored stack.",
+   "anchor": "HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1"
+  },
+  {
+   "text": "Leak signals and relief valve opening isolate cells automatically. High radiation indications lead to manual isolation.",
+   "anchor": "automatically isolates the SCG trap cell if the relief valve opens",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7"
+  },
+  {
+   "text": "Isolation valves and dampers fail closed. Operators protect the MCR by placing HVAC in recirculation.",
+   "anchor": "The valves and dampers are designed to fail closed",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-14",
+ "title": "Nuclear Island HVAC System",
+ "kind": "system",
+ "subject": "NHV",
+ "sec_note": "Sec. 7.5.1, pp. 7.5-1 to 7.5-9",
+ "intro": "The NHV is planned building by building. Its safety-significant work is isolating penetrations, filtering exhaust, and keeping the control room habitable.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the NHV.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the NHV boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the NHV.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain NHV operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the NHV controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the NHV automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the NHV.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the NHV.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the NHV.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the NHV.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-14-nuclear-island-hvac-system"
+}

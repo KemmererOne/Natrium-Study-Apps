@@ -1,0 +1,81 @@
+# SY-09 | Control Rod Drive System | system | CRD
+range: 7.2-58 7.2-71
+sec: Sec. 7.2.5, pp. 7.2-58 to 7.2-71
+intro: The CRD moves the control rods and lets them go. The motor gives fine control and fast insertion. The scram itself needs only gas venting and gravity.
+
+== Purpose and layout | 1,2,3
+S The CRD has 13 identical control rod drives: 9 for the primary control rod assemblies and 4 for the secondary. @@ consists of 13 identical control rod drives
+S The CRD supports normal reactivity control and reactor scram. Portions of it provide a primary coolant boundary function. @@ The CRD supports normal reactivity control and reactor scram functions
+L CRDM and housing ;; Motor drive assembly ;; Motor controller ;; Driveline assembly ;; Scram valve and cylinder assembly ;; Seals @@ The control rod drive assembly includes the control rod drive mechanism
+S All of the CRD except the motor controller is in the HAA of the RXB substructure. The motor controller is in the NCB substructure. @@ The motor controller is located in the Nuclear Island Control Building (NCB) substructure
+S The CRDM housings are welded to and supported by penetrations in the RPA. @@ The CRDM housings are welded to, and structurally supported by, penetrations in the Rotatable Plug Assembly
+F 7.2.5-1
+K How many control rod drives are there? | 9 | 4 | 13 | 16 | 2 | There are 13 identical drives, 9 primary and 4 secondary. @@ consists of 13 identical control rod drives
+K Where are the CRD motor controllers? | HAA | NCB substructure | RPA | RAB | 1 | The motor controller is in the NCB substructure. @@ The motor controller is located in the Nuclear Island Control Building (NCB) substructure
+
+== Latching the rod | 3,4
+S The driveline is directly coupled to the CRA through a pneumatically controlled latching mechanism in normal operation. @@ The driveline is directly coupled to the CRA through a pneumatically-controlled latching mechanism
+S The latch engages when the scram valve and cylinder assembly is pressurized with inert gas from the SCG. It releases when gas pressure vents. @@ The latching mechanism is engaged by pressurizing the scram valve and cylinder assembly
+S The assembly has three electric solenoid-operated pilot valves that supply gas to a piston and cylinder. @@ consists of three electric solenoid-operated pilot valves
+S The scram valves are fail-safe, de-energize to vent, and are controlled by the RPS. @@ The scram valves are fail-safe, de-energize to vent
+K What holds the CRA latched to the driveline? | Spring force | Gas pressure in the scram cylinder | Magnet current | Motor torque | 1 | Pressurizing the assembly engages the latch, and venting releases it. @@ The latching mechanism is engaged by pressurizing the scram valve and cylinder assembly
+K What supplies gas to the scram cylinders? | RWG | SCG | NHV | IAC | 1 | Inert gas is supplied by the SCG. @@ with inert gas supplied by the Sodium Cover Gas System
+
+== Normal rod motion | 4,5
+S The CRD positions CRAs for start-up, power control, power shaping, and shutdown from RMC demand signals. The RMC is a subsystem of the NIC. @@ based on demand signals from the Rod Monitoring and Control System
+S Independent drives allow individual CRA positioning, and a fault in one drive does not affect the others. @@ a fault within a single control rod drive does not affect operation of other control rod drives
+S A ball screw drive assembly converts motor rotation to driveline linear motion. @@ through a ball screw drive assembly within the CRDM housing
+S An electro-mechanical brake prevents driveline motion unless a demand signal is present. @@ An electro-mechanical brake prevents driveline motion unless a demand signal is present
+S High speed motor-driven insertion provides power run-back capability. @@ CRDM high speed motor-driven CRA insertion provides power run-back capability
+S The motor controller and drive are powered from the Nuclear Island Uninterruptible AC Power Supply System. @@ supplied power from the Nuclear Island Uninterruptible AC Power Supply System
+K What prevents driveline motion with no demand signal? | The latch | An electro-mechanical brake | The scram valves | Ball screw friction | 1 | An electro-mechanical brake prevents driveline motion unless a demand signal is present. @@ An electro-mechanical brake prevents driveline motion unless a demand signal is present
+K Which capability provides power run-back? | Gravity scram | High speed motor-driven insertion | Driveline uncoupling | SCG venting | 1 | High speed motor-driven CRA insertion provides power run-back capability. @@ CRDM high speed motor-driven CRA insertion provides power run-back capability
+
+== Scram | 4,6
+S Scram starts on two out of four scram signals from the RPS. @@ A scram is initiated upon receiving two out of four scram signals from the RPS
+S The RPS signal de-energizes the scram SOVs, which vent the cylinder and disengage the CRA. The CRA inserts by gravity. @@ The RPS scram signal results in de-energizing the scram solenoid-operated valves
+S Two of the three scram valves are enough to vent the cylinder, so failure of one valve does not prevent scram or cause a spurious scram. @@ a failure of one scram SOV does not inhibit the safety function to scram
+S The scram valves also vent on loss of power to the SOV. @@ The scram valves vent the scram cylinder on loss of power to the SOV
+S The scram valve and cylinder assembly is inside the CRDM housing and is not exposed to primary sodium. @@ is located within the CRDM housing and is not exposed to the primary sodium environment
+S The RPS signal also starts driveline scram follow, where the motor drives the driveline down at maximum insertion speed. @@ the CRDM motor drives the driveline downward at maximum insertion speed
+S Scram follow gives assurance that the CRA is fully inserted and provides insertion position indication. @@ Driveline scram follow provides assurance that the CRA is fully inserted
+K How many of the three scram valves must actuate to release a CRA? | One | Two | Three | Four | 1 | Two of three is sufficient, so a single valve failure does not prevent scram. @@ Actuation of two out of the three scram valves is sufficient
+K What inserts the CRA in the SR scram function? | Motor drive | Gravity | Argon pressure | Sodium flow | 1 | The released CRA inserts into the core by gravity. Motor scram follow is NSRST. @@ The released CRA inserts into the core by gravity
+K Power is lost to the scram SOVs. What happens? | Rods hold position | Valves vent and the CRAs release | The brake sets | The motor inserts rods only | 1 | Scram valves vent the scram cylinder on loss of power to the SOV. @@ The scram valves vent the scram cylinder on loss of power to the SOV
+K What is the purpose of driveline scram follow? | Assure full insertion and provide insertion indication | Unlatch the CRA | Vent the cylinder | Hold the rod out | 0 | Scram follow provides assurance of full insertion and position indication. @@ Driveline scram follow provides assurance that the CRA is fully inserted
+
+== Position indication and instruments | 5,8
+S Coupled CRA position goes to the RMC through motor shaft and ball screw revolutions monitoring and a linear position transducer. @@ through motor shaft and ball screw revolutions monitoring and a linear position transducer
+S CRA scram insertion is indicated by full driveline scram follow insertion position. @@ CRA scram insertion is indicated by full driveline scram follow insertion position
+S The CRDM also has scram valve position indication and thermocouples that interface with the NIC. @@ scram valve position indication and thermocouples which interface with the NIC
+K After a scram, what indicates CRA insertion? | Full driveline scram follow insertion position | Scram cylinder pressure | Reactor power alone | RPA rotation | 0 | CRA scram insertion is indicated by full driveline scram follow insertion position. @@ CRA scram insertion is indicated by full driveline scram follow insertion position
+
+== Housing, seals, and purge | 2,3,8
+S The CRDM housing is a lower housing flanged to an upper housing, with a top access plate. @@ The CRDM housing consists of a lower housing flanged to an upper housing
+S Metallic seals and bellows keep cover gas and aerosolized sodium from entering the lower housing. @@ Metallic seals and bellows are provided to isolate reactor cover gas and aerosolized sodium
+S The housing runs with an inert gas purge and static overpressure from the SCG, so leakage flows into the cover gas space. @@ such that seal or bellows leakage flow is directed into the cover gas space
+S Purge gas flow monitors in the SCG supply line identify leakage. @@ Purge gas flow monitors are provided in the SCG gas supply line to identify leakage
+S The CRDMs are cooled by the ambient environment of the HAA. @@ The CRDMs are cooled by the ambient environment of the HAA
+T Component | Design temperature (F) | Design pressure (psig)
+R CRDM housing | 150 upper. Lower under development | 30 upper, 60 lower @@ Table 7.2.5-3 Preliminary CRD Design Conditions
+R Driveline assembly | 1080 | 80 @@ Table 7.2.5-3 Preliminary CRD Design Conditions
+R Scram valve and cylinder assembly | 400 | 300 @@ Table 7.2.5-3 Preliminary CRD Design Conditions
+K Which way does seal or bellows leakage flow? | Out to the HAA | Into the cover gas space | Into the motor | Into the NCB | 1 | The purge and static overpressure direct leakage into the cover gas space. @@ such that seal or bellows leakage flow is directed into the cover gas space
+K What identifies seal leakage? | Purge gas flow monitors in the SCG supply line | The RPS | A plugging temperature indicator | The motor controller | 0 | Purge gas flow monitors identify leakage. @@ Purge gas flow monitors are provided in the SCG gas supply line to identify leakage
+
+== Safety significance | 9,10
+T Function | Class | CRD support
+R DL3-RC1, DL3-RC2 scram | SR | Releases the CRAs for gravity insertion on a scram signal or loss of power @@ The CRD releases the CRAs for
+R DL4-RC3 scram follow | NSRST | Motor-driven insertion and indication of full insertion @@ DL4-RC3 CRD Driveline Scram Follow (NSRST)
+R DL3-RR1 primary coolant boundary | SR | CRDM housing forms part of the boundary @@ DL3-RR1 Primary Coolant Boundary (SR)
+T Component | Classification
+R Motor drive assembly and controller | NSRST @@ Motor Drive Assembly and Controller NSRST
+R Scram valve and cylinder assembly | SR @@ Scram Valve and Cylinder Assembly SR
+R Driveline assembly | SR @@ Driveline Assembly SR
+R CRDM housing assembly | SR @@ CRDM Housing Assembly SR
+S SR components are seismic class SCS1, and NSRST components are SCN1. @@ The CRD seismic classification for SR components is SCS1
+L Quality Assurance Program ;; Design Reliability Assurance Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program ;; Comprehensive Vibration Assessment Program ;; Reliability and Integrity Management Program @@ The following programmatic special treatments are preliminarily identified as applicable to the CRD
+K What is the classification of the CRD motor drive assembly? | SR | NSRST | NST | SCS1 | 1 | The motor drive assembly and controller are NSRST. @@ Motor Drive Assembly and Controller NSRST
+Z The 13 drives use a gas-held latch. Venting the cylinder releases the CRA to insert by gravity. @@ The released CRA inserts into the core by gravity
+Z Two of three fail-safe scram valves are enough. A scram starts on two of four RPS signals. @@ A scram is initiated upon receiving two out of four scram signals from the RPS
+Z The motor gives fine control, run-back, and NSRST scram follow, which also confirms full insertion. @@ Driveline scram follow provides assurance that the CRA is fully inserted

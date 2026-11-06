@@ -1,0 +1,507 @@
+{
+ "concepts": [
+  {
+   "title": "Goal and scope",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The goal is an integrated program that reduces risks and consequences influenced by human interactions.",
+     "anchor": "that reduces the risks and consequences influenced by human interactions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.1, p. 11.2-1"
+    },
+    {
+     "t": "p",
+     "text": "An HSI is any region or point at which a person interacts with a system, equipment, or component.",
+     "anchor": "HSIs are defined as any region or point at which a person interacts with a system, equipment, or component",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3"
+    },
+    {
+     "t": "p",
+     "text": "The scope includes both a part-task and a full-scope simulator.",
+     "anchor": "including both a part-task and full-scope simulator",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3"
+    },
+    {
+     "t": "p",
+     "text": "HSI design aims for safe, efficient, reliable operator performance in normal, abnormal, and accident conditions.",
+     "anchor": "The primary goal of HSI designs is to facilitate safe, efficient, and reliable operator performance",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.9, p. 11.2-9"
+    },
+    {
+     "t": "p",
+     "text": "The HFE Style Guide is based on NUREG-0700.",
+     "anchor": "The HFE Style Guide is based on NUREG-0700",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.9, p. 11.2-10"
+    },
+    {
+     "t": "p",
+     "text": "HFE rigor is graded, with more emphasis on interactions that are safety critical or hazardous.",
+     "anchor": "to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is an HSI?",
+     "o": [
+      "A control room",
+      "A procedure",
+      "Any point where a person interacts with a system, equipment, or component",
+      "Only a computer screen"
+     ],
+     "a": 2,
+     "x": "That is the PSAR definition.",
+     "anchor": "HSIs are defined as any region or point at which a person interacts with a system, equipment, or component",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3",
+     "eo": "1"
+    },
+    {
+     "q": "How is HFE effort applied?",
+     "o": [
+      "Graded, with more rigor for critical interactions",
+      "Only to the MCR",
+      "Only after construction",
+      "Equally everywhere"
+     ],
+     "a": 0,
+     "x": "Application is graded.",
+     "anchor": "to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Technical elements",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Element",
+      "What it does"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Operating experience review",
+        "Brings lessons from past events into the design"
+       ],
+       "anchor": "Operating experience review (OER)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Functional requirements analysis",
+        "Finds functions needed to achieve plant goals"
+       ],
+       "anchor": "Determination of functions required to achieve all plant goals",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Allocation of function",
+        "Assigns functions to technology or human"
+       ],
+       "anchor": "Assigning the identified functions to system (technology) or human",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Task analysis",
+        "Breaks functions into tasks and steps"
+       ],
+       "anchor": "Identification of the tasks required to achieve the allocated functions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Staffing analysis",
+        "Sets numbers and roles of personnel"
+       ],
+       "anchor": "Determination of the numbers and roles of personnel",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Treatment of important human actions",
+        "Confirms claimed actions are achievable"
+       ],
+       "anchor": "ensure claimed actions are achievable",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "HSI design",
+        "Turns requirements and analysis into HSIs"
+       ],
+       "anchor": "implementation of those requirements plus results from HFE analyses",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5"
+      },
+      {
+       "cells": [
+        "Procedure development",
+        "Makes usable, validated documents"
+       ],
+       "anchor": "Process and activities for the development of usable and validated operational documentation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6"
+      },
+      {
+       "cells": [
+        "Training program development",
+        "Makes relevant, validated training"
+       ],
+       "anchor": "Process and activities for the development of relevant and validated training content",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Procedures should be technically accurate, comprehensive, explicit, easy to use, and validated.",
+     "anchor": "technically accurate, comprehensive, explicit, easy to use, and validated",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which element assigns functions to human or technology?",
+     "o": [
+      "Task analysis",
+      "Allocation of function",
+      "Staffing analysis",
+      "OER"
+     ],
+     "a": 1,
+     "x": "Allocation of function assigns functions to system or human.",
+     "anchor": "Assigning the identified functions to system (technology) or human",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5",
+     "eo": "2"
+    },
+    {
+     "q": "Which element makes sure claimed operator actions are achievable?",
+     "o": [
+      "Treatment of important human actions",
+      "OER",
+      "HSI design",
+      "Staffing"
+     ],
+     "a": 0,
+     "x": "That element ensures claimed actions are achievable.",
+     "anchor": "ensure claimed actions are achievable",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Operating experience and human actions",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "OER lessons improve the design early in the process.",
+     "anchor": "provide a basis for improving the plant design in a timely way",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.2, p. 11.2-14"
+    },
+    {
+     "t": "p",
+     "text": "It includes sodium-cooled facilities such as the Fast Flux Test Facility.",
+     "anchor": "such as the Fast Flux Test Facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.2, p. 11.2-16"
+    },
+    {
+     "t": "p",
+     "text": "Recognized issues include Three Mile Island, Chernobyl, and Fukushima Daiichi.",
+     "anchor": "Three Mile Island, Chernobyl, Fukushima Daiichi issues",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.4, p. 11.2-17"
+    },
+    {
+     "t": "p",
+     "text": "Plant personnel interviews supplement OE.",
+     "anchor": "includes the use of plant personnel interviews",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.5, p. 11.2-17"
+    },
+    {
+     "t": "p",
+     "text": "Human reliability analysis looks at the potential for, and mechanisms of, human error.",
+     "anchor": "seeks to evaluate the potential for, and mechanisms of, human error",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-19"
+    },
+    {
+     "t": "p",
+     "text": "The minimum set of controls, displays, and alarms comes from emergency procedure guidelines and important actions in the PRA.",
+     "anchor": "provide the bases for an analysis of the information and control capability needs of the MCR operators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.12, p. 11.2-11"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which sodium facility is named in the OER?",
+     "o": [
+      "Monju",
+      "Phenix",
+      "Fast Flux Test Facility",
+      "Fermi 1"
+     ],
+     "a": 2,
+     "x": "The PSAR names the Fast Flux Test Facility.",
+     "anchor": "such as the Fast Flux Test Facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.2, p. 11.2-16",
+     "eo": "3"
+    },
+    {
+     "q": "What does human reliability analysis evaluate?",
+     "o": [
+      "Pump reliability",
+      "Sodium chemistry",
+      "Weather",
+      "Potential for and mechanisms of human error"
+     ],
+     "a": 3,
+     "x": "That is what it seeks to evaluate.",
+     "anchor": "seeks to evaluate the potential for, and mechanisms of, human error",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-19",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Verification and validation",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "HF V&V has two major activities: HF verification and Integrated System Validation (ISV).",
+     "anchor": "HF V&V is conducted in two major activities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7"
+    },
+    {
+     "t": "p",
+     "text": "A team independent of design development does it.",
+     "anchor": "is conducted by a team of HFE engineers independent from the design development process",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7"
+    },
+    {
+     "t": "p",
+     "text": "Task Support Verification checks that HSIs have what tasks need, and no unnecessary features.",
+     "anchor": "required to support tasks and that there are no unnecessary features",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7"
+    },
+    {
+     "t": "p",
+     "text": "ISV is an integrated, dynamic, performance-based test.",
+     "anchor": "ISV is an integrated, dynamic, performance-based test activity",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who performs HF V&V?",
+     "o": [
+      "The NRC",
+      "Designers of the HSI",
+      "A team independent from design development",
+      "Vendors"
+     ],
+     "a": 2,
+     "x": "HF V&V is conducted by an independent HFE team.",
+     "anchor": "is conducted by a team of HFE engineers independent from the design development process",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7",
+     "eo": "4"
+    },
+    {
+     "q": "What does Task Support Verification also check for?",
+     "o": [
+      "Pump speed",
+      "Cost",
+      "Unnecessary features",
+      "Paint color"
+     ],
+     "a": 2,
+     "x": "It verifies no unnecessary features.",
+     "anchor": "required to support tasks and that there are no unnecessary features",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Training development",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Training development follows the systematic approach to training.",
+     "anchor": "follows the fundamentals of the systematic approach to training method",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.2, p. 11.2-23"
+    },
+    {
+     "t": "p",
+     "text": "Training gives assurance that personnel have the skills, knowledge, and abilities for their roles.",
+     "anchor": "have the skills, knowledge, and abilities to properly perform their roles and responsibilities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-6"
+    },
+    {
+     "t": "p",
+     "text": "It defines training from a task analysis.",
+     "anchor": "Defines and documents the training based on a TA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.1, p. 11.2-22"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What method does training development follow?",
+     "o": [
+      "On-the-job only",
+      "Vendor manuals",
+      "Peer tutoring",
+      "Systematic approach to training"
+     ],
+     "a": 3,
+     "x": "It follows the fundamentals of the systematic approach to training.",
+     "anchor": "follows the fundamentals of the systematic approach to training method",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.2, p. 11.2-23",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Human performance monitoring",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "HPM links design HFE methods with monitoring during operation, and is fully developed at the OL stage.",
+     "anchor": "The HPM program is fully developed at the OL stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7, p. 11.2-25"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Keep safety standards as changes are made",
+      "Detect deterioration of task performance from latent or slow-developing issues",
+      "Assure the safety bases stay valid in operation"
+     ],
+     "anchor": "Ensure that the high safety standards established by the HFE program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7.1, p. 11.2-25"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Data collection",
+      "Importance screening",
+      "Event analysis to determine causes",
+      "Trend analysis",
+      "Corrective action development"
+     ],
+     "anchor": "The program includes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26"
+    },
+    {
+     "t": "p",
+     "text": "Collected data is anonymized to keep the program free of blame.",
+     "anchor": "Data collected is anonymized and sanitized",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why is HPM data anonymized?",
+     "o": [
+      "To save storage",
+      "For security",
+      "It is not",
+      "To avoid blame culture"
+     ],
+     "a": 3,
+     "x": "Data is anonymized and sanitized to ensure no blame culture.",
+     "anchor": "Data collected is anonymized and sanitized",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26",
+     "eo": "6"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "HFE reduces risk from human interactions, with rigor graded to importance.",
+   "anchor": "to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18"
+  },
+  {
+   "text": "An independent team performs V&V, ending in Integrated System Validation.",
+   "anchor": "is conducted by a team of HFE engineers independent from the design development process",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7"
+  },
+  {
+   "text": "HPM checks that performance stays acceptable in operation.",
+   "anchor": "Ensure that the high safety standards established by the HFE program",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.2.7.1, p. 11.2-25"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-03",
+ "title": "Human Factors Engineering",
+ "kind": "topic",
+ "subject": "human factors engineering",
+ "sec_note": "Sec. 11.2, pp. 11.2-1 to 11.2-28",
+ "intro": "Human factors engineering shapes the displays, procedures, and training you will use. Many methods sit in NAT-2965-A. The PSAR gives the framework.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the goal and scope of the HFE program.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the technical elements of the HFE program.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain operating experience review and treatment of important human actions.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Describe verification and validation of the human-system interface.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe training program development.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "State the purposes of human performance monitoring.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-03-human-factors-engineering"
+}

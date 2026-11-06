@@ -1,0 +1,521 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The IHT transports heat to the NSS for electrical power generation and energy storage during normal operation.",
+     "anchor": "transports heat from the primary coolant to the Nuclear Island Salt System (NSS)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "It transports heat to the IAC for rejection to the atmosphere during start-up and shutdown, as the normal and preferred means of reactor cooling.",
+     "anchor": "as the normal and preferred means of providing reactor cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "On loss of pumped flow, the IHT provides natural circulation for decay heat removal through the IAC AHXs.",
+     "anchor": "In the event of a loss of pumped flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the normal and preferred means of reactor cooling during start-up and shutdown?",
+     "o": [
+      "The Energy Island",
+      "SPS cooling",
+      "RAC",
+      "Transport of heat through the IHT to the IAC"
+     ],
+     "a": 3,
+     "x": "IHT to IAC is the normal and preferred means.",
+     "anchor": "as the normal and preferred means of providing reactor cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Components and boundaries",
+   "eo": [
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Each of the two loops has an ISP, an array of SHXs, and interconnecting piping. Each loop connects to one IHX and one IAC AHX.",
+     "anchor": "Each loop includes an Intermediate Sodium Pump (ISP), an array of Sodium-Salt Heat Exchangers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "Supporting equipment includes expansion tanks and a drain subsystem.",
+     "anchor": "The IHT supporting equipment includes expansion tanks and a drain subsystem",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "Loop piping and components are in the Reactor Auxiliary Building, except piping in the Reactor Building to the IHX nozzles and yard piping to the AHXs.",
+     "anchor": "The system loop piping and components are located within the Reactor Auxiliary Building",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "The expansion tank interfaces with the SCG for an inert cover gas and overpressure protection, and with the SPS for sodium processing.",
+     "anchor": "to prevent sodium-air interaction and to provide IHT over-pressure protection",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+    },
+    {
+     "t": "p",
+     "text": "IHT piping in the HAA has a continuous leak guard as a secondary barrier.",
+     "anchor": "includes a continuous leak guard enclosing the pipe as a secondary barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-82"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-1-4-1",
+     "num": "7.1.4-1",
+     "cap": "Intermediate Loop Simplified Diagram",
+     "alt": "PSAR Rev 1 figure: Intermediate Loop Simplified Diagram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-85"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does each IHT loop connect to?",
+     "o": [
+      "Both IHXs",
+      "Both PSPs",
+      "RAC ducts",
+      "One IHX and one IAC AHX"
+     ],
+     "a": 3,
+     "x": "Each loop connects to one PHT IHX and one IAC AHX.",
+     "anchor": "Each intermediate loop connects to one Primary Heat Transport System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75",
+     "eo": "2,3"
+    },
+    {
+     "q": "What protects HAA equipment from an IHT pipe leak?",
+     "o": [
+      "Water sprays",
+      "The HAA Seal",
+      "Argon purge only",
+      "A continuous leak guard around the pipe"
+     ],
+     "a": 3,
+     "x": "The piping in the HAA has a continuous leak guard.",
+     "anchor": "includes a continuous leak guard enclosing the pipe as a secondary barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-82",
+     "eo": "2,3"
+    }
+   ]
+  },
+  {
+   "title": "Operation and pressure relationships",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "ISP speed controls loop flow, through an adjustable speed drive that varies frequency and voltage.",
+     "anchor": "Intermediate loop sodium flow rate is controlled by controlling ISP speed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+    },
+    {
+     "t": "p",
+     "text": "IAC Active Mode uses ISP flow. When ISPs are not available, Blower Mode and Passive Mode use natural circulation of intermediate sodium.",
+     "anchor": "the IHT is designed to support IAC heat rejection in Blower Mode and Passive Mode through natural circulation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80"
+    },
+    {
+     "t": "p",
+     "text": "The elevation difference between the IHX and the higher AHX drives natural circulation flow.",
+     "anchor": "provides the potential energy to drive natural circulation flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Boundary",
+      "Pressure relationship",
+      "Leak direction"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "IHX",
+        "IHT above PHT",
+        "Intermediate into primary"
+       ],
+       "anchor": "The intermediate sodium of IHT is maintained at higher pressure",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63"
+      },
+      {
+       "cells": [
+        "SHX",
+        "IHT below NSS",
+        "Salt into intermediate"
+       ],
+       "anchor": "IHT pressure is maintained at a lower pressure than NSS",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "In an SHX leak, which way does the coolant flow?",
+     "o": [
+      "Salt into the intermediate loop",
+      "Air into salt",
+      "Sodium into primary",
+      "Sodium into salt"
+     ],
+     "a": 0,
+     "x": "IHT pressure is lower than NSS, so NSS coolant flows to the intermediate loop.",
+     "anchor": "IHT pressure is maintained at a lower pressure than NSS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81",
+     "eo": "4"
+    },
+    {
+     "q": "What drives natural circulation in the IHT?",
+     "o": [
+      "Cover gas pressure",
+      "The ISP pony motor",
+      "Elevation difference between the IHX and the AHX",
+      "SPS flow"
+     ],
+     "a": 2,
+     "x": "The elevation difference provides the potential energy.",
+     "anchor": "provides the potential energy to drive natural circulation flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Automatic features",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Trip condition",
+      "ISPs tripped"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Low level in an IHT expansion tank",
+        "Associated ISP"
+       ],
+       "anchor": "Low level in an IHT expansion tank (trips associated ISP)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+      },
+      {
+       "cells": [
+        "High-High primary sodium level",
+        "Both"
+       ],
+       "anchor": "High-High primary sodium level (trips both ISPs)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+      },
+      {
+       "cells": [
+        "High-High primary sodium temperature",
+        "Both"
+       ],
+       "anchor": "High-High primary sodium temperature (trips both ISPs)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Two trip circuit breakers are in series in the power supply to each ISP motor.",
+     "anchor": "Two trip circuit breakers are installed in series",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+    },
+    {
+     "t": "p",
+     "text": "The siphon-break feature limits intermediate sodium entering the primary system in an IHX leak, to prevent reactor vessel overfill.",
+     "anchor": "siphon-break feature is designed to limit the volume of intermediate sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which condition trips only the associated ISP?",
+     "o": [
+      "Low level in an IHT expansion tank",
+      "Reactor scram",
+      "High-High primary sodium level",
+      "High-High primary sodium temperature"
+     ],
+     "a": 0,
+     "x": "Low expansion tank level trips the associated ISP.",
+     "anchor": "Low level in an IHT expansion tank (trips associated ISP)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81",
+     "eo": "6"
+    },
+    {
+     "q": "What prevents reactor vessel overfill in an IHX leak?",
+     "o": [
+      "The RAC",
+      "Hot pool liner",
+      "SPS pump",
+      "The intermediate loop siphon-break feature"
+     ],
+     "a": 3,
+     "x": "The siphon-break feature limits the sodium introduced to prevent overfill.",
+     "anchor": "siphon-break feature is designed to limit the volume of intermediate sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Functions and classification",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Classification",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL2-HR2 ISP trip on low IHT level",
+        "NSRST",
+        "Limit loss of intermediate sodium from leakage"
+       ],
+       "anchor": "automatically tripped to limit loss of",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79"
+      },
+      {
+       "cells": [
+        "DL3-HR3 ISP trip on high high primary sodium temperature",
+        "SR",
+        "Limit heat addition to primary coolant"
+       ],
+       "anchor": "DL3-HR3 ISP Trip on High High",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79"
+      },
+      {
+       "cells": [
+        "DL3-HR12 ISP trip on high high primary sodium level",
+        "SR",
+        "Limit intermediate flow into the primary through IHX tube leakage"
+       ],
+       "anchor": "DL3-HR12 ISP Trip on High High",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79"
+      },
+      {
+       "cells": [
+        "DL4-HR7 Manual ISP trip",
+        "NSRST",
+        "Operator backup to the SR automatic trip"
+       ],
+       "anchor": "DL4-HR7 Manual ISP Trip",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79"
+      },
+      {
+       "cells": [
+        "DL4-HR1 IAC passive mode operation",
+        "NSRST",
+        "Natural circulation to the AHX when ISP and RAC are unavailable"
+       ],
+       "anchor": "DL4-HR1 IAC Passive Mode",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "IHT piping, tanks, and SHXs are NSRST. The ISP trip circuit breaker and trip actuator are SR.",
+     "anchor": "ISP Trip Circuit Breaker, Trip SR SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-83"
+    },
+    {
+     "t": "p",
+     "text": "No manual operator actions or automatic actuations are needed for the IHT passive heat removal function.",
+     "anchor": "No manual operator actions or automatic actuations are required for the IHT to perform its passive heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the classification of the ISP trip circuit breaker?",
+     "o": [
+      "SR",
+      "Not classified",
+      "NST",
+      "NSRST"
+     ],
+     "a": 0,
+     "x": "Table 7.1.4-1 lists the ISP trip circuit breaker as SR.",
+     "anchor": "ISP Trip Circuit Breaker, Trip SR SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-83",
+     "eo": "9,10"
+    },
+    {
+     "q": "What does manual ISP trip back up?",
+     "o": [
+      "SPS",
+      "The PSP trip",
+      "RAC",
+      "The SR automatic trip"
+     ],
+     "a": 3,
+     "x": "DL4-HR7 is an operator manual trip as backup to the SR automatic trip.",
+     "anchor": "DL4-HR7 Manual ISP Trip",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79",
+     "eo": "9,10"
+    }
+   ]
+  },
+  {
+   "title": "Indications and abnormal conditions",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The IHT provides instrumentation for expansion tank level signals and ISP trip circuit breaker status.",
+     "anchor": "provides instrumentation required for expansion tank level signals and ISP trip circuit breaker status",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-82"
+    },
+    {
+     "t": "p",
+     "text": "Sodium-salt reaction effects from an SHX leak are the subject of research and development.",
+     "anchor": "The effects of the sodium-salt reaction due to a postulated leak in the SHX",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which IHT indication helps diagnose sodium loss from a loop?",
+     "o": [
+      "Rod position",
+      "Neutron flux",
+      "Stack flow",
+      "Expansion tank level"
+     ],
+     "a": 3,
+     "x": "The IHT provides expansion tank level signals.",
+     "anchor": "provides instrumentation required for expansion tank level signals and ISP trip circuit breaker status",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-82",
+     "eo": "5,8"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The IHT has two loops, each with an ISP, SHXs, and connections to one IHX and one AHX.",
+   "anchor": "Each loop includes an Intermediate Sodium Pump (ISP), an array of Sodium-Salt Heat Exchangers",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75"
+  },
+  {
+   "text": "IHT pressure sits above primary and below salt.",
+   "anchor": "IHT pressure is maintained at a lower pressure than NSS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+  },
+  {
+   "text": "ISP trips are on low expansion tank level, and high high primary sodium level or temperature.",
+   "anchor": "High-High primary sodium level (trips both ISPs)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-04",
+ "title": "Intermediate Heat Transport System",
+ "kind": "system",
+ "subject": "IHT",
+ "sec_note": "Sec. 7.1.4, pp. 7.1-75 to 7.1-85",
+ "intro": "The IHT carries heat from the IHXs to the salt system at power and to the air heat exchangers at low power and shutdown. It has two loops, and either pumped or natural circulation flow.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the IHT.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the IHT boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the IHT.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain IHT operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the IHT controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the IHT automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the IHT.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the IHT.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the IHT.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the IHT.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-04-intermediate-heat-transport-system"
+}

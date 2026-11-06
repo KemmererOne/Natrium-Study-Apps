@@ -1,0 +1,65 @@
+# PL-01 | Plant Overview | topic | plant
+range: 1.1-1 1.1-27
+sec: Sec. 1.1, pp. 1.1-1 to 1.1-26
+intro: This lesson gives the whole plant on one map: what it is, how heat leaves the core, and how the Nuclear Island and Energy Island divide the work.
+obj: State the rated thermal power, reactor type, and electrical output of Kemmerer Unit 1.
+obj: Trace the heat path from the core to the steam turbine generator.
+obj: Distinguish the Nuclear Island from the Energy Island.
+obj: Identify the inherent and passive safety features of the design.
+obj: Match the major reactor systems to their functions.
+
+== What Kemmerer Unit 1 is | 1
+S Kemmerer Unit 1 is a Natrium reactor plant in Lincoln County, Wyoming, about 3 miles southwest of Kemmerer. @@ approximately 3 miles (4.8 km) southwest of Kemmerer, Wyoming
+S It is licensed under 10 CFR Part 50, and this PSAR supports the construction permit application. @@ is requesting approval for a construction permit of an 840 megawatt thermal
+Q The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor (SFR) that contains a compact and simple safety envelope and a molten salt energy storage system which enables the plant to vary its supply of energy to the grid, up to 500 megawatts electric (MWe) net, while maintaining constant reactor power.
+S The plant is built as part of the DOE Advanced Reactor Demonstration Program. @@ Advanced Reactor Demonstration Program (ARDP)
+S The reactor uses sodium-bonded metallic fuel with HT9 cladding, which is a high chromium martensitic steel. @@ The reactor uses sodium-bonded metallic fuel with high chromium martensitic steel (HT9) cladding
+F 1.1-1
+K What is the licensed thermal rating described for Kemmerer Unit 1? | 500 MWt | 840 MWt | 1000 MWt | 345 MWt | 1 | The PSAR describes an 840 MWt reactor. The 500 figure is net electrical output in megawatts electric, available through the salt storage system. @@ The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor
+K What lets the plant vary its supply to the grid while reactor power stays constant? | Control rod motion | Primary pump speed changes | The molten salt energy storage system | Steam dump valves | 2 | The molten salt storage system lets grid output vary up to 500 MWe net while reactor power stays constant. @@ molten salt energy storage system which enables the plant to vary its supply of energy to the grid
+
+== The heat path | 2
+S The reactor operates near atmospheric pressure, and pumps circulate sodium through the core. @@ The reactor operates near atmospheric pressure, circulating sodium through its core with pumps
+T Step | From | To | Through
+R 1 | Core | Primary sodium (PHT) | Upward flow through the core assemblies @@ flows upwards to remove the heat generated from the fuel pins
+R 2 | Primary sodium (PHT) | Intermediate sodium (IHT) | Intermediate heat exchangers in the reactor pool @@ via intermediate heat exchangers located in the reactor pool
+R 3 | Intermediate sodium (IHT) | Nuclear Island Salt System (NSS) | Sodium-salt heat exchangers @@ Salt System (NSS) via sodium-salt heat exchangers
+R 4 | NSS | Hot salt storage tank (EI) | Salt piping between the islands @@ Energy Island (EI) hot salt storage tank for thermal
+R 5 | Hot salt | Steam turbine generators | Steam generation @@ The heat stored in the hot salt tank is used to generate steam
+S During startup and shutdown the intermediate loop rejects heat to the atmosphere through the Intermediate Air Cooling System sodium-air heat exchanger instead of the salt path. @@ to the atmosphere via the Intermediate Air Cooling System (IAC) sodium-air heat exchanger during startup and shutdown
+K Where does heat cross from primary sodium to intermediate sodium? | Sodium-salt heat exchangers | Sodium-air heat exchangers | Intermediate heat exchangers in the reactor pool | The hot salt storage tank | 2 | Heat moves from the primary loop to the intermediate loop through the intermediate heat exchangers in the reactor pool. @@ via intermediate heat exchangers located in the reactor pool
+K Where does the intermediate loop send heat during startup and shutdown? | To the condenser | To the atmosphere through the IAC sodium-air heat exchanger | To the hot salt tank only | To the guard vessel | 1 | The intermediate loop transfers heat to the NSS for normal steady operation, and to the atmosphere through the IAC during startup and shutdown. @@ sodium-air heat exchanger during startup and shutdown
+
+== Nuclear Island and Energy Island | 3
+S The Nuclear Island contains the reactor and its supporting systems. @@ The NI, which contains the reactor and its supporting systems
+S The Energy Island contains the thermal energy storage tanks, steam generator, feedwater system, condenser, turbine, and supporting systems. @@ thermal energy storage tanks, steam generator, feedwater system, condenser, turbine, and supporting EI systems
+Q The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST).
+S The salt system physically connects the islands and stores excess thermal energy, so steam generation can run independently from reactor power operations. @@ providing a buffer that allows steam generation and thermal energy storage operations
+F 1.1-2
+K How are Energy Island structures, systems, and components classified? | Safety-related | Non-safety-related with special treatment | Non-safety-related with no special treatment | Risk-significant | 2 | The PSAR classifies EI SSCs as non-safety-related with no special treatment (NST). @@ The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST)
+
+== Inherent and passive features | 4
+S The PSAR names near-atmospheric operating pressures, always-on passive air cooling, and inherent reactivity feedback as reliable inherent and passive safety features. @@ near-atmospheric operating pressures, always-on passive air cooling
+S Safety functions are made integral to the reactor vessel, and support equipment moves to separate structures, which simplifies the reactor building. @@ Safety functions are made integral to the reactor vessel
+F 1.1-3
+F 1.1-4
+K Which is one of the safety features the PSAR lists for the design? | Always-on passive air cooling | High-pressure safety injection | A pressurizer relief tank | A large dry containment spray | 0 | The PSAR lists near-atmospheric pressure, always-on passive air cooling, and inherent reactivity feedback. @@ always-on passive air cooling
+
+== Reactor systems at a glance | 5
+T System | Function in one line
+R Reactor Core System (RCC) | Sustains the chain reaction for fission heat within thermal-mechanical limits @@ designed to sustain a nuclear chain reaction for fission heat generation
+R Reactor Enclosure System (RES) | Supports the PHT, RCC, and CRD, and contains the primary sodium @@ provides all structural, functional, and interface support for the PHT, RCC, and Control Rod Drive System
+R Primary Heat Transport (PHT) | Moves heat from the core to the IHT @@ The principal function of the PHT is to transport heat from the reactor core to the IHT
+R Intermediate Heat Transport (IHT) | Moves heat away from the PHT to the NSS or the IAC @@ The IHT primary function is to transport heat away from the PHT
+R Reactor Air Cooling (RAC) | Passive decay heat removal by natural convection of air @@ provide passive decay heat removal to the environment through natural convection of air
+R Intermediate Air Cooling (IAC) | Preferred heat removal system during upset events @@ The IAC is the preferred heat removal system for the reactor during upset events
+R Sodium Cover Gas (SCG) | Controls, monitors, and supplies inert argon gas @@ controls, monitors, and supplies inert argon gas
+R Sodium Processing (SPS) | Monitors and removes contaminants from liquid sodium @@ monitors and removes contaminants including cesium
+R Control Rod Drive (CRD) | Reactivity control for power control, power shaping, and shutdown @@ core power control, power shaping, and reactor shutdown
+R Reactor Protection (RPS) | Initiates reactor scram and engineered safety feature functions @@ initiate safety functions including reactor scram and engineered safety feature functions
+K Which system does the PSAR call the preferred heat removal system during upset events? | RAC | IAC | SCG | PHT | 1 | The IAC is the preferred heat removal system during upset events. The RAC is the always-on passive system. @@ The IAC is the preferred heat removal system for the reactor during upset events
+K What is the primary objective of the RAC? | Purify sodium | Supply argon | Provide passive decay heat removal by natural convection of air | Store thermal energy | 2 | RAC provides passive decay heat removal to the environment through natural convection of air. @@ provide passive decay heat removal to the environment through natural convection of air
+
+Z Kemmerer Unit 1 is an 840 MWt pool-type sodium fast reactor with molten salt energy storage and up to 500 MWe net to the grid. @@ The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor
+Z Heat flows from core to primary sodium, to intermediate sodium, to salt, and then to steam. @@ The heat stored in the hot salt tank is used to generate steam
+Z The Energy Island is non-safety-related with no special treatment. @@ The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST)

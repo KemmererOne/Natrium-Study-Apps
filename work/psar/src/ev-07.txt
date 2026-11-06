@@ -1,0 +1,63 @@
+# EV-07 | Design Basis Accidents | event | event
+range: 3.9-1 3.9-11 3.3-1 3.3-4 3.5-1 3.5-1
+sec: Sec. 3.9, pp. 3.9-1 to 3.9-11, with Secs. 3.3.1, 3.3.3 and 3.5.2
+intro: DBAs set the design criteria for safety-related equipment. Only safety-related equipment is credited, so every sequence is harder than the DBE it came from.
+
+== What a DBA is | 1
+Q DBAs are derived from the design basis events by prescriptively assuming that only safety-related structures, systems, or components are available to mitigate postulated accident consequences to within the 10 CFR 50.34 dose limits.
+S DBAs are postulated accidents used to set design criteria and performance objectives for safety-related SSCs. @@ used to set design criteria and performance objectives for the design of safety-related structures
+S Bounding parameters are chosen for DBA evaluation. Final parameters and results will be provided at the operating license stage. @@ Final parameters and results will be provided at the operating license stage
+S The calculated DBA dose consequences are within the limits of 10 CFR 50.34(a)(1)(ii)(D). @@ The calculated dose consequences of the DBAs are within the dose limits defined in 10 CFR 50.34(a)(1)(ii)(D)
+K Which equipment is credited in a DBA? | All SSCs | Only safety-related SSCs | Only non-safety-related SSCs | Only active SSCs | 1 | DBAs prescriptively assume that only safety-related SSCs are available to mitigate consequences. @@ only safety-related structures, systems, or components are available to mitigate postulated accident
+
+== Reactor DBAs without release | 3,5,8,10
+T DBA | Trip path | End state
+R DHP-L1PP-CN, one PSP lost | Scram on high high power-to-flow ratio, other pumps trip on high high primary sodium temperature | Safe shutdown on RAC @@ The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on high high primary sodium temperature, and the PSP coasts down
+R DHS-ISTL-CN, loss of heat sink | Scram on high high cold pool temperature | Safe shutdown on RAC @@ A reactor scram on high high cold pool temperature occurs
+R IPI-IHEL-CN, IHX tube break | Scram on high high primary sodium level, ISPs trip on level, PSPs trip on temperature | Safe shutdown on RAC @@ PSPs trip on high high primary sodium temperature and coast down
+R SEV-SSE-CN, safe shutdown earthquake | Scram on high high neutron flux rate or high high power-to-flow ratio | Safe shutdown on RAC @@ leads to a reactor scram on high high neutron flux rate or high high power-to-flow ratio
+S In each of these DBAs the fuel performance acceptance criteria are satisfied and there is no radiological release. @@ fuel integrity is maintained for the peak fuel pin and there is no radiological release for this LBE
+S RAC is the decay heat removal path in these DBAs. @@ with decay heat removal provided by the Reactor Air Cooling System (RAC)
+K Which system removes decay heat at the end of the reactor DBAs? | IAC active mode | RAC | The ISPs | The SHX | 1 | Only safety-related equipment is credited, and the final conditions are safe shutdown with RAC. @@ with decay heat removal provided by the Reactor Air Cooling System (RAC)
+
+== Seismic DBA | 1,4
+S The seismic DBA starts with a safe shutdown earthquake and is analyzed at full power with a range of reactivity profiles. @@ The seismic reactivity insertion DBA is analyzed at full power
+S The peak reactivity insertion for the safe shutdown earthquake is approximately $0.30. @@ The peak reactivity insertion for the safe shutdown earthquake is approximately $0.30
+S The control rod drop time is assumed to be degraded by the seismic event. @@ The control rod drop time is assumed to be degraded due to the seismic event
+K What is the approximate peak reactivity insertion in the seismic DBA? | $0.03 | $0.30 | $1.00 | $3.00 | 1 | The peak insertion for the safe shutdown earthquake is approximately $0.30. @@ The peak reactivity insertion for the safe shutdown earthquake is approximately $0.30
+K What does the seismic DBA assume about control rod drop time? | It is unaffected | It is degraded | It is faster | Rods do not drop | 1 | The drop time is assumed to be degraded due to the seismic event. @@ The control rod drop time is assumed to be degraded due to the seismic event
+
+== DBAs with radiological release | 1,2
+T DBA | 2-hour EAB TEDE (rem) | 30-day LPZ TEDE (rem)
+R RRS-CGR-CN, SCG leak | 7.75E+00 | 7.77E+00 @@ 7.75E+00 7.77E+00
+R RRS-ISPL-CN, SPS-I cold trap leak | 1.34E-01 | 5.30E-01 @@ 1.34E-01 5.30E-01
+R RRS-SPLA-CN, SPS-P leak in the RAB | 8.13E-02 | 2.78E-01 @@ 8.13E-02 2.78E-01
+R RRS-RWG-CN, RWG holdup tank leak | 9.59E-02 | 9.59E-02 @@ 9.59E-02 9.59E-02
+R RFH-FDIV-CN, fuel drop in the reactor vessel | 1.74E+00 | 3.19E+00 @@ 1.74E+00 3.19E+00
+R RFH-FDSP-CN, fuel drop in the SFP | 7.33E+00 | 7.33E+00 @@ 7.33E+00 7.33E+00
+R RFH-ESWR-CN, sodium-water reaction in the PIC | 2.01E-02 | 6.09E-01 @@ 2.01E-02 6.09E-01
+R LFF-SAO-CN, core blockage and local faults | 1.33E-01 | 9.60E-01 @@ 1.33E-01 9.60E-01
+S The SCG leak releases directly to the environment through the NHV with no credit for filtration, using a two-hour full compartment exhaust time. @@ with no credit for filtration, and a
+S The SFP fuel drop assumes a minimum of 310 days after shutdown, so iodine and noble gas have a minor impact on dose. @@ assumed to be 310 days
+K Which of these listed DBAs has the highest 2-hour EAB TEDE? | RFH-FDSP-CN | RRS-CGR-CN | RFH-FDIV-CN | LFF-SAO-CN | 1 | RRS-CGR-CN is 7.75E+00 rem, above RFH-FDSP-CN at 7.33E+00 rem. @@ 7.75E+00 7.77E+00
+K Why do iodine and noble gas have a minor dose effect in the SFP drop DBA? | The pool filters them | 310 days of decay after shutdown | The NHV removes them | The FHB holds them up | 1 | A minimum 310-day time after power means short-lived iodine and most noble gases have decayed. @@ assumed to be 310 days
+
+== Core blockage and the Major Accident | 1,3,11
+S The core blockage DBA postulates a blockage of fuel subchannels or other local faults at full power, resulting in fuel damage. @@ blockage of fuel subchannels or other localized faults within the reactor core during full power
+Q Operators fail to shut down the reactor and the reactor continues operating at full power.
+S The source term assumes all fuel pins in a single high burnup assembly fail. @@ all fuel pins in a single high burnup fuel assembly fail
+S A partial flow blockage is evaluated because of the tight spacing of fuel pins, high power density, and high burnup in sodium-cooled fast reactor assemblies. @@ namely the tight spacing of fuel pins, high power density, and high burnup
+S This DBA has the maximum core damage and in-vessel release, and it was selected as the Major Accident. @@ This event was selected as the major accident
+S For Kemmerer Unit 1 the Exclusion Area Boundary and Low Population Zone are the same boundary, a 0.25-mile radius from the Reactor Building centerpoint. @@ are the same boundary, defined by a 0.25-mile
+K Which DBA was selected as the Major Accident? | Seismic event | SCG leak | Core blockage and local faults (LFF-SAO-CN) | Fuel drop in the SFP | 2 | The DBA with maximum core damage and in-vessel release, Sec. 3.9.6.1, was selected. @@ This event was selected as the major accident
+K What does the core blockage DBA assume about operators? | They scram within 10 minutes | They fail to shut down the reactor | They isolate the HAA | They start the IAC blower | 1 | The event assumes operators fail to shut down the reactor and it continues at full power. @@ Operators fail to shut down the reactor and the reactor continues operating at full power
+
+== Fuel handling DBAs and cooling | 1,10
+S In the in-vessel drop, the dropped and impacted assemblies are both damaged. @@ The dropped fuel assembly and the impacted fuel assembly are damaged
+S Fuel movement is assumed not to occur for at least 2.5 days after shutdown from full power. @@ for at least 2.5 days after the reactor is shutdown from full power operation
+S In the EVST cooling DBA, analysis shows no fuel damage for at least 72 hours after the loss of cooling. @@ no fuel damage occurs for at least 72 hours
+K How long after EVST cooling is lost does analysis show no fuel damage? | At least 2.5 days | At least 72 hours | At least 30 days | At least 310 days | 1 | Analysis demonstrates no fuel damage for at least 72 hours. @@ no fuel damage occurs for at least 72 hours
+
+Z DBAs credit only safety-related SSCs, and the dose results are within 10 CFR 50.34 limits. @@ The calculated dose consequences of the DBAs are within the dose limits defined in 10 CFR 50.34(a)(1)(ii)(D)
+Z RAC removes decay heat at the end of the reactor DBAs. @@ with decay heat removal provided by the Reactor Air Cooling System (RAC)
+Z The core blockage DBA, where operators fail to shut down, is the Major Accident. @@ This event was selected as the major accident

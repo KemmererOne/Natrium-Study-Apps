@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Fuel Handling DBEs</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-ev-05-fuel-handling-dbes">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">These DBEs cover dropped assemblies, sodium-water reaction in the Pool Immersion Cell, and loss of cooling in fuel handling equipment. <cite>PSAR Rev 1 (NAT-9400), Sec. 3.7.4, pp. 3.7-10 to 3.7-15</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the event initiator and safety-analysis assumptions.</p><p class="gap">Taught in: <a href="#concept-1">Event initiators and assumptions</a>, <a href="#concept-2">Source terms</a></p><p><span class="num">2</span> Identify the challenged safety functions and acceptance criteria.</p><p class="gap">Taught in: <a href="#concept-2">Source terms</a>, <a href="#concept-3">Challenged functions and results</a></p><p><span class="num">3</span> Describe the event chronology.</p><p class="gap">Taught in: <a href="#concept-1">Event initiators and assumptions</a></p><p><span class="num">4</span> Predict key parameter trends.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">5</span> Identify automatic protective actions.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">6</span> Recognize the event from alarms and indications.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">7</span> Select and apply the appropriate procedure.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Verify operation of credited equipment.</p><p class="gap">Taught in: <a href="#concept-4">Credited barriers and passive cooling</a></p><p><span class="num">9</span> Respond to failure of an automatic or mitigating function.</p><p class="gap">Taught in: <a href="#concept-4">Credited barriers and passive cooling</a></p><p><span class="num">10</span> Establish and verify the required end state.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">11</span> Explain the consequences of delayed or incorrect actions.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">12</span> Relate operator actions to the event's technical basis.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Event initiators and assumptions</h2><p class="count">Objectives 1, 3</p><table class="tbl"><thead><tr><th>DBE</th><th>Initiator</th><th>Result</th></tr></thead><tbody><tr><td>RFH-FDIV-BL</td><td>Non-fuel assembly drop in the vessel</td><td>No damage <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.1.1, p. 3.7-10</cite></td></tr><tr><td>RFH-FDIV-1</td><td>Fuel assembly drop in the vessel</td><td>One assembly damaged, barriers hold <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.1, p. 3.7-11</cite></td></tr><tr><td>RFH-FDIV-3</td><td>Fuel assembly drop in the vessel</td><td>Two assemblies damaged, barriers hold <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.1, p. 3.7-11</cite></td></tr><tr><td>RFH-FDSP-1</td><td>Fuel assembly drop in the SFP</td><td>One assembly damaged, FHB fails to retain <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.1, p. 3.7-12</cite></td></tr><tr><td>RFH-ESWR-BL</td><td>Sodium-water reaction in the PIC while mated to the BLTC</td><td>Cladding intact <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.5.1, p. 3.7-13</cite></td></tr><tr><td>RFH-ESWR-1</td><td>Sodium-water reaction in the PIC</td><td>Cladding fails, PIC and BLTC boundary holds <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.6.1, p. 3.7-13</cite></td></tr><tr><td>RFH-LTCA-1</td><td>Loss of EVST cooling without passive cooling</td><td>No fuel damage for at least 72 hours <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14</cite></td></tr><tr><td>RFH-LBCA-BL</td><td>Loss of BLTC active cooling</td><td>Passive cooling available, no damage <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.8.1, p. 3.7-15</cite></td></tr><tr><td>RFH-LMCA-BL</td><td>Loss of EVHM active cooling</td><td>Passive cooling available, no damage <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.9.1, p. 3.7-15</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Event initiators and assumptions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Event initiators and assumptions</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 1,3</span><span>EV-05-K1</span></div>
+  <p>Which DBE shows no fuel damage for at least 72 hours after loss of cooling?</p>
+  <div class="opts"><button type="button" class="opt">A. RFH-ESWR-1</button><button type="button" class="opt">B. RFH-LTCA-1</button><button type="button" class="opt">C. RFH-LBCA-BL</button><button type="button" class="opt">D. RFH-FDIV-1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Analysis of the EVST event shows no fuel damage for at least 72 hours. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-05-K1&amp;body=Item%3A%20EV-05-K1%0ALesson%3A%20Fuel%20Handling%20DBEs%0AQuestion%3A%20Which%20DBE%20shows%20no%20fuel%20damage%20for%20at%20least%2072%20hours%20after%20loss%20of%20cooling%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.4.7.1%2C%20p.%203.7-14%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Event initiators and assumptions</a><a class="next" href="#concept-2">Source terms <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Source terms</h2><p class="count">Objectives 1, 2</p><p>In-vessel drops are modeled as an instantaneous release of the inventory from all pins in one or two high burnup assemblies. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.2, p. 3.7-11</cite></p>
+<p>Radionuclides leave the primary functional containment boundary at an assumed one percent of cover gas volume per day. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.2, p. 3.7-11</cite></p>
+<p>The SFP drop is assumed 310 days after the assembly is stored in In-Vessel Storage. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-12</cite></p>
+<p>When cladding is damaged in the pool, the fuel pin sodium bond reacts with water in an exothermic gas-producing reaction. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-12</cite></p>
+<p>The analysis therefore uses a reduced pool decontamination factor for that particulate. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13</cite></p>
+<p>The FHB volume is assumed to exhaust instantaneously with no credit for NHV filtration. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Event initiators and assumptions</a><a class="next" href="#check-2">Knowledge check: Source terms <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Source terms</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1,2</span><span>EV-05-K2</span></div>
+  <p>Why is pool scrubbing reduced in the SFP drop?</p>
+  <div class="opts"><button type="button" class="opt">A. The sodium bond reacts with water in an exothermic gas-producing reaction</button><button type="button" class="opt">B. Pool level is assumed low</button><button type="button" class="opt">C. The FHB is open</button><button type="button" class="opt">D. The pool is warm</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The sodium bond and water reaction leads to a reduced decontamination factor. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-05-K2&amp;body=Item%3A%20EV-05-K2%0ALesson%3A%20Fuel%20Handling%20DBEs%0AQuestion%3A%20Why%20is%20pool%20scrubbing%20reduced%20in%20the%20SFP%20drop%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.4.4.2%2C%20p.%203.7-13%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Source terms</a><a class="next" href="#concept-3">Challenged functions and results <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Challenged functions and results</h2><p class="count">Objectives 2</p><table class="tbl"><thead><tr><th>DBE</th><th>Mean 30-day EAB TEDE (rem)</th></tr></thead><tbody><tr><td>RFH-FDIV-1</td><td>1.83E-01 <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.3, p. 3.7-11</cite></td></tr><tr><td>RFH-FDIV-3</td><td>3.66E-01 <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.3, p. 3.7-12</cite></td></tr><tr><td>RFH-FDSP-1 and RFH-ESWR-1</td><td>3.31E-01 <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.3, p. 3.7-13</cite></td></tr></tbody></table>
+<p>The in-vessel doses do not include release from SCG pathways mitigated by DL3-RR10, which will be evaluated at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.3, p. 3.7-11</cite></p>
+<p>RFH-FDIV-1 is identified in the summary table as risk-significant. <cite>PSAR Rev 1, ML25276A288, Sec. 3.5.2, p. 3.5-3</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Source terms</a><a class="next" href="#check-3">Knowledge check: Challenged functions and results <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Challenged functions and results</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>EV-05-K3</span></div>
+  <p>Which fuel handling DBE has the highest mean dose?</p>
+  <div class="opts"><button type="button" class="opt">A. RFH-LTCA-1</button><button type="button" class="opt">B. RFH-FDIV-1</button><button type="button" class="opt">C. RFH-FDIV-3</button><button type="button" class="opt">D. RFH-FDSP-1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. RFH-FDIV-3 has a mean 30-day TEDE of 3.66E-01 rem. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.3, p. 3.7-12</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-05-K3&amp;body=Item%3A%20EV-05-K3%0ALesson%3A%20Fuel%20Handling%20DBEs%0AQuestion%3A%20Which%20fuel%20handling%20DBE%20has%20the%20highest%20mean%20dose%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.7.4.3.3%2C%20p.%203.7-12%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Challenged functions and results</a><a class="next" href="#concept-4">Credited barriers and passive cooling <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Credited barriers and passive cooling</h2><p class="count">Objectives 8, 9</p><p>RFH-ESWR-1 credits the BLTC as a low leakage barrier. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.6.2, p. 3.7-14</cite></p>
+<p>Longer term degraded heat removal in the EVST requires further assessment. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14</cite></p>
+<p>The BLTC and EVHM events rely on passive cooling when active cooling is lost. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.8.1, p. 3.7-15</cite></p>
+<p>Releases from the BLTC, PRC, and EVST are typically modeled as releases from the EVHM, because that is bounding. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Challenged functions and results</a><a class="next" href="#check-4">Knowledge check: Credited barriers and passive cooling <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Credited barriers and passive cooling</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 8,9</span><span>EV-05-K4</span></div>
+  <p>Why are BLTC releases modeled as EVHM releases?</p>
+  <div class="opts"><button type="button" class="opt">A. The EVHM is safety-related</button><button type="button" class="opt">B. The BLTC has no leakage</button><button type="button" class="opt">C. The EVHM has the smallest free volume and a conservative leakage rate</button><button type="button" class="opt">D. They share a building</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The EVHM has the smallest free volume and its leakage rate is conservative. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20EV-05-K4&amp;body=Item%3A%20EV-05-K4%0ALesson%3A%20Fuel%20Handling%20DBEs%0AQuestion%3A%20Why%20are%20BLTC%20releases%20modeled%20as%20EVHM%20releases%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%203.3.4.1.7%2C%20p.%203.3-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Credited barriers and passive cooling</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Fuel handling DBEs cover drops, sodium-water reaction, and loss of cooling. <cite>PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6</cite></li><li>The sodium bond reacts with water, which reduces pool scrubbing credit. <cite>PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Credited barriers and passive cooling</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 11</span></div>
+<h1>Fuel Handling DBEs</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Event initiators and assumptions</a></li><li><a href="#check-1">Knowledge check: Event initiators and assumptions</a></li><li><a href="#concept-2">Source terms</a></li><li><a href="#check-2">Knowledge check: Source terms</a></li><li><a href="#concept-3">Challenged functions and results</a></li><li><a href="#check-3">Knowledge check: Challenged functions and results</a></li><li><a href="#concept-4">Credited barriers and passive cooling</a></li><li><a href="#check-4">Knowledge check: Credited barriers and passive cooling</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 3.3.4.1.7, 3.5.2, 3.7.4.1.1, 3.7.4.2.1, 3.7.4.2.2, 3.7.4.2.3, 3.7.4.3.1, 3.7.4.3.3, 3.7.4.4.1, 3.7.4.4.2, 3.7.4.4.3, 3.7.4.5.1, 3.7.4.6.1, 3.7.4.6.2, 3.7.4.7.1, 3.7.4.8.1, 3.7.4.9.1</p><p>Pages 3.3-6, 3.5-3, 3.7-10, 3.7-11, 3.7-12, 3.7-13, 3.7-14, 3.7-15</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20EV-05&amp;body=Lesson%3A%20EV-05%20Fuel%20Handling%20DBEs%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

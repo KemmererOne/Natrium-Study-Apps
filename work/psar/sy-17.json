@@ -1,0 +1,952 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and divisions",
+   "eo": [
+    "1",
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RPS takes plant instrument signals, applies logic, and generates outputs for reactor scram and ESF actuations.",
+     "anchor": "automatically generates output signals to initiate safety functions, including reactor scram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "p",
+     "text": "It is arranged into four redundant divisions, A, B, C, and D.",
+     "anchor": "are arranged into four redundant divisions (A, B, C, and D)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "p",
+     "text": "Each process variable is measured by four redundant instruments or groups of instruments.",
+     "anchor": "is measured by four redundant instruments or groups of instruments",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "p",
+     "text": "RPS equipment is in four division-specific vaults, DCS, and CRD cabinet rooms in the NCB substructure, and in the MCR.",
+     "anchor": "RPS equipment is located in the four division-specific RPS vault",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19"
+    },
+    {
+     "t": "p",
+     "text": "The vault and cabinet rooms contain RPS electronics cabinets and reactor trip breakers (RTBs).",
+     "anchor": "contain RPS electronics cabinets and reactor trip breakers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19"
+    },
+    {
+     "t": "p",
+     "text": "The RPS uses the RadICS platform.",
+     "anchor": "The RadICS platform as described in the RadICS Topical Report",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.1, p. 7.6-19"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many RPS divisions are there?",
+     "o": [
+      "Four",
+      "Eight",
+      "Two",
+      "Three"
+     ],
+     "a": 0,
+     "x": "There are four redundant divisions: A, B, C, and D.",
+     "anchor": "are arranged into four redundant divisions (A, B, C, and D)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18",
+     "eo": "1,2,3"
+    },
+    {
+     "q": "Where are the RPS divisions located?",
+     "o": [
+      "RXB head access area",
+      "Division-specific vaults in the NCB substructure",
+      "RAB",
+      "FHB"
+     ],
+     "a": 1,
+     "x": "Equipment is in the division-specific vault and cabinet rooms in the NCB substructure.",
+     "anchor": "RPS equipment is located in the four division-specific RPS vault",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19",
+     "eo": "1,2,3"
+    }
+   ]
+  },
+  {
+   "title": "Signal path and voting",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "What happens"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Each division receives analog signals from one division of sensors"
+       ],
+       "anchor": "Each division of RPS receives analog input signals from one associated division of sensing instruments",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      },
+      {
+       "cells": [
+        "2",
+        "The safety function chassis converts signals to digital and applies logic"
+       ],
+       "anchor": "input signals are converted to digital form",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      },
+      {
+       "cells": [
+        "3",
+        "Variables are compared to setpoints in that division"
+       ],
+       "anchor": "Processed variables are compared to established setpoints within that division of RPS",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      },
+      {
+       "cells": [
+        "4",
+        "A division above setpoint asserts a divisional vote"
+       ],
+       "anchor": "then the RPS division asserts a divisional vote",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      },
+      {
+       "cells": [
+        "5",
+        "Each division shares its vote with all other divisions"
+       ],
+       "anchor": "Each division shares its division and parameter-specific vote with all other divisions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      },
+      {
+       "cells": [
+        "6",
+        "With two or more votes on the same parameter, a division generates its output"
+       ],
+       "anchor": "has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The RPS actuates when at least 2 out of the 4 divisions determine action is required.",
+     "anchor": "when at least 2 out of the 4 divisions independently determine",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When does a division generate its output?",
+     "o": [
+      "When two or more divisions vote on the same parameter",
+      "When any two parameters in one division trip",
+      "When all four divisions vote",
+      "When its own variable passes setpoint"
+     ],
+     "a": 0,
+     "x": "Two or more votes must be on the same input parameter.",
+     "anchor": "has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18",
+     "eo": "4"
+    },
+    {
+     "q": "Division A votes on high flux, and Division B votes on high hot pool temperature. Do they combine to scram?",
+     "o": [
+      "Only at full power",
+      "Only if C agrees",
+      "Yes",
+      "No, the votes must be on the same parameter"
+     ],
+     "a": 3,
+     "x": "The vote is parameter-specific.",
+     "anchor": "has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Reactor scram functions",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Scram on",
+      "Inputs"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RC1a",
+        "High-high neutron flux, power range high setpoint",
+        "XIS"
+       ],
+       "anchor": "DL3-RC1a Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1b",
+        "High-high hot pool temperature",
+        "RIS"
+       ],
+       "anchor": "DL3-RC1b Reactor scram on high-high hot",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1c",
+        "High-high primary sodium level",
+        "RIS"
+       ],
+       "anchor": "DL3-RC1c Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1d",
+        "High-high power-to-flow ratio",
+        "XIS, plus PSP speed and current from RIS"
+       ],
+       "anchor": "DL3-RC1d Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1e",
+        "High-high cold pool temperature",
+        "RIS"
+       ],
+       "anchor": "DL3-RC1e Reactor scram on high-high cold",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1f",
+        "High-high positive neutron flux rate",
+        "XIS"
+       ],
+       "anchor": "DL3-RC1f Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1g",
+        "High-high negative neutron flux rate",
+        "XIS"
+       ],
+       "anchor": "DL3-RC1g Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1h",
+        "Low-low primary sodium level",
+        "RIS"
+       ],
+       "anchor": "DL3-RC1h Reactor scram on low-low primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+      },
+      {
+       "cells": [
+        "DL3-RC1i",
+        "Low power, high neutron flux, power range low setpoint",
+        "XIS"
+       ],
+       "anchor": "DL3-RC1i Reactor scram on low power, high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      },
+      {
+       "cells": [
+        "DL3-RC1j",
+        "Loss of primary sodium flow",
+        "PSP speed and current from RIS"
+       ],
+       "anchor": "DL3-RC1j Reactor scram on loss of primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      },
+      {
+       "cells": [
+        "DL3-RC2",
+        "Loss of power: outputs fail to the safe state",
+        "None"
+       ],
+       "anchor": "DL3-RC2 Reactor scram on loss of power",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Primary sodium flow is calculated by the RPS from PSP speed and current.",
+     "anchor": "primary sodium pump (PSP) speed and current inputs from the RIS and calculates primary sodium flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How does the RPS determine primary sodium flow?",
+     "o": [
+      "From IHT flow",
+      "From neutron flux",
+      "A flowmeter in the hot pool",
+      "Calculated from PSP speed and current"
+     ],
+     "a": 3,
+     "x": "RPS calculates flow from PSP speed and current inputs.",
+     "anchor": "primary sodium pump (PSP) speed and current inputs from the RIS and calculates primary sodium flow",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23",
+     "eo": "6"
+    },
+    {
+     "q": "Which scram uses both XIS and pump inputs?",
+     "o": [
+      "Power-to-flow ratio",
+      "Low-low level",
+      "High-high cold pool temperature",
+      "High-high flux"
+     ],
+     "a": 0,
+     "x": "DL3-RC1d uses neutron flux and calculated primary flow.",
+     "anchor": "DL3-RC1d Reactor scram on high-high",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23",
+     "eo": "6"
+    },
+    {
+     "q": "Which is a reactor scram parameter?",
+     "o": [
+      "Low EVST temperature",
+      "High RAC stack flow",
+      "High-high negative flux rate",
+      "High IHT pressure"
+     ],
+     "a": 2,
+     "x": "DL3-RC1g is a scram on high-high negative neutron flux rate.",
+     "anchor": "DL3-RC1g Reactor scram on high-high",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "ESF pump trips",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RPS ESF functions trip pump breakers, because stopping the pump is evaluated as the safe state.",
+     "anchor": "All RPS ESF functions execute the tripping of pump breakers to stop the associated pump",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Trip",
+      "Conditions"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR2",
+        "PSPs",
+        "Scram signal, cold pool temperature above setpoint, and flux below setpoint"
+       ],
+       "anchor": "DL3- HR2 PSP trip on high-high primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      },
+      {
+       "cells": [
+        "DL3-HR3",
+        "ISPs",
+        "Scram signal, cold pool temperature above setpoint, and flux below setpoint"
+       ],
+       "anchor": "DL3-HR3 Intermediate sodium pump (ISP)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      },
+      {
+       "cells": [
+        "DL3-HR11",
+        "SPS-P pump",
+        "Low primary sodium level in the hot pool"
+       ],
+       "anchor": "DL3-HR11 Sodium processing system (SPS)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      },
+      {
+       "cells": [
+        "DL3-HR12",
+        "ISPs",
+        "High-high primary sodium level, with scram and flux inputs"
+       ],
+       "anchor": "DL3-HR12 ISP trip on high-high primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "What three conditions trip the PSPs under DL3-HR2?",
+     "o": [
+      "Seismic trip, high level, low flow",
+      "Manual switch only",
+      "Scram signal, cold pool temperature above setpoint, flux below setpoint",
+      "Low level, high flux, scram"
+     ],
+     "a": 2,
+     "x": "DL3-HR2 needs a scram signal, high cold pool temperature, and low flux.",
+     "anchor": "DL3- HR2 PSP trip on high-high primary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24",
+     "eo": "6"
+    },
+    {
+     "q": "What is the safe state for RPS ESF functions?",
+     "o": [
+      "Valves open",
+      "Pumps at half speed",
+      "Pumps running",
+      "Pumps stopped"
+     ],
+     "a": 3,
+     "x": "Tripping pump breakers to stop the pump is evaluated as the safe state.",
+     "anchor": "All RPS ESF functions execute the tripping of pump breakers to stop the associated pump",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "De-energize to trip",
+   "eo": [
+    "4",
+    "6",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In normal operation, the RPS keeps voltage on the RTB undervoltage coils, which holds RTBs closed.",
+     "anchor": "the RPS maintains voltage on the RTB undervoltage coils to keep RTBs in the closed position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "Closed RTBs keep power on CRD solenoid valve coils, which keep argon pressure to hold the rods.",
+     "anchor": "maintaining power to the CRD solenoid operated valve coils",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "On loss of incoming power, RTBs open, CRD argon vents, and rods drop by gravity.",
+     "anchor": "venting CRD argon and allowing rods to drop fully into the core via gravity",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "ESF circuits also de-energize to trip. On loss of power, relay contacts open and pump breakers trip.",
+     "anchor": "tripping the pump breakers, and stopping pump rotation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "On a critical fault found by self-diagnostics, the system places all outputs in the safe, tripped state.",
+     "anchor": "the system places all outputs to the safe (tripped) state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "Range-checking detects loss of power at a transmitting system, and the RPS places the associated outputs in the safe state.",
+     "anchor": "loss of power at the transmitting system is detected by RPS range-checking",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+    },
+    {
+     "t": "p",
+     "text": "Once started, the sequence of protective actions continues to completion. Deliberate operator action is required to return the RPS to normal.",
+     "anchor": "Deliberate operator action is required to return the RPS to normal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.3, p. 7.6-32"
+    }
+   ],
+   "checks": [
+    {
+     "q": "RPS incoming power is lost. What happens?",
+     "o": [
+      "Motors drive rods out",
+      "RTBs stay closed",
+      "Nothing",
+      "RTBs open and rods drop by gravity"
+     ],
+     "a": 3,
+     "x": "The circuit is de-energize to trip.",
+     "anchor": "venting CRD argon and allowing rods to drop fully into the core via gravity",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28",
+     "eo": "4,6,8"
+    },
+    {
+     "q": "Self-diagnostics find a critical fault. What does the RPS do?",
+     "o": [
+      "Places all outputs in the safe state",
+      "Reboots",
+      "Bypasses the division",
+      "Alarms only"
+     ],
+     "a": 0,
+     "x": "The system places all outputs to the safe, tripped state.",
+     "anchor": "the system places all outputs to the safe (tripped) state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28",
+     "eo": "4,6,8"
+    },
+    {
+     "q": "What is needed to return the RPS to normal after an actuation?",
+     "o": [
+      "Parameter below setpoint",
+      "Reset by the NIC",
+      "Time delay",
+      "Deliberate operator action"
+     ],
+     "a": 3,
+     "x": "Deliberate operator action is required.",
+     "anchor": "Deliberate operator action is required to return the RPS to normal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.3, p. 7.6-32",
+     "eo": "4,6,8"
+    }
+   ]
+  },
+  {
+   "title": "Testing and single failure",
+   "eo": [
+    "8",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Any division can be out of service for testing at any time without loss of any safety function.",
+     "anchor": "The system design allows for any division to be taken out of service for testing at any time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27"
+    },
+    {
+     "t": "p",
+     "text": "The RPS withstands a single failure in any operating division, even with one division out for testing.",
+     "anchor": "even when one division has been taken out of service for testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27"
+    },
+    {
+     "t": "p",
+     "text": "Testing and calibration can occur during power operation.",
+     "anchor": "The RPS is capable of testing and calibration during power operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Cross-checking between redundant channels",
+      "Introducing and varying substitute input",
+      "Perturbing the monitored variable"
+     ],
+     "anchor": "cross-checking between redundant channels with available readouts",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31"
+    },
+    {
+     "t": "p",
+     "text": "Setpoints follow ANSI/ISA 67.04.01-2018 as endorsed by RG 1.105. The setpoint control program is in Table 11.5-1.",
+     "anchor": "The setpoint control program is described in Section 2.0 of Table 11.5-1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2, p. 7.6-20"
+    },
+    {
+     "t": "p",
+     "text": "Bypassed and inoperable status indication conforms to RG 1.47.",
+     "anchor": "RG 1.47, Revision 1, Bypassed and Inoperable Status Indication",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2, p. 7.6-21"
+    }
+   ],
+   "checks": [
+    {
+     "q": "One division is out for testing and another has a single failure. Is the safety function kept?",
+     "o": [
+      "Only ESF",
+      "Yes",
+      "No",
+      "Only scram"
+     ],
+     "a": 1,
+     "x": "The RPS is designed to withstand a single failure even when one division is out for testing.",
+     "anchor": "even when one division has been taken out of service for testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27",
+     "eo": "8,10"
+    },
+    {
+     "q": "Which is a listed way to check a channel?",
+     "o": [
+      "Polling the NIC",
+      "Cross-checking redundant channels",
+      "Replacing the sensor",
+      "Rebooting the DCS"
+     ],
+     "a": 1,
+     "x": "Checks include cross-checking, substitute input, and perturbing the variable.",
+     "anchor": "cross-checking between redundant channels with available readouts",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31",
+     "eo": "8,10"
+    }
+   ]
+  },
+  {
+   "title": "Manual actions and indications",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Manual initiation of each scram and ESF function is available from the MCR, but it is not credited in the safety analysis.",
+     "anchor": "although these manual functions are not credited in the safety analysis",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "p",
+     "text": "Manual control circuits are diverse from the RPS automatic logic.",
+     "anchor": "These manual reactor scram and ESF control circuits are diverse from the RPS automatic logic",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Action"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL4-RC3 scram follow",
+        "NSRST",
+        "Failsafe signal to drive rods in on any scram, independent of RTB demand"
+       ],
+       "anchor": "DL4-RC3 CRD driveline scram follow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25"
+      },
+      {
+       "cells": [
+        "DL4-RC4 automatic seismic trip",
+        "NSRST",
+        "Opens RTBs on an AST demand"
+       ],
+       "anchor": "DL4-RC4 Automatic seismic trip",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25"
+      },
+      {
+       "cells": [
+        "DL4-HR6, HR7",
+        "NSRST",
+        "PSPs and ISPs tripped on manual switch"
+       ],
+       "anchor": "DL4-HR6 Manual PSP trip",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25"
+      },
+      {
+       "cells": [
+        "DL4-RR8",
+        "NSRST",
+        "SPS-P pump tripped on manual switch"
+       ],
+       "anchor": "DL4-RR8 Manual SPS pump trip on low",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "NSRST",
+        "Display of Type B, C, and F PAM variables"
+       ],
+       "anchor": "The RPS supports the display of Type B, C, and F PAM variables",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-25"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Each division has its own SVDU in the MCR that shows only that division. The RSC has SVDUs fed from Divisions A and B.",
+     "anchor": "Each divisional SVDU displays parameters and status of the associated RPS division only",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+    },
+    {
+     "t": "p",
+     "text": "PAM-only chassis in Divisions A and B process variables not used for safety functions.",
+     "anchor": "a separate, PAM-only, chassis in RPS Divisions A and B",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-19"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Are manual scram functions credited in the safety analysis?",
+     "o": [
+      "Only at the RSC",
+      "Yes",
+      "No",
+      "Only for AOOs"
+     ],
+     "a": 2,
+     "x": "Manual functions are not credited in the safety analysis.",
+     "anchor": "although these manual functions are not credited in the safety analysis",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18",
+     "eo": "5"
+    },
+    {
+     "q": "Scram follow starts when how many RPS divisions send a demand?",
+     "o": [
+      "All four",
+      "One",
+      "At least 2 of 4",
+      "At least 3 of 4"
+     ],
+     "a": 2,
+     "x": "The CRD system starts scram follow when at least 2 of 4 divisions send a demand signal.",
+     "anchor": "when at least 2 of 4 RPS divisions send a demand signal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-29",
+     "eo": "5"
+    },
+    {
+     "q": "Which SVDUs are in the RSC?",
+     "o": [
+      "Fed from Divisions A and B",
+      "Division D only",
+      "None",
+      "All four divisions"
+     ],
+     "a": 0,
+     "x": "The RSC has redundant SVDUs fed from Divisions A and B.",
+     "anchor": "The Remote Shutdown Complex is provided with redundant SVDUs which are fed from Divisions A and B",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The DL3 functions are SR, and DL4 and DL5 functions are NSRST.",
+     "anchor": "are designated as SR (for DL3 functions) or NSRST (for DL4 and DL5 functions)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-22"
+    },
+    {
+     "t": "p",
+     "text": "The RPS keeps analytical limits from being exceeded for AOOs not mitigated by DL2 functions, and for design basis events.",
+     "anchor": "when the RPS senses an AOO which has not been mitigated by DL2 functions as designed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27"
+    },
+    {
+     "t": "p",
+     "text": "Each division sits in its own 3-hour fire rated vault room.",
+     "anchor": "Locating each SR RPS division in its own 3-hour fire rated vault room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-26"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Equipment",
+      "Safety",
+      "Seismic"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RPS division cabinets A to D",
+        "SR",
+        "SCS1"
+       ],
+       "anchor": "RPS Division A Cabinet SR SCS1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35"
+      },
+      {
+       "cells": [
+        "Reactor trip breaker panels",
+        "SR",
+        "SCS1"
+       ],
+       "anchor": "RTB Enclosure Panel A1 SR SCS1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35"
+      },
+      {
+       "cells": [
+        "Divisional SVDUs",
+        "NSRST",
+        "SCN1"
+       ],
+       "anchor": "RPS Division A SVDU NSRST SCN1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35"
+      },
+      {
+       "cells": [
+        "Manual switch panels",
+        "NSRST",
+        "SCN1"
+       ],
+       "anchor": "RPS Division A Manual NSRST SCN1",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35"
+      },
+      {
+       "cells": [
+        "Data gateway cabinet",
+        "NST",
+        "None"
+       ],
+       "anchor": "RPS Data Gateway Cabinet NST None",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Many reliability and testing details will be given at the OL stage as RadICS plant-specific action items.",
+     "anchor": "will be provided at the OL stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.1, p. 7.6-19"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What fire rating do the RPS vault room walls have?",
+     "o": [
+      "1 hour",
+      "2 hours",
+      "3 hours",
+      "4 hours"
+     ],
+     "a": 2,
+     "x": "The vault walls are 3-hour fire rated.",
+     "anchor": "The RPS vault room walls are all 3-hour fire rated",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-26",
+     "eo": "9,10"
+    },
+    {
+     "q": "What is the classification of the RPS manual switch panels?",
+     "o": [
+      "NSRST",
+      "NST",
+      "None",
+      "SR"
+     ],
+     "a": 0,
+     "x": "Manual switch panels are NSRST.",
+     "anchor": "RPS Division A Manual NSRST SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Four divisions vote parameter by parameter, and 2 out of 4 on the same parameter actuates.",
+   "anchor": "when at least 2 out of the 4 divisions independently determine",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27"
+  },
+  {
+   "text": "Scram and ESF circuits are de-energize to trip, and critical faults go to the safe state.",
+   "anchor": "the system places all outputs to the safe (tripped) state",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28"
+  },
+  {
+   "text": "A division can be out for test with no loss of function. Manual functions are diverse and not credited.",
+   "anchor": "although these manual functions are not credited in the safety analysis",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-17",
+ "title": "Reactor Protection System",
+ "kind": "system",
+ "subject": "RPS",
+ "sec_note": "Sec. 7.6.3, pp. 7.6-18 to 7.6-35",
+ "intro": "The RPS is the safety-related logic that scrams the reactor and trips pumps. Four divisions, two-out-of-four voting, and de-energize to trip are the three ideas to master.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the RPS.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the RPS boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the RPS.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain RPS operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the RPS controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the RPS automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the RPS.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the RPS.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the RPS.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the RPS.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-17-reactor-protection-system"
+}

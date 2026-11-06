@@ -1,0 +1,638 @@
+{
+ "concepts": [
+  {
+   "title": "Overview",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The safety-significant NI buildings are the RXB, FHB, RAB, and NCB.",
+     "anchor": "which includes the Reactor Building (RXB), Fuel Handling Building (FHB), Reactor Auxiliary Building (RAB), and Nuclear Island Control Building (NCB)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8, p. 7.8-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Building",
+      "Below grade",
+      "Above grade"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RXB",
+        "SR",
+        "NST"
+       ],
+       "anchor": "The safety-related (SR) RXB substructure provides housing",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1"
+      },
+      {
+       "cells": [
+        "FHB",
+        "SR",
+        "NSRST"
+       ],
+       "anchor": "The above-grade portion of the FHB, classified as NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2, p. 7.8-10"
+      },
+      {
+       "cells": [
+        "RAB",
+        "NSRST",
+        "NSRST"
+       ],
+       "anchor": "Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20"
+      },
+      {
+       "cells": [
+        "NCB",
+        "SR",
+        "NSRST"
+       ],
+       "anchor": "The below-grade substructure is classified as safety-related (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The RXB superstructure is classified NST.",
+     "anchor": "The RXB superstructure is therefore classified as non-safety-related with no special treatment (NST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which building is NSRST both above and below grade?",
+     "o": [
+      "FHB",
+      "RAB",
+      "NCB",
+      "RXB"
+     ],
+     "a": 1,
+     "x": "Both portions of the RAB are NSRST.",
+     "anchor": "Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20",
+     "eo": "1,2"
+    },
+    {
+     "q": "How is the RXB superstructure classified?",
+     "o": [
+      "NST",
+      "SCS1",
+      "SR",
+      "NSRST"
+     ],
+     "a": 0,
+     "x": "The RXB superstructure is NST.",
+     "anchor": "The RXB superstructure is therefore classified as non-safety-related with no special treatment (NST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Reactor Building",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SR substructure houses the reactor, RES, and the RAC duct stacks.",
+     "anchor": "including the reactor, Reactor Enclosure System (RES), and the duct stacks",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1"
+    },
+    {
+     "t": "p",
+     "text": "The RXB is normally unoccupied, with substructure access restricted during normal operation.",
+     "anchor": "The RXB is normally unoccupied with access",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1"
+    },
+    {
+     "t": "p",
+     "text": "Seismic isolators under the RES and MIRSS sit in a subgrade space.",
+     "anchor": "a subgrade space that houses the seismic isolators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1"
+    },
+    {
+     "t": "p",
+     "text": "The HAA contains the reactor head, penetrations, PSPs, and control rod drive assemblies.",
+     "anchor": "The HAA contains the reactor head, associated penetrations, the Primary Sodium Pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1"
+    },
+    {
+     "t": "p",
+     "text": "Removable planks in the grade slab give access for maintenance and refueling.",
+     "anchor": "Portions of the grade slab are removable to provide access to the HAA for maintenance and refueling activities",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-2"
+    },
+    {
+     "t": "p",
+     "text": "The HAA is a functional containment boundary with a radionuclide retention function.",
+     "anchor": "provides a functional containment boundary that performs a radionuclide retention function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3"
+    },
+    {
+     "t": "p",
+     "text": "The superstructure supports a single-failure proof overhead bridge crane.",
+     "anchor": "provides structural support for a single-failure proof overhead bridge crane",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.2, p. 7.8-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the HAA contain?",
+     "o": [
+      "MCR",
+      "Salt tanks",
+      "Reactor head, PSPs, and CRD assemblies",
+      "EVST"
+     ],
+     "a": 2,
+     "x": "The HAA contains these items.",
+     "anchor": "The HAA contains the reactor head, associated penetrations, the Primary Sodium Pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1",
+     "eo": "3,4"
+    },
+    {
+     "q": "Which part of the RXB provides functional containment?",
+     "o": [
+      "The HAA",
+      "The crane",
+      "The roof",
+      "The superstructure"
+     ],
+     "a": 0,
+     "x": "The HAA provides a functional containment boundary.",
+     "anchor": "provides a functional containment boundary that performs a radionuclide retention function",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3",
+     "eo": "3,4"
+    },
+    {
+     "q": "Is the RXB normally occupied?",
+     "o": [
+      "Only the HAA",
+      "Only in Mode 1",
+      "Yes",
+      "No"
+     ],
+     "a": 3,
+     "x": "It is normally unoccupied.",
+     "anchor": "The RXB is normally unoccupied with access",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "RXB functions",
+   "eo": [
+    "6",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Role"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR4",
+        "The substructure holds the outer boundary of the RAC air flow path"
+       ],
+       "anchor": "The RXB substructure maintains the outer boundary of the RAC air flow path",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4"
+      },
+      {
+       "cells": [
+        "DL4-RR1",
+        "Ex-RES functional containment includes the guard vessel, HAA walls, and HAA HVAC isolation"
+       ],
+       "anchor": "The ex-RES functional containment boundary includes the guard vessel, the HAA walls, and the HAA HVAC isolation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4"
+      },
+      {
+       "cells": [
+        "DL4-RR1a",
+        "HAA barrier, a sub-function of DL4-RR1"
+       ],
+       "anchor": "DL4-RR1a HAA Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Demand-to-capacity ratios do not exceed 0.80 for design-basis loads, or 1.00 for beyond design basis events.",
+     "anchor": "Demand-to-capacity ratios do not exceed 0.80 for design-basis loads",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.3, p. 7.8-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is included in the ex-RES functional containment?",
+     "o": [
+      "The turbine building",
+      "Guard vessel, HAA walls, HAA HVAC isolation",
+      "RAB walls",
+      "The stack"
+     ],
+     "a": 1,
+     "x": "Those three make up the boundary.",
+     "anchor": "The ex-RES functional containment boundary includes the guard vessel, the HAA walls, and the HAA HVAC isolation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4",
+     "eo": "6,9"
+    },
+    {
+     "q": "Which function does the RXB substructure support for decay heat removal?",
+     "o": [
+      "SPS",
+      "RAC air flow path boundary",
+      "Salt cooling",
+      "Turbine cooling"
+     ],
+     "a": 1,
+     "x": "DL3-HR4 uses the RXB as the outer boundary of the RAC air flow path.",
+     "anchor": "The RXB substructure maintains the outer boundary of the RAC air flow path",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4",
+     "eo": "6,9"
+    }
+   ]
+  },
+  {
+   "title": "Fuel Handling Building",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The FHB houses fuel receipt, refueling, storage, radwaste systems, and the SFP.",
+     "anchor": "houses equipment related to fuel receipt, refueling, fuel storage, radioactive waste systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2, p. 7.8-10"
+    },
+    {
+     "t": "p",
+     "text": "A three foot thick grade slab protects sub-grade areas and supports the Ex-Vessel Handling Machine and Bottom Loading Transfer Cask.",
+     "anchor": "three foot thick grade slab",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10"
+    },
+    {
+     "t": "p",
+     "text": "The SFP has 5 foot thick walls and a 4 foot thick foundation slab about 51 feet below grade.",
+     "anchor": "The SFP has 5 foot thick walls",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10"
+    },
+    {
+     "t": "p",
+     "text": "A stainless steel liner and leak chase monitor leakage.",
+     "anchor": "is equipped with a stainless steel liner and leak chase system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10"
+    },
+    {
+     "t": "p",
+     "text": "The superstructure is an enveloping barrier supporting negative pressure for radionuclide retention.",
+     "anchor": "is designed as an enveloping barrier to support maintaining a negative pressure for radionuclide retention",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-15"
+    },
+    {
+     "t": "p",
+     "text": "The superstructure is NSRST, seismic class SCN1.",
+     "anchor": "The superstructure of the FHB is classified as NSRST and seismic class SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How thick are the SFP walls?",
+     "o": [
+      "3 feet",
+      "4 feet",
+      "5 feet",
+      "8 feet"
+     ],
+     "a": 2,
+     "x": "The SFP has 5 foot thick walls.",
+     "anchor": "The SFP has 5 foot thick walls",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10",
+     "eo": "3"
+    },
+    {
+     "q": "What function does the FHB superstructure support?",
+     "o": [
+      "RAC air flow",
+      "Scram",
+      "Salt flow",
+      "Negative pressure for radionuclide retention"
+     ],
+     "a": 3,
+     "x": "It is an enveloping barrier for negative pressure.",
+     "anchor": "is designed as an enveloping barrier to support maintaining a negative pressure for radionuclide retention",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-15",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Reactor Auxiliary Building",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The RAB takes intermediate sodium from the RXB and transfers heat to the NI Salt System.",
+     "anchor": "transfers the heat to the Nuclear Island (NI) Salt System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20"
+    },
+    {
+     "t": "p",
+     "text": "It houses IHT loops, Sodium-Salt Heat Exchangers, ISPs, IHT expansion tanks, SCG, and SPS equipment.",
+     "anchor": "Intermediate Heat Transport System (IHT) piping loops and components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20"
+    },
+    {
+     "t": "p",
+     "text": "IAC Air Stack Structures and Equipment sit next to the RAB.",
+     "anchor": "Air Stack Structures and Equipment (ASE), discussed in Section 7.2.2, are located adjacent to the RAB",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20"
+    },
+    {
+     "t": "p",
+     "text": "The lower level holds the IHT supplemental tank, 62 feet below grade, and has no personnel access from adjacent spaces.",
+     "anchor": "is 62 feet below grade, and is inaccessible by personnel from adjacent spaces",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3.1.1, p. 7.8-20"
+    },
+    {
+     "t": "p",
+     "text": "SPS Cells are designed for slight negative pressure as part of an enveloping boundary.",
+     "anchor": "the RAB substructure SPS Cells are designed for the slight negative pressure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3.1.3, p. 7.8-22"
+    },
+    {
+     "t": "p",
+     "text": "An automobile tornado missile barrier protects the IAC and IHT.",
+     "anchor": "An automobile tornado missile impact barrier is provided to protect the IAC and IHT systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.3, p. 7.8-25"
+    },
+    {
+     "t": "p",
+     "text": "Roof panels at the east end can be removed for crane access to ISPs.",
+     "anchor": "two removable roofing panels allowing crane access to remove Intermediate Sodium Pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.1, p. 7.8-24"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are the Sodium-Salt Heat Exchangers?",
+     "o": [
+      "RAB",
+      "FHB",
+      "NCB",
+      "RXB"
+     ],
+     "a": 0,
+     "x": "The RAB houses IHT piping loops and components, including these.",
+     "anchor": "Intermediate Heat Transport System (IHT) piping loops and components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20",
+     "eo": "3"
+    },
+    {
+     "q": "How are the ISPs removed?",
+     "o": [
+      "Through the transfer corridor",
+      "They are not",
+      "Through the HAA",
+      "Through removable roof panels using a crane"
+     ],
+     "a": 3,
+     "x": "The roof has two removable panels for crane access.",
+     "anchor": "two removable roofing panels allowing crane access to remove Intermediate Sodium Pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.1, p. 7.8-24",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Nuclear Island Control Building",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SR substructure houses the RPS, PSP and ISP breakers, NSRST electrical equipment, and the RSC.",
+     "anchor": "including the Reactor Protection System (RPS), Intermediate Sodium Pump and Primary Sodium Pump breakers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29"
+    },
+    {
+     "t": "p",
+     "text": "The NSRST superstructure holds the MCR, and no SR equipment.",
+     "anchor": "which does not house any SR equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29"
+    },
+    {
+     "t": "p",
+     "text": "Substructure rooms hold NUP and NDC equipment and batteries.",
+     "anchor": "NI DC Power Supply System equipment rooms and batteries",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.1.1, p. 7.8-29"
+    },
+    {
+     "t": "p",
+     "text": "The superstructure is a one-story steel frame serving as the NI control center.",
+     "anchor": "is a one-story steel-framed structure which serves as the control center for the NI",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.1, p. 7.8-32"
+    },
+    {
+     "t": "p",
+     "text": "A reinforced MCR enclosure protects against chemical, radiological, and weather-related external events.",
+     "anchor": "provides protection from chemical, radiological, and weather-related external events",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.1, p. 7.8-32"
+    },
+    {
+     "t": "p",
+     "text": "The superstructure is designed not to collapse under seismic or tornado loading.",
+     "anchor": "The NCB superstructure is designed to not collapse under seismic or tornado loading conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.3, p. 7.8-34"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which part of the NCB houses the RSC?",
+     "o": [
+      "Roof",
+      "It is in the FHB",
+      "Substructure",
+      "Superstructure"
+     ],
+     "a": 2,
+     "x": "The substructure houses the RSC.",
+     "anchor": "the NCB substructure includes a location for the RSC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.1.1, p. 7.8-29",
+     "eo": "3"
+    },
+    {
+     "q": "Does the NCB superstructure house SR equipment?",
+     "o": [
+      "Yes",
+      "No",
+      "Only RPS",
+      "Only batteries"
+     ],
+     "a": 1,
+     "x": "It does not house any SR equipment.",
+     "anchor": "which does not house any SR equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Structures provide load paths and external hazard protection for the SSCs inside.",
+     "anchor": "External Hazard Protection for SR SSCs, (SR) and for NSRST SSCs (NSRST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-5"
+    },
+    {
+     "t": "p",
+     "text": "RAB substructure and superstructure are seismic class SCN1, and so is the NCB superstructure.",
+     "anchor": "The seismic classification of the NSRST NCB superstructure is SCN1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.2, p. 7.8-34"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Design Reliability Assurance Program",
+      "Post-Construction Inspection, Testing and Analysis Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the RXB substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.4, p. 7.8-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a function of the SR substructures?",
+     "o": [
+      "External hazard protection and load path",
+      "Reactivity control",
+      "Sodium purification",
+      "Salt heating"
+     ],
+     "a": 0,
+     "x": "Substructures provide external hazard protection and load paths.",
+     "anchor": "External Hazard Protection for SR SSCs, (SR) and for NSRST SSCs (NSRST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-5",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "RXB, FHB, and NCB have SR substructures, and the RAB is NSRST throughout.",
+   "anchor": "Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20"
+  },
+  {
+   "text": "The HAA is part of the RXB substructure and is a functional containment boundary.",
+   "anchor": "provides a functional containment boundary that performs a radionuclide retention function",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3"
+  },
+  {
+   "text": "The MCR is in the NSRST NCB superstructure, and the RPS and RSC are in the SR NCB substructure.",
+   "anchor": "which does not house any SR equipment",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-24",
+ "title": "Buildings and Structures",
+ "kind": "system",
+ "subject": "Nuclear Island buildings",
+ "sec_note": "Sec. 7.8, pp. 7.8-1 to 7.8-37",
+ "intro": "Four buildings make up the Nuclear Island. For each one, learn what it houses and how the part below grade and the part above grade are classified.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the Nuclear Island buildings.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the Nuclear Island buildings boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the Nuclear Island buildings.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain Nuclear Island buildings operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the Nuclear Island buildings controls and indications.",
+   "taught": false
+  },
+  {
+   "number": "6",
+   "text": "Explain the Nuclear Island buildings automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the Nuclear Island buildings.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the Nuclear Island buildings.",
+   "taught": false
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the Nuclear Island buildings.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the Nuclear Island buildings.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-24-buildings-and-structures"
+}

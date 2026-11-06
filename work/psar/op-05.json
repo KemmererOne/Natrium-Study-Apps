@@ -1,0 +1,562 @@
+{
+ "concepts": [
+  {
+   "title": "Defense in depth",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The design provides defense in depth through prevention, detection, containment, suppression, and safe shutdown.",
+     "anchor": "takes into account prevention, detection, containment, suppression, and the ability to maintain safe shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1, p. 8.2-1"
+    },
+    {
+     "t": "p",
+     "text": "Requirements consider both conventional and sodium fires.",
+     "anchor": "for both conventional and sodium fires",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1, p. 8.2-1"
+    },
+    {
+     "t": "p",
+     "text": "The sodium fire strategy uses leak prevention, detection, and passive mitigation.",
+     "anchor": "utilizes leak prevention, detection and passive mitigation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3"
+    },
+    {
+     "t": "p",
+     "text": "The radiological sodium strategy uses passive features, and adds active features only where necessary.",
+     "anchor": "only add active features (e.g., inert gas flooding systems) where necessary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.1, p. 8.2-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the sodium fire strategy rely on?",
+     "o": [
+      "Offsite crews only",
+      "Halon",
+      "Water sprays",
+      "Leak prevention, detection, and passive mitigation"
+     ],
+     "a": 3,
+     "x": "It uses leak prevention, detection, and passive mitigation.",
+     "anchor": "utilizes leak prevention, detection and passive mitigation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Sodium leak design features",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Feature",
+      "What it does"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Cells",
+        "Rooms with limited leak rate and known oxygen volume, inerted or de facto inerted"
+       ],
+       "anchor": "Cells are rooms with a limited leak rate and known oxygen volume",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-1"
+      },
+      {
+       "cells": [
+        "Guard pipes",
+        "Full secondary pressure boundary for radiological sodium"
+       ],
+       "anchor": "Guard pipes act as a full secondary pressure boundary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.3, p. 8.2-2"
+      },
+      {
+       "cells": [
+        "Guard enclosures",
+        "Like guard pipes, but with a drainpipe to a collection location"
+       ],
+       "anchor": "except that a drainpipe to an acceptable collection location is attached",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.4, p. 8.2-2"
+      },
+      {
+       "cells": [
+        "Clamshells",
+        "Guard enclosures placed where pipe inspections are needed"
+       ],
+       "anchor": "A clamshell is a form of guard enclosure placed specifically where piping inspections are expected",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2"
+      },
+      {
+       "cells": [
+        "Catch pans",
+        "Steel-lined volumes for the design-basis leak plus margin"
+       ],
+       "anchor": "Catch pans are a steel-lined volume designed to retain the design-basis sodium leak volume plus margin",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2"
+      },
+      {
+       "cells": [
+        "Inerted guard vessels",
+        "Prevent sodium-air and sodium-concrete reactions"
+       ],
+       "anchor": "Inerted guard vessels are used as part of individual system design",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.7, p. 8.2-3"
+      },
+      {
+       "cells": [
+        "Leakage detectors",
+        "Detect liquid sodium, aerosols, and reaction products"
+       ],
+       "anchor": "Leakage detection equipment for liquid sodium, sodium aerosols, and reaction products",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Clamshells in the HAA drain leaked IHT sodium to the RAB pipe chase, so a leak inside is not a leak into the HAA.",
+     "anchor": "a leak from the piping within the clamshell is not a leak into the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Suppression decks are used on catch pans where oxygen volume cannot be limited.",
+     "anchor": "Suppression decks are applied to catch pans where the environmental oxygen volume cannot be limited",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Conventional fire detection in non-inerted fire areas gives supplemental leak detection.",
+     "anchor": "Conventional fire detection installed in non-inerted fire areas provides supplemental sodium leak detection",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the difference between a guard pipe and a guard enclosure?",
+     "o": [
+      "Guard enclosures are inerted",
+      "None",
+      "A guard enclosure has a drainpipe",
+      "Guard pipes are plastic"
+     ],
+     "a": 2,
+     "x": "Guard enclosures act similarly, except that a drainpipe is attached.",
+     "anchor": "except that a drainpipe to an acceptable collection location is attached",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.4, p. 8.2-2",
+     "eo": "2"
+    },
+    {
+     "q": "Where does a clamshell in the HAA drain?",
+     "o": [
+      "Outside",
+      "HAA floor",
+      "RAB pipe chase",
+      "Reactor vessel"
+     ],
+     "a": 2,
+     "x": "Clamshells allow leaked sodium to flow to the RAB pipe chase.",
+     "anchor": "are designed to allow leaked sodium to flow into the RAB pipe chase",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2",
+     "eo": "2"
+    },
+    {
+     "q": "When does a catch pan get a suppression deck?",
+     "o": [
+      "In inerted cells",
+      "Never",
+      "Always",
+      "Where oxygen volume cannot be limited"
+     ],
+     "a": 3,
+     "x": "Suppression decks are applied where environmental oxygen cannot be limited.",
+     "anchor": "Suppression decks are applied to catch pans where the environmental oxygen volume cannot be limited",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Leak categories",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Category",
+      "Handling"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Operational leakage",
+        "Mechanical joint leak, less than design basis, into a catch pan with no deck"
+       ],
+       "anchor": "Operational leakage occurs from a mechanical joint or component",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2.1, p. 8.2-4"
+      },
+      {
+       "cells": [
+        "Into a guard enclosure",
+        "Contained and drained to a catch pan through a heat traced line"
+       ],
+       "anchor": "Design basis sodium leakage is contained within the guard enclosure",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2.2, p. 8.2-4"
+      },
+      {
+       "cells": [
+        "Within a process cell",
+        "Contained or drained, with sloped floors and steel plates to a catch pan"
+       ],
+       "anchor": "Each process cell is designed to contain or drain design basis leakage for the cell",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2.3, p. 8.2-4"
+      },
+      {
+       "cells": [
+        "Beyond design basis",
+        "Evaluated against the Quantitative Health Objectives"
+       ],
+       "anchor": "will be evaluated for acceptable consequences with respect to the Quantitative Health Objectives",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2.4, p. 8.2-5"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Leaked radiological sodium stays within the process cell. Non-radiological sodium may drain to lower catch pans or vaults.",
+     "anchor": "Leaked radiological sodium is contained within the process cell",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-2"
+    },
+    {
+     "t": "p",
+     "text": "Detection of small leaks helps prevent large leaks.",
+     "anchor": "Detection of small leaks helps prevent large leaks from occurring",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why are guard enclosure drain lines heat traced?",
+     "o": [
+      "To measure flow",
+      "To minimize sodium freezing",
+      "To ignite sodium",
+      "To warm the room"
+     ],
+     "a": 1,
+     "x": "Drain lines are heat traced to minimize sodium freezing.",
+     "anchor": "are heat traced, where needed, to minimize sodium freezing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2.2, p. 8.2-4",
+     "eo": "3"
+    },
+    {
+     "q": "Where does leaked radiological sodium stay?",
+     "o": [
+      "In a lower vault",
+      "In the stack",
+      "In the MCR",
+      "In the process cell"
+     ],
+     "a": 3,
+     "x": "It is contained within the process cell.",
+     "anchor": "Leaked radiological sodium is contained within the process cell",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-2",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Leak postulation",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Leaks are postulated for all piping that normally contains sodium.",
+     "anchor": "Leaks are postulated for all piping that normally contain sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4"
+    },
+    {
+     "t": "p",
+     "text": "Design basis leakage cracks are Dt/4 for seismic piping, and full circumferential breaks for non-seismic piping.",
+     "anchor": "a Dt/4 crack for seismically qualified piping and a full-circumferential break for non-seismically qualified piping",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4"
+    },
+    {
+     "t": "p",
+     "text": "Sodium and salt systems are evaluated as moderate energy systems.",
+     "anchor": "Liquid sodium containing systems are evaluated as moderate energy systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.3, p. 8.2-6"
+    },
+    {
+     "t": "p",
+     "text": "SSCs in the HAA are protected from the worst-case leak regardless of stress.",
+     "anchor": "SSCs in the HAA are protected from the worst-case leak, regardless of stress",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.3, p. 8.2-7"
+    },
+    {
+     "t": "p",
+     "text": "A top of pipe spray could make a faster, hotter fire. A bottom leak could make a larger volume flood.",
+     "anchor": "could create a faster, hotter fire that directly impacts some SSCs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.3.1, p. 8.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What leak size is postulated for seismically qualified piping?",
+     "o": [
+      "Full circumferential break",
+      "Dt/4 crack",
+      "1 inch hole",
+      "None"
+     ],
+     "a": 1,
+     "x": "It is bounded by a Dt/4 crack.",
+     "anchor": "a Dt/4 crack for seismically qualified piping and a full-circumferential break for non-seismically qualified piping",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4",
+     "eo": "4"
+    },
+    {
+     "q": "Why are smaller pipes considered?",
+     "o": [
+      "Sodium and salt leaks can have more significant effects",
+      "They are cheaper",
+      "BTP 3-4 requires it",
+      "They are seismic"
+     ],
+     "a": 0,
+     "x": "Leaks in smaller pipes are considered due to potentially more significant environmental effects.",
+     "anchor": "Due to the potentially more significant environmental effects of sodium and salt leaks",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.3.1, p. 8.2-7",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Fire safe shutdown",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Redundant trains of safety-significant and safe shutdown SSCs are in separate fire areas.",
+     "anchor": "Redundant trains of Safety-Significant and safe shutdown SSCs are located in separate fire areas",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.10, p. 8.2-3"
+    },
+    {
+     "t": "p",
+     "text": "Damage from any single fire is limited to a single fire area.",
+     "anchor": "Damage caused by any single fire is limited to a single fire area",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.2, p. 8.2-6"
+    },
+    {
+     "t": "p",
+     "text": "The design limits fire damage to a single train.",
+     "anchor": "The design limits fire damage to a single train of safety-significant SSCs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3.2, p. 8.2-6"
+    },
+    {
+     "t": "p",
+     "text": "Fire analyses and fire PRA will be done for the operating license application.",
+     "anchor": "will be performed as part of the operating license application",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3, p. 8.2-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the design assume about equipment in a fire area?",
+     "o": [
+      "Only cables fail",
+      "All of it is inoperable",
+      "Only half fails",
+      "None fails"
+     ],
+     "a": 1,
+     "x": "A safe shutdown path is kept while assuming all equipment in any one fire area is rendered inoperable.",
+     "anchor": "while assuming all equipment in any one fire area is rendered inoperable by the fire",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.3, p. 8.2-5",
+     "eo": "5"
+    }
+   ]
+  },
+  {
+   "title": "Firefighting strategy",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "There is no active or manual fire suppression for large sodium fires.",
+     "anchor": "There is no active or manual fire suppression for large sodium fires",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "Sodium leaks and fires are mitigated passively by NNA features.",
+     "anchor": "Sodium leaks and resulting sodium fires are mitigated by passive means",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "Class D extinguishers with Sodium Chloride-based dry powder are staged for personnel protection.",
+     "anchor": "Class D fire extinguishers containing Sodium Chloride-based dry powder",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "Incipient conventional fires in the RAB and RXB use Class A, B, or C extinguishers.",
+     "anchor": "manual firefighting methods using Class A, B, or C fire extinguishers are used",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "Beyond the incipient stage, offsite responders with specialized training are requested.",
+     "anchor": "offsite responders with specialized training are requested to respond",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "Deep-seated sodium fires are contained in NNA features and are passively self-suppressing.",
+     "anchor": "are passively self-suppressing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "The RXB and RAB have no water-based suppression, to avoid sodium-water interaction.",
+     "anchor": "do not contain water-based fire suppression systems to avoid sodium-water interaction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+    },
+    {
+     "t": "p",
+     "text": "A Fire Protection Program will be developed at the OL stage to meet 10 CFR 50.48(a).",
+     "anchor": "A Fire Protection Program for operations will be developed at the operating license stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4, p. 8.2-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is used to fight a large sodium fire?",
+     "o": [
+      "Foam",
+      "Water",
+      "No active or manual suppression, passive features mitigate it",
+      "CO2 flood"
+     ],
+     "a": 2,
+     "x": "There is no active or manual fire suppression for large sodium fires.",
+     "anchor": "There is no active or manual fire suppression for large sodium fires",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8",
+     "eo": "6"
+    },
+    {
+     "q": "Which extinguisher is staged in sodium areas?",
+     "o": [
+      "Class B",
+      "Class C",
+      "Class D",
+      "Class A"
+     ],
+     "a": 2,
+     "x": "Class D with Sodium Chloride-based dry powder is staged.",
+     "anchor": "Class D fire extinguishers containing Sodium Chloride-based dry powder",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8",
+     "eo": "6"
+    },
+    {
+     "q": "Why is there no water suppression in the RXB and RAB?",
+     "o": [
+      "To avoid sodium-water interaction",
+      "Freezing",
+      "Weight",
+      "Cost"
+     ],
+     "a": 0,
+     "x": "They avoid sodium-water interaction.",
+     "anchor": "do not contain water-based fire suppression systems to avoid sodium-water interaction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8",
+     "eo": "6"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Sodium fires are handled by leak prevention, detection, and passive mitigation.",
+   "anchor": "utilizes leak prevention, detection and passive mitigation",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3"
+  },
+  {
+   "text": "Guard pipes, enclosures, cells, and catch pans contain and collect sodium.",
+   "anchor": "Catch pans are a steel-lined volume designed to retain the design-basis sodium leak volume plus margin",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2"
+  },
+  {
+   "text": "No water suppression in RXB and RAB. Class D extinguishers protect personnel.",
+   "anchor": "do not contain water-based fire suppression systems to avoid sodium-water interaction",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-05",
+ "title": "Fire Protection and Sodium Leakage",
+ "kind": "topic",
+ "subject": "fire protection",
+ "sec_note": "Sec. 8.2, pp. 8.2-1 to 8.2-8",
+ "intro": "Sodium fires change the fire protection picture. Passive features do the work, and water stays away from sodium. This lesson pairs with SY-15.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the fire protection defense-in-depth approach for conventional and sodium fires.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Describe the sodium leak design features.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain how each category of sodium leak is handled.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Describe how leak sizes and locations are postulated.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Explain the fire safe shutdown strategy.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "State the preliminary firefighting strategies and the role of operators and responders.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-05-fire-protection-and-sodium-leakage"
+}

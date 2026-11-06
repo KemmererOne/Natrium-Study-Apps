@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Buildings and Structures</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-24-buildings-and-structures">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">Four buildings make up the Nuclear Island. For each one, learn what it houses and how the part below grade and the part above grade are classified. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.8, pp. 7.8-1 to 7.8-37</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the Nuclear Island buildings.</p><p class="gap">Taught in: <a href="#concept-1">Overview</a></p><p><span class="num">2</span> Identify the Nuclear Island buildings boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Overview</a></p><p><span class="num">3</span> Identify the major components of the Nuclear Island buildings.</p><p class="gap">Taught in: <a href="#concept-2">Reactor Building</a>, <a href="#concept-4">Fuel Handling Building</a>, <a href="#concept-5">Reactor Auxiliary Building</a>, <a href="#concept-6">Nuclear Island Control Building</a></p><p><span class="num">4</span> Explain Nuclear Island buildings operation.</p><p class="gap">Taught in: <a href="#concept-2">Reactor Building</a></p><p><span class="num">5</span> Describe the Nuclear Island buildings controls and indications.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">6</span> Explain the Nuclear Island buildings automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">RXB functions</a></p><p><span class="num">7</span> Apply operating procedures for the Nuclear Island buildings.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the Nuclear Island buildings.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">9</span> Explain the safety significance of the Nuclear Island buildings.</p><p class="gap">Taught in: <a href="#concept-3">RXB functions</a>, <a href="#concept-7">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the Nuclear Island buildings.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Overview <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Overview</h2><p class="count">Objectives 1, 2</p><p>The safety-significant NI buildings are the RXB, FHB, RAB, and NCB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8, p. 7.8-1</cite></p>
+<table class="tbl"><thead><tr><th>Building</th><th>Below grade</th><th>Above grade</th></tr></thead><tbody><tr><td>RXB</td><td>SR</td><td>NST <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></td></tr><tr><td>FHB</td><td>SR</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2, p. 7.8-10</cite></td></tr><tr><td>RAB</td><td>NSRST</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></td></tr><tr><td>NCB</td><td>SR</td><td>NSRST <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29</cite></td></tr></tbody></table>
+<p>The RXB superstructure is classified NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Overview <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Overview</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 1,2</span><span>SY-24-K1</span></div>
+  <p>Which building is NSRST both above and below grade?</p>
+  <div class="opts"><button type="button" class="opt">A. FHB</button><button type="button" class="opt">B. RAB</button><button type="button" class="opt">C. NCB</button><button type="button" class="opt">D. RXB</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Both portions of the RAB are NSRST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K1&amp;body=Item%3A%20SY-24-K1%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Which%20building%20is%20NSRST%20both%20above%20and%20below%20grade%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.3%2C%20p.%207.8-20%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1,2</span><span>SY-24-K2</span></div>
+  <p>How is the RXB superstructure classified?</p>
+  <div class="opts"><button type="button" class="opt">A. NST</button><button type="button" class="opt">B. SCS1</button><button type="button" class="opt">C. SR</button><button type="button" class="opt">D. NSRST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The RXB superstructure is NST. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K2&amp;body=Item%3A%20SY-24-K2%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20How%20is%20the%20RXB%20superstructure%20classified%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1%2C%20p.%207.8-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Overview</a><a class="next" href="#concept-2">Reactor Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactor Building</h2><p class="count">Objectives 3, 4</p><p>The SR substructure houses the reactor, RES, and the RAC duct stacks. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></p>
+<p>The RXB is normally unoccupied, with substructure access restricted during normal operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></p>
+<p>Seismic isolators under the RES and MIRSS sit in a subgrade space. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1</cite></p>
+<p>The HAA contains the reactor head, penetrations, PSPs, and control rod drive assemblies. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1</cite></p>
+<p>Removable planks in the grade slab give access for maintenance and refueling. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-2</cite></p>
+<p>The HAA is a functional containment boundary with a radionuclide retention function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3</cite></p>
+<p>The superstructure supports a single-failure proof overhead bridge crane. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.2, p. 7.8-7</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Overview</a><a class="next" href="#check-2">Knowledge check: Reactor Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactor Building</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 3,4</span><span>SY-24-K3</span></div>
+  <p>What does the HAA contain?</p>
+  <div class="opts"><button type="button" class="opt">A. MCR</button><button type="button" class="opt">B. Salt tanks</button><button type="button" class="opt">C. Reactor head, PSPs, and CRD assemblies</button><button type="button" class="opt">D. EVST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The HAA contains these items. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K3&amp;body=Item%3A%20SY-24-K3%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20What%20does%20the%20HAA%20contain%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1.1.1%2C%20p.%207.8-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 3,4</span><span>SY-24-K4</span></div>
+  <p>Which part of the RXB provides functional containment?</p>
+  <div class="opts"><button type="button" class="opt">A. The HAA</button><button type="button" class="opt">B. The crane</button><button type="button" class="opt">C. The roof</button><button type="button" class="opt">D. The superstructure</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The HAA provides a functional containment boundary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K4&amp;body=Item%3A%20SY-24-K4%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Which%20part%20of%20the%20RXB%20provides%20functional%20containment%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1.1.2%2C%20p.%207.8-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3,4</span><span>SY-24-K5</span></div>
+  <p>Is the RXB normally occupied?</p>
+  <div class="opts"><button type="button" class="opt">A. Only the HAA</button><button type="button" class="opt">B. Only in Mode 1</button><button type="button" class="opt">C. Yes</button><button type="button" class="opt">D. No</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. It is normally unoccupied. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K5&amp;body=Item%3A%20SY-24-K5%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Is%20the%20RXB%20normally%20occupied%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1%2C%20p.%207.8-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Reactor Building</a><a class="next" href="#concept-3">RXB functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>RXB functions</h2><p class="count">Objectives 6, 9</p><table class="tbl"><thead><tr><th>Function</th><th>Role</th></tr></thead><tbody><tr><td>DL3-HR4</td><td>The substructure holds the outer boundary of the RAC air flow path <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4</cite></td></tr><tr><td>DL4-RR1</td><td>Ex-RES functional containment includes the guard vessel, HAA walls, and HAA HVAC isolation <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4</cite></td></tr><tr><td>DL4-RR1a</td><td>HAA barrier, a sub-function of DL4-RR1 <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4</cite></td></tr></tbody></table>
+<p>Demand-to-capacity ratios do not exceed 0.80 for design-basis loads, or 1.00 for beyond design basis events. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.3, p. 7.8-6</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Reactor Building</a><a class="next" href="#check-3">Knowledge check: RXB functions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: RXB functions</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 6,9</span><span>SY-24-K6</span></div>
+  <p>What is included in the ex-RES functional containment?</p>
+  <div class="opts"><button type="button" class="opt">A. The turbine building</button><button type="button" class="opt">B. Guard vessel, HAA walls, HAA HVAC isolation</button><button type="button" class="opt">C. RAB walls</button><button type="button" class="opt">D. The stack</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Those three make up the boundary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K6&amp;body=Item%3A%20SY-24-K6%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20What%20is%20included%20in%20the%20ex-RES%20functional%20containment%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1.1.2%2C%20p.%207.8-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 6,9</span><span>SY-24-K7</span></div>
+  <p>Which function does the RXB substructure support for decay heat removal?</p>
+  <div class="opts"><button type="button" class="opt">A. SPS</button><button type="button" class="opt">B. RAC air flow path boundary</button><button type="button" class="opt">C. Salt cooling</button><button type="button" class="opt">D. Turbine cooling</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. DL3-HR4 uses the RXB as the outer boundary of the RAC air flow path. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K7&amp;body=Item%3A%20SY-24-K7%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Which%20function%20does%20the%20RXB%20substructure%20support%20for%20decay%20heat%20removal%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1.1.2%2C%20p.%207.8-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> RXB functions</a><a class="next" href="#concept-4">Fuel Handling Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Fuel Handling Building</h2><p class="count">Objectives 3</p><p>The FHB houses fuel receipt, refueling, storage, radwaste systems, and the SFP. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2, p. 7.8-10</cite></p>
+<p>A three foot thick grade slab protects sub-grade areas and supports the Ex-Vessel Handling Machine and Bottom Loading Transfer Cask. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10</cite></p>
+<p>The SFP has 5 foot thick walls and a 4 foot thick foundation slab about 51 feet below grade. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10</cite></p>
+<p>A stainless steel liner and leak chase monitor leakage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10</cite></p>
+<p>The superstructure is an enveloping barrier supporting negative pressure for radionuclide retention. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-15</cite></p>
+<p>The superstructure is NSRST, seismic class SCN1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-16</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: RXB functions</a><a class="next" href="#check-4">Knowledge check: Fuel Handling Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Fuel Handling Building</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K8</span></div>
+  <p>How thick are the SFP walls?</p>
+  <div class="opts"><button type="button" class="opt">A. 3 feet</button><button type="button" class="opt">B. 4 feet</button><button type="button" class="opt">C. 5 feet</button><button type="button" class="opt">D. 8 feet</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The SFP has 5 foot thick walls. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K8&amp;body=Item%3A%20SY-24-K8%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20How%20thick%20are%20the%20SFP%20walls%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.2.1.1%2C%20p.%207.8-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K9</span></div>
+  <p>What function does the FHB superstructure support?</p>
+  <div class="opts"><button type="button" class="opt">A. RAC air flow</button><button type="button" class="opt">B. Scram</button><button type="button" class="opt">C. Salt flow</button><button type="button" class="opt">D. Negative pressure for radionuclide retention</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. It is an enveloping barrier for negative pressure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-15</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K9&amp;body=Item%3A%20SY-24-K9%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20What%20function%20does%20the%20FHB%20superstructure%20support%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.2.2.2%2C%20p.%207.8-15%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Fuel Handling Building</a><a class="next" href="#concept-5">Reactor Auxiliary Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactor Auxiliary Building</h2><p class="count">Objectives 3</p><p>The RAB takes intermediate sodium from the RXB and transfers heat to the NI Salt System. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></p>
+<p>It houses IHT loops, Sodium-Salt Heat Exchangers, ISPs, IHT expansion tanks, SCG, and SPS equipment. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></p>
+<p>IAC Air Stack Structures and Equipment sit next to the RAB. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></p>
+<p>The lower level holds the IHT supplemental tank, 62 feet below grade, and has no personnel access from adjacent spaces. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3.1.1, p. 7.8-20</cite></p>
+<p>SPS Cells are designed for slight negative pressure as part of an enveloping boundary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3.1.3, p. 7.8-22</cite></p>
+<p>An automobile tornado missile barrier protects the IAC and IHT. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.3, p. 7.8-25</cite></p>
+<p>Roof panels at the east end can be removed for crane access to ISPs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.1, p. 7.8-24</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Fuel Handling Building</a><a class="next" href="#check-5">Knowledge check: Reactor Auxiliary Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactor Auxiliary Building</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K10</span></div>
+  <p>Where are the Sodium-Salt Heat Exchangers?</p>
+  <div class="opts"><button type="button" class="opt">A. RAB</button><button type="button" class="opt">B. FHB</button><button type="button" class="opt">C. NCB</button><button type="button" class="opt">D. RXB</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The RAB houses IHT piping loops and components, including these. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K10&amp;body=Item%3A%20SY-24-K10%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Where%20are%20the%20Sodium-Salt%20Heat%20Exchangers%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.3%2C%20p.%207.8-20%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K11</span></div>
+  <p>How are the ISPs removed?</p>
+  <div class="opts"><button type="button" class="opt">A. Through the transfer corridor</button><button type="button" class="opt">B. They are not</button><button type="button" class="opt">C. Through the HAA</button><button type="button" class="opt">D. Through removable roof panels using a crane</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The roof has two removable panels for crane access. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.1, p. 7.8-24</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K11&amp;body=Item%3A%20SY-24-K11%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20How%20are%20the%20ISPs%20removed%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.3.2.1%2C%20p.%207.8-24%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Reactor Auxiliary Building</a><a class="next" href="#concept-6">Nuclear Island Control Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Nuclear Island Control Building</h2><p class="count">Objectives 3</p><p>The SR substructure houses the RPS, PSP and ISP breakers, NSRST electrical equipment, and the RSC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29</cite></p>
+<p>The NSRST superstructure holds the MCR, and no SR equipment. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29</cite></p>
+<p>Substructure rooms hold NUP and NDC equipment and batteries. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.1.1, p. 7.8-29</cite></p>
+<p>The superstructure is a one-story steel frame serving as the NI control center. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.1, p. 7.8-32</cite></p>
+<p>A reinforced MCR enclosure protects against chemical, radiological, and weather-related external events. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.1, p. 7.8-32</cite></p>
+<p>The superstructure is designed not to collapse under seismic or tornado loading. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.3, p. 7.8-34</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Reactor Auxiliary Building</a><a class="next" href="#check-6">Knowledge check: Nuclear Island Control Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Nuclear Island Control Building</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K12</span></div>
+  <p>Which part of the NCB houses the RSC?</p>
+  <div class="opts"><button type="button" class="opt">A. Roof</button><button type="button" class="opt">B. It is in the FHB</button><button type="button" class="opt">C. Substructure</button><button type="button" class="opt">D. Superstructure</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The substructure houses the RSC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.1.1, p. 7.8-29</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K12&amp;body=Item%3A%20SY-24-K12%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Which%20part%20of%20the%20NCB%20houses%20the%20RSC%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.4.1.1%2C%20p.%207.8-29%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 3</span><span>SY-24-K13</span></div>
+  <p>Does the NCB superstructure house SR equipment?</p>
+  <div class="opts"><button type="button" class="opt">A. Yes</button><button type="button" class="opt">B. No</button><button type="button" class="opt">C. Only RPS</button><button type="button" class="opt">D. Only batteries</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. It does not house any SR equipment. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K13&amp;body=Item%3A%20SY-24-K13%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Does%20the%20NCB%20superstructure%20house%20SR%20equipment%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.4%2C%20p.%207.8-29%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Nuclear Island Control Building</a><a class="next" href="#concept-7">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><p>Structures provide load paths and external hazard protection for the SSCs inside. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-5</cite></p>
+<p>RAB substructure and superstructure are seismic class SCN1, and so is the NCB superstructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4.2.2, p. 7.8-34</cite></p>
+<ul><li>Quality Assurance Program Description</li><li>Design Reliability Assurance Program</li><li>Post-Construction Inspection, Testing and Analysis Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.4, p. 7.8-7</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Nuclear Island Control Building</a><a class="next" href="#check-7">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 9,10</span><span>SY-24-K14</span></div>
+  <p>Which is a function of the SR substructures?</p>
+  <div class="opts"><button type="button" class="opt">A. External hazard protection and load path</button><button type="button" class="opt">B. Reactivity control</button><button type="button" class="opt">C. Sodium purification</button><button type="button" class="opt">D. Salt heating</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Substructures provide external hazard protection and load paths. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-24-K14&amp;body=Item%3A%20SY-24-K14%0ALesson%3A%20Buildings%20and%20Structures%0AQuestion%3A%20Which%20is%20a%20function%20of%20the%20SR%20substructures%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.8.1.1.2%2C%20p.%207.8-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>RXB, FHB, and NCB have SR substructures, and the RAB is NSRST throughout. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20</cite></li><li>The HAA is part of the RXB substructure and is a functional containment boundary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3</cite></li><li>The MCR is in the NSRST NCB superstructure, and the RPS and RSC are in the SR NCB substructure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 17</span></div>
+<h1>Buildings and Structures</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Overview</a></li><li><a href="#check-1">Knowledge check: Overview</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">RXB functions</a></li><li><a href="#check-3">Knowledge check: RXB functions</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Reactor Auxiliary Building</a></li><li><a href="#check-5">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-6">Nuclear Island Control Building</a></li><li><a href="#check-6">Knowledge check: Nuclear Island Control Building</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.8, 7.8.1, 7.8.1.1.1, 7.8.1.1.2, 7.8.1.1.3, 7.8.1.1.4, 7.8.1.2, 7.8.2, 7.8.2.1.1, 7.8.2.2.2, 7.8.3, 7.8.3.1.1, 7.8.3.1.3, 7.8.3.2.1, 7.8.3.2.3, 7.8.4, 7.8.4.1.1, 7.8.4.2.1, 7.8.4.2.2, 7.8.4.2.3</p><p>Pages 7.8-1, 7.8-2, 7.8-3, 7.8-4, 7.8-5, 7.8-6, 7.8-7, 7.8-10, 7.8-15, 7.8-16, 7.8-20, 7.8-22, 7.8-24, 7.8-25, 7.8-29, 7.8-32, 7.8-34</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-24&amp;body=Lesson%3A%20SY-24%20Buildings%20and%20Structures%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

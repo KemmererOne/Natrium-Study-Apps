@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Intermediate Heat Transport System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-04-intermediate-heat-transport-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The IHT carries heat from the IHXs to the salt system at power and to the air heat exchangers at low power and shutdown. It has two loops, and either pumped or natural circulation flow. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.1.4, pp. 7.1-75 to 7.1-85</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the IHT.</p><p class="gap">Taught in: <a href="#concept-1">Purpose</a></p><p><span class="num">2</span> Identify the IHT boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-2">Components and boundaries</a></p><p><span class="num">3</span> Identify the major components of the IHT.</p><p class="gap">Taught in: <a href="#concept-2">Components and boundaries</a></p><p><span class="num">4</span> Explain IHT operation.</p><p class="gap">Taught in: <a href="#concept-3">Operation and pressure relationships</a></p><p><span class="num">5</span> Describe the IHT controls and indications.</p><p class="gap">Taught in: <a href="#concept-6">Indications and abnormal conditions</a></p><p><span class="num">6</span> Explain the IHT automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-4">Automatic features</a></p><p><span class="num">7</span> Apply operating procedures for the IHT.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the IHT.</p><p class="gap">Taught in: <a href="#concept-6">Indications and abnormal conditions</a></p><p><span class="num">9</span> Explain the safety significance of the IHT.</p><p class="gap">Taught in: <a href="#concept-5">Functions and classification</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the IHT.</p><p class="gap">Taught in: <a href="#concept-5">Functions and classification</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose</h2><p class="count">Objectives 1</p><p>The IHT transports heat to the NSS for electrical power generation and energy storage during normal operation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>It transports heat to the IAC for rejection to the atmosphere during start-up and shutdown, as the normal and preferred means of reactor cooling. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>On loss of pumped flow, the IHT provides natural circulation for decay heat removal through the IAC AHXs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1</span><span>SY-04-K1</span></div>
+  <p>What is the normal and preferred means of reactor cooling during start-up and shutdown?</p>
+  <div class="opts"><button type="button" class="opt">A. The Energy Island</button><button type="button" class="opt">B. SPS cooling</button><button type="button" class="opt">C. RAC</button><button type="button" class="opt">D. Transport of heat through the IHT to the IAC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. IHT to IAC is the normal and preferred means. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K1&amp;body=Item%3A%20SY-04-K1%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20is%20the%20normal%20and%20preferred%20means%20of%20reactor%20cooling%20during%20start-up%20and%20shutdown%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.1%2C%20p.%207.1-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose</a><a class="next" href="#concept-2">Components and boundaries <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Components and boundaries</h2><p class="count">Objectives 2, 3</p><p>Each of the two loops has an ISP, an array of SHXs, and interconnecting piping. Each loop connects to one IHX and one IAC AHX. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>Supporting equipment includes expansion tanks and a drain subsystem. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>Loop piping and components are in the Reactor Auxiliary Building, except piping in the Reactor Building to the IHX nozzles and yard piping to the AHXs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>The expansion tank interfaces with the SCG for an inert cover gas and overpressure protection, and with the SPS for sodium processing. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+<p>IHT piping in the HAA has a continuous leak guard as a secondary barrier. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-82</cite></p>
+<figure class="fig"><img loading="lazy" src="data:image/png;base64,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" alt="PSAR Rev 1 figure: Intermediate Loop Simplified Diagram"><figcaption>Figure 7.1.4-1. Intermediate Loop Simplified Diagram <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-85</cite></figcaption></figure>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose</a><a class="next" href="#check-2">Knowledge check: Components and boundaries <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Components and boundaries</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 2,3</span><span>SY-04-K2</span></div>
+  <p>What does each IHT loop connect to?</p>
+  <div class="opts"><button type="button" class="opt">A. Both IHXs</button><button type="button" class="opt">B. Both PSPs</button><button type="button" class="opt">C. RAC ducts</button><button type="button" class="opt">D. One IHX and one IAC AHX</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Each loop connects to one PHT IHX and one IAC AHX. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K2&amp;body=Item%3A%20SY-04-K2%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20does%20each%20IHT%20loop%20connect%20to%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.1%2C%20p.%207.1-75%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 2,3</span><span>SY-04-K3</span></div>
+  <p>What protects HAA equipment from an IHT pipe leak?</p>
+  <div class="opts"><button type="button" class="opt">A. Water sprays</button><button type="button" class="opt">B. The HAA Seal</button><button type="button" class="opt">C. Argon purge only</button><button type="button" class="opt">D. A continuous leak guard around the pipe</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The piping in the HAA has a continuous leak guard. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-82</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K3&amp;body=Item%3A%20SY-04-K3%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20protects%20HAA%20equipment%20from%20an%20IHT%20pipe%20leak%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.3%2C%20p.%207.1-82%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Components and boundaries</a><a class="next" href="#concept-3">Operation and pressure relationships <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operation and pressure relationships</h2><p class="count">Objectives 4</p><p>ISP speed controls loop flow, through an adjustable speed drive that varies frequency and voltage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></p>
+<p>IAC Active Mode uses ISP flow. When ISPs are not available, Blower Mode and Passive Mode use natural circulation of intermediate sodium. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80</cite></p>
+<p>The elevation difference between the IHX and the higher AHX drives natural circulation flow. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80</cite></p>
+<table class="tbl"><thead><tr><th>Boundary</th><th>Pressure relationship</th><th>Leak direction</th></tr></thead><tbody><tr><td>IHX</td><td>IHT above PHT</td><td>Intermediate into primary <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63</cite></td></tr><tr><td>SHX</td><td>IHT below NSS</td><td>Salt into intermediate <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Components and boundaries</a><a class="next" href="#check-3">Knowledge check: Operation and pressure relationships <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operation and pressure relationships</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>SY-04-K4</span></div>
+  <p>In an SHX leak, which way does the coolant flow?</p>
+  <div class="opts"><button type="button" class="opt">A. Salt into the intermediate loop</button><button type="button" class="opt">B. Air into salt</button><button type="button" class="opt">C. Sodium into primary</button><button type="button" class="opt">D. Sodium into salt</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. IHT pressure is lower than NSS, so NSS coolant flows to the intermediate loop. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K4&amp;body=Item%3A%20SY-04-K4%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20In%20an%20SHX%20leak%2C%20which%20way%20does%20the%20coolant%20flow%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.3%2C%20p.%207.1-81%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 4</span><span>SY-04-K5</span></div>
+  <p>What drives natural circulation in the IHT?</p>
+  <div class="opts"><button type="button" class="opt">A. Cover gas pressure</button><button type="button" class="opt">B. The ISP pony motor</button><button type="button" class="opt">C. Elevation difference between the IHX and the AHX</button><button type="button" class="opt">D. SPS flow</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The elevation difference provides the potential energy. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K5&amp;body=Item%3A%20SY-04-K5%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20drives%20natural%20circulation%20in%20the%20IHT%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.3%2C%20p.%207.1-80%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Operation and pressure relationships</a><a class="next" href="#concept-4">Automatic features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Automatic features</h2><p class="count">Objectives 6</p><table class="tbl"><thead><tr><th>Trip condition</th><th>ISPs tripped</th></tr></thead><tbody><tr><td>Low level in an IHT expansion tank</td><td>Associated ISP <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></td></tr><tr><td>High-High primary sodium level</td><td>Both <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></td></tr><tr><td>High-High primary sodium temperature</td><td>Both <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></td></tr></tbody></table>
+<p>Two trip circuit breakers are in series in the power supply to each ISP motor. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+<p>The siphon-break feature limits intermediate sodium entering the primary system in an IHX leak, to prevent reactor vessel overfill. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Operation and pressure relationships</a><a class="next" href="#check-4">Knowledge check: Automatic features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Automatic features</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 6</span><span>SY-04-K6</span></div>
+  <p>Which condition trips only the associated ISP?</p>
+  <div class="opts"><button type="button" class="opt">A. Low level in an IHT expansion tank</button><button type="button" class="opt">B. Reactor scram</button><button type="button" class="opt">C. High-High primary sodium level</button><button type="button" class="opt">D. High-High primary sodium temperature</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Low expansion tank level trips the associated ISP. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K6&amp;body=Item%3A%20SY-04-K6%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20Which%20condition%20trips%20only%20the%20associated%20ISP%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.3%2C%20p.%207.1-81%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 6</span><span>SY-04-K7</span></div>
+  <p>What prevents reactor vessel overfill in an IHX leak?</p>
+  <div class="opts"><button type="button" class="opt">A. The RAC</button><button type="button" class="opt">B. Hot pool liner</button><button type="button" class="opt">C. SPS pump</button><button type="button" class="opt">D. The intermediate loop siphon-break feature</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The siphon-break feature limits the sodium introduced to prevent overfill. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K7&amp;body=Item%3A%20SY-04-K7%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20prevents%20reactor%20vessel%20overfill%20in%20an%20IHX%20leak%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.3%2C%20p.%207.1-81%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Automatic features</a><a class="next" href="#concept-5">Functions and classification <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Functions and classification</h2><p class="count">Objectives 9, 10</p><table class="tbl"><thead><tr><th>Function</th><th>Classification</th><th>Purpose</th></tr></thead><tbody><tr><td>DL2-HR2 ISP trip on low IHT level</td><td>NSRST</td><td>Limit loss of intermediate sodium from leakage <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></td></tr><tr><td>DL3-HR3 ISP trip on high high primary sodium temperature</td><td>SR</td><td>Limit heat addition to primary coolant <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></td></tr><tr><td>DL3-HR12 ISP trip on high high primary sodium level</td><td>SR</td><td>Limit intermediate flow into the primary through IHX tube leakage <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></td></tr><tr><td>DL4-HR7 Manual ISP trip</td><td>NSRST</td><td>Operator backup to the SR automatic trip <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></td></tr><tr><td>DL4-HR1 IAC passive mode operation</td><td>NSRST</td><td>Natural circulation to the AHX when ISP and RAC are unavailable <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></td></tr></tbody></table>
+<p>IHT piping, tanks, and SHXs are NSRST. The ISP trip circuit breaker and trip actuator are SR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-83</cite></p>
+<p>No manual operator actions or automatic actuations are needed for the IHT passive heat removal function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Automatic features</a><a class="next" href="#check-5">Knowledge check: Functions and classification <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Functions and classification</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 9,10</span><span>SY-04-K8</span></div>
+  <p>What is the classification of the ISP trip circuit breaker?</p>
+  <div class="opts"><button type="button" class="opt">A. SR</button><button type="button" class="opt">B. Not classified</button><button type="button" class="opt">C. NST</button><button type="button" class="opt">D. NSRST</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Table 7.1.4-1 lists the ISP trip circuit breaker as SR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-83</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K8&amp;body=Item%3A%20SY-04-K8%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20is%20the%20classification%20of%20the%20ISP%20trip%20circuit%20breaker%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.5%2C%20p.%207.1-83%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 9,10</span><span>SY-04-K9</span></div>
+  <p>What does manual ISP trip back up?</p>
+  <div class="opts"><button type="button" class="opt">A. SPS</button><button type="button" class="opt">B. The PSP trip</button><button type="button" class="opt">C. RAC</button><button type="button" class="opt">D. The SR automatic trip</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. DL4-HR7 is an operator manual trip as backup to the SR automatic trip. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K9&amp;body=Item%3A%20SY-04-K9%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20What%20does%20manual%20ISP%20trip%20back%20up%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.2%2C%20p.%207.1-79%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Functions and classification</a><a class="next" href="#concept-6">Indications and abnormal conditions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Indications and abnormal conditions</h2><p class="count">Objectives 5, 8</p><p>The IHT provides instrumentation for expansion tank level signals and ISP trip circuit breaker status. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-82</cite></p>
+<p>Sodium-salt reaction effects from an SHX leak are the subject of research and development. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Functions and classification</a><a class="next" href="#check-6">Knowledge check: Indications and abnormal conditions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Indications and abnormal conditions</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 5,8</span><span>SY-04-K10</span></div>
+  <p>Which IHT indication helps diagnose sodium loss from a loop?</p>
+  <div class="opts"><button type="button" class="opt">A. Rod position</button><button type="button" class="opt">B. Neutron flux</button><button type="button" class="opt">C. Stack flow</button><button type="button" class="opt">D. Expansion tank level</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The IHT provides expansion tank level signals. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-82</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-04-K10&amp;body=Item%3A%20SY-04-K10%0ALesson%3A%20Intermediate%20Heat%20Transport%20System%0AQuestion%3A%20Which%20IHT%20indication%20helps%20diagnose%20sodium%20loss%20from%20a%20loop%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.1.4.5%2C%20p.%207.1-82%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Indications and abnormal conditions</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>The IHT has two loops, each with an ISP, SHXs, and connections to one IHX and one AHX. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75</cite></li><li>IHT pressure sits above primary and below salt. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></li><li>ISP trips are on low expansion tank level, and high high primary sodium level or temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Indications and abnormal conditions</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 15</span></div>
+<h1>Intermediate Heat Transport System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose</a></li><li><a href="#check-1">Knowledge check: Purpose</a></li><li><a href="#concept-2">Components and boundaries</a></li><li><a href="#check-2">Knowledge check: Components and boundaries</a></li><li><a href="#concept-3">Operation and pressure relationships</a></li><li><a href="#check-3">Knowledge check: Operation and pressure relationships</a></li><li><a href="#concept-4">Automatic features</a></li><li><a href="#check-4">Knowledge check: Automatic features</a></li><li><a href="#concept-5">Functions and classification</a></li><li><a href="#check-5">Knowledge check: Functions and classification</a></li><li><a href="#concept-6">Indications and abnormal conditions</a></li><li><a href="#check-6">Knowledge check: Indications and abnormal conditions</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.1.3.3.3, 7.1.4.1, 7.1.4.2, 7.1.4.3, 7.1.4.5</p><p>Pages 7.1-63, 7.1-75, 7.1-79, 7.1-80, 7.1-81, 7.1-82, 7.1-83, 7.1-85</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-04&amp;body=Lesson%3A%20SY-04%20Intermediate%20Heat%20Transport%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

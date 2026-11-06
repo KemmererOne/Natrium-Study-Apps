@@ -1,0 +1,347 @@
+{
+ "concepts": [
+  {
+   "title": "What an AOO is",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Event sequences with mean frequencies of 1x10-2 per plant-year and greater are classified as AOOs.",
+     "anchor": "1x10-2 per plant-year and greater are classified as AOOs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1"
+    },
+    {
+     "t": "p",
+     "text": "AOOs take into account the expected responses of all SSCs regardless of safety classification.",
+     "anchor": "AOOs take into account the expected",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What frequency classifies an event sequence as an AOO?",
+     "o": [
+      "Exactly once per plant life",
+      "1x10-2 per plant-year and greater",
+      "1x10-4 to 1x10-2 per plant-year",
+      "Below 1x10-4 per plant-year"
+     ],
+     "a": 1,
+     "x": "Mean frequencies of 1x10-2 per plant-year and greater are classified as AOOs.",
+     "anchor": "1x10-2 per plant-year and greater are classified as AOOs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "The AOO set",
+   "eo": [
+    "1",
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "AOO",
+      "Initiator",
+      "Scram signal"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DHP-L1PP-BL",
+        "Loss of one PSP at full power",
+        "High high power-to-flow ratio"
+       ],
+       "anchor": "A reactor scram on high high power-to-flow ratio occurs. The final conditions result in the reactor in safe",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.1.1, p. 3.6-1"
+      },
+      {
+       "cells": [
+        "DHP-LOOP-BL",
+        "Loss of offsite power at full power",
+        "High high power-to-flow ratio"
+       ],
+       "anchor": "resulting in a reactor scram on high high power-to-flow ratio",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.2.1, p. 3.6-1"
+      },
+      {
+       "cells": [
+        "SUD-LOOP-BL",
+        "Loss of offsite power at low power",
+        "Loss of primary flow"
+       ],
+       "anchor": "The reactor scrams due to the loss of primary flow",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.3.1, p. 3.6-1"
+      },
+      {
+       "cells": [
+        "OTH-LMAC-BL",
+        "Loss of a 6.9 kV bus, which loses one PSP and one ISP",
+        "High high power-to-flow ratio"
+       ],
+       "anchor": "The loss of the bus results in the loss of one Primary Sodium Pump and one",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.4.1, p. 3.6-2"
+      },
+      {
+       "cells": [
+        "DHS-ISTL-BL",
+        "Loss of heat removal from one intermediate loop",
+        "High high cold pool temperature"
+       ],
+       "anchor": "scram on high high cold pool temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.2.1.1, p. 3.6-2"
+      },
+      {
+       "cells": [
+        "RPD-CW1ACS-BL",
+        "Continuous withdrawal of a control rod",
+        "High high power range neutron flux or high high power-to-flow ratio"
+       ],
+       "anchor": "scram on high high power range neutron flux or high high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.3.1.1, p. 3.6-3"
+      },
+      {
+       "cells": [
+        "RPD-SS-BL",
+        "Reactor scram or spurious scram",
+        "None beyond the initiator"
+       ],
+       "anchor": "The postulated initiating event is a reactor scram or spurious scram",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.3.2.1, p. 3.6-3"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Loss of a primary 6.9 kilovolt bus loses which pumps?",
+     "o": [
+      "One PSP and one ISP",
+      "Both ISPs",
+      "One SPS pump",
+      "Both PSPs"
+     ],
+     "a": 0,
+     "x": "The loss of the bus results in the loss of one PSP and one ISP.",
+     "anchor": "The loss of the bus results in the loss of one Primary Sodium Pump and one",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.4.1, p. 3.6-2",
+     "eo": "1,3,5"
+    },
+    {
+     "q": "A control rod withdraws continuously at full power. Which scram signals does the PSAR name?",
+     "o": [
+      "Low primary sodium level",
+      "High high power range neutron flux or high high power-to-flow ratio",
+      "High radiation",
+      "High high cold pool temperature"
+     ],
+     "a": 1,
+     "x": "The AOO scrams on high high power range neutron flux or high high power-to-flow ratio.",
+     "anchor": "scram on high high power range neutron flux or high high",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.3.1.1, p. 3.6-3",
+     "eo": "1,3,5"
+    }
+   ]
+  },
+  {
+   "title": "Fuel handling AOOs",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fuel handling AOOs cover damage to a test pin in the Pin Removal Cell, loss of spent fuel pool cooling, and loss of EVST active cooling.",
+     "anchor": "Fuel Damage While Handling an LTA or LDA Test Pin",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.4.1, p. 3.6-3"
+    },
+    {
+     "t": "p",
+     "text": "Spent fuel pool cooling is restored before the pool boils, and no fuel damage occurs.",
+     "anchor": "restored prior to Spent Fuel Pool boiling and no fuel damage occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.4.2.1, p. 3.6-4"
+    },
+    {
+     "t": "p",
+     "text": "In the loss of EVST active cooling, EVST passive cooling is available and no fuel damage occurs.",
+     "anchor": "cooling is available, and no fuel damage occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.4.3.1, p. 3.6-4"
+    },
+    {
+     "t": "p",
+     "text": "The test pin AOO assumes rupture of the cladding of seven pins: the pin being removed and the six surrounding pins.",
+     "anchor": "removed from the assembly and the six surrounding pins",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.4.1.2, p. 3.6-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why does the test pin AOO assume seven damaged pins?",
+     "o": [
+      "The assembly has seven rows",
+      "The pin being removed plus the six surrounding pins",
+      "Seven pins fit in the cell",
+      "It is a regulatory minimum"
+     ],
+     "a": 1,
+     "x": "Seven pins account for the pin being removed and the six surrounding pins.",
+     "anchor": "removed from the assembly and the six surrounding pins",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.4.1.2, p. 3.6-3",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "End states and operator role",
+   "eo": [
+    "10",
+    "12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Most reactor AOOs end in safe shutdown with IAC in non-passive mode removing decay heat.",
+     "anchor": "The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.2.1, p. 3.6-1"
+    },
+    {
+     "t": "p",
+     "text": "Operator actions are not required to mitigate AOOs unless otherwise noted.",
+     "anchor": "Operator actions are not required to mitigate AOOs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1"
+    },
+    {
+     "t": "p",
+     "text": "For the reactor AOOs, fuel integrity is maintained and there is no radiological release.",
+     "anchor": "the peak fuel pin and there is no radiological release",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.1.2, p. 3.6-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the usual decay heat removal path at the end of a reactor AOO?",
+     "o": [
+      "IAC passive mode only",
+      "The steam plant",
+      "IAC in non-passive mode",
+      "RAC only"
+     ],
+     "a": 2,
+     "x": "The AOO end state is safe shutdown with IAC in non-passive mode. DBEs remove that path.",
+     "anchor": "The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.2.1, p. 3.6-1",
+     "eo": "10,12"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "AOOs have mean frequencies of 1x10-2 per plant-year and greater.",
+   "anchor": "1x10-2 per plant-year and greater are classified as AOOs",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1"
+  },
+  {
+   "text": "Reactor AOOs end in safe shutdown on non-passive IAC with no radiological release.",
+   "anchor": "The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6.1.2.1, p. 3.6-1"
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Anticipated operational occurrences (AOOs) are anticipated event sequences expected to occur one or more times during the life of the plant.",
+   "sec": "Sec. 3.6",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1"
+  }
+ ],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-01",
+ "title": "Anticipated Operational Occurrences",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.6, pp. 3.6-1 to 3.6-4",
+ "intro": "AOOs are the events the plant expects to see in its life. Learn the set first, because every DBE builds on the same initiators with more failures added.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": false
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": false
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": false
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": true
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-ev-01-anticipated-operational-occurrences"
+}

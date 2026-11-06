@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Nuclear Island HVAC System</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-sy-14-nuclear-island-hvac-system">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The NHV is planned building by building. Its safety-significant work is isolating penetrations, filtering exhaust, and keeping the control room habitable. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.5.1, pp. 7.5-1 to 7.5-9</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the NHV.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and layout</a></p><p><span class="num">2</span> Identify the NHV boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and layout</a></p><p><span class="num">3</span> Identify the major components of the NHV.</p><p class="gap">Taught in: <a href="#concept-2">Reactor Building</a>, <a href="#concept-3">Reactor Auxiliary Building</a>, <a href="#concept-4">Fuel Handling Building</a></p><p><span class="num">4</span> Explain NHV operation.</p><p class="gap">Taught in: <a href="#concept-2">Reactor Building</a>, <a href="#concept-3">Reactor Auxiliary Building</a>, <a href="#concept-4">Fuel Handling Building</a>, <a href="#concept-5">Control room habitability</a></p><p><span class="num">5</span> Describe the NHV controls and indications.</p><p class="gap">Taught in: <a href="#concept-5">Control room habitability</a>, <a href="#concept-6">Automatic versus manual isolation</a></p><p><span class="num">6</span> Explain the NHV automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-2">Reactor Building</a>, <a href="#concept-3">Reactor Auxiliary Building</a>, <a href="#concept-6">Automatic versus manual isolation</a></p><p><span class="num">7</span> Apply operating procedures for the NHV.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the NHV.</p><p class="gap">Taught in: <a href="#concept-4">Fuel Handling Building</a>, <a href="#concept-5">Control room habitability</a>, <a href="#concept-6">Automatic versus manual isolation</a></p><p><span class="num">9</span> Explain the safety significance of the NHV.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the NHV.</p><p class="gap">Taught in: <a href="#concept-7">Safety significance</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Purpose and layout <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Purpose and layout</h2><p class="count">Objectives 1, 2</p><p>The NHV is allocated per building. It provides fresh air and controls exhaust from all NI buildings. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+<p>The RAB, RXB, FHB, and FAB have RCAs, where airflow goes from lesser to higher potential contamination. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+<p>The NCB does not contain RCAs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+<p>The NHV is NSRST to support radionuclide retention and MCR isolation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+<p>The controlled combined release path from the FHB, RXB, RAB, and FAB through the monitored plant stack is an NSRST function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Purpose and layout <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Purpose and layout</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1,2</span><span>SY-14-K1</span></div>
+  <p>Which way does RCA airflow go?</p>
+  <div class="opts"><button type="button" class="opt">A. Straight to the stack with no filter</button><button type="button" class="opt">B. Higher to lesser contamination</button><button type="button" class="opt">C. Lesser to higher potential contamination</button><button type="button" class="opt">D. It is not controlled</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Airflow goes from areas of lesser to areas of higher potential contamination. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K1&amp;body=Item%3A%20SY-14-K1%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20Which%20way%20does%20RCA%20airflow%20go%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.1%2C%20p.%207.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 1,2</span><span>SY-14-K2</span></div>
+  <p>Which building has no RCAs?</p>
+  <div class="opts"><button type="button" class="opt">A. FHB</button><button type="button" class="opt">B. RXB</button><button type="button" class="opt">C. RAB</button><button type="button" class="opt">D. NCB</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The NCB does not contain RCAs. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K2&amp;body=Item%3A%20SY-14-K2%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20Which%20building%20has%20no%20RCAs%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.1%2C%20p.%207.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Purpose and layout</a><a class="next" href="#concept-2">Reactor Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactor Building</h2><p class="count">Objectives 3, 4, 6</p><p>RXB HVAC keeps the building at slightly negative pressure with NST HEPA exhaust units. Exhaust goes to the monitored stack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>HAA isolation uses one inboard and one outboard air operated valve pair for each penetration. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>The below grade SCG vapor trap cell is slightly negative with an inerted atmosphere and is monitored for SCG leakage. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>The reactor overpressure protection release point is the SCG trap cell. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>The trap cell is automatically isolated on leakage indication in the MCR. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>The NHV cooling loop isolates automatically on reactor vessel relief valve position. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Purpose and layout</a><a class="next" href="#check-2">Knowledge check: Reactor Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactor Building</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 3,4,6</span><span>SY-14-K3</span></div>
+  <p>What is the release point for reactor overpressure protection?</p>
+  <div class="opts"><button type="button" class="opt">A. Plant stack</button><button type="button" class="opt">B. RWG holdup tank</button><button type="button" class="opt">C. HAA</button><button type="button" class="opt">D. SCG trap cell</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The reactor overpressure protection release point is the SCG trap cell. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K3&amp;body=Item%3A%20SY-14-K3%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20What%20is%20the%20release%20point%20for%20reactor%20overpressure%20protection%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 3,4,6</span><span>SY-14-K4</span></div>
+  <p>How is each HAA penetration isolated?</p>
+  <div class="opts"><button type="button" class="opt">A. A HEPA filter</button><button type="button" class="opt">B. One damper</button><button type="button" class="opt">C. An inboard and an outboard valve</button><button type="button" class="opt">D. Manual blank</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. There is one inboard and one outboard air operated valve pair for each penetration. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K4&amp;body=Item%3A%20SY-14-K4%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20How%20is%20each%20HAA%20penetration%20isolated%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Reactor Building</a><a class="next" href="#concept-3">Reactor Auxiliary Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Reactor Auxiliary Building</h2><p class="count">Objectives 3, 4, 6</p><p>RAB HVAC also keeps the building slightly negative, using NST HEPA exhaust units to the monitored stack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>Below grade SPS cells are slightly negative with inerted atmosphere during operations. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+<p>SPS cell leak detectors connect to an NFP sodium leak detection control panel. It sends signals to the utility monitoring and control system for cell isolation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Reactor Building</a><a class="next" href="#check-3">Knowledge check: Reactor Auxiliary Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Reactor Auxiliary Building</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 3,4,6</span><span>SY-14-K5</span></div>
+  <p>How is SPS cell isolation signaled?</p>
+  <div class="opts"><button type="button" class="opt">A. From the NACP through the utility monitoring and control system</button><button type="button" class="opt">B. From the RPS</button><button type="button" class="opt">C. By manual action only</button><button type="button" class="opt">D. From the FHC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The NACP transmits leak signals to the utility monitoring and control system. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K5&amp;body=Item%3A%20SY-14-K5%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20How%20is%20SPS%20cell%20isolation%20signaled%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Reactor Auxiliary Building</a><a class="next" href="#concept-4">Fuel Handling Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Fuel Handling Building</h2><p class="count">Objectives 3, 4, 8</p><p>FHB normal exhaust goes through two 50 percent HEPA filtration units. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>Differential pressure monitors on the main working floor control exhaust flow to keep the FHB slightly negative. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>All FHB exhaust goes through welded ductwork, HEPA filters, and the monitored stack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>High radiation on HEPA filter discharge alarms in the MCR for manual operator action. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Reactor Auxiliary Building</a><a class="next" href="#check-4">Knowledge check: Fuel Handling Building <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Fuel Handling Building</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 3,4,8</span><span>SY-14-K6</span></div>
+  <p>How many FHB exhaust filter units does normal exhaust use?</p>
+  <div class="opts"><button type="button" class="opt">A. One 100 percent unit</button><button type="button" class="opt">B. Two 50 percent units</button><button type="button" class="opt">C. Three 50 percent units</button><button type="button" class="opt">D. Four 25 percent units</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Normal exhaust is through two 50 percent HEPA filtration units. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K6&amp;body=Item%3A%20SY-14-K6%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20How%20many%20FHB%20exhaust%20filter%20units%20does%20normal%20exhaust%20use%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Fuel Handling Building</a><a class="next" href="#concept-5">Control room habitability <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Control room habitability</h2><p class="count">Objectives 4, 5, 8</p><p>Sodium monitors, toxic chemical sensors, and a radiation monitor continually sample the MCR fresh air intake. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>On an elevated hazard, an MCR alarm alerts operators to place MCR HVAC units in recirculation and deenergize the below grade HVAC systems. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>Deenergizing below grade HVAC prevents similar hazards in the remote shutdown facility. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>Recirculation credits NSRST HEPA filters to minimize operator dose. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+<p>If MCR personnel evacuate to the RSC, a manually operated compressed breathable air bottle rack supports post accident monitoring. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Fuel Handling Building</a><a class="next" href="#check-5">Knowledge check: Control room habitability <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Control room habitability</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 4,5,8</span><span>SY-14-K7</span></div>
+  <p>The MCR intake sodium monitor alarms. What does the PSAR say operators do?</p>
+  <div class="opts"><button type="button" class="opt">A. Start the RSC fans</button><button type="button" class="opt">B. Nothing, it isolates by itself</button><button type="button" class="opt">C. Evacuate at once</button><button type="button" class="opt">D. Place MCR HVAC in recirculation and deenergize below grade HVAC</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The alarm alerts operators to place units in recirculation and deenergize below grade HVAC. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K7&amp;body=Item%3A%20SY-14-K7%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20The%20MCR%20intake%20sodium%20monitor%20alarms.%20What%20does%20the%20PSAR%20say%20operators%20do%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-6%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 4,5,8</span><span>SY-14-K8</span></div>
+  <p>What provides a habitable environment for monitoring in the RSC?</p>
+  <div class="opts"><button type="button" class="opt">A. A dedicated chiller</button><button type="button" class="opt">B. FHB exhaust</button><button type="button" class="opt">C. Compressed breathable air bottles</button><button type="button" class="opt">D. Recirculation HEPA filters</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. NHV provides a manually operated compressed breathable air bottle rack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K8&amp;body=Item%3A%20SY-14-K8%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20What%20provides%20a%20habitable%20environment%20for%20monitoring%20in%20the%20RSC%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.2%2C%20p.%207.5-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Control room habitability</a><a class="next" href="#concept-6">Automatic versus manual isolation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Automatic versus manual isolation</h2><p class="count">Objectives 5, 6, 8</p><table class="tbl"><thead><tr><th>Condition</th><th>Response</th></tr></thead><tbody><tr><td>SPS-P leak detection signal</td><td>SPS-P cells isolate automatically <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>SCG cell leak detection signal</td><td>NHV isolates the SCG cell penetrations <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>RV relief valve open</td><td>Control system isolates the SCG trap cell automatically <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></td></tr><tr><td>High radiation after a postulated release</td><td>Indication in the MCR. Operators evaluate and may manually isolate the HAA HVAC <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></td></tr><tr><td>High radiation in SPS cells HVAC</td><td>Indication. Operators evaluate and may manually isolate SPS cells <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></td></tr><tr><td>High radiation in SCG trap cell HVAC</td><td>Indication. Operators evaluate and may manually isolate <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></td></tr><tr><td>Radiation, toxic chemical, or sodium vapor in MCR intake</td><td>Indication. Operators evaluate and may manually isolate <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></td></tr></tbody></table>
+<p>Isolation dampers and valves have NST power from the NLV and fail closed when power is not available. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Control room habitability</a><a class="next" href="#check-6">Knowledge check: Automatic versus manual isolation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Automatic versus manual isolation</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-14-K9</span></div>
+  <p>The RV pressure relief valve opens. What happens to the SCG trap cell?</p>
+  <div class="opts"><button type="button" class="opt">A. It isolates automatically</button><button type="button" class="opt">B. Operators must isolate it</button><button type="button" class="opt">C. It vents to the HAA</button><button type="button" class="opt">D. Nothing</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The control system monitors valve position and automatically isolates the trap cell. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K9&amp;body=Item%3A%20SY-14-K9%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20The%20RV%20pressure%20relief%20valve%20opens.%20What%20happens%20to%20the%20SCG%20trap%20cell%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.5%2C%20p.%207.5-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-14-K10</span></div>
+  <p>High radiation is indicated in the SPS cells HVAC. What is the response?</p>
+  <div class="opts"><button type="button" class="opt">A. Automatic isolation only</button><button type="button" class="opt">B. Automatic scram</button><button type="button" class="opt">C. Operators evaluate and manually isolate as necessary</button><button type="button" class="opt">D. The cells purge to the HAA</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Operations personnel evaluate the condition and initiate a manual isolation, as necessary. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K10&amp;body=Item%3A%20SY-14-K10%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20High%20radiation%20is%20indicated%20in%20the%20SPS%20cells%20HVAC.%20What%20is%20the%20response%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.5%2C%20p.%207.5-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 5,6,8</span><span>SY-14-K11</span></div>
+  <p>Power is lost to NHV isolation valves. What is their position?</p>
+  <div class="opts"><button type="button" class="opt">A. Fail closed</button><button type="button" class="opt">B. Fail open</button><button type="button" class="opt">C. As is</button><button type="button" class="opt">D. Modulating</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Valves and dampers are designed to fail closed. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K11&amp;body=Item%3A%20SY-14-K11%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20Power%20is%20lost%20to%20NHV%20isolation%20valves.%20What%20is%20their%20position%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.3%2C%20p.%207.5-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Automatic versus manual isolation</a><a class="next" href="#concept-7">Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety significance</h2><p class="count">Objectives 9, 10</p><table class="tbl"><thead><tr><th>Function</th><th>Class</th><th>NHV support</th></tr></thead><tbody><tr><td>DL4-RR1, RR1a, RR1c</td><td>NSRST</td><td>Isolate the HAA barrier by closing penetration isolation valves <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>DL4-RR3, RR3c</td><td>NSRST</td><td>SPS cells barrier and isolation on leak detection <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>DL4-RR4, RR4b</td><td>NSRST</td><td>SCG cell barrier and isolation on leak detection <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>DL4-RR4c</td><td>NSRST</td><td>Vapor trap cell isolation on overpressure relief valve open <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>DL4-RR7</td><td>NSRST</td><td>HEPA filtration of all FHB exhaust <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr><tr><td>DL5-PAM1</td><td>NSRST</td><td>Conditioned air in the MCR, air bottles in the RSC <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></td></tr></tbody></table>
+<p>The NSRST portions are seismic class SCN1. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-5</cite></p>
+<ul><li>Quality Assurance Program Description</li><li>Reliability and Integrity Management Program</li><li>Equipment Qualification Program</li><li>Testing Program</li><li>Design Reliability Assurance Program</li><li>Post-Construction Inspection, Testing, and Analysis Program</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.4, p. 7.5-6</cite></p>
+
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Automatic versus manual isolation</a><a class="next" href="#check-7">Knowledge check: Safety significance <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-7">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety significance</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 9,10</span><span>SY-14-K12</span></div>
+  <p>Which NHV function gives HEPA filtration of FHB exhaust?</p>
+  <div class="opts"><button type="button" class="opt">A. DL5-PAM1</button><button type="button" class="opt">B. DL4-RR1</button><button type="button" class="opt">C. DL4-RR3</button><button type="button" class="opt">D. DL4-RR7</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. DL4-RR7 is the Fuel Handling Building barrier. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20SY-14-K12&amp;body=Item%3A%20SY-14-K12%0ALesson%3A%20Nuclear%20Island%20HVAC%20System%0AQuestion%3A%20Which%20NHV%20function%20gives%20HEPA%20filtration%20of%20FHB%20exhaust%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.1.2%2C%20p.%207.5-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-7"><span aria-hidden="true">←</span> Safety significance</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 16 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Buildings with RCAs run slightly negative, with airflow toward higher potential contamination and exhaust through the monitored stack. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1</cite></li><li>Leak signals and relief valve opening isolate cells automatically. High radiation indications lead to manual isolation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7</cite></li><li>Isolation valves and dampers fail closed. Operators protect the MCR by placing HVAC in recirculation. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-7"><span aria-hidden="true">←</span> Knowledge check: Safety significance</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 17 of 17</span></div>
+<h1>Nuclear Island HVAC System</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and layout</a></li><li><a href="#check-1">Knowledge check: Purpose and layout</a></li><li><a href="#concept-2">Reactor Building</a></li><li><a href="#check-2">Knowledge check: Reactor Building</a></li><li><a href="#concept-3">Reactor Auxiliary Building</a></li><li><a href="#check-3">Knowledge check: Reactor Auxiliary Building</a></li><li><a href="#concept-4">Fuel Handling Building</a></li><li><a href="#check-4">Knowledge check: Fuel Handling Building</a></li><li><a href="#concept-5">Control room habitability</a></li><li><a href="#check-5">Knowledge check: Control room habitability</a></li><li><a href="#concept-6">Automatic versus manual isolation</a></li><li><a href="#check-6">Knowledge check: Automatic versus manual isolation</a></li><li><a href="#concept-7">Safety significance</a></li><li><a href="#check-7">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 7.5.1.1, 7.5.1.2, 7.5.1.3, 7.5.1.4, 7.5.1.5</p><p>Pages 7.5-1, 7.5-4, 7.5-5, 7.5-6, 7.5-7</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20SY-14&amp;body=Lesson%3A%20SY-14%20Nuclear%20Island%20HVAC%20System%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

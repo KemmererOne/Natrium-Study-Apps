@@ -1,0 +1,86 @@
+# SY-03 | Primary Heat Transport System | system | PHT
+range: 7.1-50 7.1-74
+sec: Sec. 7.1.3, pp. 7.1-50 to 7.1-74
+intro: The PHT moves core heat to the intermediate loops. It has two pumps, two heat exchangers, and three sodium pools, and it keeps working by natural circulation when the pumps stop.
+
+== Purpose and boundaries | 1,2
+S The primary function of the PHT is to transport heat from the reactor core to the IHT. @@ The primary function of the PHT is to transport heat from the reactor core
+S A safety-significant function is to keep primary sodium temperatures within limits that preclude damage to the reactor, fuel, or internals. @@ maintain primary sodium temperatures within design limits
+S The PHT includes two IHXs, two PSPs, and three sodium pools inside the RV. PSP flanges, IHX flanges, and PSP motors are above the reactor head. @@ The PSP flanges, IHX flanges, and PSP motors are located above the reactor head
+S PSP isolation circuit breakers are in the Nuclear Island Control Building, and the PSP adjustable speed drives are in the Nuclear Island Electrical Building. @@ The PSP adjustable speed drives are located in the Nuclear Island Electrical Building
+F 7.1.3-1
+K Where are the PSP isolation circuit breakers located? | Nuclear Island Control Building | Reactor head | Energy Island | Nuclear Island Electrical Building | 0 | The PSP isolation circuit breakers are located in the Nuclear Island Control Building. @@ The PSP isolation circuit breakers are located in the Nuclear Island Control Building
+
+== Primary Sodium Pumps | 3
+S The PSPs are two identical vertical centrifugal pumps on opposite sides of the RV. They draw from the cold pool and discharge into the core inlet plenum. @@ The PSPs are two identical vertically-oriented centrifugal pumps
+S The pump shaft is sealed near the support flange to prevent sodium and cover gas leakage, and the seal also limits air and moisture leakage into the RV. @@ The seal also limits leakage of both air and moisture into the RV
+T Parameter | Nominal value
+R Flow at full power | 40,000 gpm @@ Flow @ Full Power Operating Point 40,000 gpm
+R Pump head at full power | 300 ft @@ Pump Head @ Full Power Operating Point 300 ft
+R Coastdown halving time | 3.5 to 5 s @@ Coastdown Halving Time 3.5 - 5 s
+R Design temperature | 1,050 F @@ Design Temperature 1,050°F
+F 7.1.3-3
+K Where do the PSPs take suction? | Hot pool | Cold pool | Warm pool | Core inlet plenum | 1 | The PSPs draw sodium from the cold pool and discharge into the core inlet plenum. @@ by drawing sodium from the cold pool and discharging into the reactor core inlet plenum
+K What is the PSP coastdown halving time? | 0.5 to 1 s | 3.5 to 5 s | 20 to 30 s | 60 s | 1 | Table 7.1.3-3 lists a coastdown halving time of 3.5 to 5 s. @@ Coastdown Halving Time 3.5 - 5 s
+
+== Intermediate Heat Exchangers | 3
+S The IHXs are vertical, counter-flow, single-pass, straight-tube heat exchangers with a floating lower head. @@ The IHXs are vertical, counter-flow, single-pass, straight-tube type heat exchangers
+S Primary sodium is on the shell side and intermediate sodium is on the tube side. @@ Flow in the IHX includes the primary sodium on the shell side and the intermediate sodium on the tube side
+T Parameter | Nominal value
+R Rated capacity | 425 MWth each @@ Rated capacity 1,450 MBtu/hr (425 MWth)
+R Primary inlet and outlet | 950 F and 680 F @@ Nominal Primary Sodium Inlet Temperature 950°F (510°C)
+R Intermediate inlet and outlet | 620 F and 910 F @@ Nominal Intermediate Sodium Outlet Temperature 910°F (490°C)
+F 7.1.3-4
+K Which fluid is on the tube side of the IHX? | Primary sodium | Intermediate sodium | Salt | Air | 1 | Intermediate sodium is on the tube side. @@ Flow in the IHX includes the primary sodium on the shell side and the intermediate sodium on the tube side
+K What is the nominal intermediate sodium outlet temperature of the IHX? | 620 F | 680 F | 910 F | 950 F | 2 | Table 7.1.3-5 lists 910 F. @@ Nominal Intermediate Sodium Outlet Temperature 910°F (490°C)
+
+== Normal operation | 4
+S During normal operation, in Modes 1, 2, 3, and 4, the PSPs drive flow from the cold pool, through the core to the hot pool, and through the IHX to the cold pool. @@ in all modes of operation (Modes 1, 2, 3, and 4), the PSPs provide motive force
+S The PSPs are the only PHT components that need operator inputs to change state in normal operation. @@ The PSPs are the only PHT components that require operator inputs
+T Condition | PSP operation
+R Full power | Full flow @@ While at full power, the PSPs operate at full flow
+R Refueling and shutdown | Low flow @@ During refueling and shutdown, the PSPs operate at low flow
+R Extended shutdown | Variable flow, to provide heat that keeps sodium liquid @@ to provide heat to maintain the sodium inventory in a liquid state
+R Startup | Raise sodium to hot zero power temperature, then reduce to minimum and increase with power @@ During startup of the reactor, the PSPs raise the primary sodium temperature to the hot zero power temperature
+K During extended shutdowns with no decay heat, how do the PSPs help? | They stop to save sodium | They operate at variable flow to provide heat that keeps sodium liquid | They reverse flow | They run at full flow | 1 | The PSPs operate at variable flow rates to provide heat to keep the inventory liquid. @@ to provide heat to maintain the sodium inventory in a liquid state
+
+== Response to runback, scram, and LOOP | 4,6
+T Event | PSP response
+R Power runback | Both PSPs gradually reduce flow to follow reactor power. Power-to-flow ratio stays at or below one @@ The power-to-flow ratio is kept less than or equal to one during the power runback
+R Reactor scram | PSPs ramp down on a predefined curve to minimum flow @@ the PSPs are ramped down using a predefined ramp down curve to minimum flow
+R Loss of offsite power | Coastdown starts immediately when power is lost @@ coastdown is initiated immediately when power is lost to the PSPs
+S After a LOOP, pumps go to minimum flow if power returns from the standby diesel generators. If not, flow reduces to natural circulation rates. @@ the pumps transition to a minimum flow if power is restored via the standby diesel generators
+S During an LBE, the PSPs are automatically controlled by the NIC or the RPS. @@ During LBEs, the PSPs are automatically controlled by the NIC or the RPS
+K During a power runback, the power-to-flow ratio is kept at what value? | Above 1.2 | Less than or equal to one | Exactly 0.5 | Uncontrolled | 1 | The ratio is kept less than or equal to one. @@ The power-to-flow ratio is kept less than or equal to one during the power runback
+K After a reactor scram, the PSPs do what? | Trip immediately in all cases | Ramp down on a predefined curve to minimum flow | Stay at full flow | Reverse | 1 | PSPs ramp down on a predefined curve to minimum flow. @@ the PSPs are ramped down using a predefined ramp down curve to minimum flow
+
+== Automatic trip and natural circulation | 6
+S PSP trip function DL3-HR2 uses a combination of low neutron flux signal, an existing scram signal, and cold pool temperature at the high high setpoint. @@ trip on a combination of a
+S In a PSP trip, rotational inertia gives coastdown flow for a smooth transition to natural circulation without flow reversal in the fuel channels. @@ have sufficient rotational inertia to provide coastdown flow
+S A natural flow path exists through the PSPs when the shaft is stopped. @@ a natural flow path through them exists when the shaft is stopped
+S During natural circulation the flow path is unchanged. If heat transfer to the IHT is not available, all decay heat goes to RAC. @@ if heat transfer to IHT is not available, all decay heat is transferred to RAC
+F 7.1.3-2
+K Which signals combine to trip the PSP breakers under DL3-HR2? | Low level only | Low neutron flux, a scram signal, and cold pool high high temperature | Loss of offsite power and low flow | High flux rate and level | 1 | The trip uses low neutron flux, a scram signal, and cold pool temperature at the high high setpoint. @@ trip on a combination of a
+K What is the purpose of the PSP rotational inertia? | To raise pump head | Coastdown flow for a smooth transition to natural circulation | To reduce seal leakage | To reduce vibration | 1 | Inertia provides coastdown flow for a smooth transition to natural circulation. @@ have sufficient rotational inertia to provide coastdown flow
+
+== Indications and abnormal conditions | 5,8
+T Parameter | Safety-significant signal
+R Cold pool and hot pool sodium temperature | Yes @@ Cold Pool Primary Sodium Temperature Yes
+R Hot pool sodium level | Yes @@ Hot Pool Primary Sodium Level Yes
+R PSP speed and current | Yes @@ PSP Speed (Primary Sodium Flow) Yes
+R PSP voltage and frequency, pump tank level | No @@ PSP Voltage (Primary Sodium Flow) No
+S RIS includes instrumentation for PHT parameters processed by the RPS. The Coolant Temperature Monitoring and Control System, in the NIC, monitors and controls PHT flow functions. @@ monitors and controls PHT flow functions
+S Intermediate leakage into primary sodium is detected by IHT expansion tank level decrease and PHT hot pool level increase. @@ would be detected by IHT expansion tank level decrease
+K What two trends indicate an IHX tube leak? | Hot pool level down, expansion tank level up | IHT expansion tank level down, hot pool level up | Both levels up | Both levels down | 1 | Leakage is detected by expansion tank level decrease and hot pool level increase. @@ would be detected by IHT expansion tank level decrease
+
+== Safety significance | 9,10
+S No operator actions are required to implement PHT SR functions. @@ No operator actions are required to implement PHT SR functions
+L DL3-HR1: PSP coastdown ;; DL3-HR2: PSP trip on high high primary sodium temperature ;; DL3-HR5: natural circulation of sodium @@ DL3-HR1 PSP Coastdown (SR)
+S PSP isolation circuit breakers are designed to permit periodic testing. @@ The PSP isolation circuit breakers are designed to permit periodic testing
+S High point vents are not required to maintain core cooling. @@ High point vents are not required to maintain core cooling
+L Quality Assurance Program ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Comprehensive Vibration Assessment Program ;; Post-construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the PHT
+K Are operator actions required to implement PHT SR functions? | Yes, a manual PSP trip | Yes, valve alignment | No | Only at low power | 2 | No operator actions are required to implement PHT SR functions. @@ No operator actions are required to implement PHT SR functions
+
+Z PSPs take suction from the cold pool and discharge to the core inlet plenum. @@ by drawing sodium from the cold pool and discharging into the reactor core inlet plenum
+Z PSP inertia gives a smooth transition to natural circulation. @@ have sufficient rotational inertia to provide coastdown flow
+Z IHX leakage goes from intermediate to primary, seen as expansion tank level down and hot pool level up. @@ would be detected by IHT expansion tank level decrease

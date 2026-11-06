@@ -1,0 +1,697 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and layout",
+   "eo": [
+    "1",
+    "2",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The CRD has 13 identical control rod drives: 9 for the primary control rod assemblies and 4 for the secondary.",
+     "anchor": "consists of 13 identical control rod drives",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The CRD supports normal reactivity control and reactor scram. Portions of it provide a primary coolant boundary function.",
+     "anchor": "The CRD supports normal reactivity control and reactor scram functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "list",
+     "items": [
+      "CRDM and housing",
+      "Motor drive assembly",
+      "Motor controller",
+      "Driveline assembly",
+      "Scram valve and cylinder assembly",
+      "Seals"
+     ],
+     "anchor": "The control rod drive assembly includes the control rod drive mechanism",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "All of the CRD except the motor controller is in the HAA of the RXB substructure. The motor controller is in the NCB substructure.",
+     "anchor": "The motor controller is located in the Nuclear Island Control Building (NCB) substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The CRDM housings are welded to and supported by penetrations in the RPA.",
+     "anchor": "The CRDM housings are welded to, and structurally supported by, penetrations in the Rotatable Plug Assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-5-1",
+     "num": "7.2.5-1",
+     "cap": "CRD/RPA Cross-Sectional Layout",
+     "alt": "PSAR Rev 1 figure: CRD/RPA Cross-Sectional Layout",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-71"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many control rod drives are there?",
+     "o": [
+      "9",
+      "4",
+      "13",
+      "16"
+     ],
+     "a": 2,
+     "x": "There are 13 identical drives, 9 primary and 4 secondary.",
+     "anchor": "consists of 13 identical control rod drives",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "1,2,3"
+    },
+    {
+     "q": "Where are the CRD motor controllers?",
+     "o": [
+      "HAA",
+      "NCB substructure",
+      "RPA",
+      "RAB"
+     ],
+     "a": 1,
+     "x": "The motor controller is in the NCB substructure.",
+     "anchor": "The motor controller is located in the Nuclear Island Control Building (NCB) substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "1,2,3"
+    }
+   ]
+  },
+  {
+   "title": "Latching the rod",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The driveline is directly coupled to the CRA through a pneumatically controlled latching mechanism in normal operation.",
+     "anchor": "The driveline is directly coupled to the CRA through a pneumatically-controlled latching mechanism",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The latch engages when the scram valve and cylinder assembly is pressurized with inert gas from the SCG. It releases when gas pressure vents.",
+     "anchor": "The latching mechanism is engaged by pressurizing the scram valve and cylinder assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The assembly has three electric solenoid-operated pilot valves that supply gas to a piston and cylinder.",
+     "anchor": "consists of three electric solenoid-operated pilot valves",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The scram valves are fail-safe, de-energize to vent, and are controlled by the RPS.",
+     "anchor": "The scram valves are fail-safe, de-energize to vent",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What holds the CRA latched to the driveline?",
+     "o": [
+      "Magnet current",
+      "Motor torque",
+      "Spring force",
+      "Gas pressure in the scram cylinder"
+     ],
+     "a": 3,
+     "x": "Pressurizing the assembly engages the latch, and venting releases it.",
+     "anchor": "The latching mechanism is engaged by pressurizing the scram valve and cylinder assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "3,4"
+    },
+    {
+     "q": "What supplies gas to the scram cylinders?",
+     "o": [
+      "SCG",
+      "NHV",
+      "IAC",
+      "RWG"
+     ],
+     "a": 0,
+     "x": "Inert gas is supplied by the SCG.",
+     "anchor": "with inert gas supplied by the Sodium Cover Gas System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Normal rod motion",
+   "eo": [
+    "4",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The CRD positions CRAs for start-up, power control, power shaping, and shutdown from RMC demand signals. The RMC is a subsystem of the NIC.",
+     "anchor": "based on demand signals from the Rod Monitoring and Control System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "Independent drives allow individual CRA positioning, and a fault in one drive does not affect the others.",
+     "anchor": "a fault within a single control rod drive does not affect operation of other control rod drives",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "A ball screw drive assembly converts motor rotation to driveline linear motion.",
+     "anchor": "through a ball screw drive assembly within the CRDM housing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "An electro-mechanical brake prevents driveline motion unless a demand signal is present.",
+     "anchor": "An electro-mechanical brake prevents driveline motion unless a demand signal is present",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "High speed motor-driven insertion provides power run-back capability.",
+     "anchor": "CRDM high speed motor-driven CRA insertion provides power run-back capability",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    },
+    {
+     "t": "p",
+     "text": "The motor controller and drive are powered from the Nuclear Island Uninterruptible AC Power Supply System.",
+     "anchor": "supplied power from the Nuclear Island Uninterruptible AC Power Supply System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What prevents driveline motion with no demand signal?",
+     "o": [
+      "An electro-mechanical brake",
+      "The scram valves",
+      "Ball screw friction",
+      "The latch"
+     ],
+     "a": 0,
+     "x": "An electro-mechanical brake prevents driveline motion unless a demand signal is present.",
+     "anchor": "An electro-mechanical brake prevents driveline motion unless a demand signal is present",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "4,5"
+    },
+    {
+     "q": "Which capability provides power run-back?",
+     "o": [
+      "High speed motor-driven insertion",
+      "Driveline uncoupling",
+      "SCG venting",
+      "Gravity scram"
+     ],
+     "a": 0,
+     "x": "High speed motor-driven CRA insertion provides power run-back capability.",
+     "anchor": "CRDM high speed motor-driven CRA insertion provides power run-back capability",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58",
+     "eo": "4,5"
+    }
+   ]
+  },
+  {
+   "title": "Scram",
+   "eo": [
+    "4",
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Scram starts on two out of four scram signals from the RPS.",
+     "anchor": "A scram is initiated upon receiving two out of four scram signals from the RPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65"
+    },
+    {
+     "t": "p",
+     "text": "The RPS signal de-energizes the scram SOVs, which vent the cylinder and disengage the CRA. The CRA inserts by gravity.",
+     "anchor": "The RPS scram signal results in de-energizing the scram solenoid-operated valves",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "Two of the three scram valves are enough to vent the cylinder, so failure of one valve does not prevent scram or cause a spurious scram.",
+     "anchor": "a failure of one scram SOV does not inhibit the safety function to scram",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-62"
+    },
+    {
+     "t": "p",
+     "text": "The scram valves also vent on loss of power to the SOV.",
+     "anchor": "The scram valves vent the scram cylinder on loss of power to the SOV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65"
+    },
+    {
+     "t": "p",
+     "text": "The scram valve and cylinder assembly is inside the CRDM housing and is not exposed to primary sodium.",
+     "anchor": "is located within the CRDM housing and is not exposed to the primary sodium environment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65"
+    },
+    {
+     "t": "p",
+     "text": "The RPS signal also starts driveline scram follow, where the motor drives the driveline down at maximum insertion speed.",
+     "anchor": "the CRDM motor drives the driveline downward at maximum insertion speed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "Scram follow gives assurance that the CRA is fully inserted and provides insertion position indication.",
+     "anchor": "Driveline scram follow provides assurance that the CRA is fully inserted",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How many of the three scram valves must actuate to release a CRA?",
+     "o": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+     ],
+     "a": 1,
+     "x": "Two of three is sufficient, so a single valve failure does not prevent scram.",
+     "anchor": "Actuation of two out of the three scram valves is sufficient",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65",
+     "eo": "4,6"
+    },
+    {
+     "q": "What inserts the CRA in the SR scram function?",
+     "o": [
+      "Gravity",
+      "Argon pressure",
+      "Sodium flow",
+      "Motor drive"
+     ],
+     "a": 0,
+     "x": "The released CRA inserts into the core by gravity. Motor scram follow is NSRST.",
+     "anchor": "The released CRA inserts into the core by gravity",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59",
+     "eo": "4,6"
+    },
+    {
+     "q": "Power is lost to the scram SOVs. What happens?",
+     "o": [
+      "The brake sets",
+      "The motor inserts rods only",
+      "Rods hold position",
+      "Valves vent and the CRAs release"
+     ],
+     "a": 3,
+     "x": "Scram valves vent the scram cylinder on loss of power to the SOV.",
+     "anchor": "The scram valves vent the scram cylinder on loss of power to the SOV",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65",
+     "eo": "4,6"
+    },
+    {
+     "q": "What is the purpose of driveline scram follow?",
+     "o": [
+      "Hold the rod out",
+      "Assure full insertion and provide insertion indication",
+      "Unlatch the CRA",
+      "Vent the cylinder"
+     ],
+     "a": 1,
+     "x": "Scram follow provides assurance of full insertion and position indication.",
+     "anchor": "Driveline scram follow provides assurance that the CRA is fully inserted",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59",
+     "eo": "4,6"
+    }
+   ]
+  },
+  {
+   "title": "Position indication and instruments",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Coupled CRA position goes to the RMC through motor shaft and ball screw revolutions monitoring and a linear position transducer.",
+     "anchor": "through motor shaft and ball screw revolutions monitoring and a linear position transducer",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "CRA scram insertion is indicated by full driveline scram follow insertion position.",
+     "anchor": "CRA scram insertion is indicated by full driveline scram follow insertion position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "The CRDM also has scram valve position indication and thermocouples that interface with the NIC.",
+     "anchor": "scram valve position indication and thermocouples which interface with the NIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-65"
+    }
+   ],
+   "checks": [
+    {
+     "q": "After a scram, what indicates CRA insertion?",
+     "o": [
+      "Reactor power alone",
+      "RPA rotation",
+      "Full driveline scram follow insertion position",
+      "Scram cylinder pressure"
+     ],
+     "a": 2,
+     "x": "CRA scram insertion is indicated by full driveline scram follow insertion position.",
+     "anchor": "CRA scram insertion is indicated by full driveline scram follow insertion position",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Housing, seals, and purge",
+   "eo": [
+    "2",
+    "3",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The CRDM housing is a lower housing flanged to an upper housing, with a top access plate.",
+     "anchor": "The CRDM housing consists of a lower housing flanged to an upper housing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "Metallic seals and bellows keep cover gas and aerosolized sodium from entering the lower housing.",
+     "anchor": "Metallic seals and bellows are provided to isolate reactor cover gas and aerosolized sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "The housing runs with an inert gas purge and static overpressure from the SCG, so leakage flows into the cover gas space.",
+     "anchor": "such that seal or bellows leakage flow is directed into the cover gas space",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "Purge gas flow monitors in the SCG supply line identify leakage.",
+     "anchor": "Purge gas flow monitors are provided in the SCG gas supply line to identify leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+    },
+    {
+     "t": "p",
+     "text": "The CRDMs are cooled by the ambient environment of the HAA.",
+     "anchor": "The CRDMs are cooled by the ambient environment of the HAA",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-64"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Design temperature (F)",
+      "Design pressure (psig)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "CRDM housing",
+        "150 upper. Lower under development",
+        "30 upper, 60 lower"
+       ],
+       "anchor": "Table 7.2.5-3 Preliminary CRD Design Conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69"
+      },
+      {
+       "cells": [
+        "Driveline assembly",
+        "1080",
+        "80"
+       ],
+       "anchor": "Table 7.2.5-3 Preliminary CRD Design Conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69"
+      },
+      {
+       "cells": [
+        "Scram valve and cylinder assembly",
+        "400",
+        "300"
+       ],
+       "anchor": "Table 7.2.5-3 Preliminary CRD Design Conditions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-69"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which way does seal or bellows leakage flow?",
+     "o": [
+      "Into the cover gas space",
+      "Into the motor",
+      "Into the NCB",
+      "Out to the HAA"
+     ],
+     "a": 0,
+     "x": "The purge and static overpressure direct leakage into the cover gas space.",
+     "anchor": "such that seal or bellows leakage flow is directed into the cover gas space",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59",
+     "eo": "2,3,8"
+    },
+    {
+     "q": "What identifies seal leakage?",
+     "o": [
+      "The RPS",
+      "A plugging temperature indicator",
+      "The motor controller",
+      "Purge gas flow monitors in the SCG supply line"
+     ],
+     "a": 3,
+     "x": "Purge gas flow monitors identify leakage.",
+     "anchor": "Purge gas flow monitors are provided in the SCG gas supply line to identify leakage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59",
+     "eo": "2,3,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "CRD support"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RC1, DL3-RC2 scram",
+        "SR",
+        "Releases the CRAs for gravity insertion on a scram signal or loss of power"
+       ],
+       "anchor": "The CRD releases the CRAs for",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63"
+      },
+      {
+       "cells": [
+        "DL4-RC3 scram follow",
+        "NSRST",
+        "Motor-driven insertion and indication of full insertion"
+       ],
+       "anchor": "DL4-RC3 CRD Driveline Scram Follow (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63"
+      },
+      {
+       "cells": [
+        "DL3-RR1 primary coolant boundary",
+        "SR",
+        "CRDM housing forms part of the boundary"
+       ],
+       "anchor": "DL3-RR1 Primary Coolant Boundary (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-63"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Classification"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Motor drive assembly and controller",
+        "NSRST"
+       ],
+       "anchor": "Motor Drive Assembly and Controller NSRST",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67"
+      },
+      {
+       "cells": [
+        "Scram valve and cylinder assembly",
+        "SR"
+       ],
+       "anchor": "Scram Valve and Cylinder Assembly SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67"
+      },
+      {
+       "cells": [
+        "Driveline assembly",
+        "SR"
+       ],
+       "anchor": "Driveline Assembly SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67"
+      },
+      {
+       "cells": [
+        "CRDM housing assembly",
+        "SR"
+       ],
+       "anchor": "CRDM Housing Assembly SR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "SR components are seismic class SCS1, and NSRST components are SCN1.",
+     "anchor": "The CRD seismic classification for SR components is SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.2, p. 7.2-64"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Design Reliability Assurance Program",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Analysis Program",
+      "Comprehensive Vibration Assessment Program",
+      "Reliability and Integrity Management Program"
+     ],
+     "anchor": "The following programmatic special treatments are preliminarily identified as applicable to the CRD",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.4, p. 7.2-65"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the classification of the CRD motor drive assembly?",
+     "o": [
+      "NST",
+      "SCS1",
+      "SR",
+      "NSRST"
+     ],
+     "a": 3,
+     "x": "The motor drive assembly and controller are NSRST.",
+     "anchor": "Motor Drive Assembly and Controller NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The 13 drives use a gas-held latch. Venting the cylinder releases the CRA to insert by gravity.",
+   "anchor": "The released CRA inserts into the core by gravity",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+  },
+  {
+   "text": "Two of three fail-safe scram valves are enough. A scram starts on two of four RPS signals.",
+   "anchor": "A scram is initiated upon receiving two out of four scram signals from the RPS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65"
+  },
+  {
+   "text": "The motor gives fine control, run-back, and NSRST scram follow, which also confirms full insertion.",
+   "anchor": "Driveline scram follow provides assurance that the CRA is fully inserted",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-09",
+ "title": "Control Rod Drive System",
+ "kind": "system",
+ "subject": "CRD",
+ "sec_note": "Sec. 7.2.5, pp. 7.2-58 to 7.2-71",
+ "intro": "The CRD moves the control rods and lets them go. The motor gives fine control and fast insertion. The scram itself needs only gas venting and gravity.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the CRD.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the CRD boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the CRD.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain CRD operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the CRD controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the CRD automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the CRD.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the CRD.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the CRD.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the CRD.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-09-control-rod-drive-system"
+}

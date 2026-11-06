@@ -1,0 +1,69 @@
+# OP-03 | Human Factors Engineering | topic | human factors engineering
+range: 11.2-1 11.2-28
+sec: Sec. 11.2, pp. 11.2-1 to 11.2-28
+intro: Human factors engineering shapes the displays, procedures, and training you will use. Many methods sit in NAT-2965-A. The PSAR gives the framework.
+obj: State the goal and scope of the HFE program.
+obj: Identify the technical elements of the HFE program.
+obj: Explain operating experience review and treatment of important human actions.
+obj: Describe verification and validation of the human-system interface.
+obj: Describe training program development.
+obj: State the purposes of human performance monitoring.
+
+== Goal and scope | 1
+S The goal is an integrated program that reduces risks and consequences influenced by human interactions. @@ that reduces the risks and consequences influenced by human interactions
+S An HSI is any region or point at which a person interacts with a system, equipment, or component. @@ HSIs are defined as any region or point at which a person interacts with a system, equipment, or component
+S The scope includes both a part-task and a full-scope simulator. @@ including both a part-task and full-scope simulator
+S HSI design aims for safe, efficient, reliable operator performance in normal, abnormal, and accident conditions. @@ The primary goal of HSI designs is to facilitate safe, efficient, and reliable operator performance
+S The HFE Style Guide is based on NUREG-0700. @@ The HFE Style Guide is based on NUREG-0700
+S HFE rigor is graded, with more emphasis on interactions that are safety critical or hazardous. @@ to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous
+K What is an HSI? | Any point where a person interacts with a system, equipment, or component | Only a computer screen | A control room | A procedure | 0 | That is the PSAR definition. @@ HSIs are defined as any region or point at which a person interacts with a system, equipment, or component
+K How is HFE effort applied? | Equally everywhere | Graded, with more rigor for critical interactions | Only to the MCR | Only after construction | 1 | Application is graded. @@ to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous
+
+== Technical elements | 2
+T Element | What it does
+R Operating experience review | Brings lessons from past events into the design @@ Operating experience review (OER)
+R Functional requirements analysis | Finds functions needed to achieve plant goals @@ Determination of functions required to achieve all plant goals
+R Allocation of function | Assigns functions to technology or human @@ Assigning the identified functions to system (technology) or human
+R Task analysis | Breaks functions into tasks and steps @@ Identification of the tasks required to achieve the allocated functions
+R Staffing analysis | Sets numbers and roles of personnel @@ Determination of the numbers and roles of personnel
+R Treatment of important human actions | Confirms claimed actions are achievable @@ ensure claimed actions are achievable
+R HSI design | Turns requirements and analysis into HSIs @@ implementation of those requirements plus results from HFE analyses
+R Procedure development | Makes usable, validated documents @@ Process and activities for the development of usable and validated operational documentation
+R Training program development | Makes relevant, validated training @@ Process and activities for the development of relevant and validated training content
+S Procedures should be technically accurate, comprehensive, explicit, easy to use, and validated. @@ technically accurate, comprehensive, explicit, easy to use, and validated
+K Which element assigns functions to human or technology? | Task analysis | Allocation of function | Staffing analysis | OER | 1 | Allocation of function assigns functions to system or human. @@ Assigning the identified functions to system (technology) or human
+K Which element makes sure claimed operator actions are achievable? | Treatment of important human actions | OER | HSI design | Staffing | 0 | That element ensures claimed actions are achievable. @@ ensure claimed actions are achievable
+
+== Operating experience and human actions | 3
+S OER lessons improve the design early in the process. @@ provide a basis for improving the plant design in a timely way
+S It includes sodium-cooled facilities such as the Fast Flux Test Facility. @@ such as the Fast Flux Test Facility
+S Recognized issues include Three Mile Island, Chernobyl, and Fukushima Daiichi. @@ Three Mile Island, Chernobyl, Fukushima Daiichi issues
+S Plant personnel interviews supplement OE. @@ includes the use of plant personnel interviews
+S Human reliability analysis looks at the potential for, and mechanisms of, human error. @@ seeks to evaluate the potential for, and mechanisms of, human error
+S The minimum set of controls, displays, and alarms comes from emergency procedure guidelines and important actions in the PRA. @@ provide the bases for an analysis of the information and control capability needs of the MCR operators
+K Which sodium facility is named in the OER? | Fast Flux Test Facility | Fermi 1 | Monju | Phenix | 0 | The PSAR names the Fast Flux Test Facility. @@ such as the Fast Flux Test Facility
+K What does human reliability analysis evaluate? | Potential for and mechanisms of human error | Pump reliability | Sodium chemistry | Weather | 0 | That is what it seeks to evaluate. @@ seeks to evaluate the potential for, and mechanisms of, human error
+
+== Verification and validation | 4
+S HF V&V has two major activities: HF verification and Integrated System Validation (ISV). @@ HF V&V is conducted in two major activities
+S A team independent of design development does it. @@ is conducted by a team of HFE engineers independent from the design development process
+S Task Support Verification checks that HSIs have what tasks need, and no unnecessary features. @@ required to support tasks and that there are no unnecessary features
+S ISV is an integrated, dynamic, performance-based test. @@ ISV is an integrated, dynamic, performance-based test activity
+K Who performs HF V&V? | Designers of the HSI | A team independent from design development | Vendors | The NRC | 1 | HF V&V is conducted by an independent HFE team. @@ is conducted by a team of HFE engineers independent from the design development process
+K What does Task Support Verification also check for? | Unnecessary features | Paint color | Pump speed | Cost | 0 | It verifies no unnecessary features. @@ required to support tasks and that there are no unnecessary features
+
+== Training development | 5
+S Training development follows the systematic approach to training. @@ follows the fundamentals of the systematic approach to training method
+S Training gives assurance that personnel have the skills, knowledge, and abilities for their roles. @@ have the skills, knowledge, and abilities to properly perform their roles and responsibilities
+S It defines training from a task analysis. @@ Defines and documents the training based on a TA
+K What method does training development follow? | Systematic approach to training | On-the-job only | Vendor manuals | Peer tutoring | 0 | It follows the fundamentals of the systematic approach to training. @@ follows the fundamentals of the systematic approach to training method
+
+== Human performance monitoring | 6
+S HPM links design HFE methods with monitoring during operation, and is fully developed at the OL stage. @@ The HPM program is fully developed at the OL stage
+L Keep safety standards as changes are made ;; Detect deterioration of task performance from latent or slow-developing issues ;; Assure the safety bases stay valid in operation @@ Ensure that the high safety standards established by the HFE program
+L Data collection ;; Importance screening ;; Event analysis to determine causes ;; Trend analysis ;; Corrective action development @@ The program includes
+S Collected data is anonymized to keep the program free of blame. @@ Data collected is anonymized and sanitized
+K Why is HPM data anonymized? | To avoid blame culture | To save storage | For security | It is not | 0 | Data is anonymized and sanitized to ensure no blame culture. @@ Data collected is anonymized and sanitized
+Z HFE reduces risk from human interactions, with rigor graded to importance. @@ to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous
+Z An independent team performs V&V, ending in Integrated System Validation. @@ is conducted by a team of HFE engineers independent from the design development process
+Z HPM checks that performance stays acceptable in operation. @@ Ensure that the high safety standards established by the HFE program

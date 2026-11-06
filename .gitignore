@@ -3,6 +3,7 @@ sources/
 work/*
 !work/topics/
 !work/figs/
+!work/psar/
 work/figs/sheet.html
 !work/manifest.json
 !work/objectives.json

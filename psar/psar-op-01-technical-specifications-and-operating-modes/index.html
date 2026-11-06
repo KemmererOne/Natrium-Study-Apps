@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Technical Specifications and Operating Modes</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-op-01-technical-specifications-and-operating-modes">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">The full Technical Specifications come at the operating license stage. The PSAR gives the proposed subjects and defines the four operating modes. Learn the modes cold. <cite>PSAR Rev 1 (NAT-9400), Sec. 11.5, pp. 11.5-1 to 11.5-10</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> Define the four operating modes and what separates each one.</p><p class="gap">Taught in: <a href="#concept-1">Operating modes</a></p><p><span class="num">2</span> Describe how the plant moves between modes.</p><p class="gap">Taught in: <a href="#concept-2">Mode descriptions and transitions</a></p><p><span class="num">3</span> State the planned Technical Specification sections.</p><p class="gap">Taught in: <a href="#concept-3">Technical Specification structure</a></p><p><span class="num">4</span> Identify the proposed Safety Limits and their bases.</p><p class="gap">Taught in: <a href="#concept-4">Safety Limits</a></p><p><span class="num">5</span> Identify the probable subjects of Limiting Conditions for Operation.</p><p class="gap">Taught in: <a href="#concept-5">Limiting Conditions for Operation</a></p><p><span class="num">6</span> State the probable administrative controls.</p><p class="gap">Taught in: <a href="#concept-6">Administrative controls</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Operating modes <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Operating modes</h2><p class="count">Objectives 1</p><p>Each mode is defined by sodium temperature, CRD status, and reactor cooling mechanism. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2, p. 11.5-1</cite></p>
+<table class="tbl"><thead><tr><th>Mode</th><th>Title</th><th>CRD status</th><th>Cooling</th><th>Sodium temperature</th></tr></thead><tbody><tr><td>1</td><td>High Power Operation</td><td>More than one CRA coupled</td><td>NSS</td><td>N/A <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr><tr><td>2</td><td>Low Power Operation</td><td>More than one CRA coupled</td><td>IAC</td><td>N/A <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr><tr><td>3</td><td>Shutdown</td><td>No more than one CRA coupled</td><td>N/A</td><td>Above 400 F (204 C) <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr><tr><td>4</td><td>Refuel</td><td>No more than one CRA coupled</td><td>N/A</td><td>400 F (204 C) or below <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Operating modes <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Operating modes</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-01-K1</span></div>
+  <p>What separates Mode 1 from Mode 2?</p>
+  <div class="opts"><button type="button" class="opt">A. Reactor cooling mechanism, NSS or IAC</button><button type="button" class="opt">B. Sodium temperature</button><button type="button" class="opt">C. Number of pumps</button><button type="button" class="opt">D. CRD status</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Mode 1 cools through the NSS, and Mode 2 through the IAC. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K1&amp;body=Item%3A%20OP-01-K1%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20What%20separates%20Mode%201%20from%20Mode%202%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-01-K2</span></div>
+  <p>What separates Mode 3 from Mode 4?</p>
+  <div class="opts"><button type="button" class="opt">A. Sodium temperature at 400 F</button><button type="button" class="opt">B. Cooling mechanism</button><button type="button" class="opt">C. Number of coupled CRAs</button><button type="button" class="opt">D. RTB position</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Mode 3 is above 400 F, and Mode 4 is at or below it. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K2&amp;body=Item%3A%20OP-01-K2%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20What%20separates%20Mode%203%20from%20Mode%204%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-01-K3</span></div>
+  <p>The plant is at 450 F with one CRA coupled. What mode?</p>
+  <div class="opts"><button type="button" class="opt">A. Mode 3</button><button type="button" class="opt">B. Mode 4</button><button type="button" class="opt">C. Mode 1</button><button type="button" class="opt">D. Mode 2</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. No more than one CRA coupled and above 400 F is Mode 3. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K3&amp;body=Item%3A%20OP-01-K3%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20The%20plant%20is%20at%20450%20F%20with%20one%20CRA%20coupled.%20What%20mode%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1</span><span>OP-01-K4</span></div>
+  <p>Which modes have more than one CRA coupled?</p>
+  <div class="opts"><button type="button" class="opt">A. Modes 1 and 2</button><button type="button" class="opt">B. Modes 2 and 3</button><button type="button" class="opt">C. Modes 3 and 4</button><button type="button" class="opt">D. All</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Modes 1 and 2 have more than one CRA coupled. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K4&amp;body=Item%3A%20OP-01-K4%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20modes%20have%20more%20than%20one%20CRA%20coupled%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Operating modes</a><a class="next" href="#concept-2">Mode descriptions and transitions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Mode descriptions and transitions</h2><p class="count">Objectives 2</p><p>Mode 1 is entered from Mode 2 during startup when heat removal transfers from the IAC to the NSS through the SHXs. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.1, p. 11.5-1</cite></p>
+<p>Mode 2 is entered in startup when the reactor scram breakers are closed and more than one CRA is coupled. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-1</cite></p>
+<p>Mode 2 supports rod withdrawal to critical and power ascension within IAC heat removal capability. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-1</cite></p>
+<p>Mode 2 is not required during a shutdown. A scram before Mode 2 conditions lets the plant go directly from Mode 1 to Mode 3. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-2</cite></p>
+<p>Mode 3 is a transition state. The primary coolant boundary is established during startup in Mode 3. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2</cite></p>
+<p>Mode 3 supports plant heatup through PSP operation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2</cite></p>
+<p>In Modes 3 and 4, one CRA may be coupled and manipulated for testing. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2</cite></p>
+<p>In Mode 4, hot pool temperature is lowered below 400 F (204 C). <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-2</cite></p>
+<table class="tbl"><thead><tr><th>Transition</th><th>Marker</th></tr></thead><tbody><tr><td>Mode 2 to Mode 1</td><td>IAC blower off, and top and bottom dampers closed and latched <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr><tr><td>Mode 1 to Mode 2</td><td>NSS isolation valves closed <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Operating modes</a><a class="next" href="#check-2">Knowledge check: Mode descriptions and transitions <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Mode descriptions and transitions</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-01-K5</span></div>
+  <p>What marks the transition from Mode 2 to Mode 1?</p>
+  <div class="opts"><button type="button" class="opt">A. Power at 100%</button><button type="button" class="opt">B. Second PSP start</button><button type="button" class="opt">C. IAC blower off, dampers closed and latched</button><button type="button" class="opt">D. NSS valves closed</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Table 11.5-2 note 1 gives this marker. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K5&amp;body=Item%3A%20OP-01-K5%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20What%20marks%20the%20transition%20from%20Mode%202%20to%20Mode%201%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-01-K6</span></div>
+  <p>A scram occurs in Mode 1 before Mode 2 conditions are met. Where does the plant go?</p>
+  <div class="opts"><button type="button" class="opt">A. Stays in Mode 1</button><button type="button" class="opt">B. Must enter Mode 2 first</button><button type="button" class="opt">C. Directly to Mode 3</button><button type="button" class="opt">D. Directly to Mode 4</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. The plant can transition directly from Mode 1 to Mode 3. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K6&amp;body=Item%3A%20OP-01-K6%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20A%20scram%20occurs%20in%20Mode%201%20before%20Mode%202%20conditions%20are%20met.%20Where%20does%20the%20plant%20go%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.2%2C%20p.%2011.5-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 2</span><span>OP-01-K7</span></div>
+  <p>Which mode supports heatup through PSP operation?</p>
+  <div class="opts"><button type="button" class="opt">A. Mode 2</button><button type="button" class="opt">B. Mode 3</button><button type="button" class="opt">C. Mode 4</button><button type="button" class="opt">D. Mode 1</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Mode 3 supports heatup through PSP operation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K7&amp;body=Item%3A%20OP-01-K7%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20mode%20supports%20heatup%20through%20PSP%20operation%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.3%2C%20p.%2011.5-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 2</span><span>OP-01-K8</span></div>
+  <p>Why is no more than one CRA coupled in Modes 3 and 4?</p>
+  <div class="opts"><button type="button" class="opt">A. To keep enough CRAs inserted to hold the reactor shutdown</button><button type="button" class="opt">B. To save power</button><button type="button" class="opt">C. To allow IAC flow</button><button type="button" class="opt">D. To cool the head</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. This ensures a sufficient number of CRAs are inserted. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K8&amp;body=Item%3A%20OP-01-K8%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Why%20is%20no%20more%20than%20one%20CRA%20coupled%20in%20Modes%203%20and%204%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.3%2C%20p.%2011.5-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Mode descriptions and transitions</a><a class="next" href="#concept-3">Technical Specification structure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Technical Specification structure</h2><p class="count">Objectives 3</p><p>Table 11.5-1 lists probable subjects as required by 10 CFR 50.34(a)(5). <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></p>
+<p>The full set will be submitted at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></p>
+<p>Format is planned to be consistent with NUREG-1431. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></p>
+<ul><li>Use and Application</li><li>Safety Limits</li><li>Limiting Conditions for Operation and Surveillance Requirements</li><li>Design Features</li><li>Administrative Controls</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></p>
+<p>Use and Application gives definitions, modes for LCO applicability, logical connectors, completion time, and frequency. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Mode descriptions and transitions</a><a class="next" href="#check-3">Knowledge check: Technical Specification structure <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Technical Specification structure</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 3</span><span>OP-01-K9</span></div>
+  <p>When is the full Tech Spec set submitted?</p>
+  <div class="opts"><button type="button" class="opt">A. At the OL stage</button><button type="button" class="opt">B. After fuel load</button><button type="button" class="opt">C. After first refuel</button><button type="button" class="opt">D. With the PSAR</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The full set is submitted at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K9&amp;body=Item%3A%20OP-01-K9%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20When%20is%20the%20full%20Tech%20Spec%20set%20submitted%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.1%2C%20p.%2011.5-1%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 3</span><span>OP-01-K10</span></div>
+  <p>Which section defines completion time convention?</p>
+  <div class="opts"><button type="button" class="opt">A. Use and Application</button><button type="button" class="opt">B. Design Features</button><button type="button" class="opt">C. Administrative Controls</button><button type="button" class="opt">D. Safety Limits</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Use and Application establishes the completion time convention. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K10&amp;body=Item%3A%20OP-01-K10%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20section%20defines%20completion%20time%20convention%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Technical Specification structure</a><a class="next" href="#concept-4">Safety Limits <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Safety Limits</h2><p class="count">Objectives 4</p><p>Safety limits protect the integrity of barriers that guard against uncontrolled release of radioactivity. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>LSSSs are settings for automatic protective devices. A setting must make protective action correct the situation before a Safety Limit is exceeded. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>Probable SL subjects are fuel cladding temperature and peak fuel temperature. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>Cladding temperature limits protect against thermal creep and wall thinning from fuel-cladding chemical and eutectic interactions. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>Peak fuel temperature limits protect against melting. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>Cycle-specific limits are in the Core Operating Limits Report (COLR). <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+<p>A violation gives direction to restore compliance and shut down the reactor. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4</cite></p>
+<p>A setpoint control program, consistent with Option B of TSTF-493, replaces explicit LSSS values. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Technical Specification structure</a><a class="next" href="#check-4">Knowledge check: Safety Limits <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Safety Limits</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>OP-01-K11</span></div>
+  <p>What are the probable Safety Limit subjects?</p>
+  <div class="opts"><button type="button" class="opt">A. Fuel cladding temperature and peak fuel temperature</button><button type="button" class="opt">B. Hot pool level</button><button type="button" class="opt">C. PSP speed</button><button type="button" class="opt">D. RAC flow</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. These two are named. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K11&amp;body=Item%3A%20OP-01-K11%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20What%20are%20the%20probable%20Safety%20Limit%20subjects%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 4</span><span>OP-01-K12</span></div>
+  <p>What does the peak fuel temperature limit protect against?</p>
+  <div class="opts"><button type="button" class="opt">A. Rod bow</button><button type="button" class="opt">B. Corrosion</button><button type="button" class="opt">C. Sodium boiling</button><button type="button" class="opt">D. Melting</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Peak fuel temperature limits protect against melting. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K12&amp;body=Item%3A%20OP-01-K12%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20What%20does%20the%20peak%20fuel%20temperature%20limit%20protect%20against%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 4</span><span>OP-01-K13</span></div>
+  <p>Where do cycle-specific Safety Limit values appear?</p>
+  <div class="opts"><button type="button" class="opt">A. PSAR</button><button type="button" class="opt">B. COLR</button><button type="button" class="opt">C. SVDU</button><button type="button" class="opt">D. ODCM</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. They are in the COLR. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K13&amp;body=Item%3A%20OP-01-K13%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Where%20do%20cycle-specific%20Safety%20Limit%20values%20appear%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Safety Limits</a><a class="next" href="#concept-5">Limiting Conditions for Operation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Limiting Conditions for Operation</h2><p class="count">Objectives 5</p><p>LCOs are the lowest functional capability or performance levels of equipment required for safe operation. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4</cite></p>
+<p>Surveillance requirements cover test, calibration, or inspection. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-4</cite></p>
+<table class="tbl"><thead><tr><th>Section</th><th>Subject</th><th>Example variables</th></tr></thead><tbody><tr><td>3.1</td><td>Reactivity Control Systems</td><td>Scram capability and rod alignment limits <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-5</cite></td></tr><tr><td>3.2</td><td>Power Distribution Limits</td><td>Hot channel factors <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-6</cite></td></tr><tr><td>3.3</td><td>Instrumentation</td><td>RPS, XIS, RIS, and reactor trip switchgear <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-6</cite></td></tr><tr><td>3.4</td><td>Primary Heat Transport System</td><td>Temperature, leakage, flow rate, PSP coastdown time <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></td></tr><tr><td>3.5</td><td>Reactor Air Cooling System</td><td>Intake and exhaust temperatures and flow rates <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></td></tr><tr><td>3.6</td><td>Functional Containment</td><td>System and component leakage <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></td></tr><tr><td>3.7</td><td>Refueling Operations</td><td>Sealing, flow paths, heat removal for FHI, FHE, FHP <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-8</cite></td></tr></tbody></table>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Safety Limits</a><a class="next" href="#check-5">Knowledge check: Limiting Conditions for Operation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Limiting Conditions for Operation</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 5</span><span>OP-01-K14</span></div>
+  <p>Which is a proposed LCO variable for the RAC?</p>
+  <div class="opts"><button type="button" class="opt">A. Intake and exhaust flow rates</button><button type="button" class="opt">B. Stack height</button><button type="button" class="opt">C. Damper color</button><button type="button" class="opt">D. Salt temperature</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. LCO 3.5 variables include intake and exhaust temperatures and flow rates. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K14&amp;body=Item%3A%20OP-01-K14%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20is%20a%20proposed%20LCO%20variable%20for%20the%20RAC%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 5</span><span>OP-01-K15</span></div>
+  <p>Which is a proposed PHT LCO variable?</p>
+  <div class="opts"><button type="button" class="opt">A. Diesel fuel</button><button type="button" class="opt">B. PSP coastdown time</button><button type="button" class="opt">C. Stack flow</button><button type="button" class="opt">D. EVST level</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. PSP coastdown time is listed. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K15&amp;body=Item%3A%20OP-01-K15%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20is%20a%20proposed%20PHT%20LCO%20variable%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 5</span><span>OP-01-K16</span></div>
+  <p>Where would functional containment leakage appear?</p>
+  <div class="opts"><button type="button" class="opt">A. LCO 3.6</button><button type="button" class="opt">B. LCO 3.7</button><button type="button" class="opt">C. LCO 3.1</button><button type="button" class="opt">D. LCO 3.3</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Section 3.6 is Functional Containment. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K16&amp;body=Item%3A%20OP-01-K16%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Where%20would%20functional%20containment%20leakage%20appear%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Limiting Conditions for Operation</a><a class="next" href="#concept-6">Administrative controls <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Administrative controls</h2><p class="count">Objectives 6</p><p>Design Features are items that would significantly affect safety if altered, and will be given at the OL stage. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-8</cite></p>
+<ul><li>Delineation of responsibility</li><li>Description of organization</li><li>Unit staff qualifications</li><li>Requirements for procedures</li><li>Programs and manuals, including a setpoint control program</li><li>Reporting requirements, including a COLR</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-9</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Limiting Conditions for Operation</a><a class="next" href="#check-6">Knowledge check: Administrative controls <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Administrative controls</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>OP-01-K17</span></div>
+  <p>Which is a probable administrative control?</p>
+  <div class="opts"><button type="button" class="opt">A. PSP coastdown</button><button type="button" class="opt">B. Fuel temperature</button><button type="button" class="opt">C. Setpoint control program</button><button type="button" class="opt">D. Rod alignment limit</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Programs and manuals include a setpoint control program. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-9</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-01-K17&amp;body=Item%3A%20OP-01-K17%0ALesson%3A%20Technical%20Specifications%20and%20Operating%20Modes%0AQuestion%3A%20Which%20is%20a%20probable%20administrative%20control%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%2011.5.2.4%2C%20p.%2011.5-9%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Administrative controls</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Modes 1 and 2 have more than one CRA coupled, cooled by NSS and IAC. Modes 3 and 4 split at 400 F. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10</cite></li><li>Probable Safety Limits are fuel cladding temperature and peak fuel temperature, with values in the COLR. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3</cite></li><li>The full Technical Specifications come at the OL stage, in a format consistent with NUREG-1431. <cite>PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Administrative controls</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 15</span></div>
+<h1>Technical Specifications and Operating Modes</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Operating modes</a></li><li><a href="#check-1">Knowledge check: Operating modes</a></li><li><a href="#concept-2">Mode descriptions and transitions</a></li><li><a href="#check-2">Knowledge check: Mode descriptions and transitions</a></li><li><a href="#concept-3">Technical Specification structure</a></li><li><a href="#check-3">Knowledge check: Technical Specification structure</a></li><li><a href="#concept-4">Safety Limits</a></li><li><a href="#check-4">Knowledge check: Safety Limits</a></li><li><a href="#concept-5">Limiting Conditions for Operation</a></li><li><a href="#check-5">Knowledge check: Limiting Conditions for Operation</a></li><li><a href="#concept-6">Administrative controls</a></li><li><a href="#check-6">Knowledge check: Administrative controls</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 11.5.1, 11.5.2, 11.5.2.1, 11.5.2.2, 11.5.2.3, 11.5.2.4</p><p>Pages 11.5-1, 11.5-2, 11.5-3, 11.5-4, 11.5-5, 11.5-6, 11.5-7, 11.5-8, 11.5-9, 11.5-10</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20OP-01&amp;body=Lesson%3A%20OP-01%20Technical%20Specifications%20and%20Operating%20Modes%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

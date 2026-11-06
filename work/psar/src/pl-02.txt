@@ -1,0 +1,92 @@
+# PL-02 | Safety Functions and Defense-in-Depth | topic | safety functions
+range: 1.3-1 1.3-6 4.2-1 4.2-5
+sec: Secs. 1.3 and 4.2, pp. 1.3-1 to 1.3-6 and 4.2-1 to 4.2-5
+intro: Every Natrium event lesson comes back to three Fundamental Safety Functions and five Defense Lines. Learn these first.
+obj: State the three Fundamental Safety Functions.
+obj: Describe the functional containment strategy and its barriers.
+obj: Explain how heat generation and heat removal are controlled.
+obj: State the five Defense Lines and how independence is achieved between them.
+obj: Explain the purpose of SARRDLs.
+obj: Describe the elements of defense-in-depth evaluation.
+
+== Fundamental Safety Functions | 1
+S The FSFs ensure the cumulative risk objectives of regulatory dose criteria and Quantitative Health Objectives are met. @@ Fundamental Safety Functions (FSFs) ensure the cumulative risk objectives
+Q The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal.
+T FSF | How it is performed
+R Retaining radionuclides | Functional containment strategy @@ accomplished using a functional containment strategy
+R Controlling heat generation | Insertion of control rods into the reactor core @@ is performed via insertion of control rods into the reactor core
+R Controlling heat removal | Active and passive cooling systems @@ is achieved through active and passive cooling systems
+N The heat generation and heat removal functions both serve the same barrier, as the next page shows.
+K Which is NOT one of the three Fundamental Safety Functions? | Retaining radionuclides | Controlling heat generation | Controlling heat removal | Maintaining primary pressure | 3 | The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal. @@ The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal
+
+== Functional containment | 2
+S Functional containment employs diverse passive barriers. They begin at a radionuclide source and include all SSCs between that source and the environment. @@ begin at a radionuclide source and
+L Maintain at least one barrier beyond the cladding, piping, or vessel containing a source that can reliably withstand LBE and DBA conditions, with leakage specified by design or testing ;; Keep a minimum total number of required barriers between a source and the environment ;; Provide a framework for iteration between safety analysis, design, and PRA @@ The primary goals of the functional containment strategy
+F 1.3-1
+S For the fuel, the cladding provides the first safety-related radionuclide retention barrier. @@ the cladding provides the first safety-related (SR) radionuclide retention barrier
+S The Reactor Enclosure System is the next barrier. Its SR portion includes the reactor head, reactor vessel, and associated component interfaces. @@ The SR portion of this boundary includes the reactor head, reactor vessel
+S The guard vessel provides an additional barrier outside the reactor head and reactor vessel SR boundary. @@ The guard vessel, also a component of the Reactor Enclosure System, provides an additional barrier
+S There are no penetrations through either of the two vessels. @@ there are no penetrations through either of the two vessels
+S A fuel assembly that fails during operation is sealed in an SR canister before storage in the Spent Fuel Pool. @@ it is sealed in an SR canister prior to storage in the Spent Fuel Pool
+K What is the first safety-related radionuclide retention barrier for the fuel? | Reactor vessel | Guard vessel | Fuel cladding | Reactor Building | 2 | For the fuel, the cladding provides the first SR radionuclide retention barrier. @@ the cladding provides the first safety-related (SR) radionuclide retention barrier
+K What happens to a fuel assembly that fails during operation before it is stored in the Spent Fuel Pool? | It is sealed in an SR canister | It is returned to the core | It is stored in the IHT | It is vented to the RWG | 0 | A failed assembly is sealed in an SR canister prior to storage in the Spent Fuel Pool. @@ it is sealed in an SR canister prior to storage in the Spent Fuel Pool
+
+== Inherent features that support containment | 2
+S The high boiling point of sodium keeps the core covered by subcooled sodium at near atmospheric pressure during LBEs. @@ the high boiling point of sodium, which ensures that the reactor core remains covered by subcooled sodium
+S The low operating pressure of the primary system and cover gas means there is no significant driving force to transport radionuclides. @@ ensures there is no significant driving force to transport radionuclides
+S Intermediate coolant pressure is greater than primary coolant pressure, so postulated intermediate leaks send sodium into the primary system rather than primary coolant into the intermediate system. @@ The intermediate coolant pressure is greater than primary coolant pressure
+K Why does a leak between the intermediate and primary sodium result in ingress to the primary system? | The primary pumps create suction | Intermediate coolant pressure is greater than primary coolant pressure | The IHX is below the sodium level | The cover gas draws sodium in | 1 | Intermediate coolant pressure is greater than primary pressure, so leaks go into the primary system. @@ The intermediate coolant pressure is greater than primary coolant pressure
+
+== Controlling heat generation | 3
+T Means | Type | How it works
+R Power runback | Active | Control rod drive motors insert rods on detection of abnormal conditions, and this prevents a scram for a variety of upsets @@ use control rod drive motors to insert control rods upon detection of abnormal
+R Scram | Passive | Gravity insertion of control rods, performed by the CRD and RPS @@ The scram function results in passive gravity insertion of control rods
+R Driveline scram follow | DID to scram | Initiated by the RPS coincident with a scram signal, and drives the rods in with the motors @@ initiated by the Reactor Protection System coincident with a scram signal
+R Reactivity feedback | Inherent | As temperatures rise, the net negative feedback of the core reduces power @@ As temperatures rise, the net negative feedback of the core reduces power
+S The CRD uses two diverse means of inserting two control rod banks of diverse geometrical design. @@ two diverse means of inserting two control rod banks of diverse geometrical design
+K What does the CRD driveline scram follow feature provide? | Defense-in-depth to the scram function | Normal rod withdrawal | Rod position indication | Cover gas sealing | 0 | The driveline scram follow feature provides DID to the scram function. @@ The CRD driveline scram follow feature provides DID to the scram function
+K What moves the control rods into the core in a scram? | Control rod drive motors | Gravity | Sodium flow | Cover gas pressure | 1 | The scram function results in passive gravity insertion of control rods. @@ The scram function results in passive gravity insertion of control rods
+
+== Controlling heat removal | 3
+S Two diverse residual heat removal systems, IAC and RAC, perform functions that satisfy this FSF. @@ Two diverse residual heat removal systems
+T Mode | Air flow | Sodium flow in the IHT
+R IAC active mode 1 | IAC blower | Forced flow from the Intermediate Sodium Pump @@ One active mode of operation removes heat using the IAC blower and forced flow through the IHT
+R IAC active mode 2 | IAC blower | Natural circulation @@ IAC blower and natural circulation flow in the IHT
+R IAC passive mode | Natural draft | Not stated here @@ passive means of performing the FSF of controlling heat removal using natural draft airflow
+S IAC is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions. @@ is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions
+S RAC uses natural circulation of air around the exterior of the guard vessel. It operates continuously, with no operator actions or moving parts required. @@ The RAC operates continuously, with no operator actions or moving parts required
+K Which system operates continuously with no moving parts or operator actions? | IAC blower mode | RAC | IHT | SCG | 1 | RAC operates continuously, with no operator actions or moving parts required to perform its function. @@ The RAC operates continuously, with no operator actions or moving parts required
+K What is the primary means of heat removal during start-up, shutdown, and off-normal conditions? | RAC | IAC | The Energy Island | The SPS | 1 | The IAC is the primary means in those conditions. @@ is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions
+
+== The five Defense Lines | 4
+T Line | Purpose
+R DL1 | Prevent off-normal operation and AOOs @@ DL1: Prevent off-normal operation and anticipated operational occurrences
+R DL2 | Control abnormal operation, detect failures, and prevent DBEs @@ DL2: Control abnormal operation, detect failures, and prevent design basis events
+R DL3 | Control DBEs within the analyzed design basis conditions and prevent BDBEs @@ DL3: Control DBEs within the analyzed design basis conditions
+R DL4 | Control severe plant conditions and mitigate consequences of BDBEs @@ DL4: Control severe plant conditions and mitigate consequences of BDBEs
+R DL5 | Deploy adequate offsite protective actions and prevent adverse impact on public health and safety @@ DL5: Deploy adequate offsite protective actions
+S DL1 and DL5 include programmatic elements and design features. DL2, DL3, and DL4 include the design functions needed to ensure performance of the FSFs. @@ DL1 and DL5 include programmatic elements and design features
+S Among DLs 2, 3, and 4, two independent and diverse DLs, to the extent practicable, can mitigate any AOO postulated initiating event. @@ can mitigate any AOO postulated initiating event
+K Which Defense Line deploys adequate offsite protective actions? | DL2 | DL3 | DL4 | DL5 | 3 | DL5 deploys adequate offsite protective actions. @@ DL5: Deploy adequate offsite protective actions
+K Which Defense Lines include the design functions necessary to ensure performance of the FSFs? | DL1 and DL5 | DL2, DL3, and DL4 | DL1 only | DL4 and DL5 | 1 | DL2, DL3, and DL4 include those design functions. @@ DL2, DL3, and DL4 include the design functions necessary
+
+== SARRDLs | 5
+S A SARRDL is a prescribed limit of radionuclide release for systems and components. @@ A SARRDL is a prescribed limit of radionuclide release for systems and components
+L The most limiting LBE does not exceed the siting dose limits at the EAB and LPZ ;; The 10 CFR 20.1301 annualized dose limits to the public are not exceeded at the EAB for normal operation and AOOs @@ SARRDLs are established so that
+S Compliance comes from monitoring and controlling radionuclide inventory during normal operation, so the assumed inventory at the onset of an LBE is not exceeded. @@ Compliance with the SARRDLs is achieved through monitoring and controlling radionuclide inventory
+K How is SARRDL compliance achieved? | By monitoring and controlling radionuclide inventory during normal operation | By filtering all stack releases | By operator action after an LBE | By limiting reactor power to 5 percent | 0 | Compliance is achieved by monitoring and controlling inventory during normal operation. @@ Compliance with the SARRDLs is achieved through monitoring and controlling radionuclide inventory
+
+== Evaluating defense-in-depth | 6
+S The three DID elements are plant capability, programmatic capability, and the integrated DID adequacy evaluation. @@ The three DID elements, plant capability, programmatic capability, and integrated DID adequacy evaluation
+L Evaluation of LBE margin ;; Layers of defense evaluation ;; Evaluation of single feature reliance ;; Evaluation of prevention-mitigation balance @@ The summary of plant capability DID includes the following
+S The frequency of all DBEs and BDBEs is maintained below 1x10^-2 and 1x10^-4 per plant-year, respectively. @@ The frequency of all DBEs and BDBEs is maintained below
+S Eight risk-significant LBEs are identified. @@ Eight risk-significant LBEs are identified
+S The single feature review found no dependence on a single feature across the layers for the risk-significant LBEs. One DBA was identified with dependence on a single barrier. @@ One DBA was identified to have dependence on a single barrier
+S An integrated decision-making process panel uses deterministic and probabilistic inputs to review DID adequacy. @@ uses deterministic and probabilistic inputs in the review and assessment of the adequacy of the DID
+S The DID baseline to support plant operation will be established at the operating license stage. @@ The DID baseline to support plant operation will be established at the operating license (OL) stage
+K Which is NOT a part of the plant capability DID summary? | LBE margin | Single feature reliance | Prevention-mitigation balance | Operator license renewal | 3 | The summary covers LBE margin, layers of defense, single feature reliance, and prevention-mitigation balance. @@ The summary of plant capability DID includes the following
+
+Z The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal. @@ The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal
+Z Functional containment uses diverse passive barriers, with the cladding first. @@ functional containment strategy that employs diverse passive barriers
+Z Scram is passive gravity insertion, backed by the driveline scram follow. @@ The scram function results in passive gravity insertion of control rods
+Z IAC has active and passive modes, and RAC runs continuously with no moving parts. @@ The RAC operates continuously, with no operator actions or moving parts required

@@ -1,0 +1,531 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiators and assumptions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Initiator",
+      "Condition"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DHS-ISTL-1 and -2",
+        "Loss of heat removal from one intermediate sodium loop",
+        "Full power"
+       ],
+       "anchor": "The postulated initiating event is a loss of heat removal from one intermediate sodium loop",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2"
+      },
+      {
+       "cells": [
+        "DHS-RNBK-1 and -3",
+        "Runback demand from a decrease or increase in heat removal from the NSS",
+        "Full power"
+       ],
+       "anchor": "reactor power runback demand initiated by a decrease or",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3"
+      },
+      {
+       "cells": [
+        "SUD-IACA-1",
+        "Loss of one IAC train",
+        "Low power or shutdown"
+       ],
+       "anchor": "The postulated initiating event is a loss of one IAC train during low power or shutdown",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4"
+      },
+      {
+       "cells": [
+        "IPI-IHEL-BL",
+        "IHX tube break, intermediate sodium leaks into the PHT",
+        "Full power"
+       ],
+       "anchor": "Intermediate Heat Exchanger tube break during full power",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4"
+      },
+      {
+       "cells": [
+        "SUD-IHEL-BL",
+        "IHX tube break",
+        "Low power or shutdown"
+       ],
+       "anchor": "Intermediate Heat Exchanger tube break during low power or",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.7.1, p. 3.7-5"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The Energy Island transient DBE is assumed to bound other events that generate reactor power runback signals.",
+     "anchor": "This event is also",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3"
+    },
+    {
+     "t": "p",
+     "text": "If a runback completes and prevents a scram setpoint from being reached, the event is not classified as an LBE.",
+     "anchor": "If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+    }
+   ],
+   "checks": [
+    {
+     "q": "When is a heat removal upset not classified as an LBE?",
+     "o": [
+      "When it occurs at low power",
+      "When IAC is in active mode",
+      "When the PSPs keep running",
+      "When a runback completes and prevents reaching a scram setpoint"
+     ],
+     "a": 3,
+     "x": "A completed runback that prevents a scram setpoint from being reached means the event is not an LBE.",
+     "anchor": "If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Challenged functions and acceptance",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fuel performance acceptance criteria are satisfied for these DBEs, and there is no radiological release.",
+     "anchor": "The fuel performance acceptance criteria are satisfied. Therefore, fuel integrity is maintained for",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.2, p. 3.7-2"
+    },
+    {
+     "t": "p",
+     "text": "The reactor vessel is not overfilled in the IHX leak, because the IHT physical arrangement limits the intermediate sodium volume that can drain into the PHT.",
+     "anchor": "Intermediate sodium volume that can drain into the PHT is limited by the IHT physical",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why is the reactor vessel not overfilled by an IHX tube break?",
+     "o": [
+      "The ISPs pump sodium back",
+      "The IHT physical arrangement limits the volume that can drain into the PHT",
+      "The vessel has an overflow line",
+      "The SPS removes the excess"
+     ],
+     "a": 1,
+     "x": "The IHT physical arrangement limits the volume that can drain to the PHT.",
+     "anchor": "Intermediate sodium volume that can drain into the PHT is limited by the IHT physical",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Event chronology",
+   "eo": [
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "Loss of heat sink with RAC (DHS-ISTL-2)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Heat removal is lost from one intermediate loop at full power"
+       ],
+       "anchor": "The postulated initiating event is a loss of heat removal from one intermediate sodium loop",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2"
+      },
+      {
+       "cells": [
+        "2",
+        "Reactor scrams on high high cold pool temperature"
+       ],
+       "anchor": "A reactor scram on high high cold pool temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2"
+      },
+      {
+       "cells": [
+        "3",
+        "PSPs and ISPs trip on high high primary sodium temperature"
+       ],
+       "anchor": "PSPs and ISPs trip on high high primary sodium temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2"
+      },
+      {
+       "cells": [
+        "4",
+        "Non-passive and passive IAC fail on both trains"
+       ],
+       "anchor": "IAC cooling fails on both trains",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.1.3.1, p. 3.7-2"
+      },
+      {
+       "cells": [
+        "5",
+        "Safe shutdown, with RAC removing decay heat"
+       ],
+       "anchor": "final conditions result in the reactor in safe shutdown with the RAC providing decay heat removal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "IHX tube break (IPI-IHEL-BL)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Tube break puts intermediate sodium into the PHT, and heat removal is lost from one loop"
+       ],
+       "anchor": "resulting in intermediate sodium leakage into the Primary Heat Transport",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4"
+      },
+      {
+       "cells": [
+        "2",
+        "Reactor scrams on high high primary sodium level, and the ISPs trip on the same signal"
+       ],
+       "anchor": "high primary sodium level occurs and the ISPs trip on high high primary sodium level",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4"
+      },
+      {
+       "cells": [
+        "3",
+        "Safe shutdown, with the unaffected IAC train in non-passive mode"
+       ],
+       "anchor": "the unaffected IAC train in non-passive mode",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which signal scrams the reactor in the loss of heat sink DBE?",
+     "o": [
+      "High high cold pool temperature",
+      "High high primary sodium level",
+      "Low hot pool level",
+      "High high flux rate"
+     ],
+     "a": 0,
+     "x": "The reactor scrams on high high cold pool temperature.",
+     "anchor": "A reactor scram on high high cold pool temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2",
+     "eo": "3,5"
+    },
+    {
+     "q": "Which signal scrams the reactor in the full power IHX tube break?",
+     "o": [
+      "Low primary sodium level",
+      "High high primary sodium level",
+      "Loss of flow",
+      "High high cold pool temperature"
+     ],
+     "a": 1,
+     "x": "Intermediate sodium enters the primary, and the scram is on high high primary sodium level.",
+     "anchor": "high primary sodium level occurs and the ISPs trip on high high primary sodium level",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4",
+     "eo": "3,5"
+    },
+    {
+     "q": "In the Energy Island transient DBE, what happens to the runback?",
+     "o": [
+      "It only occurs at low power",
+      "It always completes",
+      "A scram occurs before it is complete",
+      "It is blocked by the RPS"
+     ],
+     "a": 2,
+     "x": "A runback may be initiated, but a scram occurs before the runback is complete.",
+     "anchor": "A reactor power runback may be initiated, but a reactor scram occurs before the reactor power runback is",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3",
+     "eo": "3,5"
+    }
+   ]
+  },
+  {
+   "title": "Key parameter trends",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Disturbance",
+      "Sodium temperature",
+      "Reactor power"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "More heat removed",
+        "Falls",
+        "Rises"
+       ],
+       "anchor": "An increase in heat removal from the primary system",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+      },
+      {
+       "cells": [
+        "Less heat removed",
+        "Rises",
+        "Falls"
+       ],
+       "anchor": "A decrease in heat removal from the primary system",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Heat removal from the primary suddenly increases. What does reactor power do before a runback or scram?",
+     "o": [
+      "It falls",
+      "It stays constant",
+      "It increases",
+      "It oscillates"
+     ],
+     "a": 2,
+     "x": "Sodium temperature falls, which causes an increase in reactor power.",
+     "anchor": "An increase in heat removal from the primary system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5",
+     "eo": "4"
+    },
+    {
+     "q": "Heat removal from the primary decreases. Which pair is correct?",
+     "o": [
+      "Temperature up, power down",
+      "Temperature up, power up",
+      "Temperature down, power up",
+      "Temperature down, power down"
+     ],
+     "a": 0,
+     "x": "A decrease in heat removal raises primary sodium temperature, which decreases reactor power.",
+     "anchor": "A decrease in heat removal from the primary system",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Credited equipment and failed functions",
+   "eo": [
+    "8",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In the loss of heat sink with RAC, the thermal capacity of the piping, components, and intermediate sodium in the remaining loop is assumed to be available.",
+     "anchor": "intermediate sodium in the remaining intermediate sodium loop are assumed to be available",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3"
+    },
+    {
+     "t": "p",
+     "text": "In the shutdown IAC train loss, the unaffected train provides decay heat removal in passive mode after non-passive cooling fails on that train.",
+     "anchor": "by the unaffected IAC train in passive mode",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4"
+    },
+    {
+     "t": "p",
+     "text": "The matching DBAs credit RAC for decay heat removal.",
+     "anchor": "safe shutdown with the RAC providing decay heat removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.2.1, p. 3.7-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What provides decay heat removal in SUD-IACA-1?",
+     "o": [
+      "RAC only",
+      "The unaffected IAC train in passive mode",
+      "The failed train in blower mode",
+      "The ISPs"
+     ],
+     "a": 1,
+     "x": "Decay heat removal is provided by the unaffected IAC train in passive mode.",
+     "anchor": "by the unaffected IAC train in passive mode",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4",
+     "eo": "8,9"
+    }
+   ]
+  },
+  {
+   "title": "End state and operator role",
+   "eo": [
+    "10",
+    "12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The shutdown IAC event can end safe and stable at low power, or in safe shutdown.",
+     "anchor": "in the reactor safe and stable at low power or in safe shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4"
+    },
+    {
+     "t": "p",
+     "text": "The safe and stable end state applies if the transient does not result in a reactor scram. It requires K-effective of 1.0 and heat removal equal to heat production.",
+     "anchor": "If the transient does not result in a reactor scram the safe and stable end state is used",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which end state applies when a transient does not cause a scram?",
+     "o": [
+      "Hot standby",
+      "Safe shutdown",
+      "Cold shutdown",
+      "Safe and stable"
+     ],
+     "a": 3,
+     "x": "If the transient does not result in a scram, the safe and stable end state is used.",
+     "anchor": "If the transient does not result in a reactor scram the safe and stable end state is used",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7",
+     "eo": "10,12"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Heat removal upsets change sodium temperature first, and reactivity feedback then moves power the opposite way.",
+   "anchor": "An increase in heat removal from the primary system",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+  },
+  {
+   "text": "Loss of heat sink scrams on high high cold pool temperature. An IHX tube break scrams on high high primary sodium level.",
+   "anchor": "A reactor scram on high high cold pool temperature",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2"
+  },
+  {
+   "text": "A completed runback that prevents a scram setpoint means the event is not an LBE.",
+   "anchor": "If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "An increase in heat removal from the primary system results in a decrease in primary sodium temperature, which causes an increase in reactor power.",
+   "sec": "Sec. 3.3.4.1.1",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5"
+  },
+  {
+   "id": "P2",
+   "quote": "A decrease in heat removal from the primary system results in an increase in primary sodium temperature, which causes a decrease in reactor power.",
+   "sec": "Sec. 3.3.4.1.2",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5"
+  }
+ ],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-03",
+ "title": "Heat Removal DBEs",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.7.2, pp. 3.7-2 to 3.7-5, with Secs. 3.3.4 and 3.9.2",
+ "intro": "These design basis events disturb heat removal: loss of heat sink, Energy Island transients, loss of an IAC train, and an IHX tube break.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": true
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-ev-03-heat-removal-dbes"
+}

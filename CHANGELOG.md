@@ -10727,3 +10727,1397 @@ Added 2 quiz questions and 2 flashcards from the lesson topics. Every quote pass
 - **Options reworded** so reactor theory items use no thermal neutron or moderator content. Answers unchanged except Q255 and Q342.
 - **Figures**: 354 lesson figures added to quiz and flashcard items, shown with the answer.
 - **Lessons**: all 58 moved from Draft to Reviewed.
+
+## 2026-11-06: PSAR lesson plans (knowledge checks)
+
+Added 463 quiz questions from the PSAR lesson plans.
+
+- **Q1617** (PSAR: Licensing Basis Events): What frequency classifies an event sequence as an AOO?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.6, p. 3.6-1
+  - Quote: "1x10-2 per plant-year and greater are classified as AOOs"
+- **Q1618** (PSAR: Licensing Basis Events): Loss of a primary 6.9 kilovolt bus loses which pumps?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.6.1.4.1, p. 3.6-2
+  - Quote: "The loss of the bus results in the loss of one Primary Sodium Pump and one"
+- **Q1619** (PSAR: Licensing Basis Events): A control rod withdraws continuously at full power. Which scram signals does the PSAR name?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.6.3.1.1, p. 3.6-3
+  - Quote: "scram on high high power range neutron flux or high high"
+- **Q1620** (PSAR: Licensing Basis Events): Why does the test pin AOO assume seven damaged pins?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.6.4.1.2, p. 3.6-3
+  - Quote: "removed from the assembly and the six surrounding pins"
+- **Q1621** (PSAR: Licensing Basis Events): What is the usual decay heat removal path at the end of a reactor AOO?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.6.1.2.1, p. 3.6-1
+  - Quote: "The final conditions result in the reactor in safe shutdown with the IAC in non-passive mode providing decay heat removal"
+- **Q1622** (PSAR: Licensing Basis Events): What frequency band defines a DBE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1
+  - Quote: "mean frequencies of 1x10-4 per plant-year to 1x10-2 per plant-year are classified as DBEs"
+- **Q1623** (PSAR: Licensing Basis Events): Which equipment does DBE analysis take into account?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1
+  - Quote: "take into account the expected responses of all structures, systems, or components within the"
+- **Q1624** (PSAR: Licensing Basis Events): What is the radiological result for the three loss of primary flow DBEs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.2, p. 3.7-1
+  - Quote: "there is no radiological release for this licensing basis event"
+- **Q1625** (PSAR: Licensing Basis Events): What trips the unaffected PSP in DHP-L1PP-2?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1
+  - Quote: "The unaffected PSP and Intermediate Sodium Pumps (ISPs) trip on"
+- **Q1626** (PSAR: Licensing Basis Events): In DHP-LOOP-1, what removes decay heat at the end state?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.1.2.1, p. 3.7-1
+  - Quote: "The final conditions result in the reactor in safe shutdown with the IAC passive mode"
+- **Q1627** (PSAR: Licensing Basis Events): After the PSPs coast down, what can primary sodium temperature do?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5
+  - Quote: "then decreases after natural circulation cooling is established and decay heat decreases"
+- **Q1628** (PSAR: Licensing Basis Events): Which signals does the PSAR give for a scram after loss of primary flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.4, p. 3.3-6
+  - Quote: "results in a scram on loss of flow or high high power-to-flow ratio"
+- **Q1629** (PSAR: Licensing Basis Events): If all IAC modes fail in DHP-L1PP-2, what removes decay heat?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.1.1.1, p. 3.7-1
+  - Quote: "shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal"
+- **Q1630** (PSAR: Licensing Basis Events): Are operator actions required to mitigate the loss of primary flow DBEs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7, p. 3.7-1
+  - Quote: "Operator actions are not required to mitigate DBEs"
+- **Q1631** (PSAR: Licensing Basis Events): When is a heat removal upset not classified as an LBE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5
+  - Quote: "If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE"
+- **Q1632** (PSAR: Licensing Basis Events): Why is the reactor vessel not overfilled by an IHX tube break?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4
+  - Quote: "Intermediate sodium volume that can drain into the PHT is limited by the IHT physical"
+- **Q1633** (PSAR: Licensing Basis Events): Which signal scrams the reactor in the loss of heat sink DBE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.2.1.1, p. 3.7-2
+  - Quote: "A reactor scram on high high cold pool temperature"
+- **Q1634** (PSAR: Licensing Basis Events): Which signal scrams the reactor in the full power IHX tube break?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.2.6.1, p. 3.7-4
+  - Quote: "high primary sodium level occurs and the ISPs trip on high high primary sodium level"
+- **Q1635** (PSAR: Licensing Basis Events): In the Energy Island transient DBE, what happens to the runback?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.2.3.1, p. 3.7-3
+  - Quote: "A reactor power runback may be initiated, but a reactor scram occurs before the reactor power runback is"
+- **Q1636** (PSAR: Licensing Basis Events): Heat removal from the primary suddenly increases. What does reactor power do before a runback or scram?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.1, p. 3.3-5
+  - Quote: "An increase in heat removal from the primary system"
+- **Q1637** (PSAR: Licensing Basis Events): Heat removal from the primary decreases. Which pair is correct?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.2, p. 3.3-5
+  - Quote: "A decrease in heat removal from the primary system"
+- **Q1638** (PSAR: Licensing Basis Events): What provides decay heat removal in SUD-IACA-1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.2.5.1, p. 3.7-4
+  - Quote: "by the unaffected IAC train in passive mode"
+- **Q1639** (PSAR: Licensing Basis Events): Which end state applies when a transient does not cause a scram?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7
+  - Quote: "If the transient does not result in a reactor scram the safe and stable end state is used"
+- **Q1640** (PSAR: Licensing Basis Events): Which DBE releases precipitated tritium?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.3.3.1, p. 3.7-7
+  - Quote: "that releases precipitated tritium from the Intermediate SPS (SPS-I) cold trap"
+- **Q1641** (PSAR: Licensing Basis Events): In the SCG leak DBEs, what happens at 30 minutes?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.3.1.2, p. 3.7-6
+  - Quote: "At 30 minutes, the HAA NHV system is isolated"
+- **Q1642** (PSAR: Licensing Basis Events): Why is the SPS piping sloped toward the reactor?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.3.5.2, p. 3.7-8
+  - Quote: "minimizing the potential leakage volume"
+- **Q1643** (PSAR: Licensing Basis Events): Which of these has the highest mean 30-day EAB TEDE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.3, p. 3.7-8
+  - Quote: "1.15E-02 1.99E-02 3.98E-02"
+- **Q1644** (PSAR: Licensing Basis Events): What stops the loss of primary sodium inventory in an SPS-P leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.3.4.1, p. 3.7-8
+  - Quote: "The SPS pump trips on low primary sodium level"
+- **Q1645** (PSAR: Licensing Basis Events): Which DBE shows no fuel damage for at least 72 hours after loss of cooling?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14
+  - Quote: "no fuel damage occurs for at least 72 hours"
+- **Q1646** (PSAR: Licensing Basis Events): Why is pool scrubbing reduced in the SFP drop?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13
+  - Quote: "assumes a reduced spent fuel pool decontamination factor"
+- **Q1647** (PSAR: Licensing Basis Events): Which fuel handling DBE has the highest mean dose?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.3, p. 3.7-12
+  - Quote: "67E-01 3.66E-01 5.82E-01"
+- **Q1648** (PSAR: Licensing Basis Events): Why are BLTC releases modeled as EVHM releases?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6
+  - Quote: "because the EVHM has the smallest free volume"
+- **Q1649** (PSAR: Licensing Basis Events): Which is a stated cause of partial flow blockage?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.1.3, p. 3.3-2
+  - Quote: "a failure of wire-wrapped spacers"
+- **Q1650** (PSAR: Licensing Basis Events): In LFF-SAO-BL, is there a release?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-16
+  - Quote: "barriers successfully perform their radionuclide retention functions, but a radionuclide release occurs"
+- **Q1651** (PSAR: Licensing Basis Events): How does primary sodium temperature respond to a local fuel fault?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6
+  - Quote: "does not cause the primary sodium temperature to increase outside of nominal operating conditions"
+- **Q1652** (PSAR: Licensing Basis Events): Why do operators shut down in LFF-SAO-BL?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15
+  - Quote: "Operators manually shutdown the reactor due to exceeding failed fuel activity limits"
+- **Q1653** (PSAR: Licensing Basis Events): What fraction of non-noble gas radionuclides is assumed to bypass pool scrubbing?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.2, p. 3.7-16
+  - Quote: "Eighty percent of released non-noble gas radionuclides"
+- **Q1654** (PSAR: Licensing Basis Events): Which equipment is credited in a DBA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9, p. 3.9-1
+  - Quote: "only safety-related structures, systems, or components are available to mitigate postulated accident"
+- **Q1655** (PSAR: Licensing Basis Events): Which system removes decay heat at the end of the reactor DBAs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.1.1.1, p. 3.9-1
+  - Quote: "with decay heat removal provided by the Reactor Air Cooling System (RAC)"
+- **Q1656** (PSAR: Licensing Basis Events): What is the approximate peak reactivity insertion in the seismic DBA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.3.1.1, p. 3.9-4
+  - Quote: "The peak reactivity insertion for the safe shutdown earthquake is approximately $0.30"
+- **Q1657** (PSAR: Licensing Basis Events): What does the seismic DBA assume about control rod drop time?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.3.1.1, p. 3.9-4
+  - Quote: "The control rod drop time is assumed to be degraded due to the seismic event"
+- **Q1658** (PSAR: Licensing Basis Events): Which of these listed DBAs has the highest 2-hour EAB TEDE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.4.1.3, p. 3.9-5
+  - Quote: "7.75E+00 7.77E+00"
+- **Q1659** (PSAR: Licensing Basis Events): Why do iodine and noble gas have a minor dose effect in the SFP drop DBA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.5.2.2, p. 3.9-8
+  - Quote: "assumed to be 310 days"
+- **Q1660** (PSAR: Licensing Basis Events): Which DBA was selected as the Major Accident?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4
+  - Quote: "This event was selected as the major accident"
+- **Q1661** (PSAR: Licensing Basis Events): What does the core blockage DBA assume about operators?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.6.1, p. 3.9-10
+  - Quote: "Operators fail to shut down the reactor and the reactor continues operating at full power"
+- **Q1662** (PSAR: Licensing Basis Events): How long after EVST cooling is lost does analysis show no fuel damage?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.9.5.4.1, p. 3.9-9
+  - Quote: "no fuel damage occurs for at least 72 hours"
+- **Q1663** (PSAR: Licensing Basis Events): What frequency band defines BDBEs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1
+  - Quote: "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs"
+- **Q1664** (PSAR: Licensing Basis Events): An insufficient number of rods insert after a scram signal. What backs this up in the BDBE analysis?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8.1.2.1, p. 3.8-1
+  - Quote: "A Control Rod Drive System (CRD) driveline scram follow occurs"
+- **Q1665** (PSAR: Licensing Basis Events): The normal reactor scram fails. What scrams the reactor?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8.1.3.1, p. 3.8-2
+  - Quote: "The alternative shunt trip circuit scrams the reactor"
+- **Q1666** (PSAR: Licensing Basis Events): Both IAC modes fail on both trains after a LOOP. What removes decay heat?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8.1.5.1, p. 3.8-2
+  - Quote: "safe shutdown with the Reactor Air Cooling System (RAC) providing decay heat removal"
+- **Q1667** (PSAR: Licensing Basis Events): Which LOOP BDBE fails to meet the fuel performance acceptance criteria?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8.1.6.1, p. 3.8-3
+  - Quote: "The fuel performance acceptance criteria are not met for this event"
+- **Q1668** (PSAR: Operations and Programs): What separates Mode 1 from Mode 2?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10
+  - Quote: "1 High Power Operation More than one CRA NSS (1) N/A"
+- **Q1669** (PSAR: Operations and Programs): What separates Mode 3 from Mode 4?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10
+  - Quote: "4 Refuel No more than one CRA N/A ≤ 400 °F (204°C)"
+- **Q1670** (PSAR: Operations and Programs): The plant is at 450 F with one CRA coupled. What mode?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10
+  - Quote: "3 Shutdown No more than one CRA N/A > 400 °F (204°C)"
+- **Q1671** (PSAR: Operations and Programs): Which modes have more than one CRA coupled?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10
+  - Quote: "2 Low Power Operation More than one CRA IAC (2) N/A"
+- **Q1672** (PSAR: Operations and Programs): What marks the transition from Mode 2 to Mode 1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-10
+  - Quote: "as denoted by the IAC blower being off and the top and bottom dampers being closed and latched"
+- **Q1673** (PSAR: Operations and Programs): A scram occurs in Mode 1 before Mode 2 conditions are met. Where does the plant go?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.2, p. 11.5-2
+  - Quote: "the plant can transition directly from Mode-1 to Mode-3"
+- **Q1674** (PSAR: Operations and Programs): Which mode supports heatup through PSP operation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2
+  - Quote: "Mode-3 supports plant heatup through Primary Sodium Pump (PSP) operation"
+- **Q1675** (PSAR: Operations and Programs): Why is no more than one CRA coupled in Modes 3 and 4?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.3, p. 11.5-2
+  - Quote: "which ensures a sufficient number of CRAs are inserted to maintain the reactor shutdown"
+- **Q1676** (PSAR: Operations and Programs): When is the full Tech Spec set submitted?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.1, p. 11.5-1
+  - Quote: "The full set of technical specifications that address the requirements of 10 CFR 50.36 will be submitted at the operating license (OL) stage"
+- **Q1677** (PSAR: Operations and Programs): Which section defines completion time convention?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3
+  - Quote: "establishes the completion time convention"
+- **Q1678** (PSAR: Operations and Programs): What are the probable Safety Limit subjects?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3
+  - Quote: "probable subjects of the SLs are fuel"
+- **Q1679** (PSAR: Operations and Programs): What does the peak fuel temperature limit protect against?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3
+  - Quote: "Peak fuel temperature limits protect against melting"
+- **Q1680** (PSAR: Operations and Programs): Where do cycle-specific Safety Limit values appear?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-3
+  - Quote: "Core Operating Limits Report (COLR)"
+- **Q1681** (PSAR: Operations and Programs): Which is a proposed LCO variable for the RAC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7
+  - Quote: "intake/exhaust temperatures"
+- **Q1682** (PSAR: Operations and Programs): Which is a proposed PHT LCO variable?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7
+  - Quote: "PSP coastdown time"
+- **Q1683** (PSAR: Operations and Programs): Where would functional containment leakage appear?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-7
+  - Quote: "LCOs include system/component leakage"
+- **Q1684** (PSAR: Operations and Programs): Which is a probable administrative control?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.5.2.4, p. 11.5-9
+  - Quote: "programs and manuals, to include a setpoint control program"
+- **Q1685** (PSAR: Operations and Programs): Who is responsible for safe operation of Kemmerer Unit 1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6
+  - Quote: "USO is responsible for the safe operation of Kemmerer Unit 1"
+- **Q1686** (PSAR: Operations and Programs): When is the Operating Organization established?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6
+  - Quote: "establishes an Operating Organization prior to pre-operational testing"
+- **Q1687** (PSAR: Operations and Programs): Who has overall responsibility for occupational and public radiation safety?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4.1, p. 11.1-6
+  - Quote: "The PGM has overall responsibility for occupational and public radiation safety"
+- **Q1688** (PSAR: Operations and Programs): Who is responsible for emergency planning?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.6, p. 11.1-7
+  - Quote: "is responsible for emergency planning, licensing, regulatory assurance, and occupational health"
+- **Q1689** (PSAR: Operations and Programs): Who runs the fitness-for-duty program?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.5, p. 11.1-7
+  - Quote: "access authorization and the fitness-for-duty (FFD) program"
+- **Q1690** (PSAR: Operations and Programs): To whom does the Director of Nuclear Oversight report?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7
+  - Quote: "The Director of Nuclear Oversight reports to the CNO"
+- **Q1691** (PSAR: Operations and Programs): What does operator qualification include?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8
+  - Quote: "passing a comprehensive written exam and an operating test as required by 10 CFR 55"
+- **Q1692** (PSAR: Operations and Programs): When must 10 CFR 50.120 training programs be in place?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8
+  - Quote: "within 18 months prior to fuel load"
+- **Q1693** (PSAR: Operations and Programs): Which standard covers personnel qualification?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.1, p. 11.1-8
+  - Quote: "meet the qualification requirements described in ANSI/ANS-3.1-2014"
+- **Q1694** (PSAR: Operations and Programs): Who approves the start of a surveillance?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8
+  - Quote: "may not commence without approval of the Control Room Supervisor"
+- **Q1695** (PSAR: Operations and Programs): A trainee wants to move a rod under instruction. What allows it?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9
+  - Quote: "except as allowed for training under 10 CFR 55"
+- **Q1696** (PSAR: Operations and Programs): Equipment other than controls may affect power. What is needed to operate it?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9
+  - Quote: "shall be operated only with the knowledge and consent of the operator or the Control Room Supervisor"
+- **Q1697** (PSAR: Operations and Programs): What is an HSI?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.1.2, p. 11.2-3
+  - Quote: "HSIs are defined as any region or point at which a person interacts with a system, equipment, or component"
+- **Q1698** (PSAR: Operations and Programs): How is HFE effort applied?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-18
+  - Quote: "to apply a higher level of emphasis and rigor for important human interactions that are safety critical or hazardous"
+- **Q1699** (PSAR: Operations and Programs): Which element assigns functions to human or technology?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5
+  - Quote: "Assigning the identified functions to system (technology) or human"
+- **Q1700** (PSAR: Operations and Programs): Which element makes sure claimed operator actions are achievable?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-5
+  - Quote: "ensure claimed actions are achievable"
+- **Q1701** (PSAR: Operations and Programs): Which sodium facility is named in the OER?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.2.2.2, p. 11.2-16
+  - Quote: "such as the Fast Flux Test Facility"
+- **Q1702** (PSAR: Operations and Programs): What does human reliability analysis evaluate?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.3, p. 11.2-19
+  - Quote: "seeks to evaluate the potential for, and mechanisms of, human error"
+- **Q1703** (PSAR: Operations and Programs): Who performs HF V&V?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7
+  - Quote: "is conducted by a team of HFE engineers independent from the design development process"
+- **Q1704** (PSAR: Operations and Programs): What does Task Support Verification also check for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.1.4, p. 11.2-7
+  - Quote: "required to support tasks and that there are no unnecessary features"
+- **Q1705** (PSAR: Operations and Programs): What method does training development follow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.6.2.2, p. 11.2-23
+  - Quote: "follows the fundamentals of the systematic approach to training method"
+- **Q1706** (PSAR: Operations and Programs): Why is HPM data anonymized?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.2.7.2, p. 11.2-26
+  - Quote: "Data collected is anonymized and sanitized"
+- **Q1707** (PSAR: Operations and Programs): Which rule is the EP plan based on?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1
+  - Quote: "will be developed utilizing the requirements in 10 CFR 50.160"
+- **Q1708** (PSAR: Operations and Programs): Which rule governs changes to an approved plan?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.1, p. 11.3-3
+  - Quote: "will follow the requirements in 10 CFR 50.54(q)"
+- **Q1709** (PSAR: Operations and Programs): Where does the preliminary PEP EPZ fall?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.3.1, p. 11.3-3
+  - Quote: "a PEP EPZ within the EAB is supported based on meeting the criteria in 10 CFR 50.33(g)(2)(i)"
+- **Q1710** (PSAR: Operations and Programs): Are pre-planned off-site protective actions required?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6
+  - Quote: "there is no requirement to develop pre-planned off-site protective actions"
+- **Q1711** (PSAR: Operations and Programs): Who is the initial Emergency Director?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4
+  - Quote: "The Shift Manager will function as the Emergency Director (ED)"
+- **Q1712** (PSAR: Operations and Programs): Who supports the ED with radiological aspects on shift?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.4.2, p. 11.3-4
+  - Quote: "The health physics person on-shift will support the ED"
+- **Q1713** (PSAR: Operations and Programs): Who may coordinate the federal response if the public is affected?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.5.1, p. 11.3-5
+  - Quote: "the Federal Emergency Management Agency may assume coordination of the federal response"
+- **Q1714** (PSAR: Operations and Programs): What sets priority for treating injured people?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.7, p. 11.3-6
+  - Quote: "will be prioritized based on severity of injury and level of contamination"
+- **Q1715** (PSAR: Operations and Programs): Which is a likely on-site protective action?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.6.3, p. 11.3-6
+  - Quote: "The most likely on-site protective actions include the use of proper personal protective equipment"
+- **Q1716** (PSAR: Operations and Programs): Where is the backup ERF?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7
+  - Quote: "A primary ERF (ERFP), located on-site, and a backup ERF (ERFB), located off-site, will be available"
+- **Q1717** (PSAR: Operations and Programs): How do the ERFs help control room staff?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3.9.1, p. 11.3-7
+  - Quote: "will relieve the reactor operators of peripheral duties"
+- **Q1718** (PSAR: Operations and Programs): How is the plan proven acceptable?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 11.3, p. 11.3-1
+  - Quote: "will be proven acceptable by evaluating and critiquing performance in training, drills, and exercises"
+- **Q1719** (PSAR: Operations and Programs): What does the sodium fire strategy rely on?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3
+  - Quote: "utilizes leak prevention, detection and passive mitigation"
+- **Q1720** (PSAR: Operations and Programs): What is the difference between a guard pipe and a guard enclosure?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.1.4, p. 8.2-2
+  - Quote: "except that a drainpipe to an acceptable collection location is attached"
+- **Q1721** (PSAR: Operations and Programs): Where does a clamshell in the HAA drain?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2
+  - Quote: "are designed to allow leaked sodium to flow into the RAB pipe chase"
+- **Q1722** (PSAR: Operations and Programs): When does a catch pan get a suppression deck?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2
+  - Quote: "Suppression decks are applied to catch pans where the environmental oxygen volume cannot be limited"
+- **Q1723** (PSAR: Operations and Programs): Why are guard enclosure drain lines heat traced?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.2.2, p. 8.2-4
+  - Quote: "are heat traced, where needed, to minimize sodium freezing"
+- **Q1724** (PSAR: Operations and Programs): Where does leaked radiological sodium stay?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-2
+  - Quote: "Leaked radiological sodium is contained within the process cell"
+- **Q1725** (PSAR: Operations and Programs): What leak size is postulated for seismically qualified piping?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4
+  - Quote: "a Dt/4 crack for seismically qualified piping and a full-circumferential break for non-seismically qualified piping"
+- **Q1726** (PSAR: Operations and Programs): Why are smaller pipes considered?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.3.3.1, p. 8.2-7
+  - Quote: "Due to the potentially more significant environmental effects of sodium and salt leaks"
+- **Q1727** (PSAR: Operations and Programs): What does the design assume about equipment in a fire area?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.3, p. 8.2-5
+  - Quote: "while assuming all equipment in any one fire area is rendered inoperable by the fire"
+- **Q1728** (PSAR: Operations and Programs): What is used to fight a large sodium fire?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8
+  - Quote: "There is no active or manual fire suppression for large sodium fires"
+- **Q1729** (PSAR: Operations and Programs): Which extinguisher is staged in sodium areas?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8
+  - Quote: "Class D fire extinguishers containing Sodium Chloride-based dry powder"
+- **Q1730** (PSAR: Operations and Programs): Why is there no water suppression in the RXB and RAB?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8
+  - Quote: "do not contain water-based fire suppression systems to avoid sodium-water interaction"
+- **Q1731** (PSAR: Operations and Programs): Who may halt a radiologically unsafe operation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.1, p. 10.1-2
+  - Quote: "have the authority to halt any operation which, in their judgment, is radiologically unsafe"
+- **Q1732** (PSAR: Operations and Programs): When must the RPP be in place?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 9.3.2, p. 10.1-1
+  - Quote: "will be developed and implemented prior to receiving radioactive materials on-site"
+- **Q1733** (PSAR: Operations and Programs): What is used to determine internal exposure?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.1.2, p. 10.1-2
+  - Quote: "Measurements of airborne radioactive material and bioassays"
+- **Q1734** (PSAR: Operations and Programs): When may a VHRA be entered?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.1.3, p. 10.1-3
+  - Quote: "access to VHRAs will be forbidden unless there is a sound operational or safety reason for entering"
+- **Q1735** (PSAR: Operations and Programs): What radiation source is listed for the IHT?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.3.2, p. 10.3-3
+  - Quote: "Intermediate Heat Transport System (IHT) Activated sodium, tritium"
+- **Q1736** (PSAR: Operations and Programs): What limits activation of intermediate sodium?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.4.1, p. 10.4-1
+  - Quote: "contains shield assemblies that absorb radial neutron leakage"
+- **Q1737** (PSAR: Operations and Programs): What removes cesium from the PHT?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.4.2, p. 10.4-1
+  - Quote: "The SPS removes cesium from PHT using Reticulated Vitreous Carbon traps"
+- **Q1738** (PSAR: Operations and Programs): Which regulation covers minimizing contamination?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 9.2, p. 9.2-1
+  - Quote: "consistent with the requirements in 10 Code of Federal Regulations 20.1406"
+- **Q1739** (PSAR: Operations and Programs): Which group has the highest refueling estimate?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-4
+  - Quote: "Maintenance 72"
+- **Q1740** (PSAR: Operations and Programs): What is the routine online total estimate?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 10.5.9, p. 10.5-3
+  - Quote: "Security Security Patrols 15 Total 67.5"
+- **Q1741** (PSAR: Operations and Programs): What is a PITAP objective for operators?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1
+  - Quote: "the plant operations personnel are knowledgeable about the plant operating procedures"
+- **Q1742** (PSAR: Operations and Programs): Who performs Stage 2 component testing?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2
+  - Quote: "Stage 2, component testing performed by the construction start-up group"
+- **Q1743** (PSAR: Operations and Programs): Who sets test acceptance criteria?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1
+  - Quote: "is responsible for the test objectives, prerequisites, safety precautions, and acceptance criteria"
+- **Q1744** (PSAR: Operations and Programs): Who sets test sequence?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1
+  - Quote: "The commissioning team is responsible for determining test sequence and scheduling"
+- **Q1745** (PSAR: Operations and Programs): Which is construction testing?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.3, p. 12.3-1
+  - Quote: "Hydrostatic testing of piping systems"
+- **Q1746** (PSAR: Operations and Programs): When does the test review group start?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.4.2, p. 12.4-1
+  - Quote: "System testing commences the use of the test review group"
+- **Q1747** (PSAR: Operations and Programs): What must be done before fuel load?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1
+  - Quote: "Initial fuel loading starts after completion of preoperational testing"
+- **Q1748** (PSAR: Operations and Programs): When is post-core hot function testing done?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1
+  - Quote: "prior to initial criticality"
+- **Q1749** (PSAR: Operations and Programs): What are test hold points for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1
+  - Quote: "Test hold points are established at appropriate intervals to review test results"
+- **Q1750** (PSAR: Operations and Programs): Where may special FOAK tests occur?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1
+  - Quote: "may be performed at the Sodium Test and Fill Facility"
+- **Q1751** (PSAR: Plant and Safety Basis): What is the licensed thermal rating described for Kemmerer Unit 1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1
+  - Quote: "The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor"
+- **Q1752** (PSAR: Plant and Safety Basis): What lets the plant vary its supply to the grid while reactor power stays constant?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1
+  - Quote: "molten salt energy storage system which enables the plant to vary its supply of energy to the grid"
+- **Q1753** (PSAR: Plant and Safety Basis): Where does heat cross from primary sodium to intermediate sodium?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1
+  - Quote: "via intermediate heat exchangers located in the reactor pool"
+- **Q1754** (PSAR: Plant and Safety Basis): Where does the intermediate loop send heat during startup and shutdown?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.4.1, p. 1.1-3
+  - Quote: "sodium-air heat exchanger during startup and shutdown"
+- **Q1755** (PSAR: Plant and Safety Basis): How are Energy Island structures, systems, and components classified?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2
+  - Quote: "The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST)"
+- **Q1756** (PSAR: Plant and Safety Basis): Which is one of the safety features the PSAR lists for the design?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2
+  - Quote: "always-on passive air cooling"
+- **Q1757** (PSAR: Plant and Safety Basis): Which system does the PSAR call the preferred heat removal system during upset events?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.6, p. 1.1-5
+  - Quote: "The IAC is the preferred heat removal system for the reactor during upset events"
+- **Q1758** (PSAR: Plant and Safety Basis): What is the primary objective of the RAC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.3, p. 1.1-4
+  - Quote: "provide passive decay heat removal to the environment through natural convection of air"
+- **Q1759** (PSAR: Plant and Safety Basis): Which is NOT one of the three Fundamental Safety Functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1
+  - Quote: "The FSFs are retaining radionuclides, controlling heat generation, and controlling heat removal"
+- **Q1760** (PSAR: Plant and Safety Basis): What is the first safety-related radionuclide retention barrier for the fuel?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2
+  - Quote: "the cladding provides the first safety-related (SR) radionuclide retention barrier"
+- **Q1761** (PSAR: Plant and Safety Basis): What happens to a fuel assembly that fails during operation before it is stored in the Spent Fuel Pool?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-2
+  - Quote: "it is sealed in an SR canister prior to storage in the Spent Fuel Pool"
+- **Q1762** (PSAR: Plant and Safety Basis): Why does a leak between the intermediate and primary sodium result in ingress to the primary system?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.1, p. 1.3-3
+  - Quote: "The intermediate coolant pressure is greater than primary coolant pressure"
+- **Q1763** (PSAR: Plant and Safety Basis): What does the CRD driveline scram follow feature provide?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4
+  - Quote: "The CRD driveline scram follow feature provides DID to the scram function"
+- **Q1764** (PSAR: Plant and Safety Basis): What moves the control rods into the core in a scram?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.2, p. 1.3-4
+  - Quote: "The scram function results in passive gravity insertion of control rods"
+- **Q1765** (PSAR: Plant and Safety Basis): Which system operates continuously with no moving parts or operator actions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5
+  - Quote: "The RAC operates continuously, with no operator actions or moving parts required"
+- **Q1766** (PSAR: Plant and Safety Basis): What is the primary means of heat removal during start-up, shutdown, and off-normal conditions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2.3, p. 1.3-5
+  - Quote: "is the primary means of heat removal during plant start-up, shutdown, and off-normal conditions"
+- **Q1767** (PSAR: Plant and Safety Basis): Which Defense Line deploys adequate offsite protective actions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2
+  - Quote: "DL5: Deploy adequate offsite protective actions"
+- **Q1768** (PSAR: Plant and Safety Basis): Which Defense Lines include the design functions necessary to ensure performance of the FSFs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 4.2.1, p. 4.2-2
+  - Quote: "DL2, DL3, and DL4 include the design functions necessary"
+- **Q1769** (PSAR: Plant and Safety Basis): How is SARRDL compliance achieved?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 1.3.2, p. 1.3-1
+  - Quote: "Compliance with the SARRDLs is achieved through monitoring and controlling radionuclide inventory"
+- **Q1770** (PSAR: Plant and Safety Basis): Which is NOT a part of the plant capability DID summary?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 4.2, p. 4.2-1
+  - Quote: "The summary of plant capability DID includes the following"
+- **Q1771** (PSAR: Plant and Safety Basis): What methodology is used for LBE selection and evaluation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.4, p. 3.4-1
+  - Quote: "is implemented without deviation for licensing basis event (LBE) selection and evaluation"
+- **Q1772** (PSAR: Plant and Safety Basis): A sequence with a mean frequency of 1x10^-5 per plant-year is classified as what?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.8, p. 3.8-1
+  - Quote: "Event sequences with mean frequencies of 5x10-7 per plant-year to 1x10-4 per plant-year are classified as BDBEs"
+- **Q1773** (PSAR: Plant and Safety Basis): Which SSCs are considered for mitigation in DBA analyses?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.2.1, p. 3.3-2
+  - Quote: "Where only safety-related SSCs are considered for"
+- **Q1774** (PSAR: Plant and Safety Basis): What peak cladding temperature limit defines the safe shutdown end state?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.3, p. 3.3-7
+  - Quote: "Peak Cladding Temperature value below 1157°F (625°C)"
+- **Q1775** (PSAR: Plant and Safety Basis): What full power core inlet temperature is assumed in the LBE analyses?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.4.2, p. 3.3-7
+  - Quote: "Full Power 100 100 360.1"
+- **Q1776** (PSAR: Plant and Safety Basis): When is a BDBE classified as high-consequence?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.5.1, p. 3.5-1
+  - Quote: "BDBEs are classified as high-consequence if the dose exceeds 10 CFR 50.34 criteria"
+- **Q1777** (PSAR: Plant and Safety Basis): What is the target for EAB early fatality risk?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 4.1.2, p. 4.1-2
+  - Quote: "early fatality integrated risk metric target of 5×10-7 per plant-year"
+- **Q1778** (PSAR: Plant and Safety Basis): What radius defines both the EAB and LPZ for Kemmerer Unit 1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 3.3.3, p. 3.3-4
+  - Quote: "the Exclusion Area Boundary (EAB) and Low Population Zone (LPZ) are the same boundary"
+- **Q1779** (PSAR: Plant and Safety Basis): What determines the safety classification of an SSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 5.1, p. 5.1-1
+  - Quote: "The safety significance of a PRA Safety Function determines the safety classification"
+- **Q1780** (PSAR: Plant and Safety Basis): A non-SR function required for defense-in-depth adequacy is classified as what?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 5.2.2, p. 5.2-1
+  - Quote: "are the non-SR PSFs that are risk-significant or are required for defense-in-depth"
+- **Q1781** (PSAR: Plant and Safety Basis): In SR function DL3-RC1, what does the Reactor Enclosure System provide?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 5.2.3, p. 5.2-2
+  - Quote: "RES shall provide structural support and position control"
+- **Q1782** (PSAR: Plant and Safety Basis): What is the design basis earthquake?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 6.1.1.6, p. 6.1-4
+  - Quote: "The design basis earthquake is the safe shutdown earthquake (SSE)"
+- **Q1783** (PSAR: Plant and Safety Basis): What do the SRDC fulfill?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 6.1.2, p. 6.1-5
+  - Quote: "The SRDC are design criteria that are necessary to fulfill the Required Functional Design Criteria"
+- **Q1784** (PSAR: Plant and Safety Basis): Which is an accepted way to prevent a DBHL interaction between an NST SSC and an SR SSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 6.1.3, p. 6.1-5
+  - Quote: "is analyzed and designed to prevent its failure under DBHL conditions"
+- **Q1785** (PSAR: Nuclear Heat Supply Systems): What are the core inlet and outlet temperatures at 100% power and flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12
+  - Quote: "Outlet Temperature at 100% power and flow 950°F (510°C)"
+- **Q1786** (PSAR: Nuclear Heat Supply Systems): What is the rated core power?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-12
+  - Quote: "Core Power 840 MWt"
+- **Q1787** (PSAR: Nuclear Heat Supply Systems): What is the purpose of the shield assemblies?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3
+  - Quote: "Absorb radial neutron leakage outside of the reflector assemblies"
+- **Q1788** (PSAR: Nuclear Heat Supply Systems): Which assembly supports startup and source range measurement?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-4
+  - Quote: "allows for reactor startup and measurement of source range signals"
+- **Q1789** (PSAR: Nuclear Heat Supply Systems): What is tag gas used for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3
+  - Quote: "Tag gas is used to identify assemblies containing failed fuel pins"
+- **Q1790** (PSAR: Nuclear Heat Supply Systems): What cladding material does the fuel pin use?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-3
+  - Quote: "contained within an HT9 alloy steel cladding"
+- **Q1791** (PSAR: Nuclear Heat Supply Systems): How many primary and secondary control rod assemblies are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-9
+  - Quote: "There are nine primary control rod assemblies and four secondary control rod assemblies"
+- **Q1792** (PSAR: Nuclear Heat Supply Systems): Scram worth must shut down the reactor under which assumption?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10
+  - Quote: "even if the highest worth rod is stuck in the withdrawn position"
+- **Q1793** (PSAR: Nuclear Heat Supply Systems): The net prompt reactivity feedback in the power range is designed to be what?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-6
+  - Quote: "the net effect of the prompt acting components of these feedback mechanisms is negative"
+- **Q1794** (PSAR: Nuclear Heat Supply Systems): How is fuel failure detected?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.5, p. 7.1-10
+  - Quote: "fuel failure (via tag gas or coolant activity analysis)"
+- **Q1795** (PSAR: Nuclear Heat Supply Systems): Which is a function of the RCC in passive heat removal?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.1.2, p. 7.1-7
+  - Quote: "The fuel assemblies maintain natural"
+- **Q1796** (PSAR: Nuclear Heat Supply Systems): Where are penetrations through the RES primary coolant boundary located?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16
+  - Quote: "are located in the reactor head above the primary coolant level"
+- **Q1797** (PSAR: Nuclear Heat Supply Systems): What do the HAA Seal and Well Seal preserve?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33
+  - Quote: "to preserve the integrity of the RAC air flowpath and to limit leakage to the HAA"
+- **Q1798** (PSAR: Nuclear Heat Supply Systems): How is the reactor vessel supported?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.1, p. 7.1-16
+  - Quote: "The RV is supported through a structural weld between the top of the shell and the reactor head"
+- **Q1799** (PSAR: Nuclear Heat Supply Systems): What is the state of the RPA during plant operation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-29
+  - Quote: "During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable"
+- **Q1800** (PSAR: Nuclear Heat Supply Systems): What region is formed between the hot and cold pools?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-30
+  - Quote: "referred to as the warm sodium pool region"
+- **Q1801** (PSAR: Nuclear Heat Supply Systems): Where is In-Vessel Storage located?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-31
+  - Quote: "the IVS (located between the inner and outer core barrel)"
+- **Q1802** (PSAR: Nuclear Heat Supply Systems): After an RV leak into the guard vessel, where does the sodium level settle?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32
+  - Quote: "sodium level remains above the level of the IHX inlets"
+- **Q1803** (PSAR: Nuclear Heat Supply Systems): What fills the RV-GV annulus?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.1.3, p. 7.1-18
+  - Quote: "The annular space is inerted with argon gas minimizing the potential for sodium-air reaction"
+- **Q1804** (PSAR: Nuclear Heat Supply Systems): Which structure also forms a part of the RAC air flowpath?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-33
+  - Quote: "The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath"
+- **Q1805** (PSAR: Nuclear Heat Supply Systems): What automatic actions occur on a high primary coolant level from IHX leakage?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.2, p. 7.1-24
+  - Quote: "initiates reactor scram and Intermediate Sodium Pump trip on a high primary coolant level condition"
+- **Q1806** (PSAR: Nuclear Heat Supply Systems): What does the RES provide for instrumentation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.5, p. 7.1-34
+  - Quote: "by providing drywells and thermowells, penetrations"
+- **Q1807** (PSAR: Nuclear Heat Supply Systems): Which SR function does the GV support?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.2.3, p. 7.1-32
+  - Quote: "The GV supports the SR DL3-HR4 function"
+- **Q1808** (PSAR: Nuclear Heat Supply Systems): Where are the PSP isolation circuit breakers located?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.1, p. 7.1-50
+  - Quote: "The PSP isolation circuit breakers are located in the Nuclear Island Control Building"
+- **Q1809** (PSAR: Nuclear Heat Supply Systems): Where do the PSPs take suction?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.1, p. 7.1-60
+  - Quote: "by drawing sodium from the cold pool and discharging into the reactor core inlet plenum"
+- **Q1810** (PSAR: Nuclear Heat Supply Systems): What is the PSP coastdown halving time?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-67
+  - Quote: "Coastdown Halving Time 3.5 - 5 s"
+- **Q1811** (PSAR: Nuclear Heat Supply Systems): Which fluid is on the tube side of the IHX?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.1, p. 7.1-63
+  - Quote: "Flow in the IHX includes the primary sodium on the shell side and the intermediate sodium on the tube side"
+- **Q1812** (PSAR: Nuclear Heat Supply Systems): What is the nominal intermediate sodium outlet temperature of the IHX?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.5, p. 7.1-69
+  - Quote: "Nominal Intermediate Sodium Outlet Temperature 910°F (490°C)"
+- **Q1813** (PSAR: Nuclear Heat Supply Systems): During extended shutdowns with no decay heat, how do the PSPs help?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61
+  - Quote: "to provide heat to maintain the sodium inventory in a liquid state"
+- **Q1814** (PSAR: Nuclear Heat Supply Systems): During a power runback, the power-to-flow ratio is kept at what value?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58
+  - Quote: "The power-to-flow ratio is kept less than or equal to one during the power runback"
+- **Q1815** (PSAR: Nuclear Heat Supply Systems): After a reactor scram, the PSPs do what?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.2.3, p. 7.1-61
+  - Quote: "the PSPs are ramped down using a predefined ramp down curve to minimum flow"
+- **Q1816** (PSAR: Nuclear Heat Supply Systems): Which signals combine to trip the PSP breakers under DL3-HR2?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56
+  - Quote: "trip on a combination of a"
+- **Q1817** (PSAR: Nuclear Heat Supply Systems): What is the purpose of the PSP rotational inertia?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.1, p. 7.1-56
+  - Quote: "have sufficient rotational inertia to provide coastdown flow"
+- **Q1818** (PSAR: Nuclear Heat Supply Systems): What two trends indicate an IHX tube leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.3.3, p. 7.1-63
+  - Quote: "would be detected by IHT expansion tank level decrease"
+- **Q1819** (PSAR: Nuclear Heat Supply Systems): Are operator actions required to implement PHT SR functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.3.1.2, p. 7.1-58
+  - Quote: "No operator actions are required to implement PHT SR functions"
+- **Q1820** (PSAR: Nuclear Heat Supply Systems): What is the normal and preferred means of reactor cooling during start-up and shutdown?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75
+  - Quote: "as the normal and preferred means of providing reactor cooling"
+- **Q1821** (PSAR: Nuclear Heat Supply Systems): What does each IHT loop connect to?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.1, p. 7.1-75
+  - Quote: "Each intermediate loop connects to one Primary Heat Transport System"
+- **Q1822** (PSAR: Nuclear Heat Supply Systems): What protects HAA equipment from an IHT pipe leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-82
+  - Quote: "includes a continuous leak guard enclosing the pipe as a secondary barrier"
+- **Q1823** (PSAR: Nuclear Heat Supply Systems): In an SHX leak, which way does the coolant flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81
+  - Quote: "IHT pressure is maintained at a lower pressure than NSS"
+- **Q1824** (PSAR: Nuclear Heat Supply Systems): What drives natural circulation in the IHT?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-80
+  - Quote: "provides the potential energy to drive natural circulation flow"
+- **Q1825** (PSAR: Nuclear Heat Supply Systems): Which condition trips only the associated ISP?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81
+  - Quote: "Low level in an IHT expansion tank (trips associated ISP)"
+- **Q1826** (PSAR: Nuclear Heat Supply Systems): What prevents reactor vessel overfill in an IHX leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.3, p. 7.1-81
+  - Quote: "siphon-break feature is designed to limit the volume of intermediate sodium"
+- **Q1827** (PSAR: Nuclear Heat Supply Systems): What is the classification of the ISP trip circuit breaker?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-83
+  - Quote: "ISP Trip Circuit Breaker, Trip SR SCS1"
+- **Q1828** (PSAR: Nuclear Heat Supply Systems): What does manual ISP trip back up?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.2, p. 7.1-79
+  - Quote: "DL4-HR7 Manual ISP Trip"
+- **Q1829** (PSAR: Nuclear Heat Supply Systems): Which IHT indication helps diagnose sodium loss from a loop?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.1.4.5, p. 7.1-82
+  - Quote: "provides instrumentation required for expansion tank level signals and ISP trip circuit breaker status"
+- **Q1830** (PSAR: Reactor Auxiliary Systems): What must an operator do to start RAC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1
+  - Quote: "requires no automatic or manual actuations or operator action"
+- **Q1831** (PSAR: Reactor Auxiliary Systems): How many RAC inlet and outlet stacks are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-1
+  - Quote: "The RAC consists of four inlet and four outlet stacks"
+- **Q1832** (PSAR: Reactor Auxiliary Systems): How is the collector cylinder heated?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.1, p. 7.2-2
+  - Quote: "The collector cylinder is heated by thermal radiation heat transfer from the GV outer surface"
+- **Q1833** (PSAR: Reactor Auxiliary Systems): What happens to RAC heat removal when heat transfer to the IHT is lost?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-7
+  - Quote: "increasing overall heat rejection to the atmosphere"
+- **Q1834** (PSAR: Reactor Auxiliary Systems): Which RAC parameters are monitored?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-7
+  - Quote: "The RAC inlet temperature, outlet temperature, and outlet mass flow rate are monitored"
+- **Q1835** (PSAR: Reactor Auxiliary Systems): What compensates for blockage of a single RAC stack opening?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.3, p. 7.2-6
+  - Quote: "to compensate for potential blockage in a stack inlet or outlet opening"
+- **Q1836** (PSAR: Reactor Auxiliary Systems): What gaseous effluents come from activation of RAC air?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.2, p. 7.2-4
+  - Quote: "results in N-16 and Ar-41 gaseous effluents from RAC"
+- **Q1837** (PSAR: Reactor Auxiliary Systems): What is the safety classification of the RAC outlet mass flow instrumentation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.1.5, p. 7.2-9
+  - Quote: "Outlet mass flow instrumentation NSRST"
+- **Q1838** (PSAR: Reactor Auxiliary Systems): When is IAC the primary and preferred means of reactor heat removal?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13
+  - Quote: "is the primary and preferred means of reactor heat removal during low power and shutdown conditions"
+- **Q1839** (PSAR: Reactor Auxiliary Systems): Which fluid is on the tube side of the AHX?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13
+  - Quote: "Intermediate sodium flows on the tube-side of the AHX with airflow on the shell-side"
+- **Q1840** (PSAR: Reactor Auxiliary Systems): Which IAC mode has natural circulation of sodium and forced airflow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17
+  - Quote: "IAC Blower Mode provides off-normal operation cooling"
+- **Q1841** (PSAR: Reactor Auxiliary Systems): How many trains are needed in Passive Mode for the limiting decay heat load?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.3, p. 7.2-17
+  - Quote: "with two trains in operation"
+- **Q1842** (PSAR: Reactor Auxiliary Systems): What do the AHX dampers do on loss of power?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13
+  - Quote: "The dampers fail open on loss of power"
+- **Q1843** (PSAR: Reactor Auxiliary Systems): Why are the AHX dampers closed in Mode 1?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.1, p. 7.2-13
+  - Quote: "to limit heat transferred from the intermediate sodium when the IAC is not required"
+- **Q1844** (PSAR: Reactor Auxiliary Systems): Where are IAC parameters monitored?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-17
+  - Quote: "are monitored by the Nuclear Island Control System (NIC)"
+- **Q1845** (PSAR: Reactor Auxiliary Systems): Why is there no water suppression in the ASE?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.2, p. 7.2-15
+  - Quote: "the IAC is designed and located to avoid contact between sodium and water"
+- **Q1846** (PSAR: Reactor Auxiliary Systems): What is the safety classification of the AHX?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.2.5, p. 7.2-19
+  - Quote: "AHX NSRST SCN1"
+- **Q1847** (PSAR: Reactor Auxiliary Systems): What supplies purified argon to the SCG?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22
+  - Quote: "receives high pressure, purified argon from the Nuclear Island Argon Gas Distribution and Storage System"
+- **Q1848** (PSAR: Reactor Auxiliary Systems): Which Primary SCG user sets the minimum delivered pressure by NGA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22
+  - Quote: "The highest delivered pressure from the Primary SCG is to the SCRAM cylinders"
+- **Q1849** (PSAR: Reactor Auxiliary Systems): What removes sodium vapor from the exhaust?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22
+  - Quote: "the gas passes through the vapor trap which consists of a preheater and vapor condenser"
+- **Q1850** (PSAR: Reactor Auxiliary Systems): How does GV pressure compare to the HAA and reactor?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34
+  - Quote: "Maintaining GV pressure above HAA pressure and below reactor pressure"
+- **Q1851** (PSAR: Reactor Auxiliary Systems): Where does the Intermediate SCG discharge?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.2, p. 7.2-23
+  - Quote: "The gas is then discharged through an oil bubbler to NHV"
+- **Q1852** (PSAR: Reactor Auxiliary Systems): What happens when an increase in fission gas is detected?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-34
+  - Quote: "the gas stream is routed to the tag gas analysis cabinet"
+- **Q1853** (PSAR: Reactor Auxiliary Systems): Which trend in the RV-GV annulus gas indicates an RV sodium leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.3, p. 7.2-35
+  - Quote: "the diatomic oxygen content is expected to drop"
+- **Q1854** (PSAR: Reactor Auxiliary Systems): What isolates the vapor trap cell?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.2, p. 7.2-31
+  - Quote: "The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication"
+- **Q1855** (PSAR: Reactor Auxiliary Systems): Which is a PAM variable from the SCG?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.3.1.1, p. 7.2-22
+  - Quote: "Reactor Vessel Pressure"
+- **Q1856** (PSAR: Reactor Auxiliary Systems): Which SPS loop has a cesium trap?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41
+  - Quote: "does not contain a cesium trap or associated radiological monitoring"
+- **Q1857** (PSAR: Reactor Auxiliary Systems): What is the safety classification of the SPS monitoring and impurity removal functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41
+  - Quote: "monitoring and impurity removal functions of SPS are non-safety-related"
+- **Q1858** (PSAR: Reactor Auxiliary Systems): Which is a stated oxygen source for the IHT sodium?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50
+  - Quote: "Oxygen may enter the IHT through in-leakage from Nuclear Island Salt System"
+- **Q1859** (PSAR: Reactor Auxiliary Systems): How does tritium reach the intermediate sodium?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50
+  - Quote: "Tritium from the primary coolant diffuses through the intermediate heat exchanger"
+- **Q1860** (PSAR: Reactor Auxiliary Systems): What does the cold trap remove?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.6, p. 7.2-52
+  - Quote: "The cold trap removes hydrogen and oxygen from the sodium via precipitation at reduced temperature"
+- **Q1861** (PSAR: Reactor Auxiliary Systems): What medium is used in the cesium trap?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.7, p. 7.2-52
+  - Quote: "reticulated vitreous carbon traps as part of the SPS-P process equipment"
+- **Q1862** (PSAR: Reactor Auxiliary Systems): The bypass line monitor shows rising Cs-137. What does this indicate?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51
+  - Quote: "indicating whether the cesium trap may need to be brought online"
+- **Q1863** (PSAR: Reactor Auxiliary Systems): What is the key process indicator for sodium purity?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51
+  - Quote: "The key process indicator for sodium purity is the saturation temperature"
+- **Q1864** (PSAR: Reactor Auxiliary Systems): What is the dominant radionuclide in the SPS-P?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51
+  - Quote: "against the normal background of Na-24 gamma rays"
+- **Q1865** (PSAR: Reactor Auxiliary Systems): An SPS-P leak signal is received. Which set of automatic actions follows?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47
+  - Quote: "the SPS-P supply isolation valve automatically closes"
+- **Q1866** (PSAR: Reactor Auxiliary Systems): Why does the SPS-P pump trip on low hot pool level?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46
+  - Quote: "DL3-HR11 SPS Pump Trip on Low Primary"
+- **Q1867** (PSAR: Reactor Auxiliary Systems): What operator action is needed for SPS SR functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-53
+  - Quote: "No operator actions are required to support SPS SR functions"
+- **Q1868** (PSAR: Reactor Auxiliary Systems): May the SPS-P operate in all reactor modes?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50
+  - Quote: "Operation of the SPS-P and SPS-I may occur in each of the four reactor modes"
+- **Q1869** (PSAR: Reactor Auxiliary Systems): Why does SPS-I piping matter to IAC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46
+  - Quote: "DL4-HR1 IAC Passive Mode Operation"
+- **Q1870** (PSAR: Reactor Auxiliary Systems): How many control rod drives are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "consists of 13 identical control rod drives"
+- **Q1871** (PSAR: Reactor Auxiliary Systems): Where are the CRD motor controllers?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "The motor controller is located in the Nuclear Island Control Building (NCB) substructure"
+- **Q1872** (PSAR: Reactor Auxiliary Systems): What holds the CRA latched to the driveline?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "The latching mechanism is engaged by pressurizing the scram valve and cylinder assembly"
+- **Q1873** (PSAR: Reactor Auxiliary Systems): What supplies gas to the scram cylinders?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "with inert gas supplied by the Sodium Cover Gas System"
+- **Q1874** (PSAR: Reactor Auxiliary Systems): What prevents driveline motion with no demand signal?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "An electro-mechanical brake prevents driveline motion unless a demand signal is present"
+- **Q1875** (PSAR: Reactor Auxiliary Systems): Which capability provides power run-back?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-58
+  - Quote: "CRDM high speed motor-driven CRA insertion provides power run-back capability"
+- **Q1876** (PSAR: Reactor Auxiliary Systems): How many of the three scram valves must actuate to release a CRA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65
+  - Quote: "Actuation of two out of the three scram valves is sufficient"
+- **Q1877** (PSAR: Reactor Auxiliary Systems): What inserts the CRA in the SR scram function?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59
+  - Quote: "The released CRA inserts into the core by gravity"
+- **Q1878** (PSAR: Reactor Auxiliary Systems): Power is lost to the scram SOVs. What happens?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.3, p. 7.2-65
+  - Quote: "The scram valves vent the scram cylinder on loss of power to the SOV"
+- **Q1879** (PSAR: Reactor Auxiliary Systems): What is the purpose of driveline scram follow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59
+  - Quote: "Driveline scram follow provides assurance that the CRA is fully inserted"
+- **Q1880** (PSAR: Reactor Auxiliary Systems): After a scram, what indicates CRA insertion?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59
+  - Quote: "CRA scram insertion is indicated by full driveline scram follow insertion position"
+- **Q1881** (PSAR: Reactor Auxiliary Systems): Which way does seal or bellows leakage flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59
+  - Quote: "such that seal or bellows leakage flow is directed into the cover gas space"
+- **Q1882** (PSAR: Reactor Auxiliary Systems): What identifies seal leakage?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.1, p. 7.2-59
+  - Quote: "Purge gas flow monitors are provided in the SCG gas supply line to identify leakage"
+- **Q1883** (PSAR: Reactor Auxiliary Systems): What is the classification of the CRD motor drive assembly?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.2.5.5, p. 7.2-67
+  - Quote: "Motor Drive Assembly and Controller NSRST"
+- **Q1884** (PSAR: Fuel Handling Systems): Which FHP subsystem moves assemblies from sodium to water?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2
+  - Quote: "transitions core assemblies being stored in a sodium environment to a water-filled environment"
+- **Q1885** (PSAR: Fuel Handling Systems): Which is one of the three SFP zones?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1
+  - Quote: "the PIC cavity, the cask loading pit, and the fuel storage area"
+- **Q1886** (PSAR: Fuel Handling Systems): How does the SFP maintain subcriticality?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-1
+  - Quote: "Since the SFP does not employ soluble boron"
+- **Q1887** (PSAR: Fuel Handling Systems): What is the approximate SFP water inventory?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8
+  - Quote: "The total SFP water inventory is approximately 574,000 gallons"
+- **Q1888** (PSAR: Fuel Handling Systems): What does the PIC basket lock interlock prevent?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-10
+  - Quote: "The lock disengagement involves an interlock to prevent lowering of the cleaning vessel"
+- **Q1889** (PSAR: Fuel Handling Systems): Why does the rinse water pump have an interlock?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9
+  - Quote: "the PIC rinse water pump design includes an interlock"
+- **Q1890** (PSAR: Fuel Handling Systems): How is a failed fuel assembly treated before entering the FFC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2
+  - Quote: "No sodium cleaning occurs for a failed fuel assembly"
+- **Q1891** (PSAR: Fuel Handling Systems): What gas inerts the FFC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2
+  - Quote: "inside an FFC that is inerted with"
+- **Q1892** (PSAR: Fuel Handling Systems): How many FPC trains are needed to remove the entire SFP heat load?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2
+  - Quote: "Each train is sized to remove the entire heat load of the SFP"
+- **Q1893** (PSAR: Fuel Handling Systems): An FPC line ruptures. What protects the pool level?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.1, p. 7.3-2
+  - Quote: "The suction and discharge lines of the FPC are located to prevent draining"
+- **Q1894** (PSAR: Fuel Handling Systems): Both FPC trains are lost with a full pool. How long does the SFP cool fuel without makeup?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-8
+  - Quote: "The water volume of the SFP cools spent fuel for at least 7 days without makeup"
+- **Q1895** (PSAR: Fuel Handling Systems): What powered equipment does emergency makeup through the exterior fill leg need?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-6
+  - Quote: "No powered SSCs are required to provide emergency makeup water via the exterior fill leg"
+- **Q1896** (PSAR: Fuel Handling Systems): What keeps minimum water shielding over an assembly on the PHM?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.3, p. 7.3-9
+  - Quote: "The PHM vertical motion limits and interlocks ensure that core assemblies have a minimum water height"
+- **Q1897** (PSAR: Fuel Handling Systems): Which FHP function is safety-related?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.1.2, p. 7.3-5
+  - Quote: "DL3-HR10 Passive Heat Removal in FHP"
+- **Q1898** (PSAR: Fuel Handling Systems): Which machine moves assemblies between the reactor vessel and the EVST?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-17
+  - Quote: "between the reactor vessel located in the Reactor Building (RXB) and the EVST located in the Fuel Handling Building"
+- **Q1899** (PSAR: Fuel Handling Systems): Which machine delivers assemblies to the PIC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.2, p. 7.3-19
+  - Quote: "between the NAPS, Pool Immersion Cell and the EVST located in the FHB"
+- **Q1900** (PSAR: Fuel Handling Systems): What does the EVHM grapple handle?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18
+  - Quote: "The grapple does not directly handle any reactor core assemblies"
+- **Q1901** (PSAR: Fuel Handling Systems): Why does the CAP have a siphon?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19
+  - Quote: "Lowering the liquid sodium level in the CAP minimizes spillage"
+- **Q1902** (PSAR: Fuel Handling Systems): The EVHM loses plant power during a transfer. How is the assembly cooled?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18
+  - Quote: "If the EVHM loses its plant side power connection, the dampers fail open"
+- **Q1903** (PSAR: Fuel Handling Systems): Which carrier is designed for the higher assembly heat load?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-19
+  - Quote: "The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW"
+- **Q1904** (PSAR: Fuel Handling Systems): How long after shutdown can the EVHM passive system handle assemblies?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.1, p. 7.3-18
+  - Quote: "The EVHM passive cooling system is designed to handle core assemblies 7 days after shutdown"
+- **Q1905** (PSAR: Fuel Handling Systems): How is the EVST carousel kept subcritical?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21
+  - Quote: "in an array with a subcritical configuration by geometry"
+- **Q1906** (PSAR: Fuel Handling Systems): The EVST main vessel leaks. What happens to level?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.3, p. 7.3-21
+  - Quote: "the guard vessel captures the leaked liquid sodium while maintaining the sodium level in the main vessel above the fueled portion"
+- **Q1907** (PSAR: Fuel Handling Systems): What closes the EVST isolation valves?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-30
+  - Quote: "equipped with isolation valves that close upon a detection of a leak or a loss of power"
+- **Q1908** (PSAR: Fuel Handling Systems): What is the EVST maximum decay heat load?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29
+  - Quote: "The EVST is designed for a maximum decay heat load of 216 kW"
+- **Q1909** (PSAR: Fuel Handling Systems): When is the CATT installed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22
+  - Quote: "The CATT is installed only during Mode 4, plant refueling operations"
+- **Q1910** (PSAR: Fuel Handling Systems): What is the minimum temperature in the CATT cavity?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.1.6, p. 7.3-22
+  - Quote: "The minimum temperature in the CATT internal cavity is 400 degrees Fahrenheit"
+- **Q1911** (PSAR: Fuel Handling Systems): How long is a BLTC inflatable seal designed to stay inflated after loss of primary argon?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-28
+  - Quote: "Each inflatable seal is designed to remain inflated for 72 hours"
+- **Q1912** (PSAR: Fuel Handling Systems): What is the capacity of the NAPS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-32
+  - Quote: "The NAPS is designed with a capacity for 8 core assemblies"
+- **Q1913** (PSAR: Fuel Handling Systems): Which is required by the BLTC-EVHM lockout interlock?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-33
+  - Quote: "These interlocks require that the carousel is stopped"
+- **Q1914** (PSAR: Fuel Handling Systems): A hoist fails with a load raised. What does the design allow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.3, p. 7.3-29
+  - Quote: "These components are capable of being manually manipulated, to lower the load"
+- **Q1915** (PSAR: Fuel Handling Systems): What is the classification of the EVST guard vessel?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.2.5, p. 7.3-35
+  - Quote: "EVST Guard Vessel NSRST"
+- **Q1916** (PSAR: Fuel Handling Systems): How many major components does the FHI have?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40
+  - Quote: "The FHI is comprised of six major components"
+- **Q1917** (PSAR: Fuel Handling Systems): Which component rotates the RPA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41
+  - Quote: "provides the motive force to rotate and restrict motion of the RPA"
+- **Q1918** (PSAR: Fuel Handling Systems): What stops a dropped IVTM from falling into the core?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-45
+  - Quote: "the flange contacts the RES structure preventing the IVTM from dropping into the reactor core"
+- **Q1919** (PSAR: Fuel Handling Systems): What replaces the IVTM when not installed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-40
+  - Quote: "When the IVTM is not installed in the reactor it is replaced with a shield plug"
+- **Q1920** (PSAR: Fuel Handling Systems): At the lowered position, the FTL interfaces with which grapple?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41
+  - Quote: "the FTL interfaces with the IVTM grapple"
+- **Q1921** (PSAR: Fuel Handling Systems): When is the FTL installed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41
+  - Quote: "The FTL is not installed during non-outage periods"
+- **Q1922** (PSAR: Fuel Handling Systems): How does barrier gas pressure compare to reactor cover gas?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46
+  - Quote: "is maintained at a pressure slightly higher than the reactor cover gas system"
+- **Q1923** (PSAR: Fuel Handling Systems): What is done just after the CATT and FFV are installed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-47
+  - Quote: "the core assembly transfer tube and fueling floor valve are installed and the FTLSP is subsequently removed"
+- **Q1924** (PSAR: Fuel Handling Systems): What monitors the seal barrier gas?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.3, p. 7.3-46
+  - Quote: "The seal barrier gas is monitored by the FHC"
+- **Q1925** (PSAR: Fuel Handling Systems): What enforces IVTM safe operating zones?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.1, p. 7.3-41
+  - Quote: "The IVDC controls and enforces interlocks and the dynamically updated safe operating zones of the IVTM"
+- **Q1926** (PSAR: Fuel Handling Systems): What control is available for off-normal operations?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-47
+  - Quote: "In the event of off-normal operations, manual controls are available"
+- **Q1927** (PSAR: Fuel Handling Systems): What is the classification of the FTLSP?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.3.3.5, p. 7.3-49
+  - Quote: "FTLSP SR SCS1"
+- **Q1928** (PSAR: Radwaste Systems): What is the RWG classification?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1
+  - Quote: "supports the retain radionuclides fundamental safety function"
+- **Q1929** (PSAR: Radwaste Systems): The RWG fails at power. What is the effect on safe shutdown?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.1, p. 7.4-1
+  - Quote: "does not prevent the safe shutdown of the plant"
+- **Q1930** (PSAR: Radwaste Systems): How long does the holdup tank delay flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "which is designed to delay flow for 24 hours allowing decay of argon-41"
+- **Q1931** (PSAR: Radwaste Systems): What do the charcoal beds retain?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "activated charcoal optimized for xenon and krypton retention"
+- **Q1932** (PSAR: Radwaste Systems): How are the charcoal beds arranged?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "There are four charcoal adsorber beds configured in parallel"
+- **Q1933** (PSAR: Radwaste Systems): The running compressor fails. What happens?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "the failed compressor is isolated and the alternate compressor starts"
+- **Q1934** (PSAR: Radwaste Systems): A charcoal bed discharge monitor reads high. What happens?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "flow is isolated in the event of high radiation"
+- **Q1935** (PSAR: Radwaste Systems): What is the failure position of release termination valves?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.5, p. 7.4-7
+  - Quote: "Valves used for automatic termination of release are designed to fail closed"
+- **Q1936** (PSAR: Radwaste Systems): An aftercooler outlet temperature alarm comes in. What does it indicate?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-5
+  - Quote: "indicating inadequate cooling, an alarm will be triggered"
+- **Q1937** (PSAR: Radwaste Systems): Does the RWG need power for its NSRST function?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.3.1, p. 7.4-6
+  - Quote: "The RWG does not need power for any NSRST function"
+- **Q1938** (PSAR: Radwaste Systems): What does DL2-RR4 require of the RWG?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.4.1.2, p. 7.4-3
+  - Quote: "radionuclide confinement boundary which prevents the uncontrolled release of radionuclides"
+- **Q1939** (PSAR: Ancillary Systems): Which way does RCA airflow go?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1
+  - Quote: "HVAC airflow is controlled from areas of lesser potential contamination to areas of higher potential contamination"
+- **Q1940** (PSAR: Ancillary Systems): Which building has no RCAs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.1, p. 7.5-1
+  - Quote: "The Nuclear Island Control Building (NCB) does not contain RCAs"
+- **Q1941** (PSAR: Ancillary Systems): What is the release point for reactor overpressure protection?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5
+  - Quote: "The reactor overpressure protection release point is the SCG trap cell"
+- **Q1942** (PSAR: Ancillary Systems): How is each HAA penetration isolated?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5
+  - Quote: "the double isolation arrangement of one inboard and one outboard air operated valve pair"
+- **Q1943** (PSAR: Ancillary Systems): How is SPS cell isolation signaled?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6
+  - Quote: "transmits the sodium leak detection signals to the nuclear island utility monitoring and control system"
+- **Q1944** (PSAR: Ancillary Systems): How many FHB exhaust filter units does normal exhaust use?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6
+  - Quote: "The FHB normal exhaust is provided through two 50 percent HEPA filtration units"
+- **Q1945** (PSAR: Ancillary Systems): The MCR intake sodium monitor alarms. What does the PSAR say operators do?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-6
+  - Quote: "to place the MCR HVAC units in recirculation mode and deenergize the below grade HVAC systems"
+- **Q1946** (PSAR: Ancillary Systems): What provides a habitable environment for monitoring in the RSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4
+  - Quote: "a manually operated compressed breathable air bottle rack"
+- **Q1947** (PSAR: Ancillary Systems): The RV pressure relief valve opens. What happens to the SCG trap cell?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7
+  - Quote: "automatically isolates the SCG trap cell if the relief valve opens"
+- **Q1948** (PSAR: Ancillary Systems): High radiation is indicated in the SPS cells HVAC. What is the response?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.5, p. 7.5-7
+  - Quote: "initiate a manual isolation of the SPS cells"
+- **Q1949** (PSAR: Ancillary Systems): Power is lost to NHV isolation valves. What is their position?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.3, p. 7.5-5
+  - Quote: "The valves and dampers are designed to fail closed"
+- **Q1950** (PSAR: Ancillary Systems): Which NHV function gives HEPA filtration of FHB exhaust?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.1.2, p. 7.5-4
+  - Quote: "DL4-RR7 Fuel Handling Building Barrier"
+- **Q1951** (PSAR: Ancillary Systems): Which NFP system is NSRST?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10
+  - Quote: "NNA is non-safety-related with special treatment (NSRST)"
+- **Q1952** (PSAR: Ancillary Systems): Is sodium leak prevention in the scope of NNA?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10
+  - Quote: "Leak prevention is outside the scope of NNA"
+- **Q1953** (PSAR: Ancillary Systems): What is the minimum capacity of each fire water tank?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13
+  - Quote: "with a minimum of 300,000 gallons each"
+- **Q1954** (PSAR: Ancillary Systems): Which fire pump is the backup?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.1, p. 7.5-13
+  - Quote: "a primary electric motor pump and a backup diesel engine driven pump"
+- **Q1955** (PSAR: Ancillary Systems): Which buildings contain no fire water?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-13
+  - Quote: "are the Reactor Building and the Reactor Auxiliary Building"
+- **Q1956** (PSAR: Ancillary Systems): How is the RPS protected from fire?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14
+  - Quote: "One system is provided for each Reactor Protection System division"
+- **Q1957** (PSAR: Ancillary Systems): What fire extinguisher is provided for sodium areas?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.2, p. 7.5-14
+  - Quote: "Class D fire extinguishers are provided in areas containing sodium"
+- **Q1958** (PSAR: Ancillary Systems): Smoke is detected in a duct. What is the automatic response?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.5, p. 7.5-17
+  - Quote: "When smoke is detected in a duct, the associated NHV air handling unit is shut down"
+- **Q1959** (PSAR: Ancillary Systems): What is a clamshell?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-15
+  - Quote: "A clamshell is a form of guard enclosure placed specifically where piping inspections are expected"
+- **Q1960** (PSAR: Ancillary Systems): What margin is used in catch pan sizing calculations?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16
+  - Quote: "To provide additional margin, 25% is used in the catch pan sizing calculations"
+- **Q1961** (PSAR: Ancillary Systems): An SPS-P leak signal goes to the AMC. What does the AMC do?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12
+  - Quote: "AMC automatically trips SPS-P pumps"
+- **Q1962** (PSAR: Ancillary Systems): Which control system closes NHV dampers on an SPS cell leak?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12
+  - Quote: "UMC automatically closes NI Heating, Ventilation, and Air Conditioning System (NHV) dampers"
+- **Q1963** (PSAR: Ancillary Systems): What kind of detector is used at IAC stacks?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16
+  - Quote: "In areas where sodium reactions may occur"
+- **Q1964** (PSAR: Ancillary Systems): Why might NNA classifications change?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10
+  - Quote: "As the fire analysis and PRA matures, the safety classification and defense line allocations"
+- **Q1965** (PSAR: Integrated Controls Systems): Can an NST system send digital data directly to an SR system?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-2
+  - Quote: "There are no direct digital data communications from either the NSRST and NST systems to the SR systems"
+- **Q1966** (PSAR: Integrated Controls Systems): Which I&C system is classified SR?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.1.2.1, p. 7.6-5
+  - Quote: "Nuclear Instrumentation SR DL2, DL3, DL5"
+- **Q1967** (PSAR: Integrated Controls Systems): Which subsystem controls the SPS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-6
+  - Quote: "The AMC monitors and controls Nuclear Island (NI) auxiliary systems"
+- **Q1968** (PSAR: Integrated Controls Systems): Which subsystem controls the NHV?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.1, p. 7.6-7
+  - Quote: "The UMC monitors and controls the various auxiliary electrical and ancillary systems"
+- **Q1969** (PSAR: Integrated Controls Systems): An HSI fails. Do NSRST functions depend on it?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2, p. 7.6-8
+  - Quote: "NSRST functions do not rely on these NST components"
+- **Q1970** (PSAR: Integrated Controls Systems): Which subsystem trips the ISPs on low IHT expansion tank level?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10
+  - Quote: "DL2-HR2 Intermediate sodium CTC receives IHT expansion tank level signals"
+- **Q1971** (PSAR: Integrated Controls Systems): What does the CTC do on high-high hot pool temperature?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10
+  - Quote: "DL4-HR2 Primary sodium pump CTC receives primary sodium hot pool temperature"
+- **Q1972** (PSAR: Integrated Controls Systems): The UMC receives high radioactivity from the RMS for the HAA. What does it do?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.1, p. 7.6-10
+  - Quote: "HAA isolation valves if a setpoint is exceeded"
+- **Q1973** (PSAR: Integrated Controls Systems): What does the CRD control interlock prevent?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12
+  - Quote: "A Control Rod Drive System control interlock prevents withdrawal of more than one rod at a time"
+- **Q1974** (PSAR: Integrated Controls Systems): Which subsystems perform power runback?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.2.2, p. 7.6-12
+  - Quote: "through power runback performed by RMC and CTC"
+- **Q1975** (PSAR: Integrated Controls Systems): How is an SR sensor shared with NST systems?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.5, p. 7.6-15
+  - Quote: "the sensor information is routed through a signal splitter"
+- **Q1976** (PSAR: Integrated Controls Systems): How is an NSRST manual actuation performed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-15
+  - Quote: "the NSRST manual actuation is performed using a hardwired switch"
+- **Q1977** (PSAR: Integrated Controls Systems): What is the Safety Parameter Display System?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.4, p. 7.6-16
+  - Quote: "is a set of screens that are available from the NIC HSIs and is not a stand-alone system"
+- **Q1978** (PSAR: Integrated Controls Systems): Is the NIC required to operate after a seismic event?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.3.1, p. 7.6-14
+  - Quote: "No part of the NIC or its sub-systems is required to operate during or after a seismic event"
+- **Q1979** (PSAR: Integrated Controls Systems): Which NIC subsystems are NSRST?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.2.3, p. 7.6-13
+  - Quote: "The seismic classification of NIC subsystem (AMC, CTC, and UMC) components are SCN3"
+- **Q1980** (PSAR: Integrated Controls Systems): How many RPS divisions are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18
+  - Quote: "are arranged into four redundant divisions (A, B, C, and D)"
+- **Q1981** (PSAR: Integrated Controls Systems): Where are the RPS divisions located?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19
+  - Quote: "RPS equipment is located in the four division-specific RPS vault"
+- **Q1982** (PSAR: Integrated Controls Systems): When does a division generate its output?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18
+  - Quote: "has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter"
+- **Q1983** (PSAR: Integrated Controls Systems): Division A votes on high flux, and Division B votes on high hot pool temperature. Do they combine to scram?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18
+  - Quote: "has voted in favor of a particular reactor scram or ESF actuation based on the same input parameter"
+- **Q1984** (PSAR: Integrated Controls Systems): How does the RPS determine primary sodium flow?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23
+  - Quote: "primary sodium pump (PSP) speed and current inputs from the RIS and calculates primary sodium flow"
+- **Q1985** (PSAR: Integrated Controls Systems): Which scram uses both XIS and pump inputs?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23
+  - Quote: "DL3-RC1d Reactor scram on high-high"
+- **Q1986** (PSAR: Integrated Controls Systems): Which is a reactor scram parameter?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-23
+  - Quote: "DL3-RC1g Reactor scram on high-high"
+- **Q1987** (PSAR: Integrated Controls Systems): What three conditions trip the PSPs under DL3-HR2?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.1, p. 7.6-24
+  - Quote: "DL3- HR2 PSP trip on high-high primary"
+- **Q1988** (PSAR: Integrated Controls Systems): What is the safe state for RPS ESF functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28
+  - Quote: "All RPS ESF functions execute the tripping of pump breakers to stop the associated pump"
+- **Q1989** (PSAR: Integrated Controls Systems): RPS incoming power is lost. What happens?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28
+  - Quote: "venting CRD argon and allowing rods to drop fully into the core via gravity"
+- **Q1990** (PSAR: Integrated Controls Systems): Self-diagnostics find a critical fault. What does the RPS do?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-28
+  - Quote: "the system places all outputs to the safe (tripped) state"
+- **Q1991** (PSAR: Integrated Controls Systems): What is needed to return the RPS to normal after an actuation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.3, p. 7.6-32
+  - Quote: "Deliberate operator action is required to return the RPS to normal"
+- **Q1992** (PSAR: Integrated Controls Systems): One division is out for testing and another has a single failure. Is the safety function kept?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-27
+  - Quote: "even when one division has been taken out of service for testing"
+- **Q1993** (PSAR: Integrated Controls Systems): Which is a listed way to check a channel?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.2, p. 7.6-31
+  - Quote: "cross-checking between redundant channels with available readouts"
+- **Q1994** (PSAR: Integrated Controls Systems): Are manual scram functions credited in the safety analysis?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1, p. 7.6-18
+  - Quote: "although these manual functions are not credited in the safety analysis"
+- **Q1995** (PSAR: Integrated Controls Systems): Scram follow starts when how many RPS divisions send a demand?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-29
+  - Quote: "when at least 2 of 4 RPS divisions send a demand signal"
+- **Q1996** (PSAR: Integrated Controls Systems): Which SVDUs are in the RSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.1.2, p. 7.6-19
+  - Quote: "The Remote Shutdown Complex is provided with redundant SVDUs which are fed from Divisions A and B"
+- **Q1997** (PSAR: Integrated Controls Systems): What fire rating do the RPS vault room walls have?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.2.2, p. 7.6-26
+  - Quote: "The RPS vault room walls are all 3-hour fire rated"
+- **Q1998** (PSAR: Integrated Controls Systems): What is the classification of the RPS manual switch panels?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.3.3.4, p. 7.6-35
+  - Quote: "RPS Division A Manual NSRST SCN1"
+- **Q1999** (PSAR: Integrated Controls Systems): What detector does the XIS use?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36
+  - Quote: "The XIS uses a High Temperature Fission Chamber to measure the neutron flux in the reactor"
+- **Q2000** (PSAR: Integrated Controls Systems): How many XIS detectors are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36
+  - Quote: "There is one High Temperature Fission Chamber detector for each division (four total)"
+- **Q2001** (PSAR: Integrated Controls Systems): Which three ranges does the XIS produce?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36
+  - Quote: "converted to source, wide, and power range signals"
+- **Q2002** (PSAR: Integrated Controls Systems): Where are the XIS field amplifiers?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37
+  - Quote: "XIS field amplifier enclosures located in the Reactor Building (RXB) Head Access Area"
+- **Q2003** (PSAR: Integrated Controls Systems): How do RMC and CTC get XIS signals?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37
+  - Quote: "are provided with isolated hardwired signals from XIS"
+- **Q2004** (PSAR: Integrated Controls Systems): Which PAM types does the XIS support?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39
+  - Quote: "send signals to the RPS and NIC for display as Type B and D PAM variables"
+- **Q2005** (PSAR: Integrated Controls Systems): Why does the XIS feed the ISP trip functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39
+  - Quote: "DL3-HR12 ISP trip on high-high primary"
+- **Q2006** (PSAR: Integrated Controls Systems): What aligns power and wide range readouts to true power?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44
+  - Quote: "The power range and wide range channels require periodic calorimetric adjustments"
+- **Q2007** (PSAR: Integrated Controls Systems): An XIS module finds a critical fault. What happens?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.2, p. 7.6-42
+  - Quote: "the system places all outputs to the safe state"
+- **Q2008** (PSAR: Integrated Controls Systems): Is XIS analog or digital?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.5, p. 7.6-45
+  - Quote: "The XIS is currently designed as an analog system that does not contain software to perform any SR functions"
+- **Q2009** (PSAR: Integrated Controls Systems): Which system powers the XIS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.3, p. 7.6-45
+  - Quote: "The NUP power feeds to XIS are organized into four NSRST divisions"
+- **Q2010** (PSAR: Integrated Controls Systems): What is an RIS channel?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.1, p. 7.6-48
+  - Quote: "where a channel is defined as a single sensor and its associated cabling and signal amplification electronics"
+- **Q2011** (PSAR: Integrated Controls Systems): How do SR RIS signals reach the NIC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.1.1, p. 7.6-48
+  - Quote: "Signal splitters are used to duplicate the SR inputs"
+- **Q2012** (PSAR: Integrated Controls Systems): How many core exit temperature instruments does the RIS have?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58
+  - Quote: "Core Exit Temperature 15 NSRST"
+- **Q2013** (PSAR: Integrated Controls Systems): Which RIS variable is NST?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58
+  - Quote: "Reactor Head Temperature 3 NST"
+- **Q2014** (PSAR: Integrated Controls Systems): How many cold pool temperature instruments are there?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.4, p. 7.6-58
+  - Quote: "Primary Sodium Cold Pool Temperature 8 SR"
+- **Q2015** (PSAR: Integrated Controls Systems): Which RIS measurements feed the loss of primary flow scram?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-50
+  - Quote: "DL3-RC1j Reactor scram on loss RIS includes sensors that monitor PSP speed and PSP"
+- **Q2016** (PSAR: Integrated Controls Systems): Which DL2 action can RIS signals support?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.1, p. 7.6-51
+  - Quote: "initiate power runback, and inhibit rod withdrawal in support of NST DL2 functions"
+- **Q2017** (PSAR: Integrated Controls Systems): An NIC control failure occurs. What is the effect on the RPS through the RIS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.2.2, p. 7.6-53
+  - Quote: "are electronically isolated and independent of the inputs to the RPS"
+- **Q2018** (PSAR: Integrated Controls Systems): What seismic class applies to safety-significant RIS equipment?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.5.3.1, p. 7.6-53
+  - Quote: "commensurate with a seismic classification of SCS1"
+- **Q2019** (PSAR: Integrated Controls Systems): Why are there no liquid effluent radiation monitors?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-61
+  - Quote: "There are no liquid effluent radiation monitors in the RMS"
+- **Q2020** (PSAR: Integrated Controls Systems): Which NIC subsystem interfaces with the DRMS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.1, p. 7.6-60
+  - Quote: "which provides the interface between the operator in the Main Control Room (MCR) and the DRMS"
+- **Q2021** (PSAR: Integrated Controls Systems): Where is the DRMS?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.2, p. 7.6-62
+  - Quote: "The DRMS is located within the MCR computer room"
+- **Q2022** (PSAR: Integrated Controls Systems): Does the RMS itself take automatic control actions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.3, p. 7.6-64
+  - Quote: "No automatic control actions are provided by RMS"
+- **Q2023** (PSAR: Integrated Controls Systems): Where does the RMS send its signal for DL4-RR1c?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.1, p. 7.6-63
+  - Quote: "DL4-RR1c Head Access Area (HAA)"
+- **Q2024** (PSAR: Integrated Controls Systems): What generates the MCR radiation alarm?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.4, p. 7.6-66
+  - Quote: "The MCR alarm functions will be generated by the AMC"
+- **Q2025** (PSAR: Integrated Controls Systems): What backs up the DRMS connection for NSRST monitors?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.1.1, p. 7.6-61
+  - Quote: "utilize a stand-alone, isolated interface and display Radiation Indicator Controller"
+- **Q2026** (PSAR: Integrated Controls Systems): How long is battery backup for the HAA and SCG monitors?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66
+  - Quote: "provides 72-hour battery backup to the NSRST monitors for the HAA and the SCG locations"
+- **Q2027** (PSAR: Integrated Controls Systems): How many wide range gas monitors are on the plant stack?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.3.3, p. 7.6-66
+  - Quote: "the combined plant stack has two dedicated wide range gas monitors"
+- **Q2028** (PSAR: Integrated Controls Systems): Which PDC covers monitoring radioactivity release?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.6.2.2, p. 7.6-64
+  - Quote: "Consistent with PDC 64, Monitoring radioactivity release"
+- **Q2029** (PSAR: Integrated Controls Systems): Are safety-related operator actions required?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69
+  - Quote: "There are no safety-related operator actions required"
+- **Q2030** (PSAR: Integrated Controls Systems): Which hazards does NHV address for MCR habitability?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69
+  - Quote: "ensure MCR habitability for radiological, sodium aerosol, and chemical hazards"
+- **Q2031** (PSAR: Integrated Controls Systems): What does each RPS SVDU show?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70
+  - Quote: "Each RPS divisional SVDU displays parameters and status of the associated RPS division only"
+- **Q2032** (PSAR: Integrated Controls Systems): Does the supervisor workstation have controls?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71
+  - Quote: "contains indications (no controls) provided through the NIC and EIC"
+- **Q2033** (PSAR: Integrated Controls Systems): How many NI operator workstations are in the MCR?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71
+  - Quote: "Two operator workstations are provided for the NI portion of the MCR"
+- **Q2034** (PSAR: Integrated Controls Systems): What supports crew situation awareness on the wall?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70
+  - Quote: "The GVDS is a wall-mounted array of Visual Display Units"
+- **Q2035** (PSAR: Integrated Controls Systems): Which is an SPDS function?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72
+  - Quote: "Provisions for data trending"
+- **Q2036** (PSAR: Integrated Controls Systems): Which condition has an alarm?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72
+  - Quote: "unplanned unavailability of standby equipment"
+- **Q2037** (PSAR: Integrated Controls Systems): How is the RSC bottled air system started?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72
+  - Quote: "is initiated manually to provide habitability for three operators"
+- **Q2038** (PSAR: Integrated Controls Systems): How many operators and how long does RSC bottled air support?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72
+  - Quote: "has a 72-hour mission time"
+- **Q2039** (PSAR: Integrated Controls Systems): Which divisions can be viewed at the RSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.1, p. 7.6-73
+  - Quote: "The RSC contains two RPS SVDUs capable of displaying parameters and status"
+- **Q2040** (PSAR: Integrated Controls Systems): Where is the RSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72
+  - Quote: "The RSC is located in the Division B RPS Vault, Distributed Control System, and control rod drive cabinet room"
+- **Q2041** (PSAR: Integrated Controls Systems): Where do ERFs get plant data?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.7.3, p. 7.6-73
+  - Quote: "The Primary and Backup ERFs receive data from the NIC"
+- **Q2042** (PSAR: Integrated Controls Systems): What is the AST for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75
+  - Quote: "to scram the reactor before the peak seismic wave reaches the facility"
+- **Q2043** (PSAR: Integrated Controls Systems): Where does the AST act?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1, p. 7.6-75
+  - Quote: "is located downstream of the RPS logic process"
+- **Q2044** (PSAR: Integrated Controls Systems): Where are AST accelerometers?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.2, p. 7.6-75
+  - Quote: "are located in boreholes at four locations at 90-degree angles around the RXB"
+- **Q2045** (PSAR: Integrated Controls Systems): What are the three parts of an AST channel?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75
+  - Quote: "each channel includes triaxial seismic accelerometers"
+- **Q2046** (PSAR: Integrated Controls Systems): Which RTB feature does the AST use?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75
+  - Quote: "then the bi-stable unit ouputs an isolated signal to the shunt trip feature in the RTB"
+- **Q2047** (PSAR: Integrated Controls Systems): One AST channel fails high. Does the reactor trip?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.1.1, p. 7.6-75
+  - Quote: "prevents spurious actuation caused by a failure of a single AST channel"
+- **Q2048** (PSAR: Integrated Controls Systems): What is the AST safety classification?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.6.8.2, p. 7.6-75
+  - Quote: "The AST is designed to perform a non-safety-related with special treatment (NSRST) function"
+- **Q2049** (PSAR: Electrical Systems): Does an NDC failure stop the plant from performing SR functions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.1, p. 7.7-1
+  - Quote: "Failures of the NUP or NDC do not affect the ability of the plant to perform safety-related (SR) functions"
+- **Q2050** (PSAR: Electrical Systems): Why are NUP divisions NSRST?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.1, p. 7.7-1
+  - Quote: "Certain portions of the NUP and NDC (comprising Divisions A, B, C, and D) are classified as NSRST"
+- **Q2051** (PSAR: Electrical Systems): Which load is on the NUP?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.1, p. 7.7-1
+  - Quote: "Control rod drive motor controllers (for scram follow motor drive-in function)"
+- **Q2052** (PSAR: Electrical Systems): What does the NDC give the PSP isolation breakers?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.1, p. 7.7-1
+  - Quote: "Primary Sodium Pump isolation breaker backup trip power"
+- **Q2053** (PSAR: Electrical Systems): What feeds the NUP inverter in normal operation?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.1, p. 7.7-4
+  - Quote: "each inverter receives 250 VDC from the respective division 250 VDC switchboard"
+- **Q2054** (PSAR: Electrical Systems): What voltage do the NUP panelboards supply?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.1, p. 7.7-4
+  - Quote: "Each division includes a 120 VAC single-phase inverter"
+- **Q2055** (PSAR: Electrical Systems): How long are Division A and B batteries sized for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "Divisions A and B batteries are sized to supply the respective division loads for 72 hours"
+- **Q2056** (PSAR: Electrical Systems): How long are Division C and D batteries sized for?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "Divisions C and D batteries are sized to supply the respective division loads for 2 hours"
+- **Q2057** (PSAR: Electrical Systems): Which divisions share a swing charger?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "The swing chargers are shared between Divisions A and B DC switchboards"
+- **Q2058** (PSAR: Electrical Systems): What is the NDC battery type?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "The batteries are sealed Valve-Regulated Lead-Acid type"
+- **Q2059** (PSAR: Electrical Systems): An inverter fails. What happens to the UPS panelboard?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.1, p. 7.7-5
+  - Quote: "the inverter’s STS initiates an automatic transfer of the AC UPS loads to the RVT"
+- **Q2060** (PSAR: Electrical Systems): How is an inverter taken out for maintenance?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.1, p. 7.7-5
+  - Quote: "the loads can be transferred to the RVT using the RMBS"
+- **Q2061** (PSAR: Electrical Systems): An NLV MCC is lost. What carries the division until the swing charger is on line?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-5
+  - Quote: "The battery supplies uninterruptible power to the system loads until the swing charger is operating"
+- **Q2062** (PSAR: Electrical Systems): Is the NDC grounded?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "The NDC is ungrounded"
+- **Q2063** (PSAR: Electrical Systems): What goes to the UMC when a protection device operates?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.5, p. 7.7-7
+  - Quote: "sends a common trouble signal to the UMC"
+- **Q2064** (PSAR: Electrical Systems): Which is monitored by the battery monitoring system?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.2, p. 7.7-6
+  - Quote: "continuously monitors key battery parameters such as cell temperature"
+- **Q2065** (PSAR: Electrical Systems): A single failure in one NUP division affects how many divisions?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.7.1.3.1, p. 7.7-5
+  - Quote: "ensuring a postulated single failure affects only a single division"
+- **Q2066** (PSAR: Buildings and Structures): Which building is NSRST both above and below grade?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20
+  - Quote: "Both the below-grade and above-grade portions of the RAB are classified as non-safety-related with special treatment (NSRST)"
+- **Q2067** (PSAR: Buildings and Structures): How is the RXB superstructure classified?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1
+  - Quote: "The RXB superstructure is therefore classified as non-safety-related with no special treatment (NST)"
+- **Q2068** (PSAR: Buildings and Structures): What does the HAA contain?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.1, p. 7.8-1
+  - Quote: "The HAA contains the reactor head, associated penetrations, the Primary Sodium Pumps"
+- **Q2069** (PSAR: Buildings and Structures): Which part of the RXB provides functional containment?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-3
+  - Quote: "provides a functional containment boundary that performs a radionuclide retention function"
+- **Q2070** (PSAR: Buildings and Structures): Is the RXB normally occupied?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1, p. 7.8-1
+  - Quote: "The RXB is normally unoccupied with access"
+- **Q2071** (PSAR: Buildings and Structures): What is included in the ex-RES functional containment?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4
+  - Quote: "The ex-RES functional containment boundary includes the guard vessel, the HAA walls, and the HAA HVAC isolation"
+- **Q2072** (PSAR: Buildings and Structures): Which function does the RXB substructure support for decay heat removal?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-4
+  - Quote: "The RXB substructure maintains the outer boundary of the RAC air flow path"
+- **Q2073** (PSAR: Buildings and Structures): How thick are the SFP walls?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.2.1.1, p. 7.8-10
+  - Quote: "The SFP has 5 foot thick walls"
+- **Q2074** (PSAR: Buildings and Structures): What function does the FHB superstructure support?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.2.2.2, p. 7.8-15
+  - Quote: "is designed as an enveloping barrier to support maintaining a negative pressure for radionuclide retention"
+- **Q2075** (PSAR: Buildings and Structures): Where are the Sodium-Salt Heat Exchangers?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.3, p. 7.8-20
+  - Quote: "Intermediate Heat Transport System (IHT) piping loops and components"
+- **Q2076** (PSAR: Buildings and Structures): How are the ISPs removed?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.3.2.1, p. 7.8-24
+  - Quote: "two removable roofing panels allowing crane access to remove Intermediate Sodium Pumps"
+- **Q2077** (PSAR: Buildings and Structures): Which part of the NCB houses the RSC?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.4.1.1, p. 7.8-29
+  - Quote: "the NCB substructure includes a location for the RSC"
+- **Q2078** (PSAR: Buildings and Structures): Does the NCB superstructure house SR equipment?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.4, p. 7.8-29
+  - Quote: "which does not house any SR equipment"
+- **Q2079** (PSAR: Buildings and Structures): Which is a function of the SR substructures?
+  - Source: PSAR Rev 1, ML25276A288, Sec. 7.8.1.1.2, p. 7.8-5
+  - Quote: "External Hazard Protection for SR SSCs, (SR) and for NSRST SSCs (NSRST)"

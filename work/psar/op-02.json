@@ -1,0 +1,482 @@
+{
+ "concepts": [
+  {
+   "title": "Operating organization",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "USO is responsible for the safe operation of Kemmerer Unit 1.",
+     "anchor": "USO is responsible for the safe operation of Kemmerer Unit 1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6"
+    },
+    {
+     "t": "p",
+     "text": "It establishes an Operating Organization before pre-operational testing.",
+     "anchor": "establishes an Operating Organization prior to pre-operational testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6"
+    },
+    {
+     "t": "p",
+     "text": "The PGM and Director of Operations are responsible for the Operating Organization.",
+     "anchor": "The PGM and Director of Operations are responsible for the Operating Organization",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Engineering",
+      "Quality assurance, audit, and surveillance",
+      "Plant sciences (chemistry and radiation protection)",
+      "Commissioning support",
+      "Training",
+      "Maintenance",
+      "Operations",
+      "Outside contractual support"
+     ],
+     "anchor": "necessary to support required functions for the safe operation of the plant",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-5"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-11-1-4",
+     "num": "11.1-4",
+     "cap": "Operating Organization and Technical Support",
+     "alt": "PSAR Rev 1 figure: Operating Organization and Technical Support",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-13"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who is responsible for safe operation of Kemmerer Unit 1?",
+     "o": [
+      "The NRC",
+      "TerraPower only",
+      "USO",
+      "BPC"
+     ],
+     "a": 2,
+     "x": "USO is responsible for safe operation.",
+     "anchor": "USO is responsible for the safe operation of Kemmerer Unit 1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6",
+     "eo": "1"
+    },
+    {
+     "q": "When is the Operating Organization established?",
+     "o": [
+      "Before pre-operational testing",
+      "After fuel load",
+      "At first criticality",
+      "At commercial operation"
+     ],
+     "a": 0,
+     "x": "It is established prior to pre-operational testing.",
+     "anchor": "establishes an Operating Organization prior to pre-operational testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Plant General Manager and direct reports",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Position",
+      "Reports to",
+      "Responsible for"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Plant General Manager",
+        "CNO",
+        "Daily operations, overall occupational and public radiation safety"
+       ],
+       "anchor": "The PGM has overall responsibility for occupational and public radiation safety",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1, p. 11.1-6"
+      },
+      {
+       "cells": [
+        "Director of Operations",
+        "PGM",
+        "On-site operations and operations support personnel"
+       ],
+       "anchor": "provides oversight for the on-site operations and operations support personnel",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.1, p. 11.1-6"
+      },
+      {
+       "cells": [
+        "Director of Maintenance",
+        "PGM",
+        "Plant maintenance and work control"
+       ],
+       "anchor": "is responsible for plant maintenance and work control",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.2, p. 11.1-6"
+      },
+      {
+       "cells": [
+        "Station Sciences Manager",
+        "PGM",
+        "Chemistry and radiation protection programs"
+       ],
+       "anchor": "oversees the management of the chemistry and radiation protection programs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.3, p. 11.1-6"
+      },
+      {
+       "cells": [
+        "Director of Training",
+        "PGM",
+        "Qualification and continuing training"
+       ],
+       "anchor": "is responsible for the qualification and continuing training of operations",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.4, p. 11.1-7"
+      },
+      {
+       "cells": [
+        "Security Manager",
+        "PGM",
+        "Physical security plan, access authorization, FFD"
+       ],
+       "anchor": "is responsible for the execution of the physical security plan",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.5, p. 11.1-7"
+      },
+      {
+       "cells": [
+        "Director of Organizational Effectiveness",
+        "PGM",
+        "Emergency planning, licensing, regulatory assurance, occupational health"
+       ],
+       "anchor": "is responsible for emergency planning, licensing, regulatory assurance, and occupational health",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.6, p. 11.1-7"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who has overall responsibility for occupational and public radiation safety?",
+     "o": [
+      "CNO",
+      "Station Sciences Manager",
+      "PGM",
+      "Director of Operations"
+     ],
+     "a": 2,
+     "x": "The PGM has overall responsibility.",
+     "anchor": "The PGM has overall responsibility for occupational and public radiation safety",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1, p. 11.1-6",
+     "eo": "2"
+    },
+    {
+     "q": "Who is responsible for emergency planning?",
+     "o": [
+      "Security Manager",
+      "Director of Organizational Effectiveness",
+      "Director of Training",
+      "Director of Operations"
+     ],
+     "a": 1,
+     "x": "That director covers emergency planning, licensing, regulatory assurance, and occupational health.",
+     "anchor": "is responsible for emergency planning, licensing, regulatory assurance, and occupational health",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.6, p. 11.1-7",
+     "eo": "2"
+    },
+    {
+     "q": "Who runs the fitness-for-duty program?",
+     "o": [
+      "Director of Training",
+      "Security Manager",
+      "PGM",
+      "QA Manager"
+     ],
+     "a": 1,
+     "x": "The Security Manager is responsible for FFD.",
+     "anchor": "access authorization and the fitness-for-duty (FFD) program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.1.5, p. 11.1-7",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Independent oversight",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Director of Nuclear Oversight reports to the CNO and manages audits, quality control, and employee concerns.",
+     "anchor": "is responsible for the overall management and coordination of independent nuclear oversight",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7"
+    },
+    {
+     "t": "p",
+     "text": "The QA Manager reports to that director and supervises QC inspections, NDE, and QA audits.",
+     "anchor": "The QA Manager reports to the Director of Nuclear Oversight",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.2.1, p. 11.1-7"
+    }
+   ],
+   "checks": [
+    {
+     "q": "To whom does the Director of Nuclear Oversight report?",
+     "o": [
+      "CNO",
+      "Director of Operations",
+      "QA Manager",
+      "PGM"
+     ],
+     "a": 0,
+     "x": "The director reports to the CNO, not the PGM.",
+     "anchor": "The Director of Nuclear Oversight reports to the CNO",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Qualification and training",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Qualifications meet ANSI/ANS-3.1-2014, as endorsed by RG 1.8.",
+     "anchor": "meet the qualification requirements described in ANSI/ANS-3.1-2014",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.1, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "The operator training and requalification plan follows 10 CFR 55 and 10 CFR 50.120.",
+     "anchor": "will be developed and implemented in accordance with 10 CFR 55 and 10 CFR 50.120",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "Qualification includes a comprehensive written exam and an operating test, as required by 10 CFR 55.",
+     "anchor": "passing a comprehensive written exam and an operating test as required by 10 CFR 55",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "Training programs meeting 10 CFR 50.120 will be in place within 18 months prior to fuel load.",
+     "anchor": "within 18 months prior to fuel load",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "The requalification plan will be provided at the OLA stage.",
+     "anchor": "will be provided at the OLA stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does operator qualification include?",
+     "o": [
+      "Interview only",
+      "Simulator only",
+      "Written exam and operating test",
+      "Written exam only"
+     ],
+     "a": 2,
+     "x": "It includes a comprehensive written exam and an operating test.",
+     "anchor": "passing a comprehensive written exam and an operating test as required by 10 CFR 55",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8",
+     "eo": "4"
+    },
+    {
+     "q": "When must 10 CFR 50.120 training programs be in place?",
+     "o": [
+      "At commercial operation",
+      "At construction start",
+      "Within 18 months prior to fuel load",
+      "After fuel load"
+     ],
+     "a": 2,
+     "x": "They are in place within 18 months prior to fuel load.",
+     "anchor": "within 18 months prior to fuel load",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.2, p. 11.1-8",
+     "eo": "4"
+    },
+    {
+     "q": "Which standard covers personnel qualification?",
+     "o": [
+      "NUREG-0711",
+      "ACI 349",
+      "ANSI/ANS-3.1-2014",
+      "IEEE 603"
+     ],
+     "a": 2,
+     "x": "Qualifications meet ANSI/ANS-3.1-2014.",
+     "anchor": "meet the qualification requirements described in ANSI/ANS-3.1-2014",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.1, p. 11.1-8",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Conduct of operations",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Site operations are controlled through the MCR, with some activities coordinated from the online/outage control center.",
+     "anchor": "Site operations are controlled through the Main Control Room (MCR)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "Maintenance, surveillances, and removal or restoration of safety-significant SSCs may not start without Control Room Supervisor approval.",
+     "anchor": "may not commence without approval of the Control Room Supervisor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8"
+    },
+    {
+     "t": "p",
+     "text": "Rules of practice incorporate RG 1.114.",
+     "anchor": "Guidance to Operators at the Controls and to Senior Operators in the Control Room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9"
+    },
+    {
+     "t": "p",
+     "text": "Reactivity controls are only manipulated by licensed operators and senior operators, except as allowed for training.",
+     "anchor": "Reactivity controls are only manipulated by licensed operators and senior operators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9"
+    },
+    {
+     "t": "p",
+     "text": "Other apparatus that may affect reactivity or power needs the knowledge and consent of the operator or Control Room Supervisor at the controls.",
+     "anchor": "shall be operated only with the knowledge and consent of the operator or the Control Room Supervisor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9"
+    },
+    {
+     "t": "p",
+     "text": "Operators and technicians are expected to follow approved procedures and technical specifications.",
+     "anchor": "operate the plant in accordance with approved procedures and adhere to technical specifications",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9"
+    },
+    {
+     "t": "p",
+     "text": "Staffing requirements in 10 CFR 50.54(k) and (m) will be given at the OL stage.",
+     "anchor": "The staffing requirements in 10 CFR 50.54(k) and (m)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who approves the start of a surveillance?",
+     "o": [
+      "Director of Maintenance",
+      "PGM",
+      "QA Manager",
+      "Control Room Supervisor"
+     ],
+     "a": 3,
+     "x": "They may not commence without Control Room Supervisor approval.",
+     "anchor": "may not commence without approval of the Control Room Supervisor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8",
+     "eo": "5"
+    },
+    {
+     "q": "A trainee wants to move a rod under instruction. What allows it?",
+     "o": [
+      "It is never allowed",
+      "10 CFR 55 training allowance",
+      "PGM verbal approval",
+      "Maintenance order"
+     ],
+     "a": 1,
+     "x": "Only licensed staff manipulate reactivity controls, except as allowed for training under 10 CFR 55.",
+     "anchor": "except as allowed for training under 10 CFR 55",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9",
+     "eo": "5"
+    },
+    {
+     "q": "Equipment other than controls may affect power. What is needed to operate it?",
+     "o": [
+      "Knowledge and consent of the operator or CRS at the controls",
+      "A work order only",
+      "NRC approval",
+      "Nothing"
+     ],
+     "a": 0,
+     "x": "10 CFR 50.54 requires knowledge and consent.",
+     "anchor": "shall be operated only with the knowledge and consent of the operator or the Control Room Supervisor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-9",
+     "eo": "5"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "USO owns safe operation. The PGM and Director of Operations answer for the Operating Organization.",
+   "anchor": "The PGM and Director of Operations are responsible for the Operating Organization",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4, p. 11.1-6"
+  },
+  {
+   "text": "Nuclear Oversight reports to the CNO, independent of the PGM line.",
+   "anchor": "The Director of Nuclear Oversight reports to the CNO",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.4.2, p. 11.1-7"
+  },
+  {
+   "text": "The Control Room Supervisor approves work on safety-significant SSCs, and only licensed staff move reactivity controls.",
+   "anchor": "may not commence without approval of the Control Room Supervisor",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 11.1.5.3, p. 11.1-8"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-02",
+ "title": "Organization and Training",
+ "kind": "topic",
+ "subject": "organization and training",
+ "sec_note": "Sec. 11.1, pp. 11.1-5 to 11.1-13",
+ "intro": "This lesson covers who runs the plant, who reports to whom, and the rules that apply to you as a licensed operator.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "Describe the operating organization and who is responsible for it.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "State the responsibilities of the managers who report to the Plant General Manager.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Explain how independent oversight is arranged.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "State the qualification and training requirements for operators.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Apply the conduct of operations rules for control room activities.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-02-organization-and-training"
+}

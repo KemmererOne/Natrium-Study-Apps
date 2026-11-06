@@ -1,0 +1,61 @@
+# OP-07 | Startup Test Program | topic | startup testing
+range: 12.1-1 12.6-1
+sec: Ch. 12, pp. 12.1-1 to 12.6-1
+intro: Chapter 12 describes how the plant goes from construction to full power. Know the four stages, who does each, and what happens in each.
+obj: State the objectives of the Post-Construction Inspection, Testing, and Analysis Program.
+obj: Identify the four stages and who performs each.
+obj: Describe construction, component, and system testing.
+obj: Describe initial fuel load, low power, and power ascension testing.
+obj: Explain first-of-a-kind testing.
+
+== Program objectives | 1
+S The primary objective is to show the plant was built as designed and that safety-significant SSCs perform consistent with the design. @@ is to demonstrate that the plant has been constructed as designed
+S It also shows that fuel load, criticality, and power ascension are done in a controlled and safe manner. @@ are performed in a controlled and safe manner
+S It gives assurance that operators know the procedures and are prepared to operate safely. @@ the plant operations personnel are knowledgeable about the plant operating procedures
+S A graded approach is used. @@ A graded approach is used to develop and implement the PITAP
+K What is a PITAP objective for operators? | That they know the procedures and are prepared | That they design tests | That they build systems | That they approve licenses | 0 | The program gives assurance that personnel are knowledgeable and prepared. @@ the plant operations personnel are knowledgeable about the plant operating procedures
+
+== Stages and roles | 2
+T Stage | Testing | Performed by
+R 1 | Construction testing | Construction organization @@ Stage 1, construction testing performed by the construction organization
+R 2 | Component testing | Construction start-up group @@ Stage 2, component testing performed by the construction start-up group
+R 3 | System testing | Construction start-up group @@ Stage 3, system testing performed by the construction start-up group
+R 4 | Initial startup testing | Licensed operators @@ Stage 4, initial startup testing performed by licensed operators
+S The design organization owns test objectives, prerequisites, safety precautions, and acceptance criteria. @@ is responsible for the test objectives, prerequisites, safety precautions, and acceptance criteria
+S The commissioning team determines test sequence and scheduling. @@ The commissioning team is responsible for determining test sequence and scheduling
+S In Stage 4, trained operations personnel do the work with approved procedures. @@ All work is performed by appropriately trained operations personnel utilizing approved procedures
+S RG 1.68 informs planning and execution. @@ is used to inform planning and execution of the post-construction inspection, testing, and analysis program
+K Who performs Stage 2 component testing? | Construction organization | Construction start-up group | Operations | NRC | 1 | Stage 2 is performed by the construction start-up group. @@ Stage 2, component testing performed by the construction start-up group
+K Who sets test acceptance criteria? | Design organization | Commissioning team | Operators | QA Manager | 0 | The design organization is responsible for them. @@ is responsible for the test objectives, prerequisites, safety precautions, and acceptance criteria
+K Who sets test sequence? | Design organization | Commissioning team | NRC | Vendor | 1 | The commissioning team determines sequence and scheduling. @@ The commissioning team is responsible for determining test sequence and scheduling
+
+== Construction, component, and system testing | 3
+L Cable separation, continuity, megger, and high potential testing ;; Non-destructive testing of welds ;; Hydrostatic testing of piping ;; Hanger and pipe support inspections ;; Pump and valve alignments ;; Cleaning and flushing @@ During construction testing, various electrical and mechanical tests are performed
+S Preoperational testing covers Stages 2 and 3. @@ This testing is completed over Stages 2 and 3
+L System flushing and cleanliness verification ;; Electrical equipment testing ;; Loop checks and calibrations ;; Control system checks ;; Instrument calibrations ;; Individual component testing @@ Component testing is the second stage of the PITAP program
+S Component testing shows a component is ready to move from a static to a dynamic state. @@ is ready to move from a static to a dynamic state
+S Stage 3 covers individual system testing, then integrated system testing. @@ includes individual system testing, followed by integrated system testing
+S Stage 3 starts the test review group, which manages procedure changes and reviews results. @@ System testing commences the use of the test review group
+K Which is construction testing? | Hydrostatic testing of piping | Rod worth measurement | Power ascension | Integrated system test | 0 | Stage 1 includes hydrostatic testing. @@ Hydrostatic testing of piping systems
+K When does the test review group start? | Stage 1 | Stage 2 | Stage 3 | Stage 4 | 2 | System testing commences the use of the test review group. @@ System testing commences the use of the test review group
+
+== Initial startup testing | 4
+S Details of Phase 2 testing will be given at the OL stage. @@ Phase 2 testing will be provided in the OL stage
+S Fuel load starts after preoperational testing, handover to operations, and issuance of the operating license and operator licenses. @@ Initial fuel loading starts after completion of preoperational testing
+S Post-core hot function testing comes after fuel load and before criticality. @@ prior to initial criticality
+S Low-power physics tests verify selected core design parameters. @@ a series of low-power physics tests is conducted to verify selected core design parameters
+L Reactivity control system rod worth ;; Neutron monitoring operation and calibration ;; Neutron flux distribution ;; Neutron and gamma radiation surveys ;; Operability of alarms and low power protective features ;; Reactivity control system performance @@ Reactivity control system rod worth
+S Power ascension shows the plant operates as designed in steady state and, as practicable, in anticipated transients. @@ during steady-state conditions and, to the extent practicable, during anticipated transients
+S Test hold points review results and confirm prerequisites before the next step. @@ Test hold points are established at appropriate intervals to review test results
+K What must be done before fuel load? | Preoperational testing, handover to operations, and license issuance | Power ascension | Low power physics | Criticality | 0 | Those conditions come first. @@ Initial fuel loading starts after completion of preoperational testing
+K When is post-core hot function testing done? | Before fuel load | After fuel load and before criticality | During power ascension | After full power | 1 | It follows fuel loading and comes before initial criticality. @@ prior to initial criticality
+K What are test hold points for? | Reviewing results before moving on | Stopping the reactor | Fueling | Outages | 0 | They review results and confirm prerequisites. @@ Test hold points are established at appropriate intervals to review test results
+
+== First-of-a-kind testing | 5
+S FOAK components are tested to the extent practical. @@ first-of-a-kind (FOAK) components and equipment are tested
+S Special tests may be done at the Sodium Test and Fill Facility. @@ may be performed at the Sodium Test and Fill Facility
+S FOAK testing is marked on test abstracts. @@ FOAK testing is indicated on the test abstracts
+K Where may special FOAK tests occur? | Sodium Test and Fill Facility | The MCR | The RSC | NRC headquarters | 0 | They may be performed at that facility. @@ may be performed at the Sodium Test and Fill Facility
+Z Stages 1 to 3 belong to construction and start-up groups. Stage 4 belongs to operations. @@ All work is performed by appropriately trained operations personnel utilizing approved procedures
+Z Fuel load needs preoperational testing, handover, and licenses. @@ Initial fuel loading starts after completion of preoperational testing
+Z Hold points control each step of startup testing. @@ Test hold points are established at appropriate intervals to review test results

@@ -1,0 +1,542 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and location",
+   "eo": [
+    "1",
+    "2",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The control room and indications satisfy PDC 19 and the emergency plan.",
+     "anchor": "are provided that satisfy Principal Design Criterion (PDC) 19, Control Room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7, p. 7.6-69"
+    },
+    {
+     "t": "p",
+     "text": "The MCR is in the NSRST NCB superstructure.",
+     "anchor": "The MCR is located within the non-safety-related with special treatment (NSRST) Nuclear Island (NI) Control Building superstructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69"
+    },
+    {
+     "t": "p",
+     "text": "There are no safety-related operator actions required.",
+     "anchor": "There are no safety-related operator actions required",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69"
+    },
+    {
+     "t": "p",
+     "text": "NHV controls the environment and protects habitability for radiological, sodium aerosol, and chemical hazards.",
+     "anchor": "ensure MCR habitability for radiological, sodium aerosol, and chemical hazards",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69"
+    },
+    {
+     "t": "p",
+     "text": "Separation between SR and other equipment is achieved mainly with relays, and an FMEA will confirm that failures cannot inhibit the safety function.",
+     "anchor": "is achieved primarily using relays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.1, p. 7.6-69"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Are safety-related operator actions required?",
+     "o": [
+      "Only at the RSC",
+      "Only for scram",
+      "Yes, within 30 minutes",
+      "No"
+     ],
+     "a": 3,
+     "x": "There are no safety-related operator actions required.",
+     "anchor": "There are no safety-related operator actions required",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69",
+     "eo": "1,2,9"
+    },
+    {
+     "q": "Which hazards does NHV address for MCR habitability?",
+     "o": [
+      "Flooding only",
+      "Seismic",
+      "Radiological, sodium aerosol, and chemical",
+      "Noise only"
+     ],
+     "a": 2,
+     "x": "NHV takes measures for radiological, sodium aerosol, and chemical hazards.",
+     "anchor": "ensure MCR habitability for radiological, sodium aerosol, and chemical hazards",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69",
+     "eo": "1,2,9"
+    }
+   ]
+  },
+  {
+   "title": "MCR layout",
+   "eo": [
+    "3",
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-7-1",
+     "num": "7.6.7-1",
+     "cap": "MCR Layout",
+     "alt": "PSAR Rev 1 figure: MCR Layout",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.3, p. 7.6-74"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Workstation",
+      "Provides"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RPS workstation",
+        "Four SVDUs, one per division, and manual scram and ESF controls"
+       ],
+       "anchor": "The RPS workstation contains four SVDUs",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+      },
+      {
+       "cells": [
+        "GVDS",
+        "Wall-mounted VDUs with key parameters and alarms"
+       ],
+       "anchor": "The GVDS is a wall-mounted array of Visual Display Units",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+      },
+      {
+       "cells": [
+        "NI and EI operator workstations",
+        "Controls and indications through NIC and EIC"
+       ],
+       "anchor": "The NI and EI operator workstations contain the controls and indications",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71"
+      },
+      {
+       "cells": [
+        "Supervisor workstation",
+        "Indications with no controls"
+       ],
+       "anchor": "contains indications (no controls) provided through the NIC and EIC",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71"
+      },
+      {
+       "cells": [
+        "Communications workstation",
+        "Listed in the MCR equipment"
+       ],
+       "anchor": "Communications workstation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "There are two workstations for the NI portion and two for the EI portion.",
+     "anchor": "Two operator workstations are provided for the NI portion of the MCR",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71"
+    },
+    {
+     "t": "p",
+     "text": "Each desk has four VDUs, a hardwired mouse, and a hardwired keyboard.",
+     "anchor": "Each workstation desk contains four commercial VDUs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71"
+    },
+    {
+     "t": "p",
+     "text": "Division A and B SVDUs also display their PAM variables.",
+     "anchor": "The Division A and B SVDUs are also capable of displaying Post-Accident Monitoring",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+    },
+    {
+     "t": "p",
+     "text": "RPS SVDUs and manual controls are classified NSRST.",
+     "anchor": "The RPS divisional SVDUs and manual controls are classified as NSRST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does each RPS SVDU show?",
+     "o": [
+      "Its own division only",
+      "NIC data",
+      "EI data",
+      "All four divisions"
+     ],
+     "a": 0,
+     "x": "Each SVDU displays parameters and status of the associated division only.",
+     "anchor": "Each RPS divisional SVDU displays parameters and status of the associated RPS division only",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70",
+     "eo": "3,5"
+    },
+    {
+     "q": "Does the supervisor workstation have controls?",
+     "o": [
+      "Only EI",
+      "Yes",
+      "No",
+      "Only RPS"
+     ],
+     "a": 2,
+     "x": "It contains indications with no controls.",
+     "anchor": "contains indications (no controls) provided through the NIC and EIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71",
+     "eo": "3,5"
+    },
+    {
+     "q": "How many NI operator workstations are in the MCR?",
+     "o": [
+      "Four",
+      "One",
+      "Two",
+      "Three"
+     ],
+     "a": 2,
+     "x": "Two are provided for the NI portion.",
+     "anchor": "Two operator workstations are provided for the NI portion of the MCR",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-71",
+     "eo": "3,5"
+    },
+    {
+     "q": "What supports crew situation awareness on the wall?",
+     "o": [
+      "GVDS",
+      "RSC",
+      "DRMS",
+      "SVDUs"
+     ],
+     "a": 0,
+     "x": "The GVDS displays key parameters and alarms to support awareness and coordination.",
+     "anchor": "The GVDS is a wall-mounted array of Visual Display Units",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70",
+     "eo": "3,5"
+    }
+   ]
+  },
+  {
+   "title": "Safety Parameter Display System and alarms",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Variables over the full range expected",
+      "Data trending",
+      "Indication when limits are approached or exceeded",
+      "Safety system status"
+     ],
+     "anchor": "The Safety Parameter Display System functionality includes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "It includes displays that help staff run emergency procedures, severe accident procedures, and site response.",
+     "anchor": "executing emergency procedures, severe accident procedures, and site emergency response",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "Alarms indicate deviations from normal limits, loss of safety system availability, and unplanned unavailability of standby equipment.",
+     "anchor": "Alarms are provided to indicate deviations from normal operational limits",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is an SPDS function?",
+     "o": [
+      "Rod control",
+      "Seismic trip",
+      "Fire suppression",
+      "Data trending"
+     ],
+     "a": 3,
+     "x": "SPDS functionality includes provisions for data trending.",
+     "anchor": "Provisions for data trending",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72",
+     "eo": "5,8"
+    },
+    {
+     "q": "Which condition has an alarm?",
+     "o": [
+      "Unplanned unavailability of standby equipment",
+      "Shift turnover",
+      "Lighting levels",
+      "Scheduled maintenance start"
+     ],
+     "a": 0,
+     "x": "Alarms cover unplanned unavailability of standby equipment.",
+     "anchor": "unplanned unavailability of standby equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-72",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Remote Shutdown Complex",
+   "eo": [
+    "3",
+    "7",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If the MCR cannot be inhabited, operators evacuate to the RSC.",
+     "anchor": "In the event that the MCR cannot be inhabited, operators are evacuated to the Remote Shutdown Complex",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "The RSC is in the Division B RPS Vault, DCS, and CRD cabinet room.",
+     "anchor": "The RSC is located in the Division B RPS Vault, Distributed Control System, and control rod drive cabinet room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "It is NSRST and sits in the SR NCB substructure.",
+     "anchor": "The RSC is classified as NSRST and is located in the safety-related NI Control Building substructure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "A manually started bottled air injection system supports three operators with a 72-hour mission time.",
+     "anchor": "has a 72-hour mission time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "SCBA and hazardous materials suits are stored there for leaving the area.",
+     "anchor": "Self-contained breathing apparatus and hazardous materials suits are located in the RSC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "An intermediate chamber sized for one person allows entry and exit.",
+     "anchor": "An intermediate chamber sized for one individual",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+    },
+    {
+     "t": "p",
+     "text": "Two RPS SVDUs show Divisions A and B, including their PAM variables.",
+     "anchor": "The RSC contains two RPS SVDUs capable of displaying parameters and status",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.1, p. 7.6-73"
+    },
+    {
+     "t": "p",
+     "text": "The location gives access to equipment able to trip all RTBs and ESF components.",
+     "anchor": "capable of tripping all Reactor Trip Breakers and ESF components",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.1, p. 7.6-73"
+    },
+    {
+     "t": "p",
+     "text": "Trip equipment is also in the PSP and ISP trip breaker rooms, reached with SCBA and suits.",
+     "anchor": "Primary Sodium Pump and Intermediate Sodium Pump trip breaker rooms",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.1, p. 7.6-73"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How is the RSC bottled air system started?",
+     "o": [
+      "By the RPS",
+      "By NHV",
+      "Automatically on high radiation",
+      "Manually"
+     ],
+     "a": 3,
+     "x": "The bottled air injection system is initiated manually.",
+     "anchor": "is initiated manually to provide habitability for three operators",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72",
+     "eo": "3,7,8"
+    },
+    {
+     "q": "How many operators and how long does RSC bottled air support?",
+     "o": [
+      "Three for 7 days",
+      "Two for 24 hours",
+      "Three for 72 hours",
+      "Five for 72 hours"
+     ],
+     "a": 2,
+     "x": "It provides for three operators and has a 72-hour mission time.",
+     "anchor": "has a 72-hour mission time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72",
+     "eo": "3,7,8"
+    },
+    {
+     "q": "Which divisions can be viewed at the RSC?",
+     "o": [
+      "None",
+      "A and B",
+      "C and D",
+      "All four"
+     ],
+     "a": 1,
+     "x": "The two SVDUs show Divisions A and B.",
+     "anchor": "The RSC contains two RPS SVDUs capable of displaying parameters and status",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.1, p. 7.6-73",
+     "eo": "3,7,8"
+    },
+    {
+     "q": "Where is the RSC?",
+     "o": [
+      "Outside the protected area",
+      "RXB",
+      "Division B RPS Vault, DCS, and CRD cabinet room",
+      "FHB"
+     ],
+     "a": 2,
+     "x": "It is located in the Division B room.",
+     "anchor": "The RSC is located in the Division B RPS Vault, Distributed Control System, and control rod drive cabinet room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72",
+     "eo": "3,7,8"
+    }
+   ]
+  },
+  {
+   "title": "Emergency response facilities and safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Primary and Backup ERF details will be described at the OL stage.",
+     "anchor": "will be described at the operating license stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.3, p. 7.6-73"
+    },
+    {
+     "t": "p",
+     "text": "The Primary and Backup ERFs receive data from the NIC.",
+     "anchor": "The Primary and Backup ERFs receive data from the NIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.3, p. 7.6-73"
+    },
+    {
+     "t": "p",
+     "text": "The HFE program applies to the MCR and RSC design.",
+     "anchor": "is applied to the design of the RSC and equipment described in Section 7.6.7.2.1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2.2, p. 7.6-73"
+    },
+    {
+     "t": "p",
+     "text": "MCR indications comply with the technologically relevant portions of 10 CFR 50.34(f).",
+     "anchor": "comply with the technologically relevant portions of 10 CFR 50.34(f)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.3, p. 7.6-71"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where do ERFs get plant data?",
+     "o": [
+      "The AST",
+      "The RPS directly",
+      "The NIC",
+      "The XIS"
+     ],
+     "a": 2,
+     "x": "ERFs receive data from the NIC.",
+     "anchor": "The Primary and Backup ERFs receive data from the NIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.3, p. 7.6-73",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The MCR is NSRST, and no safety-related operator actions are required.",
+   "anchor": "There are no safety-related operator actions required",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1, p. 7.6-69"
+  },
+  {
+   "text": "Four SVDUs and manual controls sit at the RPS workstation, each SVDU for its own division.",
+   "anchor": "Each RPS divisional SVDU displays parameters and status of the associated RPS division only",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.1.2, p. 7.6-70"
+  },
+  {
+   "text": "If the MCR is lost, the RSC gives three operators 72 hours on bottled air and access to trip equipment.",
+   "anchor": "has a 72-hour mission time",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.7.2, p. 7.6-72"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-21",
+ "title": "Control Room and Indications",
+ "kind": "system",
+ "subject": "Main Control Room and Remote Shutdown Complex",
+ "sec_note": "Sec. 7.6.7, pp. 7.6-69 to 7.6-74",
+ "intro": "This lesson covers where operators work: the MCR, the Remote Shutdown Complex, and the emergency response facilities. There are no safety-related operator actions.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the Main Control Room and Remote Shutdown Complex boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain Main Control Room and Remote Shutdown Complex operation.",
+   "taught": false
+  },
+  {
+   "number": "5",
+   "text": "Describe the Main Control Room and Remote Shutdown Complex controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the Main Control Room and Remote Shutdown Complex automatic features and interlocks.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the Main Control Room and Remote Shutdown Complex.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-21-control-room-and-indications"
+}

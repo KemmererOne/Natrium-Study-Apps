@@ -1,0 +1,579 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and detectors",
+   "eo": [
+    "1",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The XIS senses neutron flux leakage from the core during fuel movement, startup, power operations, shutdown, and accident conditions.",
+     "anchor": "provides instrumentation to sense neutron flux leakage from the core during fuel movement",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "Neutron leakage is proportional to reactor flux, so it can be converted to a power indication.",
+     "anchor": "Neutron leakage is proportional to reactor flux",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "It uses a High Temperature Fission Chamber with a high voltage probe.",
+     "anchor": "The XIS uses a High Temperature Fission Chamber to measure the neutron flux in the reactor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "The signal is converted to source, wide, and power range signals.",
+     "anchor": "converted to source, wide, and power range signals",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "There is one detector per division, four in total, each in its own drywell.",
+     "anchor": "There is one High Temperature Fission Chamber detector for each division (four total)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "The drywells are on the outside perimeter of the Core Barrel Structure outer barrel.",
+     "anchor": "are located on the outside perimeter of the Core Barrel Structure outer barrel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What detector does the XIS use?",
+     "o": [
+      "Ion chamber in the core",
+      "Self-powered detector",
+      "BF3 counter",
+      "High Temperature Fission Chamber"
+     ],
+     "a": 3,
+     "x": "The XIS uses a High Temperature Fission Chamber.",
+     "anchor": "The XIS uses a High Temperature Fission Chamber to measure the neutron flux in the reactor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36",
+     "eo": "1,3"
+    },
+    {
+     "q": "How many XIS detectors are there?",
+     "o": [
+      "One",
+      "Two",
+      "Four",
+      "Eight"
+     ],
+     "a": 2,
+     "x": "There is one detector for each division, four total.",
+     "anchor": "There is one High Temperature Fission Chamber detector for each division (four total)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36",
+     "eo": "1,3"
+    },
+    {
+     "q": "Which three ranges does the XIS produce?",
+     "o": [
+      "Source, wide, and power",
+      "Low, mid, and high",
+      "Startup, intermediate, and full",
+      "Count, rate, and level"
+     ],
+     "a": 0,
+     "x": "The signal is converted to source, wide, and power range signals.",
+     "anchor": "converted to source, wide, and power range signals",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36",
+     "eo": "1,3"
+    }
+   ]
+  },
+  {
+   "title": "Architecture and locations",
+   "eo": [
+    "2",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Each XIS division is separate and independent, and the four divisions match the four RPS divisions.",
+     "anchor": "the four XIS divisions correspond to the four RPS divisions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-36"
+    },
+    {
+     "t": "p",
+     "text": "Each XIS division interfaces with the corresponding RPS division only.",
+     "anchor": "interfaces with the corresponding RPS division only",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37"
+    },
+    {
+     "t": "p",
+     "text": "XIS signals sent to the RPS reach the plant data bus through the RPS data gateway.",
+     "anchor": "are made available to the plant data bus via the RPS data gateway",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37"
+    },
+    {
+     "t": "p",
+     "text": "NIC subsystems such as RMC and CTC get isolated hardwired signals from the XIS.",
+     "anchor": "are provided with isolated hardwired signals from XIS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Equipment",
+      "Location"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Detectors",
+        "Individual drywells external and adjacent to the core"
+       ],
+       "anchor": "The XIS detectors are located in individual drywells external and adjacent to the core",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37"
+      },
+      {
+       "cells": [
+        "Field amplifier enclosures",
+        "RXB Head Access Area"
+       ],
+       "anchor": "XIS field amplifier enclosures located in the Reactor Building (RXB) Head Access Area",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37"
+      },
+      {
+       "cells": [
+        "Electronics enclosures",
+        "NCB substructure"
+       ],
+       "anchor": "XIS electronics enclosures located in the Nuclear Island Control Building (NCB) Substructure",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37"
+      },
+      {
+       "cells": [
+        "Audible count rate monitors",
+        "MCR and FHCR"
+       ],
+       "anchor": "The XIS Audible Count Rate monitors are located in both the MCR and FHCR",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37"
+      }
+     ]
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-6-4-1",
+     "num": "7.6.4-1",
+     "cap": "XIS Overview",
+     "alt": "PSAR Rev 1 figure: XIS Overview",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.4, p. 7.6-47"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where are the XIS field amplifiers?",
+     "o": [
+      "NCB substructure",
+      "Inside the reactor vessel",
+      "MCR",
+      "RXB Head Access Area"
+     ],
+     "a": 3,
+     "x": "Field amplifier enclosures are in the RXB Head Access Area.",
+     "anchor": "XIS field amplifier enclosures located in the Reactor Building (RXB) Head Access Area",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.2, p. 7.6-37",
+     "eo": "2,4"
+    },
+    {
+     "q": "How do RMC and CTC get XIS signals?",
+     "o": [
+      "Through a data diode only",
+      "They do not",
+      "Over the DCS bus from RPS",
+      "Isolated hardwired signals"
+     ],
+     "a": 3,
+     "x": "They are provided with isolated hardwired signals.",
+     "anchor": "are provided with isolated hardwired signals from XIS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37",
+     "eo": "2,4"
+    }
+   ]
+  },
+  {
+   "title": "Functions supported",
+   "eo": [
+    "6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RC1a",
+        "Scram on high-high neutron flux"
+       ],
+       "anchor": "DL3-RC1a Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-38"
+      },
+      {
+       "cells": [
+        "DL3-RC1d",
+        "Scram on high-high power-to-flow ratio"
+       ],
+       "anchor": "DL3-RC1d Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-38"
+      },
+      {
+       "cells": [
+        "DL3-RC1f",
+        "Scram on high-high positive neutron flux rate"
+       ],
+       "anchor": "DL3-RC1f Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL3-RC1g",
+        "Scram on high-high negative neutron flux rate"
+       ],
+       "anchor": "DL3-RC1g Reactor scram on high-high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL3-RC1i",
+        "Scram on low power, high neutron flux"
+       ],
+       "anchor": "DL3-RC1i Reactor scram on low power, high",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL3-HR2",
+        "PSP trip on high-high primary sodium temperature"
+       ],
+       "anchor": "DL3- HR2 PSP trip on high-high primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL3-HR3",
+        "ISP trip on high-high primary sodium temperature"
+       ],
+       "anchor": "DL3-HR3 Intermediate Sodium Pump (ISP)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL3-HR12",
+        "ISP trip on high-high primary sodium level"
+       ],
+       "anchor": "DL3-HR12 ISP trip on high-high primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      },
+      {
+       "cells": [
+        "DL5-PAM1",
+        "Type B and D PAM variables"
+       ],
+       "anchor": "send signals to the RPS and NIC for display as Type B and D PAM variables",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "In each of these functions, the XIS monitors neutron flux and sends signals to the RPS.",
+     "anchor": "XIS includes sensors that monitor neutron flux",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-38"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which PAM types does the XIS support?",
+     "o": [
+      "Type E only",
+      "Type A and B",
+      "Type B and D",
+      "Type C and F"
+     ],
+     "a": 2,
+     "x": "XIS flux is displayed as Type B and D PAM variables.",
+     "anchor": "send signals to the RPS and NIC for display as Type B and D PAM variables",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39",
+     "eo": "6"
+    },
+    {
+     "q": "Why does the XIS feed the ISP trip functions?",
+     "o": [
+      "It measures level",
+      "It does not",
+      "Flux is a condition in the RPS trip logic",
+      "It measures ISP speed"
+     ],
+     "a": 2,
+     "x": "XIS sensors send flux signals to the RPS for DL3-HR3 and DL3-HR12.",
+     "anchor": "DL3-HR12 ISP trip on high-high primary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.1, p. 7.6-39",
+     "eo": "6"
+    }
+   ]
+  },
+  {
+   "title": "Indications and calibration",
+   "eo": [
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "XIS status and data display through the RPS and NIC.",
+     "anchor": "The XIS operational aspects are displayed via the RPS and NIC",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.4, p. 7.6-45"
+    },
+    {
+     "t": "p",
+     "text": "NST audible count rate devices in the MCR and FHCR give source range indication by sound.",
+     "anchor": "provide operators with source range indication via an audible signal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.4, p. 7.6-46"
+    },
+    {
+     "t": "p",
+     "text": "Power range and wide range channels need periodic calorimetric adjustments.",
+     "anchor": "The power range and wide range channels require periodic calorimetric adjustments",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44"
+    },
+    {
+     "t": "p",
+     "text": "These align XIS readouts with power determined from core thermal power calculations.",
+     "anchor": "These adjustments align the XIS readouts to match power levels determined by accurate calorimetric calculations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44"
+    },
+    {
+     "t": "p",
+     "text": "Electronics modules perform continuous self-diagnostics, and a critical fault places all outputs in the safe state.",
+     "anchor": "the system places all outputs to the safe state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.2, p. 7.6-42"
+    },
+    {
+     "t": "p",
+     "text": "Any division can be out for testing with no loss of safety function.",
+     "anchor": "The system design allows for any division to be taken out of service for testing at any time",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.2, p. 7.6-41"
+    },
+    {
+     "t": "p",
+     "text": "XIS channels are included in the overall bypass schemes for Maintenance Bypass.",
+     "anchor": "are included in the overall bypass schemes for placing SR channels into Maintenance Bypass",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What aligns power and wide range readouts to true power?",
+     "o": [
+      "RPS voting",
+      "Source range overlap",
+      "Audible count rate",
+      "Calorimetric adjustments"
+     ],
+     "a": 3,
+     "x": "Periodic calorimetric adjustments align XIS readouts.",
+     "anchor": "The power range and wide range channels require periodic calorimetric adjustments",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44",
+     "eo": "5,8"
+    },
+    {
+     "q": "An XIS module finds a critical fault. What happens?",
+     "o": [
+      "Outputs hold last value",
+      "Alarm only",
+      "The division reboots",
+      "Outputs go to the safe state"
+     ],
+     "a": 3,
+     "x": "The system places all outputs to the safe state.",
+     "anchor": "the system places all outputs to the safe state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.2, p. 7.6-42",
+     "eo": "5,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The XIS is an SR system supporting SR, NSRST, and NST functions.",
+     "anchor": "The XIS is an SR system supporting SR, non-safety-related with special treatment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2, p. 7.6-37"
+    },
+    {
+     "t": "p",
+     "text": "XIS components are seismic class SCS1.",
+     "anchor": "The seismic classification of XIS components is SCS1",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3, p. 7.6-43"
+    },
+    {
+     "t": "p",
+     "text": "The XIS is currently an analog design with no software in SR functions, so there are no credible common-cause failures as required by IEEE 603.",
+     "anchor": "The XIS is currently designed as an analog system that does not contain software to perform any SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.5, p. 7.6-45"
+    },
+    {
+     "t": "p",
+     "text": "Power comes from four NSRST divisions of the NUP.",
+     "anchor": "The NUP power feeds to XIS are organized into four NSRST divisions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.3, p. 7.6-45"
+    },
+    {
+     "t": "p",
+     "text": "NCB equipment is in division-specific 3-hour fire rated rooms.",
+     "anchor": "XIS equipment in the NCB is located in a division-specific, 3-hour fire rated room",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.2.2, p. 7.6-40"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program Description",
+      "Human Factors Engineering Program Plan",
+      "Equipment Qualification Program",
+      "Post-Construction Inspection, Testing, and Acceptance Program",
+      "Design Reliability Assurance Program"
+     ],
+     "anchor": "are preliminarily identified as applicable to the XIS to meet quality, design, reliability, and performance requirements",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3, p. 7.6-42"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Is XIS analog or digital?",
+     "o": [
+      "Not stated",
+      "Digital",
+      "Analog",
+      "Hybrid with software in SR functions"
+     ],
+     "a": 2,
+     "x": "The XIS is currently designed as an analog system.",
+     "anchor": "The XIS is currently designed as an analog system that does not contain software to perform any SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.5, p. 7.6-45",
+     "eo": "9,10"
+    },
+    {
+     "q": "Which system powers the XIS?",
+     "o": [
+      "RPS",
+      "NUP",
+      "Offsite direct",
+      "Diesel only"
+     ],
+     "a": 1,
+     "x": "The XIS is powered from the NUP, in four NSRST divisions.",
+     "anchor": "The NUP power feeds to XIS are organized into four NSRST divisions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.3, p. 7.6-45",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Four fission chambers in drywells outside the core barrel feed four matched RPS divisions.",
+   "anchor": "There is one High Temperature Fission Chamber detector for each division (four total)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1, p. 7.6-36"
+  },
+  {
+   "text": "Signals go to the RPS for protection and isolated hardwire to the NIC for control.",
+   "anchor": "are provided with isolated hardwired signals from XIS",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.1.1, p. 7.6-37"
+  },
+  {
+   "text": "The XIS is analog, SR, and SCS1, and calorimetric adjustments keep it aligned with true power.",
+   "anchor": "The power range and wide range channels require periodic calorimetric adjustments",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.6.4.3.2, p. 7.6-44"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-18",
+ "title": "Nuclear Instrumentation System",
+ "kind": "system",
+ "subject": "XIS",
+ "sec_note": "Sec. 7.6.4, pp. 7.6-36 to 7.6-47",
+ "intro": "The XIS measures neutron leakage outside the core and turns it into a power signal for the RPS and NIC. It is analog, with one detector per division.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the XIS.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the XIS boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the XIS.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain XIS operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the XIS controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the XIS automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the XIS.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the XIS.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the XIS.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the XIS.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-18-nuclear-instrumentation-system"
+}

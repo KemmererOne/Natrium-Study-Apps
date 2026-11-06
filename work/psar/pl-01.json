@@ -1,0 +1,497 @@
+{
+ "concepts": [
+  {
+   "title": "What Kemmerer Unit 1 is",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Kemmerer Unit 1 is a Natrium reactor plant in Lincoln County, Wyoming, about 3 miles southwest of Kemmerer.",
+     "anchor": "approximately 3 miles (4.8 km) southwest of Kemmerer, Wyoming",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1, p. 1.1-1"
+    },
+    {
+     "t": "p",
+     "text": "It is licensed under 10 CFR Part 50, and this PSAR supports the construction permit application.",
+     "anchor": "is requesting approval for a construction permit of an 840 megawatt thermal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1, p. 1.1-1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "The plant is built as part of the DOE Advanced Reactor Demonstration Program.",
+     "anchor": "Advanced Reactor Demonstration Program (ARDP)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.2, p. 1.1-1"
+    },
+    {
+     "t": "p",
+     "text": "The reactor uses sodium-bonded metallic fuel with HT9 cladding, which is a high chromium martensitic steel.",
+     "anchor": "The reactor uses sodium-bonded metallic fuel with high chromium martensitic steel (HT9) cladding",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1, p. 1.1-2"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-1-1-1",
+     "num": "1.1-1",
+     "cap": "Heat Transport Systems Overview Highlighting Operational Interface",
+     "alt": "PSAR Rev 1 figure: Heat Transport Systems Overview Highlighting Operational Interface",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.4.9, p. 1.1-23"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is the licensed thermal rating described for Kemmerer Unit 1?",
+     "o": [
+      "500 MWt",
+      "840 MWt",
+      "1000 MWt",
+      "345 MWt"
+     ],
+     "a": 1,
+     "x": "The PSAR describes an 840 MWt reactor. The 500 figure is net electrical output in megawatts electric, available through the salt storage system.",
+     "anchor": "The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1",
+     "eo": "1"
+    },
+    {
+     "q": "What lets the plant vary its supply to the grid while reactor power stays constant?",
+     "o": [
+      "Control rod motion",
+      "Primary pump speed changes",
+      "The molten salt energy storage system",
+      "Steam dump valves"
+     ],
+     "a": 2,
+     "x": "The molten salt storage system lets grid output vary up to 500 MWe net while reactor power stays constant.",
+     "anchor": "molten salt energy storage system which enables the plant to vary its supply of energy to the grid",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "The heat path",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The reactor operates near atmospheric pressure, and pumps circulate sodium through the core.",
+     "anchor": "The reactor operates near atmospheric pressure, circulating sodium through its core with pumps",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "From",
+      "To",
+      "Through"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Core",
+        "Primary sodium (PHT)",
+        "Upward flow through the core assemblies"
+       ],
+       "anchor": "flows upwards to remove the heat generated from the fuel pins",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.1, p. 1.1-3"
+      },
+      {
+       "cells": [
+        "2",
+        "Primary sodium (PHT)",
+        "Intermediate sodium (IHT)",
+        "Intermediate heat exchangers in the reactor pool"
+       ],
+       "anchor": "via intermediate heat exchangers located in the reactor pool",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+      },
+      {
+       "cells": [
+        "3",
+        "Intermediate sodium (IHT)",
+        "Nuclear Island Salt System (NSS)",
+        "Sodium-salt heat exchangers"
+       ],
+       "anchor": "Salt System (NSS) via sodium-salt heat exchangers",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+      },
+      {
+       "cells": [
+        "4",
+        "NSS",
+        "Hot salt storage tank (EI)",
+        "Salt piping between the islands"
+       ],
+       "anchor": "Energy Island (EI) hot salt storage tank for thermal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+      },
+      {
+       "cells": [
+        "5",
+        "Hot salt",
+        "Steam turbine generators",
+        "Steam generation"
+       ],
+       "anchor": "The heat stored in the hot salt tank is used to generate steam",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "During startup and shutdown the intermediate loop rejects heat to the atmosphere through the Intermediate Air Cooling System sodium-air heat exchanger instead of the salt path.",
+     "anchor": "to the atmosphere via the Intermediate Air Cooling System (IAC) sodium-air heat exchanger during startup and shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1, p. 1.1-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where does heat cross from primary sodium to intermediate sodium?",
+     "o": [
+      "Intermediate heat exchangers in the reactor pool",
+      "The hot salt storage tank",
+      "Sodium-salt heat exchangers",
+      "Sodium-air heat exchangers"
+     ],
+     "a": 0,
+     "x": "Heat moves from the primary loop to the intermediate loop through the intermediate heat exchangers in the reactor pool.",
+     "anchor": "via intermediate heat exchangers located in the reactor pool",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1",
+     "eo": "2"
+    },
+    {
+     "q": "Where does the intermediate loop send heat during startup and shutdown?",
+     "o": [
+      "To the atmosphere through the IAC sodium-air heat exchanger",
+      "To the hot salt tank only",
+      "To the guard vessel",
+      "To the condenser"
+     ],
+     "a": 0,
+     "x": "The intermediate loop transfers heat to the NSS for normal steady operation, and to the atmosphere through the IAC during startup and shutdown.",
+     "anchor": "sodium-air heat exchanger during startup and shutdown",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1, p. 1.1-3",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Nuclear Island and Energy Island",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Nuclear Island contains the reactor and its supporting systems.",
+     "anchor": "The NI, which contains the reactor and its supporting systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+    },
+    {
+     "t": "p",
+     "text": "The Energy Island contains the thermal energy storage tanks, steam generator, feedwater system, condenser, turbine, and supporting systems.",
+     "anchor": "thermal energy storage tanks, steam generator, feedwater system, condenser, turbine, and supporting EI systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "The salt system physically connects the islands and stores excess thermal energy, so steam generation can run independently from reactor power operations.",
+     "anchor": "providing a buffer that allows steam generation and thermal energy storage operations",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-1-1-2",
+     "num": "1.1-2",
+     "cap": "Plant Layout",
+     "alt": "PSAR Rev 1 figure: Plant Layout",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.4.9, p. 1.1-24"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How are Energy Island structures, systems, and components classified?",
+     "o": [
+      "Non-safety-related with no special treatment",
+      "Risk-significant",
+      "Safety-related",
+      "Non-safety-related with special treatment"
+     ],
+     "a": 0,
+     "x": "The PSAR classifies EI SSCs as non-safety-related with no special treatment (NST).",
+     "anchor": "The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST)",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Inherent and passive features",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The PSAR names near-atmospheric operating pressures, always-on passive air cooling, and inherent reactivity feedback as reliable inherent and passive safety features.",
+     "anchor": "near-atmospheric operating pressures, always-on passive air cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+    },
+    {
+     "t": "p",
+     "text": "Safety functions are made integral to the reactor vessel, and support equipment moves to separate structures, which simplifies the reactor building.",
+     "anchor": "Safety functions are made integral to the reactor vessel",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1, p. 1.1-2"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-1-1-3",
+     "num": "1.1-3",
+     "cap": "Heat Removal",
+     "alt": "PSAR Rev 1 figure: Heat Removal",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.4.9, p. 1.1-25"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-1-1-4",
+     "num": "1.1-4",
+     "cap": "Safety Features",
+     "alt": "PSAR Rev 1 figure: Safety Features",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.4.9, p. 1.1-26"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is one of the safety features the PSAR lists for the design?",
+     "o": [
+      "Always-on passive air cooling",
+      "High-pressure safety injection",
+      "A pressurizer relief tank",
+      "A large dry containment spray"
+     ],
+     "a": 0,
+     "x": "The PSAR lists near-atmospheric pressure, always-on passive air cooling, and inherent reactivity feedback.",
+     "anchor": "always-on passive air cooling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "Reactor systems at a glance",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "System",
+      "Function in one line"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Reactor Core System (RCC)",
+        "Sustains the chain reaction for fission heat within thermal-mechanical limits"
+       ],
+       "anchor": "designed to sustain a nuclear chain reaction for fission heat generation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.1, p. 1.1-3"
+      },
+      {
+       "cells": [
+        "Reactor Enclosure System (RES)",
+        "Supports the PHT, RCC, and CRD, and contains the primary sodium"
+       ],
+       "anchor": "provides all structural, functional, and interface support for the PHT, RCC, and Control Rod Drive System",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.2, p. 1.1-3"
+      },
+      {
+       "cells": [
+        "Primary Heat Transport (PHT)",
+        "Moves heat from the core to the IHT"
+       ],
+       "anchor": "The principal function of the PHT is to transport heat from the reactor core to the IHT",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.4, p. 1.1-4"
+      },
+      {
+       "cells": [
+        "Intermediate Heat Transport (IHT)",
+        "Moves heat away from the PHT to the NSS or the IAC"
+       ],
+       "anchor": "The IHT primary function is to transport heat away from the PHT",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.5, p. 1.1-4"
+      },
+      {
+       "cells": [
+        "Reactor Air Cooling (RAC)",
+        "Passive decay heat removal by natural convection of air"
+       ],
+       "anchor": "provide passive decay heat removal to the environment through natural convection of air",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.3, p. 1.1-4"
+      },
+      {
+       "cells": [
+        "Intermediate Air Cooling (IAC)",
+        "Preferred heat removal system during upset events"
+       ],
+       "anchor": "The IAC is the preferred heat removal system for the reactor during upset events",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.6, p. 1.1-5"
+      },
+      {
+       "cells": [
+        "Sodium Cover Gas (SCG)",
+        "Controls, monitors, and supplies inert argon gas"
+       ],
+       "anchor": "controls, monitors, and supplies inert argon gas",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.7, p. 1.1-5"
+      },
+      {
+       "cells": [
+        "Sodium Processing (SPS)",
+        "Monitors and removes contaminants from liquid sodium"
+       ],
+       "anchor": "monitors and removes contaminants including cesium",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.8, p. 1.1-6"
+      },
+      {
+       "cells": [
+        "Control Rod Drive (CRD)",
+        "Reactivity control for power control, power shaping, and shutdown"
+       ],
+       "anchor": "core power control, power shaping, and reactor shutdown",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.9, p. 1.1-6"
+      },
+      {
+       "cells": [
+        "Reactor Protection (RPS)",
+        "Initiates reactor scram and engineered safety feature functions"
+       ],
+       "anchor": "initiate safety functions including reactor scram and engineered safety feature functions",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.11, p. 1.1-7"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which system does the PSAR call the preferred heat removal system during upset events?",
+     "o": [
+      "PHT",
+      "RAC",
+      "IAC",
+      "SCG"
+     ],
+     "a": 2,
+     "x": "The IAC is the preferred heat removal system during upset events. The RAC is the always-on passive system.",
+     "anchor": "The IAC is the preferred heat removal system for the reactor during upset events",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.6, p. 1.1-5",
+     "eo": "5"
+    },
+    {
+     "q": "What is the primary objective of the RAC?",
+     "o": [
+      "Provide passive decay heat removal by natural convection of air",
+      "Store thermal energy",
+      "Purify sodium",
+      "Supply argon"
+     ],
+     "a": 0,
+     "x": "RAC provides passive decay heat removal to the environment through natural convection of air.",
+     "anchor": "provide passive decay heat removal to the environment through natural convection of air",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.4.1.3, p. 1.1-4",
+     "eo": "5"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Kemmerer Unit 1 is an 840 MWt pool-type sodium fast reactor with molten salt energy storage and up to 500 MWe net to the grid.",
+   "anchor": "The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+  },
+  {
+   "text": "Heat flows from core to primary sodium, to intermediate sodium, to salt, and then to steam.",
+   "anchor": "The heat stored in the hot salt tank is used to generate steam",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+  },
+  {
+   "text": "The Energy Island is non-safety-related with no special treatment.",
+   "anchor": "The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST)",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The Natrium reactor plant is an 840 MWt pool-type sodium fast reactor (SFR) that contains a compact and simple safety envelope and a molten salt energy storage system which enables the plant to vary its supply of energy to the grid, up to 500 megawatts electric (MWe) net, while maintaining constant reactor power.",
+   "sec": "Sec. 1.1.3",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-1"
+  },
+  {
+   "id": "P2",
+   "quote": "The EI structures, systems, and components (SSCs) are classified as non-safety-related with no special treatment (NST).",
+   "sec": "Sec. 1.1.3",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1.3, p. 1.1-2"
+  }
+ ],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "PL-01",
+ "title": "Plant Overview",
+ "kind": "topic",
+ "subject": "plant",
+ "sec_note": "Sec. 1.1, pp. 1.1-1 to 1.1-26",
+ "intro": "This lesson gives the whole plant on one map: what it is, how heat leaves the core, and how the Nuclear Island and Energy Island divide the work.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the rated thermal power, reactor type, and electrical output of Kemmerer Unit 1.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Trace the heat path from the core to the steam turbine generator.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Distinguish the Nuclear Island from the Energy Island.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Identify the inherent and passive safety features of the design.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Match the major reactor systems to their functions.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-pl-01-plant-overview"
+}

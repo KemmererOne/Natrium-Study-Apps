@@ -1,0 +1,94 @@
+# SY-10 | Water Pool Fuel Handling System | system | FHP
+range: 7.3-1 7.3-16
+sec: Sec. 7.3.1, pp. 7.3-1 to 7.3-16
+intro: The FHP is where spent fuel ends up. It takes assemblies out of sodium, cleans them, and stores them under water with passive cooling as the safety function.
+
+== Purpose and subsystems | 1,2
+S The FHP gives a water-based environment for intermediate-term storage of spent fuel and stores non-fuel irradiated core assemblies before disposal. @@ provides a water-based environment for the intermediate-term storage of spent fuel
+S It provides core assembly cooling, spent fuel reactivity control, fission product containment, and radiation shielding. @@ The FHP provides core assembly cooling, spent fuel reactivity control
+T Subsystem | Job
+R SFP, Spent Fuel Pool | Water-filled, lined concrete pool below grade in the FHB substructure @@ is a water-filled, concrete pool located below-grade within the Fuel Handling Building
+R PIC, Pool Immersion Cell | Moves core assemblies from a sodium environment to water @@ transitions core assemblies being stored in a sodium environment to a water-filled environment
+R FPC, Fuel Pool Cooling | Normal cooling for the SFP @@ The FPC is the normal cooling system for the SFP
+R FPP, Fuel Pool Purification | Filters and purifies SFP water @@ Filtration and purification of the SFP water is provided by the FPP
+S The SFP has three operational zones: the PIC cavity, the cask loading pit, and the fuel storage area. @@ the PIC cavity, the cask loading pit, and the fuel storage area
+F 7.3.1-1
+K Which FHP subsystem moves assemblies from sodium to water? | SFP | PIC | FPC | FPP | 1 | The PIC transitions core assemblies from a sodium environment to a water-filled environment. @@ transitions core assemblies being stored in a sodium environment to a water-filled environment
+K Which is one of the three SFP zones? | Cask loading pit | Head access area | Transfer tube | Drip pan | 0 | The zones are the PIC cavity, the cask loading pit, and the fuel storage area. @@ the PIC cavity, the cask loading pit, and the fuel storage area
+
+== Spent fuel pool and racks | 3,4
+S The SFP is sized for ten years of spent fuel from normal operation plus other core assemblies. @@ The SFP is sized to provide storage for ten years of spent fuel
+S Total water inventory is approximately 574,000 gallons. @@ The total SFP water inventory is approximately 574,000 gallons
+S A full SFP heat load is approximately 225 kilowatts. @@ approximately 225 kilowatts for a full SFP
+S The fuel storage area holds seven intact fuel racks and one failed fuel rack. @@ contains seven storage racks for core assembly storage
+S The stainless steel liner has a leak chase system. There are no pool wall penetrations below the elevation of stored core assemblies. @@ There are no pool wall penetrations below the elevation of the stored core assemblies
+S The SFP does not use soluble boron. Racks hold fuel subcritical by geometry control and fixed borated neutron absorbers. @@ Since the SFP does not employ soluble boron
+S The racks do not rely on specific zoning of fuel assemblies to stay subcritical. @@ The storage racks do not rely upon specific zoning of fuel assemblies
+F 7.3.1-2
+K How does the SFP maintain subcriticality? | Soluble boron | Geometry control and fixed borated absorbers | Control rods | Fuel zoning | 1 | The SFP has no soluble boron. It uses spacing and fixed borated neutron absorbers. @@ Since the SFP does not employ soluble boron
+K What is the approximate SFP water inventory? | 57,400 gallons | 225,000 gallons | 574,000 gallons | 1,000,000 gallons | 2 | Total inventory is approximately 574,000 gallons. @@ The total SFP water inventory is approximately 574,000 gallons
+
+== Pool immersion cell | 3,4,6
+S The BLTC transfers core assemblies into the PIC, where a cleaning vessel gives a controlled environment to chemically clean and remove residual sodium. @@ provides a controlled environment within the PIC to chemically clean and remove residual sodium coolant
+S The cleaning vessel isolates assemblies from the surroundings to prevent sodium-water interactions. @@ isolates core assemblies from the surrounding environment to prevent sodium-water interactions
+S During cleaning, heat passes through the cleaning vessel to the SFP water. @@ heat is passively transferred through the cleaning vessel to the SFP water
+S Gaseous effluent is filtered and sent to the FHB portion of the NI HVAC. Liquid effluent goes to the FPP. @@ while liquid effluent is transferred to the FPP
+S After cleaning and rinsing, the PIC elevator lowers the assembly, and a horizontal trolley moves it upright to the cask loading pit. @@ the PIC uses a horizontal trolley to transfer the core assembly upright to the cask loading pit area
+T Interlock or indication | Prevents
+R Pressure and flow sensors | Give positive indication that excess water is purged before an assembly transfers into the PIC @@ to provide positive indication that the cleaning vessel has been purged of excess water
+R PIC rinse water pump interlock | Inadvertent pump operation that adds excess water to the cleaning vessel @@ the PIC rinse water pump design includes an interlock
+R PIC basket lock interlock | Lowering the cleaning vessel into the SFP before residual sodium is removed @@ The lock disengagement involves an interlock to prevent lowering of the cleaning vessel
+K What does the PIC basket lock interlock prevent? | Lowering the cleaning vessel into the SFP before residual sodium is removed | Rinse pump start | Opening the fueling floor valve | Moving the PHM | 0 | Lock disengagement involves an interlock so the vessel cannot be lowered before sodium removal. @@ The lock disengagement involves an interlock to prevent lowering of the cleaning vessel
+K Why does the rinse water pump have an interlock? | To prevent adding excess water to the cleaning vessel | To protect pump seals | To keep the pool level high | To limit dose | 0 | The interlock prevents inadvertent pump operation that could introduce excess water. @@ the PIC rinse water pump design includes an interlock
+
+== Failed fuel | 4,8
+S A fuel assembly with indicated cladding damage is sealed in an FFC inerted with helium. @@ encapsulate a fuel assembly with indicated fuel pin cladding damage inside an FFC
+S No sodium cleaning occurs. The failed assembly goes directly into the FFC from the BLTC. @@ No sodium cleaning occurs for a failed fuel assembly
+S The FFC prevents metallic uranium-water interactions and sodium-water reactions that can occur due to cladding failure in sodium-bonded fuel. @@ prevent metallic uranium-water interactions and sodium-water reactions
+S Closure welds are done after the canister is voided and back-filled, while the FFC is in the PIC basket. @@ closure welds are performed while the FFC is contained in the PIC basket
+S If a spent fuel assembly fails in the SFP, the PIC can bring it back for canisterization. @@ the PIC includes design features to transport the failed fuel assembly back to the PIC for canisterization
+K How is a failed fuel assembly treated before entering the FFC? | Chemically cleaned | Rinsed in the PIC | No sodium cleaning occurs | Stored in the EVST | 2 | No sodium cleaning occurs for a failed fuel assembly. It goes directly into the FFC. @@ No sodium cleaning occurs for a failed fuel assembly
+K What gas inerts the FFC? | Argon | Helium | Nitrogen | Air | 1 | The FFC is inerted with helium. @@ inside an FFC that is inerted with
+
+== Normal cooling and purification | 3,4
+S The FPC is NST. It has two independent trains that send heat to the NI Water System. @@ The FPC consists of two independent cooling trains
+S Each train is sized for the entire SFP heat load. @@ Each train is sized to remove the entire heat load of the SFP
+S The FPP is a single purification train with anion and cation exchange resins. @@ The FPP consists of a single purification train
+S FPC and FPP suction and discharge lines are located to prevent draining the SFP below a minimum safe level. @@ The suction and discharge lines of the FPC are located to prevent draining
+K How many FPC trains are needed to remove the entire SFP heat load? | One | Two | Three | Four | 0 | Each of the two trains is sized to remove the entire heat load. @@ Each train is sized to remove the entire heat load of the SFP
+K An FPC line ruptures. What protects the pool level? | Automatic isolation by the RPS | Location of the suction and discharge lines | Manual valves only | A second liner | 1 | The lines are located to prevent draining below a minimum safe level. @@ The suction and discharge lines of the FPC are located to prevent draining
+
+== Loss of cooling and makeup | 4,8
+S If normal cooling is unavailable, core assemblies are cooled passively by natural circulation in the SFP. @@ then core assemblies are passively cooled by natural circulation within the SFP
+S If active cooling is lost, the SFP relies on evaporation and redundant makeup systems. @@ the SFP relies on evaporation to passively cool spent fuel assemblies
+S The water volume cools spent fuel for at least 7 days without makeup at a full SFP heat load. @@ The water volume of the SFP cools spent fuel for at least 7 days without makeup
+S Normal makeup comes from the NI Water System. Emergency makeup comes from offsite sources through an external fill leg. @@ Makeup water is provided from a connection to NI Water System during normal operations
+S No powered SSCs are needed for emergency makeup through the fill leg. @@ No powered SSCs are required to provide emergency makeup water via the exterior fill leg
+S SFP level sensors start refill on low level during normal operation and also support PAM. @@ The SFP water level sensors initiate SFP refill upon detection of low water level during normal operation
+K Both FPC trains are lost with a full pool. How long does the SFP cool fuel without makeup? | At least 72 hours | At least 7 days | At least 30 days | 24 hours | 1 | The water volume cools spent fuel for at least 7 days without makeup. @@ The water volume of the SFP cools spent fuel for at least 7 days without makeup
+K What powered equipment does emergency makeup through the exterior fill leg need? | FPC pumps | The NI Water System | None | The PHM | 2 | No powered SSCs are required. @@ No powered SSCs are required to provide emergency makeup water via the exterior fill leg
+
+== Handling and controls | 3,5,6
+S The PHM is a gantry-and-hoist crane that moves assemblies underwater from the cask loading pit to the racks. @@ with the pool handling machine (PHM) gantry-and-hoist style crane
+S A mechanical positive control system ensures core assemblies cannot be dropped. @@ A mechanical positive control system ensures core assemblies cannot be dropped
+S PHM vertical motion limits and interlocks keep a minimum water height above core assemblies for shielding. @@ The PHM vertical motion limits and interlocks ensure that core assemblies have a minimum water height
+S The PHM is operated locally, and its data is monitored by the FHC. @@ The PHM is operated locally and the equipment data is monitored by FHC
+S The FHC monitors and controls fuel handling from the Fuel Handling Control Room. It is NST. @@ classified as non-safety-related with no special treatment
+S The SFP has redundant level and temperature instruments. @@ The SFP contains redundant level and temperature instruments
+K What keeps minimum water shielding over an assembly on the PHM? | Vertical motion limits and interlocks | Operator judgment alone | The FHC safety function | Pool liner height | 0 | Vertical motion limits and interlocks ensure a minimum water height. @@ The PHM vertical motion limits and interlocks ensure that core assemblies have a minimum water height
+
+== Safety significance | 9,10
+T Function | Class | FHP support
+R DL3-HR10 passive heat removal | SR | Natural circulation in the SFP if normal cooling is unavailable @@ DL3-HR10 Passive Heat Removal in FHP
+R DL3-HR13 heat removal in the FFC | SR | Cold wall conduction from the FFC to the SFP @@ cooled (SR) passively via cold wall conduction from the FFC to the SFP
+R DL3-RR8 FFC barrier | SR | Radionuclide confinement and no sodium-water interaction with the pool @@ DL3-RR8 Failed Fuel Canister Barrier (SR)
+R DL3-RR5a BLTC transfer barrier | SR | Containment barrier in a BLTC to PIC transfer @@ DL3-RR5a BLTC Transfer Barrier (SR)
+R DL4-HR4 emergency makeup | NSRST | External connection with unobstructed flow @@ DL4-HR4 FHP Emergency Makeup
+R DL2-RR2 PIC radionuclide boundary | NSRST | Functional containment when an assembly is in the PIC @@ DL2-RR2 PIC Radionuclide Boundary
+R DL5-PAM1 post accident monitoring | NSRST | SFP level and temperature signals @@ DL5-PAM1 Post Accident Monitoring
+S RG 1.13 conformance is partial. Normal makeup is not Seismic Category I, and the design precludes a full core offload into the SFP. @@ the design precludes a full core offload into the SFP
+L Quality Assurance Program ;; Equipment Qualification Program ;; Design Reliability Assurance Program ;; Post Construction Inspection, Testing, and Analysis Program ;; Reliability and Integrity Management Program @@ The programmatic special treatments, described in Section 8.0, that are applicable to FHP include
+K Which FHP function is safety-related? | Normal FPC cooling | Passive heat removal in the SFP | Emergency makeup | FPP purification | 1 | DL3-HR10 is SR. FPC is NST, and emergency makeup is NSRST. @@ DL3-HR10 Passive Heat Removal in FHP
+Z The PIC cleans sodium off assemblies and moves them into the pool. Failed fuel skips cleaning and goes into a helium-filled FFC. @@ No sodium cleaning occurs for a failed fuel assembly
+Z The SFP stays subcritical through rack geometry and fixed borated absorbers, with no soluble boron. @@ Since the SFP does not employ soluble boron
+Z FPC is the normal cooling. The SR function is passive, and the pool lasts at least 7 days without makeup. @@ The water volume of the SFP cools spent fuel for at least 7 days without makeup

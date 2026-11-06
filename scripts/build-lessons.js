@@ -362,14 +362,14 @@ const option = m => {
     ? `        <option value="../topics/${t.slug}/" data-title="${esc(m.title)}" data-where="${esc(where)}" data-status="${esc(status)}">${esc(m.title)} (${esc(status)})</option>`
     : `        <option disabled>${esc(m.title)} (In progress)</option>`;
 };
-write("lessons/index.html", `<!doctype html>
+const planPage = ({ file, title, total, groups, intro }) => write(file, `<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="192x192" href="../flashcards/icons/icon-192.png">
-<title>Lesson Plans</title>
+<title>${esc(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
@@ -419,13 +419,14 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
 <main class="wrap">
  <div class="pane">
   <a class="home" href="../"><span aria-hidden="true">←</span> Home</a>
-  <h1>Lesson Plans</h1>
+  <h1>${esc(title)}</h1>
+  ${intro}
   <div>
     <label for="plan">Choose a lesson plan</label>
     <select id="plan">
       <option value="">Select a lesson plan</option>
-${[...groups].map(([title, mods]) => `      <optgroup label="${esc(title)}">
-${mods.map(option).join("\n")}
+${groups.map(g => `      <optgroup label="${esc(g.title)}">
+${g.options}
       </optgroup>`).join("\n")}
     </select>
   </div>
@@ -436,14 +437,14 @@ ${mods.map(option).join("\n")}
     <p id="chosen-progress"></p>
     <a class="big" id="start">Start lesson</a>
   </section>
-  <p class="note" id="progress">0 of ${topics.length} lessons completed</p>
+  <p class="note" id="progress">0 of ${total} lessons completed</p>
   <p class="note">Lesson progress is kept only on this device.</p>
   <p class="note"><a href="../reference/#lesson-references">References</a></p>
  </div>
  <section class="all" aria-label="All lesson plans">
   <h2>All lesson plans</h2>
   <div class="groups">
-${[...groups].map(([title, mods]) => `   <div class="group"><h3>${esc(title)} <span></span></h3><ul>${mods.map(planLink).join("")}</ul></div>`).join("\n")}
+${groups.map(g => `   <div class="group"><h3>${esc(g.title)} <span></span></h3><ul>${g.links}</ul></div>`).join("\n")}
   </div>
  </section>
 </main>
@@ -488,12 +489,63 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
 </script>
 </html>
 `);
+planPage({
+  file: "lessons/index.html", title: "Fundamentals Lesson Plans", total: topics.length, intro: "",
+  groups: [...groups].map(([title, mods]) => ({ title, options: mods.map(option).join("\n"), links: mods.map(planLink).join("") }))
+});
 
-// The landing page has one button for the lessons, like the two apps
+// PSAR lessons: their own pages, and their own plans page with the same selector and tracking
+const psar = require("./build-psar.js")({ at, read, write, esc, cite, CSS, SCRIPT, mailto });
+
+// PSAR lesson checks go to the quiz. As with the topics, a question already in the file is not added again.
+function exportPsarChecks() {
+  const plan = JSON.parse(read("work/psar/plan.json")), c = load();
+  const has = new Set(c.QS.map(q => q.q));
+  let next = Math.max(...c.QS.map(q => +q.id.slice(1))) + 1;
+  // Lessons in groups the quiz already splits or names differently keep the quiz's existing topic
+  const place = { "SY-13": "Radwaste Systems", "SY-14": "Ancillary Systems", "SY-15": "Ancillary Systems", "SY-23": "Electrical Systems", "SY-24": "Buildings and Structures" };
+  const topicOf = id => place[id] || (g => g === "Instrumentation and Control" ? "Integrated Controls Systems" : g)(plan.groups.find(g => g.lessons.includes(id)).title);
+  const sup = s => s.replace(/(\d)x10-(\d+)/g, (m, a, n) => a + "×10⁻" + [...n].map(d => "⁰¹²³⁴⁵⁶⁷⁸⁹"[d]).join(""));
+  // Number choices stay in ascending order in the quiz (seq), like the other numeric questions
+  const size = o => parseFloat(o.replace(/,/g, "")) * (/\byears?\b/.test(o) ? 31536000 : /\bdays?\b/.test(o) ? 86400 : /\bhours?\b/.test(o) ? 3600 : 1);
+  const lines = [], log = [];
+  for (const t of psar.lessons) for (const con of t.concepts) for (const k of con.checks) {
+    const q = sup(k.q);
+    if (has.has(q)) continue;
+    has.add(q);
+    let o = k.o.map(sup), a = k.a, seq = "";
+    if (o.every(x => /^[\d.,]+\b/.test(x)) && !o.some(x => x.startsWith("10 CFR"))) {
+      const right = o[a];
+      o = o.slice().sort((x, y) => size(x) - size(y));
+      a = o.indexOf(right);
+      seq = ", seq: true";
+    }
+    const id = "Q" + next++, topic = "PSAR: " + topicOf(t.id);
+    lines.push(`  { id: ${JSON.stringify(id)}, t: "PSAR design basis", topic: ${JSON.stringify(topic)}, q: ${JSON.stringify(q)},\n    o: ${JSON.stringify(o)}, a: ${a},\n    x: ${JSON.stringify(sup(k.x))},\n    src: ${JSON.stringify(k.cite)}${seq} },`);
+    log.push(`- **${id}** (${topic}): ${q}\n  - Source: ${k.cite}\n  - Quote: "${k.anchor}"`);
+  }
+  if (!lines.length) return;
+  const s = read("quiz/questions.js"), end = s.lastIndexOf("];");
+  write("quiz/questions.js", s.slice(0, end) + lines.join("\n") + "\n" + s.slice(end));
+  write("quiz/sw.js", read("quiz/sw.js").replace(/VERSION = "v(\d+)"/, (m, n) => `VERSION = "v${+n + 1}"`));
+  write("CHANGELOG.md", read("CHANGELOG.md").trimEnd() + `\n\n## ${today}: PSAR lesson plans (knowledge checks)\n\nAdded ${lines.length} quiz questions from the PSAR lesson plans.\n\n` + log.join("\n") + "\n");
+  console.log(`Exported ${lines.length} PSAR questions`);
+}
+exportPsarChecks();
+planPage({
+  file: "psar/index.html", title: "PSAR Lesson Plans", total: psar.lessons.length, groups: psar.groups,
+  intro: `<p class="note">Written from the Kemmerer Unit 1 PSAR, Revision 1. A construction-stage document, so an introduction to NRC exam preparation, not a replacement for plant procedures.</p>`
+});
+
+// The landing page has a button for each lesson set, like the two apps
 const lessons = `<!-- lessons:start (generated by scripts/build-lessons.js) -->
   <div class="choice">
-    <a class="big" href="lessons/">Lesson Plans</a>
-    <p class="note" id="lesson-note" data-total="${topics.length}">${topics.length} lesson plans</p>
+    <a class="big" href="lessons/">Fundamentals Lesson Plans</a>
+    <p class="note lesson-note" data-prefix="topics" data-total="${topics.length}">${topics.length} lesson plans</p>
+  </div>
+  <div class="choice">
+    <a class="big" href="psar/">PSAR Lesson Plans</a>
+    <p class="note lesson-note" data-prefix="psar" data-total="${psar.lessons.length}">${psar.lessons.length} lesson plans</p>
   </div>
   <!-- lessons:end -->`;
 write("index.html", read("index.html").replace(/<!-- lessons:start[\s\S]*?<!-- lessons:end -->/, () => lessons));
@@ -510,13 +562,15 @@ for (const { t, ref } of built) {
     bySource.get(w.file).lessons.push({ module: ref.module, title: t.title, slug: t.slug, pages: w.slides, label: w.file === PSAR_FILE ? "pages" : "slides" });
   }
 }
+if (!bySource.has(psar.file)) bySource.set(psar.file, { doc: "Kemmerer Unit 1 PSAR", file: psar.file, lessons: [] });
+bySource.get(psar.file).lessons.push(...psar.sources);
 write("topics/sources.json", JSON.stringify([...bySource.values()], null, 1) + "\n");
 cp.execFileSync("node", [at("reference/generate.js")], { stdio: "inherit" });
 
 // 5. Root service worker: new topic URLs are listed, and any content change bumps VERSION
-const urls = topics.map(t => `./topics/${t.slug}/`);
+const urls = [...topics.map(t => `./topics/${t.slug}/`), "./psar/", ...psar.lessons.map(t => `./psar/${t.slug}/`)];
 const hash = crypto.createHash("sha256");
-["index.html", "lessons/index.html", "feedback.js", "reference/index.html", ...topics.map(t => `topics/${t.slug}/index.html`)].forEach(f => hash.update(read(f)));
+["index.html", "lessons/index.html", "psar/index.html", "feedback.js", "reference/index.html", ...topics.map(t => `topics/${t.slug}/index.html`), ...psar.lessons.map(t => `psar/${t.slug}/index.html`)].forEach(f => hash.update(read(f)));
 const digest = hash.digest("hex").slice(0, 12);
 let sw = read("sw.js");
 if (!sw.includes(`CONTENT = "${digest}"`)) {

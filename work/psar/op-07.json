@@ -1,0 +1,467 @@
+{
+ "concepts": [
+  {
+   "title": "Program objectives",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The primary objective is to show the plant was built as designed and that safety-significant SSCs perform consistent with the design.",
+     "anchor": "is to demonstrate that the plant has been constructed as designed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1"
+    },
+    {
+     "t": "p",
+     "text": "It also shows that fuel load, criticality, and power ascension are done in a controlled and safe manner.",
+     "anchor": "are performed in a controlled and safe manner",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1"
+    },
+    {
+     "t": "p",
+     "text": "It gives assurance that operators know the procedures and are prepared to operate safely.",
+     "anchor": "the plant operations personnel are knowledgeable about the plant operating procedures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1"
+    },
+    {
+     "t": "p",
+     "text": "A graded approach is used.",
+     "anchor": "A graded approach is used to develop and implement the PITAP",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What is a PITAP objective for operators?",
+     "o": [
+      "That they know the procedures and are prepared",
+      "That they design tests",
+      "That they build systems",
+      "That they approve licenses"
+     ],
+     "a": 0,
+     "x": "The program gives assurance that personnel are knowledgeable and prepared.",
+     "anchor": "the plant operations personnel are knowledgeable about the plant operating procedures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-1",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Stages and roles",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Stage",
+      "Testing",
+      "Performed by"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Construction testing",
+        "Construction organization"
+       ],
+       "anchor": "Stage 1, construction testing performed by the construction organization",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2"
+      },
+      {
+       "cells": [
+        "2",
+        "Component testing",
+        "Construction start-up group"
+       ],
+       "anchor": "Stage 2, component testing performed by the construction start-up group",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2"
+      },
+      {
+       "cells": [
+        "3",
+        "System testing",
+        "Construction start-up group"
+       ],
+       "anchor": "Stage 3, system testing performed by the construction start-up group",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2"
+      },
+      {
+       "cells": [
+        "4",
+        "Initial startup testing",
+        "Licensed operators"
+       ],
+       "anchor": "Stage 4, initial startup testing performed by licensed operators",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The design organization owns test objectives, prerequisites, safety precautions, and acceptance criteria.",
+     "anchor": "is responsible for the test objectives, prerequisites, safety precautions, and acceptance criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1"
+    },
+    {
+     "t": "p",
+     "text": "The commissioning team determines test sequence and scheduling.",
+     "anchor": "The commissioning team is responsible for determining test sequence and scheduling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1"
+    },
+    {
+     "t": "p",
+     "text": "In Stage 4, trained operations personnel do the work with approved procedures.",
+     "anchor": "All work is performed by appropriately trained operations personnel utilizing approved procedures",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1"
+    },
+    {
+     "t": "p",
+     "text": "RG 1.68 informs planning and execution.",
+     "anchor": "is used to inform planning and execution of the post-construction inspection, testing, and analysis program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Who performs Stage 2 component testing?",
+     "o": [
+      "Operations",
+      "NRC",
+      "Construction organization",
+      "Construction start-up group"
+     ],
+     "a": 3,
+     "x": "Stage 2 is performed by the construction start-up group.",
+     "anchor": "Stage 2, component testing performed by the construction start-up group",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.1, p. 12.1-2",
+     "eo": "2"
+    },
+    {
+     "q": "Who sets test acceptance criteria?",
+     "o": [
+      "Operators",
+      "QA Manager",
+      "Design organization",
+      "Commissioning team"
+     ],
+     "a": 2,
+     "x": "The design organization is responsible for them.",
+     "anchor": "is responsible for the test objectives, prerequisites, safety precautions, and acceptance criteria",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1",
+     "eo": "2"
+    },
+    {
+     "q": "Who sets test sequence?",
+     "o": [
+      "Design organization",
+      "Commissioning team",
+      "NRC",
+      "Vendor"
+     ],
+     "a": 1,
+     "x": "The commissioning team determines sequence and scheduling.",
+     "anchor": "The commissioning team is responsible for determining test sequence and scheduling",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.2, p. 12.2-1",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Construction, component, and system testing",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Cable separation, continuity, megger, and high potential testing",
+      "Non-destructive testing of welds",
+      "Hydrostatic testing of piping",
+      "Hanger and pipe support inspections",
+      "Pump and valve alignments",
+      "Cleaning and flushing"
+     ],
+     "anchor": "During construction testing, various electrical and mechanical tests are performed",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.3, p. 12.3-1"
+    },
+    {
+     "t": "p",
+     "text": "Preoperational testing covers Stages 2 and 3.",
+     "anchor": "This testing is completed over Stages 2 and 3",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4, p. 12.4-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "System flushing and cleanliness verification",
+      "Electrical equipment testing",
+      "Loop checks and calibrations",
+      "Control system checks",
+      "Instrument calibrations",
+      "Individual component testing"
+     ],
+     "anchor": "Component testing is the second stage of the PITAP program",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4.1, p. 12.4-1"
+    },
+    {
+     "t": "p",
+     "text": "Component testing shows a component is ready to move from a static to a dynamic state.",
+     "anchor": "is ready to move from a static to a dynamic state",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4.1, p. 12.4-1"
+    },
+    {
+     "t": "p",
+     "text": "Stage 3 covers individual system testing, then integrated system testing.",
+     "anchor": "includes individual system testing, followed by integrated system testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4, p. 12.4-1"
+    },
+    {
+     "t": "p",
+     "text": "Stage 3 starts the test review group, which manages procedure changes and reviews results.",
+     "anchor": "System testing commences the use of the test review group",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4.2, p. 12.4-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is construction testing?",
+     "o": [
+      "Integrated system test",
+      "Hydrostatic testing of piping",
+      "Rod worth measurement",
+      "Power ascension"
+     ],
+     "a": 1,
+     "x": "Stage 1 includes hydrostatic testing.",
+     "anchor": "Hydrostatic testing of piping systems",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.3, p. 12.3-1",
+     "eo": "3"
+    },
+    {
+     "q": "When does the test review group start?",
+     "o": [
+      "Stage 2",
+      "Stage 3",
+      "Stage 4",
+      "Stage 1"
+     ],
+     "a": 1,
+     "x": "System testing commences the use of the test review group.",
+     "anchor": "System testing commences the use of the test review group",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.4.2, p. 12.4-1",
+     "eo": "3"
+    }
+   ]
+  },
+  {
+   "title": "Initial startup testing",
+   "eo": [
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Details of Phase 2 testing will be given at the OL stage.",
+     "anchor": "Phase 2 testing will be provided in the OL stage",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Fuel load starts after preoperational testing, handover to operations, and issuance of the operating license and operator licenses.",
+     "anchor": "Initial fuel loading starts after completion of preoperational testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Post-core hot function testing comes after fuel load and before criticality.",
+     "anchor": "prior to initial criticality",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Low-power physics tests verify selected core design parameters.",
+     "anchor": "a series of low-power physics tests is conducted to verify selected core design parameters",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.2, p. 12.5-1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Reactivity control system rod worth",
+      "Neutron monitoring operation and calibration",
+      "Neutron flux distribution",
+      "Neutron and gamma radiation surveys",
+      "Operability of alarms and low power protective features",
+      "Reactivity control system performance"
+     ],
+     "anchor": "Reactivity control system rod worth",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.2, p. 12.5-1"
+    },
+    {
+     "t": "p",
+     "text": "Power ascension shows the plant operates as designed in steady state and, as practicable, in anticipated transients.",
+     "anchor": "during steady-state conditions and, to the extent practicable, during anticipated transients",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.3, p. 12.5-2"
+    },
+    {
+     "t": "p",
+     "text": "Test hold points review results and confirm prerequisites before the next step.",
+     "anchor": "Test hold points are established at appropriate intervals to review test results",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What must be done before fuel load?",
+     "o": [
+      "Power ascension",
+      "Low power physics",
+      "Criticality",
+      "Preoperational testing, handover to operations, and license issuance"
+     ],
+     "a": 3,
+     "x": "Those conditions come first.",
+     "anchor": "Initial fuel loading starts after completion of preoperational testing",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1",
+     "eo": "4"
+    },
+    {
+     "q": "When is post-core hot function testing done?",
+     "o": [
+      "Before fuel load",
+      "After fuel load and before criticality",
+      "During power ascension",
+      "After full power"
+     ],
+     "a": 1,
+     "x": "It follows fuel loading and comes before initial criticality.",
+     "anchor": "prior to initial criticality",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1",
+     "eo": "4"
+    },
+    {
+     "q": "What are test hold points for?",
+     "o": [
+      "Reviewing results before moving on",
+      "Stopping the reactor",
+      "Fueling",
+      "Outages"
+     ],
+     "a": 0,
+     "x": "They review results and confirm prerequisites.",
+     "anchor": "Test hold points are established at appropriate intervals to review test results",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1",
+     "eo": "4"
+    }
+   ]
+  },
+  {
+   "title": "First-of-a-kind testing",
+   "eo": [
+    "5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "FOAK components are tested to the extent practical.",
+     "anchor": "first-of-a-kind (FOAK) components and equipment are tested",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1"
+    },
+    {
+     "t": "p",
+     "text": "Special tests may be done at the Sodium Test and Fill Facility.",
+     "anchor": "may be performed at the Sodium Test and Fill Facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1"
+    },
+    {
+     "t": "p",
+     "text": "FOAK testing is marked on test abstracts.",
+     "anchor": "FOAK testing is indicated on the test abstracts",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Where may special FOAK tests occur?",
+     "o": [
+      "The RSC",
+      "NRC headquarters",
+      "Sodium Test and Fill Facility",
+      "The MCR"
+     ],
+     "a": 2,
+     "x": "They may be performed at that facility.",
+     "anchor": "may be performed at the Sodium Test and Fill Facility",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 12.6, p. 12.6-1",
+     "eo": "5"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Stages 1 to 3 belong to construction and start-up groups. Stage 4 belongs to operations.",
+   "anchor": "All work is performed by appropriately trained operations personnel utilizing approved procedures",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5, p. 12.5-1"
+  },
+  {
+   "text": "Fuel load needs preoperational testing, handover, and licenses.",
+   "anchor": "Initial fuel loading starts after completion of preoperational testing",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1"
+  },
+  {
+   "text": "Hold points control each step of startup testing.",
+   "anchor": "Test hold points are established at appropriate intervals to review test results",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 12.5.1, p. 12.5-1"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "OP-07",
+ "title": "Startup Test Program",
+ "kind": "topic",
+ "subject": "startup testing",
+ "sec_note": "Ch. 12, pp. 12.1-1 to 12.6-1",
+ "intro": "Chapter 12 describes how the plant goes from construction to full power. Know the four stages, who does each, and what happens in each.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the objectives of the Post-Construction Inspection, Testing, and Analysis Program.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the four stages and who performs each.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe construction, component, and system testing.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Describe initial fuel load, low power, and power ascension testing.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Explain first-of-a-kind testing.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-op-07-startup-test-program"
+}

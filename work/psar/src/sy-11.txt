@@ -1,0 +1,111 @@
+# SY-11 | Ex-Vessel Fuel Handling System | system | FHE
+range: 7.3-17 7.3-39
+sec: Sec. 7.3.2, pp. 7.3-17 to 7.3-39
+intro: The FHE carries core assemblies between the reactor, the EVST, and the pool. Every step stays inert and shielded, and every carrier can cool fuel without power.
+
+== Purpose and path of a core assembly | 1,2
+S The FHE moves new core assemblies from receipt through inspection and conditioning to the reactor vessel. @@ transfers new core assemblies from the point of receipt through inspection and conditioning
+S It keeps an assembly in an inert environment from the NAPS to the reactor, and from the reactor until the assembly is in the PIC and lowered into the SFP. @@ is designed to convey a core assembly in an inert environment
+S The shielded, inert transfer provides radiation shielding, radionuclide retention, and a medium for decay heat removal. @@ provides radiation shielding, radionuclide retention, and a medium for removal of decay heat
+T Component | Moves or does
+R EVHM | Moves CAPs between the reactor vessel in the RXB and the EVST in the FHB @@ between the reactor vessel located in the Reactor Building (RXB) and the EVST located in the Fuel Handling Building
+R BLTC | Moves assemblies between the NAPS, PIC, and EVST @@ between the NAPS, Pool Immersion Cell and the EVST located in the FHB
+R EVST | Temporary storage for new and irradiated assemblies @@ temporary storage for new components in route to the reactor
+R NAPS | Preconditions and stores new assemblies @@ New assemblies are preconditioned in the NAPS
+R PRC | Hot cell for pin removal from LDAs and LTAs @@ is a hot cell located below grade along the EVHM travel path
+S FHE interfaces with the FHI for in-vessel handling and the FHP for fuel pool handling. @@ FHE equipment interfaces with the In-Vessel Fuel Handling System
+K Which machine moves assemblies between the reactor vessel and the EVST? | BLTC | EVHM | PHM | IVTM | 1 | The EVHM transfers CAPs between the reactor vessel and the EVST. @@ between the reactor vessel located in the Reactor Building (RXB) and the EVST located in the Fuel Handling Building
+K Which machine delivers assemblies to the PIC? | EVHM | BLTC | PHM | FTL | 1 | The BLTC moves assemblies between the NAPS, PIC, and EVST. @@ between the NAPS, Pool Immersion Cell and the EVST located in the FHB
+
+== Ex-Vessel Handling Machine | 3,4
+S The EVHM is a rail-mounted, shielded, sealable vessel transport system. @@ is a rail-mounted, shielded, sealable, vessel transport system
+S The shielded cask assembly gives shielding and pressure boundary management, keeps an argon inert environment, and keeps fuel within design temperatures. @@ The shielded cask assembly has three primary functions
+S The EVHM grapple does not directly handle any reactor core assemblies. It handles the CAP. @@ The grapple does not directly handle any reactor core assemblies
+S Each CAP is filled with liquid sodium and acts as the heat sink and conduction path. @@ Each CAP is filled with liquid sodium and acts as the heat sink and conduction path
+S A passive siphon lowers the CAP sodium level as it leaves the sodium, to minimize spillage. @@ has a passive liquid sodium siphon feature
+S The cask is lead and B4C. @@ is comprised of lead and B4C
+F 7.3.2-1
+K What does the EVHM grapple handle? | The core assembly directly | The CAP | Only shield plugs | The FTL | 1 | The grapple interfaces with a CAP and does not directly handle core assemblies. @@ The grapple does not directly handle any reactor core assemblies
+K Why does the CAP have a siphon? | To lower sodium level and minimize spillage | To fill the CAP faster | To cool the grapple | To vent argon | 0 | The siphon lowers the level, which minimizes spillage. @@ Lowering the liquid sodium level in the CAP minimizes spillage
+
+== Cask cooling on loss of power | 4,8
+S In EVHM cooling operations, exhaust blowers pull air through the annulus between the main shielding cask and the cold wall. @@ the exhaust blower fans continuously pull air through the annulus between the Main Shielding Cask and the cold wall
+S For heating, dampers shut and resistive heaters energize. @@ dampers contained within the air channels will shut and resistive heaters are energized
+S If the EVHM loses its plant side power, the dampers fail open and natural convection keeps cooling. @@ If the EVHM loses its plant side power connection, the dampers fail open
+S The EVHM passive heat removal system has a maximum heat capacity of 15.2 kW. @@ The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW
+S The EVHM passive system is designed for core assemblies 7 days after shutdown. @@ The EVHM passive cooling system is designed to handle core assemblies 7 days after shutdown
+S The BLTC handles assemblies only after a storage time in the EVST. It is designed for a 1.2 kW assembly. @@ The BLTC handles discharged core assemblies following a specified storage time in the EVST
+S The BLTC dampers also fail open on loss of plant power. @@ If the BLTC losses plant power the dampers fail open
+T Carrier | Design heat load
+R EVHM | 15.2 kW @@ The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW
+R BLTC | 1.2 kW @@ The BLTC is designed to accommodate the maximum cladding temperature of a 1.2 kW fuel assembly
+K The EVHM loses plant power during a transfer. How is the assembly cooled? | Dampers fail open and natural convection cools | Batteries run the blowers | The hoist lowers it into the sodium | Argon flow increases | 0 | The dampers fail open and natural convection maintains cooling. @@ If the EVHM loses its plant side power connection, the dampers fail open
+K Which carrier is designed for the higher assembly heat load? | EVHM | BLTC | They are equal | Neither is limited | 0 | EVHM is 15.2 kW and the BLTC is 1.2 kW. @@ The EVHM passive heat removal system is designed with a maximum heat capacity of 15.2 kW
+K How long after shutdown can the EVHM passive system handle assemblies? | 24 hours | 7 days | 30 days | 1 year | 1 | It is designed for core assemblies 7 days after shutdown. @@ The EVHM passive cooling system is designed to handle core assemblies 7 days after shutdown
+
+== Ex-Vessel Storage Tank | 3,4,8
+S The EVST is a sodium-filled tank with a rotating carousel and storage for 100 core assemblies in CAPs. @@ Storage positions are provided for 100 core assemblies within CAPs
+S The carousel holds assemblies in a subcritical array by geometry. @@ in an array with a subcritical configuration by geometry
+S The striker plate protects the EVST from accidentally dropped external loads. @@ The striker plate protects the EVST's functional and confinement capabilities
+S In a main vessel leak, the guard vessel captures sodium while main vessel level stays above the fueled portion of the assemblies. @@ the guard vessel captures the leaked liquid sodium while maintaining the sodium level in the main vessel above the fueled portion
+S The EVST is designed for a maximum decay heat of 216 kW and a normal decay heat of 136 kW. @@ The EVST is designed for a maximum decay heat load of 216 kW
+S Passive heat removal uses inlet and outlet stacks and ducts to circulate air through the EVST vault. Natural convection carries heat to the atmosphere, the ultimate heat sink. @@ utilizing inlet and outlet stacks and ducts to circulate air into and out of the EVST vault
+S Passive cooling keeps cladding below the maximum pin cladding temperature of 1157 F. @@ temperatures below the maximum pin cladding temperature of 1157 degrees Fahrenheit
+S Penetrations are above the minimum safe sodium level. @@ Penetrations on the EVST are above the minimum safe sodium level
+S A failure of the NST cooling and temperature control systems would not stop the SR passive heat removal function. @@ would not prevent the EVST from performing its SR passive heat removal function
+S Isolation valves on the main vessel close on detection of a leak or on loss of power. @@ equipped with isolation valves that close upon a detection of a leak or a loss of power
+S With little decay heat, trace heaters on the guard vessel and the sodium processing loop keep sodium temperature in limits. @@ Electrical trace heaters on the exterior of the guard vessel
+F 7.3.2-3
+K How is the EVST carousel kept subcritical? | Soluble boron | Geometry | Control rods | Sodium level | 1 | The carousel gives a subcritical configuration by geometry. @@ in an array with a subcritical configuration by geometry
+K The EVST main vessel leaks. What happens to level? | Guard vessel captures sodium and level stays above the fueled portion | Level falls below the fuel | Fuel must be moved first | The tank drains to the SPS | 0 | The guard vessel keeps the level above the fueled portion. @@ the guard vessel captures the leaked liquid sodium while maintaining the sodium level in the main vessel above the fueled portion
+K What closes the EVST isolation valves? | Leak detection or loss of power | High sodium temperature | Operator action only | Low argon flow | 0 | The valves close on detection of a leak or a loss of power. @@ equipped with isolation valves that close upon a detection of a leak or a loss of power
+K What is the EVST maximum decay heat load? | 15.2 kW | 136 kW | 216 kW | 225 kW | 2 | Maximum is 216 kW, and normal is 136 kW. @@ The EVST is designed for a maximum decay heat load of 216 kW
+
+== Boundaries during transfer | 2,3
+S The FFV is a temporary closure that allows transfers at ports while keeping an inert containment boundary. @@ is a temporary closure and opening device used during refueling and maintenance operations
+S The FFV normal internal range is 250 to 400 F and 0.3 to 0.4 psig. @@ normal operating internal temperature range of 250 degrees Fahrenheit to 400 degrees Fahrenheit
+S The CATT gives an inert passage between the EVHM and the reactor vessel and is installed only during Mode 4. @@ The CATT is installed only during Mode 4, plant refueling operations
+S CATT argon holds a positive pressure, and its seals are redundant. @@ The CATT has redundant sealing capabilities
+S The CATT cavity minimum temperature is 400 F, which prevents sodium solidification. @@ The minimum temperature in the CATT internal cavity is 400 degrees Fahrenheit
+S In Modes 1, 2, and 3, the functional containment boundary is coincident with the primary coolant boundary. @@ In Modes 1, 2, and 3, the functional containment boundary is coincident with the Primary Coolant Boundary
+S Each BLTC inflatable seal is designed to stay inflated for 72 hours on loss of primary argon supply. @@ Each inflatable seal is designed to remain inflated for 72 hours
+S The EVHM and BLTC use rail-based seismic restraints that limit uplift or tipping. @@ rail-based, seismic restraints that limit uplifting or tipping
+F 7.3.2-2
+K When is the CATT installed? | Only during Mode 4 | Modes 1 and 2 | All modes | Only for startup | 0 | The CATT is installed only during Mode 4 refueling operations. @@ The CATT is installed only during Mode 4, plant refueling operations
+K What is the minimum temperature in the CATT cavity? | 250 F | 400 F | 1157 F | 120 F | 1 | The minimum is 400 F to prevent sodium solidification. @@ The minimum temperature in the CATT internal cavity is 400 degrees Fahrenheit
+K How long is a BLTC inflatable seal designed to stay inflated after loss of primary argon? | 7 days | 72 hours | 24 hours | 8 hours | 1 | Each inflatable seal is designed for 72 hours. @@ Each inflatable seal is designed to remain inflated for 72 hours
+
+== Other stations | 3,4
+S The NAPS holds 8 core assemblies and prevents criticality by a subcritical geometry. It is NST. @@ The NAPS is designed with a capacity for 8 core assemblies
+S The ARIS on the FHB operating floor holds assemblies for new fuel receipt inspection. @@ It is used as a fixture to hold the core assemblies in place for new fuel receipt inspection
+S In the PRC, a sodium holding tank under the FFV receives an LDA or LTA in a CAP. Heat leaves by free convection. @@ Heat is transferred from the LDA or LTA, through the liquid sodium and out of the tank via free convection
+S The PEM is a remotely operated handling device that removes pins from the LTA. @@ The PEM, which is a remotely operated mechanical handling device
+K What is the capacity of the NAPS? | 8 assemblies | 100 assemblies | 1 assembly | 50 assemblies | 0 | The NAPS has a capacity for 8 core assemblies. @@ The NAPS is designed with a capacity for 8 core assemblies
+
+== Controls and interlocks | 5,6
+S Fuel handling during refueling is controlled by a series of interlocks. EVHM and BLTC controls and interlocks prevent load drops and handling accidents. @@ The handling of fuel during refueling is controlled by a series of interlocks
+S The carousel positioning system is semi-automatic. Interlocks stop repositioning when damage would result. @@ A system of interlocks prevents repositioning when damage would result
+S It verifies that all transfer port plugs are in place, or that the grapple is fully retracted or not at the port with the FFV closed. @@ verifies automatically that all transfer port plugs are in place
+L Carousel is stopped ;; Position agrees with the address requested, except in MANUAL ;; Carousel position aligns a storage location with an open port ;; EVHM or BLTC is over the correct floor valve @@ These interlocks require that the carousel is stopped
+S Operators use human-machine interface units in the FHB control room, which are part of the PMC. @@ through multiple human-machine interface units located in the FHB control room
+S Hoist motors, gearboxes, and brakes are outside the hoist enclosure and can be manually moved to lower the load without breaking the containment barrier. @@ These components are capable of being manually manipulated, to lower the load
+S EVST temperature sensors let operators see whether cladding limits are being approached. @@ to determine if the fuel cladding temperature limits are being approached
+K Which is required by the BLTC-EVHM lockout interlock? | Carousel stopped | EVST sodium at 400 F | FPC running | Reactor in Mode 1 | 0 | The interlock requires that the carousel is stopped, among other conditions. @@ These interlocks require that the carousel is stopped
+K A hoist fails with a load raised. What does the design allow? | Manually lowering the load without breaking the barrier | Dropping the load into the EVST | Opening the cask to the floor | Nothing until power returns | 0 | Hoist components can be manually manipulated to lower the load. @@ These components are capable of being manually manipulated, to lower the load
+
+== Safety significance | 9,10
+T Function | Class | Purpose
+R DL3-HR6, HR7, HR8, HR9 | SR | Passive heat removal in the EVHM, EVST, BLTC, and PRC @@ DL3-HR8 Passive Heat Removal in BLTC
+R DL3-RR3 EVHM cask barrier | SR | Containment when fuel is in the cask and when mated @@ DL3-RR3 EVHM Cask Barrier (SR)
+R DL3-RR3a EVHM transfer barrier | SR | EVST, EVHM, CATT, FFV, and FTA form the temporary contain function @@ DL3-RR3a EVHM Transfer Barrier Function
+R DL3-RR4 EVST barrier | SR | Radionuclide barrier through the isolation valves. Closure is not needed @@ Valve closure is not needed to meet SR function
+R DL3-RR5, RR5a BLTC barriers | SR | Containment in the cask and during transfers @@ DL3-RR5 BLTC Barrier (SR)
+R DL3-RR6 PRC cell barrier | SR | Barrier for releases from fuel damaged during pin removal @@ DL3-RR6 PRC Cell Barrier (SR)
+R DL4-RR5 EVST guard tank | NSRST | Defense in depth backup barrier @@ DL4-RR5 EVST Guard Tank Leak Prevention
+R DL5-PAM1 | NSRST | EVST bulk sodium temperature indication @@ DL5-PAM1 Post Accident Monitoring (NSRST)
+S The EVST guard vessel is NSRST, while the EVST pressure vessel and rotating carousel are SR. @@ EVST Guard Vessel NSRST
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ The following programmatic special treatments are preliminarily identified as applicable to the FHE
+K What is the classification of the EVST guard vessel? | SR | NSRST | NST | SCS1 | 1 | The guard vessel is NSRST. @@ EVST Guard Vessel NSRST
+Z The FHE keeps assemblies in a shielded, inert environment. On the EVHM they ride in sodium-filled CAPs. @@ provides radiation shielding, radionuclide retention, and a medium for removal of decay heat
+Z Cask dampers fail open on loss of power, so natural convection keeps cooling. @@ If the EVHM loses its plant side power connection, the dampers fail open
+Z The EVST holds 100 assemblies in a subcritical geometry and removes up to 216 kW passively. @@ The EVST is designed for a maximum decay heat load of 216 kW

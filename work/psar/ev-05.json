@@ -1,0 +1,390 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiators and assumptions",
+   "eo": [
+    "1",
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Initiator",
+      "Result"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RFH-FDIV-BL",
+        "Non-fuel assembly drop in the vessel",
+        "No damage"
+       ],
+       "anchor": "the drop of a non-fuel core assembly in the reactor vessel",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.1.1, p. 3.7-10"
+      },
+      {
+       "cells": [
+        "RFH-FDIV-1",
+        "Fuel assembly drop in the vessel",
+        "One assembly damaged, barriers hold"
+       ],
+       "anchor": "but there is no damage to fuel assemblies impacted by the dropped fuel assembly. Functional containment",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.1, p. 3.7-11"
+      },
+      {
+       "cells": [
+        "RFH-FDIV-3",
+        "Fuel assembly drop in the vessel",
+        "Two assemblies damaged, barriers hold"
+       ],
+       "anchor": "The dropped fuel assembly and the impacted fuel assembly are damaged",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.1, p. 3.7-11"
+      },
+      {
+       "cells": [
+        "RFH-FDSP-1",
+        "Fuel assembly drop in the SFP",
+        "One assembly damaged, FHB fails to retain"
+       ],
+       "anchor": "the drop of a fuel assembly in the spent fuel pool during fuel moves",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.1, p. 3.7-12"
+      },
+      {
+       "cells": [
+        "RFH-ESWR-BL",
+        "Sodium-water reaction in the PIC while mated to the BLTC",
+        "Cladding intact"
+       ],
+       "anchor": "a sodium-water reaction in the Pool Immersion Cell (PIC)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.5.1, p. 3.7-13"
+      },
+      {
+       "cells": [
+        "RFH-ESWR-1",
+        "Sodium-water reaction in the PIC",
+        "Cladding fails, PIC and BLTC boundary holds"
+       ],
+       "anchor": "that causes fuel cladding failure. The combined PIC and BLTC boundary is not failed",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.6.1, p. 3.7-13"
+      },
+      {
+       "cells": [
+        "RFH-LTCA-1",
+        "Loss of EVST cooling without passive cooling",
+        "No fuel damage for at least 72 hours"
+       ],
+       "anchor": "no fuel damage occurs for at least 72 hours",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14"
+      },
+      {
+       "cells": [
+        "RFH-LBCA-BL",
+        "Loss of BLTC active cooling",
+        "Passive cooling available, no damage"
+       ],
+       "anchor": "a loss of bottom loading transfer cask active cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.8.1, p. 3.7-15"
+      },
+      {
+       "cells": [
+        "RFH-LMCA-BL",
+        "Loss of EVHM active cooling",
+        "Passive cooling available, no damage"
+       ],
+       "anchor": "a loss of Ex-Vessel Handling Machine (EVHM) active cooling",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.9.1, p. 3.7-15"
+      }
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which DBE shows no fuel damage for at least 72 hours after loss of cooling?",
+     "o": [
+      "RFH-ESWR-1",
+      "RFH-LTCA-1",
+      "RFH-LBCA-BL",
+      "RFH-FDIV-1"
+     ],
+     "a": 1,
+     "x": "Analysis of the EVST event shows no fuel damage for at least 72 hours.",
+     "anchor": "no fuel damage occurs for at least 72 hours",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14",
+     "eo": "1,3"
+    }
+   ]
+  },
+  {
+   "title": "Source terms",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In-vessel drops are modeled as an instantaneous release of the inventory from all pins in one or two high burnup assemblies.",
+     "anchor": "an instantaneous release of the radionuclide inventory from all pins in one high burnup fuel assembly",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.2, p. 3.7-11"
+    },
+    {
+     "t": "p",
+     "text": "Radionuclides leave the primary functional containment boundary at an assumed one percent of cover gas volume per day.",
+     "anchor": "assumed rate of one percent of cover gas volume per day",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.2, p. 3.7-11"
+    },
+    {
+     "t": "p",
+     "text": "The SFP drop is assumed 310 days after the assembly is stored in In-Vessel Storage.",
+     "anchor": "is assumed to occur 310 days after the fuel assembly is stored",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-12"
+    },
+    {
+     "t": "p",
+     "text": "When cladding is damaged in the pool, the fuel pin sodium bond reacts with water in an exothermic gas-producing reaction.",
+     "anchor": "reacts with water in the spent fuel pool in an exothermic gas-producing reaction",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-12"
+    },
+    {
+     "t": "p",
+     "text": "The analysis therefore uses a reduced pool decontamination factor for that particulate.",
+     "anchor": "assumes a reduced spent fuel pool decontamination factor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13"
+    },
+    {
+     "t": "p",
+     "text": "The FHB volume is assumed to exhaust instantaneously with no credit for NHV filtration.",
+     "anchor": "exhaust to the environment instantaneously with no credit for NHV filtration",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why is pool scrubbing reduced in the SFP drop?",
+     "o": [
+      "The sodium bond reacts with water in an exothermic gas-producing reaction",
+      "Pool level is assumed low",
+      "The FHB is open",
+      "The pool is warm"
+     ],
+     "a": 0,
+     "x": "The sodium bond and water reaction leads to a reduced decontamination factor.",
+     "anchor": "assumes a reduced spent fuel pool decontamination factor",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Challenged functions and results",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "DBE",
+      "Mean 30-day EAB TEDE (rem)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "RFH-FDIV-1",
+        "1.83E-01"
+       ],
+       "anchor": "38E-02 1.83E-01 2.90E-01",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.3, p. 3.7-11"
+      },
+      {
+       "cells": [
+        "RFH-FDIV-3",
+        "3.66E-01"
+       ],
+       "anchor": "67E-01 3.66E-01 5.82E-01",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.3, p. 3.7-12"
+      },
+      {
+       "cells": [
+        "RFH-FDSP-1 and RFH-ESWR-1",
+        "3.31E-01"
+       ],
+       "anchor": "20E-01 3.31E-01 5.05E-01",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.3, p. 3.7-13"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The in-vessel doses do not include release from SCG pathways mitigated by DL3-RR10, which will be evaluated at the OL stage.",
+     "anchor": "The dose consequences do not include radionuclide release from SCG pathways mitigated by DL3-RR10",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.2.3, p. 3.7-11"
+    },
+    {
+     "t": "p",
+     "text": "RFH-FDIV-1 is identified in the summary table as risk-significant.",
+     "anchor": "RFH-FDIV-1 Fuel Handling Event Occurs While Moving Fuel Assembly Yes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.5.2, p. 3.5-3"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which fuel handling DBE has the highest mean dose?",
+     "o": [
+      "RFH-LTCA-1",
+      "RFH-FDIV-1",
+      "RFH-FDIV-3",
+      "RFH-FDSP-1"
+     ],
+     "a": 2,
+     "x": "RFH-FDIV-3 has a mean 30-day TEDE of 3.66E-01 rem.",
+     "anchor": "67E-01 3.66E-01 5.82E-01",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.3.3, p. 3.7-12",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Credited barriers and passive cooling",
+   "eo": [
+    "8",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "RFH-ESWR-1 credits the BLTC as a low leakage barrier.",
+     "anchor": "The credit of the BLTC in the event provides a low leakage barrier",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.6.2, p. 3.7-14"
+    },
+    {
+     "t": "p",
+     "text": "Longer term degraded heat removal in the EVST requires further assessment.",
+     "anchor": "Longer term degraded heat removal conditions require further assessment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.7.1, p. 3.7-14"
+    },
+    {
+     "t": "p",
+     "text": "The BLTC and EVHM events rely on passive cooling when active cooling is lost.",
+     "anchor": "passive cooling is available, and no fuel damage occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.8.1, p. 3.7-15"
+    },
+    {
+     "t": "p",
+     "text": "Releases from the BLTC, PRC, and EVST are typically modeled as releases from the EVHM, because that is bounding.",
+     "anchor": "are typically modeled as releases from the EVHM",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why are BLTC releases modeled as EVHM releases?",
+     "o": [
+      "The EVHM is safety-related",
+      "The BLTC has no leakage",
+      "The EVHM has the smallest free volume and a conservative leakage rate",
+      "They share a building"
+     ],
+     "a": 2,
+     "x": "The EVHM has the smallest free volume and its leakage rate is conservative.",
+     "anchor": "because the EVHM has the smallest free volume",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6",
+     "eo": "8,9"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Fuel handling DBEs cover drops, sodium-water reaction, and loss of cooling.",
+   "anchor": "These LBEs evaluate loss of heat removal from systems and vessels containing spent fuel",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.7, p. 3.3-6"
+  },
+  {
+   "text": "The sodium bond reacts with water, which reduces pool scrubbing credit.",
+   "anchor": "assumes a reduced spent fuel pool decontamination factor",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.4.4.2, p. 3.7-13"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-05",
+ "title": "Fuel Handling DBEs",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.7.4, pp. 3.7-10 to 3.7-15",
+ "intro": "These DBEs cover dropped assemblies, sodium-water reaction in the Pool Immersion Cell, and loss of cooling in fuel handling equipment.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": false
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": false
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": false
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": false
+  }
+ ],
+ "slug": "psar-ev-05-fuel-handling-dbes"
+}

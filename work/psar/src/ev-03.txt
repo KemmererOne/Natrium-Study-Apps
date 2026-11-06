@@ -1,0 +1,59 @@
+# EV-03 | Heat Removal DBEs | event | event
+range: 3.7-2 3.7-5 3.3-5 3.3-7 3.9-2 3.9-4
+sec: Sec. 3.7.2, pp. 3.7-2 to 3.7-5, with Secs. 3.3.4 and 3.9.2
+intro: These design basis events disturb heat removal: loss of heat sink, Energy Island transients, loss of an IAC train, and an IHX tube break.
+
+== Event initiators and assumptions | 1
+T DBE | Initiator | Condition
+R DHS-ISTL-1 and -2 | Loss of heat removal from one intermediate sodium loop | Full power @@ The postulated initiating event is a loss of heat removal from one intermediate sodium loop
+R DHS-RNBK-1 and -3 | Runback demand from a decrease or increase in heat removal from the NSS | Full power @@ reactor power runback demand initiated by a decrease or
+R SUD-IACA-1 | Loss of one IAC train | Low power or shutdown @@ The postulated initiating event is a loss of one IAC train during low power or shutdown
+R IPI-IHEL-BL | IHX tube break, intermediate sodium leaks into the PHT | Full power @@ Intermediate Heat Exchanger tube break during full power
+R SUD-IHEL-BL | IHX tube break | Low power or shutdown @@ Intermediate Heat Exchanger tube break during low power or
+S The Energy Island transient DBE is assumed to bound other events that generate reactor power runback signals. @@ This event is also
+S If a runback completes and prevents a scram setpoint from being reached, the event is not classified as an LBE. @@ If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE
+K When is a heat removal upset not classified as an LBE? | When the PSPs keep running | When a runback completes and prevents reaching a scram setpoint | When it occurs at low power | When IAC is in active mode | 1 | A completed runback that prevents a scram setpoint from being reached means the event is not an LBE. @@ If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE
+
+== Challenged functions and acceptance | 2
+S Fuel performance acceptance criteria are satisfied for these DBEs, and there is no radiological release. @@ The fuel performance acceptance criteria are satisfied. Therefore, fuel integrity is maintained for
+S The reactor vessel is not overfilled in the IHX leak, because the IHT physical arrangement limits the intermediate sodium volume that can drain into the PHT. @@ Intermediate sodium volume that can drain into the PHT is limited by the IHT physical
+K Why is the reactor vessel not overfilled by an IHX tube break? | The ISPs pump sodium back | The IHT physical arrangement limits the volume that can drain into the PHT | The vessel has an overflow line | The SPS removes the excess | 1 | The IHT physical arrangement limits the volume that can drain to the PHT. @@ Intermediate sodium volume that can drain into the PHT is limited by the IHT physical
+
+== Event chronology | 3,5
+T Step | Loss of heat sink with RAC (DHS-ISTL-2)
+R 1 | Heat removal is lost from one intermediate loop at full power @@ The postulated initiating event is a loss of heat removal from one intermediate sodium loop
+R 2 | Reactor scrams on high high cold pool temperature @@ A reactor scram on high high cold pool temperature
+R 3 | PSPs and ISPs trip on high high primary sodium temperature @@ PSPs and ISPs trip on high high primary sodium temperature
+R 4 | Non-passive and passive IAC fail on both trains @@ IAC cooling fails on both trains
+R 5 | Safe shutdown, with RAC removing decay heat @@ final conditions result in the reactor in safe shutdown with the RAC providing decay heat removal
+T Step | IHX tube break (IPI-IHEL-BL)
+R 1 | Tube break puts intermediate sodium into the PHT, and heat removal is lost from one loop @@ resulting in intermediate sodium leakage into the Primary Heat Transport
+R 2 | Reactor scrams on high high primary sodium level, and the ISPs trip on the same signal @@ high primary sodium level occurs and the ISPs trip on high high primary sodium level
+R 3 | Safe shutdown, with the unaffected IAC train in non-passive mode @@ the unaffected IAC train in non-passive mode
+K Which signal scrams the reactor in the loss of heat sink DBE? | High high cold pool temperature | High high primary sodium level | Low hot pool level | High high flux rate | 0 | The reactor scrams on high high cold pool temperature. @@ A reactor scram on high high cold pool temperature
+K Which signal scrams the reactor in the full power IHX tube break? | High high cold pool temperature | Low primary sodium level | High high primary sodium level | Loss of flow | 2 | Intermediate sodium enters the primary, and the scram is on high high primary sodium level. @@ high primary sodium level occurs and the ISPs trip on high high primary sodium level
+K In the Energy Island transient DBE, what happens to the runback? | It always completes | A scram occurs before it is complete | It is blocked by the RPS | It only occurs at low power | 1 | A runback may be initiated, but a scram occurs before the runback is complete. @@ A reactor power runback may be initiated, but a reactor scram occurs before the reactor power runback is
+
+== Key parameter trends | 4
+Q An increase in heat removal from the primary system results in a decrease in primary sodium temperature, which causes an increase in reactor power.
+Q A decrease in heat removal from the primary system results in an increase in primary sodium temperature, which causes a decrease in reactor power.
+T Disturbance | Sodium temperature | Reactor power
+R More heat removed | Falls | Rises @@ An increase in heat removal from the primary system
+R Less heat removed | Rises | Falls @@ A decrease in heat removal from the primary system
+K Heat removal from the primary suddenly increases. What does reactor power do before a runback or scram? | It falls | It stays constant | It increases | It oscillates | 2 | Sodium temperature falls, which causes an increase in reactor power. @@ An increase in heat removal from the primary system
+K Heat removal from the primary decreases. Which pair is correct? | Temperature up, power down | Temperature up, power up | Temperature down, power up | Temperature down, power down | 0 | A decrease in heat removal raises primary sodium temperature, which decreases reactor power. @@ A decrease in heat removal from the primary system
+
+== Credited equipment and failed functions | 8,9
+S In the loss of heat sink with RAC, the thermal capacity of the piping, components, and intermediate sodium in the remaining loop is assumed to be available. @@ intermediate sodium in the remaining intermediate sodium loop are assumed to be available
+S In the shutdown IAC train loss, the unaffected train provides decay heat removal in passive mode after non-passive cooling fails on that train. @@ by the unaffected IAC train in passive mode
+S The matching DBAs credit RAC for decay heat removal. @@ safe shutdown with the RAC providing decay heat removal
+K What provides decay heat removal in SUD-IACA-1? | RAC only | The unaffected IAC train in passive mode | The failed train in blower mode | The ISPs | 1 | Decay heat removal is provided by the unaffected IAC train in passive mode. @@ by the unaffected IAC train in passive mode
+
+== End state and operator role | 10,12
+S The shutdown IAC event can end safe and stable at low power, or in safe shutdown. @@ in the reactor safe and stable at low power or in safe shutdown
+S The safe and stable end state applies if the transient does not result in a reactor scram. It requires K-effective of 1.0 and heat removal equal to heat production. @@ If the transient does not result in a reactor scram the safe and stable end state is used
+K Which end state applies when a transient does not cause a scram? | Safe shutdown | Cold shutdown | Safe and stable | Hot standby | 2 | If the transient does not result in a scram, the safe and stable end state is used. @@ If the transient does not result in a reactor scram the safe and stable end state is used
+
+Z Heat removal upsets change sodium temperature first, and reactivity feedback then moves power the opposite way. @@ An increase in heat removal from the primary system
+Z Loss of heat sink scrams on high high cold pool temperature. An IHX tube break scrams on high high primary sodium level. @@ A reactor scram on high high cold pool temperature
+Z A completed runback that prevents a scram setpoint means the event is not an LBE. @@ If a reactor power runback successfully completes and prevents a scram setpoint from being reached, the event is not classified as an LBE

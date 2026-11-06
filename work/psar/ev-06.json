@@ -1,0 +1,315 @@
+{
+ "concepts": [
+  {
+   "title": "Event initiator and assumptions",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The initiator is a blockage of fuel subchannels or another localized fault in the core during full power operation, resulting in fuel damage.",
+     "anchor": "a blockage of fuel subchannels or other localized faults within the reactor core",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15"
+    },
+    {
+     "t": "p",
+     "text": "Partial flow blockage is evaluated because of the tight pin spacing, high power density, and high burnup of sodium fast reactor assemblies.",
+     "anchor": "namely the tight spacing of fuel pins, high power density, and high burnup",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.1.3, p. 3.3-2"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Debris circulated in the primary sodium",
+      "Failure of wire-wrapped spacers",
+      "Swelling or bowing of the fuel pins"
+     ],
+     "anchor": "may be initiated due to an accumulation of debris",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.1.3, p. 3.3-2"
+    },
+    {
+     "t": "p",
+     "text": "The assumption that an entire assembly failed is conservative and deterministic.",
+     "anchor": "The assumption that an entire fuel assembly failed due to the event is conservative",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a stated cause of partial flow blockage?",
+     "o": [
+      "Loss of offsite power",
+      "Failure of wire-wrapped spacers",
+      "IAC blower failure",
+      "Cover gas leak"
+     ],
+     "a": 1,
+     "x": "Causes are debris, failed wire-wrapped spacers, and swelling or bowing of pins.",
+     "anchor": "a failure of wire-wrapped spacers",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.1.3, p. 3.3-2",
+     "eo": "1"
+    }
+   ]
+  },
+  {
+   "title": "Challenged functions",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The event challenges cladding, so retention depends on the barriers past the fuel. Functional containment barriers perform their functions, but a release occurs.",
+     "anchor": "barriers successfully perform their radionuclide retention functions, but a radionuclide release occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-16"
+    },
+    {
+     "t": "p",
+     "text": "Mean 30-day EAB TEDE is 5.70E-03 rem.",
+     "anchor": "82E-03 5.70E-03 9.87E-03",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.3, p. 3.7-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "In LFF-SAO-BL, is there a release?",
+     "o": [
+      "Yes, though barriers perform their functions",
+      "Only with vessel failure",
+      "Only at low power",
+      "No, because the cladding holds"
+     ],
+     "a": 0,
+     "x": "Barriers perform their functions, but a radionuclide release occurs.",
+     "anchor": "barriers successfully perform their radionuclide retention functions, but a radionuclide release occurs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-16",
+     "eo": "2"
+    }
+   ]
+  },
+  {
+   "title": "Event chronology and trends",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Step",
+      "LFF-SAO-BL"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "Local fault at full power causes fuel damage"
+       ],
+       "anchor": "resulting in fuel damage",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15"
+      },
+      {
+       "cells": [
+        "2",
+        "Operators manually shut down on exceeding failed fuel activity limits"
+       ],
+       "anchor": "Operators manually shutdown the reactor due to exceeding failed fuel activity limits",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15"
+      },
+      {
+       "cells": [
+        "3",
+        "Safe shutdown with IAC non-passive mode"
+       ],
+       "anchor": "with the IAC non-passive mode providing decay heat removal",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-16"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The fault does not cause primary sodium temperature to increase outside nominal operating conditions.",
+     "anchor": "does not cause the primary sodium temperature to increase outside of nominal operating conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "How does primary sodium temperature respond to a local fuel fault?",
+     "o": [
+      "It drops sharply",
+      "It oscillates",
+      "It rises to the scram setpoint",
+      "It stays within nominal operating conditions"
+     ],
+     "a": 3,
+     "x": "The fault does not cause temperature to increase outside nominal conditions.",
+     "anchor": "does not cause the primary sodium temperature to increase outside of nominal operating conditions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Protective action and operator role",
+   "eo": [
+    "5",
+    "12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Operators may scram the reactor if needed for failed fuel activity, but a scram is not required to keep consequences within analyzed limits.",
+     "anchor": "a scram is not required to maintain the LBE consequences within analyzed limits",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why do operators shut down in LFF-SAO-BL?",
+     "o": [
+      "Low sodium level",
+      "High high flux",
+      "Failed fuel activity limits are exceeded",
+      "Loss of flow"
+     ],
+     "a": 2,
+     "x": "Operators shut down manually due to exceeding failed fuel activity limits.",
+     "anchor": "Operators manually shutdown the reactor due to exceeding failed fuel activity limits",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15",
+     "eo": "5,12"
+    }
+   ]
+  },
+  {
+   "title": "End state and source term",
+   "eo": [
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Eighty percent of the released non-noble gas radionuclides are postulated to enter the cover gas in bubbles without pool scrubbing.",
+     "anchor": "Eighty percent of released non-noble gas radionuclides",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.2, p. 3.7-16"
+    },
+    {
+     "t": "p",
+     "text": "Release from the primary boundary is 1 percent of cover gas volume per day, then 10 percent of HAA volume per day to the environment.",
+     "anchor": "at an assumed rate of 10 percent of the HAA volume per day",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.2, p. 3.7-16"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What fraction of non-noble gas radionuclides is assumed to bypass pool scrubbing?",
+     "o": [
+      "1 percent",
+      "10 percent",
+      "50 percent",
+      "80 percent"
+     ],
+     "a": 3,
+     "x": "Eighty percent are postulated to enter the cover gas without scrubbing.",
+     "anchor": "Eighty percent of released non-noble gas radionuclides",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.2, p. 3.7-16",
+     "eo": "10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Local faults damage fuel without moving bulk sodium temperature.",
+   "anchor": "does not cause the primary sodium temperature to increase outside of nominal operating conditions",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.3.4.1.5, p. 3.3-6"
+  },
+  {
+   "text": "Failed fuel activity limits drive manual shutdown.",
+   "anchor": "Operators manually shutdown the reactor due to exceeding failed fuel activity limits",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 3.7.5.1.1, p. 3.7-15"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "EV-06",
+ "title": "Local Fuel Fault DBEs",
+ "kind": "event",
+ "subject": "event",
+ "sec_note": "Sec. 3.7.5, pp. 3.7-15 to 3.7-16, with Secs. 3.3.1.3 and 3.3.4.1.5",
+ "intro": "A local fuel fault damages fuel without moving bulk plant parameters. Operators, not automatic trips, end this event.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the event initiator and safety-analysis assumptions.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the challenged safety functions and acceptance criteria.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Describe the event chronology.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Predict key parameter trends.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Identify automatic protective actions.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Recognize the event from alarms and indications.",
+   "taught": false
+  },
+  {
+   "number": "7",
+   "text": "Select and apply the appropriate procedure.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Verify operation of credited equipment.",
+   "taught": false
+  },
+  {
+   "number": "9",
+   "text": "Respond to failure of an automatic or mitigating function.",
+   "taught": false
+  },
+  {
+   "number": "10",
+   "text": "Establish and verify the required end state.",
+   "taught": true
+  },
+  {
+   "number": "11",
+   "text": "Explain the consequences of delayed or incorrect actions.",
+   "taught": false
+  },
+  {
+   "number": "12",
+   "text": "Relate operator actions to the event's technical basis.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-ev-06-local-fuel-fault-dbes"
+}

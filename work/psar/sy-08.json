@@ -1,0 +1,828 @@
+{
+ "concepts": [
+  {
+   "title": "Purpose and the three loops",
+   "eo": [
+    "1",
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SPS monitors and removes impurities from the primary sodium, the intermediate sodium, and the EVST sodium.",
+     "anchor": "monitors and removes the impurities of the liquid sodium inventories",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "p",
+     "text": "Impurities include cesium, oxygen compounds, hydrogen compounds, debris, and corrosion products.",
+     "anchor": "Impurities include cesium, oxygen compounds, hydrogen compounds, debris, and corrosion products",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Loop",
+      "Draws from",
+      "Equipment location"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "SPS-P",
+        "RV, using a submersible EM pump within the RV",
+        "Below grade in the RAB"
+       ],
+       "anchor": "using a submersible electromagnetic (EM) pump within the RV",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+      },
+      {
+       "cells": [
+        "SPS-I",
+        "Each IHT loop or the IHT drain tanks",
+        "Grade level in the RAB"
+       ],
+       "anchor": "draws intermediate sodium from each Intermediate Heat Transport System (IHT) loop",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+      },
+      {
+       "cells": [
+        "SPS-E",
+        "EVST",
+        "Below grade in the FHB"
+       ],
+       "anchor": "draws sodium from the EVST and",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The SPS-I has no cesium trap or associated radiological monitoring.",
+     "anchor": "does not contain a cesium trap or associated radiological monitoring",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "p",
+     "text": "The SPS-E contains similar equipment and functions as the SPS-I.",
+     "anchor": "The SPS-E contains similar equipment and functions as the SPS-I",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "p",
+     "text": "The monitoring and impurity removal functions are non-safety-related with no special treatment.",
+     "anchor": "monitoring and impurity removal functions of SPS are non-safety-related",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-4-1",
+     "num": "7.2.4-1",
+     "cap": "Block Flow Diagram of the Primary SPS",
+     "alt": "PSAR Rev 1 figure: Block Flow Diagram of the Primary SPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-55"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which SPS loop has a cesium trap?",
+     "o": [
+      "SPS-P",
+      "SPS-I",
+      "SPS-E",
+      "All three"
+     ],
+     "a": 0,
+     "x": "The SPS-P has a cesium trap. The SPS-I has no cesium trap, and the SPS-E is similar to the SPS-I.",
+     "anchor": "does not contain a cesium trap or associated radiological monitoring",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41",
+     "eo": "1,2"
+    },
+    {
+     "q": "What is the safety classification of the SPS monitoring and impurity removal functions?",
+     "o": [
+      "Safety-related",
+      "NSRST",
+      "Non-safety-related with no special treatment",
+      "Safety-significant"
+     ],
+     "a": 2,
+     "x": "The monitoring and impurity removal functions are NST.",
+     "anchor": "monitoring and impurity removal functions of SPS are non-safety-related",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41",
+     "eo": "1,2"
+    }
+   ]
+  },
+  {
+   "title": "Why impurities matter",
+   "eo": [
+    "1",
+    "4",
+    "9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Impurity",
+      "Enters by",
+      "Problem or control"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Oxygen",
+        "Dissolved native oxides from steel, air and moisture ingress, and in-leakage from NSS into the IHT",
+        "Oxides can plug small orifices. High oxygen can accelerate corrosion at elevated temperature"
+       ],
+       "anchor": "Oxides can precipitate from the sodium on cold surfaces",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+      },
+      {
+       "cells": [
+        "Hydrogen",
+        "Diffusion out of steel and reaction with hydrogen bearing cover gas impurities",
+        "Sodium hydride can precipitate on cold surfaces and plug small orifices"
+       ],
+       "anchor": "Sodium hydride can precipitate from solution onto cold surfaces",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+      },
+      {
+       "cells": [
+        "Tritium",
+        "Generated from fission in the fuel and neutron capture in the control rods",
+        "Reduced with hydrogen in the cold traps"
+       ],
+       "anchor": "Tritium is generated from fission in the fuel and from neutron capture in the control rods",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+      },
+      {
+       "cells": [
+        "Cesium",
+        "Failed fuel",
+        "Controlled to prevent evaporation into cover gas and migration"
+       ],
+       "anchor": "to prevent evaporation into cover gas and subsequent migration",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Tritium in the primary coolant diffuses through the intermediate heat exchanger to the intermediate sodium.",
+     "anchor": "Tritium from the primary coolant diffuses through the intermediate heat exchanger",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+    },
+    {
+     "t": "p",
+     "text": "Heat tracing on SPS piping keeps sodium above minimum temperatures.",
+     "anchor": "is accomplished using heat tracing on the SPS piping",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Which is a stated oxygen source for the IHT sodium?",
+     "o": [
+      "The EVST",
+      "Cold trap packing",
+      "Argon from the RWG",
+      "In-leakage from the NSS"
+     ],
+     "a": 3,
+     "x": "Oxygen may enter the IHT through in-leakage from the NSS.",
+     "anchor": "Oxygen may enter the IHT through in-leakage from Nuclear Island Salt System",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50",
+     "eo": "1,4,9"
+    },
+    {
+     "q": "How does tritium reach the intermediate sodium?",
+     "o": [
+      "From the salt",
+      "Through the cold traps",
+      "By diffusing through the intermediate heat exchanger",
+      "Through the cover gas"
+     ],
+     "a": 2,
+     "x": "Tritium in the primary coolant diffuses through the intermediate heat exchanger.",
+     "anchor": "Tritium from the primary coolant diffuses through the intermediate heat exchanger",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50",
+     "eo": "1,4,9"
+    }
+   ]
+  },
+  {
+   "title": "Purification equipment",
+   "eo": [
+    "3",
+    "4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Component",
+      "Removes",
+      "How"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Cold trap",
+        "Oxygen and hydrogen",
+        "Precipitation at reduced temperature"
+       ],
+       "anchor": "The cold trap removes hydrogen and oxygen from the sodium via precipitation at reduced temperature",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.6, p. 7.2-52"
+      },
+      {
+       "cells": [
+        "Cesium trap",
+        "Cesium",
+        "Reticulated vitreous carbon"
+       ],
+       "anchor": "reticulated vitreous carbon traps as part of the SPS-P process equipment",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.7, p. 7.2-52"
+      },
+      {
+       "cells": [
+        "Filter",
+        "Solid particulate matter",
+        "Sintered metal filters"
+       ],
+       "anchor": "in the form of sintered metal filters",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.5, p. 7.2-52"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "In the cold trap, sodium is cooled to precipitate sodium oxide onto high surface area packing media.",
+     "anchor": "the sodium is cooled down to precipitate sodium oxide from solution onto high surface area packing media",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+    },
+    {
+     "t": "p",
+     "text": "After analysis and purification, sodium flows back into the RV. Isolation valves are on the supply and return lines.",
+     "anchor": "Isolation valves are located on the supply and return lines",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-4-2",
+     "num": "7.2.4-2",
+     "cap": "Block Flow Diagram of the Intermediate SPS",
+     "alt": "PSAR Rev 1 figure: Block Flow Diagram of the Intermediate SPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-56"
+    }
+   ],
+   "checks": [
+    {
+     "q": "What does the cold trap remove?",
+     "o": [
+      "Oxygen and hydrogen",
+      "Particulates only",
+      "Argon",
+      "Cesium"
+     ],
+     "a": 0,
+     "x": "The cold trap removes hydrogen and oxygen via precipitation at reduced temperature.",
+     "anchor": "The cold trap removes hydrogen and oxygen from the sodium via precipitation at reduced temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.6, p. 7.2-52",
+     "eo": "3,4"
+    },
+    {
+     "q": "What medium is used in the cesium trap?",
+     "o": [
+      "Reticulated vitreous carbon",
+      "Activated charcoal",
+      "Stainless steel mesh",
+      "Sintered metal"
+     ],
+     "a": 0,
+     "x": "Cesium traps use reticulated vitreous carbon.",
+     "anchor": "reticulated vitreous carbon traps as part of the SPS-P process equipment",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.7, p. 7.2-52",
+     "eo": "3,4"
+    }
+   ]
+  },
+  {
+   "title": "Monitoring",
+   "eo": [
+    "3",
+    "5",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The key process indicator for sodium purity is the saturation temperature, which correlates directly with impurity concentration.",
+     "anchor": "The key process indicator for sodium purity is the saturation temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "The PTI correlates sodium flow rate through a plugging orifice at a given temperature to impurity concentration.",
+     "anchor": "PTI operation requires correlating flow rate of the sodium through a plugging orifice",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "The SPS operates with sodium above the saturation temperature to avoid plugging passageways.",
+     "anchor": "The SPS operates with the sodium above this saturation temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "Hydrogen meters use a probe and an ion pump, or a similar technology.",
+     "anchor": "which employ a probe and an ion pump, or a similar technology",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.2, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "The MPS collects samples for laboratory analysis and gives a point-in-time check against PTI data.",
+     "anchor": "point-in-time sodium chemistry characterization for comparison against PTI monitoring data",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.4, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "Process radiation monitors apply only to the SPS-P. There are two gamma spectrometers.",
+     "anchor": "Process radiation monitors only apply to SPS-P",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Monitor location",
+      "What it tells the operator"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Main bypass line",
+        "Cesium content of the process sodium, and whether the cesium trap may need to be brought online"
+       ],
+       "anchor": "indicating whether the cesium trap may need to be brought online",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51"
+      },
+      {
+       "cells": [
+        "Return line downstream of the cesium trap",
+        "Effectiveness of the cesium trap"
+       ],
+       "anchor": "is used to monitor the effectiveness of the cesium trap",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The monitors detect cesium against the normal background of Na-24 gamma rays, the dominant radionuclide in the SPS-P.",
+     "anchor": "against the normal background of Na-24 gamma rays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51"
+    },
+    {
+     "t": "p",
+     "text": "The PTI is in the SPS-P Technology Maturation Plan, because more design and testing is needed.",
+     "anchor": "by including the PTI in the SPS-P Technology Maturation Plan",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+    }
+   ],
+   "checks": [
+    {
+     "q": "The bypass line monitor shows rising Cs-137. What does this indicate?",
+     "o": [
+      "The cesium trap may need to be brought online",
+      "The cold trap is plugged",
+      "The SPS-P pump must trip",
+      "The EVST is leaking"
+     ],
+     "a": 0,
+     "x": "The bypass monitor indicates whether the cesium trap may need to be brought online.",
+     "anchor": "indicating whether the cesium trap may need to be brought online",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51",
+     "eo": "3,5,8"
+    },
+    {
+     "q": "What is the key process indicator for sodium purity?",
+     "o": [
+      "Pump current",
+      "Cover gas pressure",
+      "Sodium level",
+      "Saturation temperature"
+     ],
+     "a": 3,
+     "x": "The saturation temperature correlates directly with impurity concentration.",
+     "anchor": "The key process indicator for sodium purity is the saturation temperature",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51",
+     "eo": "3,5,8"
+    },
+    {
+     "q": "What is the dominant radionuclide in the SPS-P?",
+     "o": [
+      "Xe-133",
+      "Cs-137",
+      "Na-24",
+      "Ar-41"
+     ],
+     "a": 2,
+     "x": "Monitors detect cesium against the normal background of Na-24, the dominant radionuclide in the SPS-P.",
+     "anchor": "against the normal background of Na-24 gamma rays",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.3, p. 7.2-51",
+     "eo": "3,5,8"
+    }
+   ]
+  },
+  {
+   "title": "Automatic actions",
+   "eo": [
+    "6",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Action"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-HR11",
+        "SR",
+        "SPS-P pump trips at the hot pool low level setpoint, so RV sodium cannot drain below its safe level"
+       ],
+       "anchor": "DL3-HR11 SPS Pump Trip on Low Primary",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL4-RR8",
+        "NSRST",
+        "Manual pump trip on low primary sodium level, as a backup to the SR trip"
+       ],
+       "anchor": "The SPS-P pump is manually tripped on",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL4-RR3a",
+        "NSRST",
+        "SPS-P supply isolation valve closes on a leak signal"
+       ],
+       "anchor": "the SPS-P supply isolation valve automatically closes",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+      },
+      {
+       "cells": [
+        "DL4-RR3b",
+        "NSRST",
+        "SPS-P pumps trip on a leak signal"
+       ],
+       "anchor": "The SPS-P pumps trip on detection of a sodium leak in SPS-P",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+      },
+      {
+       "cells": [
+        "DL4-RR3c",
+        "NSRST",
+        "Ventilation of the SPS-P cells isolates on a leak signal"
+       ],
+       "anchor": "ventilation of the SPS-P cells is automatically isolated",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "SPS leak detection covers SPS piping, isolation valves, and piping enclosures in the HAA, and is provided by NFP.",
+     "anchor": "The SPS includes sodium leak detection for SPS piping, SPS isolation valves",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+    },
+    {
+     "t": "p",
+     "text": "Sensors include wire and cable, spark plugs, and mutual inductance types.",
+     "anchor": "SPS leak detection uses devices such as wire and cable, spark plugs, and mutual inductance type sensors",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+    },
+    {
+     "t": "p",
+     "text": "All SPS SR functions are passive or are executed on a loss of power, and no operator actions are required to support them.",
+     "anchor": "No operator actions are required to support SPS SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-53"
+    }
+   ],
+   "checks": [
+    {
+     "q": "An SPS-P leak signal is received. Which set of automatic actions follows?",
+     "o": [
+      "Supply valve closes, pumps trip, and cell ventilation isolates",
+      "Reactor scrams only",
+      "Return valve opens",
+      "EVST drains"
+     ],
+     "a": 0,
+     "x": "Leak detection closes the supply isolation valve, trips the pumps, and isolates cell ventilation.",
+     "anchor": "the SPS-P supply isolation valve automatically closes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47",
+     "eo": "6,8"
+    },
+    {
+     "q": "Why does the SPS-P pump trip on low hot pool level?",
+     "o": [
+      "To protect pump bearings",
+      "To keep RV sodium from draining below its safe level",
+      "To start the cold trap",
+      "To protect the cesium trap"
+     ],
+     "a": 1,
+     "x": "DL3-HR11 supports primary sodium heat removal by preventing the RV sodium from draining below its safe level.",
+     "anchor": "DL3-HR11 SPS Pump Trip on Low Primary",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46",
+     "eo": "6,8"
+    },
+    {
+     "q": "What operator action is needed for SPS SR functions?",
+     "o": [
+      "Manual valve closure",
+      "None",
+      "Starting heat tracing",
+      "Manual trip of the pump"
+     ],
+     "a": 1,
+     "x": "No operator actions are required to support SPS SR functions. The manual trip is an NSRST backup.",
+     "anchor": "No operator actions are required to support SPS SR functions",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-53",
+     "eo": "6,8"
+    }
+   ]
+  },
+  {
+   "title": "Operation and the EVST limit",
+   "eo": [
+    "4",
+    "8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The SPS may run continuously whenever monitoring or processing is needed.",
+     "anchor": "The SPS may be operated continuously whenever monitoring of liquid sodium",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+    },
+    {
+     "t": "p",
+     "text": "The SPS-P and SPS-I may operate in each of the four reactor modes. The SPS-E can operate independent of reactor modes.",
+     "anchor": "Operation of the SPS-P and SPS-I may occur in each of the four reactor modes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50"
+    },
+    {
+     "t": "p",
+     "text": "The SPS-E is not used to remove heat from the EVST. Its design prevents removing sodium below the minimum level for EVST residual heat removal.",
+     "anchor": "The SPS-E is not utilized to remove heat from the EVST",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.1, p. 7.2-44"
+    },
+    {
+     "t": "p",
+     "text": "The SPS-E is below grade to reduce personnel exposure if the EVST sodium contains radionuclides.",
+     "anchor": "The SPS-E is located below grade to reduce personnel exposure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.1, p. 7.2-44"
+    },
+    {
+     "t": "fig",
+     "id": "psar-fig-7-2-4-3",
+     "num": "7.2.4-3",
+     "cap": "Block Flow Diagram of the EVST SPS",
+     "alt": "PSAR Rev 1 figure: Block Flow Diagram of the EVST SPS",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.5, p. 7.2-57"
+    }
+   ],
+   "checks": [
+    {
+     "q": "May the SPS-P operate in all reactor modes?",
+     "o": [
+      "Only at power",
+      "Only in shutdown",
+      "Only in refueling",
+      "Yes, in each of the four reactor modes"
+     ],
+     "a": 3,
+     "x": "SPS-P and SPS-I operation may occur in each of the four reactor modes.",
+     "anchor": "Operation of the SPS-P and SPS-I may occur in each of the four reactor modes",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3, p. 7.2-50",
+     "eo": "4,8"
+    }
+   ]
+  },
+  {
+   "title": "Safety significance",
+   "eo": [
+    "9",
+    "10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "table",
+     "head": [
+      "Function",
+      "Class",
+      "Purpose"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "DL3-RR1b SPS primary system barrier",
+        "SR",
+        "Primary coolant boundary from the RES through the isolation valves"
+       ],
+       "anchor": "DL3-RR1b SPS Primary System Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL3-RR4 EVST barrier",
+        "SR",
+        "Radionuclide retention in the EVST"
+       ],
+       "anchor": "DL3-RR4 EVST Barrier (SR)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL4-HR1 IAC passive mode operation",
+        "NSRST",
+        "SPS-I piping prevents leaks or flow disruption so IAC heat removal stays available"
+       ],
+       "anchor": "DL4-HR1 IAC Passive Mode Operation",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL2-RR7 primary SPS barrier",
+        "NSRST",
+        "Passive barrier for primary sodium outside the primary coolant boundary"
+       ],
+       "anchor": "DL2-RR7 Primary SPS Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL2-RR8 intermediate cold trap barrier",
+        "NSRST",
+        "Retains sodium and radionuclides accumulated in the cold traps"
+       ],
+       "anchor": "DL2-RR8 Intermediate Cold Trap SPS",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+      },
+      {
+       "cells": [
+        "DL4-RR3 SPS cells barrier",
+        "NSRST",
+        "Enclosures contain radionuclides from an SPS leak"
+       ],
+       "anchor": "DL4-RR3 SPS Cells Barrier (NSRST)",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+      },
+      {
+       "cells": [
+        "DL5-PAM1 post accident monitoring",
+        "NSRST",
+        "Valve and pump breaker position indication"
+       ],
+       "anchor": "DL5-PAM1 Post Accident Monitoring",
+       "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "text": "The DL3-RR1b barrier function does not include isolation valve closure.",
+     "anchor": "This function does not include isolation valve closure",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Quality Assurance Program",
+      "Design Reliability Assurance Program",
+      "Reliability and Integrity Management Program",
+      "In-service Testing Program",
+      "Equipment Qualification Program",
+      "Post-construction Inspection, Testing, and Analysis Program"
+     ],
+     "anchor": "The following programmatic special treatments are preliminarily identified as relevant to SPS SR and NSRST SSCs",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.4, p. 7.2-52"
+    }
+   ],
+   "checks": [
+    {
+     "q": "Why does SPS-I piping matter to IAC?",
+     "o": [
+      "It must prevent leaks or flow disruption so IAC heat removal remains available",
+      "It cools the IAC blowers",
+      "It carries IAC instrument air",
+      "It supplies IAC with argon"
+     ],
+     "a": 0,
+     "x": "DL4-HR1 keeps IAC heat removal available.",
+     "anchor": "DL4-HR1 IAC Passive Mode Operation",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-46",
+     "eo": "9,10"
+    }
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The SPS-P, SPS-I, and SPS-E clean three sodium inventories. Only the SPS-P has a cesium trap and radiation monitors.",
+   "anchor": "does not contain a cesium trap or associated radiological monitoring",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.1, p. 7.2-41"
+  },
+  {
+   "text": "Cold traps remove oxygen, hydrogen, and tritium by precipitation. The PTI tracks saturation temperature.",
+   "anchor": "The key process indicator for sodium purity is the saturation temperature",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+  },
+  {
+   "text": "The SR trip on low hot pool level protects heat removal. An SPS-P leak closes the supply valve, trips pumps, and isolates cell ventilation.",
+   "anchor": "the SPS-P supply isolation valve automatically closes",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+  }
+ ],
+ "passages": [],
+ "examples": [],
+ "word_sequence": [],
+ "blend_notes": [],
+ "facts": [],
+ "status": "Draft",
+ "id": "SY-08",
+ "title": "Sodium Processing System",
+ "kind": "system",
+ "subject": "SPS",
+ "sec_note": "Sec. 7.2.4, pp. 7.2-41 to 7.2-57",
+ "intro": "The SPS keeps three sodium inventories clean. Its monitoring and purification jobs are not safety functions, but the piping, pump trip, and leak response around them are.",
+ "objectives": [
+  {
+   "number": "1",
+   "text": "State the purpose of the SPS.",
+   "taught": true
+  },
+  {
+   "number": "2",
+   "text": "Identify the SPS boundaries and interfaces.",
+   "taught": true
+  },
+  {
+   "number": "3",
+   "text": "Identify the major components of the SPS.",
+   "taught": true
+  },
+  {
+   "number": "4",
+   "text": "Explain SPS operation.",
+   "taught": true
+  },
+  {
+   "number": "5",
+   "text": "Describe the SPS controls and indications.",
+   "taught": true
+  },
+  {
+   "number": "6",
+   "text": "Explain the SPS automatic features and interlocks.",
+   "taught": true
+  },
+  {
+   "number": "7",
+   "text": "Apply operating procedures for the SPS.",
+   "taught": false
+  },
+  {
+   "number": "8",
+   "text": "Diagnose abnormal conditions in the SPS.",
+   "taught": true
+  },
+  {
+   "number": "9",
+   "text": "Explain the safety significance of the SPS.",
+   "taught": true
+  },
+  {
+   "number": "10",
+   "text": "Address technical specifications and administrative controls for the SPS.",
+   "taught": true
+  }
+ ],
+ "slug": "psar-sy-08-sodium-processing-system"
+}

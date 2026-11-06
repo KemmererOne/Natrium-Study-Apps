@@ -1,0 +1,84 @@
+# SY-02 | Reactor Enclosure System | system | RES
+range: 7.1-15 7.1-49
+sec: Sec. 7.1.2, pp. 7.1-15 to 7.1-49
+intro: The Reactor Enclosure System is the vessel, head, internals, guard vessel, and supports. It holds the pool, forms a barrier, and shapes the flow path.
+
+== Purpose and safety features | 1
+S The RES supports the reactor core and contains the primary sodium coolant. @@ The RES supports the reactor core and contains the primary sodium coolant
+L Low-pressure, pool-type design with no boundary penetrations below the primary coolant operating level ;; Integral primary heat transport system inside the RV ;; Seismic isolation of the reactor from the supporting structure ;; Location in a subgrade reinforced concrete structure ;; Passive emergency core cooling by natural circulation and natural convection air cooling @@ a low-pressure, pool-type reactor design with no boundary penetrations
+S The RES provides radionuclide retention, reactivity control, and reactor heat removal functions. @@ The RES provides radionuclide retention, reactivity control, and reactor heat removal functions
+F 7.1.2-1
+K Where are penetrations through the RES primary coolant boundary located? | Below the sodium level | In the reactor head above the primary coolant level | In the guard vessel | In the vessel bottom head | 1 | Penetrations are located in the reactor head above the primary coolant level. @@ are located in the reactor head above the primary coolant level
+
+== Boundaries and interfaces | 2
+S The primary coolant boundary includes portions of systems enclosing the primary coolant volume and cover gas volume. @@ forms a portion of the primary coolant boundary
+L RXB ;; RCC ;; PHT ;; CRD ;; RAC ;; Fuel Handling Systems ;; SCG ;; SPS ;; I&C systems @@ The RES interfaces with the RXB
+S The HAA Seal and Well Seal preserve the RAC air flowpath and limit leakage to the HAA. @@ to preserve the integrity of the RAC air flowpath and to limit leakage to the HAA
+F 7.1.2-10
+K What do the HAA Seal and Well Seal preserve? | The primary pump seals | The RAC air flowpath integrity and limit leakage to the HAA | Sodium level | IHX tube integrity | 1 | They preserve the RAC air flowpath and limit leakage to the HAA. @@ to preserve the integrity of the RAC air flowpath and to limit leakage to the HAA
+
+== Reactor vessel and head | 3
+S The RV is a vertical cylindrical shell with an integrally welded torispherical bottom head. @@ The RV is a vertical, right-circular cylindrical shell design
+S The RV hangs from the flat, disc-shaped reactor head through a pressure-retaining structural weld. @@ The RV is supported by the flat, disc-shaped reactor head
+S The RV and reactor head are austenitic stainless steel, for compatibility with liquid sodium. @@ are constructed of austenitic stainless steel for compatibility
+T Item | Preliminary value
+R RV outside diameter | 415.5 in @@ RV outside diameter 415.5
+R GV outside diameter | 433.5 in @@ GV outside diameter 433.5
+R RV wall thickness | 2 in @@ RV wall thickness 2
+R Reactor head thickness | 12 in @@ Reactor Head thickness 12
+R RV design temperature | 1050 F @@ Reactor Vessel SA-240 316H
+F 7.1.2-2
+K How is the reactor vessel supported? | On a skirt at the bottom | By the reactor head through a structural weld at the top of the shell | On the guard vessel floor | By the core barrel | 1 | The RV is supported through a structural weld between the top of the shell and the reactor head. @@ The RV is supported through a structural weld between the top of the shell and the reactor head
+
+== Rotatable plug and upper internals | 3,4
+S The UIS sits above the core. It guides the CRDM drivelines and places core exit temperature monitoring instrumentation. @@ provides shroud tubes as guides to locate control rod drive mechanism
+S During plant operation, the RPA is locked in place and is not rotatable. @@ During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable
+S During refueling, the RPA is disconnected from the mounting flange and elevated to allow rotation. @@ the RPA is disconnected from the reactor head mounting flange and elevated
+S With the RPA in the refueling position and the drivelines unlatched and fully retracted, the UIS rotates with the plug. @@ the UIS rotates with the rotatable plug
+F 7.1.2-3
+K What is the state of the RPA during plant operation? | Rotating slowly | Locked in place and not rotatable | Elevated | Removed | 1 | During plant operation the RPA is locked and not rotatable. @@ During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable
+
+== Sodium pools and flow path | 4
+S The hot pool liner separates the hot and cold pools and directs hot sodium toward the IHX inlets. @@ separates the hot and cold pools of the primary sodium coolant and directs hot primary sodium
+S Stratification minimizes heat transfer between pools, increases thermal efficiency, and reduces thermal gradients. @@ minimizes heat transfer between pools, increases thermal efficiency
+S The core inlet plenum receives cold coolant from the PSP discharge pipe. @@ The core inlet plenum receives cold coolant flow from the PSP discharge pipe
+S The core barrels limit flow through the IVS to that needed to remove stored assembly decay heat. @@ limits the flow through the IVS to that needed to remove stored assembly decay heat
+F 7.1.2-9
+F 7.1.2-8
+K What region is formed between the hot and cold pools? | The cover gas space | The warm sodium pool region | The core inlet plenum | The annulus | 1 | The liners form a thermally insulated cavity called the warm sodium pool region. @@ referred to as the warm sodium pool region
+K Where is In-Vessel Storage located? | Between the inner and outer core barrel | Above the reactor head | In the guard vessel annulus | In the hot pool liner | 0 | The IVS is located between the inner and outer core barrel. @@ the IVS (located between the inner and outer core barrel)
+
+== Guard vessel | 3,8
+S The GV provides a defense-in-depth coolant and functional containment boundary if the RV leaks. @@ which provides a defense-in-depth coolant and functional containment boundary
+S The RV-GV annulus is inerted with argon gas from the SCG to minimize sodium-air reaction. @@ The annular space is inerted with argon gas minimizing the potential for sodium-air reaction
+S If the RV leaks, the equilibrium RV and GV sodium level remains above the IHX inlets, so heat still reaches the intermediate system or RAC. @@ sodium level remains above the level of the IHX inlets
+S The GV also keeps sodium away from RXB concrete and the surrounding atmosphere. @@ The GV minimizes the potential for sodium contact with RXB concrete
+F 7.1.2-6
+K After an RV leak into the guard vessel, where does the sodium level settle? | Below the core | Above the IHX inlets | At the bottom of the annulus | At the reactor head | 1 | The equilibrium level remains above the IHX inlets. @@ sodium level remains above the level of the IHX inlets
+K What fills the RV-GV annulus? | Nitrogen | Air | Argon | Sodium | 2 | The annular space is inerted with argon gas. @@ The annular space is inerted with argon gas minimizing the potential for sodium-air reaction
+
+== Supports and seismic isolation | 3
+S The RSS transmits loads to the RXB substructure through RSBs, the MIRSS, and seismic isolators. @@ The RSS structural load path consists of RSBs
+S The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath. @@ The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath
+F 7.1.2-7
+K Which structure also forms a part of the RAC air flowpath? | The UIS | The MIRSS | The core barrel | The RPA | 1 | The MIRSS supports the RAC CCA and forms a part of the RAC air flowpath. @@ The MIRSS also supports the RAC CCA and forms a part of the RAC air flowpath
+
+== Abnormal conditions and automatic response | 6,8
+S The cover gas space accommodates increased inventory from IHX leakage, and the RPS initiates scram and ISP trip on high primary coolant level. @@ The cover gas space accommodates increased primary coolant inventory due to IHX leakage
+S The IHT is maintained at a higher pressure than the primary coolant in normal operation, AOOs, shutdown, and accident conditions. @@ The IHT is maintained at a higher pressure than the primary coolant
+S If forced primary flow is not available, the RES configuration passively establishes natural circulation. @@ In the event that forced primary coolant flow is not available
+K What automatic actions occur on a high primary coolant level from IHX leakage? | Runback only | Reactor scram and ISP trip | SPS start | RAC isolation | 1 | The RPS initiates reactor scram and Intermediate Sodium Pump trip on high primary coolant level. @@ initiates reactor scram and Intermediate Sodium Pump trip on a high primary coolant level condition
+
+== Instrumentation | 5
+S The RES supports monitoring instrumentation with drywells, thermowells, penetrations, and sealing surfaces. It also gives access for sodium leakage monitoring. @@ by providing drywells and thermowells, penetrations
+K What does the RES provide for instrumentation? | Scram logic | Drywells, thermowells, and penetrations | Control room displays | Neutron detectors | 1 | The RES physically supports instruments by providing drywells, thermowells, and penetrations. @@ by providing drywells and thermowells, penetrations
+
+== Safety significance and programs | 9,10
+S The GV supports SR function DL3-HR4 by providing a heat transfer path from the RV to the RAC. @@ The GV supports the SR DL3-HR4 function
+S The GV supports NSRST function DL4-RR1 as a boundary if the RV leaks. @@ The GV supports the NSRST DL4-RR1 function
+L Quality Assurance Program Description ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; Equipment Qualification Program ;; Comprehensive Vibration Assessment Program ;; Post-Construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as applicable to the RES
+K Which SR function does the GV support? | Scram | DL3-HR4 heat transfer path from the RV to the RAC | Cover gas purification | Sodium processing | 1 | The GV supports the SR DL3-HR4 function. @@ The GV supports the SR DL3-HR4 function
+
+Z The RES holds the pool, has no penetrations below the sodium level, and is seismically isolated. @@ a low-pressure, pool-type reactor design with no boundary penetrations
+Z The GV is a backup boundary with an argon annulus and a heat transfer path to RAC. @@ The GV supports the SR DL3-HR4 function
+Z The RPA is locked during operation and rotates only for refueling. @@ During plant operation, the RPA is locked in place to the reactor head mounting flange and is not rotatable

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Fire Protection and Sodium Leakage</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.tbl { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 0.86rem; table-layout: fixed; }
+.tbl th, .tbl td { border: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.tbl th { background: var(--card); }
+.gap { color: var(--muted); font-size: 0.85rem; margin: 2px 0 12px; }
+.study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
+.src { font-size: 0.9rem; }
+</style>
+<main class="wrap" data-slug="psar-op-05-fire-protection-and-sodium-leakage">
+<nav class="side" aria-label="Lesson pages"><h2>Pages</h2><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol><div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div></nav>
+<div class="pages">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 1 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p class="src">Sodium fires change the fire protection picture. Passive features do the work, and water stays away from sodium. This lesson pairs with SY-15. <cite>PSAR Rev 1 (NAT-9400), Sec. 8.2, pp. 8.2-1 to 8.2-8</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the fire protection defense-in-depth approach for conventional and sodium fires.</p><p class="gap">Taught in: <a href="#concept-1">Defense in depth</a></p><p><span class="num">2</span> Describe the sodium leak design features.</p><p class="gap">Taught in: <a href="#concept-2">Sodium leak design features</a></p><p><span class="num">3</span> Explain how each category of sodium leak is handled.</p><p class="gap">Taught in: <a href="#concept-3">Leak categories</a></p><p><span class="num">4</span> Describe how leak sizes and locations are postulated.</p><p class="gap">Taught in: <a href="#concept-4">Leak postulation</a></p><p><span class="num">5</span> Explain the fire safe shutdown strategy.</p><p class="gap">Taught in: <a href="#concept-5">Fire safe shutdown</a></p><p><span class="num">6</span> State the preliminary firefighting strategies and the role of operators and responders.</p><p class="gap">Taught in: <a href="#concept-6">Firefighting strategy</a></p></div>
+
+<div class="pager"><a class="next" href="#concept-1">Defense in depth <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 2 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Defense in depth</h2><p class="count">Objectives 1</p><p>The design provides defense in depth through prevention, detection, containment, suppression, and safe shutdown. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1, p. 8.2-1</cite></p>
+<p>Requirements consider both conventional and sodium fires. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1, p. 8.2-1</cite></p>
+<p>The sodium fire strategy uses leak prevention, detection, and passive mitigation. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3</cite></p>
+<p>The radiological sodium strategy uses passive features, and adds active features only where necessary. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.1, p. 8.2-1</cite></p>
+
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Defense in depth <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 3 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Defense in depth</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1</span><span>OP-05-K1</span></div>
+  <p>What does the sodium fire strategy rely on?</p>
+  <div class="opts"><button type="button" class="opt">A. Offsite crews only</button><button type="button" class="opt">B. Halon</button><button type="button" class="opt">C. Water sprays</button><button type="button" class="opt">D. Leak prevention, detection, and passive mitigation</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. It uses leak prevention, detection, and passive mitigation. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K1&amp;body=Item%3A%20OP-05-K1%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20What%20does%20the%20sodium%20fire%20strategy%20rely%20on%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.2%2C%20p.%208.2-3%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Defense in depth</a><a class="next" href="#concept-2">Sodium leak design features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 4 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Sodium leak design features</h2><p class="count">Objectives 2</p><table class="tbl"><thead><tr><th>Feature</th><th>What it does</th></tr></thead><tbody><tr><td>Cells</td><td>Rooms with limited leak rate and known oxygen volume, inerted or de facto inerted <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-1</cite></td></tr><tr><td>Guard pipes</td><td>Full secondary pressure boundary for radiological sodium <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.3, p. 8.2-2</cite></td></tr><tr><td>Guard enclosures</td><td>Like guard pipes, but with a drainpipe to a collection location <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.4, p. 8.2-2</cite></td></tr><tr><td>Clamshells</td><td>Guard enclosures placed where pipe inspections are needed <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2</cite></td></tr><tr><td>Catch pans</td><td>Steel-lined volumes for the design-basis leak plus margin <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2</cite></td></tr><tr><td>Inerted guard vessels</td><td>Prevent sodium-air and sodium-concrete reactions <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.7, p. 8.2-3</cite></td></tr><tr><td>Leakage detectors</td><td>Detect liquid sodium, aerosols, and reaction products <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3</cite></td></tr></tbody></table>
+<p>Clamshells in the HAA drain leaked IHT sodium to the RAB pipe chase, so a leak inside is not a leak into the HAA. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2</cite></p>
+<p>Suppression decks are used on catch pans where oxygen volume cannot be limited. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2</cite></p>
+<p>Conventional fire detection in non-inerted fire areas gives supplemental leak detection. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3</cite></p>
+
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Defense in depth</a><a class="next" href="#check-2">Knowledge check: Sodium leak design features <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 5 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Sodium leak design features</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-05-K2</span></div>
+  <p>What is the difference between a guard pipe and a guard enclosure?</p>
+  <div class="opts"><button type="button" class="opt">A. Guard enclosures are inerted</button><button type="button" class="opt">B. None</button><button type="button" class="opt">C. A guard enclosure has a drainpipe</button><button type="button" class="opt">D. Guard pipes are plastic</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Guard enclosures act similarly, except that a drainpipe is attached. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.4, p. 8.2-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K2&amp;body=Item%3A%20OP-05-K2%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20What%20is%20the%20difference%20between%20a%20guard%20pipe%20and%20a%20guard%20enclosure%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.1.4%2C%20p.%208.2-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 2</span><span>OP-05-K3</span></div>
+  <p>Where does a clamshell in the HAA drain?</p>
+  <div class="opts"><button type="button" class="opt">A. Outside</button><button type="button" class="opt">B. HAA floor</button><button type="button" class="opt">C. RAB pipe chase</button><button type="button" class="opt">D. Reactor vessel</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Clamshells allow leaked sodium to flow to the RAB pipe chase. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.5, p. 8.2-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K3&amp;body=Item%3A%20OP-05-K3%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Where%20does%20a%20clamshell%20in%20the%20HAA%20drain%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.1.5%2C%20p.%208.2-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 2</span><span>OP-05-K4</span></div>
+  <p>When does a catch pan get a suppression deck?</p>
+  <div class="opts"><button type="button" class="opt">A. In inerted cells</button><button type="button" class="opt">B. Never</button><button type="button" class="opt">C. Always</button><button type="button" class="opt">D. Where oxygen volume cannot be limited</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Suppression decks are applied where environmental oxygen cannot be limited. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K4&amp;body=Item%3A%20OP-05-K4%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20When%20does%20a%20catch%20pan%20get%20a%20suppression%20deck%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.1.6%2C%20p.%208.2-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Sodium leak design features</a><a class="next" href="#concept-3">Leak categories <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 6 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Leak categories</h2><p class="count">Objectives 3</p><table class="tbl"><thead><tr><th>Category</th><th>Handling</th></tr></thead><tbody><tr><td>Operational leakage</td><td>Mechanical joint leak, less than design basis, into a catch pan with no deck <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2.1, p. 8.2-4</cite></td></tr><tr><td>Into a guard enclosure</td><td>Contained and drained to a catch pan through a heat traced line <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2.2, p. 8.2-4</cite></td></tr><tr><td>Within a process cell</td><td>Contained or drained, with sloped floors and steel plates to a catch pan <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2.3, p. 8.2-4</cite></td></tr><tr><td>Beyond design basis</td><td>Evaluated against the Quantitative Health Objectives <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2.4, p. 8.2-5</cite></td></tr></tbody></table>
+<p>Leaked radiological sodium stays within the process cell. Non-radiological sodium may drain to lower catch pans or vaults. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-2</cite></p>
+<p>Detection of small leaks helps prevent large leaks. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></p>
+
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Sodium leak design features</a><a class="next" href="#check-3">Knowledge check: Leak categories <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 7 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Leak categories</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 3</span><span>OP-05-K5</span></div>
+  <p>Why are guard enclosure drain lines heat traced?</p>
+  <div class="opts"><button type="button" class="opt">A. To measure flow</button><button type="button" class="opt">B. To minimize sodium freezing</button><button type="button" class="opt">C. To ignite sodium</button><button type="button" class="opt">D. To warm the room</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Drain lines are heat traced to minimize sodium freezing. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2.2, p. 8.2-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K5&amp;body=Item%3A%20OP-05-K5%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Why%20are%20guard%20enclosure%20drain%20lines%20heat%20traced%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.2.2%2C%20p.%208.2-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span>Objective 3</span><span>OP-05-K6</span></div>
+  <p>Where does leaked radiological sodium stay?</p>
+  <div class="opts"><button type="button" class="opt">A. In a lower vault</button><button type="button" class="opt">B. In the stack</button><button type="button" class="opt">C. In the MCR</button><button type="button" class="opt">D. In the process cell</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. It is contained within the process cell. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.2, p. 8.2-2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K6&amp;body=Item%3A%20OP-05-K6%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Where%20does%20leaked%20radiological%20sodium%20stay%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.1.2%2C%20p.%208.2-2%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Leak categories</a><a class="next" href="#concept-4">Leak postulation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 8 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Leak postulation</h2><p class="count">Objectives 4</p><p>Leaks are postulated for all piping that normally contains sodium. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></p>
+<p>Design basis leakage cracks are Dt/4 for seismic piping, and full circumferential breaks for non-seismic piping. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></p>
+<p>Sodium and salt systems are evaluated as moderate energy systems. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.3, p. 8.2-6</cite></p>
+<p>SSCs in the HAA are protected from the worst-case leak regardless of stress. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.3, p. 8.2-7</cite></p>
+<p>A top of pipe spray could make a faster, hotter fire. A bottom leak could make a larger volume flood. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.3.1, p. 8.2-7</cite></p>
+
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Leak categories</a><a class="next" href="#check-4">Knowledge check: Leak postulation <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 9 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Leak postulation</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 4</span><span>OP-05-K7</span></div>
+  <p>What leak size is postulated for seismically qualified piping?</p>
+  <div class="opts"><button type="button" class="opt">A. Full circumferential break</button><button type="button" class="opt">B. Dt/4 crack</button><button type="button" class="opt">C. 1 inch hole</button><button type="button" class="opt">D. None</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. It is bounded by a Dt/4 crack. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K7&amp;body=Item%3A%20OP-05-K7%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20What%20leak%20size%20is%20postulated%20for%20seismically%20qualified%20piping%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.2%2C%20p.%208.2-4%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 4</span><span>OP-05-K8</span></div>
+  <p>Why are smaller pipes considered?</p>
+  <div class="opts"><button type="button" class="opt">A. Sodium and salt leaks can have more significant effects</button><button type="button" class="opt">B. They are cheaper</button><button type="button" class="opt">C. BTP 3-4 requires it</button><button type="button" class="opt">D. They are seismic</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Leaks in smaller pipes are considered due to potentially more significant environmental effects. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.3.1, p. 8.2-7</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K8&amp;body=Item%3A%20OP-05-K8%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Why%20are%20smaller%20pipes%20considered%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.3.3.1%2C%20p.%208.2-7%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Leak postulation</a><a class="next" href="#concept-5">Fire safe shutdown <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 10 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Fire safe shutdown</h2><p class="count">Objectives 5</p><p>Redundant trains of safety-significant and safe shutdown SSCs are in separate fire areas. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.10, p. 8.2-3</cite></p>
+<p>Damage from any single fire is limited to a single fire area. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.2, p. 8.2-6</cite></p>
+<p>The design limits fire damage to a single train. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3.2, p. 8.2-6</cite></p>
+<p>Fire analyses and fire PRA will be done for the operating license application. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3, p. 8.2-5</cite></p>
+
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Leak postulation</a><a class="next" href="#check-5">Knowledge check: Fire safe shutdown <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 11 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Fire safe shutdown</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 5</span><span>OP-05-K9</span></div>
+  <p>What does the design assume about equipment in a fire area?</p>
+  <div class="opts"><button type="button" class="opt">A. Only cables fail</button><button type="button" class="opt">B. All of it is inoperable</button><button type="button" class="opt">C. Only half fails</button><button type="button" class="opt">D. None fails</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. A safe shutdown path is kept while assuming all equipment in any one fire area is rendered inoperable. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.3, p. 8.2-5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K9&amp;body=Item%3A%20OP-05-K9%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20What%20does%20the%20design%20assume%20about%20equipment%20in%20a%20fire%20area%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.3%2C%20p.%208.2-5%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Fire safe shutdown</a><a class="next" href="#concept-6">Firefighting strategy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 12 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Firefighting strategy</h2><p class="count">Objectives 6</p><p>There is no active or manual fire suppression for large sodium fires. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>Sodium leaks and fires are mitigated passively by NNA features. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>Class D extinguishers with Sodium Chloride-based dry powder are staged for personnel protection. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>Incipient conventional fires in the RAB and RXB use Class A, B, or C extinguishers. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>Beyond the incipient stage, offsite responders with specialized training are requested. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>Deep-seated sodium fires are contained in NNA features and are passively self-suppressing. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>The RXB and RAB have no water-based suppression, to avoid sodium-water interaction. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+<p>A Fire Protection Program will be developed at the OL stage to meet 10 CFR 50.48(a). <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4, p. 8.2-7</cite></p>
+
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Fire safe shutdown</a><a class="next" href="#check-6">Knowledge check: Firefighting strategy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-6">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 13 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Firefighting strategy</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>OP-05-K10</span></div>
+  <p>What is used to fight a large sodium fire?</p>
+  <div class="opts"><button type="button" class="opt">A. Foam</button><button type="button" class="opt">B. Water</button><button type="button" class="opt">C. No active or manual suppression, passive features mitigate it</button><button type="button" class="opt">D. CO2 flood</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. There is no active or manual fire suppression for large sodium fires. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K10&amp;body=Item%3A%20OP-05-K10%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20What%20is%20used%20to%20fight%20a%20large%20sodium%20fire%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.4.1%2C%20p.%208.2-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 6</span><span>OP-05-K11</span></div>
+  <p>Which extinguisher is staged in sodium areas?</p>
+  <div class="opts"><button type="button" class="opt">A. Class B</button><button type="button" class="opt">B. Class C</button><button type="button" class="opt">C. Class D</button><button type="button" class="opt">D. Class A</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Class D with Sodium Chloride-based dry powder is staged. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K11&amp;body=Item%3A%20OP-05-K11%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Which%20extinguisher%20is%20staged%20in%20sodium%20areas%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.4.1%2C%20p.%208.2-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 6</span><span>OP-05-K12</span></div>
+  <p>Why is there no water suppression in the RXB and RAB?</p>
+  <div class="opts"><button type="button" class="opt">A. To avoid sodium-water interaction</button><button type="button" class="opt">B. Freezing</button><button type="button" class="opt">C. Weight</button><button type="button" class="opt">D. Cost</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. They avoid sodium-water interaction. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20OP-05-K12&amp;body=Item%3A%20OP-05-K12%0ALesson%3A%20Fire%20Protection%20and%20Sodium%20Leakage%0AQuestion%3A%20Why%20is%20there%20no%20water%20suppression%20in%20the%20RXB%20and%20RAB%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%208.2.4.1%2C%20p.%208.2-8%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+
+<div class="pager"><a href="#concept-6"><span aria-hidden="true">←</span> Firefighting strategy</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 14 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Sodium fires are handled by leak prevention, detection, and passive mitigation. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-3</cite></li><li>Guard pipes, enclosures, cells, and catch pans contain and collect sodium. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.6, p. 8.2-2</cite></li><li>No water suppression in RXB and RAB. Class D extinguishers protect personnel. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.4.1, p. 8.2-8</cite></li></ul>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#check-6"><span aria-hidden="true">←</span> Knowledge check: Firefighting strategy</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span><span class="count">Page 15 of 15</span></div>
+<h1>Fire Protection and Sodium Leakage</h1>
+<ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Defense in depth</a></li><li><a href="#check-1">Knowledge check: Defense in depth</a></li><li><a href="#concept-2">Sodium leak design features</a></li><li><a href="#check-2">Knowledge check: Sodium leak design features</a></li><li><a href="#concept-3">Leak categories</a></li><li><a href="#check-3">Knowledge check: Leak categories</a></li><li><a href="#concept-4">Leak postulation</a></li><li><a href="#check-4">Knowledge check: Leak postulation</a></li><li><a href="#concept-5">Fire safe shutdown</a></li><li><a href="#check-5">Knowledge check: Fire safe shutdown</a></li><li><a href="#concept-6">Firefighting strategy</a></li><li><a href="#check-6">Knowledge check: Firefighting strategy</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ML25276A288.pdf</p><p>Sections 8.2.1, 8.2.1.1, 8.2.1.2, 8.2.1.3, 8.2.1.4, 8.2.1.5, 8.2.1.6, 8.2.1.7, 8.2.1.8, 8.2.1.10, 8.2.2, 8.2.2.1, 8.2.2.2, 8.2.2.3, 8.2.2.4, 8.2.3, 8.2.3.2, 8.2.3.3, 8.2.3.3.1, 8.2.4, 8.2.4.1</p><p>Pages 8.2-1, 8.2-2, 8.2-3, 8.2-4, 8.2-5, 8.2-6, 8.2-7, 8.2-8</p></div>
+<p><a href="../../reference/#lesson-references">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20OP-05&amp;body=Lesson%3A%20OP-05%20Fire%20Protection%20and%20Sodium%20Leakage%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="finish"><button type="button" class="mark">Mark lesson complete</button><p class="mark-note" hidden>Could not save on this device.</p></div>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</div>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+// Progress stays on this device. It is stored by lesson slug, as one record for all lessons.
+const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); return true; } catch (e) { return false; } }
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  document.querySelectorAll(".side a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + page.id;
+    a.classList.toggle("on", on);
+    if (on) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest" }); } else a.removeAttribute("aria-current");
+  });
+  const all = loadAll();
+  all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
+  saveAll(all);
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+function showMark(failed) {
+  const done = !!(loadAll()[slug] || {}).done;
+  document.querySelectorAll(".mark").forEach(b => {
+    b.textContent = done ? "Completed. Select to undo" : "Mark lesson complete";
+    b.classList.toggle("is-done", done);
+    b.setAttribute("aria-pressed", done);
+  });
+  document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
+}
+document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
+  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  if (p.done) delete p.done;
+  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  all[slug] = p;
+  showMark(!saveAll(all));
+}));
+showMark(false);
+addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const links = [...document.querySelectorAll(".page.on .pager a")];
+  const a = links.find(l => l.classList.contains("next") === (e.key === "ArrowRight"));
+  if (a) a.click();
+});
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

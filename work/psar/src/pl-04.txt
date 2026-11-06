@@ -1,0 +1,51 @@
+# PL-04 | Safety Classification and Design Criteria | topic | safety classification
+range: 5.1-1 5.1-1 5.2-1 5.2-2 5.4-1 5.4-1 5.5-1 5.5-1 6.1-1 6.1-8
+sec: Chapter 5 and Sec. 6.1, pp. 5.1-1 to 5.5-1 and 6.1-1 to 6.1-7
+intro: Why is one system safety-related and another not? The classification depends on the function credited in the safety analysis.
+obj: Describe how SSCs are classified.
+obj: Define SR, NSRST, and NST functions.
+obj: Explain design basis hazard levels.
+obj: Describe the Safety Related Design Criteria.
+obj: Explain how non-safety SSCs are kept from harming SR SSCs.
+
+== How classification works | 1
+S Classification follows NEI 18-04, endorsed by RG 1.233. @@ Safety classification of structures, systems, or components (SSCs) is performed in accordance with NEI 18-04
+S PRA Safety Functions are initially assigned to systems, and a structured approach identifies the SSCs that perform them. @@ Safety Functions are initially assigned to systems
+S The safety significance of a PRA Safety Function determines the classification of the SSCs credited to perform it. @@ The safety significance of a PRA Safety Function determines the safety classification
+K What determines the safety classification of an SSC? | Its cost | The safety significance of the PRA Safety Function it is credited to perform | Its location | Its seismic category only | 1 | The safety significance of a PRA Safety Function determines the classification. @@ The safety significance of a PRA Safety Function determines the safety classification
+
+== SR, NSRST, and NST | 2
+T Class | Meaning
+R SR | PRA safety functions credited to keep the consequence of a DBE, or the frequency of a high-consequence BDBE, inside the F-C Target, and to conservatively ensure 10 CFR 50.34 dose requirements can be met @@ credited to maintain the consequence of one or more design basis events
+R NSRST | Non-SR PSFs that are risk-significant or required for DID adequacy @@ are the non-SR PSFs that are risk-significant or are required for defense-in-depth
+R NST | PSFs that are not SR or NSRST. They are not safety-significant and are not listed in Chapter 5 @@ NST functions are not safety-significant and are not listed in this chapter
+S An SSC is risk-significant if its function is needed to keep any LBE inside the F-C Target, or if the total frequency of LBEs with the SSC failed is within one percent of any of the three cumulative risk targets. @@ SSCs are classified as risk-significant if the SSC function is necessary to keep any LBEs inside the F-C Target
+S The term SR function is synonymous with required safety function in NEI 18-04. @@ The term SR function is synonymous with the term required safety function
+K A non-SR function required for defense-in-depth adequacy is classified as what? | SR | NSRST | NST | DBHL | 1 | NSRST functions are non-SR PSFs that are risk-significant or required for DID adequacy. @@ are the non-SR PSFs that are risk-significant or are required for defense-in-depth
+
+== An example SR function | 2
+S DL3-RC1 is scram by gravity driven absorber insertion by latch release. @@ DL3-RC1 Scram - Gravity Driven Absorber
+L CRD: releases the control rod assemblies on a scram signal from the RPS ;; RCC: control rod assemblies insert to a depth and within a time limit ;; RES: provides support and position control so rod release is uninhibited ;; RPS: generates a scram signal on exceeding a scram setpoint @@ Upon receipt of a scram signal from RPS
+N One SR function often spans several systems. When you study a system, ask which function it is credited for.
+K In SR function DL3-RC1, what does the Reactor Enclosure System provide? | The scram signal | Structural support and position control so rod release is uninhibited | Rod drive power | Neutron signals | 1 | RES provides structural support and position control preventing binding. @@ RES shall provide structural support and position control
+
+== Design basis hazard levels | 3
+S DBHLs specify the severity of hazards SR SSCs are designed to withstand with no adverse impact on their SR functions. @@ are a design specification of the level of severity or intensity of hazards
+L Wind and tornado ;; External flood ;; Internal flood ;; Missiles ;; Pipe rupture ;; Seismic ;; Extreme winter precipitation ;; Internal fire @@ Table 6.1-1 Design Basis Hazard Levels
+S The design basis earthquake is the safe shutdown earthquake. @@ The design basis earthquake is the safe shutdown earthquake (SSE)
+S SR structures are located below grade, and they are damp-proofed and waterproofed to minimize groundwater intrusion. @@ SR structures are located below grade and are damp-proofed and waterproofed
+S Internal flood sources considered include sodium, molten salt, oil, and water systems. @@ flooding sources from sodium, molten salt, oil, and water systems
+K What is the design basis earthquake? | The operating basis earthquake | The safe shutdown earthquake | The site response spectrum | A 1x10^-7 event | 1 | The design basis earthquake is the SSE. @@ The design basis earthquake is the safe shutdown earthquake (SSE)
+
+== SRDC | 4
+S The SRDC are design criteria needed to fulfill the Required Functional Design Criteria for SSCs selected to perform SR functions. @@ The SRDC are design criteria that are necessary to fulfill the Required Functional Design Criteria
+S The Required Functional Design Criteria are compared to the Principal Design Criteria in Section 5.3 to confirm the PDC are complete. @@ are compared to the Principal Design Criteria (PDC) in Section 5.3
+K What do the SRDC fulfill? | The Required Functional Design Criteria | The Energy Island specifications | The fire protection plan | The emergency plan | 0 | SRDC are necessary to fulfill the Required Functional Design Criteria. @@ The SRDC are design criteria that are necessary to fulfill the Required Functional Design Criteria
+
+== Non-safety interactions | 5
+L The failure does not cause the SSC to strike an SR SSC ;; The failure does not adversely impact an SR function ;; The SSC is analyzed and designed to prevent its failure under DBHL conditions @@ DBHL-related interactions between NSRST or NST SSCs and SR SSCs are prevented by at least one of the following criteria
+K Which is an accepted way to prevent a DBHL interaction between an NST SSC and an SR SSC? | Reclassify the hazard | Design the NST SSC to prevent its failure under DBHL conditions | Add operator rounds | Remove the DBHL | 1 | One criterion is that the SSC is analyzed and designed to prevent its failure under DBHL conditions. @@ is analyzed and designed to prevent its failure under DBHL conditions
+
+Z Classification comes from the safety significance of the PRA Safety Function. @@ The safety significance of a PRA Safety Function determines the safety classification
+Z NSRST functions are non-SR but risk-significant or required for DID. @@ are the non-SR PSFs that are risk-significant or are required for defense-in-depth
+Z DBHLs set the hazard severity SR SSCs must withstand. @@ are a design specification of the level of severity or intensity of hazards

@@ -1,0 +1,69 @@
+# SY-07 | Sodium Cover Gas System | system | SCG
+range: 7.2-22 7.2-40
+sec: Sec. 7.2.3, pp. 7.2-22 to 7.2-40
+intro: The SCG supplies inert argon across the plant. It keeps air out, relieves overpressure, watches for leaks, and finds failed fuel.
+
+== Purpose and scope | 1,2
+S The SCG controls, monitors, and supplies inert argon gas in the RXB, RAB, and FHB. @@ controls, monitors, and supplies inert argon gas to various systems and components throughout
+S It comprises the Primary SCG and the Intermediate SCG. @@ The SCG comprises the Primary SCG and the Intermediate SCG
+S Both receive purified argon from the NGA, with design conditions of 250 psig and 110 F. Local accumulators add inventory if NGA supply is disrupted. @@ Local argon accumulators are located directly downstream of the NGA supply
+S SCG piping that penetrates the RES, up to and including the first isolation valve, is part of the primary coolant boundary. @@ SCG piping that penetrates the RES, up to and including the first isolation valve
+F 7.2.3-1
+K What supplies purified argon to the SCG? | RWG | NGA | NHV | SPS | 1 | The SCG receives high pressure, purified argon from the NGA. @@ receives high pressure, purified argon from the Nuclear Island Argon Gas Distribution and Storage System
+
+== Primary SCG flow path | 3,4
+S All gas entering the RV exhausts through a single port in normal operation. @@ All gas entering the RV is exhausted through a single port during normal operation
+S In the primary filter skid, gas goes through the vapor trap (a preheater and vapor condenser), then an aerosol filter to remove sodium vapors and aerosols. @@ the gas passes through the vapor trap which consists of a preheater and vapor condenser
+S If cesium is present, gas goes through a cesium vapor filter before exhausting to the RWG. @@ If cesium is present the gas is routed through a cesium vapor filter
+S RV-GV annulus gas is generally recycled in a closed loop and exhausts only to relieve high pressure, to RWG or NHV depending on activity. @@ is generally recycled in a closed loop and only exhausts to relieve high pressure
+S The highest delivered pressure is to the scram cylinders, which sets the minimum NGA delivered pressure. @@ The highest delivered pressure from the Primary SCG is to the SCRAM cylinders
+K Which Primary SCG user sets the minimum delivered pressure by NGA? | PSP seals | SCRAM cylinders | RV cover gas | Lube oil skids | 1 | The highest delivered pressure is to the SCRAM cylinders. @@ The highest delivered pressure from the Primary SCG is to the SCRAM cylinders
+K What removes sodium vapor from the exhaust? | Cesium filter only | Vapor trap and aerosol filter | NHV | Holdup tank | 1 | Gas passes through the vapor trap and an aerosol filter to remove sodium vapors and aerosols. @@ the gas passes through the vapor trap which consists of a preheater and vapor condenser
+
+== Pressure relationships | 4
+S The RV cover gas stays at a slight positive pressure relative to the HAA. @@ Maintaining a slight positive pressure within the RV cover gas relative to the HAA
+S GV pressure is kept above HAA pressure and below reactor pressure. @@ Maintaining GV pressure above HAA pressure and below reactor pressure
+S A minimum flow in the main feed line prevents sodium and radioisotope diffusion that could impact overpressure protection. @@ A minimum flow is maintained in the main feed line at all times
+S Heat tracing keeps sodium in the exhaust from freezing and plugging when the condenser and filters are unavailable. @@ heat tracing maintains the sodium content at sufficient temperatures
+K How does GV pressure compare to the HAA and reactor? | Below both | Above HAA and below reactor | Above both | Equal to HAA | 1 | The SCG maintains GV pressure above HAA pressure and below reactor pressure. @@ Maintaining GV pressure above HAA pressure and below reactor pressure
+
+== Intermediate SCG | 3,4
+L ISP tanks ;; IHT drain tanks ;; IHT tank bubbler tubes ;; ISP gas barriers ;; ISP lube oil skids ;; Aerosol filter and sample line purges @@ The Intermediate SCG distributes the gas to the required locations
+S Gas through the ISP gas barrier prevents sodium deposition. @@ Gas is introduced through the ISP gas barrier to prevent sodium deposition
+S Gas passes through drain tanks and aerosol filters, then out through an oil bubbler to NHV. @@ The gas is then discharged through an oil bubbler to NHV
+F 7.2.3-2
+K Where does the Intermediate SCG discharge? | Through an oil bubbler to NHV | To the RWG holdup tank | To the reactor | To the stack with no filter | 0 | Gas is discharged through an oil bubbler to NHV. @@ The gas is then discharged through an oil bubbler to NHV
+
+== Failed fuel monitoring | 5,8
+L Impurity monitoring for hydrogen, oxygen, nitrogen, and methane ;; Gas sampling ;; Gamma spectroscopy and radiation monitoring for failed fuel ;; Tag gas monitoring for failed fuel localization @@ Impurity monitoring for hydrogen, oxygen, nitrogen, and methane
+S The exhaust stream is monitored for fission products. With no fission gas, it goes directly to the RWG vacuum tank. @@ the gas is discharged directly to the RWG vacuum tank
+S If an increase in fission gas is detected, the stream goes to the tag gas analysis cabinet, where xenon and krypton are concentrated. @@ the gas stream is routed to the tag gas analysis cabinet
+K What happens when an increase in fission gas is detected? | The reactor scrams automatically | The gas stream is routed to the tag gas analysis cabinet | The RV is vented to the HAA | The cover gas is isolated | 1 | An increase indicates a new breach, and gas is routed to the tag gas analysis cabinet. @@ the gas stream is routed to the tag gas analysis cabinet
+
+== Detecting an RV leak | 5,8
+S Annulus argon is monitored continuously for oxygen content, radioactivity, and filter pressure drop. @@ The argon gas is monitored continuously during operation for oxygen content, radioactivity
+T Indicator | Change on an RV leak | Why
+R Oxygen | Drops | Sodium or vapor oxidizes @@ the diatomic oxygen content is expected to drop
+R Activity | May increase | Argon-41, Neon-23, fission products, or sodium radioisotopes enter the annulus @@ activity in the annulus may increase
+R Filter pressure drop | Increases | Sodium aerosols or oxide accumulate @@ an increase in pressure drop across a filter may also indicate a leak
+K Which trend in the RV-GV annulus gas indicates an RV sodium leak? | Oxygen rising | Oxygen dropping | Filter pressure drop falling | Argon flow rising | 1 | Oxygen drops as sodium or sodium vapor oxidizes. @@ the diatomic oxygen content is expected to drop
+
+== Overpressure protection | 6
+S On overpressure, SCG relief valves open and discharge to a holdup volume. @@ the SCG relief valves open and discharge sodium vapor/aerosols, argon, and other effluents
+S The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication. @@ The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication
+S DL3-RR7 covers RV internal overpressure and RV external overpressure, meaning the RV-GV annulus and CRDM housings. @@ DL3-RR7 RES Pressure Relief (SR)
+K What isolates the vapor trap cell? | A relief valve open indication | A manual switch only | High cover gas oxygen | Low level | 0 | The cell is isolated on a primary coolant overpressure relief valve open indication. @@ The vapor trap cell is isolated on a primary coolant overpressure relief valve open indication
+
+== Safety significance | 9,10
+T Function | Class | Purpose
+R DL3-RR1c SCG primary system barrier | SR | Piping to the isolation valves forms part of the primary coolant boundary @@ DL3-RR1c SCG Primary System Barrier (SR)
+R DL3-RR7 RES pressure relief | SR | Overpressure protection for the RV @@ DL3-RR7 RES Pressure Relief (SR)
+R DL2-RR10 Primary SCG barrier | NSRST | Radionuclide barrier past the isolation valves @@ DL2-RR10 Primary SCG Barrier (NSRST)
+R DL4-RR4 SCG cells barriers | NSRST | Vapor trap cell is a low leakage barrier @@ DL4-RR4 SCG Cells Barriers (NSRST)
+R DL5-PAM1 | NSRST | RV and GV pressure, isolation and relief valve position, cover gas radiation @@ Post Accident Monitoring
+L Quality Assurance Program ;; Design Reliability Assurance Program ;; Reliability and Integrity Management Program ;; In-service Testing Program ;; Equipment Qualification Program ;; Post-construction Inspection, Testing, and Analysis Program @@ are preliminarily identified as relevant to SCG SR and NSRST SSCs
+K Which is a PAM variable from the SCG? | Reactor Vessel Pressure | Cold pool level | RAC flow | ISP speed | 0 | The SCG provides RV pressure, GV pressure, valve positions, and cover gas radiation. @@ Reactor Vessel Pressure
+
+Z The SCG supplies argon, and it has primary and intermediate parts. @@ The SCG comprises the Primary SCG and the Intermediate SCG
+Z Tag gas analysis follows a detected rise in fission gas. @@ the gas stream is routed to the tag gas analysis cabinet
+Z An RV leak shows as oxygen drop, activity rise, and filter pressure drop rise. @@ the diatomic oxygen content is expected to drop
