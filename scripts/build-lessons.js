@@ -465,6 +465,8 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
   .group li { padding: 5px 0; border-top: 1px solid var(--line); }
   .group a { text-decoration: none; } .group a:hover { text-decoration: underline; }
   .group a.is-done::before { content: "\\2713\\00a0"; color: var(--good); }
+  .group a.is-started::before { content: "\\25CB\\00a0"; content: "\\25CB\\00a0" / "Started: "; color: var(--accent); font-weight: 700; }
+  .key { margin: 0 0 12px; color: var(--muted); font-size: 0.85rem; }
   .group small { display: block; color: var(--muted); }
   .group .off { color: var(--muted); }
 }
@@ -496,6 +498,7 @@ ${g.options}
  </div>
  <section class="all" aria-label="All lesson plans">
   <h2>All lesson plans</h2>
+  <p class="key">✓ Completed, ○ Started</p>
   <div class="groups">
 ${groups.map(g => `   <div class="group"><h3>${esc(g.title)} <span></span></h3><ul>${g.links}</ul></div>`).join("\n")}
   </div>
@@ -530,7 +533,11 @@ function refresh() {
   });
   document.querySelectorAll(".group").forEach(g => {
     const links = [...g.querySelectorAll("a")];
-    links.forEach(a => a.classList.toggle("is-done", !!(all[a.dataset.slug] || {}).done));
+    links.forEach(a => {
+      const p = all[a.dataset.slug];
+      a.classList.toggle("is-done", !!(p && p.done));
+      a.classList.toggle("is-started", !!p && !p.done);
+    });
     g.querySelector("h3 span").textContent = links.filter(a => a.classList.contains("is-done")).length + " of " + links.length;
   });
   const finished = options.filter(o => (all[slugOf(o.value)] || {}).done).length;

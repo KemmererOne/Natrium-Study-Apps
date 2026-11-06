@@ -48,6 +48,8 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
   .group li { padding: 5px 0; border-top: 1px solid var(--line); }
   .group a { text-decoration: none; } .group a:hover { text-decoration: underline; }
   .group a.is-done::before { content: "\2713\00a0"; color: var(--good); }
+  .group a.is-started::before { content: "\25CB\00a0"; content: "\25CB\00a0" / "Started: "; color: var(--accent); font-weight: 700; }
+  .key { margin: 0 0 12px; color: var(--muted); font-size: 0.85rem; }
   .group small { display: block; color: var(--muted); }
   .group .off { color: var(--muted); }
 }
@@ -154,6 +156,7 @@ select { width: 100%; min-height: 52px; font: inherit; font-size: 16px; color: v
  </div>
  <section class="all" aria-label="All lesson plans">
   <h2>All lesson plans</h2>
+  <p class="key">✓ Completed, ○ Started</p>
   <div class="groups">
    <div class="group"><h3>Classical Physics <span></span></h3><ul><li><a href="../topics/cp-01-unit-systems/" data-slug="cp-01-unit-systems">Unit Systems</a><small>Reviewed</small></li><li><a href="../topics/cp-02-vectors/" data-slug="cp-02-vectors">Vectors</a><small>Reviewed</small></li><li><a href="../topics/cp-03-force-and-motion/" data-slug="cp-03-force-and-motion">Force and Motion</a><small>Reviewed</small></li><li><a href="../topics/cp-04-application-of-newton-s-laws/" data-slug="cp-04-application-of-newton-s-laws">Application of Newton's Laws</a><small>Reviewed</small></li><li><a href="../topics/cp-05-energy-work-and-power/" data-slug="cp-05-energy-work-and-power">Energy, Work, and Power</a><small>Reviewed</small></li></ul></div>
    <div class="group"><h3>Electrical Science <span></span></h3><ul><li><a href="../topics/es-01-basic-electrical-theory/" data-slug="es-01-basic-electrical-theory">Basic Electrical Theory</a><small>Reviewed</small></li><li><a href="../topics/es-02-basic-dc-theory/" data-slug="es-02-basic-dc-theory">Basic DC Theory</a><small>Reviewed</small></li><li><a href="../topics/es-03-dc-circuits/" data-slug="es-03-dc-circuits">DC Circuits</a><small>Reviewed</small></li><li><a href="../topics/es-04-batteries/" data-slug="es-04-batteries">Batteries</a><small>Reviewed</small></li><li><a href="../topics/es-05-dc-generators/" data-slug="es-05-dc-generators">DC Generators</a><small>Reviewed</small></li><li><a href="../topics/es-06-dc-motors/" data-slug="es-06-dc-motors">DC Motors</a><small>Reviewed</small></li><li><a href="../topics/es-07-basic-ac-theory/" data-slug="es-07-basic-ac-theory">Basic AC Theory</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-08-basic-ac-reactive-components/" data-slug="es-08-basic-ac-reactive-components">Basic AC Reactive Components</a><small>Reviewed</small></li><li><a href="../topics/es-09-basic-ac-power/" data-slug="es-09-basic-ac-power">Basic AC Power</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-10-ac-generators/" data-slug="es-10-ac-generators">AC Generators</a><small>Reviewed, Draft source</small></li><li><a href="../topics/es-11-voltage-regulators/" data-slug="es-11-voltage-regulators">Voltage Regulators</a><small>Reviewed</small></li><li><a href="../topics/es-12-ac-motors/" data-slug="es-12-ac-motors">AC Motors</a><small>Reviewed</small></li><li><a href="../topics/es-13-transformers/" data-slug="es-13-transformers">Transformers</a><small>Reviewed</small></li><li><a href="../topics/es-14-test-instruments-and-measuring-devices/" data-slug="es-14-test-instruments-and-measuring-devices">Test Instruments &amp; Measuring Devices</a><small>Reviewed</small></li><li><a href="../topics/es-15-electrical-distribution-systems/" data-slug="es-15-electrical-distribution-systems">Electrical Distribution Systems</a><small>Reviewed</small></li></ul></div>
@@ -197,7 +200,11 @@ function refresh() {
   });
   document.querySelectorAll(".group").forEach(g => {
     const links = [...g.querySelectorAll("a")];
-    links.forEach(a => a.classList.toggle("is-done", !!(all[a.dataset.slug] || {}).done));
+    links.forEach(a => {
+      const p = all[a.dataset.slug];
+      a.classList.toggle("is-done", !!(p && p.done));
+      a.classList.toggle("is-started", !!p && !p.done);
+    });
     g.querySelector("h3 span").textContent = links.filter(a => a.classList.contains("is-done")).length + " of " + links.length;
   });
   const finished = options.filter(o => (all[slugOf(o.value)] || {}).done).length;

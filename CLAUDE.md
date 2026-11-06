@@ -257,6 +257,8 @@ Page checkmarks (Nov 6, 2026)\
   is answered. The last page gets one when opened. A lesson marked complete shows every page checked.\
 - Each finished page is an entry "<slug>.<page id>" with a done date in natrium-lessons-progress, stored like a lesson, so\
   sync.js and the Worker need no change. Code that counts lessons must skip keys containing a dot.\
+- On wide screens, the full lesson list marks a started lesson with a circle and a completed lesson with a checkmark, with a key above\
+  the list.\
 - A lesson opened with no page named resumes at the last page unless complete. If another device moved on while a lesson\
   sat open, the lesson offers that page and does not jump.\
 \
