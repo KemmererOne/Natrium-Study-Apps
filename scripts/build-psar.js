@@ -76,7 +76,7 @@ module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, SYNC_LIB, mailto, T
 <main class="wrap" style="display:block;max-width:760px">
 <div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span></div>
 <h1>Acronyms and Abbreviations</h1>
-<p>Terms and descriptions are from the Kemmerer Unit 1 PSAR. <cite>PSAR Rev 1 (NAT-9400), List of Acronyms and Abbreviations, pp. iv to xvii</cite></p>
+<p>Terms and descriptions are from the Kemmerer Unit 1 PSAR. <cite>PSAR Rev 1 (ML25276A288), List of Acronyms and Abbreviations, pp. iv to xvii</cite></p>
 <label for="find"><b>Find a term</b></label>
 <input id="find" type="search" autocomplete="off" placeholder="XIS or heat exchanger">
 <p id="shown" aria-live="polite"></p>
@@ -108,7 +108,7 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
   for (const t of lessons) {
     const r = refs(t);
     built.push({ t, r });
-    const head = `PSAR Rev 1 (NAT-9400), ${t.sec_note}`;
+    const head = `PSAR Rev 1 (ML25276A288), ${t.sec_note}`;
     const list = [{ id: "objectives", title: "Objectives" }];
     t.concepts.forEach((c, i) => {
       list.push({ id: "concept-" + (i + 1), title: c.title, c });
@@ -141,7 +141,7 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
       if (p.k) return `<h2>${esc(p.title)}</h2>${p.k.checks.map(check).join("\n")}`;
       if (p.id === "summary") return `<h2>Summary</h2><ul>${t.summary.map(s => `<li>${esc(s.text)} ${cite(s.cite)}</li>`).join("")}</ul>`;
       return `<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
-<div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ${PSAR_FILE}</p><p>Sections ${esc(r.secs.join(", "))}</p><p>Pages ${esc(r.pages.join(", "))}</p></div>
+<div class="obj"><h3>Kemmerer Unit 1 PSAR, ML25276A288, Revision 1</h3><p>File: ${PSAR_FILE}</p><p>Sections ${esc(r.secs.join(", "))}</p><p>Pages ${esc(r.pages.join(", "))}</p></div>
 <p>${esc(require("./psar-notice.js"))}</p>
 <p><a href="../../reference/#lesson-references">All sources and references</a></p>
 <p><a class="report" href="${esc(mailto("Problem with lesson " + t.id, `Lesson: ${t.id} ${t.title}\nPage:\n\nWhat looks wrong:\n`))}">Report a problem with this lesson</a></p>`;

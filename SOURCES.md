@@ -23,7 +23,7 @@ Only the documents in "Included" may be used as sources for flashcards or quiz q
 | DOE-1012-V3 | DOE-HDBK-1012-92_VOL3.pdf | Thermodynamics, Heat Transfer and Fluid Flow, Vol 3 | 1992 | Yes |\
 | DOE-1018-V1 | DOE-HDBK-1018-93_VOL1.pdf | Mechanical Science, Vol 1 | 1993 | Yes |\
 | DOE-1018-V2 | DOE-HDBK-1018-93_VOL2.pdf | Mechanical Science, Vol 2 | 1993 | Yes |\
-| PSAR | ML25276A288.pdf | TerraPower Natrium Preliminary Safety Analysis Report, NAT-9400, Revision 1 (Kemmerer Unit 1, Docket 50-613) | Oct 3, 2025 | Yes |\
+| PSAR | ML25276A288.pdf | TerraPower Natrium Preliminary Safety Analysis Report, ML25276A288, Revision 1 (Kemmerer Unit 1, Docket 50-613) | Oct 3, 2025 | Yes |\
 | ML19148A756 | ML19148A756.pdf | NRC Fast Reactor Technology Training, slides: Introduction (Sofu, ANL) | Mar 26, 2019 | Yes |\
 | ML19148A764 | ML19148A764.pdf | NRC Fast Reactor Technology Training, slides: Historical Perspective for Fast Reactors (Flanagan, ORNL) | Mar 26, 2019 | Yes |\
 | ML19148A793 | ML19148A793.pdf | NRC Fast Reactor Technology Training, slides: Fast Reactor Physics 1: Spectrum and Cross Sections (Hill, ANL) | Mar 26, 2019 | Yes |\
@@ -101,7 +101,7 @@ Only the documents in "Included" may be used as sources for flashcards or quiz q
 \
 | ID | Filename | Document | Date | Retired | Reason |\
 |---|---|---|---|---|---|\
-| ML24088A065 | ML24088A065.pdf | TerraPower Natrium Preliminary Safety Analysis Report, NAT-9400, Revision 0 | Mar 28, 2024 | Nov 4, 2026 | Replaced by PSAR Revision 1 (ML25276A288). Kept outside the project in phone-study-apps-archive/superseded-sources/ |\
+| ML24088A065 | ML24088A065.pdf | TerraPower Natrium Preliminary Safety Analysis Report, ML24088A065, Revision 0 | Mar 28, 2024 | Nov 4, 2026 | Replaced by PSAR Revision 1 (ML25276A288). Kept outside the project in phone-study-apps-archive/superseded-sources/ |\
 \
 ## Pending identification (not usable until confirmed)\
 \
