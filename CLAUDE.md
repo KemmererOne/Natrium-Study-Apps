@@ -215,7 +215,7 @@ Audit decisions (Nov 6, 2026)\
 - All lessons are status Reviewed, not Draft. Draft source tags stay where a Word source is itself a draft.\
 \
 PSAR lesson plans (Nov 6, 2026)\
-- psar/ holds 43 lessons written from scratch for NRC exam preparation. Only PSAR Rev 1 is used\
+- psar/ holds 43 lessons written from scratch as introductory information, not for NRC exam preparation. Only PSAR Rev 1 is used\
   (work/text/ML25276A288.txt, PSAR pages only). No Word file, handbook or outside content.\
 - Systems use the ten standard objectives and design basis events use the twelve event objectives.\
   Where the PSAR cannot teach an objective, the lesson says so. It does not fill the gap.\
@@ -259,6 +259,11 @@ Page checkmarks (Nov 6, 2026)\
   sync.js and the Worker need no change. Code that counts lessons must skip keys containing a dot.\
 - A lesson opened with no page named resumes at the last page unless complete. If another device moved on while a lesson\
   sat open, the lesson offers that page and does not jump.\
+\
+PSAR notice and shuffled checks (Nov 6, 2026)\
+- scripts/psar-notice.js holds the notice that PSAR Rev 1 is the public NRC version and that this is introductory information,\
+  not for use in NRC exam preparation. It shows on the PSAR plans page, each PSAR lesson's References page and reference/.\
+- Lesson knowledge check choices shuffle each time a lesson opens, as the quiz does. Answer keys in the data do not change.\
 \
 Stop and report, do not guess, if:\
 - A source file is missing or unreadable.\

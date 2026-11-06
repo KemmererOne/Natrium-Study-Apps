@@ -241,6 +241,11 @@ addEventListener("keydown", e => {
 });
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  // Choices are shuffled each time a lesson opens, so the right answer is not always the same letter
+  const mixed = opts.slice();
+  for (let i = mixed.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [mixed[i], mixed[j]] = [mixed[j], mixed[i]]; }
+  mixed.forEach((b, i) => { b.firstChild.data = "ABCD"[i] + b.firstChild.data.slice(1); b.parentNode.append(b); });
+  c.querySelector(".key").textContent = "ABCD"[mixed.indexOf(opts[key])];
   opts.forEach((b, i) => b.addEventListener("click", () => {
     if (c.dataset.done) return;
     c.dataset.done = "1";
@@ -267,7 +272,7 @@ function checkHtml(t, k) {
   <div class="opts">${q.o.map((o, i) => `<button type="button" class="opt">${LETTERS[i]}. ${esc(o)}</button>`).join("")}</div>
   <div class="result" hidden>
     <p class="verdict"></p>
-    <p>The answer is ${LETTERS[q.a]}. ${esc(q.x)} ${cite(c)}</p>
+    <p>The answer is <span class="key">${LETTERS[q.a]}</span>. ${esc(q.x)} ${cite(c)}</p>
     <a class="report" href="${esc(mailto("Problem with " + q.id, `Item: ${q.id}\nTopic: ${q.topic}\nQuestion: ${q.q.slice(0, 160)}\nSource: ${q.src}\n\nWhat looks wrong:\n`))}">Report a problem</a>
   </div>
 </div>`;
@@ -598,7 +603,7 @@ exportPsarChecks();
 planPage({
   file: "psar/index.html", title: "PSAR Lesson Plans", total: psar.lessons.length, groups: psar.groups,
   extra: `<p class="note"><a href="acronyms/">Acronyms and abbreviations</a></p>\n  `,
-  intro: `<p class="note">Written from the Kemmerer Unit 1 PSAR, Revision 1. A construction-stage document, so an introduction to NRC exam preparation, not a replacement for plant procedures.</p>`
+  intro: `<p class="note">Written from the Kemmerer Unit 1 PSAR, Revision 1. ${esc(require("./psar-notice.js"))} The PSAR is a construction-stage document and does not replace plant procedures.</p>`
 });
 
 // The landing page has a button for each lesson set, like the two apps

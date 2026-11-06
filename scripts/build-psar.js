@@ -124,7 +124,7 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
   <div class="opts">${k.o.map((o, i) => `<button type="button" class="opt">${LETTERS[i]}. ${esc(o)}</button>`).join("")}</div>
   <div class="result" hidden>
     <p class="verdict"></p>
-    <p>The answer is ${LETTERS[k.a]}. ${esc(k.x)} ${cite(k.cite)}</p>
+    <p>The answer is <span class="key">${LETTERS[k.a]}</span>. ${esc(k.x)} ${cite(k.cite)}</p>
     <a class="report" href="${esc(mailto("Problem with " + id, `Item: ${id}\nLesson: ${t.title}\nQuestion: ${k.q.slice(0, 160)}\nSource: ${k.cite}\n\nWhat looks wrong:\n`))}">Report a problem</a>
   </div>
 </div>`;
@@ -142,6 +142,7 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
       if (p.id === "summary") return `<h2>Summary</h2><ul>${t.summary.map(s => `<li>${esc(s.text)} ${cite(s.cite)}</li>`).join("")}</ul>`;
       return `<h2>References</h2><p>Everything in this lesson comes from PSAR Rev 1. No other source was used.</p>
 <div class="obj"><h3>Kemmerer Unit 1 PSAR, NAT-9400, Revision 1</h3><p>File: ${PSAR_FILE}</p><p>Sections ${esc(r.secs.join(", "))}</p><p>Pages ${esc(r.pages.join(", "))}</p></div>
+<p>${esc(require("./psar-notice.js"))}</p>
 <p><a href="../../reference/#lesson-references">All sources and references</a></p>
 <p><a class="report" href="${esc(mailto("Problem with lesson " + t.id, `Lesson: ${t.id} ${t.title}\nPage:\n\nWhat looks wrong:\n`))}">Report a problem with this lesson</a></p>`;
     };

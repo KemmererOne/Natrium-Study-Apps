@@ -116,10 +116,11 @@ const card = s => `      <article class="src" id="${esc(s.id.toLowerCase())}">
 const wholeRows = [...whole].sort().map(([n, w]) =>
   `        <li><span class="mono">DOE-HDBK-${esc(n)}</span>: ${w.c} flashcards, ${w.q} quiz questions</li>`).join("\n");
 
+const psarNote = `\n      <div class="note"><p>${esc(require("../scripts/psar-notice.js"))}</p></div>`;
 const groups = GROUPS.map(([title, f]) => {
   const list = included.filter(f);
   const q = list.reduce((a, s) => a + s.q, 0), c = list.reduce((a, s) => a + s.c, 0);
-  const note = title.startsWith("DOE") && wholeRows
+  const note = title === "PSAR" ? psarNote : title.startsWith("DOE") && wholeRows
     ? `\n      <div class="note"><p>These items cite a handbook without naming a volume, so they are not in the volume counts below:</p>\n      <ul>\n${wholeRows}\n      </ul></div>` : "";
   return `    <section id="${slug(title)}">
       <h2>${esc(title)}</h2>
@@ -133,7 +134,7 @@ const lessonFile = path.join(ROOT, "topics/sources.json");
 const lessonSources = fs.existsSync(lessonFile) ? JSON.parse(fs.readFileSync(lessonFile, "utf8")) : [];
 const lessonSection = `    <section id="lesson-references">
       <h2>Lesson references</h2>
-      <p class="meta">Every source used across the lessons, with its file name and pages</p>
+      <p class="meta">Every source used across the lessons, with its file name and pages</p>${psarNote}
 ${lessonSources.map(s => `      <article class="src">
         <h3>${esc(s.doc)}</h3>
         <dl><div><dt>File</dt><dd class="mono">${esc(s.file)}</dd></div></dl>
