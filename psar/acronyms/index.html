@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>PSAR Acronyms</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[aria-disabled="true"] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+.finish { margin: 20px 0 0; }
+.mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+.mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
+.mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.side { display: none; }
+/* Wide screens get the page list beside the lesson. Phones keep the single column. */
+@media (min-width: 900px) {
+  .wrap { max-width: 1120px; display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+  .pages { min-width: 0; max-width: 760px; }
+  .menu { display: none; }
+  .side { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 0.88rem; padding-right: 4px; }
+  .side h2 { font-size: 1rem; margin: 8px 0; }
+  .side ol { list-style: none; padding: 0; margin: 0 0 12px; } .side li { margin: 0; }
+  .side a { display: block; padding: 5px 8px; border-left: 3px solid transparent; color: var(--fg); font-weight: 400; text-decoration: none; }
+  .side a:hover { color: var(--accent); }
+  .side a.on { border-left-color: var(--accent); background: var(--card); color: var(--accent); font-weight: 600; }
+  .side .finish { margin: 0; }
+}
+
+.terms { list-style: none; margin: 12px 0 0; padding: 0; }
+.terms li { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); overflow-wrap: anywhere; }
+.terms li[hidden] { display: none; }
+#find { width: 100%; box-sizing: border-box; font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; }
+#shown { color: var(--muted); font-size: 0.85rem; margin: 8px 0 0; }
+</style>
+<main class="wrap" style="display:block;max-width:760px">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span></div>
+<h1>Acronyms and Abbreviations</h1>
+<p>Terms and descriptions are from the Kemmerer Unit 1 PSAR. <cite>PSAR Rev 1 (NAT-9400), List of Acronyms and Abbreviations, pp. iv to xvii</cite></p>
+<label for="find"><b>Find a term</b></label>
+<input id="find" type="search" autocomplete="off" placeholder="XIS or heat exchanger">
+<p id="shown" aria-live="polite"></p>
+<ul class="terms" id="listed">
+<li data-s="ac alternating current"><b>AC</b><span>alternating current <cite>p. iv</cite></span></li>
+<li data-s="aci american concrete institute"><b>ACI</b><span>American Concrete Institute <cite>p. iv</cite></span></li>
+<li data-s="aclp above core load pad"><b>ACLP</b><span>above core load pad <cite>p. iv</cite></span></li>
+<li data-s="acr audible count record"><b>ACR</b><span>Audible Count Record <cite>p. iv</cite></span></li>
+<li data-s="aep annual exceedance probability"><b>AEP</b><span>Annual exceedance probability <cite>p. iv</cite></span></li>
+<li data-s="afdd accumulated freezing degree days"><b>AFDD</b><span>accumulated freezing degree days <cite>p. iv</cite></span></li>
+<li data-s="afe annual frequency of exceedance"><b>AFE</b><span>Annual Frequency of Exceedance <cite>p. iv</cite></span></li>
+<li data-s="ahx sodium-air heat exchanger"><b>AHX</b><span>Sodium-Air Heat Exchanger <cite>p. iv</cite></span></li>
+<li data-s="aia aircraft impact assessment"><b>AIA</b><span>Aircraft Impact Assessment <cite>p. iv</cite></span></li>
+<li data-s="aisc american institute of steel construction"><b>AISC</b><span>American Institute of Steel Construction <cite>p. iv</cite></span></li>
+<li data-s="alara as low as reasonably achievable"><b>ALARA</b><span>as low as reasonably achievable <cite>p. iv</cite></span></li>
+<li data-s="aloha areal locations of hazardous atmospheres"><b>ALOHA</b><span>areal locations of hazardous atmospheres <cite>p. iv</cite></span></li>
+<li data-s="amc auxiliary monitoring and control system"><b>AMC</b><span>Auxiliary Monitoring and Control System <cite>p. iv</cite></span></li>
+<li data-s="ans american nuclear society"><b>ANS</b><span>American Nuclear Society <cite>p. iv</cite></span></li>
+<li data-s="ansi american national standards institute"><b>ANSI</b><span>American National Standards Institute <cite>p. iv</cite></span></li>
+<li data-s="aof allocation of function"><b>AOF</b><span>Allocation of Function <cite>p. iv</cite></span></li>
+<li data-s="aoo anticipated operational occurrence"><b>AOO</b><span>anticipated operational occurrence <cite>p. iv</cite></span></li>
+<li data-s="api american petroleum institute"><b>API</b><span>American Petroleum Institute <cite>p. iv</cite></span></li>
+<li data-s="arcap advanced reactor content of application project"><b>ARCAP</b><span>Advanced Reactor Content of Application Project <cite>p. iv</cite></span></li>
+<li data-s="ardp advanced reactor demonstration program"><b>ARDP</b><span>Advanced Reactor Demonstration Program <cite>p. iv</cite></span></li>
+<li data-s="aris assembly receipt inspection stand"><b>ARIS</b><span>assembly receipt inspection stand <cite>p. iv</cite></span></li>
+<li data-s="arm area radiation monitoring"><b>ARM</b><span>Area Radiation Monitoring <cite>p. iv</cite></span></li>
+<li data-s="asce american society of civil engineers"><b>ASCE</b><span>American Society of Civil Engineers <cite>p. iv</cite></span></li>
+<li data-s="asd adjustable speed drive"><b>ASD</b><span>adjustable speed drive <cite>p. iv</cite></span></li>
+<li data-s="ase air stack structures and equipment"><b>ASE</b><span>Air Stack Structures and Equipment <cite>p. iv</cite></span></li>
+<li data-s="asme american society of mechanical engineers"><b>ASME</b><span>American Society of Mechanical Engineers <cite>p. iv</cite></span></li>
+<li data-s="ast anticipatory automatic seismic trip system"><b>AST</b><span>Anticipatory Automatic Seismic Trip System <cite>p. iv</cite></span></li>
+<li data-s="astm american society for testing and materials"><b>ASTM</b><span>American Society for Testing and Materials <cite>p. iv</cite></span></li>
+<li data-s="atws anticipated transient without scram"><b>ATWS</b><span>anticipated transient without scram <cite>p. iv</cite></span></li>
+<li data-s="awos automated weather observing system"><b>AWOS</b><span>Automated Weather Observing System <cite>p. iv</cite></span></li>
+<li data-s="aws american welding society"><b>AWS</b><span>American Welding Society <cite>p. iv</cite></span></li>
+<li data-s="bdbe beyond design basis event"><b>BDBE</b><span>beyond design basis event <cite>p. iv</cite></span></li>
+<li data-s="bepu best-estimate plus uncertainty"><b>BEPU</b><span>best-estimate plus uncertainty <cite>p. iv</cite></span></li>
+<li data-s="bgs below ground surface"><b>bgs</b><span>below ground surface <cite>p. iv</cite></span></li>
+<li data-s="bima bi-metallic assembly"><b>BiMA</b><span>bi-metallic assembly <cite>p. iv</cite></span></li>
+<li data-s="bleve boiling liquid expanding vapor explosion"><b>BLEVE</b><span>boiling liquid expanding vapor explosion <cite>p. iv</cite></span></li>
+<li data-s="bltc bottom loading transfer cask"><b>BLTC</b><span>bottom loading transfer cask <cite>p. iv</cite></span></li>
+<li data-s="bpc bechtel power corporation"><b>BPC</b><span>Bechtel Power Corporation <cite>p. v</cite></span></li>
+<li data-s="bpvc boiler and pressure vessel code"><b>BPVC</b><span>Boiler and Pressure Vessel Code <cite>p. v</cite></span></li>
+<li data-s="btp branch technical position"><b>BTP</b><span>Branch Technical Position <cite>p. v</cite></span></li>
+<li data-s="bts battery transfer switch"><b>BTS</b><span>Battery Transfer Switch <cite>p. v</cite></span></li>
+<li data-s="bwr boiling water reactor"><b>BWR</b><span>boiling water reactor <cite>p. v</cite></span></li>
+<li data-s="caid core assembly identification"><b>CAID</b><span>core assembly identification <cite>p. v</cite></span></li>
+<li data-s="cap core assembly pot"><b>CAP</b><span>core assembly pot <cite>p. v</cite></span></li>
+<li data-s="catt core assembly transfer tube"><b>CATT</b><span>core assembly transfer tube <cite>p. v</cite></span></li>
+<li data-s="cbs core barrel structures"><b>CBS</b><span>Core Barrel Structures <cite>p. v</cite></span></li>
+<li data-s="cc climate change"><b>CC</b><span>Climate Change <cite>p. v</cite></span></li>
+<li data-s="cca collector cylinder assembly"><b>CCA</b><span>Collector Cylinder Assembly <cite>p. v</cite></span></li>
+<li data-s="ccf common cause failure"><b>CCF</b><span>common cause failure <cite>p. v</cite></span></li>
+<li data-s="ceus central and eastern united states"><b>CEUS</b><span>Central and Eastern United States <cite>p. v</cite></span></li>
+<li data-s="cfd computational fluid dynamics"><b>CFD</b><span>computational fluid dynamics <cite>p. v</cite></span></li>
+<li data-s="cfr code of federal regulations"><b>CFR</b><span>Code of Federal Regulations <cite>p. v</cite></span></li>
+<li data-s="cfw condensate and feedwater system"><b>CFW</b><span>Condensate and Feedwater System <cite>p. v</cite></span></li>
+<li data-s="cip core inlet plenum"><b>CIP</b><span>core inlet plenum <cite>p. v</cite></span></li>
+<li data-s="clp cask loading pit"><b>CLP</b><span>cask loading pit <cite>p. v</cite></span></li>
+<li data-s="clsm controlled low strength material"><b>CLSM</b><span>Controlled Low Strength Material <cite>p. v</cite></span></li>
+<li data-s="cmaa crane manufacturers association of america"><b>CMAA</b><span>Crane Manufacturers Association of America <cite>p. v</cite></span></li>
+<li data-s="cn runoff curve number"><b>CN</b><span>runoff curve number <cite>p. v</cite></span></li>
+<li data-s="cno chief nuclear officer"><b>CNO</b><span>Chief Nuclear Officer <cite>p. v</cite></span></li>
+<li data-s="colr core operating limits report"><b>COLR</b><span>Core Operating Limits Report <cite>p. v</cite></span></li>
+<li data-s="cos climate observing station"><b>COS</b><span>Climate Observing Station <cite>p. v</cite></span></li>
+<li data-s="cots commercial off-the-shelf"><b>COTS</b><span>commercial off-the-shelf <cite>p. v</cite></span></li>
+<li data-s="cp construction permit"><b>CP</b><span>construction permit <cite>p. v</cite></span></li>
+<li data-s="cpa construction permit application"><b>CPA</b><span>construction permit application <cite>p. v</cite></span></li>
+<li data-s="cpu central processing unit"><b>CPU</b><span>central processing unit <cite>p. v</cite></span></li>
+<li data-s="cqc complete quadratic combination"><b>CQC</b><span>complete quadratic combination <cite>p. v</cite></span></li>
+<li data-s="cra control rod assembly"><b>CRA</b><span>control rod assembly <cite>p. v</cite></span></li>
+<li data-s="crd control rod drive system"><b>CRD</b><span>Control Rod Drive System <cite>p. v</cite></span></li>
+<li data-s="crdm control rod drive mechanism"><b>CRDM</b><span>control rod drive mechanism <cite>p. v</cite></span></li>
+<li data-s="creat climate resilience evaluation and awareness tool"><b>CREAT</b><span>Climate Resilience Evaluation and Awareness Tool <cite>p. v</cite></span></li>
+<li data-s="crs core restraint system"><b>CRS</b><span>Core Restraint System <cite>p. v</cite></span></li>
+<li data-s="ct critical technology"><b>CT</b><span>critical technology <cite>p. v</cite></span></li>
+<li data-s="ctc coolant temperature monitoring and control system"><b>CTC</b><span>Coolant Temperature Monitoring and Control System <cite>p. v</cite></span></li>
+<li data-s="cte critical technology element"><b>CTE</b><span>critical technology element <cite>p. v</cite></span></li>
+<li data-s="cu consolidated-undrained"><b>CU</b><span>Consolidated-Undrained <cite>p. vi</cite></span></li>
+<li data-s="cv cleaning vessel"><b>CV</b><span>cleaning vessel <cite>p. vi</cite></span></li>
+<li data-s="cvap comprehensive vibration assessment program"><b>CVAP</b><span>Comprehensive Vibration Assessment Program <cite>p. vi</cite></span></li>
+<li data-s="cvis core-vessel interface structure"><b>CVIS</b><span>core-vessel interface structure <cite>p. vi</cite></span></li>
+<li data-s="cwis cooling water intake structure"><b>CWIS</b><span>Cooling Water Intake Structure <cite>p. vi</cite></span></li>
+<li data-s="d-rap design reliability assurance program"><b>D-RAP</b><span>Design Reliability Assurance Program <cite>p. vi</cite></span></li>
+<li data-s="d/q atmospheric deposition factor(s)"><b>D/Q</b><span>atmospheric deposition factor(s) <cite>p. vi</cite></span></li>
+<li data-s="dba design basis accident"><b>DBA</b><span>design basis accident <cite>p. vi</cite></span></li>
+<li data-s="dbe design basis event"><b>DBE</b><span>design basis event <cite>p. vi</cite></span></li>
+<li data-s="dbhl design basis hazard level"><b>DBHL</b><span>design basis hazard level <cite>p. vi</cite></span></li>
+<li data-s="dc direct current"><b>DC</b><span>Direct Current <cite>p. vi</cite></span></li>
+<li data-s="dcf dose conversion factor"><b>DCF</b><span>dose conversion factor <cite>p. vi</cite></span></li>
+<li data-s="dcs distributed control system"><b>DCS</b><span>Distributed Control System <cite>p. vi</cite></span></li>
+<li data-s="dg draft regulatory guide"><b>DG</b><span>Draft Regulatory Guide <cite>p. vi</cite></span></li>
+<li data-s="dh downhole"><b>DH</b><span>Downhole <cite>p. vi</cite></span></li>
+<li data-s="dhs department of homeland security"><b>DHS</b><span>Department of Homeland Security <cite>p. vi</cite></span></li>
+<li data-s="did defense-in-depth"><b>DID</b><span>defense-in-depth <cite>p. vi</cite></span></li>
+<li data-s="dif difficulty, importance, and frequency"><b>DIF</b><span>difficulty, importance, and frequency <cite>p. vi</cite></span></li>
+<li data-s="dl defense line"><b>DL</b><span>Defense Line <cite>p. vi</cite></span></li>
+<li data-s="dma degradation mechanism assessment"><b>DMA</b><span>Degradation Mechanism Assessment <cite>p. vi</cite></span></li>
+<li data-s="doe department of energy"><b>DOE</b><span>Department of Energy <cite>p. vi</cite></span></li>
+<li data-s="doe-em department of energy - environmental management"><b>DOE-EM</b><span>Department of Energy - Environmental Management <cite>p. vi</cite></span></li>
+<li data-s="dof degrees of freedom"><b>DOF</b><span>degrees of freedom <cite>p. vi</cite></span></li>
+<li data-s="dot department of transportation"><b>DOT</b><span>Department of Transportation <cite>p. vi</cite></span></li>
+<li data-s="drg design review guide"><b>DRG</b><span>Design Review Guide <cite>p. vi</cite></span></li>
+<li data-s="drms digital radiation monitor system"><b>DRMS</b><span>Digital Radiation Monitor System <cite>p. vi</cite></span></li>
+<li data-s="drs design response spectra"><b>DRS</b><span>Design Response Spectra <cite>p. vi</cite></span></li>
+<li data-s="eab exclusion area boundary"><b>EAB</b><span>exclusion area boundary <cite>p. vi</cite></span></li>
+<li data-s="eal emergency action level"><b>EAL</b><span>Emergency Action Level <cite>p. vi</cite></span></li>
+<li data-s="ebr-ii experimental breeder reactor ii"><b>EBR-II</b><span>Experimental Breeder Reactor II <cite>p. vi</cite></span></li>
+<li data-s="ed emergency director"><b>ED</b><span>emergency director <cite>p. vi</cite></span></li>
+<li data-s="edc ei dc power supply system"><b>EDC</b><span>EI DC power supply system <cite>p. vi</cite></span></li>
+<li data-s="eeq electrical equipment qualification"><b>EEQ</b><span>electrical equipment qualification <cite>p. vi</cite></span></li>
+<li data-s="efp energy island fire protection system"><b>EFP</b><span>Energy Island Fire Protection System <cite>p. vi</cite></span></li>
+<li data-s="eht ei heat tracing system"><b>EHT</b><span>EI Heat Tracing System <cite>p. vi</cite></span></li>
+<li data-s="ei energy island"><b>EI</b><span>Energy Island <cite>p. vi</cite></span></li>
+<li data-s="eic energy island control system"><b>EIC</b><span>Energy Island Control System <cite>p. vi</cite></span></li>
+<li data-s="elv ei ac electrical power low voltage system"><b>ELV</b><span>EI AC Electrical Power Low Voltage System <cite>p. vii</cite></span></li>
+<li data-s="e[m] expected value of moment magnitude"><b>E[M]</b><span>Expected Value of Moment Magnitude <cite>p. vii</cite></span></li>
+<li data-s="em electromagnetic"><b>EM</b><span>electromagnetic <cite>p. vii</cite></span></li>
+<li data-s="emc electromagnetic compatibility"><b>EMC</b><span>electromagnetic compatibility <cite>p. vii</cite></span></li>
+<li data-s="emv ei ac electrical power medium voltage system"><b>EMV</b><span>EI AC Electrical Power Medium Voltage System <cite>p. vii</cite></span></li>
+<li data-s="eop emergency operating procedure"><b>EOP</b><span>emergency operating procedure <cite>p. vii</cite></span></li>
+<li data-s="epa environmental protection agency"><b>EPA</b><span>Environmental Protection Agency <cite>p. vii</cite></span></li>
+<li data-s="epz emergency planning zone"><b>EPZ</b><span>emergency planning zone <cite>p. vii</cite></span></li>
+<li data-s="eq equipment qualification"><b>EQ</b><span>equipment qualification <cite>p. vii</cite></span></li>
+<li data-s="erf emergency response facility"><b>ERF</b><span>Emergency Response Facility <cite>p. vii</cite></span></li>
+<li data-s="erfb emergency response facility backup"><b>ERFB</b><span>Emergency Response Facility Backup <cite>p. vii</cite></span></li>
+<li data-s="erfp emergency response facility primary"><b>ERFP</b><span>Emergency Response Facility Primary <cite>p. vii</cite></span></li>
+<li data-s="erm effluent radiation monitor"><b>ERM</b><span>Effluent Radiation Monitor <cite>p. vii</cite></span></li>
+<li data-s="ero emergency response organization"><b>ERO</b><span>Emergency Response Organization <cite>p. vii</cite></span></li>
+<li data-s="es event sequence"><b>ES</b><span>event sequence <cite>p. vii</cite></span></li>
+<li data-s="esf engineered safety feature"><b>ESF</b><span>engineered safety feature <cite>p. vii</cite></span></li>
+<li data-s="esp ei standby ac power system"><b>ESP</b><span>EI Standby AC Power System <cite>p. vii</cite></span></li>
+<li data-s="ess salt heat transport system"><b>ESS</b><span>Salt Heat Transport System <cite>p. vii</cite></span></li>
+<li data-s="etr energy transfer ratio"><b>ETR</b><span>Energy Transfer Ratio <cite>p. vii</cite></span></li>
+<li data-s="eup ei uninterruptible ac power supply system"><b>EUP</b><span>EI Uninterruptible AC Power Supply System <cite>p. vii</cite></span></li>
+<li data-s="evhm ex-vessel handling machine"><b>EVHM</b><span>Ex-Vessel Handling Machine <cite>p. vii</cite></span></li>
+<li data-s="evst ex-vessel storage tank"><b>EVST</b><span>Ex-Vessel Storage Tank <cite>p. vii</cite></span></li>
+<li data-s="f-c frequency-consequence"><b>F-C</b><span>frequency-consequence <cite>p. vii</cite></span></li>
+<li data-s="faa federal aviation administration"><b>FAA</b><span>Federal Aviation Administration <cite>p. vii</cite></span></li>
+<li data-s="fab fuel auxiliary building"><b>FAB</b><span>Fuel Auxiliary Building <cite>p. vii</cite></span></li>
+<li data-s="facp fire alarm control panel"><b>FACP</b><span>Fire Alarm Control Panel <cite>p. vii</cite></span></li>
+<li data-s="fe finite element"><b>FE</b><span>finite element <cite>p. vii</cite></span></li>
+<li data-s="fema federal emergency management agency"><b>FEMA</b><span>Federal Emergency Management Agency <cite>p. vii</cite></span></li>
+<li data-s="ffc failed fuel canister"><b>FFC</b><span>Failed Fuel Canister <cite>p. vii</cite></span></li>
+<li data-s="ffd fitness-for-duty"><b>FFD</b><span>fitness-for-duty <cite>p. vii</cite></span></li>
+<li data-s="ffr failed fuel rack"><b>FFR</b><span>failed fuel rack <cite>p. vii</cite></span></li>
+<li data-s="ffv fueling floor valves"><b>FFV</b><span>fueling floor valves <cite>p. vii</cite></span></li>
+<li data-s="fftf fast flux test facility"><b>FFTF</b><span>Fast Flux Test Facility <cite>p. vii</cite></span></li>
+<li data-s="fgd flue gas desulfurization"><b>FGD</b><span>Flue Gas Desulfurization <cite>p. vii</cite></span></li>
+<li data-s="fgr federal guidance report"><b>FGR</b><span>Federal Guidance Report <cite>p. vii</cite></span></li>
+<li data-s="fha fire hazards analysis"><b>FHA</b><span>Fire Hazards Analysis <cite>p. vii</cite></span></li>
+<li data-s="fhb fuel handling building"><b>FHB</b><span>Fuel Handling Building <cite>p. vii</cite></span></li>
+<li data-s="fhc fuel handling supervisory control system"><b>FHC</b><span>Fuel Handling Supervisory Control System <cite>p. viii</cite></span></li>
+<li data-s="fhcr fuel handling control room"><b>FHCR</b><span>Fuel Handling Control Room <cite>p. viii</cite></span></li>
+<li data-s="fhe ex-vessel fuel handling system"><b>FHE</b><span>Ex-Vessel Fuel Handling System <cite>p. viii</cite></span></li>
+<li data-s="fhi in-vessel fuel handling system"><b>FHI</b><span>In-Vessel Fuel Handling System <cite>p. viii</cite></span></li>
+<li data-s="fhp water pool fuel handling system"><b>FHP</b><span>Water Pool Fuel Handling System <cite>p. viii</cite></span></li>
+<li data-s="fhs fuel transport and storage system"><b>FHS</b><span>Fuel Transport and Storage System <cite>p. viii</cite></span></li>
+<li data-s="fi fracture index"><b>FI</b><span>Fracture Index <cite>p. viii</cite></span></li>
+<li data-s="fips federal information processing standard"><b>FIPS</b><span>Federal Information Processing Standard <cite>p. viii</cite></span></li>
+<li data-s="firs foundation input response spectra"><b>FIRS</b><span>Foundation Input Response Spectra <cite>p. viii</cite></span></li>
+<li data-s="fivs fixed in-vessel shielding"><b>FIVS</b><span>fixed in-vessel shielding <cite>p. viii</cite></span></li>
+<li data-s="fmea failure modes and effects analysis"><b>FMEA</b><span>Failure Modes and Effects Analysis <cite>p. viii</cite></span></li>
+<li data-s="foak first-of-a-kind"><b>FOAK</b><span>first-of-a-kind <cite>p. viii</cite></span></li>
+<li data-s="fpc fuel pool cooling"><b>FPC</b><span>Fuel Pool Cooling <cite>p. viii</cite></span></li>
+<li data-s="fpp fuel pool purification"><b>FPP</b><span>Fuel Pool Purification <cite>p. viii</cite></span></li>
+<li data-s="fps feet per second"><b>fps</b><span>feet per second <cite>p. viii</cite></span></li>
+<li data-s="fra functional requirements analysis"><b>FRA</b><span>functional requirements analysis <cite>p. viii</cite></span></li>
+<li data-s="frmac federal radiological monitoring and assessment center"><b>FRMAC</b><span>Federal Radiological Monitoring and Assessment Center <cite>p. viii</cite></span></li>
+<li data-s="fsar final safety analysis report"><b>FSAR</b><span>final safety analysis report <cite>p. viii</cite></span></li>
+<li data-s="fsf fundamental safety function"><b>FSF</b><span>Fundamental Safety Function <cite>p. viii</cite></span></li>
+<li data-s="fta fuel transfer adapter"><b>FTA</b><span>fuel transfer adapter <cite>p. viii</cite></span></li>
+<li data-s="ftl fuel transfer lift"><b>FTL</b><span>Fuel Transfer Lift <cite>p. viii</cite></span></li>
+<li data-s="ftlsp fuel transfer lift shield plug"><b>FTLSP</b><span>Fuel Transfer Lift Shield Plug <cite>p. viii</cite></span></li>
+<li data-s="ftp fuel transfer port"><b>FTP</b><span>Fuel Transfer Port <cite>p. viii</cite></span></li>
+<li data-s="gao government accountability office"><b>GAO</b><span>Government Accountability Office <cite>p. viii</cite></span></li>
+<li data-s="gdc general design criteria"><b>GDC</b><span>General Design Criteria <cite>p. viii</cite></span></li>
+<li data-s="gvh ge vernova hitachi nuclear energy"><b>GVH</b><span>GE Vernova Hitachi Nuclear Energy <cite>p. viii</cite></span></li>
+<li data-s="gen generator system"><b>GEN</b><span>Generator System <cite>p. viii</cite></span></li>
+<li data-s="gfims gas filtration impurities monitoring and sampling"><b>GFIMS</b><span>gas filtration impurities monitoring and sampling <cite>p. viii</cite></span></li>
+<li data-s="ggrb greater green river basin"><b>GGRB</b><span>Greater Green River Basin <cite>p. viii</cite></span></li>
+<li data-s="gl generic letter"><b>GL</b><span>generic letter <cite>p. viii</cite></span></li>
+<li data-s="gmc ground motion characterization"><b>GMC</b><span>Ground Motion Characterization <cite>p. viii</cite></span></li>
+<li data-s="gmrs ground motion response spectra"><b>GMRS</b><span>Ground Motion Response Spectra <cite>p. viii</cite></span></li>
+<li data-s="gpcpd gallons per capita per day"><b>GPCPD</b><span>gallons per capita per day <cite>p. viii</cite></span></li>
+<li data-s="gps global positioning system"><b>GPS</b><span>Global Positioning System <cite>p. viii</cite></span></li>
+<li data-s="gsi geologic strength index"><b>GSI</b><span>Geologic Strength Index <cite>p. viii</cite></span></li>
+<li data-s="gui graphical user interface"><b>GUI</b><span>graphical user interface <cite>p. viii</cite></span></li>
+<li data-s="gv guard vessel"><b>GV</b><span>Guard Vessel <cite>p. viii</cite></span></li>
+<li data-s="gvds group-view display system"><b>GVDS</b><span>Group-View Display System <cite>p. ix</cite></span></li>
+<li data-s="ha human action"><b>HA</b><span>human action <cite>p. ix</cite></span></li>
+<li data-s="haa head access area"><b>HAA</b><span>Head Access Area <cite>p. ix</cite></span></li>
+<li data-s="hazmat hazardous materials"><b>HAZMAT</b><span>hazardous materials <cite>p. ix</cite></span></li>
+<li data-s="hcf hot channel factor"><b>HCF</b><span>hot channel factor <cite>p. ix</cite></span></li>
+<li data-s="hci hydrochloric acid"><b>HCI</b><span>hydrochloric acid <cite>p. ix</cite></span></li>
+<li data-s="hepa high efficiency particulate air"><b>HEPA</b><span>high efficiency particulate air <cite>p. ix</cite></span></li>
+<li data-s="hf human factors"><b>HF</b><span>human factors <cite>p. ix</cite></span></li>
+<li data-s="hfe human factors engineering"><b>HFE</b><span>human factors engineering <cite>p. ix</cite></span></li>
+<li data-s="hfeits human factors engineering issue tracking system"><b>HFEITS</b><span>Human Factors Engineering Issue Tracking System <cite>p. ix</cite></span></li>
+<li data-s="hfepp human factors engineering program plan"><b>HFEPP</b><span>Human Factors Engineering Program Plan <cite>p. ix</cite></span></li>
+<li data-s="hfwua hams fork water users association"><b>HFWUA</b><span>Hams Fork Water Users Association <cite>p. ix</cite></span></li>
+<li data-s="hic high integrity container"><b>HIC</b><span>High Integrity Container <cite>p. ix</cite></span></li>
+<li data-s="hmi human-machine interface"><b>HMI</b><span>human-machine interface <cite>p. ix</cite></span></li>
+<li data-s="hmr hydrometeorological report"><b>HMR</b><span>Hydrometeorological Report <cite>p. ix</cite></span></li>
+<li data-s="hpm human performance monitoring"><b>HPM</b><span>human performance monitoring <cite>p. ix</cite></span></li>
+<li data-s="hps the health physics society"><b>HPS</b><span>The Health Physics Society <cite>p. ix</cite></span></li>
+<li data-s="hra high radiation area"><b>HRA</b><span>high radiation area <cite>p. ix</cite></span></li>
+<li data-s="hrs heat rejection system"><b>HRS</b><span>Heat Rejection System <cite>p. ix</cite></span></li>
+<li data-s="hsi human-system interface"><b>HSI</b><span>human-system interface <cite>p. ix</cite></span></li>
+<li data-s="htfc high temperature fission chamber"><b>HTFC</b><span>High Temperature Fission Chamber <cite>p. ix</cite></span></li>
+<li data-s="hvac heating, ventilation and air conditioning"><b>HVAC</b><span>heating, ventilation and air conditioning <cite>p. ix</cite></span></li>
+<li data-s="i&amp;c instrumentation and control"><b>I&amp;C</b><span>instrumentation and control <cite>p. ix</cite></span></li>
+<li data-s="iac intermediate air cooling system"><b>IAC</b><span>Intermediate Air Cooling System <cite>p. ix</cite></span></li>
+<li data-s="iaea international atomic energy agency"><b>IAEA</b><span>International Atomic Energy Agency <cite>p. ix</cite></span></li>
+<li data-s="ibc international building code"><b>IBC</b><span>International Building Code <cite>p. ix</cite></span></li>
+<li data-s="icc international code council"><b>ICC</b><span>International Code Council <cite>p. ix</cite></span></li>
+<li data-s="icrp international commission on radiological protection"><b>ICRP</b><span>International Commission on Radiological Protection <cite>p. ix</cite></span></li>
+<li data-s="ics integrated control system"><b>ICS</b><span>Integrated Control System <cite>p. ix</cite></span></li>
+<li data-s="idlh immediately dangerous to life or health"><b>IDLH</b><span>immediately dangerous to life or health <cite>p. ix</cite></span></li>
+<li data-s="idp integrated decision-making process"><b>IDP</b><span>integrated decision-making process <cite>p. ix</cite></span></li>
+<li data-s="idpp integrated decision-making process panel"><b>IDPP</b><span>integrated decision-making process panel <cite>p. ix</cite></span></li>
+<li data-s="ie initiating event"><b>IE</b><span>Initiating Event <cite>p. ix</cite></span></li>
+<li data-s="iec international electrotechnical commission"><b>IEC</b><span>International Electrotechnical Commission <cite>p. ix</cite></span></li>
+<li data-s="ieee institute of electrical and electronics engineers"><b>IEEE</b><span>Institute of Electrical and Electronics Engineers <cite>p. ix</cite></span></li>
+<li data-s="iht intermediate heat transport system"><b>IHT</b><span>Intermediate Heat Transport System <cite>p. ix</cite></span></li>
+<li data-s="ihx intermediate heat exchanger"><b>IHX</b><span>Intermediate Heat Exchanger <cite>p. ix</cite></span></li>
+<li data-s="inl idaho national laboratory"><b>INL</b><span>Idaho National Laboratory <cite>p. x</cite></span></li>
+<li data-s="inpo institute of nuclear power operations"><b>INPO</b><span>Institute of Nuclear Power Operations <cite>p. x</cite></span></li>
+<li data-s="io input-output"><b>IO</b><span>input-output <cite>p. x</cite></span></li>
+<li data-s="ipcc intergovernmental panel on climate change"><b>IPCC</b><span>Intergovernmental Panel on Climate Change <cite>p. x</cite></span></li>
+<li data-s="isa international society of automation"><b>ISA</b><span>International Society of Automation <cite>p. x</cite></span></li>
+<li data-s="isb intermountain seismic belt"><b>ISB</b><span>Intermountain Seismic Belt <cite>p. x</cite></span></li>
+<li data-s="iso international organization for standardization"><b>ISO</b><span>International Organization for Standardization <cite>p. x</cite></span></li>
+<li data-s="isp intermediate sodium pump"><b>ISP</b><span>Intermediate Sodium Pump <cite>p. x</cite></span></li>
+<li data-s="isrm international society for rock mechanics"><b>ISRM</b><span>International Society for Rock Mechanics <cite>p. x</cite></span></li>
+<li data-s="isrs in-structure response spectra"><b>ISRS</b><span>In-Structure Response Spectra <cite>p. x</cite></span></li>
+<li data-s="ist in-service testing"><b>IST</b><span>in-service testing <cite>p. x</cite></span></li>
+<li data-s="isv integrated system validation"><b>ISV</b><span>Integrated System Validation <cite>p. x</cite></span></li>
+<li data-s="ivdc in-vessel drive controller"><b>IVDC</b><span>In-Vessel Drive Controller <cite>p. x</cite></span></li>
+<li data-s="ivs in-vessel storage"><b>IVS</b><span>In-Vessel Storage <cite>p. x</cite></span></li>
+<li data-s="ivtm in-vessel transfer machine"><b>IVTM</b><span>In-Vessel Transfer Machine <cite>p. x</cite></span></li>
+<li data-s="lbe licensing basis event"><b>LBE</b><span>licensing basis event <cite>p. x</cite></span></li>
+<li data-s="lco limiting condition for operation"><b>LCO</b><span>Limiting Condition for Operation <cite>p. x</cite></span></li>
+<li data-s="lcs local control station"><b>LCS</b><span>Local Control Station <cite>p. x</cite></span></li>
+<li data-s="lda lead demonstration assembly"><b>LDA</b><span>Lead Demonstration Assembly <cite>p. x</cite></span></li>
+<li data-s="lfl lower flammable limit"><b>LFL</b><span>lower flammable limit <cite>p. x</cite></span></li>
+<li data-s="lfrs lateral force resisting system"><b>LFRS</b><span>Lateral Force Resisting System <cite>p. x</cite></span></li>
+<li data-s="lidar light detection and ranging"><b>LiDAR</b><span>Light Detection and Ranging <cite>p. x</cite></span></li>
+<li data-s="lip local intense precipitation"><b>LIP</b><span>local intense precipitation <cite>p. x</cite></span></li>
+<li data-s="lmp licensing modernization project"><b>LMP</b><span>Licensing Modernization Project <cite>p. x</cite></span></li>
+<li data-s="loop loss of offsite power"><b>LOOP</b><span>loss of offsite power <cite>p. x</cite></span></li>
+<li data-s="lpsd low-power shutdown"><b>LPSD</b><span>Low-Power Shutdown <cite>p. x</cite></span></li>
+<li data-s="lrfd load and resistance factor design"><b>LRFD</b><span>Load and Resistance Factor Design <cite>p. x</cite></span></li>
+<li data-s="lpz low population zone"><b>LPZ</b><span>low population zone <cite>p. x</cite></span></li>
+<li data-s="lsss limiting safety system setting"><b>LSSS</b><span>Limiting Safety System Setting <cite>p. x</cite></span></li>
+<li data-s="lta lead test assembly"><b>LTA</b><span>lead test assembly <cite>p. x</cite></span></li>
+<li data-s="ltp lead test pin"><b>LTP</b><span>lead test pin <cite>p. x</cite></span></li>
+<li data-s="lwr light water reactor"><b>LWR</b><span>light water reactor <cite>p. x</cite></span></li>
+<li data-s="mande monitoring and non-destructive examination"><b>MANDE</b><span>monitoring and non-destructive examination <cite>p. x</cite></span></li>
+<li data-s="mandeep monitoring and non-destructive examination expert panel"><b>MANDEEP</b><span>monitoring and non-destructive examination expert panel <cite>p. x</cite></span></li>
+<li data-s="mcc motor control center"><b>MCC</b><span>Motor Control Center <cite>p. x</cite></span></li>
+<li data-s="mcnp monte carlo n-particle code"><b>MCNP</b><span>Monte Carlo N-Particle Code <cite>p. x</cite></span></li>
+<li data-s="mcr main control room"><b>MCR</b><span>Main Control Room <cite>p. x</cite></span></li>
+<li data-s="mct maximum cladding temperature"><b>MCT</b><span>maximum cladding temperature <cite>p. xi</cite></span></li>
+<li data-s="mcv movable closure valve module"><b>MCV</b><span>movable closure valve module <cite>p. xi</cite></span></li>
+<li data-s="mei maximally exposed individual"><b>MEI</b><span>maximally exposed individual <cite>p. xi</cite></span></li>
+<li data-s="mirss modular isolated reactor support structure"><b>MIRSS</b><span>Modular Isolated Reactor Support Structure <cite>p. xi</cite></span></li>
+<li data-s="mph miles per hour"><b>mph</b><span>miles per hour <cite>p. xi</cite></span></li>
+<li data-s="mps multi purpose sampler"><b>MPS</b><span>multi purpose sampler <cite>p. xi</cite></span></li>
+<li data-s="mre most-recent earthquake"><b>MRE</b><span>Most-Recent Earthquake <cite>p. xi</cite></span></li>
+<li data-s="msl mean sea level"><b>MSL</b><span>Mean Sea Level <cite>p. xi</cite></span></li>
+<li data-s="mss manufacturers standardization society"><b>MSS</b><span>Manufacturers Standardization Society <cite>p. xi</cite></span></li>
+<li data-s="mst mechanistic source term"><b>MST</b><span>mechanistic source term <cite>p. xi</cite></span></li>
+<li data-s="n/a not applicable"><b>N/A</b><span>Not Applicable <cite>p. xi</cite></span></li>
+<li data-s="naaqs national ambient air quality standards"><b>NAAQS</b><span>National Ambient Air Quality Standards <cite>p. xi</cite></span></li>
+<li data-s="nacp sodium leak detection control panel"><b>NACP</b><span>Sodium Leak Detection Control Panel <cite>p. xi</cite></span></li>
+<li data-s="nad north american datum"><b>NAD</b><span>North American Datum <cite>p. xi</cite></span></li>
+<li data-s="nap north ash pond"><b>NAP</b><span>North Ash Pond <cite>p. xi</cite></span></li>
+<li data-s="naps new assembly preconditioning station"><b>NAPS</b><span>New Assembly Preconditioning Station <cite>p. xi</cite></span></li>
+<li data-s="navd north america vertical datum"><b>NAVD</b><span>North America Vertical Datum <cite>p. xi</cite></span></li>
+<li data-s="nbsir national bureau of standards"><b>NBSIR</b><span>National Bureau of Standards <cite>p. xi</cite></span></li>
+<li data-s="ncb nuclear island control building"><b>NCB</b><span>Nuclear Island Control Building <cite>p. xi</cite></span></li>
+<li data-s="ncdc national climatic data center"><b>NCDC</b><span>National Climatic Data Center <cite>p. xi</cite></span></li>
+<li data-s="ncei national centers for environmental information"><b>NCEI</b><span>National Centers for Environmental Information <cite>p. xi</cite></span></li>
+<li data-s="nch nuclear island cranes and hoists"><b>NCH</b><span>Nuclear Island Cranes and Hoists <cite>p. xi</cite></span></li>
+<li data-s="ndc nuclear island dc power supply system"><b>NDC</b><span>Nuclear Island DC Power Supply System <cite>p. xi</cite></span></li>
+<li data-s="nea nuclear island ancillary electrical system"><b>NEA</b><span>Nuclear Island Ancillary Electrical System <cite>p. xi</cite></span></li>
+<li data-s="neb nuclear island electrical building"><b>NEB</b><span>Nuclear Island Electrical Building <cite>p. xi</cite></span></li>
+<li data-s="nei nuclear energy institute"><b>NEI</b><span>Nuclear Energy Institute <cite>p. xi</cite></span></li>
+<li data-s="nema national electrical manufactures association"><b>NEMA</b><span>National Electrical Manufactures Association <cite>p. xi</cite></span></li>
+<li data-s="nes nuclear island auxiliary electrical system"><b>NES</b><span>Nuclear Island Auxiliary Electrical System <cite>p. xi</cite></span></li>
+<li data-s="nfa nuclear island fire detection and alarm system"><b>NFA</b><span>Nuclear Island Fire Detection and Alarm System <cite>p. xi</cite></span></li>
+<li data-s="nfd nuclear island fire water distribution system"><b>NFD</b><span>Nuclear Island Fire Water Distribution System <cite>p. xi</cite></span></li>
+<li data-s="nfp nuclear island fire protection system"><b>NFP</b><span>Nuclear Island Fire Protection System <cite>p. xi</cite></span></li>
+<li data-s="nfpa national fire protection association"><b>NFPA</b><span>National Fire Protection Association <cite>p. xi</cite></span></li>
+<li data-s="nfs nuclear island fire suppression system"><b>NFS</b><span>Nuclear Island Fire Suppression System <cite>p. xi</cite></span></li>
+<li data-s="nga nuclear island argon gas distribution and storage system"><b>NGA</b><span>Nuclear Island Argon Gas Distribution and Storage System <cite>p. xi</cite></span></li>
+<li data-s="ngi norwegian geotechnical institute"><b>NGI</b><span>Norwegian Geotechnical Institute <cite>p. xi</cite></span></li>
+<li data-s="ngl nuclear island grounding and lightning protection"><b>NGL</b><span>Nuclear Island Grounding and Lightning Protection <cite>p. xi</cite></span></li>
+<li data-s="ngs nuclear island air and gas distribution system"><b>NGS</b><span>Nuclear Island Air and Gas Distribution System <cite>p. xi</cite></span></li>
+<li data-s="ngvd 29 national geodetic vertical datum of 1929"><b>NGVD 29</b><span>National Geodetic Vertical Datum of 1929 <cite>p. xii</cite></span></li>
+<li data-s="nht nuclear island heat tracing system"><b>NHT</b><span>Nuclear Island Heat Tracing System <cite>p. xii</cite></span></li>
+<li data-s="nhv nuclear island heating, ventilation, and air conditioning system"><b>NHV</b><span>Nuclear Island Heating, Ventilation, and Air Conditioning System <cite>p. xii</cite></span></li>
+<li data-s="ni nuclear island"><b>NI</b><span>Nuclear Island <cite>p. xii</cite></span></li>
+<li data-s="nic nuclear island control system"><b>NIC</b><span>Nuclear Island Control System <cite>p. xii</cite></span></li>
+<li data-s="nls nuclear island lighting system"><b>NLS</b><span>Nuclear Island Lighting System <cite>p. xii</cite></span></li>
+<li data-s="nlv nuclear island ac electrical power low voltage system"><b>NLV</b><span>Nuclear Island AC Electrical Power Low Voltage System <cite>p. xii</cite></span></li>
+<li data-s="nmfs new madrid fault source"><b>NMFS</b><span>New Madrid Fault Source <cite>p. xii</cite></span></li>
+<li data-s="nmv nuclear island ac electrical power medium voltage system"><b>NMV</b><span>Nuclear Island AC Electrical Power Medium Voltage System <cite>p. xii</cite></span></li>
+<li data-s="nna sodium leak detection, collection, and containment system"><b>NNA</b><span>Sodium Leak Detection, Collection, and Containment System <cite>p. xii</cite></span></li>
+<li data-s="noaa national oceanic and atmospheric administration"><b>NOAA</b><span>National Oceanic and Atmospheric Administration <cite>p. xii</cite></span></li>
+<li data-s="nrc u.s. nuclear regulatory commission"><b>NRC</b><span>U.S. Nuclear Regulatory Commission <cite>p. xii</cite></span></li>
+<li data-s="nrcs natural resources conservation service"><b>NRCS</b><span>Natural Resources Conservation Service <cite>p. xii</cite></span></li>
+<li data-s="nsc nuclear island security system"><b>NSC</b><span>Nuclear Island Security System <cite>p. xii</cite></span></li>
+<li data-s="nshm23 national seismic hazard model 2023"><b>NSHM23</b><span>National Seismic Hazard Model 2023 <cite>p. xii</cite></span></li>
+<li data-s="nsrst non-safety-related with special treatment"><b>NSRST</b><span>non-safety-related with special treatment <cite>p. xii</cite></span></li>
+<li data-s="nss nuclear island salt system"><b>NSS</b><span>Nuclear Island Salt System <cite>p. xii</cite></span></li>
+<li data-s="nst non-safety-related with no special treatment"><b>NST</b><span>non-safety-related with no special treatment <cite>p. xii</cite></span></li>
+<li data-s="numarc nuclear management and resources council"><b>NUMARC</b><span>Nuclear Management and Resources Council <cite>p. xii</cite></span></li>
+<li data-s="nup nuclear island uninterruptible ac power supply system"><b>NUP</b><span>Nuclear Island Uninterruptible AC Power Supply System <cite>p. xii</cite></span></li>
+<li data-s="nws nuclear island water system"><b>NWS</b><span>Nuclear Island Water System <cite>p. xii</cite></span></li>
+<li data-s="nys nuclear island yard system"><b>NYS</b><span>Nuclear Island Yard System <cite>p. xii</cite></span></li>
+<li data-s="obe operating basis earthquake"><b>OBE</b><span>Operating Basis Earthquake <cite>p. xii</cite></span></li>
+<li data-s="occ outage control center"><b>OCC</b><span>Outage Control Center <cite>p. xii</cite></span></li>
+<li data-s="oe operating experience"><b>OE</b><span>operating experience <cite>p. xii</cite></span></li>
+<li data-s="oer operating experience review"><b>OER</b><span>operating experience review <cite>p. xii</cite></span></li>
+<li data-s="ol operating license"><b>OL</b><span>operating license <cite>p. xii</cite></span></li>
+<li data-s="ola operating license application"><b>OLA</b><span>operating license application <cite>p. xii</cite></span></li>
+<li data-s="oqe other quantified event"><b>OQE</b><span>other quantified event <cite>p. xii</cite></span></li>
+<li data-s="ornl oak ridge national laboratory"><b>ORNL</b><span>Oak Ridge National Laboratory <cite>p. xii</cite></span></li>
+<li data-s="osha occupational safety and health administration"><b>OSHA</b><span>Occupational Safety and Health Administration <cite>p. xii</cite></span></li>
+<li data-s="ow observation well"><b>OW</b><span>Observation Well <cite>p. xii</cite></span></li>
+<li data-s="p-s compressional (p) and shear (s) wave downhole velocities"><b>P-S</b><span>Compressional (P) and Shear (S) Wave Downhole Velocities <cite>p. xii</cite></span></li>
+<li data-s="pam post-accident monitoring"><b>PAM</b><span>Post-Accident Monitoring <cite>p. xii</cite></span></li>
+<li data-s="pav pool auxiliary vault"><b>PAV</b><span>Pool Auxiliary Vault <cite>p. xii</cite></span></li>
+<li data-s="pco plant communication system"><b>PCO</b><span>Plant Communication System <cite>p. xii</cite></span></li>
+<li data-s="pcp process control program"><b>PCP</b><span>Process Control Program <cite>p. xii</cite></span></li>
+<li data-s="pdc principal design criterion or principal design criteria"><b>PDC</b><span>Principal Design Criterion or Principal Design Criteria <cite>p. xiii</cite></span></li>
+<li data-s="pem pin extraction machine"><b>PEM</b><span>pin extraction machine <cite>p. xiii</cite></span></li>
+<li data-s="pep plume exposure pathway"><b>PEP</b><span>plume exposure pathway <cite>p. xiii</cite></span></li>
+<li data-s="pfd probability of failure on demand"><b>PFD</b><span>Probability of Failure on Demand <cite>p. xiii</cite></span></li>
+<li data-s="pga peak ground acceleration"><b>PGA</b><span>Peak Ground Acceleration <cite>p. xiii</cite></span></li>
+<li data-s="pgm plant general manager"><b>PGM</b><span>Plant General Manager <cite>p. xiii</cite></span></li>
+<li data-s="phf plug handling fixture"><b>PHF</b><span>Plug Handling Fixture <cite>p. xiii</cite></span></li>
+<li data-s="phm pool handling machine"><b>PHM</b><span>Pool Handling Machine <cite>p. xiii</cite></span></li>
+<li data-s="pht primary heat transport system"><b>PHT</b><span>Primary Heat Transport System <cite>p. xiii</cite></span></li>
+<li data-s="pi plasticity index"><b>PI</b><span>Plasticity Index <cite>p. xiii</cite></span></li>
+<li data-s="pic pool immersion cell"><b>PIC</b><span>Pool Immersion Cell <cite>p. xiii</cite></span></li>
+<li data-s="pie postulated initiating event"><b>PIE</b><span>postulated initiating event <cite>p. xiii</cite></span></li>
+<li data-s="pitap post-construction inspection, testing, and analysis program"><b>PITAP</b><span>post-construction inspection, testing, and analysis program <cite>p. xiii</cite></span></li>
+<li data-s="pm particulate matter"><b>PM</b><span>Particulate Matter <cite>p. xiii</cite></span></li>
+<li data-s="pmc plant monitoring and control system"><b>PMC</b><span>Plant Monitoring and Control System <cite>p. xiii</cite></span></li>
+<li data-s="pmf probable maximum flood"><b>PMF</b><span>Probable Maximum Flood <cite>p. xiii</cite></span></li>
+<li data-s="pmp probable maximum precipitation"><b>PMP</b><span>Probable Maximum Precipitation <cite>p. xiii</cite></span></li>
+<li data-s="pmwp probable maximum winter precipitation"><b>PMWP</b><span>Probable Maximum Winter Precipitation <cite>p. xiii</cite></span></li>
+<li data-s="pos plant operating state"><b>POS</b><span>plant operating state <cite>p. xiii</cite></span></li>
+<li data-s="pra probabilistic risk assessment"><b>PRA</b><span>probabilistic risk assessment <cite>p. xiii</cite></span></li>
+<li data-s="prc pin removal cell"><b>PRC</b><span>Pin Removal Cell <cite>p. xiii</cite></span></li>
+<li data-s="prm process radiation monitoring"><b>PRM</b><span>Process Radiation Monitoring <cite>p. xiii</cite></span></li>
+<li data-s="psar preliminary safety analysis report"><b>PSAR</b><span>preliminary safety analysis report <cite>p. xiii</cite></span></li>
+<li data-s="psf probabilistic risk assessment safety function"><b>PSF</b><span>probabilistic risk assessment safety function <cite>p. xiii</cite></span></li>
+<li data-s="psha probabilistic seismic hazard analysis"><b>PSHA</b><span>Probabilistic Seismic Hazard Analysis <cite>p. xiii</cite></span></li>
+<li data-s="psp primary sodium pump"><b>PSP</b><span>Primary Sodium Pump <cite>p. xiii</cite></span></li>
+<li data-s="psra probabilistic site response analysis"><b>PSRA</b><span>Probabilistic Site Response Analysis <cite>p. xiii</cite></span></li>
+<li data-s="pti plugging temperature indicator"><b>PTI</b><span>plugging temperature indicator <cite>p. xiii</cite></span></li>
+<li data-s="pzgw piezometer (groundwater)"><b>PZGW</b><span>piezometer (groundwater) <cite>p. xiii</cite></span></li>
+<li data-s="pzsw piezometer (surface water)"><b>PZSW</b><span>piezometer (surface water) <cite>p. xiii</cite></span></li>
+<li data-s="qa quality assurance"><b>QA</b><span>quality assurance <cite>p. xiii</cite></span></li>
+<li data-s="qapd quality assurance program description"><b>QAPD</b><span>Quality Assurance Program Description <cite>p. xiii</cite></span></li>
+<li data-s="qatr quality assurance topical report"><b>QATR</b><span>Quality Assurance Topical Report <cite>p. xiii</cite></span></li>
+<li data-s="qffd quaternary fault and fold database"><b>QFFD</b><span>Quaternary Fault and Fold Database <cite>p. xiii</cite></span></li>
+<li data-s="qho quantitative health objective"><b>QHO</b><span>Quantitative Health Objective <cite>p. xiii</cite></span></li>
+<li data-s="r&amp;d research and development"><b>R&amp;D</b><span>research and development <cite>p. xiii</cite></span></li>
+<li data-s="rab reactor auxiliary building"><b>RAB</b><span>Reactor Auxiliary Building <cite>p. xiii</cite></span></li>
+<li data-s="rac reactor air cooling system"><b>RAC</b><span>Reactor Air Cooling System <cite>p. xiv</cite></span></li>
+<li data-s="rca radiologically controlled area"><b>RCA</b><span>radiologically controlled area <cite>p. xiv</cite></span></li>
+<li data-s="rcc reactor core system"><b>RCC</b><span>Reactor Core System <cite>p. xiv</cite></span></li>
+<li data-s="rcp representative concentration pathways"><b>RCP</b><span>Representative Concentration Pathways <cite>p. xiv</cite></span></li>
+<li data-s="res reactor enclosure system"><b>RES</b><span>Reactor Enclosure System <cite>p. xiv</cite></span></li>
+<li data-s="rfdc required functional design criteria"><b>RFDC</b><span>Required Functional Design Criteria <cite>p. xiv</cite></span></li>
+<li data-s="rfi reactor fixed internals"><b>RFI</b><span>Reactor Fixed Internals <cite>p. xiv</cite></span></li>
+<li data-s="rg regulatory guide"><b>RG</b><span>Regulatory Guide <cite>p. xiv</cite></span></li>
+<li data-s="ric radiation indicator controller"><b>RIC</b><span>Radiation Indicator Controller <cite>p. xiv</cite></span></li>
+<li data-s="rim reliability and integrity management"><b>RIM</b><span>Reliability and Integrity Management <cite>p. xiv</cite></span></li>
+<li data-s="rimep reliability and integrity management expert panel"><b>RIMEP</b><span>Reliability and Integrity Management Expert Panel <cite>p. xiv</cite></span></li>
+<li data-s="ris reactor instrumentation system"><b>RIS</b><span>Reactor Instrumentation System <cite>p. xiv</cite></span></li>
+<li data-s="rmbs remote manual bypass switch"><b>RMBS</b><span>Remote Manual Bypass Switch <cite>p. xiv</cite></span></li>
+<li data-s="rmc rod monitoring and control system"><b>RMC</b><span>Rod Monitoring and Control System <cite>p. xiv</cite></span></li>
+<li data-s="rmr rock mass rating"><b>RMR</b><span>Rock Mass Rating <cite>p. xiv</cite></span></li>
+<li data-s="rms radiation monitoring system"><b>RMS</b><span>Radiation Monitoring System <cite>p. xiv</cite></span></li>
+<li data-s="rp radiation protection"><b>RP</b><span>Radiation Protection <cite>p. xiv</cite></span></li>
+<li data-s="rpa rotatable plug assembly"><b>RPA</b><span>Rotatable Plug Assembly <cite>p. xiv</cite></span></li>
+<li data-s="rpd rotatable plug drive"><b>RPD</b><span>Rotatable Plug Drive <cite>p. xiv</cite></span></li>
+<li data-s="rpj rotatable plug jack"><b>RPJ</b><span>Rotatable Plug Jack <cite>p. xiv</cite></span></li>
+<li data-s="rpp radiation protection program"><b>RPP</b><span>Radiation Protection Program <cite>p. xiv</cite></span></li>
+<li data-s="rps reactor protection system"><b>RPS</b><span>Reactor Protection System <cite>p. xiv</cite></span></li>
+<li data-s="rqd rock quality designation"><b>RQD</b><span>Rock Quality Designation <cite>p. xiv</cite></span></li>
+<li data-s="rsb reactor support block"><b>RSB</b><span>Reactor Support Block <cite>p. xiv</cite></span></li>
+<li data-s="rsc remote shutdown complex"><b>RSC</b><span>Remote Shutdown Complex <cite>p. xiv</cite></span></li>
+<li data-s="rss reactor support structure"><b>RSS</b><span>Reactor Support Structure <cite>p. xiv</cite></span></li>
+<li data-s="rtb reactor trip breaker"><b>RTB</b><span>Reactor Trip Breaker <cite>p. xiv</cite></span></li>
+<li data-s="rv reactor vessel"><b>RV</b><span>Reactor Vessel <cite>p. xiv</cite></span></li>
+<li data-s="rvc reticulated vitreous carbon"><b>RVC</b><span>Reticulated Vitreous Carbon <cite>p. xiv</cite></span></li>
+<li data-s="rvt regulating voltage transformer"><b>RVT</b><span>Regulating Voltage Transformer <cite>p. xiv</cite></span></li>
+<li data-s="rwg gaseous radwaste processing system"><b>RWG</b><span>Gaseous Radwaste Processing System <cite>p. xiv</cite></span></li>
+<li data-s="rwl liquid radwaste processing system"><b>RWL</b><span>Liquid Radwaste Processing System <cite>p. xiv</cite></span></li>
+<li data-s="rws solid radwaste processing system"><b>RWS</b><span>Solid Radwaste Processing System <cite>p. xiv</cite></span></li>
+<li data-s="rxb reactor building"><b>RXB</b><span>Reactor Building <cite>p. xiv</cite></span></li>
+<li data-s="samg severe accident management guideline"><b>SAMG</b><span>Severe Accident Management Guideline <cite>p. xiv</cite></span></li>
+<li data-s="sap south ash pond"><b>SAP</b><span>South Ash Pond <cite>p. xiv</cite></span></li>
+<li data-s="sar safety analysis report"><b>SAR</b><span>safety analysis report <cite>p. xiv</cite></span></li>
+<li data-s="sara superfund amendments and reauthorization act"><b>SARA</b><span>Superfund Amendments and Reauthorization Act <cite>p. xv</cite></span></li>
+<li data-s="sarrdl specified acceptable system radionuclide release design limit"><b>SARRDL</b><span>specified acceptable system radionuclide release design limit <cite>p. xv</cite></span></li>
+<li data-s="sasw spectral analysis of surface waves"><b>SASW</b><span>Spectral Analysis of Surface Waves <cite>p. xv</cite></span></li>
+<li data-s="scada supervisory, control and data acquisition"><b>SCADA</b><span>Supervisory, Control and Data Acquisition <cite>p. xv</cite></span></li>
+<li data-s="scg sodium cover gas system"><b>SCG</b><span>Sodium Cover Gas System <cite>p. xv</cite></span></li>
+<li data-s="sd standard deviation"><b>SD</b><span>Standard Deviation <cite>p. xv</cite></span></li>
+<li data-s="sdg standby diesel generator"><b>SDG</b><span>Standby Diesel Generator <cite>p. xv</cite></span></li>
+<li data-s="sdoe secure development and operational environment"><b>SDOE</b><span>Secure Development and Operational Environment <cite>p. xv</cite></span></li>
+<li data-s="sei structural engineering institute"><b>SEI</b><span>Structural Engineering Institute <cite>p. xv</cite></span></li>
+<li data-s="sfp spent fuel pool"><b>SFP</b><span>Spent Fuel Pool <cite>p. xv</cite></span></li>
+<li data-s="sfr sodium-cooled fast reactor"><b>SFR</b><span>sodium-cooled fast reactor <cite>p. xv</cite></span></li>
+<li data-s="sgs steam generation system"><b>SGS</b><span>Steam Generation System <cite>p. xv</cite></span></li>
+<li data-s="sht sodium holding tank"><b>SHT</b><span>sodium holding tank <cite>p. xv</cite></span></li>
+<li data-s="shx sodium-salt heat exchanger"><b>SHX</b><span>Sodium-Salt Heat Exchanger <cite>p. xv</cite></span></li>
+<li data-s="sl safety limit"><b>SL</b><span>safety limit <cite>p. xv</cite></span></li>
+<li data-s="smacna sheet metal and air conditioning contractors' national association"><b>SMACNA</b><span>Sheet Metal and Air Conditioning Contractors' National Association <cite>p. xv</cite></span></li>
+<li data-s="smr small modular reactor"><b>SMR</b><span>small modular reactor <cite>p. xv</cite></span></li>
+<li data-s="sms seismic monitoring system"><b>SMS</b><span>Seismic Monitoring System <cite>p. xv</cite></span></li>
+<li data-s="snm special nuclear material"><b>SNM</b><span>special nuclear material <cite>p. xv</cite></span></li>
+<li data-s="sov solenoid-operated valve"><b>SOV</b><span>solenoid-operated valve <cite>p. xv</cite></span></li>
+<li data-s="spds safety parameter display system"><b>SPDS</b><span>Safety Parameter Display System <cite>p. xv</cite></span></li>
+<li data-s="sps sodium processing system"><b>SPS</b><span>Sodium Processing System <cite>p. xv</cite></span></li>
+<li data-s="sps-e ex-vessel storage tank sodium processing system"><b>SPS-E</b><span>Ex-Vessel Storage Tank Sodium Processing System <cite>p. xv</cite></span></li>
+<li data-s="sps-i intermediate sodium processing system"><b>SPS-I</b><span>Intermediate Sodium Processing System <cite>p. xv</cite></span></li>
+<li data-s="sps-p primary sodium processing system"><b>SPS-P</b><span>Primary Sodium Processing System <cite>p. xv</cite></span></li>
+<li data-s="spt standard penetration test"><b>SPT</b><span>Standard Penetration Test <cite>p. xv</cite></span></li>
+<li data-s="sr safety-related"><b>SR</b><span>safety-related <cite>p. xv</cite></span></li>
+<li data-s="srdc safety-related design criteria"><b>SRDC</b><span>Safety-Related Design Criteria <cite>p. xv</cite></span></li>
+<li data-s="srp standard review plan"><b>SRP</b><span>Standard Review Plan <cite>p. xv</cite></span></li>
+<li data-s="srss square root of the sum of squares"><b>SRSS</b><span>square root of the sum of squares <cite>p. xv</cite></span></li>
+<li data-s="ssc structure, system, or component"><b>SSC</b><span>structure, system, or component <cite>p. xv</cite></span></li>
+<li data-s="ssc seismic source characterization"><b>SSC</b><span>Seismic Source Characterization <cite>p. xv</cite></span></li>
+<li data-s="sse safe shutdown earthquake"><b>SSE</b><span>safe shutdown earthquake <cite>p. xv</cite></span></li>
+<li data-s="sshac senior seismic hazard analysis committee"><b>SSHAC</b><span>Senior Seismic Hazard Analysis Committee <cite>p. xv</cite></span></li>
+<li data-s="ssi soil-structure interaction"><b>SSI</b><span>Soil-Structure Interaction <cite>p. xv</cite></span></li>
+<li data-s="sssi structure-soil-structure interaction"><b>SSSI</b><span>Structure-Soil-Structure Interaction <cite>p. xv</cite></span></li>
+<li data-s="stp standard temperature and pressure"><b>STP</b><span>standard temperature and pressure <cite>p. xv</cite></span></li>
+<li data-s="sts steam turbine system"><b>STS</b><span>Steam Turbine System <cite>p. xvi</cite></span></li>
+<li data-s="svdu special video display unit"><b>SVDU</b><span>Special Video Display Unit <cite>p. xvi</cite></span></li>
+<li data-s="ta task analysis"><b>TA</b><span>Task Analysis <cite>p. xvi</cite></span></li>
+<li data-s="tatnf time-at-temperature no-failure"><b>TATNF</b><span>time-at-temperature no-failure <cite>p. xvi</cite></span></li>
+<li data-s="tede total effective dose equivalent"><b>TEDE</b><span>total effective dose equivalent <cite>p. xvi</cite></span></li>
+<li data-s="tema tubular exchanger manufacturers association"><b>TEMA</b><span>Tubular Exchanger Manufacturers Association <cite>p. xvi</cite></span></li>
+<li data-s="tfb turbine facility building"><b>TFB</b><span>Turbine Facility Building <cite>p. xvi</cite></span></li>
+<li data-s="tff sodium test and fill facility"><b>TFF</b><span>Sodium Test and Fill Facility <cite>p. xvi</cite></span></li>
+<li data-s="ti-ripb technology-inclusive, risk-informed, and performance-based"><b>TI-RIPB</b><span>technology-inclusive, risk-informed, and performance-based <cite>p. xvi</cite></span></li>
+<li data-s="tmi three mile island"><b>TMI</b><span>Three Mile Island <cite>p. xvi</cite></span></li>
+<li data-s="tmp technology maturation plan"><b>TMP</b><span>technology maturation plan <cite>p. xvi</cite></span></li>
+<li data-s="tra technology readiness assessment"><b>TRA</b><span>technology readiness assessment <cite>p. xvi</cite></span></li>
+<li data-s="trl technology readiness level"><b>TRL</b><span>technology readiness level <cite>p. xvi</cite></span></li>
+<li data-s="ts technical specifications"><b>TS</b><span>technical specifications <cite>p. xvi</cite></span></li>
+<li data-s="tss thermal salt storage system"><b>TSS</b><span>Thermal Salt Storage System <cite>p. xvi</cite></span></li>
+<li data-s="tstf technical specification task force"><b>TSTF</b><span>Technical Specification Task Force <cite>p. xvi</cite></span></li>
+<li data-s="tvss transient voltage surge suppressor"><b>TVSS</b><span>Transient Voltage Surge Suppressor <cite>p. xvi</cite></span></li>
+<li data-s="twr® traveling wave reactor"><b>TWR®</b><span>Traveling Wave Reactor <cite>p. xvi</cite></span></li>
+<li data-s="ufc unified facilities criteria"><b>UFC</b><span>Unified Facilities Criteria <cite>p. xvi</cite></span></li>
+<li data-s="ugrb upper green river basin"><b>UGRB</b><span>Upper Green River Basin <cite>p. xvi</cite></span></li>
+<li data-s="uhrs uniform hazard response spectra"><b>UHRS</b><span>Uniform Hazard Response Spectra <cite>p. xvi</cite></span></li>
+<li data-s="uis upper internal structure"><b>UIS</b><span>Upper Internal Structure <cite>p. xvi</cite></span></li>
+<li data-s="umc utility monitoring and control system"><b>UMC</b><span>Utility Monitoring and Control System <cite>p. xvi</cite></span></li>
+<li data-s="ups uninterruptible power supply"><b>UPS</b><span>uninterruptible power supply <cite>p. xvi</cite></span></li>
+<li data-s="usace united states army corps of engineers"><b>USACE</b><span>United States Army Corps of Engineers <cite>p. xvi</cite></span></li>
+<li data-s="uscb united states census bureau"><b>USCB</b><span>United States Census Bureau <cite>p. xvi</cite></span></li>
+<li data-s="usgs united states geological survey"><b>USGS</b><span>United States Geological Survey <cite>p. xvi</cite></span></li>
+<li data-s="usl upper subcritical limit"><b>USL</b><span>Upper Subcritical Limit <cite>p. xvi</cite></span></li>
+<li data-s="uso us sfr owner, llc"><b>USO</b><span>US SFR Owner, LLC <cite>p. xvi</cite></span></li>
+<li data-s="utm universal transverse mercator"><b>UTM</b><span>Universal Transverse Mercator <cite>p. xvi</cite></span></li>
+<li data-s="uu unconsolidated-undrained"><b>UU</b><span>Unconsolidated-Undrained <cite>p. xvi</cite></span></li>
+<li data-s="uv undervoltage"><b>UV</b><span>undervoltage <cite>p. xvi</cite></span></li>
+<li data-s="v&amp;v verification and validation"><b>V&amp;V</b><span>verification and validation <cite>p. xvi</cite></span></li>
+<li data-s="vdu visual display unit"><b>VDU</b><span>Visual Display Unit <cite>p. xvi</cite></span></li>
+<li data-s="vhra very high radiation area"><b>VHRA</b><span>Very High Radiation Area <cite>p. xvi</cite></span></li>
+<li data-s="vs shear-wave velocity"><b>VS</b><span>Shear-Wave Velocity <cite>p. xvi</cite></span></li>
+<li data-s="vs30 time-averaged shear-wave velocity in the upper 30 meters"><b>VS30</b><span>Time-averaged shear-wave velocity in the upper 30 meters <cite>p. xvi</cite></span></li>
+<li data-s="wguep working group on utah earthquake probabilities"><b>WGUEP</b><span>Working Group on Utah Earthquake Probabilities <cite>p. xvii</cite></span></li>
+<li data-s="wohs wyoming office of homeland security"><b>WOHS</b><span>Wyoming Office of Homeland Security <cite>p. xvii</cite></span></li>
+<li data-s="wseo wyoming state engineer’s office"><b>WSEO</b><span>Wyoming State Engineer’s Office <cite>p. xvii</cite></span></li>
+<li data-s="wwdo wyoming water development office"><b>WWDO</b><span>Wyoming Water Development Office <cite>p. xvii</cite></span></li>
+<li data-s="x/q atmospheric dispersion factor"><b>X/Q</b><span>atmospheric dispersion factor <cite>p. xvii</cite></span></li>
+<li data-s="xis nuclear instrumentation system"><b>XIS</b><span>Nuclear Instrumentation System <cite>p. xvii</cite></span></li>
+</ul>
+<h2>Defined in the PSAR text</h2>
+<p>These are not in the list. The PSAR defines them on the page shown. It spells out Control Room Supervisor but does not abbreviate it. SSC, STS and CRS each have two meanings, and the popups show the one that fits the study item.</p>
+<ul class="terms">
+<li data-s="mwt megawatt thermal"><b>MWt</b><span>megawatt thermal <cite>p. 1.1-1</cite></span></li>
+<li data-s="mwe megawatts electric"><b>MWe</b><span>megawatts electric <cite>p. 1.1-1</cite></span></li>
+<li data-s="vac volts alternating current"><b>VAC</b><span>volts alternating current <cite>p. 7.7-4</cite></span></li>
+<li data-s="nme nuclear island major maintenance equipment"><b>NME</b><span>Nuclear Island Major Maintenance Equipment <cite>p. 1.1-18</cite></span></li>
+<li data-s="ep emergency preparedness"><b>EP</b><span>emergency preparedness <cite>p. 11.3-1</cite></span></li>
+<li data-s="vrla valve-regulated lead-acid"><b>VRLA</b><span>Valve-Regulated Lead-Acid <cite>p. 1.4-46</cite></span></li>
+<li data-s="odcm offsite dose calculation manual"><b>ODCM</b><span>Offsite Dose Calculation Manual <cite>p. 9.1-1</cite></span></li>
+<li data-s="ht9 high chromium martensitic steel"><b>HT9</b><span>high chromium martensitic steel <cite>p. 1.1-2</cite></span></li>
+<li data-s="sts static transfer switch"><b>STS</b><span>static transfer switch <cite>p. 7.7-4</cite></span></li>
+<li data-s="crs control room supervisor"><b>CRS</b><span>Control Room Supervisor <cite>p. 11.1-8</cite></span></li>
+</ul>
+</main>
+<script>
+const rows = [...document.querySelectorAll(".terms li")], find = document.getElementById("find"), shown = document.getElementById("shown");
+function filter() {
+  const q = find.value.trim().toLowerCase();
+  let n = 0;
+  rows.forEach(r => { r.hidden = !r.dataset.s.includes(q); if (!r.hidden) n++; });
+  shown.textContent = n + " of " + rows.length + " terms";
+}
+find.addEventListener("input", filter);
+filter();
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

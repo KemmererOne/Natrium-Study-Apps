@@ -201,6 +201,7 @@ h1 { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
 </div>
 
 <script src="../feedback.js"></script>
+<script src="../glossary.js"></script>
 <script src="cards.js"></script>
 <script>
 const state = { order: [], pos: 0, flipped: false, known: new Set(), missed: new Set(), filter: "All", studyMissed: false };
@@ -317,6 +318,14 @@ function render() {
   showFig("fig-back", fig && fig.at !== "q" ? fig : null);
   $("flag-back").hidden = !c[4];
   $("flag-back").textContent = c[4] ? "⚠ Possible discrepancy: " + c[4] : "";
+  Terms.close();
+  // PSAR cards: acronyms open their meaning. One spelled out in the answer stays plain on the front.
+  if (c[0].startsWith("PSAR: ")) {
+    const context = c[1] + " " + c[2];
+    Terms.tag($("q"), { hide: Terms.spoilers([c[1], c[2]]), context });
+    Terms.tag($("a"), { context });
+    Terms.tag($("flag-back"), { context });
+  }
   $("inner").classList.toggle("flipped", state.flipped);
   $("back").setAttribute("aria-hidden", String(!state.flipped));
   $("front").setAttribute("aria-hidden", String(state.flipped));

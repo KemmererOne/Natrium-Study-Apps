@@ -227,6 +227,20 @@ PSAR lesson plans (Nov 6, 2026)\
 - PSAR lesson checks export to quiz/questions.js with t "PSAR design basis" and a "PSAR: group" topic. PSAR key facts\
   are not exported to the flashcards.\
 \
+PSAR acronym popups (Nov 6, 2026)\
+- PSAR lessons, PSAR flashcards and PSAR quiz questions underline each PSAR acronym. Hover, tap or Enter shows its\
+  description and PSAR page. Fundamentals items are not tagged. psar/acronyms/ lists every term with a search box.\
+- Terms and descriptions are word for word from the PSAR List of Acronyms and Abbreviations (pp. iv to xvii). Terms the\
+  list omits but the PSAR text defines are in EXTRA in scripts/psar-glossary.py, each checked against its page.\
+- SSC, STS and CRS popups follow context. SSC is structure, system, or component, or Seismic Source Characterization in\
+  seismic source material. Plain seismic is not a cue. STS is static transfer switch, or Steam Turbine System in steam\
+  material. CRS is Control Room Supervisor, or Core Restraint System in core material. Rules are in CONTEXT in\
+  scripts/psar-glossary.py. The PSAR spells out Control Room Supervisor but does not abbreviate it.\
+- Abbreviations the PSAR does not define are left alone. Codes such as RRS-ISPL-BL are not tagged.\
+- A term spelled out in a question or choice, or in a card's answer, stays plain until the student answers or flips.\
+- Run python3 scripts/psar-glossary.py, then the lesson build. The build writes glossary.js, which the quiz and flashcards\
+  load, and bumps their sw.js versions when it changes. Lessons carry their own terms inline. Never edit glossary.js by hand.\
+\
 Stop and report, do not guess, if:\
 - A source file is missing or unreadable.\
 - A Word file cannot be parsed.\

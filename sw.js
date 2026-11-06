@@ -2,8 +2,8 @@
 // scripts/build-lessons.js keeps TOPICS current and bumps VERSION when any of those pages change.
 // flashcards/ and quiz/ have their own service workers, so this one leaves them alone.
 const APP = "site";
-const VERSION = "v30";
-const CONTENT = "ffc396699907";
+const VERSION = "v33";
+const CONTENT = "66aba104379d";
 const CACHE = APP + "-" + VERSION;
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap";
@@ -67,6 +67,7 @@ const TOPICS = [
   "./topics/pr-05-logic-diagrams/",
   "./topics/pr-06-engineering-fabrication-construction-and-architectural-drawings/",
   "./psar/",
+  "./psar/acronyms/",
   "./psar/psar-ev-01-anticipated-operational-occurrences/",
   "./psar/psar-ev-02-loss-of-primary-flow-dbes/",
   "./psar/psar-ev-03-heat-removal-dbes/",

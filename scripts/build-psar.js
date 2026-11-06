@@ -10,7 +10,7 @@ const EXTRA = `
 .study { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; color: var(--muted); }
 .src { font-size: 0.9rem; }
 `;
-module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, mailto }) => {
+module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, mailto, TERMS, GLOSSARY_LIB, acr }) => {
   const plan = JSON.parse(read("work/psar/plan.json"));
   const lessons = fs.readdirSync(at("work/psar")).filter(f => f.endsWith(".json") && f !== "plan.json").map(f => JSON.parse(read("work/psar/" + f)));
   const byId = new Map(lessons.map(t => [t.id, t]));
@@ -42,6 +42,67 @@ module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, mailto }) => {
     const pages = [...new Set([...all].map(pageOf))].sort(label);
     const secs = [...new Set([...all].map(secOf))].sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
     return { pages, secs };
+  }
+  // Each lesson carries only the terms that appear in it, so it stays one file
+  const used = html => Object.fromEntries(Object.entries(TERMS).filter(([term]) => html.includes(term) || term === "DL" && /DL\d/.test(html)));
+  // Knowledge checks hide a term spelled out in the question or a choice until the check is answered
+  const TAG_LESSON = `(function () {
+  const pages = document.querySelector(".pages"), checks = [...pages.querySelectorAll(".check")];
+  checks.forEach(c => Terms.tag(c.querySelector(".result"), { context: c.textContent }));
+  checks.forEach(c => {
+    const text = [c.querySelector("p"), ...c.querySelectorAll(".opt")].map(e => e.textContent), context = c.textContent;
+    Terms.tag(c, { hide: Terms.spoilers(text), context });
+    c.querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => Terms.tag(c, { context })));
+  });
+  Terms.tag(pages);
+})();`;
+  // One page with every term, so a student can look one up directly
+  function acronymsPage() {
+    const row = a => `<li data-s="${esc((a.term + " " + a.d).toLowerCase())}"><b>${esc(a.term)}</b><span>${esc(a.d)} <cite>p. ${esc(a.page)}</cite></span></li>`;
+    write("psar/acronyms/index.html", `<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>PSAR Acronyms</title>
+<style>${CSS}
+.terms { list-style: none; margin: 12px 0 0; padding: 0; }
+.terms li { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); overflow-wrap: anywhere; }
+.terms li[hidden] { display: none; }
+#find { width: 100%; box-sizing: border-box; font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--accent); border-radius: 10px; padding: 12px 14px; }
+#shown { color: var(--muted); font-size: 0.85rem; margin: 8px 0 0; }
+</style>
+<main class="wrap" style="display:block;max-width:760px">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../">PSAR lessons</a></span></div>
+<h1>Acronyms and Abbreviations</h1>
+<p>Terms and descriptions are from the Kemmerer Unit 1 PSAR. <cite>PSAR Rev 1 (NAT-9400), List of Acronyms and Abbreviations, pp. iv to xvii</cite></p>
+<label for="find"><b>Find a term</b></label>
+<input id="find" type="search" autocomplete="off" placeholder="XIS or heat exchanger">
+<p id="shown" aria-live="polite"></p>
+<ul class="terms" id="listed">
+${acr.listed.map(row).join("\n")}
+</ul>
+<h2>Defined in the PSAR text</h2>
+<p>These are not in the list. The PSAR defines them on the page shown. It spells out Control Room Supervisor but does not abbreviate it. SSC, STS and CRS each have two meanings, and the popups show the one that fits the study item.</p>
+<ul class="terms">
+${[...acr.extra, { term: "CRS", d: acr.context.CRS.d, page: acr.context.CRS.page }].map(row).join("\n")}
+</ul>
+</main>
+<script>
+const rows = [...document.querySelectorAll(".terms li")], find = document.getElementById("find"), shown = document.getElementById("shown");
+function filter() {
+  const q = find.value.trim().toLowerCase();
+  let n = 0;
+  rows.forEach(r => { r.hidden = !r.dataset.s.includes(q); if (!r.hidden) n++; });
+  shown.textContent = n + " of " + rows.length + " terms";
+}
+find.addEventListener("input", filter);
+filter();
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>
+`);
   }
   const built = [];
   for (const t of lessons) {
@@ -75,7 +136,7 @@ module.exports = ({ at, read, write, esc, cite, CSS, SCRIPT, mailto }) => {
         : `<p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p>`}`;
     };
     const body = p => {
-      if (p.id === "objectives") return `<p class="src">${esc(t.intro)} ${cite(head)}</p><div class="obj"><h3>Learning objectives</h3>${t.objectives.map(objective).join("")}</div>`;
+      if (p.id === "objectives") return `<p class="src">${esc(t.intro)} ${cite(head)}</p><p class="gap">Terms with a dotted underline are PSAR acronyms. Hover, tap or press Enter on one to see its meaning.</p><div class="obj"><h3>Learning objectives</h3>${t.objectives.map(objective).join("")}</div>`;
       if (p.c) return `<h2>${esc(p.title)}</h2><p class="count">${p.c.eo.length ? "Objectives " + esc(p.c.eo.join(", ")) : "Background"}</p>${p.c.body.map(b => block(t, b)).join("\n")}`;
       if (p.k) return `<h2>${esc(p.title)}</h2>${p.k.checks.map(check).join("\n")}`;
       if (p.id === "summary") return `<h2>Summary</h2><ul>${t.summary.map(s => `<li>${esc(s.text)} ${cite(s.cite)}</li>`).join("")}</ul>`;
@@ -112,9 +173,13 @@ ${sections.replace(/(\d)x10-(\d+)(?=[^<>]*<)/g, "$1×10<sup>-$2</sup>")}
 </div>
 </main>
 <script>${SCRIPT}</script>
+<script>window.PSAR_TERMS = ${JSON.stringify(used(sections)).replace(/</g, "\\u003c")}; window.PSAR_TERMS_PAGE = "../acronyms/";
+${GLOSSARY_LIB}
+${TAG_LESSON}</script>
 </html>
 `);
   }
+  acronymsPage();
   // Selector entries come from the plan, so a planned lesson with no page shows as In progress
   const groups = plan.groups.map(g => {
     const rows = g.lessons.map(id => ({ id, t: byId.get(id), title: plan.titles[id] }));

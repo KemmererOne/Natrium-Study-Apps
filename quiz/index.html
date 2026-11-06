@@ -142,8 +142,8 @@ h1 {
 .opt.right .letter { border-color: var(--ok); color: var(--ok); }
 .opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
 .opt.wrong .letter { border-color: var(--bad); color: var(--bad); }
-.opt[disabled] { cursor: default; }
-.opt[disabled]:not(.right):not(.wrong) { opacity: .65; }
+.opt[aria-disabled="true"] { cursor: default; }
+.opt[aria-disabled="true"]:not(.right):not(.wrong) { opacity: .65; }
 .opt .text { min-width: 0; overflow-wrap: anywhere; }
 .feedback {
   border-left: 3px solid var(--line);
@@ -238,6 +238,7 @@ h1 {
 </div>
 
 <script src="../feedback.js"></script>
+<script src="../glossary.js"></script>
 <script src="questions.js"></script>
 <script>
 // opts: the current question's options in shuffled order; answer: the correct option's text.
@@ -396,7 +397,8 @@ function render() {
     b.setAttribute("role", "radio");
     b.setAttribute("aria-checked", String(state.picked === k));
     b.dataset.k = k;
-    b.disabled = state.committed;
+    // Not the disabled attribute: acronyms inside an answered choice must stay tappable
+    b.setAttribute("aria-disabled", String(state.committed));
     b.innerHTML = '<span class="letter">' + "ABCD"[k] + '</span><span class="text"></span>';
     b.querySelector(".text").textContent = text;
     if (state.committed) {
@@ -405,6 +407,14 @@ function render() {
     }
     opts.appendChild(b);
   });
+
+  // PSAR questions: acronyms open their meaning. One spelled out in the question or a choice stays plain until the answer is in.
+  const psar = Q.topic.startsWith("PSAR") ? { hide: state.committed ? null : Terms.spoilers([Q.q, ...Q.o]), context: [Q.q, ...Q.o, Q.x].join(" ") } : null;
+  Terms.close();
+  if (psar) {
+    Terms.tag($("question"), psar);
+    opts.querySelectorAll(".text").forEach(el => Terms.tag(el, psar));
+  }
 
   const fb = $("feedback");
   if (state.committed) {
@@ -416,6 +426,7 @@ function render() {
     $("src").textContent = "Source: " + Q.src;
     $("flag").hidden = !Q.flag;
     $("flag").textContent = Q.flag ? "⚠ Possible discrepancy: " + Q.flag : "";
+    if (psar) { Terms.tag($("why"), { context: psar.context }); Terms.tag($("flag"), { context: psar.context }); }
     const p = $("primary");
     p.textContent = state.pos + 1 < n ? "Next question" : "See results";
     p.disabled = false;

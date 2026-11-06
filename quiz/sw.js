@@ -1,14 +1,14 @@
 // Offline cache for the quiz app.
 // Bump VERSION after editing index.html or the content file so phones pick up the new copy.
 const APP = "quiz";
-const VERSION = "v119";
+const VERSION = "v122";
 const CACHE = APP + "-" + VERSION;
 
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap";
 // Figures named in the content file are cached with the app so they work offline.
 importScripts("questions.js");
 const IMAGES = [...new Set(QS.map(i => i.fig).filter(Boolean).map(f => "./" + f.f))];
-const LOCAL = ["./", "./index.html", "../feedback.js", "./questions.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", ...IMAGES];
+const LOCAL = ["./", "./index.html", "../feedback.js", "../glossary.js", "./questions.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", ...IMAGES];
 
 // Fetch the font stylesheet and every font file it points to, so text
 // renders in the right fonts even if the first visit was the only online one.

@@ -46,7 +46,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
 .opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
 .opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
-.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.opt[aria-disabled="true"] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
 .result { margin: 0; } .result[hidden] { display: none; }
 .verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
 .report { font-size: 0.85rem; }
@@ -635,7 +635,9 @@ addEventListener("keydown", e => {
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {
-    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (c.dataset.done) return;
+    c.dataset.done = "1";
+    opts.forEach((o, j) => { o.setAttribute("aria-disabled", "true"); if (j === key) o.classList.add("right"); });
     if (i !== key) b.classList.add("wrong");
     verdict.textContent = i === key ? "Correct" : "Not correct";
     verdict.classList.add(i === key ? "right" : "wrong");

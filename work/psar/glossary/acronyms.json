@@ -1,0 +1,2521 @@
+{
+ "listed": [
+  {
+   "term": "AC",
+   "d": "alternating current",
+   "page": "iv"
+  },
+  {
+   "term": "ACI",
+   "d": "American Concrete Institute",
+   "page": "iv"
+  },
+  {
+   "term": "ACLP",
+   "d": "above core load pad",
+   "page": "iv"
+  },
+  {
+   "term": "ACR",
+   "d": "Audible Count Record",
+   "page": "iv"
+  },
+  {
+   "term": "AEP",
+   "d": "Annual exceedance probability",
+   "page": "iv"
+  },
+  {
+   "term": "AFDD",
+   "d": "accumulated freezing degree days",
+   "page": "iv"
+  },
+  {
+   "term": "AFE",
+   "d": "Annual Frequency of Exceedance",
+   "page": "iv"
+  },
+  {
+   "term": "AHX",
+   "d": "Sodium-Air Heat Exchanger",
+   "page": "iv"
+  },
+  {
+   "term": "AIA",
+   "d": "Aircraft Impact Assessment",
+   "page": "iv"
+  },
+  {
+   "term": "AISC",
+   "d": "American Institute of Steel Construction",
+   "page": "iv"
+  },
+  {
+   "term": "ALARA",
+   "d": "as low as reasonably achievable",
+   "page": "iv"
+  },
+  {
+   "term": "ALOHA",
+   "d": "areal locations of hazardous atmospheres",
+   "page": "iv"
+  },
+  {
+   "term": "AMC",
+   "d": "Auxiliary Monitoring and Control System",
+   "page": "iv"
+  },
+  {
+   "term": "ANS",
+   "d": "American Nuclear Society",
+   "page": "iv"
+  },
+  {
+   "term": "ANSI",
+   "d": "American National Standards Institute",
+   "page": "iv"
+  },
+  {
+   "term": "AOF",
+   "d": "Allocation of Function",
+   "page": "iv"
+  },
+  {
+   "term": "AOO",
+   "d": "anticipated operational occurrence",
+   "page": "iv"
+  },
+  {
+   "term": "API",
+   "d": "American Petroleum Institute",
+   "page": "iv"
+  },
+  {
+   "term": "ARCAP",
+   "d": "Advanced Reactor Content of Application Project",
+   "page": "iv"
+  },
+  {
+   "term": "ARDP",
+   "d": "Advanced Reactor Demonstration Program",
+   "page": "iv"
+  },
+  {
+   "term": "ARIS",
+   "d": "assembly receipt inspection stand",
+   "page": "iv"
+  },
+  {
+   "term": "ARM",
+   "d": "Area Radiation Monitoring",
+   "page": "iv"
+  },
+  {
+   "term": "ASCE",
+   "d": "American Society of Civil Engineers",
+   "page": "iv"
+  },
+  {
+   "term": "ASD",
+   "d": "adjustable speed drive",
+   "page": "iv"
+  },
+  {
+   "term": "ASE",
+   "d": "Air Stack Structures and Equipment",
+   "page": "iv"
+  },
+  {
+   "term": "ASME",
+   "d": "American Society of Mechanical Engineers",
+   "page": "iv"
+  },
+  {
+   "term": "AST",
+   "d": "Anticipatory Automatic Seismic Trip System",
+   "page": "iv"
+  },
+  {
+   "term": "ASTM",
+   "d": "American Society for Testing and Materials",
+   "page": "iv"
+  },
+  {
+   "term": "ATWS",
+   "d": "anticipated transient without scram",
+   "page": "iv"
+  },
+  {
+   "term": "AWOS",
+   "d": "Automated Weather Observing System",
+   "page": "iv"
+  },
+  {
+   "term": "AWS",
+   "d": "American Welding Society",
+   "page": "iv"
+  },
+  {
+   "term": "BDBE",
+   "d": "beyond design basis event",
+   "page": "iv"
+  },
+  {
+   "term": "BEPU",
+   "d": "best-estimate plus uncertainty",
+   "page": "iv"
+  },
+  {
+   "term": "bgs",
+   "d": "below ground surface",
+   "page": "iv"
+  },
+  {
+   "term": "BiMA",
+   "d": "bi-metallic assembly",
+   "page": "iv"
+  },
+  {
+   "term": "BLEVE",
+   "d": "boiling liquid expanding vapor explosion",
+   "page": "iv"
+  },
+  {
+   "term": "BLTC",
+   "d": "bottom loading transfer cask",
+   "page": "iv"
+  },
+  {
+   "term": "BPC",
+   "d": "Bechtel Power Corporation",
+   "page": "v"
+  },
+  {
+   "term": "BPVC",
+   "d": "Boiler and Pressure Vessel Code",
+   "page": "v"
+  },
+  {
+   "term": "BTP",
+   "d": "Branch Technical Position",
+   "page": "v"
+  },
+  {
+   "term": "BTS",
+   "d": "Battery Transfer Switch",
+   "page": "v"
+  },
+  {
+   "term": "BWR",
+   "d": "boiling water reactor",
+   "page": "v"
+  },
+  {
+   "term": "CAID",
+   "d": "core assembly identification",
+   "page": "v"
+  },
+  {
+   "term": "CAP",
+   "d": "core assembly pot",
+   "page": "v"
+  },
+  {
+   "term": "CATT",
+   "d": "core assembly transfer tube",
+   "page": "v"
+  },
+  {
+   "term": "CBS",
+   "d": "Core Barrel Structures",
+   "page": "v"
+  },
+  {
+   "term": "CC",
+   "d": "Climate Change",
+   "page": "v"
+  },
+  {
+   "term": "CCA",
+   "d": "Collector Cylinder Assembly",
+   "page": "v"
+  },
+  {
+   "term": "CCF",
+   "d": "common cause failure",
+   "page": "v"
+  },
+  {
+   "term": "CEUS",
+   "d": "Central and Eastern United States",
+   "page": "v"
+  },
+  {
+   "term": "CFD",
+   "d": "computational fluid dynamics",
+   "page": "v"
+  },
+  {
+   "term": "CFR",
+   "d": "Code of Federal Regulations",
+   "page": "v"
+  },
+  {
+   "term": "CFW",
+   "d": "Condensate and Feedwater System",
+   "page": "v"
+  },
+  {
+   "term": "CIP",
+   "d": "core inlet plenum",
+   "page": "v"
+  },
+  {
+   "term": "CLP",
+   "d": "cask loading pit",
+   "page": "v"
+  },
+  {
+   "term": "CLSM",
+   "d": "Controlled Low Strength Material",
+   "page": "v"
+  },
+  {
+   "term": "CMAA",
+   "d": "Crane Manufacturers Association of America",
+   "page": "v"
+  },
+  {
+   "term": "CN",
+   "d": "runoff curve number",
+   "page": "v"
+  },
+  {
+   "term": "CNO",
+   "d": "Chief Nuclear Officer",
+   "page": "v"
+  },
+  {
+   "term": "COLR",
+   "d": "Core Operating Limits Report",
+   "page": "v"
+  },
+  {
+   "term": "COS",
+   "d": "Climate Observing Station",
+   "page": "v"
+  },
+  {
+   "term": "COTS",
+   "d": "commercial off-the-shelf",
+   "page": "v"
+  },
+  {
+   "term": "CP",
+   "d": "construction permit",
+   "page": "v"
+  },
+  {
+   "term": "CPA",
+   "d": "construction permit application",
+   "page": "v"
+  },
+  {
+   "term": "CPU",
+   "d": "central processing unit",
+   "page": "v"
+  },
+  {
+   "term": "CQC",
+   "d": "complete quadratic combination",
+   "page": "v"
+  },
+  {
+   "term": "CRA",
+   "d": "control rod assembly",
+   "page": "v"
+  },
+  {
+   "term": "CRD",
+   "d": "Control Rod Drive System",
+   "page": "v"
+  },
+  {
+   "term": "CRDM",
+   "d": "control rod drive mechanism",
+   "page": "v"
+  },
+  {
+   "term": "CREAT",
+   "d": "Climate Resilience Evaluation and Awareness Tool",
+   "page": "v"
+  },
+  {
+   "term": "CRS",
+   "d": "Core Restraint System",
+   "page": "v"
+  },
+  {
+   "term": "CT",
+   "d": "critical technology",
+   "page": "v"
+  },
+  {
+   "term": "CTC",
+   "d": "Coolant Temperature Monitoring and Control System",
+   "page": "v"
+  },
+  {
+   "term": "CTE",
+   "d": "critical technology element",
+   "page": "v"
+  },
+  {
+   "term": "CU",
+   "d": "Consolidated-Undrained",
+   "page": "vi"
+  },
+  {
+   "term": "CV",
+   "d": "cleaning vessel",
+   "page": "vi"
+  },
+  {
+   "term": "CVAP",
+   "d": "Comprehensive Vibration Assessment Program",
+   "page": "vi"
+  },
+  {
+   "term": "CVIS",
+   "d": "core-vessel interface structure",
+   "page": "vi"
+  },
+  {
+   "term": "CWIS",
+   "d": "Cooling Water Intake Structure",
+   "page": "vi"
+  },
+  {
+   "term": "D-RAP",
+   "d": "Design Reliability Assurance Program",
+   "page": "vi"
+  },
+  {
+   "term": "D/Q",
+   "d": "atmospheric deposition factor(s)",
+   "page": "vi"
+  },
+  {
+   "term": "DBA",
+   "d": "design basis accident",
+   "page": "vi"
+  },
+  {
+   "term": "DBE",
+   "d": "design basis event",
+   "page": "vi"
+  },
+  {
+   "term": "DBHL",
+   "d": "design basis hazard level",
+   "page": "vi"
+  },
+  {
+   "term": "DC",
+   "d": "Direct Current",
+   "page": "vi"
+  },
+  {
+   "term": "DCF",
+   "d": "dose conversion factor",
+   "page": "vi"
+  },
+  {
+   "term": "DCS",
+   "d": "Distributed Control System",
+   "page": "vi"
+  },
+  {
+   "term": "DG",
+   "d": "Draft Regulatory Guide",
+   "page": "vi"
+  },
+  {
+   "term": "DH",
+   "d": "Downhole",
+   "page": "vi"
+  },
+  {
+   "term": "DHS",
+   "d": "Department of Homeland Security",
+   "page": "vi"
+  },
+  {
+   "term": "DID",
+   "d": "defense-in-depth",
+   "page": "vi"
+  },
+  {
+   "term": "DIF",
+   "d": "difficulty, importance, and frequency",
+   "page": "vi"
+  },
+  {
+   "term": "DL",
+   "d": "Defense Line",
+   "page": "vi"
+  },
+  {
+   "term": "DMA",
+   "d": "Degradation Mechanism Assessment",
+   "page": "vi"
+  },
+  {
+   "term": "DOE",
+   "d": "Department of Energy",
+   "page": "vi"
+  },
+  {
+   "term": "DOE-EM",
+   "d": "Department of Energy - Environmental Management",
+   "page": "vi"
+  },
+  {
+   "term": "DOF",
+   "d": "degrees of freedom",
+   "page": "vi"
+  },
+  {
+   "term": "DOT",
+   "d": "Department of Transportation",
+   "page": "vi"
+  },
+  {
+   "term": "DRG",
+   "d": "Design Review Guide",
+   "page": "vi"
+  },
+  {
+   "term": "DRMS",
+   "d": "Digital Radiation Monitor System",
+   "page": "vi"
+  },
+  {
+   "term": "DRS",
+   "d": "Design Response Spectra",
+   "page": "vi"
+  },
+  {
+   "term": "EAB",
+   "d": "exclusion area boundary",
+   "page": "vi"
+  },
+  {
+   "term": "EAL",
+   "d": "Emergency Action Level",
+   "page": "vi"
+  },
+  {
+   "term": "EBR-II",
+   "d": "Experimental Breeder Reactor II",
+   "page": "vi"
+  },
+  {
+   "term": "ED",
+   "d": "emergency director",
+   "page": "vi"
+  },
+  {
+   "term": "EDC",
+   "d": "EI DC power supply system",
+   "page": "vi"
+  },
+  {
+   "term": "EEQ",
+   "d": "electrical equipment qualification",
+   "page": "vi"
+  },
+  {
+   "term": "EFP",
+   "d": "Energy Island Fire Protection System",
+   "page": "vi"
+  },
+  {
+   "term": "EHT",
+   "d": "EI Heat Tracing System",
+   "page": "vi"
+  },
+  {
+   "term": "EI",
+   "d": "Energy Island",
+   "page": "vi"
+  },
+  {
+   "term": "EIC",
+   "d": "Energy Island Control System",
+   "page": "vi"
+  },
+  {
+   "term": "ELV",
+   "d": "EI AC Electrical Power Low Voltage System",
+   "page": "vii"
+  },
+  {
+   "term": "E[M]",
+   "d": "Expected Value of Moment Magnitude",
+   "page": "vii"
+  },
+  {
+   "term": "EM",
+   "d": "electromagnetic",
+   "page": "vii"
+  },
+  {
+   "term": "EMC",
+   "d": "electromagnetic compatibility",
+   "page": "vii"
+  },
+  {
+   "term": "EMV",
+   "d": "EI AC Electrical Power Medium Voltage System",
+   "page": "vii"
+  },
+  {
+   "term": "EOP",
+   "d": "emergency operating procedure",
+   "page": "vii"
+  },
+  {
+   "term": "EPA",
+   "d": "Environmental Protection Agency",
+   "page": "vii"
+  },
+  {
+   "term": "EPZ",
+   "d": "emergency planning zone",
+   "page": "vii"
+  },
+  {
+   "term": "EQ",
+   "d": "equipment qualification",
+   "page": "vii"
+  },
+  {
+   "term": "ERF",
+   "d": "Emergency Response Facility",
+   "page": "vii"
+  },
+  {
+   "term": "ERFB",
+   "d": "Emergency Response Facility Backup",
+   "page": "vii"
+  },
+  {
+   "term": "ERFP",
+   "d": "Emergency Response Facility Primary",
+   "page": "vii"
+  },
+  {
+   "term": "ERM",
+   "d": "Effluent Radiation Monitor",
+   "page": "vii"
+  },
+  {
+   "term": "ERO",
+   "d": "Emergency Response Organization",
+   "page": "vii"
+  },
+  {
+   "term": "ES",
+   "d": "event sequence",
+   "page": "vii"
+  },
+  {
+   "term": "ESF",
+   "d": "engineered safety feature",
+   "page": "vii"
+  },
+  {
+   "term": "ESP",
+   "d": "EI Standby AC Power System",
+   "page": "vii"
+  },
+  {
+   "term": "ESS",
+   "d": "Salt Heat Transport System",
+   "page": "vii"
+  },
+  {
+   "term": "ETR",
+   "d": "Energy Transfer Ratio",
+   "page": "vii"
+  },
+  {
+   "term": "EUP",
+   "d": "EI Uninterruptible AC Power Supply System",
+   "page": "vii"
+  },
+  {
+   "term": "EVHM",
+   "d": "Ex-Vessel Handling Machine",
+   "page": "vii"
+  },
+  {
+   "term": "EVST",
+   "d": "Ex-Vessel Storage Tank",
+   "page": "vii"
+  },
+  {
+   "term": "F-C",
+   "d": "frequency-consequence",
+   "page": "vii"
+  },
+  {
+   "term": "FAA",
+   "d": "Federal Aviation Administration",
+   "page": "vii"
+  },
+  {
+   "term": "FAB",
+   "d": "Fuel Auxiliary Building",
+   "page": "vii"
+  },
+  {
+   "term": "FACP",
+   "d": "Fire Alarm Control Panel",
+   "page": "vii"
+  },
+  {
+   "term": "FE",
+   "d": "finite element",
+   "page": "vii"
+  },
+  {
+   "term": "FEMA",
+   "d": "Federal Emergency Management Agency",
+   "page": "vii"
+  },
+  {
+   "term": "FFC",
+   "d": "Failed Fuel Canister",
+   "page": "vii"
+  },
+  {
+   "term": "FFD",
+   "d": "fitness-for-duty",
+   "page": "vii"
+  },
+  {
+   "term": "FFR",
+   "d": "failed fuel rack",
+   "page": "vii"
+  },
+  {
+   "term": "FFV",
+   "d": "fueling floor valves",
+   "page": "vii"
+  },
+  {
+   "term": "FFTF",
+   "d": "Fast Flux Test Facility",
+   "page": "vii"
+  },
+  {
+   "term": "FGD",
+   "d": "Flue Gas Desulfurization",
+   "page": "vii"
+  },
+  {
+   "term": "FGR",
+   "d": "Federal Guidance Report",
+   "page": "vii"
+  },
+  {
+   "term": "FHA",
+   "d": "Fire Hazards Analysis",
+   "page": "vii"
+  },
+  {
+   "term": "FHB",
+   "d": "Fuel Handling Building",
+   "page": "vii"
+  },
+  {
+   "term": "FHC",
+   "d": "Fuel Handling Supervisory Control System",
+   "page": "viii"
+  },
+  {
+   "term": "FHCR",
+   "d": "Fuel Handling Control Room",
+   "page": "viii"
+  },
+  {
+   "term": "FHE",
+   "d": "Ex-Vessel Fuel Handling System",
+   "page": "viii"
+  },
+  {
+   "term": "FHI",
+   "d": "In-Vessel Fuel Handling System",
+   "page": "viii"
+  },
+  {
+   "term": "FHP",
+   "d": "Water Pool Fuel Handling System",
+   "page": "viii"
+  },
+  {
+   "term": "FHS",
+   "d": "Fuel Transport and Storage System",
+   "page": "viii"
+  },
+  {
+   "term": "FI",
+   "d": "Fracture Index",
+   "page": "viii"
+  },
+  {
+   "term": "FIPS",
+   "d": "Federal Information Processing Standard",
+   "page": "viii"
+  },
+  {
+   "term": "FIRS",
+   "d": "Foundation Input Response Spectra",
+   "page": "viii"
+  },
+  {
+   "term": "FIVS",
+   "d": "fixed in-vessel shielding",
+   "page": "viii"
+  },
+  {
+   "term": "FMEA",
+   "d": "Failure Modes and Effects Analysis",
+   "page": "viii"
+  },
+  {
+   "term": "FOAK",
+   "d": "first-of-a-kind",
+   "page": "viii"
+  },
+  {
+   "term": "FPC",
+   "d": "Fuel Pool Cooling",
+   "page": "viii"
+  },
+  {
+   "term": "FPP",
+   "d": "Fuel Pool Purification",
+   "page": "viii"
+  },
+  {
+   "term": "fps",
+   "d": "feet per second",
+   "page": "viii"
+  },
+  {
+   "term": "FRA",
+   "d": "functional requirements analysis",
+   "page": "viii"
+  },
+  {
+   "term": "FRMAC",
+   "d": "Federal Radiological Monitoring and Assessment Center",
+   "page": "viii"
+  },
+  {
+   "term": "FSAR",
+   "d": "final safety analysis report",
+   "page": "viii"
+  },
+  {
+   "term": "FSF",
+   "d": "Fundamental Safety Function",
+   "page": "viii"
+  },
+  {
+   "term": "FTA",
+   "d": "fuel transfer adapter",
+   "page": "viii"
+  },
+  {
+   "term": "FTL",
+   "d": "Fuel Transfer Lift",
+   "page": "viii"
+  },
+  {
+   "term": "FTLSP",
+   "d": "Fuel Transfer Lift Shield Plug",
+   "page": "viii"
+  },
+  {
+   "term": "FTP",
+   "d": "Fuel Transfer Port",
+   "page": "viii"
+  },
+  {
+   "term": "GAO",
+   "d": "Government Accountability Office",
+   "page": "viii"
+  },
+  {
+   "term": "GDC",
+   "d": "General Design Criteria",
+   "page": "viii"
+  },
+  {
+   "term": "GVH",
+   "d": "GE Vernova Hitachi Nuclear Energy",
+   "page": "viii"
+  },
+  {
+   "term": "GEN",
+   "d": "Generator System",
+   "page": "viii"
+  },
+  {
+   "term": "GFIMS",
+   "d": "gas filtration impurities monitoring and sampling",
+   "page": "viii"
+  },
+  {
+   "term": "GGRB",
+   "d": "Greater Green River Basin",
+   "page": "viii"
+  },
+  {
+   "term": "GL",
+   "d": "generic letter",
+   "page": "viii"
+  },
+  {
+   "term": "GMC",
+   "d": "Ground Motion Characterization",
+   "page": "viii"
+  },
+  {
+   "term": "GMRS",
+   "d": "Ground Motion Response Spectra",
+   "page": "viii"
+  },
+  {
+   "term": "GPCPD",
+   "d": "gallons per capita per day",
+   "page": "viii"
+  },
+  {
+   "term": "GPS",
+   "d": "Global Positioning System",
+   "page": "viii"
+  },
+  {
+   "term": "GSI",
+   "d": "Geologic Strength Index",
+   "page": "viii"
+  },
+  {
+   "term": "GUI",
+   "d": "graphical user interface",
+   "page": "viii"
+  },
+  {
+   "term": "GV",
+   "d": "Guard Vessel",
+   "page": "viii"
+  },
+  {
+   "term": "GVDS",
+   "d": "Group-View Display System",
+   "page": "ix"
+  },
+  {
+   "term": "HA",
+   "d": "human action",
+   "page": "ix"
+  },
+  {
+   "term": "HAA",
+   "d": "Head Access Area",
+   "page": "ix"
+  },
+  {
+   "term": "HAZMAT",
+   "d": "hazardous materials",
+   "page": "ix"
+  },
+  {
+   "term": "HCF",
+   "d": "hot channel factor",
+   "page": "ix"
+  },
+  {
+   "term": "HCI",
+   "d": "hydrochloric acid",
+   "page": "ix"
+  },
+  {
+   "term": "HEPA",
+   "d": "high efficiency particulate air",
+   "page": "ix"
+  },
+  {
+   "term": "HF",
+   "d": "human factors",
+   "page": "ix"
+  },
+  {
+   "term": "HFE",
+   "d": "human factors engineering",
+   "page": "ix"
+  },
+  {
+   "term": "HFEITS",
+   "d": "Human Factors Engineering Issue Tracking System",
+   "page": "ix"
+  },
+  {
+   "term": "HFEPP",
+   "d": "Human Factors Engineering Program Plan",
+   "page": "ix"
+  },
+  {
+   "term": "HFWUA",
+   "d": "Hams Fork Water Users Association",
+   "page": "ix"
+  },
+  {
+   "term": "HIC",
+   "d": "High Integrity Container",
+   "page": "ix"
+  },
+  {
+   "term": "HMI",
+   "d": "human-machine interface",
+   "page": "ix"
+  },
+  {
+   "term": "HMR",
+   "d": "Hydrometeorological Report",
+   "page": "ix"
+  },
+  {
+   "term": "HPM",
+   "d": "human performance monitoring",
+   "page": "ix"
+  },
+  {
+   "term": "HPS",
+   "d": "The Health Physics Society",
+   "page": "ix"
+  },
+  {
+   "term": "HRA",
+   "d": "high radiation area",
+   "page": "ix"
+  },
+  {
+   "term": "HRS",
+   "d": "Heat Rejection System",
+   "page": "ix"
+  },
+  {
+   "term": "HSI",
+   "d": "human-system interface",
+   "page": "ix"
+  },
+  {
+   "term": "HTFC",
+   "d": "High Temperature Fission Chamber",
+   "page": "ix"
+  },
+  {
+   "term": "HVAC",
+   "d": "heating, ventilation and air conditioning",
+   "page": "ix"
+  },
+  {
+   "term": "I&C",
+   "d": "instrumentation and control",
+   "page": "ix"
+  },
+  {
+   "term": "IAC",
+   "d": "Intermediate Air Cooling System",
+   "page": "ix"
+  },
+  {
+   "term": "IAEA",
+   "d": "International Atomic Energy Agency",
+   "page": "ix"
+  },
+  {
+   "term": "IBC",
+   "d": "International Building Code",
+   "page": "ix"
+  },
+  {
+   "term": "ICC",
+   "d": "International Code Council",
+   "page": "ix"
+  },
+  {
+   "term": "ICRP",
+   "d": "International Commission on Radiological Protection",
+   "page": "ix"
+  },
+  {
+   "term": "ICS",
+   "d": "Integrated Control System",
+   "page": "ix"
+  },
+  {
+   "term": "IDLH",
+   "d": "immediately dangerous to life or health",
+   "page": "ix"
+  },
+  {
+   "term": "IDP",
+   "d": "integrated decision-making process",
+   "page": "ix"
+  },
+  {
+   "term": "IDPP",
+   "d": "integrated decision-making process panel",
+   "page": "ix"
+  },
+  {
+   "term": "IE",
+   "d": "Initiating Event",
+   "page": "ix"
+  },
+  {
+   "term": "IEC",
+   "d": "International Electrotechnical Commission",
+   "page": "ix"
+  },
+  {
+   "term": "IEEE",
+   "d": "Institute of Electrical and Electronics Engineers",
+   "page": "ix"
+  },
+  {
+   "term": "IHT",
+   "d": "Intermediate Heat Transport System",
+   "page": "ix"
+  },
+  {
+   "term": "IHX",
+   "d": "Intermediate Heat Exchanger",
+   "page": "ix"
+  },
+  {
+   "term": "INL",
+   "d": "Idaho National Laboratory",
+   "page": "x"
+  },
+  {
+   "term": "INPO",
+   "d": "Institute of Nuclear Power Operations",
+   "page": "x"
+  },
+  {
+   "term": "IO",
+   "d": "input-output",
+   "page": "x"
+  },
+  {
+   "term": "IPCC",
+   "d": "Intergovernmental Panel on Climate Change",
+   "page": "x"
+  },
+  {
+   "term": "ISA",
+   "d": "International Society of Automation",
+   "page": "x"
+  },
+  {
+   "term": "ISB",
+   "d": "Intermountain Seismic Belt",
+   "page": "x"
+  },
+  {
+   "term": "ISO",
+   "d": "International Organization for Standardization",
+   "page": "x"
+  },
+  {
+   "term": "ISP",
+   "d": "Intermediate Sodium Pump",
+   "page": "x"
+  },
+  {
+   "term": "ISRM",
+   "d": "International Society for Rock Mechanics",
+   "page": "x"
+  },
+  {
+   "term": "ISRS",
+   "d": "In-Structure Response Spectra",
+   "page": "x"
+  },
+  {
+   "term": "IST",
+   "d": "in-service testing",
+   "page": "x"
+  },
+  {
+   "term": "ISV",
+   "d": "Integrated System Validation",
+   "page": "x"
+  },
+  {
+   "term": "IVDC",
+   "d": "In-Vessel Drive Controller",
+   "page": "x"
+  },
+  {
+   "term": "IVS",
+   "d": "In-Vessel Storage",
+   "page": "x"
+  },
+  {
+   "term": "IVTM",
+   "d": "In-Vessel Transfer Machine",
+   "page": "x"
+  },
+  {
+   "term": "LBE",
+   "d": "licensing basis event",
+   "page": "x"
+  },
+  {
+   "term": "LCO",
+   "d": "Limiting Condition for Operation",
+   "page": "x"
+  },
+  {
+   "term": "LCS",
+   "d": "Local Control Station",
+   "page": "x"
+  },
+  {
+   "term": "LDA",
+   "d": "Lead Demonstration Assembly",
+   "page": "x"
+  },
+  {
+   "term": "LFL",
+   "d": "lower flammable limit",
+   "page": "x"
+  },
+  {
+   "term": "LFRS",
+   "d": "Lateral Force Resisting System",
+   "page": "x"
+  },
+  {
+   "term": "LiDAR",
+   "d": "Light Detection and Ranging",
+   "page": "x"
+  },
+  {
+   "term": "LIP",
+   "d": "local intense precipitation",
+   "page": "x"
+  },
+  {
+   "term": "LMP",
+   "d": "Licensing Modernization Project",
+   "page": "x"
+  },
+  {
+   "term": "LOOP",
+   "d": "loss of offsite power",
+   "page": "x"
+  },
+  {
+   "term": "LPSD",
+   "d": "Low-Power Shutdown",
+   "page": "x"
+  },
+  {
+   "term": "LRFD",
+   "d": "Load and Resistance Factor Design",
+   "page": "x"
+  },
+  {
+   "term": "LPZ",
+   "d": "low population zone",
+   "page": "x"
+  },
+  {
+   "term": "LSSS",
+   "d": "Limiting Safety System Setting",
+   "page": "x"
+  },
+  {
+   "term": "LTA",
+   "d": "lead test assembly",
+   "page": "x"
+  },
+  {
+   "term": "LTP",
+   "d": "lead test pin",
+   "page": "x"
+  },
+  {
+   "term": "LWR",
+   "d": "light water reactor",
+   "page": "x"
+  },
+  {
+   "term": "MANDE",
+   "d": "monitoring and non-destructive examination",
+   "page": "x"
+  },
+  {
+   "term": "MANDEEP",
+   "d": "monitoring and non-destructive examination expert panel",
+   "page": "x"
+  },
+  {
+   "term": "MCC",
+   "d": "Motor Control Center",
+   "page": "x"
+  },
+  {
+   "term": "MCNP",
+   "d": "Monte Carlo N-Particle Code",
+   "page": "x"
+  },
+  {
+   "term": "MCR",
+   "d": "Main Control Room",
+   "page": "x"
+  },
+  {
+   "term": "MCT",
+   "d": "maximum cladding temperature",
+   "page": "xi"
+  },
+  {
+   "term": "MCV",
+   "d": "movable closure valve module",
+   "page": "xi"
+  },
+  {
+   "term": "MEI",
+   "d": "maximally exposed individual",
+   "page": "xi"
+  },
+  {
+   "term": "MIRSS",
+   "d": "Modular Isolated Reactor Support Structure",
+   "page": "xi"
+  },
+  {
+   "term": "mph",
+   "d": "miles per hour",
+   "page": "xi"
+  },
+  {
+   "term": "MPS",
+   "d": "multi purpose sampler",
+   "page": "xi"
+  },
+  {
+   "term": "MRE",
+   "d": "Most-Recent Earthquake",
+   "page": "xi"
+  },
+  {
+   "term": "MSL",
+   "d": "Mean Sea Level",
+   "page": "xi"
+  },
+  {
+   "term": "MSS",
+   "d": "Manufacturers Standardization Society",
+   "page": "xi"
+  },
+  {
+   "term": "MST",
+   "d": "mechanistic source term",
+   "page": "xi"
+  },
+  {
+   "term": "N/A",
+   "d": "Not Applicable",
+   "page": "xi"
+  },
+  {
+   "term": "NAAQS",
+   "d": "National Ambient Air Quality Standards",
+   "page": "xi"
+  },
+  {
+   "term": "NACP",
+   "d": "Sodium Leak Detection Control Panel",
+   "page": "xi"
+  },
+  {
+   "term": "NAD",
+   "d": "North American Datum",
+   "page": "xi"
+  },
+  {
+   "term": "NAP",
+   "d": "North Ash Pond",
+   "page": "xi"
+  },
+  {
+   "term": "NAPS",
+   "d": "New Assembly Preconditioning Station",
+   "page": "xi"
+  },
+  {
+   "term": "NAVD",
+   "d": "North America Vertical Datum",
+   "page": "xi"
+  },
+  {
+   "term": "NBSIR",
+   "d": "National Bureau of Standards",
+   "page": "xi"
+  },
+  {
+   "term": "NCB",
+   "d": "Nuclear Island Control Building",
+   "page": "xi"
+  },
+  {
+   "term": "NCDC",
+   "d": "National Climatic Data Center",
+   "page": "xi"
+  },
+  {
+   "term": "NCEI",
+   "d": "National Centers for Environmental Information",
+   "page": "xi"
+  },
+  {
+   "term": "NCH",
+   "d": "Nuclear Island Cranes and Hoists",
+   "page": "xi"
+  },
+  {
+   "term": "NDC",
+   "d": "Nuclear Island DC Power Supply System",
+   "page": "xi"
+  },
+  {
+   "term": "NEA",
+   "d": "Nuclear Island Ancillary Electrical System",
+   "page": "xi"
+  },
+  {
+   "term": "NEB",
+   "d": "Nuclear Island Electrical Building",
+   "page": "xi"
+  },
+  {
+   "term": "NEI",
+   "d": "Nuclear Energy Institute",
+   "page": "xi"
+  },
+  {
+   "term": "NEMA",
+   "d": "National Electrical Manufactures Association",
+   "page": "xi"
+  },
+  {
+   "term": "NES",
+   "d": "Nuclear Island Auxiliary Electrical System",
+   "page": "xi"
+  },
+  {
+   "term": "NFA",
+   "d": "Nuclear Island Fire Detection and Alarm System",
+   "page": "xi"
+  },
+  {
+   "term": "NFD",
+   "d": "Nuclear Island Fire Water Distribution System",
+   "page": "xi"
+  },
+  {
+   "term": "NFP",
+   "d": "Nuclear Island Fire Protection System",
+   "page": "xi"
+  },
+  {
+   "term": "NFPA",
+   "d": "National Fire Protection Association",
+   "page": "xi"
+  },
+  {
+   "term": "NFS",
+   "d": "Nuclear Island Fire Suppression System",
+   "page": "xi"
+  },
+  {
+   "term": "NGA",
+   "d": "Nuclear Island Argon Gas Distribution and Storage System",
+   "page": "xi"
+  },
+  {
+   "term": "NGI",
+   "d": "Norwegian Geotechnical Institute",
+   "page": "xi"
+  },
+  {
+   "term": "NGL",
+   "d": "Nuclear Island Grounding and Lightning Protection",
+   "page": "xi"
+  },
+  {
+   "term": "NGS",
+   "d": "Nuclear Island Air and Gas Distribution System",
+   "page": "xi"
+  },
+  {
+   "term": "NGVD 29",
+   "d": "National Geodetic Vertical Datum of 1929",
+   "page": "xii"
+  },
+  {
+   "term": "NHT",
+   "d": "Nuclear Island Heat Tracing System",
+   "page": "xii"
+  },
+  {
+   "term": "NHV",
+   "d": "Nuclear Island Heating, Ventilation, and Air Conditioning System",
+   "page": "xii"
+  },
+  {
+   "term": "NI",
+   "d": "Nuclear Island",
+   "page": "xii"
+  },
+  {
+   "term": "NIC",
+   "d": "Nuclear Island Control System",
+   "page": "xii"
+  },
+  {
+   "term": "NLS",
+   "d": "Nuclear Island Lighting System",
+   "page": "xii"
+  },
+  {
+   "term": "NLV",
+   "d": "Nuclear Island AC Electrical Power Low Voltage System",
+   "page": "xii"
+  },
+  {
+   "term": "NMFS",
+   "d": "New Madrid Fault Source",
+   "page": "xii"
+  },
+  {
+   "term": "NMV",
+   "d": "Nuclear Island AC Electrical Power Medium Voltage System",
+   "page": "xii"
+  },
+  {
+   "term": "NNA",
+   "d": "Sodium Leak Detection, Collection, and Containment System",
+   "page": "xii"
+  },
+  {
+   "term": "NOAA",
+   "d": "National Oceanic and Atmospheric Administration",
+   "page": "xii"
+  },
+  {
+   "term": "NRC",
+   "d": "U.S. Nuclear Regulatory Commission",
+   "page": "xii"
+  },
+  {
+   "term": "NRCS",
+   "d": "Natural Resources Conservation Service",
+   "page": "xii"
+  },
+  {
+   "term": "NSC",
+   "d": "Nuclear Island Security System",
+   "page": "xii"
+  },
+  {
+   "term": "NSHM23",
+   "d": "National Seismic Hazard Model 2023",
+   "page": "xii"
+  },
+  {
+   "term": "NSRST",
+   "d": "non-safety-related with special treatment",
+   "page": "xii"
+  },
+  {
+   "term": "NSS",
+   "d": "Nuclear Island Salt System",
+   "page": "xii"
+  },
+  {
+   "term": "NST",
+   "d": "non-safety-related with no special treatment",
+   "page": "xii"
+  },
+  {
+   "term": "NUMARC",
+   "d": "Nuclear Management and Resources Council",
+   "page": "xii"
+  },
+  {
+   "term": "NUP",
+   "d": "Nuclear Island Uninterruptible AC Power Supply System",
+   "page": "xii"
+  },
+  {
+   "term": "NWS",
+   "d": "Nuclear Island Water System",
+   "page": "xii"
+  },
+  {
+   "term": "NYS",
+   "d": "Nuclear Island Yard System",
+   "page": "xii"
+  },
+  {
+   "term": "OBE",
+   "d": "Operating Basis Earthquake",
+   "page": "xii"
+  },
+  {
+   "term": "OCC",
+   "d": "Outage Control Center",
+   "page": "xii"
+  },
+  {
+   "term": "OE",
+   "d": "operating experience",
+   "page": "xii"
+  },
+  {
+   "term": "OER",
+   "d": "operating experience review",
+   "page": "xii"
+  },
+  {
+   "term": "OL",
+   "d": "operating license",
+   "page": "xii"
+  },
+  {
+   "term": "OLA",
+   "d": "operating license application",
+   "page": "xii"
+  },
+  {
+   "term": "OQE",
+   "d": "other quantified event",
+   "page": "xii"
+  },
+  {
+   "term": "ORNL",
+   "d": "Oak Ridge National Laboratory",
+   "page": "xii"
+  },
+  {
+   "term": "OSHA",
+   "d": "Occupational Safety and Health Administration",
+   "page": "xii"
+  },
+  {
+   "term": "OW",
+   "d": "Observation Well",
+   "page": "xii"
+  },
+  {
+   "term": "P-S",
+   "d": "Compressional (P) and Shear (S) Wave Downhole Velocities",
+   "page": "xii"
+  },
+  {
+   "term": "PAM",
+   "d": "Post-Accident Monitoring",
+   "page": "xii"
+  },
+  {
+   "term": "PAV",
+   "d": "Pool Auxiliary Vault",
+   "page": "xii"
+  },
+  {
+   "term": "PCO",
+   "d": "Plant Communication System",
+   "page": "xii"
+  },
+  {
+   "term": "PCP",
+   "d": "Process Control Program",
+   "page": "xii"
+  },
+  {
+   "term": "PDC",
+   "d": "Principal Design Criterion or Principal Design Criteria",
+   "page": "xiii"
+  },
+  {
+   "term": "PEM",
+   "d": "pin extraction machine",
+   "page": "xiii"
+  },
+  {
+   "term": "PEP",
+   "d": "plume exposure pathway",
+   "page": "xiii"
+  },
+  {
+   "term": "PFD",
+   "d": "Probability of Failure on Demand",
+   "page": "xiii"
+  },
+  {
+   "term": "PGA",
+   "d": "Peak Ground Acceleration",
+   "page": "xiii"
+  },
+  {
+   "term": "PGM",
+   "d": "Plant General Manager",
+   "page": "xiii"
+  },
+  {
+   "term": "PHF",
+   "d": "Plug Handling Fixture",
+   "page": "xiii"
+  },
+  {
+   "term": "PHM",
+   "d": "Pool Handling Machine",
+   "page": "xiii"
+  },
+  {
+   "term": "PHT",
+   "d": "Primary Heat Transport System",
+   "page": "xiii"
+  },
+  {
+   "term": "PI",
+   "d": "Plasticity Index",
+   "page": "xiii"
+  },
+  {
+   "term": "PIC",
+   "d": "Pool Immersion Cell",
+   "page": "xiii"
+  },
+  {
+   "term": "PIE",
+   "d": "postulated initiating event",
+   "page": "xiii"
+  },
+  {
+   "term": "PITAP",
+   "d": "post-construction inspection, testing, and analysis program",
+   "page": "xiii"
+  },
+  {
+   "term": "PM",
+   "d": "Particulate Matter",
+   "page": "xiii"
+  },
+  {
+   "term": "PMC",
+   "d": "Plant Monitoring and Control System",
+   "page": "xiii"
+  },
+  {
+   "term": "PMF",
+   "d": "Probable Maximum Flood",
+   "page": "xiii"
+  },
+  {
+   "term": "PMP",
+   "d": "Probable Maximum Precipitation",
+   "page": "xiii"
+  },
+  {
+   "term": "PMWP",
+   "d": "Probable Maximum Winter Precipitation",
+   "page": "xiii"
+  },
+  {
+   "term": "POS",
+   "d": "plant operating state",
+   "page": "xiii"
+  },
+  {
+   "term": "PRA",
+   "d": "probabilistic risk assessment",
+   "page": "xiii"
+  },
+  {
+   "term": "PRC",
+   "d": "Pin Removal Cell",
+   "page": "xiii"
+  },
+  {
+   "term": "PRM",
+   "d": "Process Radiation Monitoring",
+   "page": "xiii"
+  },
+  {
+   "term": "PSAR",
+   "d": "preliminary safety analysis report",
+   "page": "xiii"
+  },
+  {
+   "term": "PSF",
+   "d": "probabilistic risk assessment safety function",
+   "page": "xiii"
+  },
+  {
+   "term": "PSHA",
+   "d": "Probabilistic Seismic Hazard Analysis",
+   "page": "xiii"
+  },
+  {
+   "term": "PSP",
+   "d": "Primary Sodium Pump",
+   "page": "xiii"
+  },
+  {
+   "term": "PSRA",
+   "d": "Probabilistic Site Response Analysis",
+   "page": "xiii"
+  },
+  {
+   "term": "PTI",
+   "d": "plugging temperature indicator",
+   "page": "xiii"
+  },
+  {
+   "term": "PZGW",
+   "d": "piezometer (groundwater)",
+   "page": "xiii"
+  },
+  {
+   "term": "PZSW",
+   "d": "piezometer (surface water)",
+   "page": "xiii"
+  },
+  {
+   "term": "QA",
+   "d": "quality assurance",
+   "page": "xiii"
+  },
+  {
+   "term": "QAPD",
+   "d": "Quality Assurance Program Description",
+   "page": "xiii"
+  },
+  {
+   "term": "QATR",
+   "d": "Quality Assurance Topical Report",
+   "page": "xiii"
+  },
+  {
+   "term": "QFFD",
+   "d": "Quaternary Fault and Fold Database",
+   "page": "xiii"
+  },
+  {
+   "term": "QHO",
+   "d": "Quantitative Health Objective",
+   "page": "xiii"
+  },
+  {
+   "term": "R&D",
+   "d": "research and development",
+   "page": "xiii"
+  },
+  {
+   "term": "RAB",
+   "d": "Reactor Auxiliary Building",
+   "page": "xiii"
+  },
+  {
+   "term": "RAC",
+   "d": "Reactor Air Cooling System",
+   "page": "xiv"
+  },
+  {
+   "term": "RCA",
+   "d": "radiologically controlled area",
+   "page": "xiv"
+  },
+  {
+   "term": "RCC",
+   "d": "Reactor Core System",
+   "page": "xiv"
+  },
+  {
+   "term": "RCP",
+   "d": "Representative Concentration Pathways",
+   "page": "xiv"
+  },
+  {
+   "term": "RES",
+   "d": "Reactor Enclosure System",
+   "page": "xiv"
+  },
+  {
+   "term": "RFDC",
+   "d": "Required Functional Design Criteria",
+   "page": "xiv"
+  },
+  {
+   "term": "RFI",
+   "d": "Reactor Fixed Internals",
+   "page": "xiv"
+  },
+  {
+   "term": "RG",
+   "d": "Regulatory Guide",
+   "page": "xiv"
+  },
+  {
+   "term": "RIC",
+   "d": "Radiation Indicator Controller",
+   "page": "xiv"
+  },
+  {
+   "term": "RIM",
+   "d": "Reliability and Integrity Management",
+   "page": "xiv"
+  },
+  {
+   "term": "RIMEP",
+   "d": "Reliability and Integrity Management Expert Panel",
+   "page": "xiv"
+  },
+  {
+   "term": "RIS",
+   "d": "Reactor Instrumentation System",
+   "page": "xiv"
+  },
+  {
+   "term": "RMBS",
+   "d": "Remote Manual Bypass Switch",
+   "page": "xiv"
+  },
+  {
+   "term": "RMC",
+   "d": "Rod Monitoring and Control System",
+   "page": "xiv"
+  },
+  {
+   "term": "RMR",
+   "d": "Rock Mass Rating",
+   "page": "xiv"
+  },
+  {
+   "term": "RMS",
+   "d": "Radiation Monitoring System",
+   "page": "xiv"
+  },
+  {
+   "term": "RP",
+   "d": "Radiation Protection",
+   "page": "xiv"
+  },
+  {
+   "term": "RPA",
+   "d": "Rotatable Plug Assembly",
+   "page": "xiv"
+  },
+  {
+   "term": "RPD",
+   "d": "Rotatable Plug Drive",
+   "page": "xiv"
+  },
+  {
+   "term": "RPJ",
+   "d": "Rotatable Plug Jack",
+   "page": "xiv"
+  },
+  {
+   "term": "RPP",
+   "d": "Radiation Protection Program",
+   "page": "xiv"
+  },
+  {
+   "term": "RPS",
+   "d": "Reactor Protection System",
+   "page": "xiv"
+  },
+  {
+   "term": "RQD",
+   "d": "Rock Quality Designation",
+   "page": "xiv"
+  },
+  {
+   "term": "RSB",
+   "d": "Reactor Support Block",
+   "page": "xiv"
+  },
+  {
+   "term": "RSC",
+   "d": "Remote Shutdown Complex",
+   "page": "xiv"
+  },
+  {
+   "term": "RSS",
+   "d": "Reactor Support Structure",
+   "page": "xiv"
+  },
+  {
+   "term": "RTB",
+   "d": "Reactor Trip Breaker",
+   "page": "xiv"
+  },
+  {
+   "term": "RV",
+   "d": "Reactor Vessel",
+   "page": "xiv"
+  },
+  {
+   "term": "RVC",
+   "d": "Reticulated Vitreous Carbon",
+   "page": "xiv"
+  },
+  {
+   "term": "RVT",
+   "d": "Regulating Voltage Transformer",
+   "page": "xiv"
+  },
+  {
+   "term": "RWG",
+   "d": "Gaseous Radwaste Processing System",
+   "page": "xiv"
+  },
+  {
+   "term": "RWL",
+   "d": "Liquid Radwaste Processing System",
+   "page": "xiv"
+  },
+  {
+   "term": "RWS",
+   "d": "Solid Radwaste Processing System",
+   "page": "xiv"
+  },
+  {
+   "term": "RXB",
+   "d": "Reactor Building",
+   "page": "xiv"
+  },
+  {
+   "term": "SAMG",
+   "d": "Severe Accident Management Guideline",
+   "page": "xiv"
+  },
+  {
+   "term": "SAP",
+   "d": "South Ash Pond",
+   "page": "xiv"
+  },
+  {
+   "term": "SAR",
+   "d": "safety analysis report",
+   "page": "xiv"
+  },
+  {
+   "term": "SARA",
+   "d": "Superfund Amendments and Reauthorization Act",
+   "page": "xv"
+  },
+  {
+   "term": "SARRDL",
+   "d": "specified acceptable system radionuclide release design limit",
+   "page": "xv"
+  },
+  {
+   "term": "SASW",
+   "d": "Spectral Analysis of Surface Waves",
+   "page": "xv"
+  },
+  {
+   "term": "SCADA",
+   "d": "Supervisory, Control and Data Acquisition",
+   "page": "xv"
+  },
+  {
+   "term": "SCG",
+   "d": "Sodium Cover Gas System",
+   "page": "xv"
+  },
+  {
+   "term": "SD",
+   "d": "Standard Deviation",
+   "page": "xv"
+  },
+  {
+   "term": "SDG",
+   "d": "Standby Diesel Generator",
+   "page": "xv"
+  },
+  {
+   "term": "SDOE",
+   "d": "Secure Development and Operational Environment",
+   "page": "xv"
+  },
+  {
+   "term": "SEI",
+   "d": "Structural Engineering Institute",
+   "page": "xv"
+  },
+  {
+   "term": "SFP",
+   "d": "Spent Fuel Pool",
+   "page": "xv"
+  },
+  {
+   "term": "SFR",
+   "d": "sodium-cooled fast reactor",
+   "page": "xv"
+  },
+  {
+   "term": "SGS",
+   "d": "Steam Generation System",
+   "page": "xv"
+  },
+  {
+   "term": "SHT",
+   "d": "sodium holding tank",
+   "page": "xv"
+  },
+  {
+   "term": "SHX",
+   "d": "Sodium-Salt Heat Exchanger",
+   "page": "xv"
+  },
+  {
+   "term": "SL",
+   "d": "safety limit",
+   "page": "xv"
+  },
+  {
+   "term": "SMACNA",
+   "d": "Sheet Metal and Air Conditioning Contractors' National Association",
+   "page": "xv"
+  },
+  {
+   "term": "SMR",
+   "d": "small modular reactor",
+   "page": "xv"
+  },
+  {
+   "term": "SMS",
+   "d": "Seismic Monitoring System",
+   "page": "xv"
+  },
+  {
+   "term": "SNM",
+   "d": "special nuclear material",
+   "page": "xv"
+  },
+  {
+   "term": "SOV",
+   "d": "solenoid-operated valve",
+   "page": "xv"
+  },
+  {
+   "term": "SPDS",
+   "d": "Safety Parameter Display System",
+   "page": "xv"
+  },
+  {
+   "term": "SPS",
+   "d": "Sodium Processing System",
+   "page": "xv"
+  },
+  {
+   "term": "SPS-E",
+   "d": "Ex-Vessel Storage Tank Sodium Processing System",
+   "page": "xv"
+  },
+  {
+   "term": "SPS-I",
+   "d": "Intermediate Sodium Processing System",
+   "page": "xv"
+  },
+  {
+   "term": "SPS-P",
+   "d": "Primary Sodium Processing System",
+   "page": "xv"
+  },
+  {
+   "term": "SPT",
+   "d": "Standard Penetration Test",
+   "page": "xv"
+  },
+  {
+   "term": "SR",
+   "d": "safety-related",
+   "page": "xv"
+  },
+  {
+   "term": "SRDC",
+   "d": "Safety-Related Design Criteria",
+   "page": "xv"
+  },
+  {
+   "term": "SRP",
+   "d": "Standard Review Plan",
+   "page": "xv"
+  },
+  {
+   "term": "SRSS",
+   "d": "square root of the sum of squares",
+   "page": "xv"
+  },
+  {
+   "term": "SSC",
+   "d": "structure, system, or component",
+   "page": "xv"
+  },
+  {
+   "term": "SSC",
+   "d": "Seismic Source Characterization",
+   "page": "xv"
+  },
+  {
+   "term": "SSE",
+   "d": "safe shutdown earthquake",
+   "page": "xv"
+  },
+  {
+   "term": "SSHAC",
+   "d": "Senior Seismic Hazard Analysis Committee",
+   "page": "xv"
+  },
+  {
+   "term": "SSI",
+   "d": "Soil-Structure Interaction",
+   "page": "xv"
+  },
+  {
+   "term": "SSSI",
+   "d": "Structure-Soil-Structure Interaction",
+   "page": "xv"
+  },
+  {
+   "term": "STP",
+   "d": "standard temperature and pressure",
+   "page": "xv"
+  },
+  {
+   "term": "STS",
+   "d": "Steam Turbine System",
+   "page": "xvi"
+  },
+  {
+   "term": "SVDU",
+   "d": "Special Video Display Unit",
+   "page": "xvi"
+  },
+  {
+   "term": "TA",
+   "d": "Task Analysis",
+   "page": "xvi"
+  },
+  {
+   "term": "TATNF",
+   "d": "time-at-temperature no-failure",
+   "page": "xvi"
+  },
+  {
+   "term": "TEDE",
+   "d": "total effective dose equivalent",
+   "page": "xvi"
+  },
+  {
+   "term": "TEMA",
+   "d": "Tubular Exchanger Manufacturers Association",
+   "page": "xvi"
+  },
+  {
+   "term": "TFB",
+   "d": "Turbine Facility Building",
+   "page": "xvi"
+  },
+  {
+   "term": "TFF",
+   "d": "Sodium Test and Fill Facility",
+   "page": "xvi"
+  },
+  {
+   "term": "TI-RIPB",
+   "d": "technology-inclusive, risk-informed, and performance-based",
+   "page": "xvi"
+  },
+  {
+   "term": "TMI",
+   "d": "Three Mile Island",
+   "page": "xvi"
+  },
+  {
+   "term": "TMP",
+   "d": "technology maturation plan",
+   "page": "xvi"
+  },
+  {
+   "term": "TRA",
+   "d": "technology readiness assessment",
+   "page": "xvi"
+  },
+  {
+   "term": "TRL",
+   "d": "technology readiness level",
+   "page": "xvi"
+  },
+  {
+   "term": "TS",
+   "d": "technical specifications",
+   "page": "xvi"
+  },
+  {
+   "term": "TSS",
+   "d": "Thermal Salt Storage System",
+   "page": "xvi"
+  },
+  {
+   "term": "TSTF",
+   "d": "Technical Specification Task Force",
+   "page": "xvi"
+  },
+  {
+   "term": "TVSS",
+   "d": "Transient Voltage Surge Suppressor",
+   "page": "xvi"
+  },
+  {
+   "term": "TWR®",
+   "d": "Traveling Wave Reactor",
+   "page": "xvi"
+  },
+  {
+   "term": "UFC",
+   "d": "Unified Facilities Criteria",
+   "page": "xvi"
+  },
+  {
+   "term": "UGRB",
+   "d": "Upper Green River Basin",
+   "page": "xvi"
+  },
+  {
+   "term": "UHRS",
+   "d": "Uniform Hazard Response Spectra",
+   "page": "xvi"
+  },
+  {
+   "term": "UIS",
+   "d": "Upper Internal Structure",
+   "page": "xvi"
+  },
+  {
+   "term": "UMC",
+   "d": "Utility Monitoring and Control System",
+   "page": "xvi"
+  },
+  {
+   "term": "UPS",
+   "d": "uninterruptible power supply",
+   "page": "xvi"
+  },
+  {
+   "term": "USACE",
+   "d": "United States Army Corps of Engineers",
+   "page": "xvi"
+  },
+  {
+   "term": "USCB",
+   "d": "United States Census Bureau",
+   "page": "xvi"
+  },
+  {
+   "term": "USGS",
+   "d": "United States Geological Survey",
+   "page": "xvi"
+  },
+  {
+   "term": "USL",
+   "d": "Upper Subcritical Limit",
+   "page": "xvi"
+  },
+  {
+   "term": "USO",
+   "d": "US SFR Owner, LLC",
+   "page": "xvi"
+  },
+  {
+   "term": "UTM",
+   "d": "Universal Transverse Mercator",
+   "page": "xvi"
+  },
+  {
+   "term": "UU",
+   "d": "Unconsolidated-Undrained",
+   "page": "xvi"
+  },
+  {
+   "term": "UV",
+   "d": "undervoltage",
+   "page": "xvi"
+  },
+  {
+   "term": "V&V",
+   "d": "verification and validation",
+   "page": "xvi"
+  },
+  {
+   "term": "VDU",
+   "d": "Visual Display Unit",
+   "page": "xvi"
+  },
+  {
+   "term": "VHRA",
+   "d": "Very High Radiation Area",
+   "page": "xvi"
+  },
+  {
+   "term": "VS",
+   "d": "Shear-Wave Velocity",
+   "page": "xvi"
+  },
+  {
+   "term": "VS30",
+   "d": "Time-averaged shear-wave velocity in the upper 30 meters",
+   "page": "xvi"
+  },
+  {
+   "term": "WGUEP",
+   "d": "Working Group on Utah Earthquake Probabilities",
+   "page": "xvii"
+  },
+  {
+   "term": "WOHS",
+   "d": "Wyoming Office of Homeland Security",
+   "page": "xvii"
+  },
+  {
+   "term": "WSEO",
+   "d": "Wyoming State Engineer’s Office",
+   "page": "xvii"
+  },
+  {
+   "term": "WWDO",
+   "d": "Wyoming Water Development Office",
+   "page": "xvii"
+  },
+  {
+   "term": "X/Q",
+   "d": "atmospheric dispersion factor",
+   "page": "xvii"
+  },
+  {
+   "term": "XIS",
+   "d": "Nuclear Instrumentation System",
+   "page": "xvii"
+  }
+ ],
+ "extra": [
+  {
+   "term": "MWt",
+   "d": "megawatt thermal",
+   "page": "1.1-1"
+  },
+  {
+   "term": "MWe",
+   "d": "megawatts electric",
+   "page": "1.1-1"
+  },
+  {
+   "term": "VAC",
+   "d": "volts alternating current",
+   "page": "7.7-4"
+  },
+  {
+   "term": "NME",
+   "d": "Nuclear Island Major Maintenance Equipment",
+   "page": "1.1-18"
+  },
+  {
+   "term": "EP",
+   "d": "emergency preparedness",
+   "page": "11.3-1"
+  },
+  {
+   "term": "VRLA",
+   "d": "Valve-Regulated Lead-Acid",
+   "page": "1.4-46"
+  },
+  {
+   "term": "ODCM",
+   "d": "Offsite Dose Calculation Manual",
+   "page": "9.1-1"
+  },
+  {
+   "term": "HT9",
+   "d": "high chromium martensitic steel",
+   "page": "1.1-2"
+  },
+  {
+   "term": "STS",
+   "d": "static transfer switch",
+   "page": "7.7-4"
+  }
+ ],
+ "context": {
+  "SSC": {
+   "d": "structure, system, or component",
+   "page": "xv",
+   "alts": [
+    {
+     "d": "Seismic Source Characterization",
+     "when": "seismic source|SSHAC|SSC model|logic tree|earthquake catalog",
+     "page": "xv"
+    }
+   ]
+  },
+  "STS": {
+   "d": "static transfer switch",
+   "page": "7.7-4",
+   "alts": [
+    {
+     "d": "Steam Turbine System",
+     "when": "steam|turbine|condenser|feedwater",
+     "page": "xvi"
+    }
+   ]
+  },
+  "CRS": {
+   "d": "Control Room Supervisor",
+   "page": "11.1-8",
+   "alts": [
+    {
+     "d": "Core Restraint System",
+     "when": "core restraint|load pad|core barrel|core lock-up|core assembl",
+     "page": "v"
+    }
+   ]
+  }
+ }
+}

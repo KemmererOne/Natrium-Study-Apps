@@ -5,7 +5,7 @@ const fs = require("fs"), path = require("path");
 const ROOT = path.join(__dirname, ".."), read = f => fs.readFileSync(path.join(ROOT, f), "utf8");
 const errors = [], fail = m => errors.push(m);
 const list = base => fs.readdirSync(path.join(ROOT, base), { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name);
-const dirs = list("topics"), psarDirs = list("psar");
+const dirs = list("topics"), psarDirs = list("psar").filter(d => d !== "acronyms");
 let pages = 0;
 for (const [base, d] of [...dirs.map(d => ["topics", d]), ...psarDirs.map(d => ["psar", d])]) {
   const html = read(`${base}/${d}/index.html`);
@@ -48,6 +48,13 @@ for (const d of psarDirs) {
   if (!sw.includes(`./psar/${d}/`)) fail(`sw.js: PSAR lesson not cached: ${d}`);
   if (!read(`psar/${d}/index.html`).includes('class="mark"')) fail(`psar: ${d} has no completion button`);
 }
+// Every PSAR lesson carries the term popup, and quiz and flashcards load and cache the shared copy
+for (const d of psarDirs) if (!read(`psar/${d}/index.html`).includes("window.PSAR_TERMS")) fail(`psar: ${d} has no term popup`);
+for (const a of ["quiz", "flashcards"]) {
+  if (!read(`${a}/index.html`).includes('src="../glossary.js"')) fail(`${a}: glossary.js not loaded`);
+  if (!read(`${a}/sw.js`).includes('"../glossary.js"')) fail(`${a}: glossary.js not cached`);
+}
+if (!sw.includes("./psar/acronyms/")) fail("sw.js: acronyms page not cached");
 console.log(`${dirs.length} topics, ${psarDirs.length} PSAR lessons, ${pages} pages checked, ${errors.length} problems`);
 errors.forEach(e => console.log("  " + e));
 process.exit(errors.length ? 1 : 0);

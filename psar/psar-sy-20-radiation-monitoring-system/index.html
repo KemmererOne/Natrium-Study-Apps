@@ -46,7 +46,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
 .opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
 .opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
-.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.opt[aria-disabled="true"] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
 .result { margin: 0; } .result[hidden] { display: none; }
 .verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
 .report { font-size: 0.85rem; }
@@ -87,7 +87,7 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 <h1>Radiation Monitoring System</h1>
 <ul class="tags"><li class="tag">Draft</li><li class="tag">PSAR Rev 1</li></ul>
 <details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Purpose and monitor types</a></li><li><a href="#check-1">Knowledge check: Purpose and monitor types</a></li><li><a href="#concept-2">Locations and interfaces</a></li><li><a href="#check-2">Knowledge check: Locations and interfaces</a></li><li><a href="#concept-3">Functions and automatic features</a></li><li><a href="#check-3">Knowledge check: Functions and automatic features</a></li><li><a href="#concept-4">Operator interface and alarms</a></li><li><a href="#check-4">Knowledge check: Operator interface and alarms</a></li><li><a href="#concept-5">Reliability and failures</a></li><li><a href="#check-5">Knowledge check: Reliability and failures</a></li><li><a href="#concept-6">Safety significance</a></li><li><a href="#check-6">Knowledge check: Safety significance</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
-<p class="src">The RMS detects radiation in areas, processes, and effluent. It gives alarms and signals, and other systems take the automatic action. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.6.6, pp. 7.6-60 to 7.6-68</cite></p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the RMS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and monitor types</a></p><p><span class="num">2</span> Identify the RMS boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-2">Locations and interfaces</a></p><p><span class="num">3</span> Identify the major components of the RMS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and monitor types</a></p><p><span class="num">4</span> Explain RMS operation.</p><p class="gap">Taught in: <a href="#concept-3">Functions and automatic features</a></p><p><span class="num">5</span> Describe the RMS controls and indications.</p><p class="gap">Taught in: <a href="#concept-4">Operator interface and alarms</a></p><p><span class="num">6</span> Explain the RMS automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Functions and automatic features</a></p><p><span class="num">7</span> Apply operating procedures for the RMS.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the RMS.</p><p class="gap">Taught in: <a href="#concept-5">Reliability and failures</a></p><p><span class="num">9</span> Explain the safety significance of the RMS.</p><p class="gap">Taught in: <a href="#concept-6">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the RMS.</p><p class="gap">Taught in: <a href="#concept-5">Reliability and failures</a>, <a href="#concept-6">Safety significance</a></p></div>
+<p class="src">The RMS detects radiation in areas, processes, and effluent. It gives alarms and signals, and other systems take the automatic action. <cite>PSAR Rev 1 (NAT-9400), Sec. 7.6.6, pp. 7.6-60 to 7.6-68</cite></p><p class="gap">Terms with a dotted underline are PSAR acronyms. Hover, tap or press Enter on one to see its meaning.</p><div class="obj"><h3>Learning objectives</h3><p><span class="num">1</span> State the purpose of the RMS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and monitor types</a></p><p><span class="num">2</span> Identify the RMS boundaries and interfaces.</p><p class="gap">Taught in: <a href="#concept-2">Locations and interfaces</a></p><p><span class="num">3</span> Identify the major components of the RMS.</p><p class="gap">Taught in: <a href="#concept-1">Purpose and monitor types</a></p><p><span class="num">4</span> Explain RMS operation.</p><p class="gap">Taught in: <a href="#concept-3">Functions and automatic features</a></p><p><span class="num">5</span> Describe the RMS controls and indications.</p><p class="gap">Taught in: <a href="#concept-4">Operator interface and alarms</a></p><p><span class="num">6</span> Explain the RMS automatic features and interlocks.</p><p class="gap">Taught in: <a href="#concept-3">Functions and automatic features</a></p><p><span class="num">7</span> Apply operating procedures for the RMS.</p><p class="gap">Not in PSAR Rev 1. This lesson does not teach it.</p><p><span class="num">8</span> Diagnose abnormal conditions in the RMS.</p><p class="gap">Taught in: <a href="#concept-5">Reliability and failures</a></p><p><span class="num">9</span> Explain the safety significance of the RMS.</p><p class="gap">Taught in: <a href="#concept-6">Safety significance</a></p><p><span class="num">10</span> Address technical specifications and administrative controls for the RMS.</p><p class="gap">Taught in: <a href="#concept-5">Reliability and failures</a>, <a href="#concept-6">Safety significance</a></p></div>
 
 <div class="pager"><a class="next" href="#concept-1">Purpose and monitor types <span aria-hidden="true">→</span></a></div>
 </section>
@@ -387,7 +387,9 @@ addEventListener("keydown", e => {
 document.querySelectorAll(".check").forEach(c => {
   const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
   opts.forEach((b, i) => b.addEventListener("click", () => {
-    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (c.dataset.done) return;
+    c.dataset.done = "1";
+    opts.forEach((o, j) => { o.setAttribute("aria-disabled", "true"); if (j === key) o.classList.add("right"); });
     if (i !== key) b.classList.add("wrong");
     verdict.textContent = i === key ? "Correct" : "Not correct";
     verdict.classList.add(i === key ? "right" : "wrong");
@@ -396,4 +398,181 @@ document.querySelectorAll(".check").forEach(c => {
 });
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
 </script>
+<script>window.PSAR_TERMS = {"AC":["alternating current","iv"],"ACI":["American Concrete Institute","iv"],"AMC":["Auxiliary Monitoring and Control System","iv"],"ANS":["American Nuclear Society","iv"],"ARM":["Area Radiation Monitoring","iv"],"ASD":["adjustable speed drive","iv"],"CC":["Climate Change","v"],"CFR":["Code of Federal Regulations","v"],"CIP":["core inlet plenum","v"],"CN":["runoff curve number","v"],"CP":["construction permit","v"],"CRD":["Control Rod Drive System","v"],"CT":["critical technology","v"],"CTC":["Coolant Temperature Monitoring and Control System","v"],"CU":["Consolidated-Undrained","vi"],"CV":["cleaning vessel","vi"],"DBA":["design basis accident","vi"],"DC":["Direct Current","vi"],"DCS":["Distributed Control System","vi"],"DG":["Draft Regulatory Guide","vi"],"DH":["Downhole","vi"],"DID":["defense-in-depth","vi"],"DL":["Defense Line","vi"],"DRMS":["Digital Radiation Monitor System","vi"],"ED":["emergency director","vi"],"EI":["Energy Island","vi"],"EM":["electromagnetic","vii"],"EPZ":["emergency planning zone","vii"],"EQ":["equipment qualification","vii"],"ERM":["Effluent Radiation Monitor","vii"],"ES":["event sequence","vii"],"FAB":["Fuel Auxiliary Building","vii"],"FE":["finite element","vii"],"FFR":["failed fuel rack","vii"],"FGD":["Flue Gas Desulfurization","vii"],"FHB":["Fuel Handling Building","vii"],"FHC":["Fuel Handling Supervisory Control System","viii"],"FI":["Fracture Index","viii"],"FPC":["Fuel Pool Cooling","viii"],"FPP":["Fuel Pool Purification","viii"],"FTP":["Fuel Transfer Port","viii"],"GDC":["General Design Criteria","viii"],"GVH":["GE Vernova Hitachi Nuclear Energy","viii"],"GL":["generic letter","viii"],"GUI":["graphical user interface","viii"],"GV":["Guard Vessel","viii"],"GVDS":["Group-View Display System","ix"],"HA":["human action","ix"],"HAA":["Head Access Area","ix"],"HF":["human factors","ix"],"HPS":["The Health Physics Society","ix"],"HVAC":["heating, ventilation and air conditioning","ix"],"IBC":["International Building Code","ix"],"ICS":["Integrated Control System","ix"],"IE":["Initiating Event","ix"],"IO":["input-output","x"],"ISO":["International Organization for Standardization","x"],"MCR":["Main Control Room","x"],"MCT":["maximum cladding temperature","xi"],"MEI":["maximally exposed individual","xi"],"MSL":["Mean Sea Level","xi"],"NCB":["Nuclear Island Control Building","xi"],"NFP":["Nuclear Island Fire Protection System","xi"],"NI":["Nuclear Island","xii"],"NIC":["Nuclear Island Control System","xii"],"NSC":["Nuclear Island Security System","xii"],"NSRST":["non-safety-related with special treatment","xii"],"NST":["non-safety-related with no special treatment","xii"],"NUP":["Nuclear Island Uninterruptible AC Power Supply System","xii"],"OBE":["Operating Basis Earthquake","xii"],"OE":["operating experience","xii"],"OL":["operating license","xii"],"OW":["Observation Well","xii"],"PAM":["Post-Accident Monitoring","xii"],"PDC":["Principal Design Criterion or Principal Design Criteria","xiii"],"PEM":["pin extraction machine","xiii"],"PFD":["Probability of Failure on Demand","xiii"],"PGM":["Plant General Manager","xiii"],"PI":["Plasticity Index","xiii"],"PM":["Particulate Matter","xiii"],"PRC":["Pin Removal Cell","xiii"],"PRM":["Process Radiation Monitoring","xiii"],"PSAR":["preliminary safety analysis report","xiii"],"QA":["quality assurance","xiii"],"QAPD":["Quality Assurance Program Description","xiii"],"RAB":["Reactor Auxiliary Building","xiii"],"RG":["Regulatory Guide","xiv"],"RMC":["Rod Monitoring and Control System","xiv"],"RMS":["Radiation Monitoring System","xiv"],"RP":["Radiation Protection","xiv"],"RPS":["Reactor Protection System","xiv"],"RSC":["Remote Shutdown Complex","xiv"],"RTB":["Reactor Trip Breaker","xiv"],"RV":["Reactor Vessel","xiv"],"RWL":["Liquid Radwaste Processing System","xiv"],"RXB":["Reactor Building","xiv"],"SAR":["safety analysis report","xiv"],"SCG":["Sodium Cover Gas System","xv"],"SD":["Standard Deviation","xv"],"SFP":["Spent Fuel Pool","xv"],"SHT":["sodium holding tank","xv"],"SL":["safety limit","xv"],"SMR":["small modular reactor","xv"],"SR":["safety-related","xv"],"SVDU":["Special Video Display Unit","xvi"],"TA":["Task Analysis","xvi"],"TS":["technical specifications","xvi"],"TSS":["Thermal Salt Storage System","xvi"],"UMC":["Utility Monitoring and Control System","xvi"],"UU":["Unconsolidated-Undrained","xvi"],"UV":["undervoltage","xvi"],"VDU":["Visual Display Unit","xvi"],"VS":["Shear-Wave Velocity","xvi"],"VAC":["volts alternating current","7.7-4"],"NME":["Nuclear Island Major Maintenance Equipment","1.1-18"],"EP":["emergency preparedness","11.3-1"]}; window.PSAR_TERMS_PAGE = "../acronyms/";
+// Shows what PSAR acronyms mean. Each one gets a dotted underline. Hover, tap or press Enter on it
+// to open a small popup with the PSAR's description and page. Used by the PSAR lessons, flashcards and quiz.
+(function () {
+  const T = window.PSAR_TERMS || {}, MORE = window.PSAR_TERMS_PAGE;
+  const SKIP = ".term,a,cite,script,style,h1,.count,.meta,.tags,.top,.pager,.verdict,.letter";
+  const find = w => T[w] ? w : w.endsWith("s") && T[w.slice(0, -1)] ? w.slice(0, -1) : null;
+  const isLine = w => /^DL\d/.test(w) && T.DL;
+
+  // Finds the terms in a string as [start, end, term]. Codes such as RRS-ISPL-BL or DHP-LOOP-4
+  // are names of their own, so a listed term inside one is left alone. DL3 is Defense Line 3.
+  function spans(text) {
+    const out = [];
+    for (const m of text.matchAll(/[A-Za-z0-9&]+(?:[-/][A-Za-z0-9&]+)*/g)) {
+      const hit = find(m[0]);
+      if (hit) { out.push([m.index, m.index + m[0].length, hit]); continue; }
+      let at = m.index;
+      for (const piece of m[0].split("/")) {
+        const whole = find(piece);
+        if (whole) out.push([at, at + piece.length, whole]);
+        else {
+          const parts = piece.split("-");
+          const code = parts.some(p => /^[A-Z0-9]/.test(p) && !find(p) && !isLine(p));
+          let pos = at;
+          parts.forEach((p, i) => {
+            if (isLine(p) && (i === 0 || !code)) out.push([pos, pos + p.replace(/^(DL\d+).*$/, "$1").length, "DL"]);
+            else if (!code && find(p)) out.push([pos, pos + p.length, find(p)]);
+            pos += p.length + 1;
+          });
+        }
+        at += piece.length + 1;
+      }
+    }
+    return out;
+  }
+
+  // Some terms have two meanings. The words around the term, and the rest of its question or card, pick one.
+  function meaning(term, text) {
+    const [d, page, alts] = T[term];
+    const alt = (alts || []).find(a => new RegExp(a[2], "i").test(text));
+    return alt ? [alt[0], alt[1]] : [d, page];
+  }
+  const around = node => {
+    const block = node.parentElement.closest("li,p,td,tr,blockquote,figcaption,.check");
+    return block ? block.textContent : node.nodeValue;
+  };
+
+  function tag(root, opt) {
+    if (!root) return;
+    const hide = opt && opt.hide, context = opt && opt.context || "", nodes = [];
+    const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    while (walk.nextNode()) if (walk.currentNode.nodeValue.trim() && !walk.currentNode.parentElement.closest(SKIP)) nodes.push(walk.currentNode);
+    for (const node of nodes) {
+      const text = node.nodeValue, found = spans(text).filter(s => !hide || !hide.has(s[2]));
+      if (!found.length) continue;
+      const frag = document.createDocumentFragment(), near = context + " " + around(node);
+      let at = 0;
+      for (const [a, b, term] of found) {
+        frag.append(text.slice(at, a));
+        const el = document.createElement("abbr");
+        el.className = "term";
+        el.dataset.t = term;
+        el.textContent = text.slice(a, b);
+        const [d, page] = meaning(term, near);
+        el.dataset.d = d;
+        el.dataset.p = page;
+        el.setAttribute("aria-label", text.slice(a, b) + ", " + d);
+        if (!node.parentElement.closest("button")) el.tabIndex = 0;
+        frag.append(el);
+        at = b;
+      }
+      frag.append(text.slice(at));
+      node.replaceWith(frag);
+    }
+  }
+
+  // Terms that would give an answer away: the description is written out in the question or a choice
+  function spoilers(strings) {
+    const all = strings.join("\n").toLowerCase();
+    return new Set(Object.keys(T).filter(t => [T[t][0], ...(T[t][2] || []).map(a => a[0])].some(d => all.includes(d.toLowerCase()))));
+  }
+
+  const style = document.createElement("style");
+  style.textContent = `
+abbr.term { text-decoration: underline dotted var(--accent, #8a5f00); text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: help; }
+abbr.term:focus-visible { outline: 2px solid var(--accent, #8a5f00); outline-offset: 1px; border-radius: 2px; }
+#term-pop { position: fixed; z-index: 1000; box-sizing: border-box; width: max-content; max-width: min(320px, calc(100vw - 32px)); padding: 10px 12px; text-align: left;
+  background: var(--card, #fff); color: var(--fg, #1c2230); border: 1px solid var(--accent, #8a5f00); border-radius: 10px; box-shadow: 0 4px 16px rgba(0, 0, 0, .25); font-size: .95rem; font-weight: 400; line-height: 1.4; }
+#term-pop[hidden] { display: none; }
+#term-pop b { display: block; font-weight: 600; }
+#term-pop small { display: block; margin-top: 6px; color: var(--muted, #5a6376); font-size: .78rem; }
+#term-pop a { color: var(--accent, #8a5f00); }`;
+  document.head.append(style);
+
+  const pop = document.createElement("div");
+  pop.id = "term-pop";
+  pop.setAttribute("role", "tooltip");
+  pop.hidden = true;
+  let current = null, pinned = false, timer = 0;
+
+  function close() {
+    clearTimeout(timer);
+    pop.hidden = true;
+    current = null;
+    pinned = false;
+  }
+  function open(el, pin) {
+    clearTimeout(timer);
+    if (!pop.isConnected) document.body.append(pop);
+    const d = el.dataset.d, page = el.dataset.p, listed = /^[ivx]+$/.test(page);
+    pop.textContent = "";
+    const name = document.createElement("b"), body = document.createElement("span"), cite = document.createElement("small");
+    name.textContent = el.dataset.t;
+    body.textContent = d;
+    cite.textContent = "PSAR Rev 1, " + (listed ? "List of Acronyms and Abbreviations, " : "") + "p. " + page;
+    if (MORE) {
+      const a = document.createElement("a");
+      a.href = MORE;
+      a.textContent = "All terms";
+      cite.append(". ", a);
+    }
+    pop.append(name, body, cite);
+    pop.hidden = false;
+    current = el;
+    pinned = pin;
+    const r = el.getClientRects()[0] || el.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
+    pop.style.left = Math.max(16, Math.min(r.left, innerWidth - w - 16)) + "px";
+    pop.style.top = (r.bottom + 6 + h > innerHeight && r.top - 6 - h > 0 ? r.top - 6 - h : r.bottom + 6) + "px";
+  }
+  const term = e => e.target.closest ? e.target.closest("abbr.term") : null;
+
+  // These run in the capture phase, so a tap on a term never picks an answer or flips a card.
+  document.addEventListener("click", e => {
+    const el = term(e);
+    if (el) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (current === el && pinned) close(); else open(el, true);
+    } else if (!pop.contains(e.target)) close();
+  }, true);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") return close();
+    const el = term(e);
+    if (el && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (current === el && pinned) close(); else open(el, true);
+    }
+  }, true);
+  document.addEventListener("pointerover", e => {
+    if (e.pointerType !== "mouse") return;
+    const el = term(e);
+    if (el && !pinned) open(el, false);
+    else if (el || pop.contains(e.target)) clearTimeout(timer);
+  });
+  document.addEventListener("pointerout", e => {
+    if (e.pointerType === "mouse" && !pinned && (term(e) || pop.contains(e.target))) timer = setTimeout(close, 250);
+  });
+  document.addEventListener("focusin", e => { const el = term(e); if (el && el.matches(":focus-visible")) open(el, false); });
+  document.addEventListener("focusout", e => { if (term(e) && !pinned) close(); });
+  addEventListener("scroll", () => { if (!pop.hidden) close(); }, true);
+  addEventListener("resize", close);
+  addEventListener("hashchange", close);
+
+  window.Terms = { tag, spoilers, close };
+})();
+
+(function () {
+  const pages = document.querySelector(".pages"), checks = [...pages.querySelectorAll(".check")];
+  checks.forEach(c => Terms.tag(c.querySelector(".result"), { context: c.textContent }));
+  checks.forEach(c => {
+    const text = [c.querySelector("p"), ...c.querySelectorAll(".opt")].map(e => e.textContent), context = c.textContent;
+    Terms.tag(c, { hide: Terms.spoilers(text), context });
+    c.querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => Terms.tag(c, { context })));
+  });
+  Terms.tag(pages);
+})();</script>
 </html>
