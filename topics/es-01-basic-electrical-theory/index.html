@@ -57,6 +57,8 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
 .mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
 .mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.menu a.is-done::after, .side a.is-done::after, .page.is-done > .top .count::after { content: " ✓"; content: " ✓" / "Completed"; color: var(--good); font-weight: 700; }
+.moved { background: var(--card); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 12px; margin: 8px 0 0; font-size: 0.9rem; } .moved[hidden] { display: none; }
 .side { display: none; }
 /* Wide screens get the page list beside the lesson. Phones keep the single column. */
 @media (min-width: 900px) {
@@ -784,10 +786,41 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 document.documentElement.classList.add("js");
 const pages = [...document.querySelectorAll(".page")];
 // Progress is saved on this device, and sync.js copies it to the user's other devices if sync is on.
-// It is stored by lesson slug, as one record for all lessons.
+// It is stored by lesson slug, as one record for all lessons. A completed page is its own entry, "<slug>.<page id>",
+// with the same done date as a lesson, so sync.js merges pages one at a time.
 const KEY = "natrium-lessons-progress", slug = document.querySelector("main").dataset.slug;
+const moved = document.createElement("p"), movedLink = document.createElement("a");
+moved.className = "moved"; moved.hidden = true; moved.append(movedLink);
+document.querySelector(".pages").prepend(moved);
 function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
 function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); Sync.changed(); return true; } catch (e) { return false; } }
+function today() {
+  const d = new Date();
+  return [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+}
+// A lesson marked complete shows every page checked. Undoing it brings back the pages actually finished.
+function showChecks() {
+  const all = loadAll(), lessonDone = !!(all[slug] || {}).done;
+  const finished = id => lessonDone || !!all[slug + "." + id];
+  pages.forEach(p => p.classList.toggle("is-done", finished(p.id)));
+  document.querySelectorAll(".menu a, .side a").forEach(a => a.classList.toggle("is-done", finished(a.getAttribute("href").slice(1))));
+}
+// A page is finished by moving on with Next. A page of checks needs every check answered first.
+function finishPage(page) {
+  const all = loadAll(), key = slug + "." + page.id;
+  if (all[key] || page.querySelector(".check:not([data-done])")) return;
+  all[key] = { done: today() };
+  saveAll(all);
+  showChecks();
+}
+// When another device has moved on while this lesson sat open, offer that page without jumping to it
+function offerMove() {
+  const p = loadAll()[slug] || {}, there = !p.done && pages.find(x => x.id === p.page);
+  moved.hidden = !there || there.classList.contains("on");
+  if (moved.hidden) return;
+  movedLink.href = "#" + there.id;
+  movedLink.textContent = "Continue on page " + (pages.indexOf(there) + 1) + " of " + pages.length + ", where you left off on another device";
+}
 function show() {
   const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
   pages.forEach(p => p.classList.toggle("on", p === page));
@@ -799,9 +832,16 @@ function show() {
   const all = loadAll();
   all[slug] = Object.assign({}, all[slug], { page: page.id, n: pages.indexOf(page) + 1, total: pages.length });
   saveAll(all);
+  if (page === pages[pages.length - 1]) finishPage(page);
+  showChecks();
+  moved.hidden = true;
   window.scrollTo(0, 0);
 }
+// A link with no page named picks up at the last page, unless the lesson is complete
+const last = loadAll()[slug] || {};
+if (!location.hash && !last.done && pages.some(p => p.id === last.page)) history.replaceState(null, "", "#" + last.page);
 addEventListener("hashchange", show); show();
+document.querySelectorAll(".pager .next").forEach(a => a.addEventListener("click", () => finishPage(a.closest(".page"))));
 function showMark(failed) {
   const done = !!(loadAll()[slug] || {}).done;
   document.querySelectorAll(".mark").forEach(b => {
@@ -812,14 +852,15 @@ function showMark(failed) {
   document.querySelectorAll(".mark-note").forEach(n => { n.hidden = !failed; });
 }
 document.querySelectorAll(".mark").forEach(b => b.addEventListener("click", () => {
-  const all = loadAll(), p = Object.assign({}, all[slug]), d = new Date();
+  const all = loadAll(), p = Object.assign({}, all[slug]);
   if (p.done) delete p.done;
-  else p.done = [d.getFullYear(), String(d.getMonth() + 1).padStart(2, "0"), String(d.getDate()).padStart(2, "0")].join("-");
+  else p.done = today();
   all[slug] = p;
   showMark(!saveAll(all));
+  showChecks();
 }));
 showMark(false);
-addEventListener("natrium-sync", () => showMark(false));
+addEventListener("natrium-sync", () => { showMark(false); showChecks(); offerMove(); });
 addEventListener("keydown", e => {
   if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
   if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
@@ -837,6 +878,7 @@ document.querySelectorAll(".check").forEach(c => {
     verdict.textContent = i === key ? "Correct" : "Not correct";
     verdict.classList.add(i === key ? "right" : "wrong");
     result.hidden = false;
+    finishPage(c.closest(".page"));
   }));
 });
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});

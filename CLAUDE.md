@@ -252,6 +252,14 @@ Device sync (Nov 6, 2026)\
 - After changing sync.js, run the lesson build and bump VERSION in flashcards/sw.js.\
 - Test with node scripts/test-sync.js. The preview "sync" runs the Worker locally for localhost pages.\
 \
+Page checkmarks (Nov 6, 2026)\
+- A lesson page gets a checkmark when the user moves on with Next. A knowledge check page gets one when every check on it\
+  is answered. The last page gets one when opened. A lesson marked complete shows every page checked.\
+- Each finished page is an entry "<slug>.<page id>" with a done date in natrium-lessons-progress, stored like a lesson, so\
+  sync.js and the Worker need no change. Code that counts lessons must skip keys containing a dot.\
+- A lesson opened with no page named resumes at the last page unless complete. If another device moved on while a lesson\
+  sat open, the lesson offers that page and does not jump.\
+\
 Stop and report, do not guess, if:\
 - A source file is missing or unreadable.\
 - A Word file cannot be parsed.\

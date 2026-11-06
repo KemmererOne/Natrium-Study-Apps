@@ -57,6 +57,8 @@ blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--a
 .mark { width: 100%; min-height: 44px; font: inherit; font-weight: 600; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
 .mark.is-done { color: var(--good); background: transparent; border-color: var(--good); }
 .mark-note { color: var(--bad); font-size: 0.85rem; margin: 6px 0 0; } .mark-note[hidden] { display: none; }
+.menu a.is-done::after, .side a.is-done::after, .page.is-done > .top .count::after { content: " ✓"; content: " ✓" / "Completed"; color: var(--good); font-weight: 700; }
+.moved { background: var(--card); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 12px; margin: 8px 0 0; font-size: 0.9rem; } .moved[hidden] { display: none; }
 .side { display: none; }
 /* Wide screens get the page list beside the lesson. Phones keep the single column. */
 @media (min-width: 900px) {

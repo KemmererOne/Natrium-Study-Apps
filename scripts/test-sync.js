@@ -85,6 +85,22 @@ const pause = () => new Promise(r => setTimeout(r, 5));
     assert.strictEqual(b.get(LESSONS)["psar-sy-01"].page, "p3");
   });
 
+  await pause();
+  const first = a.get(LESSONS);
+  first["psar-sy-01.concept-1"] = { done: "2026-11-06" };
+  a.edit(LESSONS, first);
+  const second = b.get(LESSONS);
+  second["psar-sy-01.concept-2"] = { done: "2026-11-06" };
+  b.edit(LESSONS, second);
+  await a.sync(); await b.sync(); await a.sync();
+  check("pages finished on two devices all reach both, and the last page stays", () => {
+    for (const d of [a, b]) {
+      assert.deepStrictEqual(d.get(LESSONS)["psar-sy-01.concept-1"], { done: "2026-11-06" });
+      assert.deepStrictEqual(d.get(LESSONS)["psar-sy-01.concept-2"], { done: "2026-11-06" });
+      assert.strictEqual(d.get(LESSONS)["psar-sy-01"].page, "p3");
+    }
+  });
+
   const before = data.get(CODE);
   await a.sync();
   check("a sync with no changes writes nothing", () => assert.strictEqual(data.get(CODE), before));

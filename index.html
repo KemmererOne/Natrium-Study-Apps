@@ -102,7 +102,7 @@ function showLessons() {
     const all = JSON.parse(localStorage.getItem("natrium-lessons-progress")) || {};
     document.querySelectorAll(".lesson-note").forEach(note => {
       const psar = note.dataset.prefix === "psar";
-      const finished = Object.entries(all).filter(([slug, p]) => p.done && slug.startsWith("psar-") === psar).length;
+      const finished = Object.entries(all).filter(([slug, p]) => p.done && !slug.includes(".") && slug.startsWith("psar-") === psar).length;
       note.textContent = finished ? finished + " of " + note.dataset.total + " lessons completed" : note.dataset.total + " lesson plans";
     });
   } catch (e) {}
