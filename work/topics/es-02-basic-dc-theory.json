@@ -1,0 +1,1383 @@
+{
+ "module_id": "ES-02",
+ "slug": "es-02-basic-dc-theory",
+ "title": "Basic DC Theory",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V1",
+ "handbook": "DOE-HDBK-1011/1-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Breakers, Relays, and Disconnects",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Using the rules associated with basic DC circuit characteristics, ANALYZE various DC circuits to find resistances, currents, and voltages at any given point within the circuit.",
+   "items": [],
+   "page": {
+    "pdf": 94,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "LIST the four ways to produce a DC voltage.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the purpose of a rectifier.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the outputs of the following circuits:",
+     "items": [
+      "a. Half-wave bridge rectifier",
+      "b. Full-wave bridge rectifier"
+     ],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given a diagram, IDENTIFY it as one of the following types:",
+     "items": [
+      "a. Schematic diagram",
+      "b. One-line diagram",
+      "c. Block diagram",
+      "d. Wiring diagram"
+     ],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Resistivity",
+      "b. Temperature coefficient of resistance",
+      "c. Closed circuit",
+      "d. Open circuit",
+      "e. Short circuit",
+      "f. Series circuit",
+      "g. Parallel circuit",
+      "h. Equivalent resistance"
+     ],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given a circuit, DETERMINE whether the circuit is an open circuit or a closed circuit.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Given a circuit, CALCULATE total resistance for a series or parallel circuit.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DESCRIBE what is meant by the term \"voltage divider.\"",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DESCRIBE what is meant by the term \"current division.\"",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the difference between electron flow and conventional current flow.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "Given a circuit showing current flows, IDENTIFY the polarity of the voltage drops in the circuit.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "STATE Kirchhoff’s voltage law.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "STATE Kirchhoff’s current law.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "Given a circuit, SOLVE problems for voltage and current using Kirchhoff’s laws.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "Given a simple DC circuit, DETERMINE the equivalent resistance of series and parallel combinations of elements.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "DESCRIBE the voltage and current effects of an open in a DC circuit.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "DESCRIBE the voltage and current effects in a shorted DC circuit.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The purpose of a rectifier circuit is to convert AC power to DC.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.5"
+  },
+  {
+   "id": "P2",
+   "quote": "The diode acts as a gate, which allows current to pass in one direction and blocks current in the other direction.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.5"
+  },
+  {
+   "id": "P3",
+   "quote": "The output of a half-wave rectifier circuit is pulsating DC.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.8"
+  },
+  {
+   "id": "P4",
+   "quote": "A full-wave rectifier circuit is a circuit that rectifies the entire cycle of the AC sine-wave.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.9"
+  },
+  {
+   "id": "P5",
+   "quote": "This circuit utilizes four diodes.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.10"
+  },
+  {
+   "id": "P6",
+   "quote": "There are four common ways that DC voltages are produced.",
+   "sec": "DC Sources",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.11"
+  },
+  {
+   "id": "P7",
+   "quote": "Schematic diagrams are the standard means by which we communicate information in electrical and electronics circuits.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.12"
+  },
+  {
+   "id": "P8",
+   "quote": "There are four types of circuit diagrams.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.22"
+  },
+  {
+   "id": "P9",
+   "quote": "The one-line, or single-line, diagram shows the components of a circuit by means of single lines and the appropriate graphic symbols.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.13"
+  },
+  {
+   "id": "P10",
+   "quote": "A block diagram is used to show the relationship between component groups, or stages in a circuit.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.14"
+  },
+  {
+   "id": "P11",
+   "quote": "A wiring diagram is a very simple way to show wiring connections in an easy-to-follow manner.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.15"
+  },
+  {
+   "id": "P12",
+   "quote": "Resistivity is defined as the measure of the resistance a material imposes on current flow.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.16"
+  },
+  {
+   "id": "P13",
+   "quote": "Temperature coefficient of resistance, α (alpha), is defined as the amount of change of the resistance of a material for a given change in temperature.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.17"
+  },
+  {
+   "id": "P14",
+   "quote": "A closed circuit (Figure 13) is an uninterrupted, or unbroken, path for current from the source (EMF), through the load, and back to the source.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.19"
+  },
+  {
+   "id": "P15",
+   "quote": "An open circuit, or incomplete circuit, (Figure 14) exists if a break in the circuit occurs; this prevents a complete path for current flow.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.19"
+  },
+  {
+   "id": "P16",
+   "quote": "A series circuit is a circuit where there is only one path for current flow.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.20"
+  },
+  {
+   "id": "P17",
+   "quote": "Parallel circuits are those circuits which have two or more components connected across the same voltage source",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.21"
+  },
+  {
+   "id": "P18",
+   "quote": "In all cases, the equivalent resistance will be less than any of the individual parallel circuit resistors.",
+   "sec": "DC Circuit Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.21"
+  },
+  {
+   "id": "P19",
+   "quote": "The total resistance in a series circuit is equal to the sum of all the parts of that circuit",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.23"
+  },
+  {
+   "id": "P20",
+   "quote": "The sum of the voltage drops in any series circuit is always equal to the applied voltage.",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.29"
+  },
+  {
+   "id": "P21",
+   "quote": "Total resistance of equal resistors in a parallel circuit is equal to the resistance of one resistor divided by the number of resistors.",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.34"
+  },
+  {
+   "id": "P22",
+   "quote": "A voltage divider, or network, is used when it is necessary to obtain different values of voltage from a single energy source.",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.36"
+  },
+  {
+   "id": "P23",
+   "quote": "This process is known as current division.",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.38"
+  },
+  {
+   "id": "P24",
+   "quote": "each branch current is inversely proportional to the branch resistance.",
+   "sec": "Basic DC Circuit Calculations",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.38"
+  },
+  {
+   "id": "P25",
+   "quote": "The direction of positive charges, or holes, is in the opposite direction of electron flow.",
+   "sec": "Voltage Polarity and Current Direction",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+  },
+  {
+   "id": "P26",
+   "quote": "where the electron current enters the load, the voltage is negative",
+   "sec": "Voltage Polarity and Current Direction",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+  },
+  {
+   "id": "P27",
+   "quote": "The sum of the voltage drops around a closed loop is equal to the sum of the voltage sources of that loop",
+   "sec": "Kirchhoff's Laws",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+  },
+  {
+   "id": "P28",
+   "quote": "The current arriving at any junction point in a circuit is equal to the current leaving that junction",
+   "sec": "Kirchhoff's Laws",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+  },
+  {
+   "id": "P29",
+   "quote": "If the assumed direction is correct, the answer will be positive.",
+   "sec": "Kirchhoff's Laws",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.44"
+  },
+  {
+   "id": "P30",
+   "quote": "Solving these circuits can be simplified by reducing the circuit to a single equivalent resistance circuit",
+   "sec": "DC Circuit Analysis",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.58"
+  },
+  {
+   "id": "P31",
+   "quote": "Since no current flows in an open series circuit, there are no voltage drops across the loads.",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.66"
+  },
+  {
+   "id": "P32",
+   "quote": "If a parallel circuit is opened at a point where only a branch current flows, then only that branch is open, and current continues to flow in the rest of the circuit",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.67"
+  },
+  {
+   "id": "P33",
+   "quote": "In a DC circuit, the only current limit is the circuit resistance.",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+  },
+  {
+   "id": "P34",
+   "quote": "the terminal voltage of the energy source will decrease.",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+  },
+  {
+   "id": "P35",
+   "quote": "Fuses are provided in circuits to protect against short circuits.",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+  },
+  {
+   "id": "P36",
+   "quote": "Parallel circuits are more likely than series circuits to develop damaging short circuits.",
+   "sec": "DC Circuit Faults",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.69"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "DC sources and rectifiers",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Batteries",
+      "DC generators",
+      "Thermocouples",
+      "Rectifiers"
+     ],
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.11"
+    },
+    {
+     "t": "p",
+     "text": "A battery converts chemical energy into electrical energy.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.1"
+    },
+    {
+     "t": "p",
+     "text": "A DC generator delivers pulsating DC through commutator action. A thermocouple converts heat energy into a voltage output.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "A diode is forward biased when the positive terminal of a voltage source is connected to its anode and the negative terminal to its cathode.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.5"
+    },
+    {
+     "t": "p",
+     "text": "With reverse bias, the anode is connected to the negative side of the source, which causes a high resistance that prevents current flow.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.7"
+    },
+    {
+     "t": "p",
+     "text": "With a single diode, current flows only during one-half of the input voltage cycle.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.8"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig6",
+     "num": 6,
+     "cap": "Half-Wave Rectifier",
+     "alt": "A single diode rectifier with an AC input waveform. Current passes on the forward-biased half cycle only, giving pulses on one side of the axis.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The full-wave bridge rectifier is another type of full-wave rectifier circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig8",
+     "num": 8,
+     "cap": "Bridge Rectifier Circuit",
+     "alt": "Bridge rectifier of four diodes shown for each half cycle of the AC input, with current through the load in the same direction both times.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Its output is a pulsating DC, with all of the waves of the input AC being transferred.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which of these is NOT one of the four common ways to produce a DC voltage?",
+     "o": [
+      "Thermocouples",
+      "Rectifiers",
+      "Capacitors",
+      "Batteries"
+     ],
+     "a": 2,
+     "x": "The four common ways are batteries, DC generators, thermocouples, and rectifiers.",
+     "p": "P6"
+    },
+    {
+     "existing": "Q418",
+     "eo": "1.2"
+    },
+    {
+     "existing": "Q419",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.3",
+     "q": "How many diodes does a full-wave bridge rectifier use?",
+     "o": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+     ],
+     "a": 3,
+     "x": "The full-wave bridge rectifier circuit utilizes four diodes.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Circuit diagrams",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig9",
+     "num": 9,
+     "cap": "Schematic Diagram",
+     "alt": "Schematic diagram of a two-transistor radio circuit, using graphic symbols connected by lines, from antenna to headset.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig10",
+     "num": 10,
+     "cap": "One-Line Diagram",
+     "alt": "One-line diagram of an electrical substation, with lightning arresters, disconnect switches, a transformer, and a circuit breaker on a single line.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig11",
+     "num": 11,
+     "cap": "Block Diagram",
+     "alt": "Block diagram of rectangles for the stages of a radio receiver, joined by arrows from input to output.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig12",
+     "num": 12,
+     "cap": "Wiring Diagram",
+     "alt": "Wiring diagram of an appliance circuit showing components in pictorial form, identified by name, with connecting wires.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "Wiring diagrams show the component parts in pictorial form, and most also show the relative location of parts and the color coding of conductors.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "A diagram uses rectangles joined by lines with arrowheads to show circuit stages from input to output. What type is it?",
+     "o": [
+      "One-line diagram",
+      "Block diagram",
+      "Wiring diagram",
+      "Schematic diagram"
+     ],
+     "a": 1,
+     "x": "A block diagram shows the relationship between component groups, or stages in a circuit, from input to output.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.4",
+     "q": "A diagram shows parts in pictorial form, identified by name. What type is it?",
+     "o": [
+      "Wiring diagram",
+      "Block diagram",
+      "Schematic diagram",
+      "One-line diagram"
+     ],
+     "a": 0,
+     "x": "Wiring diagrams show the component parts in pictorial form, and the components are identified by name.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Circuit terms",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The resistance of a conductor depends on its resistivity, its length, and its cross-sectional area.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "A positive value means resistance increases with temperature, a negative value means it decreases, and zero means it is constant.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.17"
+    },
+    {
+     "t": "p",
+     "text": "Each electrical circuit has at least four basic parts: a source of electromotive force, conductors, a load or loads, and some means of control.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig13",
+     "num": 13,
+     "cap": "Closed Circuit",
+     "alt": "A closed loop of a battery, a switch, and a resistor load joined by conductors.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig14",
+     "num": 14,
+     "cap": "Open Circuit",
+     "alt": "Three open circuits: one with an open switch, one with a burned-out fuse, and one with a burned-out resistor.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.19"
+    },
+    {
+     "t": "p",
+     "text": "A short circuit offers very little resistance to current flow and can cause dangerously high current through a circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.20"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig15",
+     "num": 15,
+     "cap": "Short Circuit",
+     "alt": "A battery and resistor R with a shorting connection across the resistor, and a fuse in the circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig16",
+     "num": 16,
+     "cap": "Series Circuit",
+     "alt": "Series circuit of a voltage source and resistors R1, R2, and R3 in one loop, with the same current I throughout.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig17",
+     "num": 17,
+     "cap": "Parallel Circuit",
+     "alt": "Parallel circuit with resistors R1, R2, and R3 each across the same voltage source, with branch currents and a voltmeter on each branch.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.21"
+    },
+    {
+     "t": "p",
+     "text": "Current through each branch can be different, but voltage throughout a parallel circuit is equal.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "A material has a positive temperature coefficient of resistance. What happens to its resistance as temperature rises?",
+     "o": [
+      "It increases",
+      "It decreases",
+      "It stays constant",
+      "It drops to zero"
+     ],
+     "a": 0,
+     "x": "A positive value of the temperature coefficient of resistance indicates that resistance increases with temperature.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.6",
+     "q": "A fuse in a circuit burns out. What kind of circuit results?",
+     "o": [
+      "A closed circuit",
+      "A short circuit",
+      "A parallel circuit",
+      "An open circuit"
+     ],
+     "a": 3,
+     "x": "A break in the circuit prevents a complete path for current flow, which makes it an open circuit.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Series and parallel calculations",
+   "eo": [
+    "1.7",
+    "1.8",
+    "1.9",
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "eq",
+     "text": "RT = R1 + R2 + R3 ...",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.23"
+    },
+    {
+     "t": "p",
+     "text": "The total voltage across a series circuit is equal to the sum of the voltages across each resistor.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "The sum of the currents through each branch of a parallel circuit is equal to the total current flow in the circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.29"
+    },
+    {
+     "t": "eq",
+     "text": "1/RT = 1/R1 + 1/R2 + 1/R3 ...",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "For two unequal resistors in parallel, multiply the two resistances and divide the product by the sum.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.35"
+    },
+    {
+     "t": "eq",
+     "text": "RT = (R1 x R2) / (R1 + R2)",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Sometimes branch currents in a parallel circuit must be found when only resistance and total current are known. The resistances divide the total current into fractional currents in each branch.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "eq",
+     "text": "I1 = IT x R2 / (R1 + R2)",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "For a series-parallel circuit, follow the series rules for the series part and the parallel rules for the parallel part.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.58"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What is the total resistance of 20, 30, and 50 ohm resistors in series?",
+     "o": [
+      "10 ohms",
+      "50 ohms",
+      "100 ohms",
+      "30,000 ohms"
+     ],
+     "a": 2,
+     "x": "RT = 20 + 30 + 50 = 100 ohms.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is the total resistance of a 6 ohm and a 3 ohm resistor in parallel?",
+     "o": [
+      "2 ohms",
+      "4.5 ohms",
+      "9 ohms",
+      "18 ohms"
+     ],
+     "a": 0,
+     "x": "RT = (6 x 3) / (6 + 3) = 18/9 = 2 ohms.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.8",
+     "q": "When is a voltage divider used?",
+     "o": [
+      "To obtain different values of voltage from a single energy source",
+      "To convert AC power to DC",
+      "To increase the total current",
+      "To protect against short circuits"
+     ],
+     "a": 0,
+     "x": "A voltage divider is used when it is necessary to obtain different values of voltage from a single energy source.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.9",
+     "q": "A total current of 12 amps divides between a 2 ohm and a 4 ohm branch. What is the current in the 2 ohm branch?",
+     "o": [
+      "4 amps",
+      "6 amps",
+      "8 amps",
+      "12 amps"
+     ],
+     "a": 2,
+     "x": "I1 = IT x R2 / (R1 + R2) = 12 x 4 / 6 = 8 amps. Each branch current is inversely proportional to the branch resistance.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.15",
+     "q": "A 4 ohm resistor is in series with two 10 ohm resistors in parallel. What is the equivalent resistance?",
+     "o": [
+      "9 ohms",
+      "14 ohms",
+      "24 ohms",
+      "5 ohms"
+     ],
+     "a": 0,
+     "x": "The parallel pair is 10/2 = 5 ohms. In series with 4 ohms, the total is 9 ohms.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Polarity and current direction",
+   "eo": [
+    "1.10",
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The direction of electron flow is from a point of negative potential to a point of positive potential.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "This flow of positive charges is known as conventional flow. Both conventions are in use and they are essentially equivalent.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+    },
+    {
+     "t": "p",
+     "text": "To find the polarity of a voltage drop, use the direction of the electron current as a basis.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig31",
+     "num": 31,
+     "cap": "Voltage Polarities",
+     "alt": "Series circuit with a battery and resistors, marked with plus and minus at each resistor. The minus is where electron current enters.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.41"
+    },
+    {
+     "t": "p",
+     "text": "The drop across the load is opposite to that of the source.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.40"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "How does conventional flow compare with electron flow?",
+     "o": [
+      "It is in the same direction",
+      "It is in the opposite direction",
+      "It is at right angles",
+      "It only occurs in AC circuits"
+     ],
+     "a": 1,
+     "x": "The direction of positive charges, or holes, is in the opposite direction of electron flow. This is conventional flow.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.11",
+     "q": "Where electron current enters a load, what is the polarity of the voltage?",
+     "o": [
+      "Positive",
+      "Zero",
+      "Negative",
+      "It alternates"
+     ],
+     "a": 2,
+     "x": "Where the electron current enters the load, the voltage is negative.",
+     "p": "P26"
+    }
+   ]
+  },
+  {
+   "title": "Kirchhoff's laws",
+   "eo": [
+    "1.12",
+    "1.13",
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Many circuits are extremely complex and cannot be solved with Ohm's Law. Kirchhoff's two laws solve them.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+    },
+    {
+     "t": "p",
+     "text": "Law 1, Kirchhoff's voltage law:",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "eq",
+     "text": "ΣEsource = ΣIR",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.43"
+    },
+    {
+     "t": "p",
+     "text": "The voltage law can be applied only to closed loops. A closed loop must have one or more voltage sources and a complete path for current flow.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.43"
+    },
+    {
+     "t": "p",
+     "text": "Law 2, Kirchhoff's current law:",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig35",
+     "num": 35,
+     "cap": "Illustration of Kirchhoff’s Current Law",
+     "alt": "Arrows for current arriving at and leaving junctions. The total arriving equals the total leaving.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.46"
+    },
+    {
+     "t": "p",
+     "text": "With more than one voltage source, a direction of current flow must be assumed. Sources that aid the assumed direction are positive, and sources that oppose it are negative.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.44"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "A negative answer means the assumed direction was wrong, but the magnitude is correct.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.44"
+    },
+    {
+     "t": "p",
+     "text": "Kirchhoff's laws are only restating the laws governing energy and charge conservation.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.42"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.12",
+     "q": "Kirchhoff's voltage law says the sum of the voltage drops around a closed loop equals:",
+     "o": [
+      "Zero current",
+      "The sum of the voltage sources of that loop",
+      "The total resistance of the loop",
+      "The current leaving a junction"
+     ],
+     "a": 1,
+     "x": "The sum of the voltage drops around a closed loop is equal to the sum of the voltage sources of that loop.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.13",
+     "q": "15 amps arrives at a junction with two paths leaving it. One path carries 10 amps. What does the other carry?",
+     "o": [
+      "5 amps",
+      "10 amps",
+      "15 amps",
+      "25 amps"
+     ],
+     "a": 0,
+     "x": "The current arriving at a junction equals the current leaving it, so the other path carries 15 - 10 = 5 amps.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.14",
+     "q": "A 30 volt source drives a loop with 5 ohm and 10 ohm resistors. Using Kirchhoff's voltage law, what is the current?",
+     "o": [
+      "0.5 amps",
+      "2 amps",
+      "3 amps",
+      "6 amps"
+     ],
+     "a": 1,
+     "x": "ΣE = ΣIR gives 30 = 5I + 10I = 15I, so I = 2 amps.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "DC circuit faults",
+   "eo": [
+    "1.16",
+    "1.17"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A series circuit has only one path for current. If this path is broken, no current flows and the circuit becomes an open circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.66"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig53",
+     "num": 53,
+     "cap": "Open Series Circuit",
+     "alt": "Three series circuits opened by an open switch, a burned-out fuse, and a burned-out resistor.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.66"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "No power is consumed by the loads, and total power consumed by the circuit is zero.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.66"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "If the resistance suddenly becomes zero, a very large current will flow.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+    },
+    {
+     "t": "fig",
+     "id": "es-02-fig56",
+     "num": 56,
+     "cap": "Shorted DC Circuit",
+     "alt": "A battery and resistor R with a shorting connection across the resistor, and a fuse in the circuit.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+    },
+    {
+     "t": "p",
+     "text": "With an increase in circuit current, the terminal voltage of the energy source will decrease, due to the voltage drop across its internal resistance.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+    },
+    {
+     "t": "p",
+     "text": "The increased current from a short circuit can damage power sources, burn insulation, and start fires.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.68"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "p",
+     "text": "Each parallel load is connected directly across the power source. In a series circuit, the other loads keep the circuit resistance from dropping to zero.",
+     "cite": "DOE-HDBK-1011/1-92 ES-02 p.69"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q420",
+     "eo": "1.16"
+    },
+    {
+     "eo": "1.16",
+     "q": "A parallel circuit opens at a point where only a branch current flows. What happens?",
+     "o": [
+      "All current stops",
+      "Only that branch is open, and current continues in the rest",
+      "The circuit becomes a short circuit",
+      "Total current increases"
+     ],
+     "a": 1,
+     "x": "Only that branch is open, and current continues to flow in the rest of the circuit.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.17",
+     "q": "What happens to the terminal voltage of the source when a short circuit raises circuit current?",
+     "o": [
+      "It increases",
+      "It does not change",
+      "It reverses polarity",
+      "It decreases"
+     ],
+     "a": 3,
+     "x": "With an increase in circuit current, the terminal voltage of the energy source will decrease, because of the voltage drop across its internal resistance.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.17",
+     "q": "Which type of circuit is more likely to develop a damaging short circuit?",
+     "o": [
+      "Series",
+      "Parallel",
+      "Open",
+      "Neither type"
+     ],
+     "a": 1,
+     "x": "Parallel circuits are more likely than series circuits to develop damaging short circuits, because each load is connected directly across the power source.",
+     "p": "P36"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Total series resistance",
+   "eo": "1.7",
+   "page": 23,
+   "problem": "A series circuit has a 60 Ω, a 100 Ω, and a 150 Ω resistor. What is the total resistance?",
+   "steps": [
+    "RT = R1 + R2 + R3.",
+    "RT = 60 + 100 + 150."
+   ],
+   "answer": "310 Ω",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.23"
+  },
+  {
+   "title": "Voltage drops in a series circuit",
+   "eo": "1.7",
+   "page": 29,
+   "problem": "A 120 V battery is in series with 40 Ω, 60 Ω, and 100 Ω resistors. Find the voltage across each resistor.",
+   "steps": [
+    "RT = 40 + 60 + 100 = 200 Ω.",
+    "I = VT / RT = 120 / 200 = 0.6 amps.",
+    "V1 = (0.6)(40) = 24 volts, V2 = (0.6)(60) = 36 volts, V3 = (0.6)(100) = 60 volts.",
+    "Check: 24 + 36 + 60 = 120 volts."
+   ],
+   "answer": "24 V, 36 V, and 60 V",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.29"
+  },
+  {
+   "title": "Branch current",
+   "eo": "1.14",
+   "page": 31,
+   "problem": "Two branches are across a 120 V source. Total current is 30 A, and branch R1 takes 22 A. What is the current in branch R2?",
+   "steps": [
+    "IT = I1 + I2.",
+    "I2 = IT - I1 = 30 - 22."
+   ],
+   "answer": "8 amps",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.31"
+  },
+  {
+   "title": "Equal resistors in parallel",
+   "eo": "1.7",
+   "page": 34,
+   "problem": "Five lamps, each with a resistance of 40 Ω, are connected in parallel. Find the total resistance.",
+   "steps": [
+    "RT = R / N.",
+    "RT = 40 / 5."
+   ],
+   "answer": "8 Ω",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.34"
+  },
+  {
+   "title": "Voltage divider",
+   "eo": "1.8",
+   "page": 37,
+   "problem": "24 volts is applied to 4 Ω, 8 Ω, and 12 Ω resistors in series. Find each voltage drop.",
+   "steps": [
+    "Total current: I = 24 / (4 + 8 + 12) = 1 amp.",
+    "Drops: (1)(4) = 4 volts, (1)(8) = 8 volts, (1)(12) = 12 volts."
+   ],
+   "answer": "4 V, 8 V, and 12 V",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.37"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the four types of circuit diagrams?",
+   "a": "Schematic, one-line, block, and wiring diagrams.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "How does a diode act in a rectifier?",
+   "a": "As a gate, which allows current to pass in one direction and blocks current in the other direction.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "What is resistivity?",
+   "a": "The measure of the resistance a material imposes on current flow.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "Compare the equivalent resistance of a parallel circuit to its individual resistors.",
+   "a": "The equivalent resistance is always less than any of the individual parallel circuit resistors.",
+   "p": "P18",
+   "place": null
+  },
+  {
+   "q": "What is the only current limit in a DC circuit?",
+   "a": "The circuit resistance.",
+   "p": "P33",
+   "place": null
+  },
+  {
+   "q": "What protects circuits against short circuits?",
+   "a": "Fuses.",
+   "p": "P35",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "DC voltages are commonly produced by batteries, DC generators, thermocouples, and rectifiers.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.11"
+  },
+  {
+   "text": "A rectifier converts AC to DC. Half-wave rectifiers convert only one-half of the sine wave, and full-wave rectifiers convert all of it.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.11"
+  },
+  {
+   "text": "A closed circuit has a complete path for current flow, and an open circuit does not.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.22"
+  },
+  {
+   "text": "A series circuit has one path for current flow. A parallel circuit has two or more components across the same voltage source.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.22"
+  },
+  {
+   "text": "Where the electron current enters the load, the voltage is negative.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.41"
+  },
+  {
+   "text": "Kirchhoff's voltage law and current law restate the laws governing energy and charge conservation.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.48"
+  },
+  {
+   "text": "An open series DC circuit consumes no power, and a shorted DC circuit has a sudden and very large increase in current.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.69"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook inconsistency",
+   "note": "One worked example gives 80/30 as 2.66 amperes, which rounds to 2.67. The example is not used.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.44"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Page 61 says the delta network shapes resemble the Greek letters π and Ω, but the figure and heading say π and Δ. This content is not on the page.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.61"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "Page 1 says a battery has cells connected in series, while ES-04 says connected voltaic cells and also covers parallel cells. The lesson does not repeat the series-only wording.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.1"
+  },
+  {
+   "type": "Left out",
+   "note": "Loop equations, node equations, and Y and delta conversions are in the handbook but no objective names them, so the lesson teaches Kirchhoff's laws on simpler circuits.",
+   "cite": "DOE-HDBK-1011/1-92 ES-02 p.49"
+  }
+ ],
+ "page_tags": []
+}

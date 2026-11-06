@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Energy, Work, and Power</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+</style>
+<main class="wrap">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p>DOE-HDBK-1010-92, Module 5.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">1.0</span> Given necessary information about a system, CALCULATE the work performed and/or power produced or used by that system. <cite>DOE-HDBK-1010-92 CP-05 p.v</cite></p><h3>Enabling objectives</h3><p><span class="num">1.1</span> DEFINE the following terms: <cite>DOE-HDBK-1010-92 CP-05 p.v</cite></p><ul class="letters"><li>a. Energy</li><li>b. Potential energy</li><li>c. Kinetic energy</li><li>d. Work</li><li>e. Power</li></ul><p><span class="num">1.2</span> STATE the mathematical expression for: <cite>DOE-HDBK-1010-92 CP-05 p.v</cite></p><ul class="letters"><li>a. Potential energy</li><li>b. Kinetic energy</li><li>c. Work</li><li>d. Power</li></ul><p><span class="num">1.3</span> For a mechanical system, CALCULATE energy, work, and power. <cite>DOE-HDBK-1010-92 CP-05 p.v</cite></p><p><span class="num">1.4</span> STATE the First Law of Thermodynamics, &quot;Conservation of Energy.&quot; <cite>DOE-HDBK-1010-92 CP-05 p.v</cite></p></div>
+<div class="pager"><a class="next" href="#concept-1">Energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 2 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Energy</h2><p class="count">Objectives 1.1</p><blockquote>"Energy is defined as the measure of the ability to do work." <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></blockquote>
+<p>Energy determines the capacity of a system to perform work and may be stored in various forms. <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></p>
+<p>Both thermal and mechanical energy can be separated into two categories, transient and stored. <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></p>
+<blockquote>"Transient energy is energy in motion, that is, energy being transferred from one place to another." <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></blockquote>
+<blockquote>"Stored energy is the energy contained within a substance or object." <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></blockquote>
+<p>Thermal energy is related to temperature: the higher the temperature, the greater the molecular movement and the greater the energy. Thermal energy in motion is commonly called heat. <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p>
+<blockquote>"Internal energy is the energy stored in a substance because of the motion and position of the particles of the substance." <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></blockquote>
+<p>Stored mechanical energy exists in one of two forms, kinetic or potential. <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p>
+<blockquote>"Transient mechanical energy is commonly referred to as work." <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></blockquote>
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 3 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Energy</h2><div class="check" data-a="1">
+  <div class="meta"><span>Objective 1.1</span><span>Q608</span></div>
+  <p>What is thermal energy in motion commonly called?</p>
+  <div class="opts"><button type="button" class="opt">A. Work</button><button type="button" class="opt">B. Heat</button><button type="button" class="opt">C. Internal energy</button><button type="button" class="opt">D. Potential energy</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. Energy moving from one place to another is transient energy. In the case of thermal energy, it is more commonly called heat. <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q608&amp;body=Item%3A%20Q608%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20What%20is%20thermal%20energy%20in%20motion%20commonly%20called%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%203%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Energy</a><a class="next" href="#concept-2">Potential and kinetic energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 4 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Potential and kinetic energy</h2><p class="count">Objectives 1.1, 1.2, 1.3</p><blockquote>"Potential energy is defined as the energy stored in an object because of its position." <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></blockquote>
+<p>The measure of an object's position is its vertical distance above a reference point. Its potential energy represents the work required to elevate it to that position from the reference point. <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p>
+<p class="eq"><b>PE = mgz / gc</b> <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p>
+<p>PE is in ft-lbf, m is mass in lbm, g is 32.17 ft/sec², gc is 32.17 (lbm-ft)/(lbf-sec²), and z is height above a reference in ft. <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p>
+<blockquote>"the g c is used only when using the English system of measurement." <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></blockquote>
+<blockquote>"Kinetic energy is defined as the energy stored in an object because of its motion." <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></blockquote>
+<p class="eq"><b>KE = mv² / 2gc</b> <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p>
+<p>KE is in ft-lbf, m is mass in lbm, v is velocity in ft/sec, and gc is 32.17 (lbm-ft)/(lbf-sec²). <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p>
+<p>An object's kinetic energy represents the energy required to increase its velocity from rest to its final velocity. <cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p>
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Energy</a><a class="next" href="#check-2">Knowledge check: Potential and kinetic energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 5 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Potential and kinetic energy</h2><div class="check" data-a="2">
+  <div class="meta"><span>Objective 1.1</span><span>Q609</span></div>
+  <p>A body's energy is stored because of its position. What type of energy is this?</p>
+  <div class="opts"><button type="button" class="opt">A. Kinetic energy</button><button type="button" class="opt">B. Internal energy</button><button type="button" class="opt">C. Potential energy</button><button type="button" class="opt">D. Transient energy</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Potential energy is defined as the energy stored in an object because of its position. <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q609&amp;body=Item%3A%20Q609%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20A%20body's%20energy%20is%20stored%20because%20of%20its%20position.%20What%20type%20of%20energy%20is%20this%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 1.2</span><span>Q610</span></div>
+  <p>Which expression gives kinetic energy in English units?</p>
+  <div class="opts"><button type="button" class="opt">A. mgz / gc</button><button type="button" class="opt">B. mv² / 2gc</button><button type="button" class="opt">C. Fd / t</button><button type="button" class="opt">D. Fv / 550</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. KE = mv² / 2gc. The expression mgz / gc is potential energy, and the others are power. <cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q610&amp;body=Item%3A%20Q610%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20Which%20expression%20gives%20kinetic%20energy%20in%20English%20units%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%202%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 1.3</span><span>Q611</span></div>
+  <p>What is the potential energy of a 20 lbm object held 10 feet above the ground?</p>
+  <div class="opts"><button type="button" class="opt">A. 2 ft-lbf</button><button type="button" class="opt">B. 30 ft-lbf</button><button type="button" class="opt">C. 200 ft-lbf</button><button type="button" class="opt">D. 6434 ft-lbf</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. PE = mgz / gc = (20 lbm)(32.17 ft/sec²)(10 ft) / 32.17 = 200 ft-lbf. <cite>DOE-HDBK-1010-92 CP-05 p.1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q611&amp;body=Item%3A%20Q611%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20What%20is%20the%20potential%20energy%20of%20a%2020%20lbm%20object%20held%2010%20feet%20above%20the%20ground%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Potential and kinetic energy</a><a class="next" href="#concept-3">Work <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 6 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Work</h2><p class="count">Objectives 1.1, 1.2, 1.3</p><blockquote>"Work is done by a force acting on a moving object if the object has some component of motion in the direction of the force." <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></blockquote>
+<p class="eq"><b>W = F x d</b> <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p>
+<p>W is work done in ft-lbf, F is the force applied in lbf, and d is the distance the object is moved in ft. <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p>
+<blockquote>"if no movement is achieved, no work has been accomplished." <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></blockquote>
+<p>Even if you feel fatigued, no work has been done if nothing moved. <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p>
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Potential and kinetic energy</a><a class="next" href="#check-3">Knowledge check: Work <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 7 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Work</h2><div class="check" data-a="3">
+  <div class="meta"><span>Objective 1.1</span><span>Q488</span></div>
+  <p>The work done by a force on an object is the product of the force and:</p>
+  <div class="opts"><button type="button" class="opt">A. The time the force is applied to the object</button><button type="button" class="opt">B. The mass of the object being moved</button><button type="button" class="opt">C. The velocity of the object at the end of the motion</button><button type="button" class="opt">D. The distance the object moves in the direction of the force</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Work is the product of the force and the distance the object moves in the direction of the force. <cite>DOE-1010 (DOE-HDBK-1010-92), Energy and Work, CP-05 p. 5</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q488&amp;body=Item%3A%20Q488%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20The%20work%20done%20by%20a%20force%20on%20an%20object%20is%20the%20product%20of%20the%20force%20and%3A%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%205%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span>Objective 1.3</span><span>Q612</span></div>
+  <p>A constant force of 300 lbf is applied to a box, but the box does not move. How much work is done?</p>
+  <div class="opts"><button type="button" class="opt">A. 0 ft-lbf</button><button type="button" class="opt">B. 300 ft-lbf</button><button type="button" class="opt">C. 150 ft-lbf</button><button type="button" class="opt">D. It depends on how long the force is applied</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. W = F x d = 300 lbf x 0 ft = 0 ft-lbf. If no movement is achieved, no work has been accomplished. <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q612&amp;body=Item%3A%20Q612%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20A%20constant%20force%20of%20300%20lbf%20is%20applied%20to%20a%20box%2C%20but%20the%20box%20does%20not%20move.%20How%20much%20work%20is%20done%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 1.3</span><span>Q613</span></div>
+  <p>A horizontal force of 100 lbf moves a box 6 feet horizontally. How much work is done?</p>
+  <div class="opts"><button type="button" class="opt">A. 16.7 ft-lbf</button><button type="button" class="opt">B. 106 ft-lbf</button><button type="button" class="opt">C. 600 ft-lbf</button><button type="button" class="opt">D. 3600 ft-lbf</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. W = F x d = 100 lbf x 6 ft = 600 ft-lbf. <cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q613&amp;body=Item%3A%20Q613%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20A%20horizontal%20force%20of%20100%20lbf%20moves%20a%20box%206%20feet%20horizontally.%20How%20much%20work%20is%20done%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Energy%20and%20Work%2C%20CP-05%20p.%204%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Work</a><a class="next" href="#concept-4">Conservation of energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 8 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Conservation of energy</h2><p class="count">Objectives 1.4</p><p>The First Law of Thermodynamics is simply stated: <cite>DOE-HDBK-1010-92 CP-05 p.6</cite></p>
+<blockquote>"energy cannot be created or destroyed, only altered in form." <cite>DOE-HDBK-1010-92 CP-05 p.6</cite></blockquote>
+<p>The energy expended in raising an object equals the potential energy it gains because of its height. <cite>DOE-HDBK-1010-92 CP-05 p.6</cite></p>
+<p class="eq"><b>Energy(initial) + Energy(added) - Energy(removed) = Energy(final)</b> <cite>DOE-HDBK-1010-92 CP-05 p.6</cite></p>
+<p>Neglecting heat, the balance can be written with work terms alone. This simplified energy balance applies only to mechanical problems. <cite>DOE-HDBK-1010-92 CP-05 p.7</cite></p>
+<p class="eq"><b>KE1 + PE1 + Won = KE2 + PE2 + Wby</b> <cite>DOE-HDBK-1010-92 CP-05 p.7</cite></p>
+<blockquote>"Any energy balance is a statement of the Law of Conservation of Energy." <cite>DOE-HDBK-1010-92 CP-05 p.7</cite></blockquote>
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Work</a><a class="next" href="#check-4">Knowledge check: Conservation of energy <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 9 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Conservation of energy</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1.4</span><span>Q614</span></div>
+  <p>How is the First Law of Thermodynamics simply stated?</p>
+  <div class="opts"><button type="button" class="opt">A. Energy cannot be created or destroyed, only altered in form</button><button type="button" class="opt">B. Energy always flows from high to low temperature</button><button type="button" class="opt">C. Work equals force times distance</button><button type="button" class="opt">D. Energy is lost whenever work is done</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The First Law of Thermodynamics is simply stated: energy cannot be created or destroyed, only altered in form. <cite>DOE-HDBK-1010-92 CP-05 p.6</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q614&amp;body=Item%3A%20Q614%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20How%20is%20the%20First%20Law%20of%20Thermodynamics%20simply%20stated%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Law%20of%20Conservation%20of%20Energy%2C%20CP-05%20p.%206%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Conservation of energy</a><a class="next" href="#concept-5">Power <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 10 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Power</h2><p class="count">Objectives 1.1, 1.2, 1.3</p><blockquote>"Power is defined as the amount of energy used per unit time or rate of doing work." <cite>DOE-HDBK-1010-92 CP-05 p.8</cite></blockquote>
+<blockquote>"Thermal power is the measure of thermal energy used per unit time." <cite>DOE-HDBK-1010-92 CP-05 p.8</cite></blockquote>
+<p>Thermal power is the rate of heat transfer or heat flow rate, calculated as heat used divided by time required. <cite>DOE-HDBK-1010-92 CP-05 p.8</cite></p>
+<blockquote>"Mechanical power is the rate at which work is done." <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></blockquote>
+<p>Mechanical power is expressed in joules/sec or watts in the mks system, and in ft-lbf/s or horsepower in the English system. <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+<p class="eq"><b>P = work done / time required</b> <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+<p class="eq"><b>P = Fd / t</b> <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+<blockquote>"One horsepower is equivalent to 550 ft-lbf/s and 745.7 watts." <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></blockquote>
+<p class="eq"><b>P (hp) = Fv / 550</b> <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+<p>These equations assume force and velocity are constant, or that average values are used. <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Conservation of energy</a><a class="next" href="#check-5">Knowledge check: Power <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 11 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Power</h2><div class="check" data-a="0">
+  <div class="meta"><span>Objective 1.1</span><span>Q489</span></div>
+  <p>Power is the amount of energy used:</p>
+  <div class="opts"><button type="button" class="opt">A. Per unit time</button><button type="button" class="opt">B. Per unit mass</button><button type="button" class="opt">C. Per unit distance</button><button type="button" class="opt">D. Per unit force</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Power is the amount of energy used per unit time. <cite>DOE-1010 (DOE-HDBK-1010-92), Power, CP-05 p. 11</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q489&amp;body=Item%3A%20Q489%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20Power%20is%20the%20amount%20of%20energy%20used%3A%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Power%2C%20CP-05%20p.%2011%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="2">
+  <div class="meta"><span>Objective 1.2</span><span>Q615</span></div>
+  <p>With force in lbf and velocity in ft/s, which expression gives power in horsepower?</p>
+  <div class="opts"><button type="button" class="opt">A. Fv x 550</button><button type="button" class="opt">B. F / 550v</button><button type="button" class="opt">C. Fv / 550</button><button type="button" class="opt">D. 550 / Fv</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. P = Fv / 550, because one horsepower is equivalent to 550 ft-lbf/s. <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q615&amp;body=Item%3A%20Q615%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20With%20force%20in%20lbf%20and%20velocity%20in%20ft%2Fs%2C%20which%20expression%20gives%20power%20in%20horsepower%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Power%2C%20CP-05%20p.%209%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="1">
+  <div class="meta"><span>Objective 1.3</span><span>Q616</span></div>
+  <p>A steady force of 100 lbf moves an object at a constant 11 ft/s. What is the power in horsepower?</p>
+  <div class="opts"><button type="button" class="opt">A. 0.5 hp</button><button type="button" class="opt">B. 2 hp</button><button type="button" class="opt">C. 11 hp</button><button type="button" class="opt">D. 1100 hp</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is B. P = Fv / 550 = (100 lbf)(11 ft/s) / 550 = 2 hp. <cite>DOE-HDBK-1010-92 CP-05 p.9</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q616&amp;body=Item%3A%20Q616%0ATopic%3A%20Basic%20Energy%20Concepts%0AQuestion%3A%20A%20steady%20force%20of%20100%20lbf%20moves%20an%20object%20at%20a%20constant%2011%20ft%2Fs.%20What%20is%20the%20power%20in%20horsepower%3F%0ASource%3A%20DOE-1010%20(DOE-HDBK-1010-92)%2C%20Power%2C%20CP-05%20p.%209%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> Power</a><a class="next" href="#examples">Worked examples <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="examples">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 12 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Worked examples</h2><div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Potential energy</h3><p>What is the potential energy of a 50 lbm object suspended 10 feet above the ground?</p><ol><li>PE = mgz / gc.</li><li>PE = (50 lbm)(32.17 ft/sec²)(10 ft) / (32.17 lbm-ft/lbf-sec²).</li></ol><p class="answer">Answer: 500 ft-lbf</p><p><cite>DOE-HDBK-1010-92 CP-05 p.2</cite></p></div>
+<div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Kinetic energy</h3><p>What is the kinetic energy of a 10 lbm object that has a velocity of 8 ft/sec?</p><ol><li>KE = mv² / 2gc.</li><li>KE = (10 lbm)(8 ft/sec)² / (2)(32.17 lbm-ft/lbf-sec²).</li></ol><p class="answer">Answer: 9.95 ft-lbf</p><p><cite>DOE-HDBK-1010-92 CP-05 p.3</cite></p></div>
+<div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Work on a box</h3><p>You apply a horizontal force of 200 lbf to a box, and it moves five feet horizontally. How much work have you done?</p><ol><li>W = F x d.</li><li>W = 200 lbf x 5 ft.</li></ol><p class="answer">Answer: 1000 ft-lbf</p><p><cite>DOE-HDBK-1010-92 CP-05 p.4</cite></p></div>
+<div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Power of a pump</h3><p>A pump does 1.5 x 10⁸ ft-lbf of work every 100 minutes. What is the power of the pump in hp?</p><ol><li>Power = work done / time required.</li><li>P = (1.5 x 10⁸ ft-lbf / 100 min)(1 min / 60 sec)(1 hp / 550 ft-lbf/sec).</li></ol><p class="answer">Answer: 45.5 hp</p><p><cite>DOE-HDBK-1010-92 CP-05 p.10</cite></p></div>
+<div class="ex"><div class="meta"><span>Objective 1.3</span></div><h3>Power from force and velocity</h3><p>A steady force of 1 lbf gives a ball a constant velocity of 5 ft/s. What is the power used?</p><ol><li>P = Fv / 550.</li><li>P = (1 lbf)(5 ft/sec) / 550.</li></ol><p class="answer">Answer: 9 x 10⁻³ hp</p><p><cite>DOE-HDBK-1010-92 CP-05 p.10</cite></p></div>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: Power</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 13 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Energy is the ability to do work. <cite>DOE-HDBK-1010-92 CP-05 p.5</cite></li><li>The work done by a force on an object is the product of the force and the distance the object moves in the direction of the force. <cite>DOE-HDBK-1010-92 CP-05 p.5</cite></li><li>Kinetic energy is the energy an object has because of its motion. Potential energy is the energy of an object due to its position. <cite>DOE-HDBK-1010-92 CP-05 p.5</cite></li><li>Energy cannot be created or destroyed, only altered in form. <cite>DOE-HDBK-1010-92 CP-05 p.7</cite></li><li>Power is the amount of energy used per unit time. <cite>DOE-HDBK-1010-92 CP-05 p.11</cite></li></ul>
+<div class="pager"><a href="#examples"><span aria-hidden="true">←</span> Worked examples</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 14 of 14</span></div>
+<h1>Energy, Work, and Power</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Energy</a></li><li><a href="#check-1">Knowledge check: Energy</a></li><li><a href="#concept-2">Potential and kinetic energy</a></li><li><a href="#check-2">Knowledge check: Potential and kinetic energy</a></li><li><a href="#concept-3">Work</a></li><li><a href="#check-3">Knowledge check: Work</a></li><li><a href="#concept-4">Conservation of energy</a></li><li><a href="#check-4">Knowledge check: Conservation of energy</a></li><li><a href="#concept-5">Power</a></li><li><a href="#check-5">Knowledge check: Power</a></li><li><a href="#examples">Worked examples</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from the sources below. No outside material was used.</p>
+<div class="obj"><h3>DOE-HDBK-1010-92</h3><p>File: DOE-HDBK-1010-92.pdf</p><p>Module CP-05, pages v, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11</p></div>
+
+
+<p>Quiz questions from this lesson: Q608, Q609, Q610, Q611, Q488, Q612, Q613, Q614, Q489, Q615, Q616.</p><p>Flashcards from this lesson: C707, C708, C709, C710, C711, C712.</p>
+<p><a href="../../reference/">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20CP-05&amp;body=Lesson%3A%20CP-05%20Energy%2C%20Work%2C%20and%20Power%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

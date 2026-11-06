@@ -1,0 +1,1238 @@
+{
+ "module_id": "IC-04",
+ "slug": "ic-04-flow-detectors",
+ "title": "Flow Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V1",
+ "handbook": "DOE-HDBK-1013/1-92",
+ "word_file": "Flow Detectors.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a flow instrument, RELATE the associated fundamental principles, including possible failure modes, to that instrument.",
+   "items": [],
+   "page": {
+    "pdf": 89,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "EXPLAIN the theory of operation of a basic head flow meter.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the basic construction of the following types of head flow detectors:",
+     "items": [
+      "a. Orifice plates",
+      "b. Venturi tube",
+      "c. Dall flow tube",
+      "d. Pitot tube"
+     ],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the following types of mechanical flow detectors, including the basic construction and theory of operation.",
+     "items": [
+      "a. Rotameter",
+      "b. Nutating Disk"
+     ],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE density compensation of a steam flow instrument to include the reason density compensation is required and the parameters used.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a block diagram of a typical flow detection device, STATE the purpose of the following blocks:",
+     "items": [
+      "a. Differential pressure (∆P) transmitter",
+      "b. Extractor",
+      "c. Indicator"
+     ],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "STATE the three environmental concerns which can affect the accuracy and reliability of flow sensing instrumentation.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Head flow meters operate on the principle of placing a restriction in the line to cause a differential pressure head.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Generally, the indicating instrument extracts the square root of the differential pressure and displays the flow rate on a linear indicator.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "The head flow meter actually measures volume flow rate rather than mass flow rate.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "If the volumetric flow rate signal is compensated for changes in temperature and/or pressure, a true mass flow rate signal can be obtained.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Three kinds of orifice plates are used: concentric, eccentric, and segmental",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The concentric orifice plate is the most common of the three types.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "The pressure loss is irrecoverable; therefore, the output pressure will always be less than the input pressure.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "The segmental portion of the orifice eliminates damming of foreign materials on the upstream side of the orifice when mounted in a horizontal pipe.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "they cause a high permanent pressure drop (outlet pressure will be 60% to 80% of inlet pressure), and they are subject to erosion",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "The venturi tube, illustrated in Figure 3, is the most accurate flow-sensing element when properly calibrated.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "The venturi tube has a converging conical inlet, a cylindrical throat, and a diverging recovery cone.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "The recovery cone allows for the recovery of pressure such that total pressure loss is only 10% to 25%.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "The major disadvantages of this type of flow detection are the high initial costs for installation and difficulty in installation and inspection.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+  },
+  {
+   "id": "P14",
+   "quote": "This type of flow tube has a pressure loss of about 5%.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.5"
+  },
+  {
+   "id": "P15",
+   "quote": "The pitot tube actually measures fluid velocity instead of fluid flow rate.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "The velocity of the fluid at the opening of the tube decreases to zero.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+  },
+  {
+   "id": "P17",
+   "quote": "Pitot tubes must be calibrated for each specific application, as there is no standardization.",
+   "sec": "Head Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+  },
+  {
+   "id": "P18",
+   "quote": "The variation in area is produced by the rise and fall of a floating element.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.8"
+  },
+  {
+   "id": "P19",
+   "quote": "The rotameter consists of a metal float and a conical glass tube, constructed such that the diameter increases with height.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.8"
+  },
+  {
+   "id": "P20",
+   "quote": "This type of flow meter is usually used to measure low flow rates.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+  },
+  {
+   "id": "P21",
+   "quote": "In a displacement flow meter, all of the fluid passes through the meter in almost completely isolated quantities.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+  },
+  {
+   "id": "P22",
+   "quote": "The most common type of displacement flow meter is the nutating disk, or wobble plate meter.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+  },
+  {
+   "id": "P23",
+   "quote": "As the fluid flows through the chamber, the disk wobbles, or executes a nutating motion.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+  },
+  {
+   "id": "P24",
+   "quote": "As the fluid velocity increases, the rate of heat flow from the heated wire to the flow stream increases.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+  },
+  {
+   "id": "P25",
+   "quote": "For a given magnetic field, the induced voltage will be proportional to the average velocity of the fluid.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+  },
+  {
+   "id": "P26",
+   "quote": "However, the fluid should have some degree of electrical conductivity.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+  },
+  {
+   "id": "P27",
+   "quote": "use the Doppler frequency shift of ultrasonic signals reflected from discontinuities in the fluid stream to obtain flow measurements.",
+   "sec": "Other Flow Meters",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+  },
+  {
+   "id": "P28",
+   "quote": "The transit time downstream is less than the transit time upstream due to the velocity of the fluid flow.",
+   "sec": "Other Flow Meters",
+   "cite": "Word: Flow Detectors.docx, slide 1.17 Sodium Flow Metering: Ultrasonic"
+  },
+  {
+   "id": "P29",
+   "quote": "When a conductive liquid flows through a magnetic field, a voltage is generated across the liquid.",
+   "sec": "Other Flow Meters",
+   "cite": "Word: Flow Detectors.docx, slide 1.19 Sodium Flow Metering: EM Flow Meters"
+  },
+  {
+   "id": "P30",
+   "quote": "The flow nozzle is commonly used for the measurement of steam flow and other high velocity fluid flow measurements where erosion may occur.",
+   "sec": "Steam Flow Detection",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.12"
+  },
+  {
+   "id": "P31",
+   "quote": "It is capable of measuring approximately 60% higher flow rates than an orifice plate with the same diameter.",
+   "sec": "Steam Flow Detection",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.12"
+  },
+  {
+   "id": "P32",
+   "quote": "Since steam is considered to be a gas, changes in pressure and temperature greatly affect its density.",
+   "sec": "Steam Flow Detection",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.13"
+  },
+  {
+   "id": "P33",
+   "quote": "upstream pressure is the only variable in the above equation that changes as the system operates.",
+   "sec": "Steam Flow Detection",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.13"
+  },
+  {
+   "id": "P34",
+   "quote": "By measuring temperature and pressure, a computerized system can be used to electronically compensate a steam or gas flow indication for changes in fluid density.",
+   "sec": "Steam Flow Detection",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.16"
+  },
+  {
+   "id": "P35",
+   "quote": "A loss of differential pressure integrity of the secondary element, the DP transmitter, will introduce an error into the indicated flow.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P36",
+   "quote": "The extractor is used to electronically calculate the square root of the differential pressure and provide an output proportional to system flow.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P37",
+   "quote": "The indicator provides either a local or a remote indication of system flow.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P38",
+   "quote": "flow rate is proportional to the square root of the differential pressure.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P39",
+   "quote": "If all means of flow indication are lost, flow can be approximated using pump differential pressure.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P40",
+   "quote": "Pump differential pressure is proportional to the square of pump flow.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+  },
+  {
+   "id": "P41",
+   "quote": "The density of the fluid, ambient temperature, and humidity are the three factors which can affect the accuracy and reliability of flow sensing instrumentation.",
+   "sec": "Flow Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.19"
+  },
+  {
+   "id": "P42",
+   "quote": "What will be seen is very erratic indication from the detector.",
+   "sec": "Failures",
+   "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+  },
+  {
+   "id": "P43",
+   "quote": "Indicated flow would be less than actual because of a lowering Differential Pressure sensed by the instrument.",
+   "sec": "Failures",
+   "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+  },
+  {
+   "id": "P44",
+   "quote": "Indicated flow would be more than actual because of higher Differential Pressure sensed by the instrument.",
+   "sec": "Failures",
+   "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Flow meter theory",
+   "cite": "Word: Flow Detectors.docx, slide 1.2 Flow-Meter Theory"
+  },
+  {
+   "step": "Orifice plates",
+   "cite": "Word: Flow Detectors.docx, slide 1.3 Basic Flow Meter"
+  },
+  {
+   "step": "Venturi tube",
+   "cite": "Word: Flow Detectors.docx, slide 1.5 Venturi Tube"
+  },
+  {
+   "step": "Flow nozzle",
+   "cite": "Word: Flow Detectors.docx, slide 1.8 Flow Nozzle"
+  },
+  {
+   "step": "Elbow meter",
+   "cite": "Word: Flow Detectors.docx, slide 1.10 Elbow Meter"
+  },
+  {
+   "step": "Pitot tube",
+   "cite": "Word: Flow Detectors.docx, slide 1.12 Pitot Tube"
+  },
+  {
+   "step": "Failure modes",
+   "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+  },
+  {
+   "step": "Environmental effects",
+   "cite": "Word: Flow Detectors.docx, slide 1.16 Environmental Effects on Flow Detectors"
+  },
+  {
+   "step": "Sodium flow: ultrasonic",
+   "cite": "Word: Flow Detectors.docx, slide 1.17 Sodium Flow Metering: Ultrasonic"
+  },
+  {
+   "step": "Sodium flow: electromagnetic",
+   "cite": "Word: Flow Detectors.docx, slide 1.19 Sodium Flow Metering: EM Flow Meters"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Theory of head flow meters",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig1",
+     "num": 1,
+     "cap": "Head Flow Meter",
+     "alt": "Pipe with an orifice restriction and pressure taps on each side, connected to a manometer.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The primary element is the restriction in the line, and the secondary element is the differential pressure measuring device.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Temperature and pressure affect the density of the fluid. Temperature and density are inversely proportional, while pressure and density are directly proportional.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q391",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q325",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What are the two elements of a head flow meter?",
+     "o": [
+      "A transmitter and a turbine",
+      "A restriction and a differential pressure measuring device",
+      "A float and a tube",
+      "A magnet and a coil"
+     ],
+     "a": 1,
+     "x": "The primary element is the restriction, and the secondary element is the differential pressure measuring device.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What does a head flow meter actually measure?",
+     "o": [
+      "Volume flow rate",
+      "Fluid temperature",
+      "Fluid density",
+      "Mass flow rate"
+     ],
+     "a": 0,
+     "x": "The head flow meter actually measures volume flow rate rather than mass flow rate.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Orifice plates",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The orifice plate is the simplest and most economical flowpath restriction. Plates are 1/16 to 1/4 inch thick, mounted between flanges in a straight run of smooth pipe.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig2",
+     "num": 2,
+     "cap": "Orifice Plates",
+     "alt": "Three orifice plates: concentric with a center hole, eccentric with an offset hole, and segmental with a partial opening.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "As fluid passes through the orifice, velocity rises to a maximum and pressure falls to a minimum.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q326",
+     "eo": "1.2"
+    },
+    {
+     "existing": "Q327",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What are the two distinct disadvantages of orifice plates?",
+     "o": [
+      "High permanent pressure drop and erosion",
+      "High cost and poor accuracy",
+      "Damming and low flow limits",
+      "Difficult installation and short range"
+     ],
+     "a": 0,
+     "x": "Orifice plates cause a high permanent pressure drop and are subject to erosion.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which orifice plate is the most common?",
+     "o": [
+      "Flat",
+      "Eccentric",
+      "Segmental",
+      "Concentric"
+     ],
+     "a": 3,
+     "x": "The concentric orifice plate is the most common of the three types.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Venturi and dall flow tubes",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig3",
+     "num": 3,
+     "cap": "Venturi Tube",
+     "alt": "Venturi tube with a converging inlet, a cylindrical throat, and a diverging recovery cone.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Low pressure is measured in the throat, and high pressure upstream of the entrance cone.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig4",
+     "num": 4,
+     "cap": "Dall Flow Tube",
+     "alt": "Dall flow tube with an inlet shoulder, a converging cone, a slotted throat, and a diverging exit cone.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The dall flow tube has a higher ratio of pressure developed to pressure lost than the venturi. It is more compact and is commonly used in large flow applications.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Which is the most accurate flow-sensing element when properly calibrated?",
+     "o": [
+      "Pitot tube",
+      "Rotameter",
+      "Orifice plate",
+      "Venturi tube"
+     ],
+     "a": 3,
+     "x": "The venturi tube is the most accurate flow-sensing element when properly calibrated.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.2",
+     "q": "About what is the pressure loss of a dall flow tube?",
+     "o": [
+      "5%",
+      "25%",
+      "40%",
+      "80%"
+     ],
+     "a": 0,
+     "x": "This type of flow tube has a pressure loss of about 5%.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Pitot tubes, nozzles, and elbows",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In its simplest form, a pitot tube is a tube with an opening at the end, facing the flowing fluid.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig5",
+     "num": 5,
+     "cap": "Pitot Tube",
+     "alt": "Pipe with a pitot tube facing the flow and a pressure tap, connected to high and low pressure inputs.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "This provides the high pressure input to a differential pressure detector, and a pressure tap provides the low pressure input.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "eq",
+     "text": "V̇ = KAV",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "A flow nozzle is similar to the venturi and normally used for high velocity flow. Its smooth contour suits fluids containing particulates.",
+     "cite": "Word: Flow Detectors.docx, slide 1.8 Flow Nozzle"
+    },
+    {
+     "t": "p",
+     "text": "An elbow meter uses the slight pressure difference between the inner and outer pipe wall at a bend, and can measure flow in either direction.",
+     "cite": "Word: Flow Detectors.docx, slide 1.10 Elbow Meter"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What does a pitot tube actually measure?",
+     "o": [
+      "Pipe pressure drop only",
+      "Fluid velocity",
+      "Mass flow rate",
+      "Fluid density"
+     ],
+     "a": 1,
+     "x": "The pitot tube actually measures fluid velocity instead of fluid flow rate.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Rotameters and nutating disks",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig6",
+     "num": 6,
+     "cap": "Rotameter",
+     "alt": "Rotameter: a float in a conical glass tube that widens with height, with a calibrated scale.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.8"
+    },
+    {
+     "t": "p",
+     "text": "With no flow, the float rests at the bottom. As flow increases, pressure drop increases, and the float rises to indicate the amount of flow.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig7",
+     "num": 7,
+     "cap": "Nutating Disk",
+     "alt": "Nutating disk meter: a circular disk on a central ball inside a chamber.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The disk is attached to a central ball, with a shaft held in an inclined position by a cam or roller.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "The volume needed for one revolution is known, so total flow is the number of rotations times that volume.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What happens to the float in a rotameter as flow rises?",
+     "o": [
+      "It sinks",
+      "It rotates only",
+      "It does not move",
+      "It rises in the tube"
+     ],
+     "a": 3,
+     "x": "The higher the flow rate the greater the pressure drop, and the farther up the tube the float rises.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.3",
+     "q": "How does a nutating disk meter find total flow?",
+     "o": [
+      "Float height",
+      "Disk rotations times a known volume per rotation",
+      "Differential pressure across the disk",
+      "Voltage from the disk"
+     ],
+     "a": 1,
+     "x": "Total flow is calculated by multiplying the number of disk rotations by the known volume of fluid.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Ultrasonic and electromagnetic meters",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "The hot-wire anemometer is principally used for gas flow. Cooling changes the resistance of a heated platinum wire.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+    },
+    {
+     "t": "p",
+     "text": "The electromagnetic flowmeter is similar in principle to a generator: fluid in a pipe flows through a magnetic field.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "The handbook describes ultrasonic equipment that uses",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "The sodium flow metering slides describe transit time meters. Two transducers send pulses upstream and downstream.",
+     "cite": "Word: Flow Detectors.docx, slide 1.17 Sodium Flow Metering: Ultrasonic"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q328",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q120",
+     "eo": "From the lesson plan"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "What must a fluid have for an electromagnetic flowmeter to work?",
+     "o": [
+      "A high viscosity",
+      "A low density",
+      "Suspended solids",
+      "Some degree of electrical conductivity"
+     ],
+     "a": 3,
+     "x": "The fluid should have some degree of electrical conductivity.",
+     "p": "P26"
+    }
+   ]
+  },
+  {
+   "title": "Steam flow and density compensation",
+   "eo": [
+    "1.4"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig8",
+     "num": 8,
+     "cap": "Flow Nozzle",
+     "alt": "Flow nozzle mounted in a pipe, with a streamlined throat.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.12"
+    },
+    {
+     "t": "p",
+     "text": "The flow nozzle requires less straight run piping than an orifice plate, but the pressure drop is about the same.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "eq",
+     "text": "ṁ = V̇ρ",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Density can be calculated from upstream pressure, molecular weight, and absolute temperature. Since steam temperature is relatively constant in most steam systems,",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "fig",
+     "id": "ic-04-fig9",
+     "num": 9,
+     "cap": "Simple Mass Flow Detection System",
+     "alt": "Simple mass flow system with differential pressure, pressure, and temperature inputs to a computing circuit.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q390",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "Why does a steam flow instrument need density compensation?",
+     "o": [
+      "Steam has constant density",
+      "The flow nozzle erodes",
+      "Changes in pressure and temperature greatly affect steam density",
+      "Steam is incompressible"
+     ],
+     "a": 2,
+     "x": "Since steam is considered to be a gas, changes in pressure and temperature greatly affect its density.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Flow circuitry and environmental concerns",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-04-fig11",
+     "num": 11,
+     "cap": "Differential Pressure Flow Detection Block Diagram",
+     "alt": "Block diagram running from the differential pressure transmitter through the extractor to the indicator.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.17"
+    },
+    {
+     "t": "p",
+     "text": "The DP transmitter uses the pressure difference to position a device such as a bellows, which repositions the core of a differential transformer.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "p",
+     "text": "Density matters most for gas flows. Any change in fluid temperature or pressure must be compensated for.",
+     "cite": "DOE-HDBK-1013/1-92 IC-04 p.18"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "In a flow detection circuit, what does the extractor do?",
+     "o": [
+      "Calculates the square root of the differential pressure",
+      "Squares the flow signal",
+      "Measures temperature",
+      "Removes moisture from the line"
+     ],
+     "a": 0,
+     "x": "The extractor electronically calculates the square root of the differential pressure.",
+     "p": "P36"
+    },
+    {
+     "eo": "1.6",
+     "q": "What are the three factors that can affect flow sensing instrumentation?",
+     "o": [
+      "Fluid density, ambient temperature, and humidity",
+      "Pipe size, pump speed, and valve position",
+      "Noise, voltage, and radiation",
+      "Viscosity, color, and altitude"
+     ],
+     "a": 0,
+     "x": "The density of the fluid, ambient temperature, and humidity are the three factors.",
+     "p": "P41"
+    },
+    {
+     "eo": "1.5",
+     "q": "All flow indication is lost. How can flow be approximated?",
+     "o": [
+      "Using pump motor noise",
+      "It cannot be approximated",
+      "Using pump differential pressure",
+      "Using tank color"
+     ],
+     "a": 2,
+     "x": "If all means of flow indication are lost, flow can be approximated using pump differential pressure.",
+     "p": "P39"
+    }
+   ]
+  },
+  {
+   "title": "Head flow meter failure modes",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A leak on the high-pressure connection:",
+     "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "A leak on the low-pressure connection:",
+     "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "Erosion of the orifice plate leaves less restriction, so differential pressure falls and indicated flow is less than actual.",
+     "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+    },
+    {
+     "t": "p",
+     "text": "Vapor in the liquid causes pressure fluctuations.",
+     "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "From the lesson plan",
+     "q": "A D/P flow instrument has a leak on the high pressure connection. How does indicated flow compare with actual?",
+     "o": [
+      "Erratic only",
+      "Less than actual",
+      "More than actual",
+      "Equal to actual"
+     ],
+     "a": 1,
+     "x": "A high-pressure leak lowers the differential pressure sensed, so indicated flow is less than actual.",
+     "p": "P43"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "A D/P flow instrument has a leak on the low pressure connection. How does indicated flow compare with actual?",
+     "o": [
+      "More than actual",
+      "Equal to actual",
+      "Zero",
+      "Less than actual"
+     ],
+     "a": 0,
+     "x": "A low-pressure leak raises the differential pressure sensed, so indicated flow is more than actual.",
+     "p": "P44"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "What indication results from vapor in the liquid passing through a head flow meter?",
+     "o": [
+      "A steady low reading",
+      "No effect",
+      "Very erratic indication",
+      "A steady high reading"
+     ],
+     "a": 2,
+     "x": "Pressure fluctuations from the vapor cause very erratic indication from the detector.",
+     "p": "P42"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "High-side leak",
+   "eo": "1.1",
+   "page": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart",
+   "problem": "A leak develops on the high pressure connection of a head flow meter. What happens to the indication?",
+   "steps": [
+    "Differential pressure sensed by the instrument falls",
+    "Flow is calculated from differential pressure"
+   ],
+   "answer": "Indicated flow is less than actual.",
+   "cite": "Word: Flow Detectors.docx, slide 1.14 Failure Modes Chart"
+  },
+  {
+   "title": "Volumetric flow from a pitot tube",
+   "eo": "1.2",
+   "page": 6,
+   "problem": "What does the flow coefficient K normally equal in V̇ = KAV for a pitot tube?",
+   "steps": [
+    "The pitot tube measures velocity",
+    "Area and the flow coefficient convert it to volumetric flow"
+   ],
+   "answer": "K is normally about 0.8.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.6"
+  }
+ ],
+ "facts": [
+  {
+   "q": "How is flow related to differential pressure in a head flow meter?",
+   "a": "Flow rate is proportional to the square root of the differential pressure.",
+   "p": "P38",
+   "place": null
+  },
+  {
+   "q": "What are the three kinds of orifice plates?",
+   "a": "Concentric, eccentric, and segmental.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What are the major disadvantages of a venturi tube?",
+   "a": "High initial costs for installation and difficulty in installation and inspection.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "What does an extractor do in a flow detection circuit?",
+   "a": "It electronically calculates the square root of the differential pressure, giving an output proportional to system flow.",
+   "p": "P36",
+   "place": null
+  },
+  {
+   "q": "How is pump differential pressure related to pump flow?",
+   "a": "It is proportional to the square of pump flow.",
+   "p": "P40",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Head flow meters place a restriction in the line to cause a pressure drop, and the differential pressure is converted to a flow measurement.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.7"
+  },
+  {
+   "text": "A rotameter uses a float in a conical tube, and a nutating disk wobbles as fluid passes through.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.11"
+  },
+  {
+   "text": "Changes in temperature and pressure greatly affect indicated steam flow.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.16"
+  },
+  {
+   "text": "The density of the fluid, ambient temperature, and humidity can affect flow sensing instrumentation.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.19"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 10",
+   "note": "Steam flow and its density compensation are on a page tagged Water-system only.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.12"
+  },
+  {
+   "type": "Word and handbook",
+   "note": "The handbook describes Doppler ultrasonic meters, and the sodium flow metering slide describes transit time meters and mentions Doppler as the other type. These are two device types, not a conflict, and the lesson shows both.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.10"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Equations 4-1 and 4-2 on p.2 define T in °F, though a density relationship would use absolute temperature. The lesson does not show those equations.",
+   "cite": "DOE-HDBK-1013/1-92 IC-04 p.2"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The hot-wire, ultrasonic, and electromagnetic meters are not in the handbook objectives, so that page is marked From the lesson plan although some content is from the handbook. The Word objectives add flow nozzles and elbow meters.",
+   "cite": "Word: Flow Detectors.docx, slide 1.19 Sodium Flow Metering: EM Flow Meters"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

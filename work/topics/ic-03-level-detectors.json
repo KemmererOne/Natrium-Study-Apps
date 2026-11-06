@@ -1,0 +1,1089 @@
+{
+ "module_id": "IC-03",
+ "slug": "ic-03-level-detectors",
+ "title": "Level Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V1",
+ "handbook": "DOE-HDBK-1013/1-92",
+ "word_file": "Level Detectors.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a level instrument, RELATE the associated fundamental principles, including possible failure modes, to that instrument.",
+   "items": [],
+   "page": {
+    "pdf": 63,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the principle of operation of the following types of level instrumentation:",
+     "items": [
+      "a. Gauge glass",
+      "b. Ball float",
+      "c. Chain float",
+      "d. Magnetic bond",
+      "e. Conductivity probe",
+      "f. Differential pressure (∆P)"
+     ],
+     "page": {
+      "pdf": 63,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN the process of density compensation in level detection systems to include:",
+     "items": [
+      "a. Why needed",
+      "b. How accomplished"
+     ],
+     "page": {
+      "pdf": 63,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the three reasons for using remote level indicators.",
+     "items": [],
+     "page": {
+      "pdf": 63,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given a basic block diagram of a differential pressure detector-type level instrument, STATE the purpose of the following blocks:",
+     "items": [
+      "a. Differential pressure (D/P) transmitter",
+      "b. Amplifier",
+      "c. Indication"
+     ],
+     "page": {
+      "pdf": 63,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the three environmental concerns which can affect the accuracy and reliability of level detection instrumentation.",
+     "items": [],
+     "page": {
+      "pdf": 63,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Liquid level measuring devices are classified into two groups: (a) direct method, and (b) inferred method.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "In the gauge glass method, a transparent tube is attached to the bottom and top (top connection not needed in a tank open to atmosphere) of the tank that is monitored.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "the liquid seeks its own level due to the pressure of the liquid in the vessel.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Gauge glasses made from tubular glass or plastic are used for service up to 450 psig and 400°F.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "The presence or absence of liquid in the chamber determines if the light rays are refracted into the chamber or reflected back to the outer surface of the glass.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "This causes the gauge glass to appear silvery-white.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "This results in the glass appearing black",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "Light is bent, or refracted, to a greater extent in water than in steam.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "The portion of the gauge containing water appears green; the portion of the gauge from that level upward appears red.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "If the liquid level changes, the float will follow and change the position of the pointer attached to the rotating shaft.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "The actual level range is determined by the length of the connecting arm.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "The range of level measured will be limited only by the size of the vessel.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.5"
+  },
+  {
+   "id": "P13",
+   "quote": "The magnetic bond method was developed to overcome the problems of cages and stuffing boxes.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "When the liquid makes contact with any of the electrodes, an electric current will flow between the electrode and ground.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "A typical system has three probes: a low level probe, a high level probe, and a high level alarm probe.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "The relay in turn will actuate an alarm, a pump, a control valve, or all three.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+  },
+  {
+   "id": "P17",
+   "quote": "The higher pressure, caused by the fluid in the tank, is compared to a lower reference pressure (usually atmospheric).",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.7"
+  },
+  {
+   "id": "P18",
+   "quote": "therefore, the pressure differential is the hydrostatic head, or weight, of the liquid in the tank.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.7"
+  },
+  {
+   "id": "P19",
+   "quote": "The reference leg must be maintained dry so that there is no liquid head pressure on the low pressure side of the transmitter.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+  },
+  {
+   "id": "P20",
+   "quote": "The gas or vapor pressure is equally applied to the low and high pressure sides.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+  },
+  {
+   "id": "P21",
+   "quote": "To compensate for this effect, the reference leg is filled with the same fluid as the tank.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+  },
+  {
+   "id": "P22",
+   "quote": "The ∆P transmitter is exposed to equal pressure on the high and low pressure sides when the liquid level is at its maximum; therefore, the differential pressure is zero.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.9"
+  },
+  {
+   "id": "P23",
+   "quote": "the differential pressure and the transmitter output are inversely proportional to the tank level.",
+   "sec": "Level Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.9"
+  },
+  {
+   "id": "P24",
+   "quote": "when differential pressure rises, indicated level rises for level detectors in a dry reference leg.",
+   "sec": "Level Detectors",
+   "cite": "Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!"
+  },
+  {
+   "id": "P25",
+   "quote": "a differential pressure drop causes indicated level to rise for level detectors installed with a wet reference leg.",
+   "sec": "Level Detectors",
+   "cite": "Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!"
+  },
+  {
+   "id": "P26",
+   "quote": "The primary disadvantage is that you only get level indication at specific points",
+   "sec": "Level Detectors",
+   "cite": "Word: Level Detectors.docx, slide 1.1 Introduction and float switch"
+  },
+  {
+   "id": "P27",
+   "quote": "As the density of the steam or vapor increases, the weight increases and causes an increase in hydrostatic head even though the actual level of the tank has not changed.",
+   "sec": "Density Compensation",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.11"
+  },
+  {
+   "id": "P28",
+   "quote": "As the temperature of the fluid in the tank is increased, the density of the fluid decreases.",
+   "sec": "Density Compensation",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.12"
+  },
+  {
+   "id": "P29",
+   "quote": "The density of the fluid in the reference leg is dependent upon the ambient temperature of the room in which the tank is located",
+   "sec": "Density Compensation",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.12"
+  },
+  {
+   "id": "P30",
+   "quote": "some means of density compensation must be incorporated in order to have an accurate indication of tank level.",
+   "sec": "Density Compensation",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.12"
+  },
+  {
+   "id": "P31",
+   "quote": "Density compensation may also be accomplished through electronic circuitry.",
+   "sec": "Density Compensation",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.13"
+  },
+  {
+   "id": "P32",
+   "quote": "Remote indication is necessary to provide transmittal of vital level information to a central location",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+  },
+  {
+   "id": "P33",
+   "quote": "The level being measured may be in an unsafe/radioactive area.",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+  },
+  {
+   "id": "P34",
+   "quote": "The transducer changes this mechanical motion into an electrical signal.",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+  },
+  {
+   "id": "P35",
+   "quote": "It primarily affects level sensing instruments which utilize a wet reference leg.",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.16"
+  },
+  {
+   "id": "P36",
+   "quote": "Ambient temperature variations will affect the accuracy and reliability of level detection instrumentation.",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.16"
+  },
+  {
+   "id": "P37",
+   "quote": "High humidity causes moisture to collect on the equipment.",
+   "sec": "Level Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.16"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Float switch",
+   "cite": "Word: Level Detectors.docx, slide 1.1 Introduction and float switch"
+  },
+  {
+   "step": "Differential pressure basics",
+   "cite": "Word: Level Detectors.docx, slide 1.2 Differntial Pressure Basics"
+  },
+  {
+   "step": "Reference leg configurations",
+   "cite": "Word: Level Detectors.docx, slide 1.5 Reference Leg Configurations"
+  },
+  {
+   "step": "Environmental effects",
+   "cite": "Word: Level Detectors.docx, slide 1.6 Environmental Effects on Level Detectors"
+  },
+  {
+   "step": "Normal response of each configuration",
+   "cite": "Word: Level Detectors.docx, slide 1.7 The second most important slide of this section!!"
+  },
+  {
+   "step": "Effects on indicated level",
+   "cite": "Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Gauge glasses",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "A dipstick is an example of the direct method. A pressure gauge at the bottom of a tank, reading hydrostatic head, is an example of the inferred method.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig1",
+     "num": 1,
+     "cap": "Transparent Tube",
+     "alt": "Two tanks with transparent tubes beside them: one tube open at the top, and one connected to the tank at top and bottom.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Gauge glasses effectively form a U tube manometer, where",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "For higher temperatures and pressures, a metal-bodied gauge glass with a heavy glass or quartz section is used.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What operating principle does a gauge glass use?",
+     "o": [
+      "A float moves a pointer",
+      "Liquid completes an electrical circuit",
+      "A diaphragm moves with pressure",
+      "The liquid seeks its own level, like a U tube manometer"
+     ],
+     "a": 3,
+     "x": "Gauge glasses form a U tube manometer where the liquid seeks its own level.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "A pressure gauge at the bottom of a tank reads hydrostatic head. Which group of level measurement is this?",
+     "o": [
+      "Direct method",
+      "Inferred method",
+      "Reflex method",
+      "Float method"
+     ],
+     "a": 1,
+     "x": "A pressure gauge at the bottom of a tank is an example of the inferred method.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "Reflex and refraction gauge glasses",
+   "eo": [
+    "1.1"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "In a reflex gauge glass, light is reflected back at an air-glass interface.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Where water fills the chamber, the light is refracted into the chamber.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "In a refraction gauge glass, what color shows the portion containing water?",
+     "o": [
+      "Silvery-white",
+      "Red",
+      "Green",
+      "Black"
+     ],
+     "a": 2,
+     "x": "The portion of the gauge containing water appears green, and from that level upward it appears red.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Float detectors",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The ball float is a direct reading mechanism. A ball float is attached to a rod connected to a rotating shaft that indicates level on a calibrated scale.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig5",
+     "num": 5,
+     "cap": "Ball Float Level Mechanism",
+     "alt": "Ball float on a rod, connected through a stuffing box to a rotating shaft and pointer.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig6",
+     "num": 6,
+     "cap": "Chain Float Gauge",
+     "alt": "Chain float gauge: a float on a chain over a rotating element, with a weight keeping the chain taut.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.5"
+    },
+    {
+     "t": "p",
+     "text": "A chain float is used where the small level limitations of ball floats must be exceeded.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig7",
+     "num": 7,
+     "cap": "Magnetic Bond Detector",
+     "alt": "Magnetic float outside a non-magnetic tube, with an inner magnet connected to a level indicator.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The float travels outside a non-magnetic tube housing an inner magnet. The outer magnet attracts the inner magnet, which follows the level.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+    },
+    {
+     "t": "p",
+     "text": "A float switch gives a simple, accurate, and reliable signal, such as to start a sump pump.",
+     "cite": "Word: Level Detectors.docx, slide 1.1 Introduction and float switch"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What limits the level range of a ball float?",
+     "o": [
+      "The size of the vessel",
+      "The weight on the chain",
+      "The strength of the magnet",
+      "The length of the connecting arm"
+     ],
+     "a": 3,
+     "x": "The actual level range is determined by the length of the connecting arm.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.1",
+     "q": "What limits the level range of a chain float?",
+     "o": [
+      "Temperature of the liquid",
+      "The relay rating",
+      "The arm length",
+      "The size of the vessel"
+     ],
+     "a": 3,
+     "x": "The range of level measured will be limited only by the size of the vessel.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why was the magnetic bond method developed?",
+     "o": [
+      "To detect vapor pressure",
+      "To overcome the problems of cages and stuffing boxes",
+      "To measure density",
+      "To reduce electrical current"
+     ],
+     "a": 1,
+     "x": "The magnetic bond method was developed to overcome the problems of cages and stuffing boxes.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Conductivity probes",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A conductivity probe system has one or more level detectors, an operating relay, and a controller.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig8",
+     "num": 8,
+     "cap": "Conductivity Probe Level Detection System",
+     "alt": "Conductivity probes of different lengths in a tank, connected to a controller.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "The current energizes a relay, whose contacts open or close.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "In a conductivity probe system, what happens when liquid touches an electrode?",
+     "o": [
+      "A float rises",
+      "The diaphragm moves",
+      "The reference leg fills",
+      "Current flows between the electrode and ground"
+     ],
+     "a": 3,
+     "x": "When the liquid contacts an electrode, an electric current flows between the electrode and ground.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Differential pressure: open tank and dry reference leg",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig9",
+     "num": 9,
+     "cap": "Open Tank Differential Pressure Detector",
+     "alt": "Open tank with a differential pressure detector on the bottom, and its low pressure side vented to atmosphere.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.7"
+    },
+    {
+     "t": "p",
+     "text": "With an open tank, the low pressure side is vented to the atmosphere,",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "For a pressurized tank, both the high and low pressure sides must be connected.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig10",
+     "num": 10,
+     "cap": "Closed Tank, Dry Reference Leg",
+     "alt": "Closed tank with a high pressure connection below the liquid and a dry reference leg from the top of the tank to the low pressure side.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "The transmitter output is therefore directly proportional to the hydrostatic head pressure, which is the level in the tank.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q269",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why must a dry reference leg be kept dry?",
+     "o": [
+      "To cool the transmitter",
+      "So there is no liquid head pressure on the low pressure side",
+      "To keep the tank pressurized",
+      "To prevent corrosion of the tank"
+     ],
+     "a": 1,
+     "x": "The reference leg must be maintained dry so there is no liquid head pressure on the low pressure side.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.1",
+     "q": "With a dry reference leg on a pressurized tank, why does gas pressure not affect the level reading?",
+     "o": [
+      "It is vented to atmosphere",
+      "It is much lower than the liquid head",
+      "It is compensated by temperature",
+      "It is applied equally to both sides of the transmitter"
+     ],
+     "a": 3,
+     "x": "The gas or vapor pressure is equally applied to the low and high pressure sides.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Wet reference leg",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Where a tank contains a condensible fluid, condensation is greatly increased in the reference leg.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig11",
+     "num": 11,
+     "cap": "Closed Tank, Wet Reference Leg",
+     "alt": "Closed tank with a filled reference leg to the high pressure side and the tank connection to the low pressure side.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The filled leg applies a constant hydrostatic pressure to the high pressure side, equal to the maximum level to be measured.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "A leak in the reference leg reduces differential pressure, causing indicated level to rise above actual level.",
+     "cite": "Word: Level Detectors.docx, slide 1.9 Your turn to practice!!"
+    },
+    {
+     "t": "p",
+     "text": "A rise in reference leg temperature makes its fluid expand and spill over, which also causes indicated level to rise above actual level.",
+     "cite": "Word: Level Detectors.docx, slide 1.8 The most important slide of this section!!"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q387",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q388",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q267",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q268",
+     "eo": "1.1"
+    }
+   ]
+  },
+  {
+   "title": "Density compensation",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If a vapor with a significant density exists above the liquid, the hydrostatic pressure it adds needs to be considered.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "The mass in the tank stays the same, but the density changes while the reference leg density stays about constant.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Density compensation is accomplished by one of the following:",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.14"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Electronic circuitry",
+      "Pressure detector input",
+      "Instrument calibration"
+     ],
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "Calibration charts are also available to correct indications for changes in reference leg temperature.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Why is density compensation needed in level detection?",
+     "o": [
+      "The float loses buoyancy",
+      "Fluid density changes while reference leg density stays relatively constant",
+      "The transmitter drifts with age",
+      "Atmospheric pressure varies"
+     ],
+     "a": 1,
+     "x": "If the tank fluid changes temperature and density, compensation is needed for an accurate indication.",
+     "p": "P30"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which is one way density compensation is accomplished?",
+     "o": [
+      "Adding a second tank",
+      "Draining the reference leg",
+      "Raising the fluid temperature",
+      "Electronic circuitry"
+     ],
+     "a": 3,
+     "x": "Density compensation may be accomplished by electronic circuitry, pressure detector input, or instrument calibration.",
+     "p": "P31"
+    }
+   ]
+  },
+  {
+   "title": "Remote indication and environmental concerns",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Level measurements may be taken at locations far from the main facility",
+      "The level to be controlled may be a long distance from the point of control",
+      "The level being measured may be in an unsafe/radioactive area"
+     ],
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+    },
+    {
+     "t": "fig",
+     "id": "ic-03-fig15",
+     "num": 15,
+     "cap": "Block Diagram of a Differential Pressure Level Detection Circuit",
+     "alt": "Block diagram: differential pressure transmitter, amplifier, and level indication.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The D/P transmitter has a diaphragm with high and low pressure inputs on opposite sides, which moves as differential pressure changes.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "The amplifier amplifies the signal, and the indicator shows level at a remote location.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.17"
+    },
+    {
+     "t": "p",
+     "text": "Fluid density, ambient temperature, and humidity can affect level detection instruments.",
+     "cite": "DOE-HDBK-1013/1-92 IC-03 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Which is one of the three reasons for using remote level indicators?",
+     "o": [
+      "The level being measured may be in an unsafe/radioactive area",
+      "Remote indicators are cheaper",
+      "Local gauges cannot be calibrated",
+      "Tanks are never accessible"
+     ],
+     "a": 0,
+     "x": "The three reasons are distance from the facility, distance from the point of control, and an unsafe or radioactive area.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.4",
+     "q": "In a D/P level instrument, what converts diaphragm motion into an electrical signal?",
+     "o": [
+      "The amplifier",
+      "The indicator",
+      "The reference leg",
+      "The transducer"
+     ],
+     "a": 3,
+     "x": "The transducer changes this mechanical motion into an electrical signal.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.5",
+     "q": "What are the three environmental concerns for level detection instrumentation?",
+     "o": [
+      "Noise, altitude, and dust",
+      "Fluid density, ambient temperature, and humidity",
+      "Radiation, vibration, and light",
+      "Flow, pressure, and voltage"
+     ],
+     "a": 1,
+     "x": "Density of the fluid, ambient temperature, and humidity can affect accuracy and reliability.",
+     "p": "P35"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Reference leg leak on a wet leg",
+   "eo": "1.1",
+   "page": "Word: Level Detectors.docx, slide 1.9 Your turn to practice!!",
+   "problem": "A wet reference leg develops a leak. What happens to indicated level compared with actual level?",
+   "steps": [
+    "The leak reduces the liquid height on the high side",
+    "Differential pressure falls",
+    "On a wet leg, falling differential pressure raises indication"
+   ],
+   "answer": "Indicated level rises above actual level.",
+   "cite": "Word: Level Detectors.docx, slide 1.9 Your turn to practice!!"
+  },
+  {
+   "title": "Wet leg at maximum level",
+   "eo": "1.1",
+   "page": 9,
+   "problem": "A wet reference leg tank is at maximum level. What differential pressure does the transmitter see?",
+   "steps": [
+    "The reference leg head equals the maximum level",
+    "The two sides see equal pressure"
+   ],
+   "answer": "The differential pressure is zero.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.9"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two groups of level measuring devices?",
+   "a": "Direct methods and inferred methods.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "How is differential pressure related to level with a wet reference leg?",
+   "a": "They are inversely proportional. Differential pressure is zero at maximum level.",
+   "p": "P23",
+   "place": null
+  },
+  {
+   "q": "How is differential pressure related to level with a dry reference leg?",
+   "a": "Directly. Rising differential pressure means rising indicated level.",
+   "p": "P24",
+   "place": null
+  },
+  {
+   "q": "What are the three methods of density compensation in level detection?",
+   "a": "Electronic circuitry, pressure detector input, and instrument calibration.",
+   "p": "P31",
+   "place": null
+  },
+  {
+   "q": "What are the three reasons for remote level indication?",
+   "a": "Locations far from the main facility, a level far from the point of control, and an unsafe or radioactive area.",
+   "p": "P32",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Level instruments include the gauge glass, ball float, chain float, magnetic bond, conductivity probe, and differential pressure detector.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.10"
+  },
+  {
+   "text": "If a vapor with a significant density exists above the liquid, its hydrostatic pressure may need to be considered.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.14"
+  },
+  {
+   "text": "There are three major reasons for utilizing remote level indication.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.17"
+  },
+  {
+   "text": "Density of the fluid, ambient temperature changes, and humidity can affect level detection instrumentation.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.17"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "User decision",
+   "note": "Pressurizer and steam generator level systems on p.13, and Figure 13 and Figure 14, are left off because they are tied to water reactor systems, under the Nov 5, 2026 decision. The steam drum example on p.16 and the saturated boiling vessel on p.12 are left off too.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.13"
+  },
+  {
+   "type": "Rule 10",
+   "note": "Reflex and refraction gauge glasses depend on water and steam behavior, so they are on a page tagged Water-system only.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.3"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.1 says the height of liquid in the tube equals the height of water in the tank. The lesson uses the general term liquid.",
+   "cite": "DOE-HDBK-1013/1-92 IC-03 p.1"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The float switch and failure cases come from the lesson plan and go beyond the handbook objectives.",
+   "cite": "Word: Level Detectors.docx, slide 1.1 Introduction and float switch"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

@@ -1,0 +1,1015 @@
+{
+ "module_id": "IC-02",
+ "slug": "ic-02-pressure-detectors",
+ "title": "Pressure Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V1",
+ "handbook": "DOE-HDBK-1013/1-92",
+ "word_file": "Pressure Detectors.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a pressure instrument, RELATE the fundamental principles, including possible failure modes, to that specific instrument.",
+   "items": [],
+   "page": {
+    "pdf": 41,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "EXPLAIN how a bellows-type pressure detector produces an output signal including:",
+     "items": [
+      "a. Method of detection",
+      "b. Method of signal generation"
+     ],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN how a bourdon tube-type pressure detector produces an output signal including:",
+     "items": [
+      "a. Method of detection",
+      "b. Method of signal generation"
+     ],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the three functions of pressure measuring instrumentation.",
+     "items": [],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the three alternate methods of determining pressure when the normal pressure sensing devices are inoperable.",
+     "items": [],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the three environmental concerns which can affect the accuracy and reliability of pressure detection instrumentation.",
+     "items": [],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "EXPLAIN how a strain gauge pressure transducer produces an output signal including:",
+     "items": [
+      "a. Method of detection",
+      "b. Method of signal generation"
+     ],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Given a basic block diagram of a typical pressure detection device, STATE the purpose of the following blocks:",
+     "items": [
+      "a. Sensing element",
+      "b. Transducer",
+      "c. Pressure detection circuitry",
+      "d. Pressure indication"
+     ],
+     "page": {
+      "pdf": 41,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The metallic bellows is most accurate when measuring pressures from 0.5 to 75 psig.",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The bellows is a one-piece, collapsible, seamless metallic unit that has deep folds formed from very thin-walled tubing.",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "System pressure is applied to the internal volume of the bellows.",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "As the bellows and linkage assembly moves, either an electrical signal is generated or a direct pressure indication is provided.",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "in practice, the bellows must always be opposed by a spring",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "This change in cross-section causes the tube to straighten slightly.",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "the movement of the tip of the tube can then be used to position a pointer or to develop an equivalent electrical signal",
+   "sec": "Pressure Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "all pressure detectors are used to provide up to three basic functions: indication, alarm, and control.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "If a pressure instrument fails, spare detector elements may be utilized if installed.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "the pressure may be read at an independent local mechanical gauge, if available, or a precision pressure gauge may be installed in the system at a convenient point.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "Pressure instruments are sensitive to variations in the atmospheric pressure surrounding the detector.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "Ambient temperature variations will affect the accuracy and reliability of pressure detection instrumentation.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.5"
+  },
+  {
+   "id": "P13",
+   "quote": "The presence of humidity will also affect most electrical equipment, especially electronic equipment.",
+   "sec": "Pressure Detector Functional Uses",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.5"
+  },
+  {
+   "id": "P14",
+   "quote": "Transducers can produce a change in resistance, inductance, or capacitance.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "A strain gauge measures the external force (pressure) applied to a fine wire.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "The pressure change causes a resistance change due to the distortion of the wire.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.6"
+  },
+  {
+   "id": "P17",
+   "quote": "As the wire grid is distorted by elastic deformation, its length is increased, and its cross-sectional area decreases.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+  },
+  {
+   "id": "P18",
+   "quote": "This change in resistance is used as the variable resistance in a bridge circuit that provides an electrical signal for indication of pressure.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+  },
+  {
+   "id": "P19",
+   "quote": "The temperature compensating gauge compensates for the heat produced by current flowing through the fine wire of the strain gauge.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.8"
+  },
+  {
+   "id": "P20",
+   "quote": "The balancing motor moves the slider along the slidewire, restoring the bridge to a balanced condition.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.8"
+  },
+  {
+   "id": "P21",
+   "quote": "The inductance-type transducer consists of three parts: a coil, a movable magnetic core, and a pressure sensing element.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.9"
+  },
+  {
+   "id": "P22",
+   "quote": "When the core is in the mid-position, there is no secondary output.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.10"
+  },
+  {
+   "id": "P23",
+   "quote": "consist of two flexible conductive plates and a dielectric.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.11"
+  },
+  {
+   "id": "P24",
+   "quote": "As pressure increases, the flexible conductive plates will move farther apart, changing the capacitance of the transducer.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.11"
+  },
+  {
+   "id": "P25",
+   "quote": "The sensing element senses the pressure of the monitored system and converts the pressure to a mechanical signal.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+  },
+  {
+   "id": "P26",
+   "quote": "The transducer converts the mechanical signal to an electrical signal that is proportional to system pressure.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+  },
+  {
+   "id": "P27",
+   "quote": "The detector circuitry will amplify and/or transmit this signal to the pressure indicator.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+  },
+  {
+   "id": "P28",
+   "quote": "The pressure indicator provides remote indication of the system pressure being measured.",
+   "sec": "Pressure Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+  },
+  {
+   "id": "P29",
+   "quote": "Overpressurization | Fails high",
+   "sec": "Failures",
+   "cite": "Word: Pressure Detectors.docx, slide 1.16 Pressure Detector Failures"
+  },
+  {
+   "id": "P30",
+   "quote": "Sensing Element Leak or Rupture | Fails Low",
+   "sec": "Failures",
+   "cite": "Word: Pressure Detectors.docx, slide 1.16 Pressure Detector Failures"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Pressure detector functions",
+   "cite": "Word: Pressure Detectors.docx, slide 1.3 Pressure Detector Functions"
+  },
+  {
+   "step": "Bellows",
+   "cite": "Word: Pressure Detectors.docx, slide 1.6 Bellows Pressure Detector"
+  },
+  {
+   "step": "Bourdon tube",
+   "cite": "Word: Pressure Detectors.docx, slide 1.10 Bourdon Tube-Type Pressure Detector"
+  },
+  {
+   "step": "Strain gauge",
+   "cite": "Word: Pressure Detectors.docx, slide 1.12 Strain Gauge Pressure Detector"
+  },
+  {
+   "step": "Variable capacitance",
+   "cite": "Word: Pressure Detectors.docx, slide 1.13 Variable Capacitance Pressure Detector"
+  },
+  {
+   "step": "Environmental effects",
+   "cite": "Word: Pressure Detectors.docx, slide 1.15 Environmental Effects"
+  },
+  {
+   "step": "Failures",
+   "cite": "Word: Pressure Detectors.docx, slide 1.16 Pressure Detector Failures"
+  },
+  {
+   "step": "Alternate detection",
+   "cite": "Word: Pressure Detectors.docx, slide 1.18 Alternate Pressure Detection"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Bellows-type detectors",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-02-fig1",
+     "num": 1,
+     "cap": "Basic Metallic Bellows",
+     "alt": "Metallic bellows with input pressure from below, moving a pointer on a scale.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "With a heavy range spring, some bellows can measure pressures of over 1000 psig.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "As inlet pressure varies, the bellows expands or contracts. Its moving end is connected to a mechanical linkage assembly.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "In a bellows-type detector, where is system pressure applied?",
+     "o": [
+      "The spring only",
+      "The internal volume of the bellows",
+      "The outside of the linkage",
+      "The pointer"
+     ],
+     "a": 1,
+     "x": "System pressure is applied to the internal volume of the bellows.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "How does a bellows produce an output as pressure changes?",
+     "o": [
+      "The moving bellows and linkage generate an electrical signal or a direct indication",
+      "The bellows heats a resistor",
+      "The bellows emits radiation",
+      "The fluid flows through a venturi"
+     ],
+     "a": 0,
+     "x": "As the bellows and linkage assembly moves, either an electrical signal is generated or a direct pressure indication is provided.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "In what range is the metallic bellows most accurate?",
+     "o": [
+      "75 to 1000 psig",
+      "Over 1000 psig",
+      "Below 0.5 psig",
+      "0.5 to 75 psig"
+     ],
+     "a": 3,
+     "x": "The metallic bellows is most accurate when measuring pressures from 0.5 to 75 psig.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "Bourdon tube detectors",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The bourdon tube is a thin-walled tube flattened to an elliptical cross-section and bent lengthwise into an arc of 270 to 300 degrees.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig2",
+     "num": 2,
+     "cap": "Bourdon Tube",
+     "alt": "Curved bourdon tube fixed at one end, with its tip linked to a pointer on a scale.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Pressure inside the tube causes distention of the flat sections and tends to restore its original round cross-section.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Since the tube is fastened at one end, the tip traces a curve.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q245",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What happens to a bourdon tube as internal pressure increases?",
+     "o": [
+      "It tends to straighten slightly",
+      "It bends tighter",
+      "It shortens",
+      "It stays fixed"
+     ],
+     "a": 0,
+     "x": "The change in cross-section causes the tube to straighten slightly.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Uses and environmental concerns",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "If spare detectors are not installed,",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "If the detector is functional, voltage or current across the detector leads can be compared with calibration curves.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "This is especially apparent when the detector is in an enclosed space.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "Ambient temperature variations can directly affect circuit resistance and the calibration of electric or electronic equipment.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What are the three functions of pressure measuring instrumentation?",
+     "o": [
+      "Heating, venting, and draining",
+      "Sensing, storing, and resetting",
+      "Indication, alarm, and control",
+      "Positioning, setpoints, and shutdown"
+     ],
+     "a": 2,
+     "x": "All pressure detectors are used to provide up to three basic functions: indication, alarm, and control.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which is NOT one of the three environmental concerns for pressure instruments?",
+     "o": [
+      "Ambient temperature",
+      "Humidity",
+      "Fluid viscosity",
+      "Atmospheric pressure"
+     ],
+     "a": 2,
+     "x": "The three concerns are atmospheric pressure, ambient temperature, and humidity.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.4",
+     "q": "A pressure detector fails and no spare is installed. What may be used?",
+     "o": [
+      "A strain of wire on the pipe",
+      "A venturi",
+      "A local mechanical gauge or an installed precision gauge",
+      "A contact pyrometer"
+     ],
+     "a": 2,
+     "x": "The pressure may be read at an independent local mechanical gauge or a precision pressure gauge may be installed.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Strain gauge transducers",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig3",
+     "num": 3,
+     "cap": "Strain Gauge",
+     "alt": "Fine wire grid strain gauge with force applied, and a flexible backing.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "R = K (L / A)",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "These changes cause an increase in the resistance of the wire.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig4",
+     "num": 4,
+     "cap": "Strain Gauge Pressure Transducer",
+     "alt": "Strain gauge transducer: a bellows moves a flexible beam carrying a strain gauge, beside a temperature compensating gauge.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+    },
+    {
+     "t": "p",
+     "text": "An increase in pressure expands the bellows, which moves a flexible beam with a strain gauge attached, changing its resistance.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig5",
+     "num": 5,
+     "cap": "Strain Gauge Used in a Bridge Circuit",
+     "alt": "Strain gauge in a bridge, with an exciter, an amplifier, a balancing motor, and a slidewire.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "How does a strain gauge detect pressure?",
+     "o": [
+      "Pressure moves a core in a coil",
+      "Pressure changes a dielectric",
+      "Pressure heats a thermocouple",
+      "Pressure distorts a fine wire and changes its resistance"
+     ],
+     "a": 3,
+     "x": "The pressure change causes a resistance change due to the distortion of the wire.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.6",
+     "q": "What happens to a strain gauge wire's resistance when it is stretched by elastic deformation?",
+     "o": [
+      "It increases",
+      "It decreases",
+      "It stays the same",
+      "It goes to zero"
+     ],
+     "a": 0,
+     "x": "Its length increases and its area decreases, which increases the resistance.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.6",
+     "q": "How is the strain gauge's change in resistance turned into a signal?",
+     "o": [
+      "It drives a venturi",
+      "It charges a capacitor",
+      "It is read with a pyrometer",
+      "It is the variable resistance in a bridge circuit"
+     ],
+     "a": 3,
+     "x": "The change in resistance is used as the variable resistance in a bridge circuit.",
+     "p": "P18"
+    }
+   ]
+  },
+  {
+   "title": "Other pressure transducers",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-02-fig6",
+     "num": 6,
+     "cap": "Bellows Resistance Transducer",
+     "alt": "Bellows moving a slider along a slidewire resistor.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.9"
+    },
+    {
+     "t": "p",
+     "text": "Other resistance-type transducers combine a bellows or bourdon tube with a variable resistor. As the bellows moves, the slider changes the resistance.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig7",
+     "num": 7,
+     "cap": "Inductance-Type Pressure Transducer Coil",
+     "alt": "Center-tapped coil with a movable magnetic core.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.9"
+    },
+    {
+     "t": "p",
+     "text": "As the element moves the core inside the coil, the coil's inductance changes. Current through the coil increases as inductance decreases.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig8",
+     "num": 8,
+     "cap": "Differential Transformer",
+     "alt": "Differential transformer: a primary coil around the center of a tube, secondary coils at each end, and a movable core.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.10"
+    },
+    {
+     "t": "p",
+     "text": "In a differential transformer, the magnitude and direction of the output depend on how far the core is from center.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Capacitive-type transducers",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "fig",
+     "id": "ic-02-fig9",
+     "num": 9,
+     "cap": "Capacitive Pressure Transducer",
+     "alt": "Two flexible conductive plates with the fluid as dielectric between them.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What are the three parts of an inductance-type pressure transducer?",
+     "o": [
+      "A coil, a movable magnetic core, and a pressure sensing element",
+      "A wire grid, a beam, and a motor",
+      "Two plates and a dielectric",
+      "A battery, a rheostat, and a meter"
+     ],
+     "a": 0,
+     "x": "The inductance-type transducer consists of a coil, a movable magnetic core, and a pressure sensing element.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.6",
+     "q": "In a differential transformer, what is the output with the core at mid-position?",
+     "o": [
+      "No secondary output",
+      "Maximum output",
+      "Output from the upper half only",
+      "Output from the lower half only"
+     ],
+     "a": 0,
+     "x": "When the core is in the mid-position, there is no secondary output.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.6",
+     "q": "In a capacitive pressure transducer, what happens as pressure increases?",
+     "o": [
+      "The core moves down",
+      "The wire stretches",
+      "The conductive plates move farther apart",
+      "The plates touch"
+     ],
+     "a": 2,
+     "x": "As pressure increases, the flexible conductive plates will move farther apart, changing the capacitance.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Pressure detection circuit",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-02-fig10",
+     "num": 10,
+     "cap": "Typical Pressure Detection Block Diagram",
+     "alt": "Block diagram: sensing element, transducer, detector circuitry, and pressure indicator in a line.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "If the mechanical signal is used directly, a transducer is not required.",
+     "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "In a pressure detection device, what does the transducer do?",
+     "o": [
+      "Provides remote indication",
+      "Amplifies the signal",
+      "Converts a mechanical signal to an electrical signal",
+      "Senses system pressure"
+     ],
+     "a": 2,
+     "x": "The transducer converts the mechanical signal to an electrical signal proportional to system pressure.",
+     "p": "P26"
+    },
+    {
+     "eo": "1.7",
+     "q": "What does the sensing element of a pressure detection device do?",
+     "o": [
+      "Displays the pressure",
+      "Converts AC to DC",
+      "Senses pressure and converts it to a mechanical signal",
+      "Transmits an electrical signal"
+     ],
+     "a": 2,
+     "x": "The sensing element senses the pressure and converts it to a mechanical signal.",
+     "p": "P25"
+    }
+   ]
+  },
+  {
+   "title": "Pressure detector failures",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The lesson plan gives two failure modes for pressure detectors. Overpressurization can damage sensing elements, and the detector fails high.",
+     "cite": "Word: Pressure Detectors.docx, slide 1.16 Pressure Detector Failures"
+    },
+    {
+     "t": "p",
+     "text": "A sensing element leak or rupture causes the detector to fail low.",
+     "cite": "Word: Pressure Detectors.docx, slide 1.16 Pressure Detector Failures"
+    },
+    {
+     "t": "p",
+     "text": "A weakened spring in a detector has to compress further to give the same counterforce, so indicated pressure increases.",
+     "cite": "Word: Pressure Detectors.docx, slide 1.19 MC 5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "From the lesson plan",
+     "q": "A sensing element in a pressure detector ruptures. How does the detector fail?",
+     "o": [
+      "As is",
+      "To mid-scale",
+      "Low",
+      "High"
+     ],
+     "a": 2,
+     "x": "A sensing element leak or rupture fails low.",
+     "p": "P30"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "A pressure detector is overpressurized. How does it fail?",
+     "o": [
+      "As is",
+      "To zero",
+      "High",
+      "Low"
+     ],
+     "a": 2,
+     "x": "Overpressurization fails high and can damage sensing elements.",
+     "p": "P29"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Strain gauge under load",
+   "eo": "1.6",
+   "page": 7,
+   "problem": "A wire grid is stretched by elastic deformation. What happens to R = K(L/A)?",
+   "steps": [
+    "Its length increases",
+    "Its cross-sectional area decreases",
+    "Both changes raise L/A"
+   ],
+   "answer": "The resistance increases.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.7"
+  },
+  {
+   "title": "Signal path of a pressure reading",
+   "eo": "1.7",
+   "page": 12,
+   "problem": "Follow the signal from the system to the operator.",
+   "steps": [
+    "The sensing element converts pressure to a mechanical signal",
+    "The transducer converts it to an electrical signal",
+    "The detector circuitry amplifies or transmits it",
+    "The indicator gives a remote reading"
+   ],
+   "answer": "Sensing element, transducer, detector circuitry, pressure indicator.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.12"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is a bourdon tube?",
+   "a": "A thin-walled, flattened tube bent into an arc. Pressure inside tends to straighten it, and the tip movement positions a pointer or develops a signal.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What are the three environmental concerns for pressure instruments?",
+   "a": "Atmospheric pressure, ambient temperature, and humidity.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What must oppose a metallic bellows in practice?",
+   "a": "A spring, so the bellows' travel stays on the compression side.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What does a strain gauge measure?",
+   "a": "The pressure applied to a fine wire, through the resistance change caused by distortion of the wire.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What three kinds of change can a pressure transducer produce?",
+   "a": "A change in resistance, inductance, or capacitance.",
+   "p": "P14",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "In a bellows detector, pressure moves the bellows and linkage to produce a signal or move a pointer.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.3"
+  },
+  {
+   "text": "In a bourdon tube detector, pressure tends to restore the tube's round cross-section, so the tube straightens and its tip moves.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.3"
+  },
+  {
+   "text": "Pressure detectors perform indication, alarm, and control functions.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.5"
+  },
+  {
+   "text": "A strain gauge's change in resistance is used in a bridge circuit that provides a signal for indication of pressure.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.13"
+  },
+  {
+   "text": "A typical device goes from sensing element to transducer, detector circuitry, and pressure indicator.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.13"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "p.4 says accurate pressure indication is needed because a system may run at saturation and subcooled conditions. That reason is left off, since it comes from water systems.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.4"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.6 covers strain gauges only. The lesson adds the other transducers in the same chapter under that objective.",
+   "cite": "DOE-HDBK-1013/1-92 IC-02 p.6"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The diaphragm detector on slide 1.8 is a picture and is left off. Failure modes are from the lesson plan, on a page marked as such.",
+   "cite": "Word: Pressure Detectors.docx, slide 1.8 Diaphragm Pressure Detector"
+  }
+ ],
+ "page_tags": []
+}

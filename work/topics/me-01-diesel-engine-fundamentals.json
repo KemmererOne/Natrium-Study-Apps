@@ -1,0 +1,1619 @@
+{
+ "module_id": "ME-01",
+ "slug": "me-01-diesel-engine-fundamentals",
+ "title": "Diesel Engine Fundamentals",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1018-V1",
+ "handbook": "DOE-HDBK-1018/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the components and theory of operation for a diesel engine.",
+   "items": [],
+   "page": {
+    "pdf": 18,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following diesel engine terms:",
+     "items": [
+      "a. Compression ratio",
+      "b. Bore",
+      "c. Stroke",
+      "d. Combustion chamber"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given a drawing of a diesel engine, IDENTIFY the following:",
+     "items": [
+      "a. Piston/rod",
+      "b. Cylinder",
+      "c. Blower",
+      "d. Crankshaft",
+      "e. Intake ports or valve(s)",
+      "f. Exhaust ports or valve(s)",
+      "g. Fuel injector"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "EXPLAIN how a diesel engine converts the chemical energy stored in the diesel fuel into mechanical energy.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "EXPLAIN how the ignition process occurs in a diesel engine.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "EXPLAIN the operation of a 4-cycle diesel engine to include when the following events occur during a cycle:",
+     "items": [
+      "a. Intake",
+      "b. Exhaust",
+      "c. Fuel injection",
+      "d. Compression",
+      "e. Power"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "EXPLAIN the operation of a 2-cycle diesel engine, including when the following events occur during a cycle:",
+     "items": [
+      "a. Intake",
+      "b. Exhaust",
+      "c. Fuel injection",
+      "d. Compression",
+      "e. Power"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE how the mechanical-hydraulic governor on a diesel engine controls engine speed.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "LIST five protective alarms usually found on mid-sized and larger diesel engines.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Although several types of prime movers are available (gasoline engines, steam and gas turbines), the diesel engine is the most commonly used.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Although a diesel engine and gasoline engine operate with similar components, a diesel engine, when compared to a gasoline engine of equal horsepower, is heavier due to stronger, heavier materials used to withstand the greater dynamic forces from the higher combustion pressures present in the diesel engine.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "The compression ratio is a measure of how much the engine compresses the gasses in the engine's cylinder.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "In a diesel engine, compression ratios ranging from 14:1 to as high as 24:1 are commonly used.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "The higher compression ratios are possible because only air is compressed, and then the fuel is injected.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "Diesel engines are not self-speed-limiting because the air (oxygen) entering the engine is always the maximum amount.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "Diesel engines require a speed limiter, commonly called the governor, to control the amount of fuel being injected into the engine.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "When fuel is injected, it vaporizes and ignites due to the heat created by the compression of the air in the cylinder.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "The piston transforms the energy of the expanding gasses into mechanical energy.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.7"
+  },
+  {
+   "id": "P10",
+   "quote": "These rings function as the seal between the piston and the cylinder wall and also act to reduce friction by minimizing the contact area between the piston and the cylinder wall.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.8"
+  },
+  {
+   "id": "P11",
+   "quote": "The connecting rod connects the piston to the crankshaft.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.8"
+  },
+  {
+   "id": "P12",
+   "quote": "The crankshaft transforms the linear motion of the pistons into a rotational motion that",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "The amount of offset determines the stroke (distance the piston travels) of the engine (discussed later).",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.8"
+  },
+  {
+   "id": "P14",
+   "quote": "Diesel engines have two methods of admitting and exhausting gasses from the cylinder.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "A camshaft is a long bar with egg-shaped eccentric lobes, one lobe for each valve and fuel injector (discussed later).",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "Valve lash is the term given to the \"slop\" or \"give\" in the valve train before the cam actually starts to open the valve.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.11"
+  },
+  {
+   "id": "P17",
+   "quote": "The diesel engine's blower is part of the air intake system and serves to compress the incoming fresh air for delivery to the cylinders for combustion.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "A diesel engine requires five supporting systems in order to operate: cooling, lubrication, fuel injection, air intake, and exhaust.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.12"
+  },
+  {
+   "id": "P19",
+   "quote": "One purpose is to lubricate the bearing surfaces.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.13"
+  },
+  {
+   "id": "P20",
+   "quote": "Because diesel engines rely on injectors which are precision components with extremely tight tolerances and very small injection hole(s), the fuel delivered to the engine must be extremely clean and free of contaminants.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.14"
+  },
+  {
+   "id": "P21",
+   "quote": "The reason for ensuring that an engine's air supply is as cool as possible is that cool air is more dense than hot air.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.15"
+  },
+  {
+   "id": "P22",
+   "quote": "Turbocharging an engine occurs when the engine's own exhaust gasses are forced through a turbine (impeller), which rotates and is connected to a second impeller located in the fresh air intake system.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.16"
+  },
+  {
+   "id": "P23",
+   "quote": "The blower is driven through gears directly from the engines crankshaft.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.16"
+  },
+  {
+   "id": "P24",
+   "quote": "As previously stated, bore refers to the diameter of the engine's cylinder, and stroke refers to the distance the piston travels from the top of the cylinder to the bottom.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.17"
+  },
+  {
+   "id": "P25",
+   "quote": "The highest point of travel by the piston is called top dead center (TDC), and the lowest point of travel is called bottom dead center (BDC).",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.17"
+  },
+  {
+   "id": "P26",
+   "quote": "Displacement refers to the total volume displaced by all the pistons during one stroke.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.17"
+  },
+  {
+   "id": "P27",
+   "quote": "Clearance volume is the volume remaining in the cylinder when the piston is at TDC.",
+   "sec": "Diesel Engines",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.18"
+  },
+  {
+   "id": "P28",
+   "quote": "A diesel engine is a type of heat engine that uses the internal combustion process to convert the energy stored in the chemical bonds of the fuel into useful mechanical energy.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.21"
+  },
+  {
+   "id": "P29",
+   "quote": "First, the fuel reacts chemically (burns) and releases energy in the form of heat. Second the heat causes the gasses trapped in the cylinder to expand, and the expanding gases, being confined by the cylinder, must move the piston to expand.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.21"
+  },
+  {
+   "id": "P30",
+   "quote": "The reciprocating motion of the piston is then converted into rotational motion by the crankshaft.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.21"
+  },
+  {
+   "id": "P31",
+   "quote": "To convert the chemical energy of the fuel into useful mechanical energy all internal combustion engines must go through four events: intake, compression, power, and exhaust.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+  },
+  {
+   "id": "P32",
+   "quote": "Ignition occurs in a diesel by injecting fuel into the air charge which has been heated by compression to a temperature greater than the ignition point of the fuel.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.28"
+  },
+  {
+   "id": "P33",
+   "quote": "the engine requires four strokes of the piston (intake, compression, power, and exhaust) to complete one full cycle.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+  },
+  {
+   "id": "P34",
+   "quote": "In a four-stroke engine the camshaft is geared so that it rotates at half the speed of the crankshaft (1:2).",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+  },
+  {
+   "id": "P35",
+   "quote": "The time frame during which both the intake and exhaust valves are open is called valve overlap (51° of overlap in this example) and is necessary to allow the fresh air to help scavenge (remove) the spent exhaust gasses and cool the cylinder.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.23"
+  },
+  {
+   "id": "P36",
+   "quote": "The fuel enters the cylinder where the heated compressed air is present; however, it will only burn when it is in a vaporized state (attained through the addition of heat to cause vaporization) and intimately mixed with a supply of oxygen.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.24"
+  },
+  {
+   "id": "P37",
+   "quote": "But a two-stroke engine requires only two strokes of the piston to complete one full cycle.",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+  },
+  {
+   "id": "P38",
+   "quote": "In a two-stroke engine the camshaft is geared so that it rotates at the same speed as the crankshaft (1:1).",
+   "sec": "Fundamentals of the Diesel Cycle",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+  },
+  {
+   "id": "P39",
+   "quote": "The camshaft provides the timing needed to properly inject the fuel, the fuel injector provides the component that meters and injects the fuel, and the governor regulates the amount of fuel that the injector is to inject.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.30"
+  },
+  {
+   "id": "P40",
+   "quote": "The amount of fuel to be injected by each injector is set by a mechanical linkage called the fuel rack.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.30"
+  },
+  {
+   "id": "P41",
+   "quote": "Diesel engine speed is controlled solely by the amount of fuel injected into the engine by the injectors.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.34"
+  },
+  {
+   "id": "P42",
+   "quote": "A governor is essentially a speed-sensitive device, designed to maintain a constant engine speed regardless of load variation.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.34"
+  },
+  {
+   "id": "P43",
+   "quote": "This means that a loss of lube oil pressure will cut off the supply of oil to the governor and cause the governor to shut down the engine.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.34"
+  },
+  {
+   "id": "P44",
+   "quote": "The position of the flyweights is determined by the speed of the engine.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.35"
+  },
+  {
+   "id": "P45",
+   "quote": "The reduction in engine speed will be sensed by the governor flyweights.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.37"
+  },
+  {
+   "id": "P46",
+   "quote": "The large hydraulic piston is linked to the fuel rack and its motion resets the fuel rack for increased/decreased fuel.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.35"
+  },
+  {
+   "id": "P47",
+   "quote": "An overspeed condition is extremely dangerous because engine failure is usually catastrophic and can possibly cause the engine to fly apart.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.38"
+  },
+  {
+   "id": "P48",
+   "quote": "The water jacket temperature sensors provide early warning of abnormal engine temperature, usually an alarm function only.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+  },
+  {
+   "id": "P49",
+   "quote": "High exhaust temperature can indicate an overloading of the engine or possible poor performance due to inadequate scavenging (the cooling effect) in the engine.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+  },
+  {
+   "id": "P50",
+   "quote": "Loss of oil pressure can result in the engine seizing due to lack of lubrication.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+  },
+  {
+   "id": "P51",
+   "quote": "Therefore, most medium to larger engines will stop upon low or loss of oil pressure.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+  },
+  {
+   "id": "P52",
+   "quote": "The high pressure condition indicates the engine is in poor condition.",
+   "sec": "Diesel Engine Speed, Fuel Controls, and Protection",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.40"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "What a diesel engine is",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Diesel engines supply mechanical power for pumping, electrical power generation, operation of heavy equipment, and backup electrical generation during a loss of the normal power source.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.1"
+    },
+    {
+     "t": "p",
+     "text": "A diesel and a gasoline engine are both internal combustion, reciprocating engines. A diesel is heavier than a gasoline engine of equal horsepower because stronger materials must withstand its higher combustion pressures.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Engine speed is limited solely by the amount of fuel injected, so a manual fuel control is not possible.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "Why is a diesel engine not self-speed-limiting?",
+     "o": [
+      "The air entering the engine is always the maximum amount",
+      "The butterfly valve limits the air",
+      "The fuel supply is unlimited",
+      "The flywheel limits rotation"
+     ],
+     "a": 0,
+     "x": "Diesel engines are not self-speed-limiting because the air (oxygen) entering the engine is always the maximum amount.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.0",
+     "q": "Why is a diesel heavier than a gasoline engine of equal horsepower?",
+     "o": [
+      "Stronger materials must withstand its higher combustion pressures",
+      "It has more cylinders",
+      "It carries an ignition system",
+      "It uses a larger carburetor"
+     ],
+     "a": 0,
+     "x": "A diesel is heavier due to stronger, heavier materials used to withstand the greater dynamic forces from the higher combustion pressures.",
+     "p": "P2"
+    }
+   ]
+  },
+  {
+   "title": "Diesel engine terms",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "The volume enclosed by the sleeve or bore is the combustion chamber, the space where the fuel is burned.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "eq",
+     "text": "Compression ratio = (displacement volume + clearance volume) / clearance volume",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig15",
+     "num": 15,
+     "cap": "Compression Ratio",
+     "alt": "Two piston and cylinder sketches, with the piston at bottom and at top of its travel, showing 16 units of volume compressed to 1 unit.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is the bore of a diesel engine?",
+     "o": [
+      "The volume at top dead center",
+      "The diameter of the cylinder",
+      "The distance the piston travels",
+      "The total volume of all cylinders"
+     ],
+     "a": 1,
+     "x": "Bore refers to the diameter of the engine's cylinder.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the stroke of a diesel engine?",
+     "o": [
+      "The distance the piston travels from top to bottom of the cylinder",
+      "The diameter of the cylinder",
+      "The angle between cylinder banks",
+      "The space where fuel is burned"
+     ],
+     "a": 0,
+     "x": "Stroke refers to the distance the piston travels from the top of the cylinder to the bottom.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.1",
+     "q": "An engine has a displacement volume of 150 in³ per cylinder and a clearance volume of 10 in³. What is its compression ratio?",
+     "o": [
+      "15:1",
+      "16:1",
+      "17:1",
+      "160:1"
+     ],
+     "a": 1,
+     "x": "Compression ratio = (displacement volume + clearance volume) / clearance volume = (150 + 10) / 10 = 16:1.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why can a diesel use a higher compression ratio than a gasoline engine?",
+     "o": [
+      "Only air is compressed, and then the fuel is injected",
+      "Its pistons are smaller",
+      "Its fuel ignites at a lower temperature",
+      "It has a shorter stroke"
+     ],
+     "a": 0,
+     "x": "The higher compression ratios are possible because only air is compressed, and then the fuel is injected.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Major components",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "me-01-fig2",
+     "num": 2,
+     "cap": "Cutaway of a GM V-16 Four-Stroke Supercharged Diesel Engine",
+     "alt": "Cutaway of a large V-16 diesel engine with its major parts labeled, including the pistons, connecting rods, crankshaft, and blower.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig3",
+     "num": 3,
+     "cap": "Cross Section of a V-type Four Stroke Diesel Engine",
+     "alt": "Cross section of a V-type diesel engine showing both banks of cylinders around the crankshaft, with overhead camshafts.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The cylinder sleeve or bore confines the combustion gasses and guides the piston.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig6",
+     "num": 6,
+     "cap": "Piston and Piston Rod",
+     "alt": "Piston and connecting rod, labeling the compression rings, oil ring, piston pin, and connecting rod.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The rod bearings are offset from the center of the crankshaft, which converts the reciprocating motion of the piston into rotation.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.8"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig7",
+     "num": 7,
+     "cap": "Diesel Engine Crankshaft and Bearings",
+     "alt": "Diesel engine crankshaft shown with its main and rod bearings.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "Ports are slots in the cylinder walls in the lower third of the bore, opened when the piston travels below them. Valves are in the head casting and are mechanically opened and closed.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig10",
+     "num": 10,
+     "cap": "Diesel Engine Valve Train",
+     "alt": "Valve train: the camshaft lobe lifts a cam follower and pushrod, which pivot the rocker arm to open the intake valve against the valve spring.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Each cylinder has a fuel injector, which meters and injects fuel at the proper instant.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.30"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Which part transforms the linear motion of the pistons into rotation?",
+     "o": [
+      "Camshaft",
+      "Connecting rod",
+      "Blower",
+      "Crankshaft"
+     ],
+     "a": 3,
+     "x": "The crankshaft transforms the linear motion of the pistons into a rotational motion that is transmitted to the load.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is the function of the blower?",
+     "o": [
+      "To compress incoming fresh air for delivery to the cylinders",
+      "To remove exhaust gasses from the crankcase",
+      "To cool the lubricating oil",
+      "To time the fuel injectors"
+     ],
+     "a": 0,
+     "x": "The blower is part of the air intake system and serves to compress the incoming fresh air for delivery to the cylinders for combustion.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is valve lash?",
+     "o": [
+      "The slop or give in the valve train before the cam starts to open the valve",
+      "The time both valves are open",
+      "The distance the piston travels",
+      "The spring that closes the valve"
+     ],
+     "a": 0,
+     "x": "Valve lash is the term given to the slop or give in the valve train before the cam actually starts to open the valve.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.2",
+     "q": "What do piston rings do?",
+     "o": [
+      "Connect the piston to the crankshaft",
+      "Meter fuel into the cylinder",
+      "Balance the crankshaft",
+      "Seal between piston and cylinder wall, and reduce friction"
+     ],
+     "a": 3,
+     "x": "The rings function as the seal between the piston and the cylinder wall and also act to reduce friction.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Support systems",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "The cooling system is a closed loop with a water pump, radiator or heat exchanger, water jacket, and thermostat.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.12"
+    },
+    {
+     "t": "p",
+     "text": "All moving parts ride on a thin film of oil, pumped from the oil pan through filters into the oil galleries.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "The other purpose of the oil is to cool the bearings by absorbing the heat from friction.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Fuel also cools the injectors, so it flows through the engine's fuel system at a rate much higher than needed to run the engine, and the excess is returned.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Per unit volume, cool air has more oxygen, which means a more efficient fuel burn and more power.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Compressing the air increases the air forced into each cylinder, which allows more fuel and more power, and the higher intake pressure improves scavenging of exhaust gasses.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.16"
+    },
+    {
+     "t": "p",
+     "text": "Supercharging does the same job with a different power source.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "The exhaust system routes spent gasses away from the engine, confines and routes them to the turbocharger if used, and allows mufflers to reduce noise.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "What five supporting systems does a diesel engine require?",
+     "o": [
+      "Cooling, ignition, fuel injection, air intake, and exhaust",
+      "Lubrication, starting, ignition, exhaust, and hydraulic",
+      "Cooling, carburetion, lubrication, ignition, and starting",
+      "Cooling, lubrication, fuel injection, air intake, and exhaust"
+     ],
+     "a": 3,
+     "x": "A diesel engine requires five supporting systems: cooling, lubrication, fuel injection, air intake, and exhaust.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.0",
+     "q": "Why is diesel fuel kept flowing at a rate much higher than the engine burns?",
+     "o": [
+      "The fuel also acts as a coolant to the injectors",
+      "It keeps the crankcase pressure low",
+      "It lubricates the piston rings",
+      "It heats the intake air"
+     ],
+     "a": 0,
+     "x": "Fuel serves two purposes: to run the engine and to act as a coolant to the injectors.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.0",
+     "q": "What is the difference between turbocharging and supercharging?",
+     "o": [
+      "Only supercharging raises power",
+      "Turbocharging is used only on two-stroke engines",
+      "The source of power: exhaust gasses or gears from the crankshaft",
+      "Only turbocharging compresses the air"
+     ],
+     "a": 2,
+     "x": "Supercharging performs the same function. The difference is the source of power used to drive the device that compresses the air.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.0",
+     "q": "Why should engine intake air be as cool as possible?",
+     "o": [
+      "Cool air is more dense, so it carries more oxygen per cylinder charge",
+      "Warm air damages the air filter",
+      "Cool air lowers the compression ratio",
+      "Cool air reduces the fuel flow"
+     ],
+     "a": 0,
+     "x": "Cool air is more dense than hot air, so it has more oxygen per unit volume.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "From fuel energy to mechanical energy",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "A diesel needs no ignition system. Fuel is injected as the piston comes to the top of its compression stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "How does the heat of combustion produce mechanical energy in a diesel?",
+     "o": [
+      "Heat expands the crankshaft directly",
+      "Heat raises the oil pressure, which drives the piston",
+      "Heat expands the trapped gasses, which move the piston, and the crankshaft turns that into rotation",
+      "Heat boils the fuel, which turns a turbine"
+     ],
+     "a": 2,
+     "x": "The heat causes the gasses trapped in the cylinder to expand, moving the piston, and the reciprocating motion is converted into rotation by the crankshaft.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.4",
+     "q": "What ignites the fuel in a diesel engine?",
+     "o": [
+      "The governor",
+      "Air heated by compression above the fuel's ignition point",
+      "A spark plug",
+      "A hot exhaust valve"
+     ],
+     "a": 1,
+     "x": "Ignition occurs by injecting fuel into the air charge which has been heated by compression to a temperature greater than the ignition point of the fuel.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "The four-stroke cycle",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "That takes two rotations of the crankshaft, or 720° of crankshaft rotation.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "The timing below is the handbook's generic example for a normally aspirated engine. It varies from engine to engine.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig16",
+     "num": 16,
+     "cap": "Scavenging and Intake",
+     "alt": "Cylinder sketch with both valves open while fresh air enters and scavenges the exhaust.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Intake: the intake valve starts to open near 28° BTDC while the exhaust valve is still open, and the exhaust valve is fully closed at 23° ATDC",
+      "Compression: the intake valve is fully closed at 43° ABDC, and the piston compresses the air charge",
+      "Fuel injection: from 28° BTDC to 3° ATDC",
+      "Power: after the piston passes TDC, the rise in pressure forces it downward",
+      "Exhaust: the exhaust valve starts to lift at 48° BBDC, and at 28° BTDC the intake valve opens and the cycle starts again"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig17",
+     "num": 17,
+     "cap": "Compression",
+     "alt": "Cylinder sketch with both valves closed and the piston moving up to compress the air.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig18",
+     "num": 18,
+     "cap": "Fuel Injection",
+     "alt": "Cylinder sketch with fuel spraying into the compressed air near the top of the stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.24"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig19",
+     "num": 19,
+     "cap": "Power",
+     "alt": "Cylinder sketch with the piston driven down on the power stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.24"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig20",
+     "num": 20,
+     "cap": "Exhaust",
+     "alt": "Cylinder sketch with the exhaust valve open and gasses leaving as the piston rises.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "How many crankshaft rotations does one four-stroke cycle take?",
+     "o": [
+      "Four",
+      "One",
+      "Two",
+      "Three"
+     ],
+     "a": 2,
+     "x": "A four-stroke engine requires two rotations of the crankshaft, or 720°, to complete one cycle.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.5",
+     "q": "At what speed does the camshaft of a four-stroke engine rotate?",
+     "o": [
+      "Half the crankshaft speed",
+      "The same speed as the crankshaft",
+      "Twice the crankshaft speed",
+      "Four times the crankshaft speed"
+     ],
+     "a": 0,
+     "x": "In a four-stroke engine the camshaft is geared so that it rotates at half the speed of the crankshaft (1:2).",
+     "p": "P34"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is valve overlap, and why is it needed?",
+     "o": [
+      "Both valves open together, so fresh air helps scavenge exhaust gasses and cool the cylinder",
+      "Both valves closed together, so pressure can build",
+      "The exhaust valve opening before the power stroke, so fuel can burn",
+      "The intake valve staying closed, so the piston can cool"
+     ],
+     "a": 0,
+     "x": "Valve overlap is the time both valves are open, needed to allow the fresh air to help scavenge the spent exhaust gasses and cool the cylinder.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.5",
+     "q": "When will injected diesel fuel burn?",
+     "o": [
+      "When it is vaporized and intimately mixed with oxygen",
+      "As soon as it leaves the injector as a liquid",
+      "Only after the exhaust valve opens",
+      "Only when the piston is at bottom dead center"
+     ],
+     "a": 0,
+     "x": "Fuel will only burn when it is in a vaporized state and intimately mixed with a supply of oxygen.",
+     "p": "P36"
+    }
+   ]
+  },
+  {
+   "title": "The two-stroke cycle",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "That takes one rotation of the crankshaft, so several events must occur during each stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "The timing below is the handbook's generic example for a supercharged engine with intake ports and exhaust valves.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig21",
+     "num": 21,
+     "cap": "2-Stroke Exhaust",
+     "alt": "Two-stroke cylinder with the exhaust valve open and gasses leaving near the end of the power stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.26"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig22",
+     "num": 22,
+     "cap": "2-Stroke Intake",
+     "alt": "Two-stroke cylinder with the piston below the intake ports, so blower air enters and scavenges the cylinder.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.26"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Exhaust: the exhaust valve lifts off its seat at 91° ATDC",
+      "Intake: the piston uncovers the inlet ports at 132° ATDC, and compressed fresh air cools and scavenges the cylinder",
+      "Ports and valve close: the piston closes the intake ports past 48° ABDC, and the exhaust valve is closed at 53° ABDC",
+      "Compression: temperature and pressure rise after the exhaust valve is on its seat",
+      "Fuel injection: from 23° BTDC to 6° BTDC",
+      "Power: from TDC until 91° ATDC, when the exhaust valves start to open and a new cycle begins"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.27"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig23",
+     "num": 23,
+     "cap": "2-Stroke Compression",
+     "alt": "Two-stroke cylinder with ports and valve closed, compressing the air.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.27"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig24",
+     "num": 24,
+     "cap": "2-Stroke Fuel Injection",
+     "alt": "Two-stroke cylinder with fuel being injected near the top of the stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.27"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig25",
+     "num": 25,
+     "cap": "2-Stroke Power",
+     "alt": "Two-stroke cylinder with the piston driven down on the power stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "How many crankshaft rotations does one two-stroke cycle take?",
+     "o": [
+      "Three",
+      "Four",
+      "One",
+      "Two"
+     ],
+     "a": 2,
+     "x": "A two-stroke engine requires only one rotation of the crankshaft to complete a cycle.",
+     "p": "P37"
+    },
+    {
+     "eo": "1.6",
+     "q": "In the handbook's two-stroke example, what lets fresh air into the cylinder?",
+     "o": [
+      "The fuel injector",
+      "The governor",
+      "The piston uncovering the inlet ports",
+      "A cam-driven intake valve"
+     ],
+     "a": 2,
+     "x": "The piston starts to uncover the inlet ports, which lets the compressed fresh air enter the cylinder.",
+     "p": "P37"
+    },
+    {
+     "eo": "1.6",
+     "q": "At what speed does the camshaft of a two-stroke engine rotate?",
+     "o": [
+      "Half the crankshaft speed",
+      "Twice the crankshaft speed",
+      "One quarter of the crankshaft speed",
+      "The same speed as the crankshaft"
+     ],
+     "a": 3,
+     "x": "In a two-stroke engine the camshaft is geared so that it rotates at the same speed as the crankshaft (1:1).",
+     "p": "P38"
+    }
+   ]
+  },
+  {
+   "title": "Engine control and fuel injectors",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "Injectors are actuated by the engine's camshaft, which provides the timing and pumping action.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig26",
+     "num": 26,
+     "cap": "Fuel Injector Cutaway",
+     "alt": "Cutaway of a fuel injector with its internal parts labeled, from the follower at the top to the spray tip at the bottom.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.31"
+    },
+    {
+     "t": "p",
+     "text": "Rotating the plunger with the fuel rack changes the position of its helices, which changes the amount of fuel injected from no injection to full injection.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.32"
+    },
+    {
+     "t": "p",
+     "text": "The constant flow of fresh, cool fuel through the injector also helps cool it and removes traces of air.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.32"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "What sets the amount of fuel each injector delivers?",
+     "o": [
+      "The cooling water temperature",
+      "The blower speed",
+      "The fuel rack, positioned by the governor",
+      "The camshaft lobe height"
+     ],
+     "a": 2,
+     "x": "The amount of fuel to be injected by each injector is set by a mechanical linkage called the fuel rack, whose position is controlled by the governor.",
+     "p": "P40"
+    }
+   ]
+  },
+  {
+   "title": "The mechanical-hydraulic governor",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "As the engine speeds up or down, the weights move in or out. That moves a small piston, the pilot valve, in the governor's hydraulic system, which adjusts hydraulic fluid to a large piston, the servo-motor piston.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "fig",
+     "id": "me-01-fig28",
+     "num": 28,
+     "cap": "Simplified Mechanical-Hydraulic Governor",
+     "alt": "Three views of a simplified governor at normal speed, overspeed, and underspeed, showing flyweights, pilot valve, and buffer piston positions.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "When load increases, the engine slows and the flyweights move inward. The pilot valve lowers, oil raises the servo-motor piston, and the fuel racks move to increase fuel.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.37"
+    },
+    {
+     "t": "p",
+     "text": "The governor gets its oil from the engine lubricating system.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q71",
+     "eo": "1.7"
+    },
+    {
+     "eo": "1.7",
+     "q": "What happens in the governor when engine load increases?",
+     "o": [
+      "The buffer spring locks the fuel rack",
+      "The engine slows, the flyweights move in, and the servo-motor piston raises fuel",
+      "The engine speeds up, and the governor cuts fuel",
+      "The flyweights move out, and the pilot valve rises"
+     ],
+     "a": 1,
+     "x": "The reduction in speed is sensed by the flyweights, the pilot valve lowers, and the servo-motor piston rises, increasing the fuel injected.",
+     "p": "P45"
+    },
+    {
+     "eo": "1.7",
+     "q": "What does a loss of lube oil pressure do to an engine with this type of governor?",
+     "o": [
+      "It cuts off oil to the governor and shuts down the engine",
+      "It locks the fuel rack at full fuel",
+      "It has no effect on the governor",
+      "It raises engine speed"
+     ],
+     "a": 0,
+     "x": "A loss of lube oil pressure will cut off the supply of oil to the governor and cause the governor to shut down the engine.",
+     "p": "P43"
+    }
+   ]
+  },
+  {
+   "title": "Protective alarms and trips",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Protection systems alert operators to abnormal conditions and prevent the engine from destroying itself. Most mid-sized to large engines have at least the five below.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.38"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Engine overspeed alarm and trip",
+      "High water jacket temperature alarm",
+      "High exhaust temperature alarm",
+      "Low lube oil pressure alarm, trip, or both",
+      "High crankcase pressure alarm"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "An overspeed device, usually a mechanical flyweight, cuts off fuel and alarms at a preset rpm.",
+     "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "Which is one of the five usual protective alarms on mid-sized and larger diesel engines?",
+     "o": [
+      "High crankcase pressure",
+      "Low fuel rack position",
+      "High intake air density",
+      "Low flywheel inertia"
+     ],
+     "a": 0,
+     "x": "The usual alarms and trips are engine overspeed, high water jacket temperature, high exhaust temperature, low lube oil pressure, and high crankcase pressure.",
+     "p": "P52"
+    },
+    {
+     "eo": "1.8",
+     "q": "What does high crankcase pressure indicate?",
+     "o": [
+      "The engine is cold",
+      "The fuel is too clean",
+      "The intake air is too dense",
+      "The engine is in poor condition"
+     ],
+     "a": 3,
+     "x": "The high pressure condition indicates the engine is in poor condition.",
+     "p": "P52"
+    },
+    {
+     "eo": "1.8",
+     "q": "What can high exhaust temperature indicate?",
+     "o": [
+      "Overloading of the engine or inadequate scavenging",
+      "Low fuel level",
+      "Too much lube oil",
+      "A cold engine"
+     ],
+     "a": 0,
+     "x": "High exhaust temperature can indicate an overloading of the engine or possible poor performance due to inadequate scavenging.",
+     "p": "P49"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Compression ratio",
+   "eo": [
+    "1.1"
+   ],
+   "page": 18,
+   "problem": "A cylinder has a displacement volume of 120 in³ and a clearance volume of 8 in³. Find the compression ratio.",
+   "steps": [
+    "Compression ratio = (displacement volume + clearance volume) / clearance volume.",
+    "(120 + 8) / 8 = 128 / 8 = 16."
+   ],
+   "answer": "16:1, within the 14:1 to 24:1 range the handbook gives for diesels.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.18"
+  },
+  {
+   "title": "Engine displacement",
+   "eo": [
+    "1.1"
+   ],
+   "page": 17,
+   "problem": "A six-cylinder engine has a piston area of 9.616 in² and a 4 inch stroke. Find the engine displacement.",
+   "steps": [
+    "Volume of one cylinder = piston area x stroke = 9.616 x 4 = 38.5 in³.",
+    "Multiply by the number of cylinders: 38.5 x 6 = 231 in³."
+   ],
+   "answer": "About 231 in³.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.17"
+  },
+  {
+   "title": "Force on the piston",
+   "eo": [
+    "1.5"
+   ],
+   "page": 23,
+   "problem": "Near the top of compression in the handbook's ideal example, cylinder pressure is 742 psia and the piston area is 9.616 in². Find the force on the piston.",
+   "steps": [
+    "Force = pressure x area.",
+    "742 x 9.616 = 7135 lb."
+   ],
+   "answer": "About 7135 lb, or 3-1/2 tons of force.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.23"
+  },
+  {
+   "title": "How fast the events happen",
+   "eo": [
+    "1.5"
+   ],
+   "page": 22,
+   "problem": "A four-stroke diesel runs at a constant 2100 rpm. How long does one stroke take?",
+   "steps": [
+    "2100 rpm / 60 = 35 revolutions per second.",
+    "35 x 360° = 12,600 degrees per second.",
+    "One stroke is 180°, so 180 / 12,600 = 0.01429 seconds."
+   ],
+   "answer": "About 0.01429 seconds.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.22"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the compression ratio formula for a diesel engine?",
+   "a": "(Displacement volume + clearance volume) / clearance volume.",
+   "p": "P27",
+   "place": null
+  },
+  {
+   "q": "What are the bore and stroke of an engine?",
+   "a": "Bore is the diameter of the cylinder. Stroke is the distance the piston travels from the top of the cylinder to the bottom.",
+   "p": "P24",
+   "place": null
+  },
+  {
+   "q": "What five supporting systems does a diesel engine require?",
+   "a": "Cooling, lubrication, fuel injection, air intake, and exhaust.",
+   "p": "P18",
+   "place": null
+  },
+  {
+   "q": "How many crankshaft rotations does a two-stroke diesel take per cycle?",
+   "a": "One rotation, or 360°.",
+   "p": "P37",
+   "place": null
+  },
+  {
+   "q": "What is valve overlap in a diesel engine?",
+   "a": "The time both the intake and exhaust valves are open, which lets fresh air scavenge exhaust gasses and cool the cylinder.",
+   "p": "P35",
+   "place": null
+  },
+  {
+   "q": "Why does a diesel engine need a governor?",
+   "a": "It is not self-speed-limiting, because the air entering is always the maximum amount. Speed depends only on the fuel injected.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What happens to a mechanical-hydraulic governor on loss of lube oil pressure?",
+   "a": "Its oil supply is cut off and it shuts down the engine.",
+   "p": "P43",
+   "place": [
+    "Components",
+    "Controllers and Positioners"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The diesel is the most common prime mover. It compresses only air, then injects fuel, which ignites from the heat of compression.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "text": "Bore is cylinder diameter, stroke is piston travel, and the combustion chamber is where the fuel is burned.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.20"
+  },
+  {
+   "text": "A four-stroke engine takes two crankshaft rotations per cycle, and a two-stroke engine takes one.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.28"
+  },
+  {
+   "text": "A mechanical-hydraulic governor balances flyweights against hydraulic pressure and moves the fuel rack.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.40"
+  },
+  {
+   "text": "Usual protection covers overspeed, water jacket temperature, exhaust temperature, lube oil pressure, and crankcase pressure.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.40"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook wording",
+   "note": "p.18 and the p.20 summary define compression ratio as the volume at TDC divided by the volume at BDC, which is upside down and disagrees with the p.18 formula and Figure 15. The lesson uses the formula and does not repeat the sentence.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.18"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.26 gives the exhaust valve seating as 53° ABDC in one line and 53° ATDC in the next. The lesson uses ABDC, which matches the 117° BTDC stated on the same page.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.26"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.3 says an unloaded engine can accelerate at more than 2000 revolutions per second, which looks like a per-minute figure. It is not repeated. The p.28 summary places events at TDC and BDC more loosely than the p.22 to p.25 timing, so the lesson uses the timing.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.3"
+  },
+  {
+   "type": "Scope",
+   "note": "Water jacket items are the engine's own cooling, needed for objective 1.8, so they are untagged, treated like water in battery chemistry. Starting circuits, cylinder block and oil pan detail, and the two thermal distribution figures on p.24 have no objective and are left off.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.39"
+  },
+  {
+   "type": "Figures",
+   "note": "Figures 1, 4, 5, 8, 9, 11 to 14, 27, and 29 are off. Figures 2, 3, 6, 7, and 10 cover the objective 1.2 parts. The handbook has no worked examples, so the examples apply its formulas and stated values.",
+   "cite": "DOE-HDBK-1018/1-93 ME-01 p.4"
+  }
+ ],
+ "page_tags": []
+}

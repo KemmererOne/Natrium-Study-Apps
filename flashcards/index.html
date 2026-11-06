@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Flashcards">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Reactor Fundamentals Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one column. A flip card sits above its controls and a category filter.
+   Palette matches the Natrium quiz: slate neutrals, a sodium-yellow accent. */
+:root {
+  --bg: #f4f4f1;
+  --card: #ffffff;
+  --fg: #1c2230;
+  --muted: #5a6376;
+  --line: #d6d9e0;
+  --accent: #8a5f00;
+  --accent-soft: #f6e7b8;
+  --ok: #22714a;
+  --track: #e2e4e9;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4;
+    --line: #2c3645; --accent: #f2c14e; --accent-soft: #3a3118; --ok: #6cc592;
+    --track: #2a3342; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4;
+  --line: #2c3645; --accent: #f2c14e; --accent-soft: #3a3118; --ok: #6cc592;
+  --track: #2a3342; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px;
+  /* Extra 100px so the last buttons sit above the Netlify badge */
+  padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+}
+.wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+/* Home link gets its own row above the title so it never crowds it */
+.home { flex-basis: 100%; font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.home:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a.btn { display: inline-block; text-align: center; text-decoration: none; }
+h1 { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.5rem; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.bar { height: 6px; background: var(--track); border-radius: 3px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--accent); width: 0; transition: width .25s ease; }
+.filters { display: flex; align-items: center; gap: 10px; }
+.filters label { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.filters select {
+  flex: 1; min-width: 0; font: inherit; font-size: 0.95rem; padding: 8px 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--card); color: var(--fg); cursor: pointer;
+}
+.filters select:focus-visible, .btn:focus-visible, .card-face:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Saved marks: counts for the current topic, with the review pile and clear controls */
+.saved { display: flex; align-items: center; justify-content: space-between; gap: 8px 10px; flex-wrap: wrap; }
+.saved .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.saved .btn { font-size: 0.8rem; padding: 6px 10px; }
+
+/* Flip card: the inner element rotates in 3D, faces are stacked */
+.stage { perspective: 1400px; }
+.card-wrap { position: relative; min-height: 260px; }
+.card-inner {
+  position: relative; width: 100%; min-height: 260px;
+  transform-style: preserve-3d; transition: transform .45s ease;
+}
+.card-inner.flipped { transform: rotateY(180deg); }
+.card-face {
+  position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px; display: flex; flex-direction: column; gap: 14px; cursor: pointer;
+  min-width: 0; overflow: auto;
+}
+.card-face.back { transform: rotateY(180deg); }
+.side { font-size: 0.7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+/* Side label on the left, the card's permanent ID on the right */
+.cardhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.itemid { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.75rem; color: var(--muted); }
+.cat { font-size: 0.75rem; color: var(--muted); }
+.text { font-family: "Source Serif 4", Georgia, serif; font-size: 1.2rem; line-height: 1.4; font-weight: 500; text-wrap: pretty; margin: 0; }
+.back .text { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 1rem; font-weight: 400; }
+.src { margin-top: auto; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; color: var(--muted); }
+.flag { margin: 0; font-size: 0.78rem; line-height: 1.4; color: var(--fg); background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 6px 10px; border-radius: 4px; }
+/* Handbook figures: white backing so line art stays readable in dark mode */
+.fig { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.fig img { display: block; max-width: 100%; height: auto; max-height: 45vh; object-fit: contain; margin: 0 auto; background: #fff; border-radius: 6px; padding: 6px; }
+.fig figcaption { font-size: 0.75rem; line-height: 1.35; color: var(--muted); }
+.report { font-size: 0.8rem; text-align: center; margin: 0; }
+.report a { color: var(--accent); font-weight: 600; }
+.hint { font-size: 0.78rem; color: var(--muted); text-align: center; }
+
+.controls { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.btn {
+  font: inherit; font-weight: 600; font-size: 0.95rem; padding: 10px 16px; border-radius: 7px;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--bg); cursor: pointer;
+}
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn[disabled] { opacity: .4; cursor: not-allowed; }
+.grade { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.grade .btn.ok { background: var(--ok); border-color: var(--ok); color: #fff; }
+/* Phone width: the grade buttons share their row evenly */
+@media (max-width: 480px) {
+  #cardcontrols .btn { flex: 1; }
+}
+/* Touch screens get "tap" wording; keyboards keep the Space hint */
+.hint-touch { display: none; }
+@media (hover: none) and (pointer: coarse) {
+  .hint-touch { display: inline; }
+  .hint-mouse { display: none; }
+}
+[hidden] { display: none !important; }
+.done { text-align: center; padding: 24px; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.big { font-family: "Source Serif 4", Georgia, serif; font-size: 2rem; font-weight: 600; color: var(--accent); }
+</style>
+
+<div class="wrap">
+  <header>
+    <a class="home" href="../"><span aria-hidden="true">←</span> Home</a>
+    <h1>Reactor Fundamentals Flashcards</h1>
+    <div class="meta"><span id="count"></span></div>
+  </header>
+  <div class="bar" aria-hidden="true"><span id="fill"></span></div>
+  <div class="filters">
+    <label for="filters">Topic</label>
+    <select id="filters"></select>
+  </div>
+  <div class="saved">
+    <div class="meta" id="saved-note"></div>
+    <div class="actions">
+      <button class="btn ghost" id="pile"></button>
+      <button class="btn ghost" id="clear">Clear marks</button>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="card-wrap" id="cardwrap">
+      <div class="card-inner" id="inner">
+        <div class="card-face front" id="front" role="button" tabindex="0" aria-label="Show answer">
+          <div class="cardhead"><div class="side">Question</div><div class="itemid" id="id-front"></div></div>
+          <div class="cat" id="cat-front"></div>
+          <p class="text" id="q"></p>
+          <figure class="fig" id="fig-front" hidden><img alt=""><figcaption></figcaption></figure>
+          <div class="src" id="src-front"></div>
+        </div>
+        <div class="card-face back" id="back" aria-hidden="true">
+          <div class="cardhead"><div class="side">Answer</div><div class="itemid" id="id-back"></div></div>
+          <div class="cat" id="cat-back"></div>
+          <p class="text" id="a"></p>
+          <figure class="fig" id="fig-back" hidden><img alt=""><figcaption></figcaption></figure>
+          <p class="flag" id="flag-back" hidden></p>
+          <div class="src" id="src-back"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controls" id="navcontrols">
+    <button class="btn ghost" id="prev">Previous</button>
+    <button class="btn ghost" id="next">Next</button>
+  </div>
+  <div class="hint" id="hint"><span class="hint-mouse">Click the card, or press Space, to flip it.</span><span class="hint-touch">Tap the card to flip it.</span></div>
+
+  <div class="grade" id="cardcontrols">
+    <button class="btn" id="review">Review again</button>
+    <button class="btn ok" id="know">Got it</button>
+  </div>
+  <p class="report" id="report"><a id="report-link">Report a problem with this card</a></p>
+
+  <section class="done" id="done" hidden>
+    <div class="side">Deck complete</div>
+    <div class="big" id="final"></div>
+    <p class="meta" id="final-note"></p>
+    <div class="controls">
+      <a class="btn ghost" href="../">Back to home</a>
+      <button class="btn ghost" id="reviewOnly">Study the cards I missed</button>
+      <button class="btn" id="restart">Shuffle and start over</button>
+    </div>
+  </section>
+</div>
+
+<script src="../feedback.js"></script>
+<script src="cards.js"></script>
+<script>
+const state = { order: [], pos: 0, flipped: false, known: new Set(), missed: new Set(), filter: "All", studyMissed: false };
+const $ = id => document.getElementById(id);
+
+// Marks stay on this device. They are stored by card ID, so they still match after cards are added or removed.
+const MARKS_KEY = "natrium-flashcards-marks";
+let canSave = true;
+
+function saveMarks() {
+  const ids = set => [...set].map(i => CARDS[i][6]);
+  try {
+    localStorage.setItem(MARKS_KEY, JSON.stringify({ known: ids(state.known), missed: ids(state.missed) }));
+    canSave = true;
+  } catch (e) { canSave = false; }
+}
+
+function loadMarks() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(MARKS_KEY)) || {};
+    const index = new Map(CARDS.map((c, i) => [c[6], i]));
+    const fill = (set, ids) => (Array.isArray(ids) ? ids : []).forEach(id => { if (index.has(id)) set.add(index.get(id)); });
+    fill(state.known, saved.known);
+    fill(state.missed, saved.missed);
+  } catch (e) { canSave = false; }
+}
+
+// Show an item's figure in one <figure> element, or hide the element
+function showFig(id, fig) {
+  const el = $(id), img = el.querySelector("img");
+  el.hidden = !fig;
+  if (!fig) { img.removeAttribute("src"); img.alt = ""; return; }
+  img.src = fig.f; img.alt = fig.alt;
+  el.querySelector("figcaption").textContent = fig.cap;
+}
+
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+// Cards in the chosen topic or group
+function inFilter() {
+  let idx = CARDS.map((_, i) => i);
+  if (state.filter.startsWith("group:")) {
+    const topics = groupTopics(state.filter.slice(6));
+    idx = idx.filter(i => topics.includes(CARDS[i][0]));
+  } else if (state.filter !== "All") idx = idx.filter(i => CARDS[i][0] === state.filter);
+  return idx;
+}
+
+const reviewPile = () => inFilter().filter(i => state.missed.has(i));
+const pool = () => state.studyMissed ? reviewPile() : inFilter();
+
+// Counts cover the chosen topic, matching what the two buttons act on
+function showSaved() {
+  const got = inFilter().filter(i => state.known.has(i)).length, pile = reviewPile().length;
+  $("saved-note").textContent = (canSave ? "Saved on this device: " : "Not saved in this browser: ") + got + " Got it, " + pile + " Review again";
+  $("pile").textContent = state.studyMissed ? "Back to full deck" : "Study review pile";
+  $("pile").disabled = !state.studyMissed && pile === 0;
+  $("clear").disabled = got + pile === 0;
+}
+
+// Topics in a group that have cards. The NRC categories come from TOPIC_GROUPS in cards.js;
+// every "PSAR: " topic falls in the PSAR group.
+function groupTopics(name) {
+  const have = Array.from(new Set(CARDS.map(c => c[0])));
+  if (name === "PSAR") return have.filter(t => t.startsWith("PSAR: ")).sort();
+  return TOPIC_GROUPS[name].filter(t => have.includes(t));
+}
+
+function buildFilters() {
+  const box = $("filters");
+  box.innerHTML = "";
+  box.add(new Option("All", "All", false, state.filter === "All"));
+  [...Object.keys(TOPIC_GROUPS), "PSAR"].forEach(name => {
+    const g = document.createElement("optgroup");
+    g.label = name;
+    g.appendChild(new Option("All " + name, "group:" + name, false, state.filter === "group:" + name));
+    groupTopics(name).forEach(t => g.appendChild(new Option(t, t, false, state.filter === t)));
+    box.appendChild(g);
+  });
+}
+$("filters").addEventListener("change", e => { state.filter = e.target.value; state.studyMissed = false; start(); });
+
+// Show the card and its controls, or the end-of-deck screen, never both
+function showDeck(on) {
+  $("cardwrap").hidden = !on; $("hint").hidden = !on; $("navcontrols").hidden = !on; $("cardcontrols").hidden = !on; $("report").hidden = !on;
+  $("done").hidden = on;
+}
+
+function start() {
+  state.order = shuffle(pool());
+  state.pos = 0; state.flipped = false;
+  showDeck(true);
+  render();
+}
+
+function render() {
+  showSaved();
+  const n = state.order.length;
+  if (n === 0) { $("count").textContent = "No cards"; return; }
+  const c = CARDS[state.order[state.pos]];
+  $("count").textContent = "Card " + (state.pos + 1) + " of " + n;
+  $("fill").style.width = (state.pos / n * 100) + "%";
+  $("cat-front").textContent = c[0];
+  $("cat-back").textContent = c[0];
+  $("id-front").textContent = c[6];
+  $("id-back").textContent = c[6];
+  $("report-link").href = itemReport(c[6], c[0], c[1], c[3]);
+  $("q").textContent = c[1];
+  $("a").textContent = c[2];
+  $("src-front").textContent = "Source: " + c[3];
+  $("src-back").textContent = "Source: " + c[3];
+  const fig = c[5];
+  showFig("fig-front", fig && fig.at === "q" ? fig : null);
+  showFig("fig-back", fig && fig.at !== "q" ? fig : null);
+  $("flag-back").hidden = !c[4];
+  $("flag-back").textContent = c[4] ? "⚠ Possible discrepancy: " + c[4] : "";
+  $("inner").classList.toggle("flipped", state.flipped);
+  $("back").setAttribute("aria-hidden", String(!state.flipped));
+  $("front").setAttribute("aria-hidden", String(state.flipped));
+  $("prev").disabled = state.pos === 0;
+  $("review").disabled = !state.flipped;
+  $("know").disabled = !state.flipped;
+  $("next").textContent = state.pos + 1 < n ? "Next" : "Finish";
+  fitCard();
+}
+
+// Grow the card past its 260px minimum when either face's text needs more room
+function fitCard() {
+  const inner = $("inner");
+  if ($("cardwrap").hidden) return;
+  inner.style.minHeight = "";
+  const need = Math.max(...["front", "back"].map(id => {
+    const f = $(id);
+    return f.scrollHeight + (f.offsetHeight - f.clientHeight);
+  }));
+  if (need > inner.offsetHeight) inner.style.minHeight = need + "px";
+}
+
+// A figure changes the card height once it loads
+document.querySelectorAll(".fig img").forEach(img => img.addEventListener("load", fitCard));
+
+function flip() { state.flipped = !state.flipped; render(); }
+
+function mark(known) {
+  const i = state.order[state.pos];
+  if (known) { state.known.add(i); state.missed.delete(i); }
+  else { state.missed.add(i); state.known.delete(i); }
+  saveMarks();
+  advance();
+}
+
+function advance() {
+  state.flipped = false;
+  state.pos++;
+  if (state.pos >= state.order.length) return finish();
+  render();
+}
+
+function finish() {
+  const n = state.order.length;
+  const got = state.order.filter(i => state.known.has(i)).length;
+  showDeck(false);
+  $("fill").style.width = "100%";
+  $("count").textContent = "Deck complete";
+  $("final").textContent = got + " of " + n + " marked Got it";
+  const pile = reviewPile().length;
+  $("final-note").textContent = pile
+    ? (pile === 1 ? "1 card is in your review pile. Study it, then shuffle the deck."
+                  : pile + " cards are in your review pile. Study them, then shuffle the deck.")
+    : "Nothing in the review pile. Shuffle to go again.";
+  $("reviewOnly").disabled = pile === 0;
+  showSaved();
+}
+
+$("front").addEventListener("click", flip);
+$("back").addEventListener("click", flip);
+["front", "back"].forEach(id => $(id).addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); flip(); } }));
+$("prev").addEventListener("click", () => { if (state.pos > 0) { state.pos--; state.flipped = false; render(); } });
+$("next").addEventListener("click", () => { if (state.pos + 1 >= state.order.length) finish(); else advance(); });
+$("know").addEventListener("click", () => mark(true));
+$("review").addEventListener("click", () => mark(false));
+$("restart").addEventListener("click", () => { state.studyMissed = false; start(); });
+$("reviewOnly").addEventListener("click", () => { state.studyMissed = true; start(); });
+$("pile").addEventListener("click", () => { state.studyMissed = !state.studyMissed; start(); });
+$("clear").addEventListener("click", () => {
+  if (!confirm("Clear the saved marks for " + (state.filter === "All" ? "all cards" : "this topic") + "?")) return;
+  inFilter().forEach(i => { state.known.delete(i); state.missed.delete(i); });
+  saveMarks();
+  state.studyMissed = false;
+  start();
+});
+
+document.addEventListener("keydown", e => {
+  if ($("done").hidden === false) return;
+  if (e.key === " ") { e.preventDefault(); flip(); }
+  if (e.key === "ArrowRight" && state.flipped) mark(true);
+  if (e.key === "ArrowLeft" && state.flipped) mark(false);
+});
+
+window.addEventListener("resize", fitCard);
+if (document.fonts) document.fonts.ready.then(fitCard);
+
+loadMarks();
+buildFilters();
+start();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(err => console.warn("Service worker registration failed", err));
+  });
+}
+</script>
+</html>

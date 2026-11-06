@@ -1,0 +1,3481 @@
+{
+ "module_id": "HT-01",
+ "slug": "ht-01-thermodynamics",
+ "title": "Thermodynamics",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1012-V1",
+ "handbook": "DOE-HDBK-1012/1-92",
+ "word_file": "Thermodynamic Units and Properties.docx",
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Thermodynamic Units and Properties",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given operating conditions of a system, EVALUATE the thermodynamic state of the system.",
+   "items": [],
+   "page": {
+    "pdf": 22,
+    "printed": "x"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following properties:",
+     "items": [
+      "a. Specific volume",
+      "b. Density",
+      "c. Specific gravity",
+      "d. Humidity"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the following classifications of thermodynamic properties:",
+     "items": [
+      "a. Intensive properties",
+      "b. Extensive properties"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DEFINE the thermodynamic properties temperature and pressure.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the Fahrenheit, Celsius, Kelvin, and Rankine temperature scales including:",
+     "items": [
+      "a. Absolute zero temperature",
+      "b. The freezing point of water at atmospheric pressure",
+      "c. The boiling point of water at atmospheric pressure"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "CONVERT temperatures between the Fahrenheit, Celsius, Kelvin, and Rankine scales.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the relationship between absolute pressure, gauge pressure, and vacuum.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "CONVERT pressures between the following units:",
+     "items": [
+      "a. Pounds per square inch",
+      "b. Inches of water",
+      "c. Inches of mercury",
+      "d. Millimeters of mercury",
+      "e. Microns of mercury"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DEFINE the following:",
+     "items": [
+      "a. Heat",
+      "b. Latent heat",
+      "c. Sensible heat",
+      "d. Unit used to measure heat"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DEFINE the following thermodynamic properties:",
+     "items": [
+      "a. Specific enthalpy",
+      "b. Entropy"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the following types of thermodynamic systems:",
+     "items": [
+      "a. Isolated system",
+      "b. Closed system",
+      "c. Open system"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DEFINE the following terms concerning thermodynamic systems:",
+     "items": [
+      "a. Thermodynamic surroundings",
+      "b. Thermodynamic equilibrium",
+      "c. Control volume",
+      "d. Steady-state"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DESCRIBE the following terms concerning thermodynamic processes:",
+     "items": [
+      "a. Thermodynamic process",
+      "b. Cyclic process",
+      "c. Reversible process",
+      "d. Irreversible process",
+      "e. Adiabatic process",
+      "f. Isentropic process",
+      "g. Throttling process",
+      "h. Polytropic process"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "DISTINGUISH between intensive and extensive properties.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Saturation",
+      "b. Subcooled liquid",
+      "c. Superheated vapor",
+      "d. Critical Point",
+      "e. Triple Point",
+      "f. Vapor pressure curve",
+      "g. Quality",
+      "h. Moisture content"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "DESCRIBE the processes of sublimation, vaporization, condensation, and fusion.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "Given a Mollier diagram and sufficient information to indicate the state of the fluid, DETERMINE any unknown properties for the fluid.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "Given a set of steam tables and sufficient information to indicate the state of the fluid, DETERMINE any unknown properties for the fluid.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "DETERMINE the change in the enthalpy of a fluid as it passes through a system component, given the state of the fluid at the inlet and outlet of the component and either steam tables or a Mollier diagram.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.19",
+     "text": "STATE the First Law of Thermodynamics.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.20",
+     "text": "Using the First Law of Thermodynamics, ANALYZE an open system including all energy transfer processes crossing the boundaries.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.21",
+     "text": "Using the First Law of Thermodynamics, ANALYZE cyclic processes for a thermodynamic system.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.22",
+     "text": "Given a defined system, PERFORM energy balances on all major components in the system.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.23",
+     "text": "Given a heat exchanger, PERFORM an energy balance across the two sides of the heat exchanger.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.24",
+     "text": "IDENTIFY the path(s) on a T-s diagram that represents the thermodynamic processes occurring in a fluid system.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.25",
+     "text": "STATE the Second Law of Thermodynamics.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.26",
+     "text": "Using the Second Law of Thermodynamics, DETERMINE the maximum possible efficiency of a system.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.27",
+     "text": "Given a thermodynamic system, CONDUCT an analysis using the Second Law of Thermodynamics.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.28",
+     "text": "Given a thermodynamic system, DESCRIBE the method used to determine:",
+     "items": [
+      "a. The maximum efficiency of the system",
+      "b. The efficiency of the components within the system"
+     ],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "1.29",
+     "text": "DIFFERENTIATE between the path for an ideal process and that for a real process on a T-s or h-s diagram.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.30",
+     "text": "Given a T-s or h-s diagram for a system EVALUATE:",
+     "items": [
+      "a. System efficiencies",
+      "b. Component efficiencies"
+     ],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.31",
+     "text": "DESCRIBE how individual factors affect system or component efficiency.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.32",
+     "text": "Apply the ideal gas laws to SOLVE for the unknown pressure, temperature, or volume.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.33",
+     "text": "DESCRIBE when a fluid may be considered to be incompressible.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.34",
+     "text": "CALCULATE the work done in constant pressure and constant volume processes.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.35",
+     "text": "DESCRIBE the effects of pressure changes on confined fluids.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    },
+    {
+     "number": "1.36",
+     "text": "DESCRIBE the effects of temperature changes on confined fluids.",
+     "items": [],
+     "page": {
+      "pdf": 25,
+      "printed": "xiii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The specific volume (ν) of a substance is the total volume (V) of that substance divided by the total mass (m) of that substance",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.3"
+  },
+  {
+   "id": "P2",
+   "quote": "The density ( ρ ) of a substance is the reciprocal of its specific volume (ν).",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.3"
+  },
+  {
+   "id": "P3",
+   "quote": "Specific gravity (S.G.) is a measure of the relative density of a substance as compared to the density of water at a standard temperature.",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+  },
+  {
+   "id": "P4",
+   "quote": "Humidity is the amount of moisture (water vapor) in the air.",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "An intensive property is independent of the amount of mass. The value of an extensive property varies directly with the mass.",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "Temperature is a measure of the molecular activity of a substance.",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.6"
+  },
+  {
+   "id": "P7",
+   "quote": "The zero points on both absolute scales represent the same physical state.",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.7"
+  },
+  {
+   "id": "P8",
+   "quote": "Absolute zero = -460 °F or -273 °C",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.12"
+  },
+  {
+   "id": "P9",
+   "quote": "What is the Rankine equivalent of 80°C?",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.8"
+  },
+  {
+   "id": "P10",
+   "quote": "almost all pressure gauges register zero when open to the atmosphere.",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+  },
+  {
+   "id": "P11",
+   "quote": "14.7 psia = 408 inches of water",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.11"
+  },
+  {
+   "id": "P12",
+   "quote": "Mass and total volume are examples of extensive properties.",
+   "sec": "Thermodynamic Properties",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "for water at 14.7 psia, the saturation temperature is 212°F.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+  },
+  {
+   "id": "P14",
+   "quote": "1 - 520/800",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.75"
+  },
+  {
+   "id": "P15",
+   "quote": "W1-2 = P(∆V)",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.100"
+  },
+  {
+   "id": "P16",
+   "quote": "1 Btu = 778.3 ft-lbf",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.24"
+  },
+  {
+   "id": "P17",
+   "quote": "Pressure is a measure of the force exerted per unit area on the boundaries of a substance (or system).",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "When pressure is measured relative to a perfect vacuum, it is called absolute pressure (psia); when measured relative to atmospheric pressure (14.7 psi), it is called gauge pressure (psig).",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+  },
+  {
+   "id": "P19",
+   "quote": "If the pressure is below that of the atmosphere, it is designated as a vacuum.",
+   "sec": "Temperature and Pressure Measurements",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+  },
+  {
+   "id": "P20",
+   "quote": "Energy is defined as the capacity of a system to perform work or produce heat.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.14"
+  },
+  {
+   "id": "P21",
+   "quote": "Potential energy (PE) is defined as the energy of position.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.14"
+  },
+  {
+   "id": "P22",
+   "quote": "Kinetic energy (KE) is the energy of motion.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.15"
+  },
+  {
+   "id": "P23",
+   "quote": "These microscopic forms of energy are collectively called internal energy, customarily represented by the symbol U.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.16"
+  },
+  {
+   "id": "P24",
+   "quote": "This form of energy is called P-V energy because it arises from the pressure (P) and the volume (V) of a fluid.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.17"
+  },
+  {
+   "id": "P25",
+   "quote": "Specific enthalpy (h) is defined as h = u + Pν",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.18"
+  },
+  {
+   "id": "P26",
+   "quote": "Work is a form of energy, but it is energy in transit.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.18"
+  },
+  {
+   "id": "P27",
+   "quote": "A positive value for work indicates that work is done by the system on its surroundings; a negative value indicates that work is done on the system by its surroundings.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.19"
+  },
+  {
+   "id": "P28",
+   "quote": "Heat, like work, is energy in transit.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.19"
+  },
+  {
+   "id": "P29",
+   "quote": "A positive value for heat indicates that heat is added to the system by its surroundings.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.20"
+  },
+  {
+   "id": "P30",
+   "quote": "The heat added to or removed from a substance to produce a change in its temperature is called sensible heat.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.20"
+  },
+  {
+   "id": "P31",
+   "quote": "Latent heat is the amount of heat added to or removed from a substance to produce a change in phase.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+  },
+  {
+   "id": "P32",
+   "quote": "When latent heat is added, no temperature change occurs.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+  },
+  {
+   "id": "P33",
+   "quote": "The heat capacity of a substance per unit mass is called the specific heat (cp) of the substance.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+  },
+  {
+   "id": "P34",
+   "quote": "Entropy quantifies the energy of a substance that is no longer available to perform useful work.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.22"
+  },
+  {
+   "id": "P35",
+   "quote": "Power is defined as the time rate of doing work.",
+   "sec": "Energy, Work, and Heat",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.24"
+  },
+  {
+   "id": "P36",
+   "quote": "A system in thermodynamics is nothing more than the collection of matter that is being studied.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.26"
+  },
+  {
+   "id": "P37",
+   "quote": "Everything external to the system is called the thermodynamic surroundings",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P38",
+   "quote": "An isolated system is one that is not influenced in any way by the surroundings.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P39",
+   "quote": "A closed system has no transfer of mass with its surroundings, but may have a transfer of energy (either heat or work) with its surroundings.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P40",
+   "quote": "An open system is one that may have a transfer of both mass and energy with its surroundings.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P41",
+   "quote": "A control volume is a fixed region in space chosen for the thermodynamic study of mass and energy balances for flowing systems.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P42",
+   "quote": "Steady state is that circumstance in which there is no accumulation of mass or energy within the control volume, and the properties at any point within the system are independent of time.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+  },
+  {
+   "id": "P43",
+   "quote": "Therefore, at the conclusion of a cycle, all the properties have the same value they had at the beginning.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+  },
+  {
+   "id": "P44",
+   "quote": "In reality, there are no truly reversible processes",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+  },
+  {
+   "id": "P45",
+   "quote": "Four of the most common causes of irreversibility are friction, unrestrained expansion of a fluid, heat transfer through a finite temperature difference, and mixing of two different substances.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+  },
+  {
+   "id": "P46",
+   "quote": "An adiabatic process is one in which there is no heat transfer into or out of the system.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+  },
+  {
+   "id": "P47",
+   "quote": "An isentropic process is one in which the entropy of the fluid remains constant.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+  },
+  {
+   "id": "P48",
+   "quote": "A throttling process is defined as a process in which there is no change in enthalpy from state one to state two, h1 = h2; no work is done, W = 0; and the process is adiabatic, Q = 0.",
+   "sec": "Thermodynamic Systems and Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+  },
+  {
+   "id": "P49",
+   "quote": "The term saturation defines a condition in which a mixture of vapor and liquid can exist together at a given temperature and pressure.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+  },
+  {
+   "id": "P50",
+   "quote": "The higher the pressure, the higher the saturation temperature.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+  },
+  {
+   "id": "P51",
+   "quote": "its quality (x) is defined as the ratio of the mass of the vapor to the total mass of both vapor and liquid.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.34"
+  },
+  {
+   "id": "P52",
+   "quote": "The moisture content of a substance is the opposite of its quality.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.35"
+  },
+  {
+   "id": "P53",
+   "quote": "When the vapor is at a temperature greater than the saturation temperature, it is said to exist as superheated vapor.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.35"
+  },
+  {
+   "id": "P54",
+   "quote": "Sublimation is a special term used for cases in which the transition between the solid phase and the vapor phase occurs directly, without passing through the liquid phase.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.37"
+  },
+  {
+   "id": "P55",
+   "quote": "the triple point, defined as the state in which all three phases may be present in equilibrium.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.37"
+  },
+  {
+   "id": "P56",
+   "quote": "at the critical point the saturated-liquid and saturated-vapor states are identical.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.36"
+  },
+  {
+   "id": "P57",
+   "quote": "So the processes of vaporization and condensation are the exact opposite of each other.",
+   "sec": "Change of Phase",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.38"
+  },
+  {
+   "id": "P58",
+   "quote": "A T-s diagram is the type of diagram most frequently used to analyze energy transfer system cycles.",
+   "sec": "Property Diagrams and Steam Tables",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.46"
+  },
+  {
+   "id": "P59",
+   "quote": "the heat transferred to or from a system equals the area under the T-s curve of the process.",
+   "sec": "Property Diagrams and Steam Tables",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.46"
+  },
+  {
+   "id": "P60",
+   "quote": "The Mollier diagram is used only when quality is greater than 50% and for superheated steam.",
+   "sec": "Property Diagrams and Steam Tables",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.47"
+  },
+  {
+   "id": "P61",
+   "quote": "Steam tables consist of two sets of tables of the energy transfer properties of water and steam: saturated steam tables and superheated steam tables.",
+   "sec": "Property Diagrams and Steam Tables",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.47"
+  },
+  {
+   "id": "P62",
+   "quote": "Usually, two properties (for example, v, p, T, h, s) of the substance must be known in order to determine the other needed properties.",
+   "sec": "Property Diagrams and Steam Tables",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.49"
+  },
+  {
+   "id": "P63",
+   "quote": "Energy can neither be created nor destroyed, only altered in form.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.53"
+  },
+  {
+   "id": "P64",
+   "quote": "all energies into the system are equal to all energies leaving the system plus the change in storage of energies within the system.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.54"
+  },
+  {
+   "id": "P65",
+   "quote": "there is no change in storage (i.e. heat exchangers do not swell while in operation).",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.54"
+  },
+  {
+   "id": "P66",
+   "quote": "The control volume approach is usually used today in analyzing thermodynamic systems.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.57"
+  },
+  {
+   "id": "P67",
+   "quote": "enthalpy, has been defined as h = u + Pν.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.59"
+  },
+  {
+   "id": "P68",
+   "quote": "These would be classified as isothermal, isobaric, or isovolumetric processes, respectively.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.61"
+  },
+  {
+   "id": "P69",
+   "quote": "It is important to note that the later equation can only be used when no phase change occurs since ∆T = 0 during a phase change.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.63"
+  },
+  {
+   "id": "P70",
+   "quote": "each component of the system is thermodynamically analyzed as an open system as the fluid passes through it.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.62"
+  },
+  {
+   "id": "P71",
+   "quote": "The condensation process is the heat-rejection mechanism for the cycle.",
+   "sec": "First Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.62"
+  },
+  {
+   "id": "P72",
+   "quote": "It is impossible to construct a device that operates in a cycle and produces no effect other than the removal of heat from a body at one temperature and the absorption of an equal quantity of heat by a body at a higher temperature.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.69"
+  },
+  {
+   "id": "P73",
+   "quote": "It is impossible to construct an engine that will work in a complete cycle and produce no other effect except the raising of a weight and the cooling of a heat reservoir.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.70"
+  },
+  {
+   "id": "P74",
+   "quote": "the second law denies the possibility of completely converting into work all of the heat supplied to a system operating in a cycle",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.70"
+  },
+  {
+   "id": "P75",
+   "quote": "However, no information about the direction of the process can be obtained by the application of the first law.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.70"
+  },
+  {
+   "id": "P76",
+   "quote": "Entropy can also be explained as a measure of the unavailability of heat to perform work in a cycle.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.70"
+  },
+  {
+   "id": "P77",
+   "quote": "entropy must increase or stay the same for a cyclic system; it can never decrease.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.71"
+  },
+  {
+   "id": "P78",
+   "quote": "No engine can be more efficient than a reversible engine operating between the same high temperature and low temperature reservoirs.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.72"
+  },
+  {
+   "id": "P79",
+   "quote": "The efficiency of a reversible engine depends only upon the temperatures of the heat source and heat receiver.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.72"
+  },
+  {
+   "id": "P80",
+   "quote": "the Carnot efficiency serves as an unattainable upper limit for any real system’s efficiency.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.74"
+  },
+  {
+   "id": "P81",
+   "quote": "These isentropic processes will be represented by vertical lines on either T-s or h-s diagrams",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.77"
+  },
+  {
+   "id": "P82",
+   "quote": "the dashed lines representing the real process will slant slightly towards the right since the entropy will increase from the start to the end of the process.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.77"
+  },
+  {
+   "id": "P83",
+   "quote": "The efficiency of each type of component can be calculated by comparing the actual work produced by the component to the work that would have been produced by an ideal component operating isentropically between the same inlet and outlet conditions.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.78"
+  },
+  {
+   "id": "P84",
+   "quote": "An actual turbine does less work because of friction losses in the blades, leakage past the blades and, to a lesser extent, mechanical friction.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.80"
+  },
+  {
+   "id": "P85",
+   "quote": "A pump requires more work because of unavoidable losses due to friction and fluid turbulence.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.81"
+  },
+  {
+   "id": "P86",
+   "quote": "The main feature of the Rankine cycle, shown in Figure 31, is that it confines the isentropic compression process to the liquid phase only",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.88"
+  },
+  {
+   "id": "P87",
+   "quote": "excessive condenser subcooling will decrease cycle efficiency.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.92"
+  },
+  {
+   "id": "P88",
+   "quote": "Turbines, pumps, and compressors all behave non-ideally due to heat losses, friction and windage losses.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.95"
+  },
+  {
+   "id": "P89",
+   "quote": "Another example of a loss due to a system’s design is heat loss to the environment",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.95"
+  },
+  {
+   "id": "P90",
+   "quote": "the pressure of a gas expanding at constant temperature varies inversely to the volume",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.97"
+  },
+  {
+   "id": "P91",
+   "quote": "the pressure of a gas varies directly with temperature when the volume is held constant, and the volume varies directly with temperature when the pressure is held constant",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.97"
+  },
+  {
+   "id": "P92",
+   "quote": "where the pressure and temperature are absolute values.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.98"
+  },
+  {
+   "id": "P93",
+   "quote": "No real gases follow the ideal gas law or equation completely.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.98"
+  },
+  {
+   "id": "P94",
+   "quote": "results in work performed on the system and is essentially the area under a P-V curve.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.99"
+  },
+  {
+   "id": "P95",
+   "quote": "A fluid is any substance that conforms to the shape of its container.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.99"
+  },
+  {
+   "id": "P96",
+   "quote": "The predominant effect of an increase in pressure in a compressible fluid, such as a gas, is an increase in the density of the fluid.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.100"
+  },
+  {
+   "id": "P97",
+   "quote": "An increase in the pressure of an incompressible fluid will not have a significant effect on the density.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.100"
+  },
+  {
+   "id": "P98",
+   "quote": "An increase in temperature will tend to decrease the density of any fluid.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+  },
+  {
+   "id": "P99",
+   "quote": "A 5% increase in absolute temperature will result in a 5% increase in the absolute pressure.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+  },
+  {
+   "id": "P100",
+   "quote": "this results in a tremendous increase in pressure for a relatively minor temperature change.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+  },
+  {
+   "id": "P101",
+   "quote": "pressure in a water-solid system will increase about 100 psi for every 1 °F increase in temperature.",
+   "sec": "Compression Processes",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+  },
+  {
+   "id": "P102",
+   "quote": "No engine, actual or ideal, when operating in a cycle can convert all the heat supplied it into mechanical work-heat must be rejected.",
+   "sec": "Second Law of Thermodynamics",
+   "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.5 Laws of Thermodynamics"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Properties and definitions",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.4 Properties and Definitions"
+  },
+  {
+   "step": "Intensive and extensive properties",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.11 Intensive vs. Extensive Properties"
+  },
+  {
+   "step": "Temperature scales",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.18 Temperature Scales"
+  },
+  {
+   "step": "Absolute and gauge pressure",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.26 Absolute and Gauge Pressure"
+  },
+  {
+   "step": "Properties of energy",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.40 Properties of Energy"
+  },
+  {
+   "step": "Work",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.50 Work"
+  },
+  {
+   "step": "Properties of heat",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.59 Properties of Heat"
+  },
+  {
+   "step": "Laws of thermodynamics",
+   "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.5 Laws of Thermodynamics"
+  },
+  {
+   "step": "Entropy",
+   "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.8 Entropy"
+  },
+  {
+   "step": "Enthalpy",
+   "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.18 Enthalpy"
+  },
+  {
+   "step": "Specific heat",
+   "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.21 Specific Heat"
+  },
+  {
+   "step": "Thermodynamic systems",
+   "cite": "Word: Thermodynamics.docx, slide 1.5 Thermodynamic Systems"
+  },
+  {
+   "step": "Reversible and irreversible processes",
+   "cite": "Word: Thermodynamics.docx, slide 1.9 Reversible (Ideal) Process"
+  },
+  {
+   "step": "Throttling",
+   "cite": "Word: Thermodynamics.docx, slide 1.13 Isenthalpic Process"
+  },
+  {
+   "step": "First law analysis",
+   "cite": "Word: Thermodynamics.docx, slide 1.15 Analyzing Systems Using the First Law of Thermodynamics"
+  },
+  {
+   "step": "Second law",
+   "cite": "Word: Thermodynamics.docx, slide 1.40 Second Law of Thermodynamics"
+  },
+  {
+   "step": "Carnot's principle and cycle",
+   "cite": "Word: Thermodynamics.docx, slide 1.47 Carnot's Principle"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Mass, volume, and density",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The mass of a body is the measure of the amount of material present in it. Its weight is the force exerted when that mass is accelerated in a gravitational field.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.1"
+    },
+    {
+     "t": "eq",
+     "text": "wt = mg / gc, with g = 32.17 ft/sec² and gc = 32.17 lbm-ft/lbf-sec²",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The mass of a body stays constant even if the gravitational acceleration acting on it changes.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Because the density of a fluid varies with temperature, specific gravities must be specified at particular temperatures.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Absolute humidity is the mass of water vapor per unit volume of air. Relative humidity is the water vapor present divided by the maximum the air could contain at that temperature, as a percentage.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Temperature, pressure, specific volume, and density are intensive. Mass and total volume are extensive.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "How are density and specific volume related?",
+     "o": [
+      "They are not related",
+      "They are equal",
+      "Density is the reciprocal of specific volume",
+      "Density is specific volume times mass"
+     ],
+     "a": 2,
+     "x": "The density of a substance is the reciprocal of its specific volume.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.2",
+     "q": "A quantity of matter is divided into two equal parts. What happens to its intensive properties?",
+     "o": [
+      "Each part keeps the same value",
+      "Each part has half the value",
+      "Each part has twice the value",
+      "They become zero"
+     ],
+     "a": 0,
+     "x": "An intensive property is independent of the amount of mass, so each part has the same value as the original.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which of these is an extensive property?",
+     "o": [
+      "Density",
+      "Total volume",
+      "Temperature",
+      "Pressure"
+     ],
+     "a": 1,
+     "x": "Mass and total volume are extensive. Temperature, pressure, and density are intensive.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Temperature scales",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "The greater the movement of molecules, the higher the temperature. Temperature can be used to predict the direction of heat transfer.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The Celsius scale has 100 units between the freezing point and boiling point of water at standard atmospheric pressure, and the Fahrenheit scale has 180.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.6"
+    },
+    {
+     "t": "eq",
+     "text": "°F = 32.0 + (9/5)°C    °C = (°F - 32.0)(5/9)",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.7"
+    },
+    {
+     "t": "p",
+     "text": "The Kelvin scale is the absolute scale that corresponds to Celsius, and the Rankine scale is the absolute scale that corresponds to Fahrenheit.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "eq",
+     "text": "°R = °F + 460    °K = °C + 273",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig1",
+     "num": 1,
+     "cap": "Comparison of Temperature Scales",
+     "alt": "Two pairs of scales: 212 °F is 672 °R, 32 °F is 492 °R, and -460 °F is 0 °R; 100 °C is 373 K, 0 °C is 273 K, and -273 °C is 0 K.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Absolute zero: -460 °F or -273 °C",
+      "Freezing point of water: 32 °F or 0 °C",
+      "Boiling point of water: 212 °F or 100 °C"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q316",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is absolute zero on the Fahrenheit scale, as used in the handbook?",
+     "o": [
+      "-273 °F",
+      "-460 °F",
+      "0 °F",
+      "32 °F"
+     ],
+     "a": 1,
+     "x": "The handbook gives absolute zero as -460 °F or -273 °C.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is the Rankine equivalent of 80 °C?",
+     "o": [
+      "176 °R",
+      "353 °R",
+      "540 °R",
+      "636 °R"
+     ],
+     "a": 3,
+     "x": "80 °C is 176 °F, and 176 + 460 = 636 °R.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Pressure scales",
+   "eo": [
+    "1.3",
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Pressure is caused by the collisions of molecules with the boundaries of the system. It is frequently measured in lbf/in² (psi).",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Almost all pressure gauges register zero when open to the atmosphere, so they measure the difference between the fluid pressure and the surrounding air.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig2",
+     "num": 2,
+     "cap": "Pressure Relationships",
+     "alt": "Diagram of pressure levels: gauge pressure is measured up from atmospheric pressure, vacuum is measured down from it, and absolute pressure is measured up from a perfect vacuum.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.9"
+    },
+    {
+     "t": "eq",
+     "text": "Pabs = Patm + Pgauge    Pabs = Patm - Pvac",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.10"
+    },
+    {
+     "t": "list",
+     "items": [
+      "14.7 psia = 408 inches of water",
+      "14.7 psia = 29.9 inches of mercury",
+      "1 inch of mercury = 25.4 millimeters of mercury",
+      "1 millimeter of mercury = 10³ microns of mercury"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q313",
+     "eo": "1.6"
+    },
+    {
+     "existing": "Q314",
+     "eo": "1.7"
+    },
+    {
+     "eo": "1.6",
+     "q": "What does a pressure gauge open to the atmosphere normally read?",
+     "o": [
+      "A vacuum",
+      "14.7 psig",
+      "Zero",
+      "29.9 psia"
+     ],
+     "a": 2,
+     "x": "Almost all pressure gauges register zero when open to the atmosphere.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.7",
+     "q": "Using the handbook's conversions, 14.7 psia equals how many inches of water?",
+     "o": [
+      "29.9",
+      "144",
+      "408",
+      "760"
+     ],
+     "a": 2,
+     "x": "14.7 psia equals 408 inches of water and 29.9 inches of mercury.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Forms of energy",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "eq",
+     "text": "PE = mgz / gc",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "eq",
+     "text": "KE = mv² / 2gc",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "The specific internal energy of a substance is its internal energy per unit mass, u = U/m.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "A fluid under pressure has the capacity to perform work. P-V energy is also called flow energy.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "Enthalpy is a property of a substance, but it cannot be measured directly. It is the change in specific enthalpy, not the absolute value, that is important in practical problems.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.18"
+    },
+    {
+     "t": "p",
+     "text": "Enthalpy represents the total energy of a system, as the sum of internal energy and flow energy.",
+     "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.18 Enthalpy"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q610",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "Which equation defines specific enthalpy?",
+     "o": [
+      "h = u + Pν",
+      "h = mgz / gc",
+      "h = Q / m",
+      "h = P / ν"
+     ],
+     "a": 0,
+     "x": "Specific enthalpy is defined as h = u + Pν.",
+     "p": "P25",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    },
+    {
+     "eo": "1.9",
+     "q": "What is P-V energy also called?",
+     "o": [
+      "Internal energy",
+      "Flow energy",
+      "Latent energy",
+      "Potential energy"
+     ],
+     "a": 1,
+     "x": "P-V energy arises from the pressure and volume of a fluid and is also called flow energy.",
+     "p": "P24",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Work and heat",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "Work is not a property of a system. A system contains no work.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.18"
+    },
+    {
+     "t": "eq",
+     "text": "W = Fd",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Heat transfer occurs at the molecular level as a result of a temperature difference. In engineering, the unit of heat is the British thermal unit (Btu).",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "The latent heat of fusion changes phase between solid and liquid. The latent heat of vaporization changes phase between liquid and vapor, and is sometimes called the latent heat of condensation.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "eq",
+     "text": "cp = Q / (m∆T), so Q = m cp ∆T",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+    },
+    {
+     "t": "p",
+     "text": "Heat and work are both boundary phenomena. Both represent energy crossing the system boundary, and systems never possess either one.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.22"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "What is sensible heat?",
+     "o": [
+      "Heat stored in a system",
+      "Heat rejected to a sink",
+      "Heat that changes a substance's phase at constant temperature",
+      "Heat that changes a substance's temperature"
+     ],
+     "a": 3,
+     "x": "Heat added or removed to produce a change in temperature is sensible heat.",
+     "p": "P30",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    },
+    {
+     "eo": "1.8",
+     "q": "What happens to temperature while latent heat is added?",
+     "o": [
+      "It rises slowly",
+      "It falls",
+      "It does not change",
+      "It rises rapidly"
+     ],
+     "a": 2,
+     "x": "When latent heat is added, no temperature change occurs.",
+     "p": "P32",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    },
+    {
+     "eo": "1.8",
+     "q": "What does a positive value for work mean in the handbook's sign convention?",
+     "o": [
+      "No work is done",
+      "Work is done by the system on its surroundings",
+      "Work is done on the system",
+      "Heat is added to the system"
+     ],
+     "a": 1,
+     "x": "A positive value means work is done by the system on its surroundings. A negative value means work is done on the system.",
+     "p": "P27",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Entropy, energy units, and power",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "eq",
+     "text": "∆S = ∆Q / Tabs    ∆s = ∆q / Tabs",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.22"
+    },
+    {
+     "t": "p",
+     "text": "Like enthalpy, entropy cannot be measured directly. It is given with respect to a reference value.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.23"
+    },
+    {
+     "t": "list",
+     "items": [
+      "1 Btu = 778.3 ft-lbf = 2.928 x 10⁻⁴ kW-hr",
+      "1 kW-hr = 3.413 x 10³ Btu = 2.655 x 10⁶ ft-lbf"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "list",
+     "items": [
+      "1 kW = 3.413 x 10³ Btu/hr = 737.6 ft-lbf/sec",
+      "1 hp = 550.0 ft-lbf/sec"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.24"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q312",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "One Btu equals about how many foot-pounds-force?",
+     "o": [
+      "32.17",
+      "144",
+      "550",
+      "778"
+     ],
+     "a": 3,
+     "x": "1 Btu = 778.3 ft-lbf. This relationship is often used to convert mechanical energy to Btu.",
+     "p": "P16",
+     "place": [
+      "Thermodynamics",
+      "Basic Energy Concepts"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Thermodynamic systems",
+   "eo": [
+    "1.10",
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "The system is separated from the surroundings by the system boundaries, which may be fixed or movable.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "A system is in thermodynamic equilibrium when it is in equilibrium with regard to all possible changes in state. A gas in thermal equilibrium has the same temperature throughout.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "Which type of system allows both mass and energy to cross its boundary?",
+     "o": [
+      "Open",
+      "Adiabatic",
+      "Isolated",
+      "Closed"
+     ],
+     "a": 0,
+     "x": "An open system may transfer both mass and energy with its surroundings.",
+     "p": "P40",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.10",
+     "q": "What can cross the boundary of a closed system?",
+     "o": [
+      "Both mass and energy",
+      "Neither mass nor energy",
+      "Mass only",
+      "Energy only"
+     ],
+     "a": 3,
+     "x": "A closed system has no transfer of mass but may transfer heat or work.",
+     "p": "P39",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.11",
+     "q": "What describes steady state?",
+     "o": [
+      "No flow across the control surface",
+      "Constant entropy",
+      "No accumulation of mass or energy in the control volume, with properties independent of time",
+      "Temperature equal throughout the system"
+     ],
+     "a": 2,
+     "x": "At steady state nothing accumulates in the control volume and the properties at any point do not change with time.",
+     "p": "P42",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Thermodynamic processes",
+   "eo": [
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The path of the succession of states through which a system passes is called the thermodynamic process.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+    },
+    {
+     "t": "p",
+     "text": "When a system returns to its initial values after a number of changes in state, it has undergone a cyclic process or cycle.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "A reversible process can be reversed, leaving no change in the system or surroundings.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "An irreversible process cannot return both the system and the surroundings to their original conditions.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "An isentropic process results if the process is reversible and adiabatic.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+    },
+    {
+     "t": "p",
+     "text": "In a polytropic process, a plot of Log P against Log V is a straight line, so PVⁿ is a constant.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "p",
+     "text": "An example of a throttling process is an ideal gas flowing through a valve in midposition. Pressure drops and velocity rises.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.29"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q58",
+     "eo": "1.12"
+    },
+    {
+     "existing": "Q310",
+     "eo": "1.12"
+    },
+    {
+     "existing": "Q311",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.12",
+     "q": "A process is both reversible and adiabatic. What kind of process is it?",
+     "o": [
+      "Throttling",
+      "Cyclic",
+      "Isentropic",
+      "Polytropic"
+     ],
+     "a": 2,
+     "x": "Entropy stays constant if the process is reversible and adiabatic, so it is isentropic.",
+     "p": "P47",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.12",
+     "q": "Which is one of the most common causes of irreversibility?",
+     "o": [
+      "Friction",
+      "A closed boundary",
+      "Constant pressure",
+      "A fixed control volume"
+     ],
+     "a": 0,
+     "x": "The four most common causes are friction, unrestrained expansion, heat transfer through a finite temperature difference, and mixing of different substances.",
+     "p": "P45",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Change of phase",
+   "eo": [
+    "1.13",
+    "1.14",
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "An extensive property may be made intensive by dividing it by the total mass. Any specific property is an intensive property.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "p",
+     "text": "The saturation temperature is the temperature at which vaporization starts for a given pressure. The saturation pressure is the pressure at which it starts for a given temperature.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig5",
+     "num": 5,
+     "cap": "Vapor Pressure Curve",
+     "alt": "Graph of pressure against temperature with a rising vapor pressure curve.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+    },
+    {
+     "t": "p",
+     "text": "The graph of temperature against pressure at saturated conditions is called the vapor pressure curve.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+    },
+    {
+     "t": "p",
+     "text": "A liquid below the saturation temperature for its pressure is called subcooled or compressed liquid. Both terms have the same meaning.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "eq",
+     "text": "M = 1 - x",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Sublimation: change of phase from solid to vapor",
+      "Vaporization: change of phase from liquid to vapor",
+      "Condensation: change of phase from vapor to liquid",
+      "Fusion or melting: change of phase from solid to liquid"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q457",
+     "eo": "1.14"
+    },
+    {
+     "existing": "Q459",
+     "eo": "1.14"
+    },
+    {
+     "existing": "Q461",
+     "eo": "1.14"
+    },
+    {
+     "eo": "1.14",
+     "q": "A mixture has 0.2 lbm of vapor and 0.8 lbm of liquid at saturation. What is its moisture content?",
+     "o": [
+      "0.2",
+      "0.25",
+      "0.8",
+      "1.0"
+     ],
+     "a": 2,
+     "x": "Moisture is the liquid mass over the total mass, 0.8, and M = 1 - x.",
+     "p": "P52",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Units and Properties"
+     ]
+    },
+    {
+     "eo": "1.15",
+     "q": "What is the change of phase directly from solid to vapor called?",
+     "o": [
+      "Vaporization",
+      "Condensation",
+      "Fusion",
+      "Sublimation"
+     ],
+     "a": 3,
+     "x": "Sublimation is the transition between the solid and vapor phases without passing through the liquid phase.",
+     "p": "P54",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Units and Properties"
+     ]
+    },
+    {
+     "eo": "1.14",
+     "q": "What defines the triple point?",
+     "o": [
+      "The pressure at which boiling begins",
+      "The temperature of absolute zero",
+      "The state in which all three phases may be present in equilibrium",
+      "The point above which liquid and vapor are the same"
+     ],
+     "a": 2,
+     "x": "The triple point is the state in which all three phases may be in equilibrium.",
+     "p": "P55",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Units and Properties"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Property diagrams for water",
+   "eo": [
+    "1.14",
+    "1.16"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "For water at 212 °F the saturation pressure is 14.7 psia, and at 14.7 psia the saturation temperature is 212 °F.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.33"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig7",
+     "num": 7,
+     "cap": "T-V Diagram",
+     "alt": "Temperature against specific volume for water, with constant pressure lines crossing a dome of saturated liquid and saturated vapor lines.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.35"
+    },
+    {
+     "t": "p",
+     "text": "On the T-V diagram, the line from A to B heats liquid to saturation, the line from B to C is the constant-temperature change from liquid to vapor, and the line from C to D superheats the steam.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.35"
+    },
+    {
+     "t": "p",
+     "text": "At a pressure of 3206.2 psia there is no constant-temperature vaporization process. The critical temperature is 705.47 °F.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.36"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig9",
+     "num": 9,
+     "cap": "P-T Diagram for Water",
+     "alt": "Pressure against temperature for water, with sublimation, fusion, and vaporization lines meeting at the triple point, and the vaporization line ending at the critical point.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.42"
+    },
+    {
+     "t": "p",
+     "text": "The temperature and pressure for the triple point of water are 32.02 °F and 0.08865 psia.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig13",
+     "num": 13,
+     "cap": "T-s Diagram for Water",
+     "alt": "Temperature against entropy for water, showing a liquid-vapor dome with the critical point at the top.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.46"
+    },
+    {
+     "t": "p",
+     "text": "There are six common property diagrams: P-T, P-ν, P-h, h-T, T-s, and h-s (Mollier).",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.41"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "On a T-s diagram, what does the area under the curve of a process represent?",
+     "o": [
+      "The heat transferred to or from the system",
+      "The mass flow rate",
+      "The work of the pump",
+      "The pressure of the fluid"
+     ],
+     "a": 0,
+     "x": "By the definition of entropy, the heat transferred equals the area under the T-s curve of the process.",
+     "p": "P59",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.14",
+     "q": "At 14.7 psia, what is the saturation temperature of water?",
+     "o": [
+      "32 °F",
+      "212 °F",
+      "327.8 °F",
+      "544.6 °F"
+     ],
+     "a": 1,
+     "x": "For water at 14.7 psia the saturation temperature is 212 °F.",
+     "p": "P13",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Steam tables and the Mollier diagram",
+   "eo": [
+    "1.16",
+    "1.17",
+    "1.18"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "The Mollier diagram plots enthalpy against entropy. It has lines of constant temperature, pressure, moisture or quality, and superheat.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "p",
+     "text": "Saturated tables come as temperature tables, listed by saturation temperature, and pressure tables, listed by saturation pressure.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.48"
+    },
+    {
+     "t": "eq",
+     "text": "h = xhg + (1 - x)hf    x = (h - hf) / hfg",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.49"
+    },
+    {
+     "t": "p",
+     "text": "The same form applies to specific volume and specific entropy.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q456",
+     "eo": "1.16"
+    },
+    {
+     "existing": "Q460",
+     "eo": "1.17"
+    },
+    {
+     "eo": "1.17",
+     "q": "How many properties must usually be known to determine a substance's other properties?",
+     "o": [
+      "Two",
+      "Three",
+      "Five",
+      "One"
+     ],
+     "a": 0,
+     "x": "Usually two properties must be known to determine the others.",
+     "p": "P62",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "First Law of Thermodynamics",
+   "eo": [
+    "1.19",
+    "1.20"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "eq",
+     "text": "Σ Ein = Σ Eout + ∆E storage",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.54"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig14",
+     "num": 14,
+     "cap": "First Law of Thermodynamics",
+     "alt": "Control volume with heat in and work out, and mass flow carrying internal, flow, kinetic, and potential energy across the boundary, with the energy balance equation below.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.55"
+    },
+    {
+     "t": "p",
+     "text": "The open system is the most general of the three types. Isolated and closed systems are specialized cases of it.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.56"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig15",
+     "num": 15,
+     "cap": "Control Volume Concepts",
+     "alt": "Sketches of an isolated system, a control mass (closed system) with energy changes, and an open system with mass crossing the boundary.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.56"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "eq",
+     "text": "ṁ(hin + pein + kein) + Q̇ = ṁ(hout + peout + keout) + Ẇ",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.59"
+    },
+    {
+     "t": "p",
+     "text": "Energy caused by neither mass nor shaft work is classified as heat energy.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.59"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q614",
+     "eo": "1.19"
+    },
+    {
+     "eo": "1.20",
+     "q": "In open system analysis, which two terms are combined into enthalpy?",
+     "o": [
+      "Mass and volume",
+      "Kinetic and potential energy",
+      "Heat and work",
+      "Internal energy and flow energy"
+     ],
+     "a": 3,
+     "x": "The u and Pν terms occur so often that enthalpy was defined as h = u + Pν.",
+     "p": "P67",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.20",
+     "q": "Which approach is usually used today to analyze thermodynamic systems?",
+     "o": [
+      "The control mass approach",
+      "The control volume approach",
+      "The isolated system approach",
+      "The reversible process approach"
+     ],
+     "a": 1,
+     "x": "The control volume approach is usually used because it is more convenient and requires less work to keep track of energy balances.",
+     "p": "P66",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Energy balances on components",
+   "eo": [
+    "1.22",
+    "1.23"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In a heat exchanger, the heat transfer rate can be calculated with Q̇ = ṁ(hout - hin) or Q̇ = ṁcp∆T.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.63"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    },
+    {
+     "t": "p",
+     "text": "The first equation can be used for a phase change heat transfer process as well as for latent heat calculations.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.63"
+    },
+    {
+     "t": "eq",
+     "text": "ṁ1(hout,1 - hin,1) = -ṁ2(hout,2 - hin,2)",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.84"
+    },
+    {
+     "t": "p",
+     "text": "Both sides of a heat exchanger have their own energy balances as the heat energy is transferred from one fluid to the other.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.66"
+    },
+    {
+     "t": "p",
+     "text": "Processes that increase specific enthalpy include the reactor, where heat is added, and the pump. Heat exchangers, where heat is removed, decrease it. Throttle valves do not change it.",
+     "cite": "Word: Basic Energy Concepts 6-11.docx, slide 1.20 Specific Enthalpy Changes"
+    },
+    {
+     "t": "p",
+     "text": "For a turbine, the decrease in the enthalpy of the working fluid equals the work done by the fluid. For a pump, the increase in enthalpy equals the work done on the fluid.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.79"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q318",
+     "eo": "1.22"
+    },
+    {
+     "eo": "1.23",
+     "q": "Why can Q̇ = ṁcp∆T not be used across a phase change?",
+     "o": [
+      "Because no heat is transferred",
+      "Because ∆T = 0 during a phase change",
+      "Because mass flow stops",
+      "Because cp becomes infinite only for gases"
+     ],
+     "a": 1,
+     "x": "The equation can only be used when no phase change occurs, since ∆T = 0 during a phase change.",
+     "p": "P69",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The steam plant cycle",
+   "eo": [
+    "1.21",
+    "1.24"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig19",
+     "num": 19,
+     "cap": "T-s Diagram with Rankine Cycles",
+     "alt": "Two T-s diagrams of a Rankine cycle, with points a, b, c, and d around the saturation dome and the rejected heat shaded below the cycle.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.61"
+    },
+    {
+     "t": "list",
+     "items": [
+      "ab: liquid is compressed with no change in entropy by an ideal pump",
+      "bc: constant pressure transfer of heat in the boiler",
+      "cd: constant entropy expansion with shaft work output in an ideal turbine",
+      "da: constant pressure transfer of heat in the sink"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.61"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig20",
+     "num": 20,
+     "cap": "Typical Steam Plant Cycle",
+     "alt": "Steam plant loop: steam generator to turbine, condenser, condensate pump, feed pump, and back to the steam generator.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.62"
+    },
+    {
+     "t": "p",
+     "text": "In a typical steam plant cycle, vapor from the steam generator is expanded in the turbine, condensed in the condenser, and pumped back to the steam generator.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.62"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q464",
+     "eo": "1.24"
+    },
+    {
+     "existing": "Q465",
+     "eo": "1.24"
+    },
+    {
+     "existing": "Q466",
+     "eo": "1.21"
+    },
+    {
+     "eo": "1.21",
+     "q": "In a steam plant cycle, what is the heat-rejection mechanism?",
+     "o": [
+      "The condensation process",
+      "The steam generator",
+      "The turbine",
+      "The feed pump"
+     ],
+     "a": 0,
+     "x": "The condensation process is the heat-rejection mechanism for the cycle.",
+     "p": "P71",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Second Law of Thermodynamics",
+   "eo": [
+    "1.25",
+    "1.27"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "quote",
+     "p": "P102"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    },
+    {
+     "t": "p",
+     "text": "Natural processes proceed in a certain direction, such as heat transfer from a hot to a cold body. The second law explains this.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.70"
+    },
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "eq",
+     "text": "∆S = ∆Q / Tabs (for a reversible process)",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.71"
+    },
+    {
+     "t": "quote",
+     "p": "P77"
+    },
+    {
+     "t": "p",
+     "text": "Second law problems are treated much like first law problems, with an isolated, closed, or open system chosen by the energy crossing the boundary.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.75"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.25",
+     "q": "What does the second law deny?",
+     "o": [
+      "The conservation of energy",
+      "Completely converting into work all of the heat supplied to a cyclic system",
+      "Any conversion of heat into work",
+      "Heat transfer from a hot to a cold body"
+     ],
+     "a": 1,
+     "x": "The second law denies the possibility of completely converting into work all of the heat supplied to a system operating in a cycle.",
+     "p": "P74",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    },
+    {
+     "eo": "1.25",
+     "q": "What information does the second law give that the first law does not?",
+     "o": [
+      "The direction of a process",
+      "The mass of the system",
+      "The form of energy",
+      "The size of the boundary"
+     ],
+     "a": 0,
+     "x": "The first law gives no information about the direction of the process. The second law explains it.",
+     "p": "P75",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    },
+    {
+     "eo": "1.27",
+     "q": "For a cyclic system, how can entropy change?",
+     "o": [
+      "It must stay exactly constant",
+      "It can change either way",
+      "It must decrease",
+      "It must increase or stay the same"
+     ],
+     "a": 3,
+     "x": "Entropy must increase or stay the same for a cyclic system. It can never decrease.",
+     "p": "P77",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Carnot efficiency",
+   "eo": [
+    "1.26",
+    "1.28"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P78"
+    },
+    {
+     "t": "quote",
+     "p": "P79"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig21",
+     "num": 21,
+     "cap": "Carnot Cycle Representation",
+     "alt": "Carnot cycle as a rectangle on a T-s diagram between TH and TC, with points 1 to 4 and a sketch of an engine between TH and TC beside it.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.73"
+    },
+    {
+     "t": "p",
+     "text": "The Carnot cycle has adiabatic compression, isothermal expansion as heat is added at TH, adiabatic expansion, and isothermal compression as heat is removed at TC.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.72"
+    },
+    {
+     "t": "eq",
+     "text": "η = (TH - TC) / TH = 1 - (TC / TH), with temperatures in °R",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.73"
+    },
+    {
+     "t": "p",
+     "text": "Maximum possible efficiency exists when TH is at its largest possible value or TC is at its smallest value.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.74"
+    },
+    {
+     "t": "quote",
+     "p": "P80"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q3",
+     "eo": "1.26"
+    },
+    {
+     "existing": "Q462",
+     "eo": "1.28"
+    },
+    {
+     "existing": "Q463",
+     "eo": "1.26"
+    },
+    {
+     "eo": "1.26",
+     "q": "A system receives heat at 800 °R and rejects it at 520 °R. What is its Carnot efficiency?",
+     "o": [
+      "18%",
+      "35%",
+      "54%",
+      "65%"
+     ],
+     "a": 1,
+     "x": "η = 1 - 520/800 = 35%.",
+     "p": "P14",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Ideal and real processes",
+   "eo": [
+    "1.28",
+    "1.29",
+    "1.30"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P81"
+    },
+    {
+     "t": "quote",
+     "p": "P82"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig24",
+     "num": 24,
+     "cap": "Expansion and Compression Processes on T-s Diagram",
+     "alt": "T-s diagram with ideal and real compression and expansion paths drawn between two constant pressure lines.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.78"
+    },
+    {
+     "t": "quote",
+     "p": "P83"
+    },
+    {
+     "t": "quote",
+     "p": "P84"
+    },
+    {
+     "t": "eq",
+     "text": "ηt = Wt,actual / Wt,ideal",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.80"
+    },
+    {
+     "t": "p",
+     "text": "For small turbines the efficiency is generally 60% to 80%. For large turbines it is generally about 90%.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.80"
+    },
+    {
+     "t": "quote",
+     "p": "P85"
+    },
+    {
+     "t": "eq",
+     "text": "ηp = Wp,ideal / Wp,actual",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.82"
+    },
+    {
+     "t": "p",
+     "text": "Pump efficiency does not account for losses in the motor or turbine that runs the pump. Motor efficiency is the actual pump work divided by the electrical energy input.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.83"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q59",
+     "eo": "1.29"
+    },
+    {
+     "eo": "1.29",
+     "q": "How is an ideal expansion shown on a T-s or h-s diagram?",
+     "o": [
+      "A dashed line slanting right",
+      "A closed circle",
+      "A horizontal line",
+      "A vertical line"
+     ],
+     "a": 3,
+     "x": "Isentropic processes are vertical lines, since entropy is on the horizontal axis and does not change.",
+     "p": "P81",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    },
+    {
+     "eo": "1.30",
+     "q": "How is pump efficiency defined?",
+     "o": [
+      "Motor input divided by pump work",
+      "Heat added divided by work out",
+      "Actual work divided by ideal work",
+      "Ideal work divided by actual work"
+     ],
+     "a": 3,
+     "x": "Pump efficiency is the ratio of the ideal work required to the actual work required.",
+     "p": "P85",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    },
+    {
+     "eo": "1.30",
+     "q": "Why does an actual turbine do less work than an ideal turbine?",
+     "o": [
+      "Friction losses in the blades, leakage past the blades, and mechanical friction",
+      "It operates at constant entropy",
+      "It has no heat losses",
+      "Its working fluid is incompressible"
+     ],
+     "a": 0,
+     "x": "An actual turbine does less work because of friction losses in the blades, leakage past the blades and, to a lesser extent, mechanical friction.",
+     "p": "P84",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Real steam power cycles",
+   "eo": [
+    "1.30",
+    "1.31"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "The heat sink for a real cycle is fixed at about 60 °F (520 °R), because the earth is the final heat sink.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.84"
+    },
+    {
+     "t": "p",
+     "text": "Typical thermal efficiencies for fossil plants are on the order of 40%, while nuclear plants are on the order of 31%.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.87"
+    },
+    {
+     "t": "quote",
+     "p": "P86"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig31",
+     "num": 31,
+     "cap": "Rankine Cycle",
+     "alt": "Rankine cycle on a T-s diagram, with compression confined to the liquid side of the dome.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.88"
+    },
+    {
+     "t": "p",
+     "text": "This minimizes the work to reach operating pressure and avoids the mechanical problems of pumping a two-phase mixture.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.88"
+    },
+    {
+     "t": "p",
+     "text": "On a T-s diagram, replacing an ideal turbine with a non-ideal one reduces cycle efficiency, because unavailable energy grows more than available energy.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.89"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig35",
+     "num": 35,
+     "cap": "Typical Steam Cycle",
+     "alt": "Steam cycle with a steam generator, HP turbine, moisture separator reheater, LP turbine, condenser, condensate pump, feed heater, and feed pump, with state points 1 to 6.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.91"
+    },
+    {
+     "t": "list",
+     "items": [
+      "1-2: saturated steam expands in the HP turbine",
+      "2-3: moist steam is dried and superheated in the moisture separator reheater"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.90"
+    },
+    {
+     "t": "list",
+     "items": [
+      "3-4 is the LP turbine expansion. 4-5: exhaust steam condenses in the condenser",
+      "5-6: feedwater is compressed and preheated",
+      "6-1: heat is added in the steam generator at constant pressure"
+     ],
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.91"
+    },
+    {
+     "t": "quote",
+     "p": "P87"
+    },
+    {
+     "t": "p",
+     "text": "Condensers are designed to subcool the liquid by 8-10 °F so the condensate pumps can pump without cavitation, but each degree of subcooling must be put back as heat.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.95"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.30",
+     "q": "What is the main feature of the Rankine cycle?",
+     "o": [
+      "It pumps a two-phase mixture",
+      "It confines the isentropic compression to the liquid phase only",
+      "It adds all heat at the maximum temperature",
+      "It has no condenser"
+     ],
+     "a": 1,
+     "x": "The Rankine cycle confines isentropic compression to the liquid phase, which minimizes the work needed.",
+     "p": "P86",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    },
+    {
+     "eo": "1.31",
+     "q": "What is the effect of excessive condenser subcooling?",
+     "o": [
+      "It has no effect on efficiency",
+      "It removes the need for a feed pump",
+      "It raises cycle efficiency",
+      "It decreases cycle efficiency"
+     ],
+     "a": 3,
+     "x": "Excessive subcooling decreases cycle efficiency, because the extra heat rejected must be made up in the steam generator.",
+     "p": "P87",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Causes of inefficiency",
+   "eo": [
+    "1.31"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "To improve a cycle's efficiency, the temperature of the heat source would be increased and the temperature of the heat sink decreased.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.84"
+    },
+    {
+     "t": "quote",
+     "p": "P88"
+    },
+    {
+     "t": "p",
+     "text": "These losses can be seen as an increase in the system's entropy, or energy unavailable for use by the cycle.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.95"
+    },
+    {
+     "t": "quote",
+     "p": "P89"
+    },
+    {
+     "t": "p",
+     "text": "Friction is another real world loss, both resistance to fluid flow and mechanical friction in machines.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.95"
+    },
+    {
+     "t": "p",
+     "text": "The efficiency of a component depends on how much friction exists in the flow, the pressure drops, the inlet and outlet temperatures, and other factors.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.51"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.31",
+     "q": "Which of these contributes to component inefficiency in turbines, pumps, and compressors?",
+     "o": [
+      "Heat losses, friction, and windage losses",
+      "Constant entropy",
+      "An adiabatic boundary",
+      "Isentropic behavior"
+     ],
+     "a": 0,
+     "x": "Turbines, pumps, and compressors behave non-ideally due to heat losses, friction, and windage losses.",
+     "p": "P88",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Cycles"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Ideal gas law",
+   "eo": [
+    "1.32"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Boyle's law:",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.97"
+    },
+    {
+     "t": "quote",
+     "p": "P90"
+    },
+    {
+     "t": "eq",
+     "text": "(P1)(V1) = (P2)(V2) = constant",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.97"
+    },
+    {
+     "t": "p",
+     "text": "Charles concluded:",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.97"
+    },
+    {
+     "t": "quote",
+     "p": "P91"
+    },
+    {
+     "t": "eq",
+     "text": "Pv = RT",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.98"
+    },
+    {
+     "t": "quote",
+     "p": "P92"
+    },
+    {
+     "t": "quote",
+     "p": "P93"
+    },
+    {
+     "t": "p",
+     "text": "The ideal gas law is used because it is simple and approximates real gas behavior.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.99"
+    },
+    {
+     "t": "quote",
+     "p": "P94"
+    },
+    {
+     "t": "fig",
+     "id": "ht-01-fig40",
+     "num": 40,
+     "cap": "Pressure-Volume Diagram",
+     "alt": "Pressure against volume from point 1, with separate paths for constant pressure, constant temperature, and constant volume.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.99"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.32",
+     "q": "At constant temperature, how does the pressure of a gas vary with its volume?",
+     "o": [
+      "Inversely",
+      "With the square of volume",
+      "It does not vary",
+      "Directly"
+     ],
+     "a": 0,
+     "x": "Boyle's law: the pressure of a gas expanding at constant temperature varies inversely to the volume.",
+     "p": "P90",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.32",
+     "q": "In the ideal gas equation, pressure and temperature must be expressed as what?",
+     "o": [
+      "Specific values",
+      "Gauge values",
+      "Absolute values",
+      "Relative values"
+     ],
+     "a": 2,
+     "x": "In Pv = RT the pressure and temperature are absolute values.",
+     "p": "P92",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Compressibility and confined fluids",
+   "eo": [
+    "1.33",
+    "1.34",
+    "1.35",
+    "1.36"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P95"
+    },
+    {
+     "t": "p",
+     "text": "A fluid may be considered incompressible if it is a liquid. Its density is then assumed to be constant.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.102"
+    },
+    {
+     "t": "eq",
+     "text": "Constant pressure: W1-2 = P(∆V)    Constant volume: W1-2 = V(∆P)",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.100"
+    },
+    {
+     "t": "quote",
+     "p": "P96"
+    },
+    {
+     "t": "quote",
+     "p": "P97"
+    },
+    {
+     "t": "quote",
+     "p": "P98"
+    },
+    {
+     "t": "p",
+     "text": "A gas in a fixed volume responds to a temperature change as the ideal gas laws predict.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+    },
+    {
+     "t": "quote",
+     "p": "P99"
+    },
+    {
+     "t": "p",
+     "text": "An incompressible liquid in a closed container tries to expand as its temperature rises, but the walls prevent it.",
+     "cite": "DOE-HDBK-1012/1-92 HT-01 p.101"
+    },
+    {
+     "t": "quote",
+     "p": "P100"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.36",
+     "q": "What is the effect of a temperature rise on a liquid-filled closed container?",
+     "o": [
+      "A drop in pressure",
+      "A drop in density with no pressure change",
+      "Little change in pressure",
+      "A tremendous increase in pressure"
+     ],
+     "a": 3,
+     "x": "Expansion is prevented by the walls, so a relatively minor temperature change causes a tremendous increase in pressure.",
+     "p": "P100",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.36",
+     "q": "A gas confined in a fixed volume has a 5% rise in absolute temperature. What happens to its absolute pressure?",
+     "o": [
+      "It rises 5%",
+      "It falls 5%",
+      "It rises 25%",
+      "It does not change"
+     ],
+     "a": 0,
+     "x": "A 5% increase in absolute temperature results in a 5% increase in the absolute pressure.",
+     "p": "P99",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.35",
+     "q": "What does a pressure increase do to an incompressible fluid's density?",
+     "o": [
+      "Makes it equal the gas density",
+      "Doubles it",
+      "Has no significant effect",
+      "Greatly decreases it"
+     ],
+     "a": 2,
+     "x": "An increase in pressure of an incompressible fluid does not have a significant effect on density.",
+     "p": "P97",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    },
+    {
+     "eo": "1.34",
+     "q": "Which equation gives the work done in a constant pressure process?",
+     "o": [
+      "W = V(∆P)",
+      "W = Fd²",
+      "W = mcp∆T",
+      "W = P(∆V)"
+     ],
+     "a": 3,
+     "x": "For a constant pressure process, W1-2 = P(∆V).",
+     "p": "P15",
+     "place": [
+      "Thermodynamics",
+      "Thermodynamic Processes"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Celsius to Rankine",
+   "eo": "1.5",
+   "page": 8,
+   "problem": "What is the Rankine equivalent of 80 °C?",
+   "steps": [
+    "°F = (9/5)(80) + 32 = 176 °F",
+    "°R = 176 + 460"
+   ],
+   "answer": "636 °R",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.8"
+  },
+  {
+   "title": "Fahrenheit to Kelvin",
+   "eo": "1.5",
+   "page": 8,
+   "problem": "What is the Kelvin equivalent of 80 °F?",
+   "steps": [
+    "°C = (5/9)(80 - 32) = 26.7 °C",
+    "°K = 26.7 + 273"
+   ],
+   "answer": "299.7 °K",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.8"
+  },
+  {
+   "title": "Absolute pressure in a pool",
+   "eo": "1.6",
+   "page": 11,
+   "problem": "What is the absolute pressure at the bottom of a pool 6 feet deep filled with fresh water? Patm = 14.7 psia.",
+   "steps": [
+    "Pabs = 14.7 + ρH",
+    "ρH = (62.4 lbm/ft³)(6 ft)/(144 in²/ft²) = 2.6",
+    "Pabs = 14.7 + 2.6"
+   ],
+   "answer": "17.3 psia",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.11"
+  },
+  {
+   "title": "Heat to raise temperature",
+   "eo": "1.8",
+   "page": 22,
+   "problem": "How much heat raises 5 lbm of water from 50 °F to 150 °F, with cp constant at 1.0 Btu/lbm-°F?",
+   "steps": [
+    "Q = cp m ∆T",
+    "Q = (1.0)(5)(150 - 50)"
+   ],
+   "answer": "500 Btu",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.22"
+  },
+  {
+   "title": "Work of a force",
+   "eo": "1.8",
+   "page": 19,
+   "problem": "A force of 150 lbf moves an object 30 feet. How much work is done?",
+   "steps": [
+    "W = Fd",
+    "W = (150 lbf)(30 ft)"
+   ],
+   "answer": "4500 ft-lbf",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.19"
+  },
+  {
+   "title": "Carnot limit on an inventor's claim",
+   "eo": "1.26",
+   "page": 74,
+   "problem": "An engine is claimed to receive 100 Btu and produce 25 Btu of work between a source at 140 °F and a receiver at 0 °F. Is the claim valid?",
+   "steps": [
+    "TH = 140 + 460 = 600 °R and TC = 0 + 460 = 460 °R",
+    "η = (600 - 460)/600 = 23.3%",
+    "Claimed efficiency is 25/100 = 25%"
+   ],
+   "answer": "The claim is invalid, because 25% exceeds the 23.3% Carnot limit.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.74"
+  },
+  {
+   "title": "Actual pump exit enthalpy",
+   "eo": "1.30",
+   "page": 82,
+   "problem": "A pump at 75% efficiency has an inlet enthalpy of 200 Btu/lbm. The ideal pump's exit enthalpy is 600 Btu/lbm. What is the actual exit enthalpy?",
+   "steps": [
+    "(hout - hin) actual = (hout - hin) ideal / ηp",
+    "(600 - 200)/0.75 = 533.3 Btu/lbm",
+    "hout, actual = 533.3 + 200"
+   ],
+   "answer": "733.3 Btu/lbm",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.82"
+  },
+  {
+   "title": "Mollier diagram",
+   "tag": "Water-system only",
+   "eo": "1.18",
+   "page": 49,
+   "problem": "Superheated steam at 700 psia and 680 °F expands at constant entropy to 140 psia. What is the change in enthalpy?",
+   "steps": [
+    "At 700 psia and 680 °F, read h = 1333 Btu/lbm",
+    "Follow the entropy line down to 140 psia and read h = 1178 Btu/lbm",
+    "∆h = 1178 - 1333"
+   ],
+   "answer": "-155 Btu/lbm",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.49"
+  },
+  {
+   "title": "Steam tables and quality",
+   "tag": "Water-system only",
+   "eo": "1.17",
+   "page": 50,
+   "problem": "What are the enthalpy and entropy of steam at 90% quality and 400 psia? The tables give hf = 424.2, hfg = 780.4, sf = 0.6217, and sfg = 0.8630.",
+   "steps": [
+    "h = hf + x(hfg) = 424.2 + (0.90)(780.4)",
+    "s = sf + x(sfg) = 0.6217 + (0.9)(0.8630)"
+   ],
+   "answer": "h = 1126.56 Btu/lbm and s = 1.3984 Btu/lbm-°R",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.50"
+  },
+  {
+   "title": "First law on a steam turbine",
+   "tag": "Water-system only",
+   "eo": "1.20",
+   "page": 60,
+   "problem": "Steam enters a turbine at 1349 Btu/lbm and leaves at 1100 Btu/lbm. Heat loss is 5 Btu/lbm. Inlet is 164 ft/sec and 6.5 ft above the discharge, and exit is 262 ft/sec. Find the work.",
+   "steps": [
+    "Energy in: 1349 + 0.0084 + 0.5368 - 5 = 1344.54 Btu/lbm",
+    "Energy out before work: 1100 + 1.37 = 1101.37 Btu/lbm",
+    "w = 1344.54 - 1101.37"
+   ],
+   "answer": "243.17 Btu/lbm",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.60"
+  },
+  {
+   "title": "Condenser cooling water flow",
+   "tag": "Water-system only",
+   "eo": "1.23",
+   "page": 67,
+   "problem": "Steam flows through a condenser at 2.0 x 10⁶ kg/hr, entering at h = 2574 kJ/kg and leaving at h = 125.8 kJ/kg. Cooling water goes from h = 75.6 to h = 104.9 kJ/kg. Find the cooling water flow.",
+   "steps": [
+    "Heat lost by steam equals heat gained by cooling water",
+    "ṁcw = 2.0 x 10⁶ (2574 - 125.8)/(104.9 - 75.6)"
+   ],
+   "answer": "1.67 x 10⁸ kg/hr",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.67"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is specific gravity?",
+   "a": "The relative density of a substance compared to the density of water at a standard temperature.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "How do intensive and extensive properties differ?",
+   "a": "An intensive property is independent of the amount of mass. An extensive property varies directly with the mass.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What is latent heat?",
+   "a": "The amount of heat added to or removed from a substance to produce a change in phase, with no temperature change.",
+   "p": "P31",
+   "place": [
+    "Thermodynamics",
+    "Basic Energy Concepts"
+   ]
+  },
+  {
+   "q": "What is an adiabatic process?",
+   "a": "A process with no heat transfer into or out of the system.",
+   "p": "P46",
+   "place": [
+    "Thermodynamics",
+    "Thermodynamic Processes"
+   ]
+  },
+  {
+   "q": "How do isolated, closed, and open systems differ?",
+   "a": "Isolated: neither mass nor energy crosses the boundary. Closed: only energy crosses. Open: both mass and energy cross.",
+   "p": "P40",
+   "place": [
+    "Thermodynamics",
+    "Thermodynamic Processes"
+   ]
+  },
+  {
+   "q": "What does entropy quantify?",
+   "a": "The energy of a substance that is no longer available to perform useful work.",
+   "p": "P34",
+   "place": [
+    "Thermodynamics",
+    "Basic Energy Concepts"
+   ]
+  },
+  {
+   "q": "What is the Carnot efficiency equation?",
+   "a": "η = (TH - TC)/TH, using absolute temperatures. It is an upper limit that no real system reaches.",
+   "p": "P80",
+   "place": [
+    "Thermodynamics",
+    "Thermodynamic Cycles"
+   ]
+  },
+  {
+   "q": "How does a real expansion look on a T-s diagram compared with an ideal one?",
+   "a": "The ideal process is a vertical line. The real process slants slightly to the right because entropy increases.",
+   "p": "P82",
+   "place": [
+    "Thermodynamics",
+    "Thermodynamic Cycles"
+   ]
+  },
+  {
+   "q": "What is the thumb rule for pressure in a water-solid system?",
+   "a": "Pressure rises about 100 psi for every 1 °F increase in temperature.",
+   "p": "P101",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Temperature is a measure of the molecular activity of a substance, and pressure is the force per unit area on its boundaries.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.12"
+  },
+  {
+   "text": "Heat and work are energy in transit. Sensible heat changes temperature, and latent heat changes phase.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.25"
+  },
+  {
+   "text": "Isolated, closed, and open systems differ in whether mass and energy cross the boundary.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.30"
+  },
+  {
+   "text": "The First Law says energy can neither be created nor destroyed. The energy entering a component equals the energy leaving it at steady state.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.68"
+  },
+  {
+   "text": "The Second Law sets the maximum efficiency of a system at the Carnot efficiency, η = (TH - TC)/TH.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.96"
+  },
+  {
+   "text": "Efficiency is decreased by friction, heat losses, and cycle inefficiencies.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.96"
+  },
+  {
+   "text": "The ideal gas law relates pressure, temperature, and volume during compression processes.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.102"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 10",
+   "note": "Steam tables, the Mollier diagram, water property diagrams, and the steam cycle are on pages tagged Water-system only, as approved in the manifest review. The user decided on Nov 5, 2026 to remove worked examples tied to PWR or BWR reactor coolant systems.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.41"
+  },
+  {
+   "type": "User decision",
+   "note": "Examples 2 to 5 of the First Law chapter (primary fluid through a steam generator, reactor coolant pump, reactor core balance, overall primary balance) are left off because they describe a water reactor coolant system.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.63"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.21 says Q = mcp∆T is used to calculate latent heat, but p.20 and p.63 show it applies to sensible heat, since ∆T = 0 during a phase change. The lesson uses p.63.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.21"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.99 and p.102 say a gas may be treated as incompressible when its velocity is greater than one-third of the speed of sound. This looks reversed, and no approved source settles it. The lesson teaches only the liquid case, and no check tests the gas case.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.99"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.50 gives the units of specific volume as lbm/ft³ and uses 1.14162 as both νg and νfg. The worked example here uses enthalpy and entropy only.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.50"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The critical pressure is 3206.2 psia on p.36 and 3208.2 psi on p.48. The lesson shows p.36 only, on a tagged page, and no check tests it.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.36"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The maximum source temperature is 1960 °R on p.84 and 1962 °R on p.85. The lesson uses neither.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.84"
+  },
+  {
+   "type": "Handbook error",
+   "note": "Example 5 on p.66 converts 1.0 x 10⁷ Btu/hr to 4007 hp, but 1 hp = 2545 Btu/hr on p.64 gives about 3929 hp. The example is left off.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.66"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.100 refers to Equations 1-44 and 1-45 in a way that does not match their use. The lesson shows the two work equations only.",
+   "cite": "DOE-HDBK-1012/1-92 HT-01 p.100"
+  },
+  {
+   "type": "Duplicate",
+   "note": "Thermo Units and Properties.docx matches Thermodynamic Units and Properties.docx in every line but the title, so the second file is the base and nothing needs a separate cite.",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.2 Terminal Learning Objectives"
+  },
+  {
+   "type": "Word claim",
+   "note": "Thermodynamics.docx slide 1.17 says the General Energy Equation is another term for Bernoulli's Equation and is sometimes called the Continuity Equation. The handbooks treat these as different equations, so the claim is left off.",
+   "cite": "Word: Thermodynamics.docx, slide 1.17 General Energy Equation"
+  },
+  {
+   "type": "Word value",
+   "note": "Word files use practical values of 15 psi and 30 inHg for atmosphere and give the entropy reference as 32.02 °F. These round the handbook's 14.7 psi and 29.9 inHg, and differ from its 32 °F. The lesson uses the handbook.",
+   "cite": "Word: Thermodynamic Units and Properties.docx, slide 1.27 Comparing Pressure Scales"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The reactor, IHX, and PSP process slides are pictures, so their numbers are not used.",
+   "cite": "Word: Thermodynamics.docx, slide 1.28 Reactor Process"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

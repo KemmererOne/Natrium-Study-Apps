@@ -1,0 +1,894 @@
+{
+ "module_id": "ES-14",
+ "slug": "es-14-test-instruments-and-measuring-devices",
+ "title": "Test Instruments & Measuring Devices",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V4",
+ "handbook": "DOE-HDBK-1011/4-92",
+ "word_file": "Electrical Test Equipment.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a piece of test equipment or measuring device, DESCRIBE the use of that piece of electrical equipment, to include the meter movement, electrical parameter measurement, and connection of the device to a circuit.",
+   "items": [],
+   "page": {
+    "pdf": 72,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "EXPLAIN the following meter movements:",
+     "items": [
+      "a. D’Arsonval",
+      "b. Electrodynamometer",
+      "c. Moving iron vane"
+     ],
+     "page": {
+      "pdf": 72,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the electrical parameters measured by each of the following in-place measuring devices:",
+     "items": [
+      "a. Voltmeter",
+      "b. Ammeter",
+      "c. Ohm meter",
+      "d. Wattmeter",
+      "e. Ampere-hour meter",
+      "f. Power factor meter",
+      "g. Ground detector",
+      "h. Synchroscope"
+     ],
+     "page": {
+      "pdf": 72,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "EXPLAIN how the following electrical test equipment and measuring devices are connected to a circuit:",
+     "items": [
+      "a. Voltmeter",
+      "b. Ammeter",
+      "c. Ohm meter",
+      "d. Wattmeter",
+      "e. Ampere-hour meter",
+      "f. Power factor meter",
+      "g. Ground detector",
+      "h. Synchroscope",
+      "i. Megger"
+     ],
+     "page": {
+      "pdf": 72,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the electrical parameters measured by each of the following test instruments:",
+     "items": [
+      "a. Multimeter",
+      "b. Megger"
+     ],
+     "page": {
+      "pdf": 72,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The D’Arsonval movement is a DC moving coil-type movement in which an electromagnetic core is suspended between the poles of a permanent magnet.",
+   "sec": "Meter Movements",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "the D’Arsonval movement is a DC device and can only measure DC current or AC current rectified",
+   "sec": "Meter Movements",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "it can be used in both AC and DC systems to measure current.",
+   "sec": "Meter Movements",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "its most important use is in the wattmeter",
+   "sec": "Meter Movements",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "The moving iron vane meter operates on the principle of magnetic repulsion between like poles.",
+   "sec": "Meter Movements",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "Voltmeters are connected in parallel with the load (RL) being measured.",
+   "sec": "Voltmeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "This reduction in voltage is known as the loading effect",
+   "sec": "Voltmeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.6"
+  },
+  {
+   "id": "P8",
+   "quote": "Normally, manufacturers counter this effect by constructing the voltmeter’s movement of an extremely high resistance to limit the current flow through the voltmeter.",
+   "sec": "",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.6 Voltmeter"
+  },
+  {
+   "id": "P9",
+   "quote": "In order to measure current, the ammeter must be placed in series with the circuit to be tested",
+   "sec": "Ammeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.10"
+  },
+  {
+   "id": "P10",
+   "quote": "The reason for shunting an ammeter is to extend the range of the ammeter and, thereby, measure currents higher than the original full scale value.",
+   "sec": "Ammeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.12"
+  },
+  {
+   "id": "P11",
+   "quote": "Ohm meters are connected to a component which is removed from the circuit",
+   "sec": "Ohm Meters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+  },
+  {
+   "id": "P12",
+   "quote": "the current will flow in the path of least resistance and give an erroneous reading.",
+   "sec": "Ohm Meters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+  },
+  {
+   "id": "P13",
+   "quote": "The wattmeter is an instrument which measures DC power or true AC power.",
+   "sec": "Wattmeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.20"
+  },
+  {
+   "id": "P14",
+   "quote": "Normally, only two wattmeters are used in making 3φ power measurements",
+   "sec": "Wattmeters",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.21"
+  },
+  {
+   "id": "P15",
+   "quote": "Similar to an ammeter, the ampere-hour meter is connected in series.",
+   "sec": "Other Electrical Measuring Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.23"
+  },
+  {
+   "id": "P16",
+   "quote": "The ground detector is an instrument which is used to detect conductor insulation resistance to ground.",
+   "sec": "Other Electrical Measuring Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.24"
+  },
+  {
+   "id": "P17",
+   "quote": "Ground detectors measure insulation resistance to ground in ohms.",
+   "sec": "",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.12 Ground Detectors"
+  },
+  {
+   "id": "P18",
+   "quote": "A synchroscope indicates when two AC generators are in the correct phase relation for connecting in parallel and shows whether the incoming generator is running faster or slower than the on-line generator.",
+   "sec": "Other Electrical Measuring Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.26"
+  },
+  {
+   "id": "P19",
+   "quote": "if incoming frequency is higher than running frequency, it will rotate in the clockwise direction",
+   "sec": "Other Electrical Measuring Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.26"
+  },
+  {
+   "id": "P20",
+   "quote": "Measures power factor between phases in a 3-phase circuit",
+   "sec": "Other Electrical Measuring Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.27"
+  },
+  {
+   "id": "P21",
+   "quote": "The multimeter is a portable single instrument capable of measuring various electrical values including voltage, resistance, and current.",
+   "sec": "Test Equipment",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.28"
+  },
+  {
+   "id": "P22",
+   "quote": "The megger is a portable instrument used to measure insulation resistance.",
+   "sec": "Test Equipment",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.28"
+  },
+  {
+   "id": "P23",
+   "quote": "Meggers are connected out of circuit.",
+   "sec": "Test Equipment",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.30"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Multimeter",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.5 Multimeter"
+  },
+  {
+   "step": "Voltmeter",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.6 Voltmeter"
+  },
+  {
+   "step": "Ammeter",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.8 Ammeter"
+  },
+  {
+   "step": "Synchroscope",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.11 Synchroscope"
+  },
+  {
+   "step": "Ground detectors",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.12 Ground Detectors"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Meter movements",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig1",
+     "num": 1,
+     "cap": "D’Arsonval Meter Movement",
+     "alt": "D'Arsonval meter movement: a coil and pointer pivoted between the poles of a permanent magnet, with restraining springs.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The measured current makes a magnetic field that opposes the permanent magnet and rotates the core. Springs restrain it, so the needle moves in proportion to the current.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "The electrodynamometer movement has the same basic principle, except that the permanent magnet is replaced by fixed coils. The fixed and moving coils are in series, so the same current flows through each.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig2",
+     "num": 2,
+     "cap": "Electrodynamometer Movement",
+     "alt": "Electrodynamometer movement: a moving coil and pointer between two fixed field coils, all in series.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+    },
+    {
+     "t": "p",
+     "text": "If the current is reversed, the field polarity and the polarity of the moving coil reverse, and the force continues in the same direction.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig3",
+     "num": 3,
+     "cap": "Moving Iron Vane Meter Movement",
+     "alt": "Moving iron vane meter: a field coil around a fixed vane and a moving vane attached to a pointer and spring.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The current through a field coil magnetizes a fixed vane and a moving vane with the same polarity, so the moving vane pulls away and moves the pointer.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which meter movement can only measure DC current, or AC current that has been rectified?",
+     "o": [
+      "D'Arsonval",
+      "Electrodynamometer",
+      "Moving iron vane",
+      "Synchroscope"
+     ],
+     "a": 0,
+     "x": "The D'Arsonval movement is a DC device and can only measure DC current or AC current rectified.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.1",
+     "q": "On what principle does the moving iron vane meter operate?",
+     "o": [
+      "Magnetic attraction of unlike poles",
+      "Magnetic repulsion between like poles",
+      "Thermal expansion",
+      "Electrostatic charge"
+     ],
+     "a": 1,
+     "x": "The moving iron vane meter operates on the principle of magnetic repulsion between like poles.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the most important use of the electrodynamometer movement?",
+     "o": [
+      "The ohm meter",
+      "The ampere-hour meter",
+      "The wattmeter",
+      "The megger"
+     ],
+     "a": 2,
+     "x": "Some voltmeters and ammeters use it, but its most important use is in the wattmeter.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Voltmeters and ammeters",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A voltmeter measures voltage. A simple DC voltmeter has a resistor, called a multiplier, in series with the ammeter meter movement.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig4",
+     "num": 4,
+     "cap": "Simple DC Voltmeter",
+     "alt": "A simple DC voltmeter: a meter movement in series with multiplier resistor Rs, connected across a load.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "A connected voltmeter draws current, and the voltage drop across the meter's resistance is subtracted from the voltage being measured.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "The ammeter measures electric current.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig6",
+     "num": 6,
+     "cap": "Ammeter",
+     "alt": "An ammeter placed in series with a circuit, shown without and with the meter.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "A series ammeter increases circuit resistance by the internal resistance of the meter.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig8",
+     "num": 8,
+     "cap": "Ammeter with Shunt",
+     "alt": "An ammeter with shunt resistor RSH in parallel with the meter.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "How is a voltmeter connected?",
+     "o": [
+      "In series with the load",
+      "In parallel with the load",
+      "To a component removed from the circuit",
+      "Out of circuit to ground"
+     ],
+     "a": 1,
+     "x": "Voltmeters are connected in parallel with the load being measured.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.3",
+     "q": "How is an ammeter connected?",
+     "o": [
+      "In parallel with the load",
+      "To a component removed from the circuit",
+      "In series with the circuit",
+      "Across two generators"
+     ],
+     "a": 2,
+     "x": "In order to measure current, the ammeter must be placed in series with the circuit to be tested.",
+     "p": "P9"
+    },
+    {
+     "existing": "Q263",
+     "eo": "1.2"
+    }
+   ]
+  },
+  {
+   "title": "Ohm meters and wattmeters",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The ohm meter is an instrument used to determine resistance.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig9",
+     "num": 9,
+     "cap": "Simple Ohm Meter Circuit",
+     "alt": "A simple ohm meter: a battery, a meter movement, and resistor Ro in series, with terminals a and b connected to an unknown resistance.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "If the component remains in the circuit and a parallel path exists,",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The ohm meter is zeroed by shorting its terminals and adjusting Ro to give full-scale deflection.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig11",
+     "num": 11,
+     "cap": "Wattmeter Schematic",
+     "alt": "Wattmeter schematic: fixed current coils in series with the load, and a movable voltage coil with multiplier resistor across the load.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.20"
+    },
+    {
+     "t": "p",
+     "text": "The fixed coils are in series with the load and indicate current. The movable coil and its multiplier are in parallel with the load and indicate voltage.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "In balanced three-phase systems, total power is calculated by adding the A and B phase powers.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.21"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q439",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does a wattmeter measure?",
+     "o": [
+      "DC power or true AC power",
+      "Reactive power only",
+      "Insulation resistance",
+      "Frequency difference"
+     ],
+     "a": 0,
+     "x": "The wattmeter is an instrument which measures DC power or true AC power.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.3",
+     "q": "How is the voltage coil of a wattmeter connected?",
+     "o": [
+      "In series with the load",
+      "In parallel with the load",
+      "Out of circuit",
+      "To the neutral only"
+     ],
+     "a": 1,
+     "x": "The movable coil and its multiplier are used as a voltmeter, with the V terminals connected in parallel with the load.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Other measuring devices",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The ampere-hour meter registers ampere-hours. It is a direct current meter that registers in either direction, depending on the direction of current flow.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "A power factor meter is a type of electrodynamometer movement made with two movable coils set at right angles.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "It is connected in series with one phase.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "In the lamp method, three lamps are connected through transformers. If the lamps are equally bright, no ground exists. If one lamp is dark and the other two are brighter, the phase with the darkened lamp is grounded.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig16",
+     "num": 16,
+     "cap": "Ground Detector Lamp Circuit",
+     "alt": "Ground detector circuit with three lamps connected through transformers to the three phases, and a test switch.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.26"
+    },
+    {
+     "t": "p",
+     "text": "A ground detector is connected out of circuit to ground.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "When it indicates 0° phase difference, the pointer is at the 12 o'clock position and the two AC generators are in phase.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.26"
+    },
+    {
+     "t": "p",
+     "text": "It is connected by a two-phase stator at right angles.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q264",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does a synchroscope show?",
+     "o": [
+      "When two AC generators are in the correct phase relation for connecting in parallel",
+      "Conductor insulation resistance",
+      "Ampere-hours of a battery",
+      "Total three-phase power"
+     ],
+     "a": 0,
+     "x": "A synchroscope indicates when two AC generators are in the correct phase relation for connecting in parallel.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.2",
+     "q": "The synchroscope rotates clockwise. What does this mean?",
+     "o": [
+      "Incoming frequency is lower than running frequency",
+      "Incoming frequency is higher than running frequency",
+      "The generators are in phase",
+      "A ground exists"
+     ],
+     "a": 1,
+     "x": "If incoming frequency is higher than running frequency, it will rotate in the clockwise direction.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.3",
+     "q": "How is an ampere-hour meter connected?",
+     "o": [
+      "In parallel with the load",
+      "Out of circuit",
+      "In series",
+      "Across two phases only"
+     ],
+     "a": 2,
+     "x": "Similar to an ammeter, the ampere-hour meter is connected in series.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does a power factor meter measure?",
+     "o": [
+      "Power factor between phases in a 3-phase circuit",
+      "Insulation resistance",
+      "Line current only",
+      "Battery charge"
+     ],
+     "a": 0,
+     "x": "A power factor meter measures power factor between phases in a 3-phase circuit.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Test equipment",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "The volt-ohm-milliammeter (VOM) is the most commonly used multimeter. Range switches are usually provided for scale selection.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "It consists of a hand-driven DC generator and a direct reading ohm meter.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.28"
+    },
+    {
+     "t": "fig",
+     "id": "es-14-fig17",
+     "num": 17,
+     "cap": "Simple Megger Circuit Diagram",
+     "alt": "Simple megger circuit: a hand-driven generator, coils A and B on a pivoted shaft, a permanent magnet, and line and earth test terminals.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.29"
+    },
+    {
+     "t": "p",
+     "text": "With the test terminals open, the pointer moves to infinite resistance.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.28"
+    },
+    {
+     "t": "p",
+     "text": "With the terminals shorted, it moves to zero resistance.",
+     "cite": "DOE-HDBK-1011/4-92 ES-14 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What does a multimeter measure?",
+     "o": [
+      "Voltage, resistance, and current",
+      "Insulation resistance only",
+      "Power factor",
+      "Phase difference"
+     ],
+     "a": 0,
+     "x": "The multimeter is a portable single instrument capable of measuring various electrical values including voltage, resistance, and current.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is a megger used to measure?",
+     "o": [
+      "Line frequency",
+      "Insulation resistance",
+      "True power",
+      "Ampere-hours"
+     ],
+     "a": 1,
+     "x": "The megger is a portable instrument used to measure insulation resistance.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.3",
+     "q": "How is a megger connected?",
+     "o": [
+      "In series with the load",
+      "In parallel with the load",
+      "Out of circuit",
+      "To the running generator"
+     ],
+     "a": 2,
+     "x": "Meggers are connected out of circuit.",
+     "p": "P23"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Voltmeter multiplier",
+   "eo": "1.3",
+   "page": 6,
+   "problem": "A 2 mA meter movement with internal resistance of 25 ohms is to measure a full scale voltage of 100 volts. Find the series resistance.",
+   "steps": [
+    "Rs = (V / Im) - Rm.",
+    "Since Rm is negligibly low, Rs = 100 V / 2 mA."
+   ],
+   "answer": "50 kΩ",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.6"
+  },
+  {
+   "title": "Ohm meter deflection",
+   "eo": "1.3",
+   "page": 18,
+   "problem": "An ohm meter has Ro = 30 Ω and a full scale current of 300 µA. A 5 Ω resistor is connected. With a deflection factor of 0.86, find the current.",
+   "steps": [
+    "I = D Im.",
+    "I = (0.86)(300 x 10⁻⁶)."
+   ],
+   "answer": "258 µA",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.18"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the loading effect of a voltmeter?",
+   "a": "The reduction in measured voltage caused by the meter drawing current from the circuit.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "Why is a component removed from the circuit for an ohm meter reading?",
+   "a": "If a parallel path exists, current flows in the path of least resistance and gives an erroneous reading.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "How many wattmeters are normally used for three-phase power measurements?",
+   "a": "Two.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What is the most commonly used multimeter?",
+   "a": "The volt-ohm-milliammeter (VOM).",
+   "p": "P21",
+   "place": null
+  },
+  {
+   "q": "What does a ground detector detect?",
+   "a": "Conductor insulation resistance to ground.",
+   "p": "P16",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A voltmeter measures voltage and is connected in parallel with the load being measured.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.9"
+  },
+  {
+   "text": "An ammeter measures circuit current flow and is connected in series with the circuit.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.14"
+  },
+  {
+   "text": "An ohm meter measures circuit resistance and is connected to a component removed from the circuit.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.19"
+  },
+  {
+   "text": "A wattmeter measures real power delivered to the load.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.22"
+  },
+  {
+   "text": "A megger measures insulation resistance and is connected out of circuit.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.30"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "The voltmeter accuracy example gives (40 KΩ/V)(100 V) as 4.4 MΩ, but that product is 4 MΩ. The example is not used.",
+   "cite": "DOE-HDBK-1011/4-92 ES-14 p.9"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The file's voltmeter, ammeter, and ground detector notes match the handbook.",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.6 Voltmeter"
+  },
+  {
+   "type": "Word note",
+   "note": "This file is a possible draft: its slide notes are in storyboard format with a script and programmer's instructions. Nothing in them is unfinished, so the lesson has no Draft source tag.",
+   "cite": "Word: Electrical Test Equipment.docx, slide 1.8 Ammeter"
+  }
+ ],
+ "page_tags": []
+}

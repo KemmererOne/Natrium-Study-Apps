@@ -1,0 +1,1792 @@
+{
+ "module_id": "ME-03",
+ "slug": "me-03-pumps",
+ "title": "Pumps",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1018-V1",
+ "handbook": "DOE-HDBK-1018/1-93",
+ "word_file": "Pumps.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Pumps",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the purpose, construction, and principles of operation for centrifugal pumps.",
+   "items": [],
+   "page": {
+    "pdf": 93,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the purposes of the following centrifugal pump components:",
+     "items": [
+      "a. Impeller",
+      "b. Volute",
+      "c. Diffuser",
+      "d. Packing",
+      "e. Lantern Ring",
+      "f. Wearing ring"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given a drawing of a centrifugal pump, IDENTIFY the following major components:",
+     "items": [
+      "a. Pump casing",
+      "b. Pump shaft",
+      "c. Impeller",
+      "d. Volute",
+      "e. Stuffing box",
+      "f. Stuffing box gland",
+      "g. Packing",
+      "h. Lantern Ring",
+      "i. Impeller wearing ring",
+      "j. Pump casing wearing ring"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Net Positive Suction Head Available",
+      "b. Cavitation",
+      "c. Gas binding",
+      "d. Shutoff head",
+      "e. Pump runout"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the relationship between net positive suction head available and net positive suction head required that is necessary to avoid cavitation.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST three indications that a centrifugal pump may be cavitating.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "LIST five changes that can be made in a pump or its surrounding system that can reduce cavitation.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "LIST three effects of cavitation.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DESCRIBE the shape of the characteristic curve for a centrifugal pump.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DESCRIBE how centrifugal pumps are protected from the conditions of dead heading and pump runout.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "Without references, DESCRIBE the purpose, construction, and principle of operation for positive displacement pumps.",
+   "items": [],
+   "page": {
+    "pdf": 94,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "STATE the difference between the flow characteristics of centrifugal and positive displacement pumps.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "Given a simplified drawing of a positive displacement pump, CLASSIFY the pump as one of the following:",
+     "items": [
+      "a. Reciprocating piston pump",
+      "b. Gear-type rotary pump",
+      "c. Screw-type rotary pump",
+      "d. Lobe-type rotary pump",
+      "e. Moving vane pump",
+      "f. Diaphragm pump"
+     ],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "EXPLAIN the importance of viscosity as it relates to the operation of a reciprocating positive displacement pump.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "DESCRIBE the characteristic curve for a positive displacement pump.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "DEFINE the term slippage.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "STATE how positive displacement pumps are protected against overpressurization.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Centrifugal pumps basically consist of a stationary pump casing and an impeller mounted on a rotating shaft.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The pump casing provides a pressure boundary for the pump and contains channels to properly direct the suction and discharge flow.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "The vanes of the rotating impeller impart a radial and rotary motion to the liquid, forcing it to the outer periphery of the pump casing where it is collected in the outer part of the pump casing called the volute.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "This converts the velocity head to static pressure.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "A diffuser is a set of stationary vanes that surround the impeller.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "In a radial flow pump, the liquid enters at the center of the impeller and is directed out along the impeller blades in a direction at right angles to the pump shaft.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "In an axial flow pump, the impeller pushes the liquid in a direction parallel to the pump shaft.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "A pump stage is defined as that portion of a centrifugal pump consisting of one impeller and its associated components.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.6"
+  },
+  {
+   "id": "P9",
+   "quote": "Wearing rings are replaceable rings that are attached to the impeller and/or the pump casing to allow a small running clearance between the impeller and the pump casing without causing wear of the actual impeller or pump casing material.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.8"
+  },
+  {
+   "id": "P10",
+   "quote": "The stuffing box is a cylindrical space in the pump casing surrounding the shaft.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+  },
+  {
+   "id": "P11",
+   "quote": "Packing is material in the form of rings or strands that is placed in the stuffing box to form a seal to control the rate of leakage along the shaft.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+  },
+  {
+   "id": "P12",
+   "quote": "Stuffing boxes are normally designed to allow a small amount of controlled leakage along the shaft to provide lubrication and cooling to the packing.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+  },
+  {
+   "id": "P13",
+   "quote": "A lantern ring is a perforated hollow ring located near the center of the packing box that receives relatively cool, clean liquid from either the discharge of the pump or from an external source and distributes the liquid uniformly around the shaft to provide lubrication and cooling.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+  },
+  {
+   "id": "P14",
+   "quote": "Mechanical seals consist of two basic parts, a rotating element attached to the pump shaft and a stationary element attached to the pump casing.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.10"
+  },
+  {
+   "id": "P15",
+   "quote": "If flow through the pump is stopped while the pump is still operating, the pump will no longer be adequately cooled and the pump can quickly become damaged.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.11"
+  },
+  {
+   "id": "P16",
+   "quote": "If the pressure drop is large enough, or if the temperature is high enough, the pressure drop may be sufficient to cause the liquid to flash to vapor when the local pressure falls below the saturation pressure for the fluid being pumped.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P17",
+   "quote": "This process of the formation and subsequent collapse of vapor bubbles in a pump is called",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "A cavitating pump can sound like a can of marbles being shaken.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P19",
+   "quote": "Other indications that can be observed from a remote operating station are fluctuating discharge pressure, flow rate, and pump motor current.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P20",
+   "quote": "This physical shock creates small pits on the leading edge of the impeller vane.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P21",
+   "quote": "Cavitation can also cause excessive pump vibration, which could damage pump bearings, wearing rings, and seals.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P22",
+   "quote": "The net positive suction head available (NPSHA) is the difference between the pressure at the suction of the pump and the saturation pressure for the liquid being pumped.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P23",
+   "quote": "The net positive suction head required (NPSHR) is the minimum net positive suction head necessary to avoid cavitation.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "The condition that must exist to avoid cavitation is that the net positive suction head available must be greater than or equal to the net positive suction head required.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+  },
+  {
+   "id": "P25",
+   "quote": "Decreasing the temperature of the liquid decreases the saturation pressure, causing NPSHA to increase.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "Therefore, reducing the flow rate through a pump by throttling a discharge valve decreases NPSHR.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+  },
+  {
+   "id": "P27",
+   "quote": "The lower the pump head, the higher the flow rate.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+  },
+  {
+   "id": "P28",
+   "quote": "Shutoff head is the maximum head that can be developed by a centrifugal pump operating at a set speed.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+  },
+  {
+   "id": "P29",
+   "quote": "Pump runout is the maximum flow that can be developed by a centrifugal pump without damaging the pump.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+  },
+  {
+   "id": "P30",
+   "quote": "A centrifugal pump is dead-headed when it is operated with no flow through it, for example, with a closed discharge valve or against a seated check valve.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P31",
+   "quote": "One method for protecting the pump from running dead-headed is to provide a recirculation line from the pump discharge line upstream of the discharge valve, back to the pump's supply source.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P32",
+   "quote": "One method for ensuring that there is always adequate flow resistance at the pump discharge to prevent excessive flow through the pump is to place an orifice or a throttle valve immediately downstream of the pump discharge.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P33",
+   "quote": "Runout can lead to cavitation and can also cause overheating of the pump's motor due to excessive currents.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P34",
+   "quote": "Gas binding of a centrifugal pump is a condition where the pump casing is filled with gases or vapors to the point where the impeller is no longer able to contact enough fluid to function correctly.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P35",
+   "quote": "Most centrifugal pumps are not self-priming.",
+   "sec": "Centrifugal Pump Operation",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+  },
+  {
+   "id": "P36",
+   "quote": "A centrifugal pump is started with the discharge valve throttled or closed to minimize the load on the impeller, allowing it to come up to speed quicker.",
+   "sec": "Pump Operation",
+   "cite": "Word: Pumps.docx, slide 1.44 Knowledge Check Centrifugal Pump Safety Precautions"
+  },
+  {
+   "id": "P37",
+   "quote": "A positive displacement pump is one in which a definite volume of liquid is delivered for each cycle of pump operation.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.18"
+  },
+  {
+   "id": "P38",
+   "quote": "The three groups are reciprocating pumps, rotary pumps, and diaphragm pumps.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.18"
+  },
+  {
+   "id": "P39",
+   "quote": "The volume of liquid moved by the pump in one cycle (one suction stroke and one discharge stroke) is equal to the change in the liquid volume of the cylinder as the piston moves from its farthest left position to its farthest right position.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.19"
+  },
+  {
+   "id": "P40",
+   "quote": "In general, the effective flow rate of reciprocating pumps decreases as the viscosity of the fluid being pumped increases because the speed of the pump must be reduced.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.21"
+  },
+  {
+   "id": "P41",
+   "quote": "Rotary pumps operate on the principle that a rotating vane, screw, or gear traps the liquid in the suction side of the pump casing and forces it to the discharge side of the casing.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.22"
+  },
+  {
+   "id": "P42",
+   "quote": "Slippage is leakage of fluid from the discharge of the pump back to its suction.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.22"
+  },
+  {
+   "id": "P43",
+   "quote": "The simple gear pump shown in Figure 14 consists of two spur gears meshing together and revolving in opposite directions within a casing.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.22"
+  },
+  {
+   "id": "P44",
+   "quote": "It is considered as a simple gear pump having only two or three teeth per rotor; otherwise, its operation or the explanation of the function of its parts is no different.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.24"
+  },
+  {
+   "id": "P45",
+   "quote": "The screw pump is used for pumping viscous fluids, usually lubricating, hydraulic, or fuel oil.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.25"
+  },
+  {
+   "id": "P46",
+   "quote": "The rotor carries vanes that move in and out as it rotates to maintain sealed spaces between the rotor and the cylinder wall.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.26"
+  },
+  {
+   "id": "P47",
+   "quote": "The pump construction eliminates any contact between the liquid being pumped and the source of energy.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.26"
+  },
+  {
+   "id": "P48",
+   "quote": "Therefore, the only factor that effects flow rate in an ideal positive displacement pump is the speed at which it operates.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.27"
+  },
+  {
+   "id": "P49",
+   "quote": "The characteristic curve for a positive displacement pump operating at a certain speed is a vertical line on a graph of head versus flow.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.28"
+  },
+  {
+   "id": "P50",
+   "quote": "Positive displacement pumps are normally fitted with relief valves on the upstream side of their discharge valves to protect the pump and its discharge piping from overpressurization.",
+   "sec": "Positive Displacement Pumps",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.28"
+  },
+  {
+   "id": "P51",
+   "quote": "Annular Linear Induction Pumps are a type of electromagnetic pump used to move liquids without the need for any physical parts like impellers or rotating shafts.",
+   "sec": "Annular Linear Induction Pumps",
+   "cite": "Word: ALIP Pumps.docx, slide 1.1 ALIP Intro"
+  },
+  {
+   "id": "P52",
+   "quote": "Motor action is achieved by having a current carrying conductor in a magnet field.",
+   "sec": "Annular Linear Induction Pumps",
+   "cite": "Word: ALIP Pumps.docx, slide 1.4 ALIP, How It Works!"
+  },
+  {
+   "id": "P53",
+   "quote": "Note that since this design has stator windings on both sides of the channel an inner core of solid conductive material is needed to bridge the gap to maintain a strong magnetic field in the channel.",
+   "sec": "Annular Linear Induction Pumps",
+   "cite": "Word: ALIP Pumps.docx, slide 1.3 ALIP Parts"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Pump components",
+   "cite": "Word: Pumps.docx, slide 1.7 Centrifugal Pump Components"
+  },
+  {
+   "step": "Diffuser",
+   "cite": "Word: Pumps.docx, slide 1.13 Centrifugal Pump Diffuser"
+  },
+  {
+   "step": "Stuffing box and packing",
+   "cite": "Word: Pumps.docx, slide 1.14 Stuffing Box, Gland, and Packing"
+  },
+  {
+   "step": "Lantern ring",
+   "cite": "Word: Pumps.docx, slide 1.15 Packing and Lantern Ring"
+  },
+  {
+   "step": "Wearing rings",
+   "cite": "Word: Pumps.docx, slide 1.16 Wearing Rings"
+  },
+  {
+   "step": "Net positive suction head",
+   "cite": "Word: Pumps.docx, slide 1.22 Net Positive Suction Head"
+  },
+  {
+   "step": "Flow classification",
+   "cite": "Word: Pumps.docx, slide 1.38 Radial Flow Pumps"
+  },
+  {
+   "step": "Multistage pumps",
+   "cite": "Word: Pumps.docx, slide 1.41 Multistage Centrifugal Pump"
+  },
+  {
+   "step": "Startup",
+   "cite": "Word: Pumps.docx, slide 1.59 Centrifugal Pump Operation – Pump Startup"
+  },
+  {
+   "step": "Reciprocating pumps",
+   "cite": "Word: Pumps.docx, slide 1.88 Reciprocating Pumps"
+  },
+  {
+   "step": "Simplex and duplex",
+   "cite": "Word: Pumps.docx, slide 1.90 Single- and Double-Acting Pumps"
+  },
+  {
+   "step": "Rotary pumps",
+   "cite": "Word: Pumps.docx, slide 1.101 Rotary Moving Vane Pump"
+  },
+  {
+   "step": "Overpressure protection",
+   "cite": "Word: Pumps.docx, slide 1.112 PDP Overpressure Protection"
+  },
+  {
+   "step": "ALIP parts",
+   "cite": "Word: ALIP Pumps.docx, slide 1.3 ALIP Parts"
+  },
+  {
+   "step": "ALIP operation",
+   "cite": "Word: ALIP Pumps.docx, slide 1.4 ALIP, How It Works!"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "How a centrifugal pump works",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig1",
+     "num": 1,
+     "cap": "Centrifugal Pump",
+     "alt": "Simplified centrifugal pump showing the suction, eye of the impeller, vanes, volute, and discharge.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "The pump casing guides liquid from the suction connection to the center, or eye, of the impeller.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The volute expands in cross-sectional area as it wraps around the casing. It collects high velocity liquid from the impeller and gradually reduces fluid velocity by increasing the flow area.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "A diffuser increases efficiency by allowing a more gradual expansion and a less turbulent area for the liquid to reduce in velocity. The growing flow area converts kinetic energy into flow pressure.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig3",
+     "num": 3,
+     "cap": "Centrifugal Pump Diffuser",
+     "alt": "Impeller surrounded by a ring of stationary diffuser vanes inside the pump casing.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is the purpose of the impeller?",
+     "o": [
+      "To impart a radial and rotary motion to the liquid",
+      "To seal the shaft against leakage",
+      "To convert pressure to velocity at the discharge",
+      "To protect the casing from wear"
+     ],
+     "a": 0,
+     "x": "The vanes of the rotating impeller impart a radial and rotary motion to the liquid.",
+     "p": "P3"
+    },
+    {
+     "existing": "Q930",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the purpose of a diffuser in a centrifugal pump?",
+     "o": [
+      "To balance axial thrust",
+      "To increase efficiency with a more gradual, less turbulent expansion",
+      "To cool the packing",
+      "To direct liquid into the eye of the impeller"
+     ],
+     "a": 1,
+     "x": "The purpose of the diffuser is to increase the efficiency of the centrifugal pump by allowing a more gradual expansion and less turbulent area for the liquid to reduce in velocity.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Classifying centrifugal pumps",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A single-suction impeller lets liquid enter from one direction, and a double-suction impeller from both sides. Impellers can be open, semi-open, or enclosed.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Pumps are also classified by flow: radial, axial, and mixed.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig6",
+     "num": 6,
+     "cap": "Radial Flow Centrifugal Pump",
+     "alt": "Radial flow impeller with liquid leaving at right angles to the shaft.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig7",
+     "num": 7,
+     "cap": "Axial Flow Centrifugal Pump",
+     "alt": "Axial flow propeller-type impeller with liquid moving parallel to the shaft.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Mixed flow pumps borrow from both: the blades push liquid out from the shaft at an angle greater than 90°.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig8",
+     "num": 8,
+     "cap": "Mixed Flow Centrifugal Pump",
+     "alt": "Mixed flow impeller with liquid leaving at an angle to the shaft.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.6"
+    },
+    {
+     "t": "p",
+     "text": "A single impeller making more than 150 psid is difficult and costly to design, so multiple impellers go on a common shaft in one casing, each discharging to the suction of the next.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig9",
+     "num": 9,
+     "cap": "Multi-Stage Centrifugal Pump",
+     "alt": "Four-stage pump with impellers in series on one shaft.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "In which pump does the impeller push liquid parallel to the shaft?",
+     "o": [
+      "Axial flow",
+      "Radial flow",
+      "Mixed flow",
+      "Double volute"
+     ],
+     "a": 0,
+     "x": "In an axial flow pump, the impeller pushes the liquid in a direction parallel to the pump shaft.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.0",
+     "q": "What is a pump stage?",
+     "o": [
+      "One rotation of the shaft",
+      "One wearing ring and its gland",
+      "One impeller and its associated components",
+      "One complete pump casing"
+     ],
+     "a": 2,
+     "x": "A pump stage is defined as that portion of a centrifugal pump consisting of one impeller and its associated components.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Centrifugal pump components",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "me-03-fig10",
+     "num": 10,
+     "cap": "Centrifugal Pump Components",
+     "alt": "Pump cross section labeling the casing, shaft, impeller, volute, stuffing box, gland, packing, lantern ring, and impeller and casing wearing rings.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.8"
+    },
+    {
+     "t": "p",
+     "text": "A small clearance lets the impeller rotate freely in the casing. Liquid leaking through it from discharge to suction lowers efficiency, and erosion slowly widens it.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "They are replaced periodically, which prevents the more costly replacement of the impeller or the casing.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Packing rings are held by a gland. Tightening the adjusting nuts compresses the packing, which expands radially to form a tight seal.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "A standard stuffing box will not work if the suction is under a vacuum or the fluid is too hot to cool the packing.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "The polished faces of the rotating and stationary elements contact each other to form a seal that prevents leakage along the shaft.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is the purpose of wearing rings?",
+     "o": [
+      "To seal the shaft where it leaves the casing",
+      "To distribute cool liquid around the shaft",
+      "To convert velocity to pressure",
+      "To allow a small running clearance without wearing the impeller or casing"
+     ],
+     "a": 3,
+     "x": "Wearing rings are replaceable rings that allow a small running clearance without causing wear of the actual impeller or pump casing material.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the purpose of packing?",
+     "o": [
+      "To form a seal that controls the rate of leakage along the shaft",
+      "To support the impeller",
+      "To increase discharge pressure",
+      "To keep the pump primed"
+     ],
+     "a": 0,
+     "x": "Packing is placed in the stuffing box to form a seal to control the rate of leakage along the shaft.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why is a small amount of leakage allowed along a packed shaft?",
+     "o": [
+      "To provide lubrication and cooling to the packing",
+      "To vent gases from the casing",
+      "To keep the suction pressure low",
+      "To balance the impeller"
+     ],
+     "a": 0,
+     "x": "Stuffing boxes are normally designed to allow a small amount of controlled leakage along the shaft to provide lubrication and cooling to the packing.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.1",
+     "q": "What does a lantern ring do?",
+     "o": [
+      "Distributes relatively cool, clean liquid around the shaft for lubrication and cooling",
+      "Holds the packing gland in place",
+      "Keeps the impeller centered in the casing",
+      "Collects liquid from the impeller"
+     ],
+     "a": 0,
+     "x": "A lantern ring receives relatively cool, clean liquid and distributes the liquid uniformly around the shaft to provide lubrication and cooling.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Cavitation and net positive suction head",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The flow area at the eye of the impeller is usually smaller than the suction piping, so entering liquid speeds up and its pressure drops. The greater the flow, the greater the drop.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Vapor bubbles are swept along the vanes. Where local pressure rises above saturation pressure, they abruptly collapse.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "That word is cavitation.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "eq",
+     "text": "NPSHA = Psuction - Psaturation",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "eq",
+     "text": "NPSHA ≥ NPSHR",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+    },
+    {
+     "t": "p",
+     "text": "When a pump takes suction from a tank, the suction pressure is the absolute pressure at the liquid surface, plus the pressure from elevation, less the friction head losses in the suction line.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+    },
+    {
+     "t": "eq",
+     "text": "NPSHA = Pa + Pst - hf - Psat",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q38",
+     "eo": "1.3"
+    },
+    {
+     "existing": "Q340",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.4",
+     "q": "What relationship must exist to avoid cavitation?",
+     "o": [
+      "NPSH required greater than NPSH available",
+      "NPSH available equal to zero",
+      "Suction pressure below saturation pressure",
+      "NPSH available greater than or equal to NPSH required"
+     ],
+     "a": 3,
+     "x": "The net positive suction head available must be greater than or equal to the net positive suction head required.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.3",
+     "q": "A pump takes suction from a tank. Pa = 30 ft, Pst = 12 ft, hf = 4 ft, and Psat = 2 ft. What is NPSHA?",
+     "o": [
+      "32 ft",
+      "36 ft",
+      "40 ft",
+      "48 ft"
+     ],
+     "a": 1,
+     "x": "NPSHA = Pa + Pst - hf - Psat = 30 + 12 - 4 - 2 = 36 ft.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Recognizing and stopping cavitation",
+   "eo": [
+    "1.5",
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Noise",
+      "Fluctuating discharge pressure and flow",
+      "Fluctuating pump motor current"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Degraded pump performance",
+      "Excessive pump vibration",
+      "Damage to pump impeller, bearings, wearing rings, and seals"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.16"
+    },
+    {
+     "t": "p",
+     "text": "Vapor bubbles collapse against the oncoming vane and cause a physical shock.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Each pit is microscopic, but millions formed over hours or days can literally destroy an impeller.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Increase the pressure at the suction of the pump",
+      "Reduce the temperature of the liquid being pumped",
+      "Reduce head losses in the pump suction piping",
+      "Reduce the flow rate through the pump",
+      "Reduce the speed of the pump impeller"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "Head losses fall with a larger pipe diameter, fewer elbows, valves, and fittings, and a shorter pipe. A slower impeller also lowers NPSHR.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which set lists the three indications of a cavitating pump?",
+     "o": [
+      "Rising suction pressure, no noise, high flow",
+      "Noise, fluctuating discharge pressure and flow, fluctuating motor current",
+      "Silence, steady flow, low motor current",
+      "High oil level, cold bearings, steady flow"
+     ],
+     "a": 1,
+     "x": "The indications are noise, fluctuating discharge pressure and flow, and fluctuating pump motor current.",
+     "p": "P19"
+    },
+    {
+     "existing": "Q68",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "Why does throttling a pump's discharge valve help stop cavitation?",
+     "o": [
+      "It lowers the suction pressure",
+      "Lower flow rate decreases NPSHR",
+      "Higher flow rate raises NPSHA",
+      "It raises the saturation pressure"
+     ],
+     "a": 1,
+     "x": "Reducing the flow rate through a pump by throttling a discharge valve decreases NPSHR.",
+     "p": "P26"
+    },
+    {
+     "eo": "1.7",
+     "q": "What physical damage does cavitation do to an impeller?",
+     "o": [
+      "Softening of the packing",
+      "Small pits on the leading edge of the vanes",
+      "Cracks in the volute",
+      "Bending of the shaft"
+     ],
+     "a": 1,
+     "x": "The physical shock from collapsing bubbles creates small pits on the leading edge of the impeller vane.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Gas binding and priming",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "The impeller spins in the gas bubble but cannot force liquid through the pump, which can lead to cooling problems for the packing and bearings.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    },
+    {
+     "t": "p",
+     "text": "Pumps in systems with dissolved gases that are not self-venting should be periodically vented manually.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "The casing must be filled with liquid before the pump is started. Most centrifugal pumps are located below the level of their suction source to stay primed.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q67",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.3",
+     "q": "Why are most centrifugal pumps located below the level of their suction source?",
+     "o": [
+      "To shorten the shaft",
+      "To remain primed and avoid becoming gas-bound",
+      "To lower the discharge pressure",
+      "To reduce motor current"
+     ],
+     "a": 1,
+     "x": "To ensure that a centrifugal pump remains primed and does not become gas-bound, most centrifugal pumps are located below the level of the source.",
+     "p": "P35"
+    }
+   ]
+  },
+  {
+   "title": "Characteristic curve, shutoff head, and runout",
+   "eo": [
+    "1.3",
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "At constant speed, flow through a centrifugal pump depends on the head it develops.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig11",
+     "num": 11,
+     "cap": "Centrifugal Pump Characteristic Curve",
+     "alt": "Pump head against flow: head is highest at zero flow, at shutoff head, and falls in a downward curve to the runout flow.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "With no flow path, the impeller churns the same liquid. Friction heats it until it flashes to vapor, which can interrupt cooling flow to the packing and bearings.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "An automatic flow control device can also give this protection.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Properly designed piping systems are very important for runout protection.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "What is the shape of a centrifugal pump characteristic curve?",
+     "o": [
+      "A horizontal line at one head",
+      "Head is highest at zero flow and falls as flow increases",
+      "Head rises steadily as flow increases",
+      "A vertical line at one flow rate"
+     ],
+     "a": 1,
+     "x": "The lower the pump head, the higher the flow rate, and shutoff head is the maximum head.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is pump runout?",
+     "o": [
+      "The maximum flow a centrifugal pump can develop without damage",
+      "The maximum head at a set speed",
+      "Operation with no flow through the pump",
+      "Loss of prime during operation"
+     ],
+     "a": 0,
+     "x": "Pump runout is the maximum flow that can be developed by a centrifugal pump without damaging the pump.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.9",
+     "q": "How is a centrifugal pump protected from dead-heading?",
+     "o": [
+      "A relief valve on the suction line",
+      "An orifice in the suction piping",
+      "A larger motor",
+      "A recirculation line from the discharge back to the supply source"
+     ],
+     "a": 3,
+     "x": "One method is to provide a recirculation line from the pump discharge line upstream of the discharge valve, back to the pump's supply source.",
+     "p": "P31"
+    },
+    {
+     "eo": "1.9",
+     "q": "How is a centrifugal pump protected from runout?",
+     "o": [
+      "A check valve in the suction line",
+      "A vent on the casing",
+      "An orifice or throttle valve immediately downstream of the discharge",
+      "A recirculation line to the supply tank"
+     ],
+     "a": 2,
+     "x": "An orifice or a throttle valve immediately downstream of the pump discharge ensures adequate flow resistance.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Starting a centrifugal pump",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "p",
+     "text": "This limits the amount of time that starting current exists.",
+     "cite": "Word: Pumps.docx, slide 1.59 Centrifugal Pump Operation – Pump Startup"
+    },
+    {
+     "t": "p",
+     "text": "A motor that is not yet rotating has no counter-electromotive force, so it initially draws five to seven times the normal running current.",
+     "cite": "Word: Pumps.docx, slide 1.63 Knowledge Check Operation of Centrifugal Pumps"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q341",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q343",
+     "eo": "1.0"
+    }
+   ]
+  },
+  {
+   "title": "Positive displacement pumps",
+   "eo": [
+    "2.1",
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "That volume is constant regardless of the resistance to flow, within the limits of the driver and the pump's strength. A centrifugal pump, by contrast, delivers a continuous flow for any given speed and discharge resistance.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig12",
+     "num": 12,
+     "cap": "Reciprocating Positive Displacement Pump Operation",
+     "alt": "Single piston in a cylinder with suction and discharge check valves, shown on the suction stroke and the discharge stroke.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "A simplex pump has one liquid cylinder, and a duplex pump is two simplex pumps side by side. A single-acting pump fills on one stroke and discharges on the return stroke. A double-acting pump fills one end of the cylinder while discharging the other.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.20"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig13",
+     "num": 13,
+     "cap": "Single-Acting and Double-Acting Pumps",
+     "alt": "Single-acting and double-acting piston arrangements with their check valves.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig14",
+     "num": 14,
+     "cap": "Simple Gear Pump",
+     "alt": "Two meshing spur gears in a casing, carrying liquid around the outside from suction to discharge.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig16",
+     "num": 16,
+     "cap": "Lobe Type Pump",
+     "alt": "Two lobed rotors in a casing, with intake at the bottom and discharge at the top.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.24"
+    },
+    {
+     "t": "p",
+     "text": "Screw pumps trap liquid between intermeshing screws and slide it along the cylinder.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig17",
+     "num": 17,
+     "cap": "Two-Screw, Low-Pitch, Screw Pump",
+     "alt": "Two-screw pump with paired right- and left-handed screws and arrows toward a center discharge.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig18",
+     "num": 18,
+     "cap": "Three-Screw, High-Pitch, Screw Pump",
+     "alt": "Three-screw pump with a center power rotor driving two idler rotors.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig19",
+     "num": 19,
+     "cap": "Rotary Moving Vane Pump",
+     "alt": "Rotor set off center in a cylinder, carrying swinging vanes that move liquid from suction to discharge.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig20",
+     "num": 20,
+     "cap": "Diaphragm Pump",
+     "alt": "Diaphragm pump with a flexible diaphragm and suction and discharge check valves.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.27"
+    },
+    {
+     "t": "p",
+     "text": "That eliminates the possibility of leakage, which matters for toxic or very expensive liquids.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.26"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.1",
+     "q": "How does the flow of a positive displacement pump differ from a centrifugal pump?",
+     "o": [
+      "It delivers no flow above shutoff head",
+      "It delivers a definite volume each cycle regardless of head",
+      "Its flow depends on the head it works against",
+      "It gives continuous flow with no separate volumes at any speed"
+     ],
+     "a": 1,
+     "x": "The positive displacement pump delivers a definite volume of fluid for each cycle regardless of the head. Flow from a centrifugal pump depends on the head.",
+     "p": "P37"
+    },
+    {
+     "eo": "2.2",
+     "q": "A pump has two meshing spur gears revolving in opposite directions in a casing. What type is it?",
+     "o": [
+      "Screw-type rotary",
+      "Moving vane",
+      "Gear-type rotary",
+      "Lobe-type rotary"
+     ],
+     "a": 2,
+     "x": "The simple gear pump consists of two spur gears meshing together and revolving in opposite directions within a casing.",
+     "p": "P43"
+    },
+    {
+     "eo": "2.2",
+     "q": "A rotor carries vanes that move in and out to keep sealed spaces against the cylinder wall. What type of pump is it?",
+     "o": [
+      "Moving vane",
+      "Diaphragm",
+      "Lobe-type rotary",
+      "Reciprocating piston"
+     ],
+     "a": 0,
+     "x": "The rotor carries vanes that move in and out as it rotates to maintain sealed spaces between the rotor and the cylinder wall.",
+     "p": "P46"
+    },
+    {
+     "eo": "2.2",
+     "q": "What is the main benefit of a diaphragm pump?",
+     "o": [
+      "No check valves are needed",
+      "The highest flow of any pump",
+      "No contact between the pumped liquid and the source of energy",
+      "Unlimited head and capacity"
+     ],
+     "a": 2,
+     "x": "The pump construction eliminates any contact between the liquid being pumped and the source of energy.",
+     "p": "P47"
+    }
+   ]
+  },
+  {
+   "title": "Viscosity, curves, slippage, and protection",
+   "eo": [
+    "2.3",
+    "2.4",
+    "2.5",
+    "2.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "As viscosity rises, the maximum speed at which a reciprocating pump can properly operate falls, so the maximum flow falls.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "fig",
+     "id": "me-03-fig21",
+     "num": 21,
+     "cap": "Positive Displacement Pump Characteristic Curve",
+     "alt": "Pump head against flow rate: the ideal curve is a vertical line, and the real curve leans toward lower flow at high head, showing slippage.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.27"
+    },
+    {
+     "t": "p",
+     "text": "As discharge pressure rises, some liquid leaks from the discharge back to the suction, which reduces the effective flow rate.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "p",
+     "text": "The relief valve prevents system and pump damage if the discharge valve is shut during operation or if anything else blocks system flow.",
+     "cite": "DOE-HDBK-1018/1-93 ME-03 p.28"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q70",
+     "eo": "2.3"
+    },
+    {
+     "existing": "Q69",
+     "eo": "2.4"
+    },
+    {
+     "eo": "2.5",
+     "q": "What is slippage in a positive displacement pump?",
+     "o": [
+      "The rate at which liquid leaks from discharge back to suction",
+      "Loss of drive belt tension",
+      "Flow that passes the relief valve",
+      "The drop in speed under load"
+     ],
+     "a": 0,
+     "x": "The rate at which liquid leaks from the pump discharge to its suction is called slippage.",
+     "p": "P42"
+    },
+    {
+     "existing": "Q345",
+     "eo": "2.6"
+    },
+    {
+     "existing": "Q344",
+     "eo": "2.6"
+    },
+    {
+     "existing": "Q347",
+     "eo": "2.4"
+    }
+   ]
+  },
+  {
+   "title": "Annular linear induction pumps",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "p",
+     "text": "The parts of an ALIP are the coils, the outer core, the inner core, and the flow channel.",
+     "cite": "Word: ALIP Pumps.docx, slide 1.3 ALIP Parts"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "p",
+     "text": "In an ALIP the liquid metal is that conductor. Electricity applied to the stator creates a magnetic field that pushes the liquid sodium, which acts as the rotor, through the channel.",
+     "cite": "Word: ALIP Pumps.docx, slide 1.4 ALIP, How It Works!"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Advantages: smaller and lighter, few or no moving parts, lower NPSH requirements, precise control of flow, and lower maintenance",
+      "Disadvantages: lower flow for a given power input, lower net efficiency at higher flows, and harder heat removal from the stator"
+     ],
+     "cite": "Word: ALIP Pumps.docx, slide 1.4 ALIP, How It Works!"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q236",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q237",
+     "eo": "1.0"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Checking for cavitation margin",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "page": 13,
+   "problem": "A pump takes suction from an enclosed tank. Pa = 40 ft, Pst = 15 ft, hf = 5 ft, and Psat = 6 ft. The manufacturer gives NPSHR as 20 ft. Will the pump avoid cavitation?",
+   "steps": [
+    "NPSHA = Pa + Pst - hf - Psat.",
+    "NPSHA = 40 + 15 - 5 - 6 = 44 ft.",
+    "Compare: 44 ft is greater than 20 ft, so NPSHA ≥ NPSHR is met."
+   ],
+   "answer": "Yes. NPSHA is 44 ft, which exceeds the 20 ft required.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the purpose of wearing rings in a centrifugal pump?",
+   "a": "They are replaceable rings that allow a small running clearance without wearing the actual impeller or casing.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What is the required relationship between NPSHA and NPSHR?",
+   "a": "NPSHA must be greater than or equal to NPSHR to avoid cavitation.",
+   "p": "P24",
+   "place": null
+  },
+  {
+   "q": "What five changes can reduce cavitation?",
+   "a": "Raise suction pressure, lower liquid temperature, reduce suction head losses, reduce flow rate, and reduce impeller speed.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "What is pump runout?",
+   "a": "The maximum flow a centrifugal pump can develop without damaging the pump.",
+   "p": "P29",
+   "place": null
+  },
+  {
+   "q": "How is a centrifugal pump protected from dead-heading and from runout?",
+   "a": "Dead-heading: a recirculation line back to the supply source. Runout: an orifice or throttle valve just downstream of the discharge, and proper piping design.",
+   "p": "P31",
+   "place": null
+  },
+  {
+   "q": "What are the three basic groups of positive displacement pumps?",
+   "a": "Reciprocating, rotary, and diaphragm.",
+   "p": "P38",
+   "place": null
+  },
+  {
+   "q": "What is the characteristic curve of an ideal positive displacement pump?",
+   "a": "A vertical line on a graph of head versus flow.",
+   "p": "P49",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A centrifugal pump uses a rotating impeller and a volute or diffuser to convert velocity to pressure.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.10"
+  },
+  {
+   "text": "Keep NPSHA at or above NPSHR to avoid cavitation, which shows as noise and fluctuating pressure, flow, and motor current.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.16"
+  },
+  {
+   "text": "Protect against dead-heading with recirculation and against runout with an orifice or throttle valve.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.17"
+  },
+  {
+   "text": "A positive displacement pump moves a definite volume each cycle and needs a relief valve upstream of its discharge valve.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.28"
+  },
+  {
+   "text": "An ALIP moves liquid metal with a magnetic field and has no impeller or rotating shaft.",
+   "cite": "Word: ALIP Pumps.docx, slide 1.1 ALIP Intro"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "Pumps.docx slide 1.114 says positive displacement pumps have 0% slip. The handbook p.22 and p.27 define slippage and show it in Figure 21. The lesson uses the handbook. Existing item Q345 does not state the 0% claim, so it is reused.",
+   "cite": "Word: Pumps.docx, slide 1.114 Knowledge Check PDP"
+  },
+  {
+   "type": "Conflict",
+   "note": "Slide 1.32 says total developed head is also referred to as shutoff head. The handbook p.14 defines shutoff head as the maximum head at a set speed. The lesson uses the handbook and leaves total developed head off.",
+   "cite": "Word: Pumps.docx, slide 1.32 Total Developed Head (TDH)"
+  },
+  {
+   "type": "Word claim",
+   "note": "Slide 1.20 says Psat is representative of NPSHR and that Psat increases as a discharge valve opens, and slide 1.24 ties temperature to NPSHR. The handbook p.12 to p.14 does not support this: NPSHR is a pump requirement set by testing, and Psat sits in NPSHA. Left off.",
+   "cite": "Word: Pumps.docx, slide 1.20 Net Positive Suction Head"
+  },
+  {
+   "type": "Word value",
+   "note": "Slide 1.35's worked answer states 4 = (33.9 + x - 50) - 0.8 and x = 21.1 feet. The arithmetic gives 20.9 feet. The marked choice, 21 feet, fits either. The question text is a picture, so the check is not used.",
+   "cite": "Word: Pumps.docx, slide 1.35 Knowledge Check Centrifugal Pump Terms- NPSH 2"
+  },
+  {
+   "type": "Word value",
+   "note": "Slide 1.36 marks 116 feet, but its explanation works out to 115 feet. The question text is a picture, so the check is not used.",
+   "cite": "Word: Pumps.docx, slide 1.36 Knowledge Check Centrifugal Pump Terms- Discharge Head"
+  },
+  {
+   "type": "Word claim",
+   "note": "Existing item Q342 follows slide 1.50, which gives low flow with low discharge pressure as the cavitation indication. The handbook p.12 and p.16 list noise and fluctuating pressure, flow, and motor current. Q342 is not reused here.",
+   "cite": "Word: Pumps.docx, slide 1.50 Knowledge Check Inidcations and Control of Pump Cavitation"
+  },
+  {
+   "type": "Word source",
+   "note": "Pump laws, system curves, operating point, and series and parallel operation on slides 1.67 to 1.85 have no ME-03 objective and are taught in HT-03. Pump efficiency, lift, jet pumps, and PDP NPSH on slides 1.28 to 1.33, 1.64 to 1.66, and 1.103 to 1.105 are left off. Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains.",
+   "cite": "Word: Pumps.docx, slide 1.67 Centrifugal Pump Laws"
+  },
+  {
+   "type": "Word source",
+   "note": "ALIP Pumps.docx has no ME-03 objective, so it appears on a page marked From the lesson plan. Its slide 1.8 quiz says air gap power goes from the Outer Core/Stator to the Inner Core, while slide 1.4 says from the Stator to the Rotor, and sodium acts as the rotor. Air gap power and thrust are left off this page. Cards C214 to C217 already cover them.",
+   "cite": "Word: ALIP Pumps.docx, slide 1.4 ALIP, How It Works!"
+  },
+  {
+   "type": "Scope",
+   "note": "Generic water in the handbook's pump text is untagged. Condensate depression on p.13, steam-driven direct-acting pumps on p.20 and p.21, and gland sealing water on slide 1.15 are left off. Most worked figures use water, so conversion values such as 0.433 from slide 1.21 are not shown.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.13"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.5 says the flow through a radial flow pump is shown for an axial pump. p.6 says mixed flow liquid goes to the pump suction, where discharge seems meant. The lesson does not repeat either. The handbook has no NPSH example, so the examples apply its equation to new numbers.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.5"
+  },
+  {
+   "type": "Figures",
+   "note": "Figures 2, 4, 5, and 15 are off. They show detail that no objective needs.",
+   "cite": "DOE-HDBK-1018/1-93 ME-03 p.2"
+  }
+ ],
+ "page_tags": []
+}

@@ -1,0 +1,672 @@
+{
+ "module_id": "ES-07",
+ "slug": "es-07-basic-ac-theory",
+ "title": "Basic AC Theory",
+ "status": "Reviewed",
+ "scope_tags": [
+  "Draft source"
+ ],
+ "source_id": "DOE-1011-V3",
+ "handbook": "DOE-HDBK-1011/3-92",
+ "word_file": "AC Generator Theory and Operation.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an alternating current (AC) waveform, DESCRIBE the relationship between average and RMS values of voltage and current, and the angular velocity within that waveform.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the construction and operation of a simple AC generator.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN the development of a sine-wave output in an AC generator.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DEFINE the following terms in relation to AC generation:",
+     "items": [
+      "a. Radians/second",
+      "b. Hertz",
+      "c. Period"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DEFINE effective value of an AC current relative to DC current.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a maximum value, CALCULATE the effective (RMS) and average values of AC voltage.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given a diagram of two sine waves, DESCRIBE the phase relationship between the two waves.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The elementary AC generator (Figure 1) consists of a conductor, or loop of wire in a magnetic field that is produced by an electromagnet.",
+   "sec": "AC Generation",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The two ends of the loop are connected to slip rings, and they are in contact with two brushes.",
+   "sec": "AC Generation",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "the coil sides are moving parallel to the field and do not cut magnetic lines of force.",
+   "sec": "AC Generation",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "The horizontal coil is moving perpendicular to the field and is cutting the greatest number of magnetic lines of force.",
+   "sec": "AC Generation",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "rotation of the coil through 360° results in an AC sine wave output.",
+   "sec": "AC Generation",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The time it takes for the generator to complete one cycle is called the period, and the number of cycles per second is called the frequency (measured in hertz).",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "Effective value of AC is the amount of AC that produces the same heating effect as an equal amount of DC.",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "Effective value (RMS) = peak value x 0.707",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+  },
+  {
+   "id": "P9",
+   "quote": "Average value = peak value x 0.637",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+  },
+  {
+   "id": "P10",
+   "quote": "The values of current (I) and voltage (E) that are normally encountered are assumed to be RMS values",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "Phase angle is the fraction of a cycle, in degrees, that has gone by since a voltage or current has passed through a given value.",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "The voltage e1 is said to lead e2 by 60 electrical degrees, or it can be said that e2 lags e1 by 60 electrical degrees.",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.7"
+  },
+  {
+   "id": "P13",
+   "quote": "If the phase difference between two currents, two voltages, or a voltage and a current is zero degrees, they are said to be \"in-phase.\"",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.8"
+  },
+  {
+   "id": "P14",
+   "quote": "One cycle of the sine wave is generated when the coil rotates 2π radians.",
+   "sec": "AC Generation Analysis",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.9"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Faraday's law",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.5 Faradays law"
+  },
+  {
+   "step": "Field strength",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.7 Field Strength"
+  },
+  {
+   "step": "Generator function",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.8 Generator Function"
+  },
+  {
+   "step": "AC generation",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.9 AC generation"
+  },
+  {
+   "step": "Cycle and frequency",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.11 Cycle and Frequency"
+  },
+  {
+   "step": "Peak and peak-to-peak voltage",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.12 Peak/Peak to Peak Voltage"
+  },
+  {
+   "step": "Effective (RMS) voltage value",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.14 Effective / RMS Voltage Value"
+  },
+  {
+   "step": "Phase angles",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.16 Phase Angles"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "The simple AC generator",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "es-07-fig1",
+     "num": 1,
+     "cap": "Simple AC Generator",
+     "alt": "A loop of wire rotating between the poles of an electromagnet, with its ends on two slip rings and two brushes connected to a load.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+    },
+    {
+     "t": "p",
+     "text": "When the loop rotates it cuts magnetic lines of force, first in one direction and then the other.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+    },
+    {
+     "t": "p",
+     "text": "In the vertical position, there is no voltage induced in the loop:",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Voltage and current increase to a maximum when the coil is horizontal to the magnetic lines of force, at 90°.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "As the coil continues to turn, voltage and current decrease to zero at 180°. In the other half revolution, an equal voltage is produced with the polarity reversed.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "es-07-fig2",
+     "num": 2,
+     "cap": "Developing a Sine-Wave Voltage",
+     "alt": "Sine wave of voltage against degrees of rotation, with a drawing of the loop position at 0, 90, 180, 270, and 360 degrees.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "In an elementary AC generator, what are the two ends of the loop connected to?",
+     "o": [
+      "A commutator",
+      "Slip rings",
+      "The field winding",
+      "A rectifier"
+     ],
+     "a": 1,
+     "x": "The two ends of the loop are connected to slip rings, and they are in contact with two brushes.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.2",
+     "q": "At what coil position is the induced voltage at its maximum?",
+     "o": [
+      "Vertical, moving parallel to the field",
+      "Stationary",
+      "Horizontal, moving perpendicular to the field",
+      "At 180°"
+     ],
+     "a": 2,
+     "x": "The horizontal coil is moving perpendicular to the field and is cutting the greatest number of magnetic lines of force.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Cycle, frequency, and angular velocity",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "As the generator coil rotates 360°, the output voltage goes through one complete cycle.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-07-fig3",
+     "num": 3,
+     "cap": "Voltage Sine Wave",
+     "alt": "A rotating loop beside one cycle of a sine wave, with numbered points marking the phase around the cycle.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Angular velocity is expressed in radians per second, and 2π radians is a full revolution. One radian equals 57.3 degrees.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "eq",
+     "text": "ω = 2πf",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+    },
+    {
+     "t": "eq",
+     "text": "e = Emax sin (ωt)",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What is the period of an AC wave?",
+     "o": [
+      "The number of cycles per second",
+      "The time to complete one cycle",
+      "The peak voltage",
+      "The angle between two waves"
+     ],
+     "a": 1,
+     "x": "The time it takes for the generator to complete one cycle is called the period.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.3",
+     "q": "What does hertz measure?",
+     "o": [
+      "Radians per second",
+      "Peak voltage",
+      "Time for one cycle",
+      "Cycles per second"
+     ],
+     "a": 3,
+     "x": "The number of cycles per second is called the frequency, measured in hertz.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Effective and average values",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The peak value is the maximum voltage or current for an AC sine wave. The peak-to-peak value is the range spanned by the sine wave.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The value most commonly used for AC is the effective value.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "One ampere effective value of AC produces the same amount of heat in a conductor, in a given time, as one ampere of DC.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The effective value is the root of the mean square of the currents, so it is known as the RMS value.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-07-fig4",
+     "num": 4,
+     "cap": "Effective Value of Current",
+     "alt": "A current sine wave above a curve of current squared, with the effective value and average value marked.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Other conversions: peak = average x 1.57, RMS = average x 1.11, peak = RMS x 1.414, and average = RMS x 0.9.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q490",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "Effective value of AC is the amount of AC that produces the same what as an equal amount of DC?",
+     "o": [
+      "Peak voltage",
+      "Heating effect",
+      "Frequency",
+      "Phase angle"
+     ],
+     "a": 1,
+     "x": "Effective value of AC is the amount of AC that produces the same heating effect as an equal amount of DC.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.5",
+     "q": "The peak voltage of an AC wave is 100 volts. What is the RMS value?",
+     "o": [
+      "63.7 volts",
+      "70.7 volts",
+      "90 volts",
+      "141.4 volts"
+     ],
+     "a": 1,
+     "x": "Effective value (RMS) = peak value x 0.707 = 70.7 volts.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.5",
+     "q": "The peak voltage of an AC wave is 100 volts. What is the average value?",
+     "o": [
+      "63.7 volts",
+      "70.7 volts",
+      "90 volts",
+      "157 volts"
+     ],
+     "a": 0,
+     "x": "Average value = peak value x 0.637 = 63.7 volts.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Phase relationships",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "The given value is normally zero. Phase difference describes two voltages of the same frequency that pass through zero in the same direction at different times.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "es-07-fig5",
+     "num": 5,
+     "cap": "Phase Relationship",
+     "alt": "Two sine waves, e1 and e2, with the same frequency plotted against electrical degrees. e1 crosses zero 60 degrees ahead of e2.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "If the phase difference is an amount other than zero, they are out-of-phase.",
+     "cite": "DOE-HDBK-1011/3-92 ES-07 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "Wave A passes through zero 60 degrees before wave B. How is this described?",
+     "o": [
+      "A lags B by 60 degrees",
+      "A and B are in-phase",
+      "A leads B by 60 degrees",
+      "B leads A by 60 degrees"
+     ],
+     "a": 2,
+     "x": "The wave that passes through zero first leads. In the handbook's example, e1 leads e2 by 60 electrical degrees.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.6",
+     "q": "Two voltages have a phase difference of zero degrees. How are they described?",
+     "o": [
+      "Out-of-phase",
+      "Leading",
+      "Lagging",
+      "In-phase"
+     ],
+     "a": 3,
+     "x": "If the phase difference is zero degrees, they are said to be in-phase.",
+     "p": "P13"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "RMS from peak",
+   "eo": "1.5",
+   "page": 6,
+   "problem": "The peak value of voltage in an AC circuit is 200 V. What is the RMS value?",
+   "steps": [
+    "E = 0.707 Emax.",
+    "E = 0.707 (200 V)."
+   ],
+   "answer": "141.4 V",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.6"
+  },
+  {
+   "title": "Average from peak",
+   "eo": "1.5",
+   "page": 7,
+   "problem": "The peak current in an AC circuit is 10 amps. What is the average value?",
+   "steps": [
+    "Iav = 0.637 Imax.",
+    "Iav = 0.637 (10 amps)."
+   ],
+   "answer": "6.37 amps",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.7"
+  },
+  {
+   "title": "Induced EMF at an angle",
+   "eo": "1.2",
+   "page": 8,
+   "problem": "What is the induced EMF in a coil producing a maximum EMF of 120 V when the angle from reference is 45°?",
+   "steps": [
+    "e = Emax sin θ.",
+    "e = 120 V (sin 45°)."
+   ],
+   "answer": "84.84 V",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.8"
+  },
+  {
+   "title": "Angular velocity",
+   "eo": "1.3",
+   "page": 10,
+   "problem": "The frequency of a 120 V AC circuit is 60 Hz. Find the angular velocity.",
+   "steps": [
+    "ω = 2πf.",
+    "ω = 2 (3.14) (60 Hz)."
+   ],
+   "answer": "376.8 radians/sec",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the peak voltage of an AC sine wave?",
+   "a": "The maximum voltage for an AC sine wave. The value of Emax occurs at 90°.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What is phase angle?",
+   "a": "The fraction of a cycle, in degrees, that has gone by since a voltage or current has passed through a given value.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "How much rotation generates one cycle of the sine wave?",
+   "a": "One cycle is generated when the coil rotates 2π radians.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What kind of values are normally assumed for AC current and voltage?",
+   "a": "RMS values.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "Convert a peak value to an effective (RMS) value.",
+   "a": "Effective value (RMS) = peak value x 0.707.",
+   "p": "P8",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A simple generator is a conductor loop turning in a magnetic field, cutting across the magnetic lines of force.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.3"
+  },
+  {
+   "text": "Each half turn of rotation produces one half of the cycle of AC generation.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.3"
+  },
+  {
+   "text": "Radians/second is the velocity the loop turns, hertz is the number of cycles in one second, and period is the time to complete one cycle.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  },
+  {
+   "text": "I = 0.707 Imax is the effective current, and E = 0.707 Emax is the effective voltage.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  },
+  {
+   "text": "Phase angle is used to compare two wave forms by degrees of rotation.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook inconsistency",
+   "note": "The text and equations give average value as 0.637 of peak, but the summary gives 0.636. The lesson uses 0.637.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The summary says effective value of AC equals effective value of DC. The lesson uses the chapter's heating-effect definition.",
+   "cite": "DOE-HDBK-1011/3-92 ES-07 p.10"
+  },
+  {
+   "type": "Word source",
+   "note": "Most of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. No value in that text conflicts with the handbook.",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.14 Effective / RMS Voltage Value"
+  },
+  {
+   "type": "Word note",
+   "note": "Slide 1.6 has a development note: \"Need to replace the graphic with a different one as this one may be copyrighted.\" The file is marked as a draft for this reason, so these lessons carry the Draft source tag. That slide is not used.",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.6 Flemings Rule"
+  }
+ ],
+ "page_tags": []
+}

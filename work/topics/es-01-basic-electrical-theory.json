@@ -1,0 +1,1487 @@
+{
+ "module_id": "ES-01",
+ "slug": "es-01-basic-electrical-theory",
+ "title": "Basic Electrical Theory",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V1",
+ "handbook": "DOE-HDBK-1011/1-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a simple electrical circuit, APPLY basic electrical theory fundamental principles to describe circuit operation.",
+   "items": [],
+   "page": {
+    "pdf": 22,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the following terms:",
+     "items": [
+      "a. Electrostatic force",
+      "b. Electrostatic field",
+      "c. Potential difference",
+      "d. Electromotive force (EMF)",
+      "e. Ion charge"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Conductor",
+      "b. Insulator",
+      "c. Resistor",
+      "d. Electron current flow",
+      "e. Conventional current flow",
+      "f. Direct current (DC)",
+      "g. Alternating current (AC)",
+      "h. Ideal source",
+      "i. Real source"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the following electrical parameters, including the unit of measurement and the relationship to other parameters.",
+     "items": [
+      "a. Voltage",
+      "b. Current",
+      "c. Resistance",
+      "d. Conductance",
+      "e. Power",
+      "f. Inductance",
+      "g. Capacitance"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given any two of the three component values of Ohm’s Law, DETERMINE the unknown component value.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DESCRIBE how the following methods produce a voltage:",
+     "items": [
+      "a. Electrochemistry",
+      "b. Static electricity",
+      "c. Magnetic Induction",
+      "d. Piezoelectric effect",
+      "e. Thermoelectricity",
+      "f. Photoelectric effect",
+      "g. Thermionic emission"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Magnetic flux",
+      "b. Magnetic flux density",
+      "c. Weber",
+      "d. Permeability",
+      "e. Magnetomotive force (mmf)",
+      "f. Ampere turns",
+      "g. Field intensity",
+      "h. Reluctance"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the following materials as they relate to permeability, including an example and an approximate relative permeability.",
+     "items": [
+      "a. Ferromagnetic materials",
+      "b. Paramagnetic materials",
+      "c. Diamagnetic materials"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "EXPLAIN the physical qualities of a simple magnetic circuit, including relationships of qualities and units of measurements.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "Given the physical qualities of a simple magnetic circuit, CALCULATE the unknown values.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the shape and components of a BH magnetization curve.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "EXPLAIN the cause of hysteresis losses.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "Given Faraday’s Law of induced voltage:",
+     "items": [
+      "a. DESCRIBE how varying parameters affect induced voltage.",
+      "b. CALCULATE voltage induced in a conductor moving through a magnetic field."
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "STATE Lenz’s Law of induction.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "Given a standard electrical symbol, IDENTIFY the component that the symbol represents. The symbols will be for the following components:",
+     "items": [
+      "a. Resistor",
+      "b. Capacitor",
+      "c. Inductor",
+      "d. Relay",
+      "e. Contacts",
+      "f. Breaker",
+      "g. Switch",
+      "h. Transistor",
+      "i. Rheostat",
+      "j. Diode",
+      "k. Ground connections",
+      "l. Vacuum tube",
+      "m. Fuse",
+      "n. Junction",
+      "o. AC voltage source",
+      "p. Voltmeter",
+      "q. Ammeter",
+      "r. Wattmeter",
+      "s. Relay operated contacts",
+      "t. Potential transformer",
+      "u. Current transformer",
+      "v. Wye (Y) connection",
+      "w. Delta (∆) connection",
+      "x. Light bulb",
+      "y. Battery"
+     ],
+     "page": {
+      "pdf": 24,
+      "printed": "x"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "This attraction is called electrostatic force, the force that holds the electron in orbit.",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "unlike charges (like electrons and protons) attract each other, and like charges repel each other.",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.3"
+  },
+  {
+   "id": "P3",
+   "quote": "Forces of this type are the result of an electrostatic field that exists around each charged particle or object.",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "Potential difference is the term used to describe how large the electrostatic force is between two charged objects.",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.5"
+  },
+  {
+   "id": "P5",
+   "quote": "The sum of the potential differences of all charged particles in the electrostatic field is referred to as electromotive force (EMF).",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.6"
+  },
+  {
+   "id": "P6",
+   "quote": "If the atom loses one or more electrons, it becomes positively charged and is referred to as a positive ion.",
+   "sec": "Atom and Its Forces",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.7"
+  },
+  {
+   "id": "P7",
+   "quote": "Conductors are materials with electrons that are loosely bound to their atoms, or materials that permit free motion of a large number of electrons.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.9"
+  },
+  {
+   "id": "P8",
+   "quote": "Insulators, or nonconductors, are materials with electrons that are tightly bound to their atoms and require large amounts of energy to free them from the influence of the nucleus.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.9"
+  },
+  {
+   "id": "P9",
+   "quote": "Resistors are made of materials that conduct electricity, but offer opposition to current flow.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.9"
+  },
+  {
+   "id": "P10",
+   "quote": "This flow of positive charges is known as conventional current",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.11"
+  },
+  {
+   "id": "P11",
+   "quote": "A direct current flows continuously in the same direction.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+  },
+  {
+   "id": "P12",
+   "quote": "An alternating current periodically reverses direction.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+  },
+  {
+   "id": "P13",
+   "quote": "An ideal source is a theoretical concept of an electric current or voltage supply (such as a battery) that has no losses and is a perfect voltage or current supply.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+  },
+  {
+   "id": "P14",
+   "quote": "A real source is a real life current or voltage supply that has some losses associated with it.",
+   "sec": "Electrical Terminology",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+  },
+  {
+   "id": "P15",
+   "quote": "Resistance is defined as the opposition to current flow.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.14"
+  },
+  {
+   "id": "P16",
+   "quote": "Applied voltage equals circuit current times the circuit resistance.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.14"
+  },
+  {
+   "id": "P17",
+   "quote": "If any two of the component values are known, the third can be calculated.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.15"
+  },
+  {
+   "id": "P18",
+   "quote": "Conductance is found by taking the reciprocal of the resistance.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.16"
+  },
+  {
+   "id": "P19",
+   "quote": "power is the rate at which work is done, or the rate at which heat is generated.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.16"
+  },
+  {
+   "id": "P20",
+   "quote": "power can be described as the current (I) in a circuit squared times the resistance (R) of the circuit.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.17"
+  },
+  {
+   "id": "P21",
+   "quote": "Inductance is defined as the ability of a coil to store energy, induce a voltage in itself, and oppose changes in current flowing through it.",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.17"
+  },
+  {
+   "id": "P22",
+   "quote": "Capacitance is defined as the ability to store an electric charge",
+   "sec": "Units of Electrical Measurement",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.17"
+  },
+  {
+   "id": "P23",
+   "quote": "A generator is a machine that converts mechanical energy into electrical energy by using the principle of magnetic induction.",
+   "sec": "Methods of Producing Voltage",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.21"
+  },
+  {
+   "id": "P24",
+   "quote": "This generation of voltage is known as the piezoelectric effect.",
+   "sec": "Methods of Producing Voltage",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.21"
+  },
+  {
+   "id": "P25",
+   "quote": "This process is called thermoelectricity.",
+   "sec": "Methods of Producing Voltage",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.22"
+  },
+  {
+   "id": "P26",
+   "quote": "This phenomenon is called the photoelectric effect",
+   "sec": "Methods of Producing Voltage",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.24"
+  },
+  {
+   "id": "P27",
+   "quote": "The liberation of electrons from a hot surface is called thermionic emission.",
+   "sec": "Methods of Producing Voltage",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.24"
+  },
+  {
+   "id": "P28",
+   "quote": "The group of magnetic field lines emitted outward from the north pole of a magnet is called magnetic flux.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.29"
+  },
+  {
+   "id": "P29",
+   "quote": "Magnetic flux density is the amount of magnetic flux per unit area of a section, perpendicular to the direction of flux.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.29"
+  },
+  {
+   "id": "P30",
+   "quote": "Permeability (µ) refers to the ability of a material to concentrate magnetic lines of flux.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+  },
+  {
+   "id": "P31",
+   "quote": "These materials have a relative permeability of slightly more than one.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+  },
+  {
+   "id": "P32",
+   "quote": "These materials have a relative permeability of less than one.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+  },
+  {
+   "id": "P33",
+   "quote": "Magnetomotive force (mmf) is the strength of a magnetic field in a coil of wire.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.33"
+  },
+  {
+   "id": "P34",
+   "quote": "Opposition to the production of flux in a material is called reluctance, which corresponds to resistance.",
+   "sec": "Magnetism",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.35"
+  },
+  {
+   "id": "P35",
+   "quote": "The mmf can be compared with EMF, and the flux (Φ) can be compared to current.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.37"
+  },
+  {
+   "id": "P36",
+   "quote": "magnetic flux (Φ) is proportional to the magnetomotive force (Fm)",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.44"
+  },
+  {
+   "id": "P37",
+   "quote": "The BH Magnetization Curve (Figure 27) shows how much flux density (B) results from increasing the flux intensity (H).",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.39"
+  },
+  {
+   "id": "P38",
+   "quote": "The magnetic flux in an iron core lags behind the magnetizing force.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.40"
+  },
+  {
+   "id": "P39",
+   "quote": "The greater the area inside the hysteresis loop, the larger the hysteresis losses.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.41"
+  },
+  {
+   "id": "P40",
+   "quote": "there must be relative motion between the conductor and the magnetic lines of force in order to induce an EMF.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.42"
+  },
+  {
+   "id": "P41",
+   "quote": "The magnitude of the induced voltage depends on two factors: (1) the number of turns of a coil, and (2) how fast the conductor cuts across the magnetic lines of force, or flux.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.42"
+  },
+  {
+   "id": "P42",
+   "quote": "Induced voltage has a polarity that will oppose the change causing the induction.",
+   "sec": "Magnetic Circuits",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.43"
+  },
+  {
+   "id": "P43",
+   "quote": "The symbols for the various electrical components that will appear on electrical diagrams and schematics are shown in Figure 30.",
+   "sec": "Electrical Symbols",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.45"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Charges and electrostatic force",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "An atom consists of a positively charged nucleus surrounded by negatively charged electrons, so the atom as a whole is electrically neutral.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "These facts are known as the First Law of Electrostatics.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The strength of the attraction or repulsion depends on the amount of charge on each object and the distance between them.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig7",
+     "num": 7,
+     "cap": "Potential Difference Between Two Charged Objects",
+     "alt": "Lines of force between a negatively charged object and a positively charged object, with an electron pushed toward the positive object.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The basic unit of measure of potential difference is the volt, so potential difference is also called voltage.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The electrons in the outermost shell are called valence electrons. Enough applied energy makes some of them leave the atom, and these are free electrons.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "If an atom gains one or more electrons, it becomes negatively charged and is referred to as a negative ion.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What force holds an electron in orbit around a nucleus?",
+     "o": [
+      "Magnetomotive force",
+      "Electrostatic force",
+      "Electromotive force",
+      "Centrifugal force"
+     ],
+     "a": 1,
+     "x": "The attraction between the electron and the nucleus is called electrostatic force, the force that holds the electron in orbit.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.1",
+     "q": "An atom loses one electron. What does it become?",
+     "o": [
+      "A negative ion",
+      "A free electron",
+      "A positive ion",
+      "A neutral atom"
+     ],
+     "a": 2,
+     "x": "If the atom loses one or more electrons, it becomes positively charged and is referred to as a positive ion.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Electrical terminology",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Copper, silver, and gold are examples of good conductors. Most metals are good conductors.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Examples of insulators are rubber, plastics, glass, and dry wood.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Electron flow is from a point of negative potential to a point of positive potential.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig10",
+     "num": 10,
+     "cap": "Potential Difference Across a Conductor Causes a Current to Flow",
+     "alt": "A battery connected across a conductor, with a solid arrow for electron flow and a dashed arrow for conventional current in the opposite direction.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "Both conventions are in use and they are essentially equivalent. This handbook uses electron flow.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "Ideal sources are used for analytical purposes only, since they cannot occur in nature.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q417",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which material has electrons that are loosely bound to its atoms?",
+     "o": [
+      "An insulator",
+      "A nonconductor",
+      "A conductor",
+      "Dry wood"
+     ],
+     "a": 2,
+     "x": "Conductors are materials with electrons that are loosely bound to their atoms.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.2",
+     "q": "Why are ideal sources used for analytical purposes only?",
+     "o": [
+      "They cannot occur in nature",
+      "They only supply alternating current",
+      "They have very large losses",
+      "They only supply direct current"
+     ],
+     "a": 0,
+     "x": "An ideal source is a theoretical concept with no losses, so it is used for analysis only.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Electrical units and Ohm's Law",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Voltage is the pressure or force that causes electrons to move in a conductor. It is measured in volts and written as E in equations.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Current is the movement of free electrons through a conductor. It is measured in amperes and written as I. One ampere is one coulomb of charge moving past a given point in one second.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Resistance is measured in ohms (Ω) and written as R. One ohm limits the current to one ampere when one volt is applied.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "E = IR",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "eq",
+     "text": "G = 1/R",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.18"
+    },
+    {
+     "t": "p",
+     "text": "The unit of conductance is the mho, which is ohm spelled backwards.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Electric power is measured in watts.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.16"
+    },
+    {
+     "t": "eq",
+     "text": "P = I x E   or   P = I²R",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Inductance (L) is measured in henries. One henry permits one volt to be induced when the current through the coil changes at one ampere per second.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Capacitance (C) is measured in farads. It equals the charge stored divided by the voltage applied.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "In what unit is capacitance measured?",
+     "o": [
+      "Henries",
+      "Farads",
+      "Mhos",
+      "Webers"
+     ],
+     "a": 1,
+     "x": "Capacitance is measured in farads. Henries measure inductance, mhos measure conductance, and webers measure magnetic flux.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.3",
+     "q": "A 4 ohm resistor has what conductance?",
+     "o": [
+      "0.25 mho",
+      "4 mhos",
+      "16 mhos",
+      "40 mhos"
+     ],
+     "a": 0,
+     "x": "Conductance is the reciprocal of resistance: G = 1/R = 1/4 = 0.25 mho.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.3",
+     "q": "A current of 2 amps flows through 10 ohms. Using P = I²R, what is the power?",
+     "o": [
+      "5 watts",
+      "20 watts",
+      "40 watts",
+      "100 watts"
+     ],
+     "a": 2,
+     "x": "P = I²R = (2)²(10) = 40 watts.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.4",
+     "q": "A circuit has 24 volts applied across 6 ohms. What current flows?",
+     "o": [
+      "0.25 amps",
+      "4 amps",
+      "18 amps",
+      "144 amps"
+     ],
+     "a": 1,
+     "x": "By Ohm's Law, I = E/R = 24/6 = 4 amps.",
+     "p": "P16"
+    }
+   ]
+  },
+  {
+   "title": "Methods of producing voltage",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Electrochemistry: a chemical reaction produces and maintains opposite charges on two dissimilar metals in contact with an electrolyte solution, as in the voltaic chemical cell.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Static electricity: removing electrons from a body, as happens due to friction, leaves it with an unequal charge, and an electric force is exerted between it and a body with a normal charge.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Magnetic induction produces a voltage by rotating coils of wire through a stationary magnetic field, or by rotating a magnetic field through stationary coils of wire.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.21"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig13",
+     "num": 13,
+     "cap": "Generator - Electromagnetic Induction",
+     "alt": "A coil rotating between north and south magnet poles, connected to a load, showing the direction of motion and the field.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.21"
+    },
+    {
+     "t": "p",
+     "text": "Pressure on certain crystals or ceramics drives electrons out of orbit in the direction of the force, building up opposite charges on opposite sides.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "When two dissimilar metals are joined and heat is applied to the junction, electrons transfer between them and a voltage appears across the junction.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "When photons in a light beam strike a material, the energy transfer may dislodge electrons from their orbits, leaving the material positively charged.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "At sufficiently high temperatures, a considerable number of electrons are able to escape from a hot cathode.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q416",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.5",
+     "q": "Heating the junction of two dissimilar metals produces a voltage. What is this process called?",
+     "o": [
+      "Thermionic emission",
+      "Piezoelectric effect",
+      "Thermoelectricity",
+      "Photoelectric effect"
+     ],
+     "a": 2,
+     "x": "Heat applied to the junction of two dissimilar metals produces a voltage. This process is called thermoelectricity.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which method produces a voltage by applying pressure to certain crystals?",
+     "o": [
+      "Piezoelectric effect",
+      "Electrochemistry",
+      "Magnetic induction",
+      "Thermionic emission"
+     ],
+     "a": 0,
+     "x": "Applying pressure to certain crystals drives electrons out of orbit. This generation of voltage is known as the piezoelectric effect.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Magnetism",
+   "eo": [
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The law of magnetism states that like magnetic poles repel and unlike magnetic poles attract one another.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "The SI unit of magnetic flux is the weber (Wb). One weber is equal to 1 x 10⁸ magnetic field lines.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "eq",
+     "text": "B = Φ / A",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.29"
+    },
+    {
+     "t": "p",
+     "text": "B is flux density in teslas, Φ is flux in webers, and A is area in square meters.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Relative permeability is the ratio of the permeability of a material to the permeability of a vacuum.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Ferromagnetic materials include iron, steel, nickel, cobalt, and the commercial alloys alnico and peralloy.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Paramagnetic materials include aluminum, platinum, manganese, and chromium.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "Diamagnetic materials include bismuth, antimony, copper, zinc, mercury, gold, and silver.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "An electric current flowing through a conductor produces a magnetic field around that conductor. The left-hand rule relates the current flow to the direction of the magnetic lines of force.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.31"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig22",
+     "num": 22,
+     "cap": "Left-hand Rule for Current Carrying Conductors",
+     "alt": "A left hand gripping a conductor, with the thumb in the direction of current flow and the fingers around the conductor showing the direction of the magnetic field.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "eq",
+     "text": "Fm = ampere-turns = NI",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.33"
+    },
+    {
+     "t": "p",
+     "text": "Field intensity depends on the length of the coil: H = NI / L, in ampere-turns per meter.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Reluctance is inversely proportional to permeability. Iron cores have high permeability and low reluctance. Air has low permeability and high reluctance.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.35"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What is opposition to the production of flux in a material called?",
+     "o": [
+      "Permeability",
+      "Field intensity",
+      "Reluctance",
+      "Magnetomotive force"
+     ],
+     "a": 2,
+     "x": "Opposition to the production of flux in a material is called reluctance, which corresponds to resistance.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.6",
+     "q": "A coil has 200 turns and carries 3 amps. What is its magnetomotive force?",
+     "o": [
+      "67 ampere-turns",
+      "203 ampere-turns",
+      "600 ampere-turns",
+      "1200 ampere-turns"
+     ],
+     "a": 2,
+     "x": "Fm = NI = (200)(3) = 600 ampere-turns.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.7",
+     "q": "Which group of materials has a relative permeability of less than one?",
+     "o": [
+      "Diamagnetic materials",
+      "Paramagnetic materials",
+      "Ferromagnetic materials",
+      "Ferrites"
+     ],
+     "a": 0,
+     "x": "Diamagnetic materials, such as bismuth, copper, and silver, have a relative permeability of less than one.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Magnetic circuits and hysteresis",
+   "eo": [
+    "1.8",
+    "1.9",
+    "1.10",
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A magnetic circuit can be compared with an electric circuit. The mmf can be compared with EMF, and the flux can be compared to current.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.37"
+    },
+    {
+     "t": "eq",
+     "text": "Φ = Fm / R",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.37"
+    },
+    {
+     "t": "p",
+     "text": "Reluctance is found from the length of the coil, the permeability of the magnetic material, and the cross-sectional area of the coil.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig27",
+     "num": 27,
+     "cap": "Typical BH Curve for Two Types of Soft Iron",
+     "alt": "Graph of flux density B against flux intensity H for two soft irons and air. Each iron curve rises steeply, then flattens at a knee.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.39"
+    },
+    {
+     "t": "p",
+     "text": "Flux density increases rapidly with flux intensity before the core saturates, or develops a knee. After that, an increase in flux intensity has little or no effect on flux density.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.39"
+    },
+    {
+     "t": "p",
+     "text": "When current in a coil reverses direction thousands of times per second, hysteresis can cause considerable loss of energy.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig28",
+     "num": 28,
+     "cap": "Hysteresis Loop for Magnetic Materials",
+     "alt": "Hysteresis loop of flux density B against field H, reaching plus and minus Bmax, crossing the B axis at Br and the H axis at Hc.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.41"
+    },
+    {
+     "t": "p",
+     "text": "Retentivity is the flux density remaining after the magnetizing force is zero. Coercive force is the force that must be applied in the reverse direction to reduce flux density to zero.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "In a magnetic circuit, which quantity is compared to current in an electric circuit?",
+     "o": [
+      "Magnetomotive force",
+      "Flux",
+      "Reluctance",
+      "Permeability"
+     ],
+     "a": 1,
+     "x": "The mmf can be compared with EMF, and the flux can be compared to current.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.9",
+     "q": "A coil has an mmf of 900 At and a reluctance of 3 x 10⁶ At/Wb. What is the flux?",
+     "o": [
+      "30 µWb",
+      "300 µWb",
+      "3000 µWb",
+      "2700 µWb"
+     ],
+     "a": 1,
+     "x": "Flux equals mmf divided by reluctance: 900 / (3 x 10⁶) = 300 x 10⁻⁶ Wb, or 300 µWb.",
+     "p": "P36"
+    },
+    {
+     "eo": "1.10",
+     "q": "On a BH curve, what happens to flux density after the knee?",
+     "o": [
+      "It rises faster",
+      "It drops to zero",
+      "It changes little or not at all as H increases",
+      "It reverses direction"
+     ],
+     "a": 2,
+     "x": "Once the core saturates at the knee, an increase in flux intensity H has little or no effect on flux density B.",
+     "p": "P37"
+    },
+    {
+     "eo": "1.11",
+     "q": "What does a larger area inside the hysteresis loop mean?",
+     "o": [
+      "Larger hysteresis losses",
+      "Smaller hysteresis losses",
+      "Higher permeability",
+      "No flux lag"
+     ],
+     "a": 0,
+     "x": "The greater the area inside the hysteresis loop, the larger the hysteresis losses.",
+     "p": "P39"
+    }
+   ]
+  },
+  {
+   "title": "Induced voltage",
+   "eo": [
+    "1.12",
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If a conductor cuts across lines of magnetic force, or if magnetic lines of force cut across a conductor, a voltage is induced into the conductor.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.41"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig29",
+     "num": 29,
+     "cap": "Induced EMF",
+     "alt": "A conductor moved through three positions between magnet poles, connected to a galvanometer that detects the induced voltage.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "eq",
+     "text": "Vind = -N (ΔΦ / Δt)",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.42"
+    },
+    {
+     "t": "p",
+     "text": "N is the number of turns in the coil, and ΔΦ/Δt is the rate at which the flux cuts across the conductor.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "p",
+     "text": "The negative sign in the equation shows that the induced voltage acts to oppose the change.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.43"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.12",
+     "q": "A coil is stationary in a flux that stays constant. What voltage is induced?",
+     "o": [
+      "Maximum voltage",
+      "Half of the maximum voltage",
+      "A voltage equal to the number of turns",
+      "No voltage"
+     ],
+     "a": 3,
+     "x": "There must be relative motion between the conductor and the magnetic lines of force in order to induce an EMF.",
+     "p": "P40"
+    },
+    {
+     "eo": "1.12",
+     "q": "The flux through a 10 turn coil changes by 6 Wb in 2 seconds. What is the magnitude of the induced voltage?",
+     "o": [
+      "3 volts",
+      "12 volts",
+      "30 volts",
+      "120 volts"
+     ],
+     "a": 2,
+     "x": "Vind = N(ΔΦ/Δt) = (10)(6/2) = 30 volts in magnitude.",
+     "p": "P41"
+    },
+    {
+     "eo": "1.13",
+     "q": "What does Lenz's Law state about induced voltage?",
+     "o": [
+      "Its polarity opposes the change causing the induction",
+      "It equals current times resistance",
+      "It always aids the change causing the induction",
+      "It does not depend on motion"
+     ],
+     "a": 0,
+     "x": "Induced voltage has a polarity that will oppose the change causing the induction.",
+     "p": "P42"
+    }
+   ]
+  },
+  {
+   "title": "Electrical symbols",
+   "eo": [
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "To read and interpret electrical system diagrams and schematics, one must be thoroughly familiar with the many symbols used.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "fig",
+     "id": "es-01-fig30",
+     "num": 30,
+     "cap": "Electrical Symbols",
+     "alt": "Chart of standard electrical symbols, including resistor, capacitor, inductor, fuse, relay, contacts, breaker, switch, transistor, rheostat, ground, diode, vacuum tube, AC voltage source, meters, transformers, wye and delta connections, light bulb, and battery.",
+     "cite": "DOE-HDBK-1011/1-92 ES-01 p.46"
+    }
+   ],
+   "checks": []
+  }
+ ],
+ "examples": [
+  {
+   "title": "Finding resistance",
+   "eo": "1.4",
+   "page": 15,
+   "problem": "Given that I = 2 A and E = 12 V, find the circuit resistance.",
+   "steps": [
+    "R = E / I.",
+    "R = 12 V / 2 A."
+   ],
+   "answer": "6 Ω",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.15"
+  },
+  {
+   "title": "Finding voltage",
+   "eo": "1.4",
+   "page": 16,
+   "problem": "Find the applied voltage for a circuit resistance of 100 Ω and a circuit current of 0.5 amps.",
+   "steps": [
+    "E = IR.",
+    "E = (0.5 A)(100 Ω)."
+   ],
+   "answer": "50 V",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.16"
+  },
+  {
+   "title": "Ampere-turns",
+   "eo": "1.6",
+   "page": 34,
+   "problem": "Calculate the ampere-turns for a coil with 1000 turns and a 5 mA current.",
+   "steps": [
+    "N = 1000 turns and I = 5 x 10⁻³ A.",
+    "NI = 1000 (5 x 10⁻³)."
+   ],
+   "answer": "5 At",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.34"
+  },
+  {
+   "title": "Flux in a magnetic circuit",
+   "eo": "1.9",
+   "page": 39,
+   "problem": "A coil has an mmf of 600 At and a reluctance of 3 x 10⁶ At/Wb. Find the total flux.",
+   "steps": [
+    "Φ = Fm / R.",
+    "Φ = 600 At / (3 x 10⁶ At/Wb)."
+   ],
+   "answer": "200 µWb",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.39"
+  },
+  {
+   "title": "Induced voltage",
+   "eo": "1.12",
+   "page": 43,
+   "problem": "Flux increases uniformly from 4 Wb to 8 Wb in 2 seconds. Find the induced voltage in a stationary coil with 12 turns.",
+   "steps": [
+    "ΔΦ = 8 Wb - 4 Wb = 4 Wb, and Δt = 2 s.",
+    "ΔΦ/Δt = 4 Wb / 2 s = 2 Wb/s.",
+    "Vind = -12 (2)."
+   ],
+   "answer": "-24 volts",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.43"
+  }
+ ],
+ "facts": [
+  {
+   "q": "State the First Law of Electrostatics.",
+   "a": "Unlike charges attract each other, and like charges repel each other.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "What is electromotive force (EMF)?",
+   "a": "The sum of the potential differences of all charged particles in the electrostatic field.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "State the three ways to write Ohm's Law from E, I, and R.",
+   "a": "E = IR, I = E/R, and R = E/I. If any two of the values are known, the third can be calculated.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What is magnetic flux?",
+   "a": "The group of magnetic field lines emitted outward from the north pole of a magnet.",
+   "p": "P28",
+   "place": null
+  },
+  {
+   "q": "What is permeability?",
+   "a": "The ability of a material to concentrate magnetic lines of flux.",
+   "p": "P30",
+   "place": null
+  },
+  {
+   "q": "What two factors set the magnitude of an induced voltage?",
+   "a": "The number of turns of a coil, and how fast the conductor cuts across the magnetic lines of force, or flux.",
+   "p": "P41",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Electrostatic force holds an electron in orbit around a nucleus, and potential difference measures how large that force is between two charged objects.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.8"
+  },
+  {
+   "text": "Conductors have electrons loosely bound to their atoms, and insulators have electrons tightly bound to their atoms.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.12"
+  },
+  {
+   "text": "Voltage is measured in volts, resistance in ohms, conductance in mhos, power in watts, inductance in henries, and capacitance in farads.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.18"
+  },
+  {
+   "text": "Voltage can be produced by electrochemistry, static electricity, magnetic induction, the piezoelectric effect, thermoelectricity, the photoelectric effect, and thermionic emission.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.26"
+  },
+  {
+   "text": "Reluctance is the opposition to the production of flux in a material.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.36"
+  },
+  {
+   "text": "A BH curve shows how much flux density results from increasing flux intensity, and the knee marks where further increases have minimal effect.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.44"
+  },
+  {
+   "text": "Faraday's Law: induced voltage depends on the number of turns of a coil and how fast the conductor cuts the flux. Lenz's Law: an induced voltage opposes the change that caused it.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.44"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "The flux density example states the area as 0.004 m², then solves with 0.0004 m². The example is not used.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The text gives relative permeabilities of 50 to 200 for ferrites only, but the summary on p.36 gives that range for all ferromagnetic materials. Objective 1.7 asks for an approximate value, so the lesson leaves the range out for ferromagnetic materials.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.30"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The text says static electricity acts when a body comes near but not in contact with another, while the summary on p.26 says it comes in contact. The lesson uses neither phrase.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.20"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Page 8 prints \"ion change\" where objective 1.1 says ion charge. The lesson uses positive ion and negative ion.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.8"
+  },
+  {
+   "type": "Objective coverage",
+   "note": "Objective 1.14 is taught from Figure 30. It has no knowledge check, because checks and the quiz use text and each symbol would need its own picture.",
+   "cite": "DOE-HDBK-1011/1-92 ES-01 p.46"
+  }
+ ],
+ "page_tags": []
+}

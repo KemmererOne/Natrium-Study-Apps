@@ -1,0 +1,2093 @@
+{
+ "module_id": "ME-05",
+ "slug": "me-05-miscellaneous-mechanical-components",
+ "title": "Miscellaneous Mechanical Components",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1018-V2",
+ "handbook": "DOE-HDBK-1018/2-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Pumps",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the purpose, construction, and operation of miscellaneous mechanical components.",
+   "items": [],
+   "page": {
+    "pdf": 80,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the three common types of air compressors.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the basic operation of the following types of air compressors:",
+     "items": [
+      "a. Reciprocating",
+      "b. Centrifugal",
+      "c. Rotary"
+     ],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the reason for using cooling systems in air compressors.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE three hazards associated with pressurized air systems.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given the appropriate information, CALCULATE the pressure or force achieved in a hydraulic piston.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the basic operation of a hydraulic system.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the basic operation of a boiler.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "IDENTIFY the following components of a typical boiler:",
+     "items": [
+      "a. Steam drum",
+      "b. Distribution header(s)",
+      "c. Combustion chamber",
+      "d. Downcomer",
+      "e. Risers"
+     ],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE the purpose of cooling towers.",
+     "items": [],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the operation of the following types of cooling towers.",
+     "items": [
+      "a. Forced draft",
+      "b. Natural convection"
+     ],
+     "page": {
+      "pdf": 80,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "STATE the purpose of a demineralizer.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "STATE the four purposes of a pressurizer.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "DEFINE the following terms attributable to a dynamic pressurizer:",
+     "items": [
+      "a. Spray nozzle",
+      "b. Insurge",
+      "c. Outsurge",
+      "d. Surge volume"
+     ],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "STATE the purpose and general operation of a steam trap.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "IDENTIFY the following types of steam traps:",
+     "items": [
+      "a. Ball float steam trap",
+      "b. Bellow steam trap",
+      "c. Bucket steam trap",
+      "d. Impulse steam trap"
+     ],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "DESCRIBE each of the following types of strainers and filters, including an example of typical use.",
+     "items": [
+      "a. Cartridge filters",
+      "b. Precoated filters",
+      "c. Deep-bed filters",
+      "d. Bucket strainer",
+      "e. Duplex strainer"
+     ],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "EXPLAIN the application and operation of a strainer or filter backwash.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Three types of designs include reciprocating, rotary, and centrifugal air compressors.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The reciprocating air compressor, illustrated in Figure 1, is the most common design employed today.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "This difference in pressure causes the inlet valve to open into the cylinder until the piston reaches the bottom of its stroke (Figure 2C).",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "As the piston continues upward, air is compressed until the pressure in the cylinder becomes great enough to open the discharge valve against the pressure of the valve springs and the pressure of the discharge line (Figure 2E).",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "Rotary compressor units are classified into three general groups, slide vane-type, lobe-type, and liquid seal ring-type.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "The size of each cell is reduced by the eccentricity of the rotor as the vanes approach the discharge port, thus compressing the air.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "The actual compression of the air takes place due either to centrifugal forces or a diminishing air space as the impellers rotate.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P8",
+   "quote": "The air becomes compressed as more and more air is thrown out to the casing by the impeller blades.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P9",
+   "quote": "Some of its uses are pneumatic control devices, pneumatic sensors, pneumatic valve operators, pneumatic motors, and starting air for diesel engines.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+  },
+  {
+   "id": "P10",
+   "quote": "The condensed moisture can cause corrosion, water hammers, and freeze damage; therefore, it is important to avoid moisture in compressed air systems.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+  },
+  {
+   "id": "P11",
+   "quote": "Coolers used on the discharge of a compressor are called aftercoolers.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "If the compressor is multi-staged, there may be an intercooler, which is usually located after the first stage discharge and before the second stage suction.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.7"
+  },
+  {
+   "id": "P13",
+   "quote": "Air coolers are used because drier compressed air helps prevent corrosion and cooler compressed air allows more air to be compressed for a set volume.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.7"
+  },
+  {
+   "id": "P14",
+   "quote": "Cooling systems are required in compressed air systems to remove any heat added by the compression.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "Small leaks or breaks can cause minute particles to be blown at speeds high enough to cause damage.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P16",
+   "quote": "Hearing protection should be worn around compressors.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P17",
+   "quote": "Pressure swings may cause system damage.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "Closed valves should be slowly cracked open and both sides should be allowed to equalize prior to opening the valve further.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.8"
+  },
+  {
+   "id": "P19",
+   "quote": "Oil introduced in an air compressor can be compressed to the point where detonation takes place in a similar manner as that which occurs in a diesel engine.",
+   "sec": "Air Compressors",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.8"
+  },
+  {
+   "id": "P20",
+   "quote": "Oil helps to lubricate the various sliding parts, prevents rust, and is readily available.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.10"
+  },
+  {
+   "id": "P21",
+   "quote": "Blaise Pascal discovered that pressure in a fluid acts equally in all directions.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.10"
+  },
+  {
+   "id": "P22",
+   "quote": "Pressure is the amount of force on a unit area of the surface.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.10"
+  },
+  {
+   "id": "P23",
+   "quote": "The pressure control box shown on Figure 8 is usually a relief valve that provides a means of returning oil to the reservoir upon overpressurization.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.11"
+  },
+  {
+   "id": "P24",
+   "quote": "The pump, usually a gear-type, positive displacement pump, can be driven by an electric motor, air motor, gas or steam turbine, or an internal combustion engine.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.11"
+  },
+  {
+   "id": "P25",
+   "quote": "The control valve changes the direction of oil flow, depending upon the desired direction of the load.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.12"
+  },
+  {
+   "id": "P26",
+   "quote": "The oil that enters the cylinder applies pressure over the area of the piston, developing a force on the piston rod.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.12"
+  },
+  {
+   "id": "P27",
+   "quote": "A severe fire hazard is generated when a break in the high pressure piping occurs and the oil is vaporized into the atmosphere.",
+   "sec": "Hydraulics",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.13"
+  },
+  {
+   "id": "P28",
+   "quote": "The primary function of a boiler is to produce steam at a given pressure and temperature.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.14"
+  },
+  {
+   "id": "P29",
+   "quote": "The density difference between hot and cold water is the driving force to circulate the water back to the steam drum.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.14"
+  },
+  {
+   "id": "P30",
+   "quote": "The economizer uses heat from the boiler exhaust gasses to raise the temperature of the inlet feedwater.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.15"
+  },
+  {
+   "id": "P31",
+   "quote": "The steam drum separates the steam from the heated water.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.16"
+  },
+  {
+   "id": "P32",
+   "quote": "Downcomers are the pipes in which the water from the steam drum travels to reach the bottom of the boiler.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.17"
+  },
+  {
+   "id": "P33",
+   "quote": "Distribution headers are large pipe headers that carry the water from the downcomers to the risers.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.17"
+  },
+  {
+   "id": "P34",
+   "quote": "Risers are the piping or tubes that form the combustion chamber enclosure.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.17"
+  },
+  {
+   "id": "P35",
+   "quote": "The combustion chamber is located at the bottom of the boiler and is where the air and fuel mix and burn.",
+   "sec": "Boilers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.17"
+  },
+  {
+   "id": "P36",
+   "quote": "The cooling tower removes heat from water used in cooling systems within the plant.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.23"
+  },
+  {
+   "id": "P37",
+   "quote": "Cooling towers minimize the thermal pollution of the natural water heat sinks and allow the reuse of circulating water.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.18"
+  },
+  {
+   "id": "P38",
+   "quote": "The cooling of the water in a cooling tower is accomplished by the direct contact of water and air.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.19"
+  },
+  {
+   "id": "P39",
+   "quote": "Induced draft cooling towers use fans to create a draft that pulls air through the cooling tower fill.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.23"
+  },
+  {
+   "id": "P40",
+   "quote": "The primary difference is that the air is blown in at the bottom of the tower and exits at the top.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.21"
+  },
+  {
+   "id": "P41",
+   "quote": "Water distribution problems and recirculation difficulties discourage the use of forced draft cooling towers.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.21"
+  },
+  {
+   "id": "P42",
+   "quote": "Natural convection cooling towers, illustrated in Figure 12, use the principle of convective flow to provide air circulation.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.21"
+  },
+  {
+   "id": "P43",
+   "quote": "The air circulation will be self perpetuating due to the density difference between the warmer air inside and the cooler air outside.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.22"
+  },
+  {
+   "id": "P44",
+   "quote": "Because of space considerations and cost, natural convection cooling towers are built less frequently than other types.",
+   "sec": "Cooling Towers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.22"
+  },
+  {
+   "id": "P45",
+   "quote": "Demineralization of the water is one of the most practical and common methods available to remove these dissolved impurities.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.24"
+  },
+  {
+   "id": "P46",
+   "quote": "Dissolved impurities in power plant fluid systems generate corrosion problems and decrease efficiency due to fouled heat transfer surfaces.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.24"
+  },
+  {
+   "id": "P47",
+   "quote": "Ion exchangers are generally classified into two groups: single-bed ion exchangers and mixed-bed ion exchangers.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.29"
+  },
+  {
+   "id": "P48",
+   "quote": "The water to be purified enters the top at a set flow rate and flows down through the resin beads, where the flow path causes a physical filter effect as well as a chemical ion exchange.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.24"
+  },
+  {
+   "id": "P49",
+   "quote": "A mixed-bed demineralizer is a demineralizer in which the cation and anion resin beads are mixed together.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.26"
+  },
+  {
+   "id": "P50",
+   "quote": "The regeneration of a single-bed ion exchanger is a three-step process.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.25"
+  },
+  {
+   "id": "P51",
+   "quote": "It is important to realize that if the ion exchanger has been exposed to radioactive materials, the backwash, regeneration, and rinse solutions may be highly radioactive and must be treated as a radioactive waste.",
+   "sec": "Demineralizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.26"
+  },
+  {
+   "id": "P52",
+   "quote": "The pressurizer is the component that allows a water system, such as the reactor coolant system in a PWR facility, to maintain high temperatures without boiling.",
+   "sec": "Pressurizers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.30"
+  },
+  {
+   "id": "P53",
+   "quote": "Steam traps are installed in steam lines to drain condensate from the lines without allowing the escape of steam.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.35"
+  },
+  {
+   "id": "P54",
+   "quote": "A steam trap consists of a valve and a device or arrangement that causes the valve to open and close as necessary to drain the condensate from the lines without allowing the escape of steam.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.39"
+  },
+  {
+   "id": "P55",
+   "quote": "Steam traps are installed at low points in the system or machinery to be drained.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.39"
+  },
+  {
+   "id": "P56",
+   "quote": "When the bucket is full, it sinks and thus opens the valve.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.36"
+  },
+  {
+   "id": "P57",
+   "quote": "The valve is attached to the bellows in such a way that the valve closes when the bellows expands.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.37"
+  },
+  {
+   "id": "P58",
+   "quote": "The impulse type of steam trap is dependent on the principle that hot water under pressure tends to flash into steam when the pressure is reduced.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.37"
+  },
+  {
+   "id": "P59",
+   "quote": "The only moving part in the steam trap is the disk.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.37"
+  },
+  {
+   "id": "P60",
+   "quote": "Orifice-type steam traps are not suitable for services in which the condensate formation is not continuous.",
+   "sec": "Steam Traps",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.38"
+  },
+  {
+   "id": "P61",
+   "quote": "Filtration is a process used to remove suspended solids from a solution.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.40"
+  },
+  {
+   "id": "P62",
+   "quote": "In general, the filter passage must be small enough to catch the suspended solids but large enough that the system can operate at normal system pressures and flows.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.40"
+  },
+  {
+   "id": "P63",
+   "quote": "The cartridges are cylinders and usually consist of a fiber yarn wound around a perforated metal core.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.40"
+  },
+  {
+   "id": "P64",
+   "quote": "Cartridge filters have the advantage of being relatively inexpensive to install and operate.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.41"
+  },
+  {
+   "id": "P65",
+   "quote": "A precoat filter eliminates the problem of physically handling radioactive materials, because the filter material (called the medium) can be installed and removed remotely.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.42"
+  },
+  {
+   "id": "P66",
+   "quote": "Because water pressure holds the filter in place, flow must be maintained through the recirculating loop to keep the medium from falling off.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.43"
+  },
+  {
+   "id": "P67",
+   "quote": "Filters are usually installed in pairs, so that one filter can remain in service while the other is undergoing the filter backwashing and precoating process.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.43"
+  },
+  {
+   "id": "P68",
+   "quote": "Deep-bed filters are usually found only in makeup water systems, where they are used to filter water after it has been treated in a clarifier.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.44"
+  },
+  {
+   "id": "P69",
+   "quote": "Strainers are fitted in many piping lines to prevent the passage of grit, scale, dirt, and other foreign matter, which could obstruct pump suction valves, throttle valves, or other machinery parts.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.45"
+  },
+  {
+   "id": "P70",
+   "quote": "The bucket strainer is literally a bucket to catch debris.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.47"
+  },
+  {
+   "id": "P71",
+   "quote": "A duplex strainer is a strainer consisting of two sides with a basket in each side.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.48"
+  },
+  {
+   "id": "P72",
+   "quote": "The flow may be diverted from one basket to the other, while one is being cleaned.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.45"
+  },
+  {
+   "id": "P73",
+   "quote": "The intent of a backwash is to flow liquid in the opposite direction of normal flow, creating a pressure that pushes the debris off the strainer or filter.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.46"
+  },
+  {
+   "id": "P74",
+   "quote": "Normally, to establish a backwash lineup, the flowpath upstream of the inlet to the strainer or filter is closed, the flow path downstream of the outlet is closed, and a drain flowpath is opened.",
+   "sec": "Filters and Strainers",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.46"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Reciprocating compressors",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig1",
+     "num": 1,
+     "cap": "Reciprocating Air Compressor",
+     "alt": "Cutaway of a reciprocating air compressor with labeled suction and discharge valves, connecting rods, crankshaft and oil sump.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.2"
+    },
+    {
+     "t": "p",
+     "text": "The main elements are the compressing element, the rods, crankshaft and flywheel that carry power to the piston, a lubricating system, a regulation system that holds discharge pressure in a set range, and an unloading system that eases the load on the prime mover at start.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.1"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig2",
+     "num": 2,
+     "cap": "Single-Acting Air Compressor Cylinder",
+     "alt": "Five views of a single-acting cylinder through the suction stroke and the compression stroke, with the piston position and valves shown in each view.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.3"
+    },
+    {
+     "t": "p",
+     "text": "On the suction stroke, the piston moves down and the air in the clearance space expands until cylinder pressure falls below the pressure on the other side of the inlet valve.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "On the compression stroke, the piston moves up and the spring-loaded inlet valve closes.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What are the three common types of air compressors?",
+     "o": [
+      "Reciprocating, rotary, and centrifugal",
+      "Reciprocating, axial, and jet",
+      "Rotary, diaphragm, and jet",
+      "Centrifugal, axial, and diaphragm"
+     ],
+     "a": 0,
+     "x": "The handbook names reciprocating, rotary, and centrifugal designs.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.2",
+     "q": "In a reciprocating air compressor, what opens the discharge valve?",
+     "o": [
+      "The inlet valve closing",
+      "The unloading system",
+      "Cylinder pressure overcoming the valve springs and discharge line pressure",
+      "A cam on the crankshaft"
+     ],
+     "a": 2,
+     "x": "Air is compressed until cylinder pressure is great enough to open the discharge valve against the valve springs and the discharge line.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Rotary and centrifugal compressors",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Rotary units are compact, relatively inexpensive, and take a fraction of the space and weight of a reciprocating machine of equal capacity.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig3",
+     "num": 3,
+     "cap": "Rotary Slide Vane Air Compressor",
+     "alt": "Rotary slide vane compressor: air enters on the left, sliding vanes in the rotor turn inside the housing, and compressed air leaves on the right.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig4",
+     "num": 4,
+     "cap": "Rotary Lobe Air Compressor",
+     "alt": "Rotary lobe compressor with two mating lobes in a case, with the inlet at the top.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The lobe type has two gear-driven mating rotors. The cavity between them shrinks as they rotate, which compresses the vapor until the discharge port is reached.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig5",
+     "num": 5,
+     "cap": "Rotary Liquid Seal Ring Air Compressor",
+     "alt": "Rotary liquid seal ring compressor with an impeller in an oblong cavity.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The liquid seal ring type has an open impeller in an oblong cavity filled with liquid. Centrifugal force throws the seal liquid to the outer edge, and the oblong case makes the cells shrink as the rotor turns.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig6",
+     "num": 6,
+     "cap": "Simplified Centrifugal Pump",
+     "alt": "Simplified centrifugal compressor with a curved-blade impeller inside a casing, with points on the air path lettered.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "In a centrifugal compressor, air enters the eye of the impeller and is thrown against the casing.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Several stages may be used, as in a centrifugal pump, to reach a higher pressure.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "How does a rotary slide vane compressor compress air?",
+     "o": [
+      "Eccentricity of the rotor reduces the size of each cell as the vanes approach the discharge port",
+      "A piston reduces cylinder volume",
+      "Air is thrown against the casing by impeller blades",
+      "A seal liquid is pumped through the discharge port"
+     ],
+     "a": 0,
+     "x": "The size of each cell is reduced by the eccentricity of the rotor as the vanes approach the discharge port.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.2",
+     "q": "How does a centrifugal air compressor compress air?",
+     "o": [
+      "Mating lobes reduce a cavity",
+      "A piston moves upward against a spring-loaded valve",
+      "Sliding vanes form shrinking cells",
+      "More and more air is thrown out to the casing by the impeller blades"
+     ],
+     "a": 3,
+     "x": "Air becomes compressed as more and more of it is thrown out to the casing by the impeller blades.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Compressor coolers",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Raising air pressure lowers the amount of moisture the air can hold, and raising its temperature raises that amount. The pressure change is the larger effect, so moisture condenses.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig7",
+     "num": 7,
+     "cap": "Compressor Air Cooler",
+     "alt": "Tube-type compressor air cooler: air passes through the tubes from inlet to discharge while water flows through the shell from water inlet to water outlet.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "Moisture that condenses in the cooler is collected in condensate traps, which are drained automatically or by hand.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Why are cooling systems used on air compressors?",
+     "o": [
+      "To raise the discharge pressure above the relief setpoint",
+      "To lubricate the cylinder walls",
+      "To prevent the inlet valve from reseating",
+      "To remove heat added by compression, giving drier air that fits more air into a set volume"
+     ],
+     "a": 3,
+     "x": "Cooling removes the heat of compression. Drier air helps prevent corrosion, and cooler air allows more air to be compressed for a set volume.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.3",
+     "q": "Where is an intercooler usually located on a multi-staged compressor?",
+     "o": [
+      "Inside the air receiver",
+      "After the first stage discharge and before the second stage suction",
+      "On the final discharge line",
+      "At the air inlet filter"
+     ],
+     "a": 1,
+     "x": "An intercooler is usually located after the first stage discharge and before the second stage suction.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Hazards of compressed air",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook's summary gives three general hazards.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Safety glasses or goggles should be worn around compressed gas.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Compressors, and the cycling of automatic drain valves, can be quite noisy.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Systems should be depressurized before they are opened for maintenance.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "That detonation can damage equipment and injure people, so oil is kept out of air systems.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "Which of these is one of the three general hazards of pressurized air systems?",
+     "o": [
+      "Freezing of the piston rod",
+      "Minute particles blown at high speed from small leaks or breaks",
+      "Loss of electrical grounding",
+      "Radiation from the air receiver"
+     ],
+     "a": 1,
+     "x": "Small leaks or breaks can blow minute particles at speeds high enough to cause damage. Noise and pressure swings are the other two hazards.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.4",
+     "q": "Why must oil be kept out of an air compressor?",
+     "o": [
+      "It can be compressed to the point of detonation",
+      "It raises the moisture content of the air",
+      "It lowers the discharge pressure",
+      "It prevents the inlet valve from opening"
+     ],
+     "a": 0,
+     "x": "Oil introduced in an air compressor can be compressed to the point where detonation takes place, as in a diesel engine.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Hydraulic pressure and force",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A hydraulic system uses a liquid to develop a force. Oil is the most common choice.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "eq",
+     "text": "F = P x A   (F in lbf, P in lbf/in.², A in in.²)",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q75",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.5",
+     "q": "A hydraulic piston has an area of 4 in.² and the oil pressure is 500 psi. What force is exerted on the piston?",
+     "o": [
+      "125 lbf",
+      "504 lbf",
+      "2000 lbf",
+      "4000 lbf"
+     ],
+     "a": 2,
+     "x": "F = P x A = 500 lbf/in.² x 4 in.² = 2000 lbf.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Hydraulic system operation",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Oil flows from a tank or reservoir through a pipe into a pump, often through a filter on the pump suction.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig8",
+     "num": 8,
+     "cap": "Basic Hydraulic System",
+     "alt": "Basic hydraulic system: oil from a reservoir goes through a filter to a pump, then a directional control valve to a cylinder and piston, with a pressure control path returning oil to the reservoir.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "Oil from the other side of the piston returns to the reservoir.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Hydraulic systems carry the hazards of pressurized systems as well as hazards from the fluid itself.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "In a basic hydraulic system, what does the directional control valve do?",
+     "o": [
+      "Changes the direction of oil flow, depending on the desired direction of the load",
+      "Returns oil to the reservoir on overpressurization",
+      "Raises the oil pressure",
+      "Removes impurities from the oil"
+     ],
+     "a": 0,
+     "x": "The control valve changes the direction of oil flow, depending upon the desired direction of the load.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.6",
+     "q": "What usually protects a hydraulic system from overpressure?",
+     "o": [
+      "A filter on the pump suction",
+      "The directional control valve",
+      "The piston rod",
+      "A relief valve that returns oil to the reservoir"
+     ],
+     "a": 3,
+     "x": "The pressure control is usually a relief valve that returns oil to the reservoir upon overpressurization.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Boilers",
+   "eo": [
+    "1.7",
+    "1.8"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Air is mixed with fuel in a controlled combustion process, and the heat is absorbed by water in the risers.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "Steam leaves the drum through a baffle that drops out water droplets, and it may pass through a superheater if superheated steam is required.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig9",
+     "num": 9,
+     "cap": "Typical Fuel Boiler",
+     "alt": "Typical fuel boiler with labeled steam drum, downcomer, distribution headers, risers, superheater, combustion chamber and burner openings.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What drives water circulation back to the steam drum in a boiler?",
+     "o": [
+      "Combustion gas pressure",
+      "The density difference between hot and cold water",
+      "The feedwater pump alone",
+      "The superheater"
+     ],
+     "a": 1,
+     "x": "The density difference between hot and cold water is the driving force to circulate the water back to the steam drum.",
+     "p": "P29",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.8",
+     "q": "Which boiler component carries water from the downcomers to the risers?",
+     "o": [
+      "Steam drum",
+      "Economizer",
+      "Superheater",
+      "Distribution headers"
+     ],
+     "a": 3,
+     "x": "Distribution headers are large pipe headers that carry the water from the downcomers to the risers.",
+     "p": "P33",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.8",
+     "q": "In a boiler, what forms the combustion chamber enclosure?",
+     "o": [
+      "The risers",
+      "The downcomers",
+      "The steam drum",
+      "The distribution headers"
+     ],
+     "a": 0,
+     "x": "Risers are the piping or tubes that form the combustion chamber enclosure.",
+     "p": "P34",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cooling towers",
+   "eo": [
+    "1.9",
+    "1.10"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig10",
+     "num": 10,
+     "cap": "Cooling System Containing Cooling Tower",
+     "alt": "Cooling system with a turbine, condenser and pump sending hot water to an induced draft cooling tower, with cold water returning to the condenser.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "The cooling comes mainly from the latent heat of a small amount of evaporated water, and also from sensible heat that warms the air.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig11",
+     "num": 11,
+     "cap": "Induced Draft Cooling Tower",
+     "alt": "Cutaway of an induced draft cooling tower showing the fill and collecting basin, with a fan at the top.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig12",
+     "num": 12,
+     "cap": "Natural Convection Cooling Tower",
+     "alt": "Natural convection cooling tower: air enters at the bottom, hot water enters near the base, and air leaves through the outlet at the top.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "What is the purpose of a cooling tower?",
+     "o": [
+      "To preheat boiler feedwater",
+      "To remove dissolved solids from water",
+      "To remove heat from water used in cooling systems and release it to the air",
+      "To condense turbine exhaust steam directly"
+     ],
+     "a": 2,
+     "x": "The cooling tower removes heat from water used in cooling systems within the plant, and the heat is released to the air.",
+     "p": "P36",
+     "place": [
+      "Components",
+      "Heat Exchangers and Condensers"
+     ]
+    },
+    {
+     "eo": "1.10",
+     "q": "How does air move through a forced draft cooling tower?",
+     "o": [
+      "It is blown in at the bottom and exits at the top",
+      "It is drawn through by fans at the top",
+      "It rises on its own because of density difference",
+      "It is piped through closed tubes"
+     ],
+     "a": 0,
+     "x": "The primary difference from induced draft is that the air is blown in at the bottom of the tower and exits at the top.",
+     "p": "P40",
+     "place": [
+      "Components",
+      "Heat Exchangers and Condensers"
+     ]
+    },
+    {
+     "eo": "1.10",
+     "q": "What sustains the air flow in a natural convection cooling tower?",
+     "o": [
+      "The water spray pressure",
+      "A forced draft blower at the base",
+      "The density difference between warmer air inside and cooler air outside",
+      "Large circulating fans"
+     ],
+     "a": 2,
+     "x": "The air circulation is self perpetuating due to the density difference between the warmer air inside and the cooler air outside.",
+     "p": "P43",
+     "place": [
+      "Components",
+      "Heat Exchangers and Condensers"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Demineralizers",
+   "eo": [
+    "1.11"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "A demineralizer is basically a cylindrical tank that holds resin beads between upper and lower retention elements.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig13",
+     "num": 13,
+     "cap": "Single-Bed Demineralizer",
+     "alt": "Single-bed demineralizer tank with an inlet distributor at the top, a resin bed, and an outlet at the bottom.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "p",
+     "text": "A mixed bed is in effect equal to a number of two-step demineralizers in series, and its water is extremely pure.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig14",
+     "num": 14,
+     "cap": "Regeneration of a Mixed-Bed Demineralizer",
+     "alt": "Steps in regenerating a mixed-bed demineralizer, lettered a through g.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.27"
+    },
+    {
+     "t": "p",
+     "text": "The chemistry behind these units is taught in CH-04.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "What is the purpose of a demineralizer?",
+     "o": [
+      "To remove dissolved impurities from water",
+      "To remove suspended solids only",
+      "To add oxygen to water",
+      "To raise the temperature of water"
+     ],
+     "a": 0,
+     "x": "Demineralization of the water is one of the most practical and common methods available to remove dissolved impurities.",
+     "p": "P45",
+     "place": [
+      "Components",
+      "Demineralizers and Ion Exchangers"
+     ]
+    },
+    {
+     "existing": "Q254",
+     "eo": "1.11"
+    }
+   ]
+  },
+  {
+   "title": "Pressurizers",
+   "eo": [
+    "1.12",
+    "1.13"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "p",
+     "text": "This is a PWR component, so its purposes and terms stay off this lesson and objectives 1.12 and 1.13 are marked for review.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.30"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "title": "Steam traps",
+   "eo": [
+    "1.14",
+    "1.15"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig16",
+     "num": 16,
+     "cap": "Ball Float Steam Trap",
+     "alt": "Ball float steam trap with labeled float, thermostatic air vent, condensate discharge valve and drain plug.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.35"
+    },
+    {
+     "t": "p",
+     "text": "In a ball float trap, the valve opens when the float rises. Water lifts the float, the condensate drains, and the float drops and closes the valve before steam can escape.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.35"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig17",
+     "num": 17,
+     "cap": "Bucket Steam Trap",
+     "alt": "Bucket steam trap with a bucket inside the trap body, an air vent at the top, and inlet and discharge connections.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.36"
+    },
+    {
+     "t": "p",
+     "text": "In a bucket trap, the valve closes as the bucket floats up and stays closed until the bucket fills.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.36"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig18",
+     "num": 18,
+     "cap": "Bellows-Type Steam Trap",
+     "alt": "Bellows steam trap in two states: cool condensate contracts the bellows and opens the valve, and hot steam expands the bellows and closes the valve.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.36"
+    },
+    {
+     "t": "p",
+     "text": "A bellows trap is a thermostatic trap. A volatile liquid sealed in the bellows expands when heated by steam.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.36"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig19",
+     "num": 19,
+     "cap": "Impulse Steam Trap",
+     "alt": "Impulse steam trap with a strainer, a circular baffle, a cylinder and a disk.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.14",
+     "q": "What is the purpose of a steam trap?",
+     "o": [
+      "To raise steam pressure",
+      "To superheat steam",
+      "To drain condensate from lines without allowing the escape of steam",
+      "To remove air from a condenser"
+     ],
+     "a": 2,
+     "x": "Steam traps are installed in steam lines to drain condensate from the lines without allowing the escape of steam.",
+     "p": "P53",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.15",
+     "q": "Which steam trap depends on hot water under pressure flashing to steam when the pressure is reduced?",
+     "o": [
+      "Bellows steam trap",
+      "Impulse steam trap",
+      "Ball float steam trap",
+      "Bucket steam trap"
+     ],
+     "a": 1,
+     "x": "The impulse type depends on the principle that hot water under pressure tends to flash into steam when the pressure is reduced.",
+     "p": "P58",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.15",
+     "q": "In a bucket steam trap, what opens the valve?",
+     "o": [
+      "Pressure lifts a disk",
+      "The bucket fills and sinks",
+      "A float rises",
+      "A bellows contracts"
+     ],
+     "a": 1,
+     "x": "When the bucket is full, it sinks and thus opens the valve.",
+     "p": "P56",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cartridge filters",
+   "eo": [
+    "1.16"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig20",
+     "num": 20,
+     "cap": "Typical Multi-Cartridge Filter",
+     "alt": "Multi-cartridge filter: several cylindrical cartridges held inside a filter housing.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.41"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig21",
+     "num": 21,
+     "cap": "Cartridge Filter",
+     "alt": "Cartridge filter assembly with arrows showing flow through the filter material to the outlet.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.41"
+    },
+    {
+     "t": "p",
+     "text": "Porous metal cartridges are used in some high temperature or high pressure applications. Cartridges are made to remove all particles above a set size.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "p",
+     "text": "Differential pressure instruments tell the operator when a filter is plugged and must be replaced.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.41"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "How does an operator know a cartridge filter is plugged?",
+     "o": [
+      "Differential pressure across the filter",
+      "Conductivity at the outlet",
+      "Filter temperature",
+      "Pump motor speed"
+     ],
+     "a": 0,
+     "x": "Instruments measure the differential pressure across these filters to show when a filter is plugged and must be replaced.",
+     "p": "P64",
+     "place": [
+      "Components",
+      "Demineralizers and Ion Exchangers"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Precoat and deep-bed filters",
+   "eo": [
+    "1.16"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "p",
+     "text": "Inside the housing is a bundle of septums, the vertical tubes on which the medium is deposited. To precoat the filter, a slurry of medium and demineralized water is recirculated until the water runs clear.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "p",
+     "text": "Precoat filters cost much more and are more complicated than cartridge filters. Their major advantage is remote operation.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.44"
+    },
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig22",
+     "num": 22,
+     "cap": "Deep-Bed Filter",
+     "alt": "Deep-bed filter tank with a filter bed over a support screen and pipes at the bottom with valves.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.44"
+    },
+    {
+     "t": "p",
+     "text": "Water percolates down through a bed of granular anthracite or charcoal on a coarse aggregate layer and a support screen. Charcoal also removes organic matter and chlorine, while anthracite removes only particulates.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.44"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "What is the major advantage of a precoat filter?",
+     "o": [
+      "Low installation cost",
+      "Simple equipment",
+      "It never needs backwashing",
+      "Remote operation, which avoids handling highly radioactive cartridges"
+     ],
+     "a": 3,
+     "x": "The major advantage of precoat filters is the remote operation, which eliminates the physical handling of highly radioactive filter cartridges.",
+     "p": "P65",
+     "place": [
+      "Components",
+      "Demineralizers and Ion Exchangers"
+     ]
+    },
+    {
+     "eo": "1.16",
+     "q": "Where are deep-bed filters usually found?",
+     "o": [
+      "Makeup water systems",
+      "Lubricating oil lines",
+      "Compressed air lines",
+      "Steam lines"
+     ],
+     "a": 0,
+     "x": "Deep-bed filters are usually found only in makeup water systems, where they filter water after it has been treated in a clarifier.",
+     "p": "P68",
+     "place": [
+      "Components",
+      "Demineralizers and Ion Exchangers"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Strainers and backwashing",
+   "eo": [
+    "1.16",
+    "1.17"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P69"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig23",
+     "num": 23,
+     "cap": "Y-strainer",
+     "alt": "Y-strainer with an inlet on the left, an outlet on the right, and a screen in the angled leg.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.45"
+    },
+    {
+     "t": "fig",
+     "id": "me-05-fig24",
+     "num": 24,
+     "cap": "Common Strainers",
+     "alt": "Common strainers: A, a bucket strainer with cover and basket; B, a duplex strainer with two sides; C, a manifold strainer.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "p",
+     "text": "A typical bucket strainer sits in a sump pump suction line.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "p",
+     "text": "Duplex strainers are common in fuel oil and lubricating oil lines, where flow must not be interrupted.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "p",
+     "text": "When a filter or strainer cannot be easily removed for cleaning, the system design usually includes a backwash flowpath.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "p",
+     "text": "The flush source is then opened, and flow carries the debris out through the inlet to the drain or waste tank.",
+     "cite": "DOE-HDBK-1018/2-93 ME-05 p.47"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "Why is a duplex strainer used in fuel oil and lubricating oil lines?",
+     "o": [
+      "It removes dissolved impurities",
+      "It needs no cleaning",
+      "One basket can be cleaned while flow continues through the other",
+      "It filters smaller particles than a cartridge filter"
+     ],
+     "a": 2,
+     "x": "The flow may be diverted from one basket to the other while one is being cleaned, which keeps oil flow uninterrupted.",
+     "p": "P72",
+     "place": [
+      "Components",
+      "Demineralizers and Ion Exchangers"
+     ]
+    },
+    {
+     "existing": "Q76",
+     "eo": "1.17"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Force on a hydraulic piston",
+   "eo": [
+    "1.5"
+   ],
+   "page": 11,
+   "problem": "In a hydraulic system, the oil pressure at the inlet to the cylinder is 1500 psi, and the area of the piston is two square inches. Calculate the force exerted on the piston.",
+   "steps": [
+    "F = P x A",
+    "F = 1500 lbf/in.² x 2 in.²"
+   ],
+   "answer": "F = 3000 lbf",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.11"
+  },
+  {
+   "title": "Pressure to open a hydraulic valve",
+   "eo": [
+    "1.5"
+   ],
+   "page": 11,
+   "problem": "A hydraulic valve requires a force of 1848 lbf to be opened. The piston area is 3 square inches. How much pressure does the hydraulic fluid have to exert?",
+   "steps": [
+    "P = F / A",
+    "P = 1848 lbf / 3 in.²"
+   ],
+   "answer": "P = 616 lbf/in.²",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.11"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three common types of air compressors?",
+   "a": "Reciprocating, rotary, and centrifugal.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What are the three groups of rotary compressors?",
+   "a": "Slide vane-type, lobe-type, and liquid seal ring-type.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What is an aftercooler?",
+   "a": "A cooler on the discharge of a compressor that removes the heat generated during compression.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What equation relates force and pressure in a hydraulic piston?",
+   "a": "F = P x A.",
+   "p": "P22",
+   "place": [
+    "Thermodynamics",
+    "Fluid Statics and Dynamics"
+   ]
+  },
+  {
+   "q": "What does Pascal's Law say?",
+   "a": "Pressure in a fluid acts equally in all directions.",
+   "p": "P21",
+   "place": [
+    "Thermodynamics",
+    "Fluid Statics and Dynamics"
+   ]
+  },
+  {
+   "q": "What is the primary function of a boiler?",
+   "a": "To produce steam at a given pressure and temperature.",
+   "p": "P28",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "What does a boiler's steam drum do?",
+   "a": "It separates the steam from the heated water.",
+   "p": "P31",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "What does a boiler economizer do?",
+   "a": "It uses heat from the boiler exhaust gases to raise the temperature of the inlet feedwater.",
+   "p": "P30",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "How is water cooled in a cooling tower?",
+   "a": "By direct contact of water and air.",
+   "p": "P38",
+   "place": [
+    "Components",
+    "Heat Exchangers and Condensers"
+   ]
+  },
+  {
+   "q": "What are the two groups of ion exchangers?",
+   "a": "Single-bed and mixed-bed.",
+   "p": "P47",
+   "place": [
+    "Components",
+    "Demineralizers and Ion Exchangers"
+   ]
+  },
+  {
+   "q": "Where are steam traps installed?",
+   "a": "At low points in the system or machinery to be drained.",
+   "p": "P55",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "What separates filtration from demineralization?",
+   "a": "Filtration removes suspended solids. Demineralization removes dissolved ions.",
+   "p": "P61",
+   "place": [
+    "Components",
+    "Demineralizers and Ion Exchangers"
+   ]
+  },
+  {
+   "q": "What is the intent of a backwash?",
+   "a": "To flow liquid opposite to normal flow, creating a pressure that pushes debris off the strainer or filter.",
+   "p": "P73",
+   "place": [
+    "Components",
+    "Demineralizers and Ion Exchangers"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The three common air compressors are reciprocating, rotary, and centrifugal. Cooling removes the heat of compression, which gives drier air and allows more air in a set volume.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "text": "Compressed air hazards are particles blown from leaks, noise, and pressure swings. Oil must be kept out of air systems.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.9"
+  },
+  {
+   "text": "Hydraulic force is F = P x A. A pump raises oil pressure, a control valve directs it, and oil pressure on the piston moves the load.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.13"
+  },
+  {
+   "text": "Boilers make steam. The steam drum, downcomers, distribution headers, risers, and combustion chamber are the main parts.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.17"
+  },
+  {
+   "text": "Cooling towers remove heat from cooling water and release it to the air, by induced draft, forced draft, or natural convection.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.23"
+  },
+  {
+   "text": "Demineralizers remove dissolved impurities from water.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.29"
+  },
+  {
+   "text": "Steam traps drain condensate without letting steam escape. Types include ball float, bucket, bellows, and impulse.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.39"
+  },
+  {
+   "text": "Filters and strainers remove suspended solids. A backwash reverses flow to push debris to a drain.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.48"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "The handbook's pressurizer chapter is written for a water system such as a PWR reactor coolant system. Rule 10 keeps water material out of this topic unless tagged, and the Batch 9 decision keeps PWR-specific items off the page. Objectives 1.12 and 1.13 stay verbatim, tagged Needs sodium review, and Figure 15 is not used.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.30"
+  },
+  {
+   "type": "Scope",
+   "note": "Boiler, cooling tower, demineralizer, steam trap, precoat and deep-bed filter pages carry Water-system only. Air compressor, hydraulic, cartridge filter, strainer and backwash pages stay untagged because they are general equipment.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.14"
+  },
+  {
+   "type": "Scope",
+   "note": "The handbook's reference to liquid seal compressors establishing condenser vacuum at commercial nuclear plants is left off.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.5"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.10 names forced draft and natural convection towers. The handbook also teaches induced draft, which is kept because it explains the other two. The Figure 6 caption says centrifugal pump, but the text describes a centrifugal compressor.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.6"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.15 lists four trap types. The orifice type is also kept in one line, since the chapter covers it.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.38"
+  },
+  {
+   "type": "Placement",
+   "note": "The quiz has no miscellaneous components topic. Compressors go to Pumps, hydraulics to Fluid Statics and Dynamics, boilers and steam traps to Steam, cooling towers to Heat Exchangers and Condensers, and demineralizers and filters to Demineralizers and Ion Exchangers.",
+   "cite": "DOE-HDBK-1018/2-93 ME-05 p.1"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review",
+  "Water-system only"
+ ]
+}

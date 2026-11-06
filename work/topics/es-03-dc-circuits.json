@@ -1,0 +1,719 @@
+{
+ "module_id": "ES-03",
+ "slug": "es-03-dc-circuits",
+ "title": "DC Circuits",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V2",
+ "handbook": "DOE-HDBK-1011/2-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Using the rules associated with inductors and capacitors, DESCRIBE the characteristics of these elements when they are placed in a DC circuit.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE how current flow, magnetic field, and stored energy in an inductor relate to one another.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE how an inductor opposes a change in current flow.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given a circuit containing inductors, CALCULATE total inductance for series and parallel circuits.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given an inductive resistive circuit, CALCULATE the time constant for the circuit.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DESCRIBE the construction of a capacitor.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE how a capacitor stores energy.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE how a capacitor opposes a change in voltage.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "Given a circuit containing capacitors, CALCULATE total capacitance for series and parallel circuits.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "Given a circuit containing capacitors and resistors, CALCULATE the time constant of the circuit.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "An inductor is a circuit element that will store electrical energy in the form of a magnetic field.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "the induced EMF opposes the EMF that caused it.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "It is commonly said that an inductor tends to oppose a change in current flow.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "the current caused by the induced EMF tends to maintain the same current that existed in the circuit before the switch was opened.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Inductance is a measure of an inductor’s ability to induce CEMF.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The time constant for an inductor is defined as the time required for the current either to increase to 63.2 percent of its maximum value or to decrease by 63.2 percent of its maximum value",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "After five time constants, circuit parameters normally reach their final value.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.6"
+  },
+  {
+   "id": "P8",
+   "quote": "Inductors in series are combined like resistors in series.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.8"
+  },
+  {
+   "id": "P9",
+   "quote": "Inductors in parallel are combined like resistors in parallel.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.8"
+  },
+  {
+   "id": "P10",
+   "quote": "Electrical devices that are constructed of two metal plates separated by an insulating material, called a dielectric, are known as capacitors",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.9"
+  },
+  {
+   "id": "P11",
+   "quote": "Capacitors store energy as an electric field between the two plates.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.10"
+  },
+  {
+   "id": "P12",
+   "quote": "A farad is the capacitance that will store one coulomb of charge when one volt is applied across the plates of the capacitor.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.11"
+  },
+  {
+   "id": "P13",
+   "quote": "The capacitance of a capacitor depends on three things.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.11"
+  },
+  {
+   "id": "P14",
+   "quote": "Capacitors in series are combined like resistors in parallel.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.13"
+  },
+  {
+   "id": "P15",
+   "quote": "Capacitors in parallel are combined like resistors in series.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.14"
+  },
+  {
+   "id": "P16",
+   "quote": "The capacitive time constant is the time required for the capacitor to charge to 63.2 percent of its fully charged voltage.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+  },
+  {
+   "id": "P17",
+   "quote": "The attraction of charges in the opposite plates of a capacitor opposes a change in voltage across the capacitor.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.18"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Inductors",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "An inductor is usually a coil of wire wrapped around a core of permeable material. The magnetic field is generated when current flows through the wire.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.1"
+    },
+    {
+     "t": "p",
+     "text": "A voltage is induced in a conductor when it moves through a magnetic field, or when the field moves past it. This is Faraday's Law.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "An induced EMF is sometimes called counter EMF, or CEMF.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "If the switch in a circuit with a coil is opened, the field around the inductor collapses, and the collapsing field produces a voltage in the coil.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Inductance is measured in henries. An inductor has an inductance of one henry if one amp per second change in current produces one volt of CEMF.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.3"
+    },
+    {
+     "t": "eq",
+     "text": "CEMF = -L (ΔI / Δt)",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q422",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.2",
+     "q": "The switch opens in a circuit with an inductor. What does the current from the induced EMF tend to do?",
+     "o": [
+      "Maintain the current that existed before the switch opened",
+      "Stop the current at once",
+      "Reverse the current at once",
+      "Double the current"
+     ],
+     "a": 0,
+     "x": "The current caused by the induced EMF tends to maintain the same current that existed in the circuit before the switch was opened.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Combining inductors and the time constant",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "Leq = L1 + L2 + ... Ln",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "eq",
+     "text": "Leq = (L1 x L2) / (L1 + L2), for two inductors only",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.4"
+    },
+    {
+     "t": "p",
+     "text": "In circuits with elements that store energy, it is common for current and voltage to exhibit exponential increase and decay.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "es-03-fig7",
+     "num": 7,
+     "cap": "Time Constant",
+     "alt": "Graph of percent of maximum against time in time constants, with one curve rising to 63 percent and another falling, at one time constant.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The time constant is directly proportional to the inductance and inversely proportional to the resistance.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.5"
+    },
+    {
+     "t": "eq",
+     "text": "TL = L / R",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What is the equivalent inductance of a 2 henry and a 3 henry inductor in series?",
+     "o": [
+      "1.2 henries",
+      "5 henries",
+      "6 henries",
+      "1 henry"
+     ],
+     "a": 1,
+     "x": "Inductors in series are combined like resistors in series: 2 + 3 = 5 henries.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is the equivalent inductance of a 6 henry and a 3 henry inductor in parallel?",
+     "o": [
+      "2 henries",
+      "4.5 henries",
+      "9 henries",
+      "18 henries"
+     ],
+     "a": 0,
+     "x": "Inductors in parallel are combined like resistors in parallel: (6 x 3) / (6 + 3) = 2 henries.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is the time constant of a circuit with 10 henries and 5 ohms?",
+     "o": [
+      "0.5 seconds",
+      "2 seconds",
+      "15 seconds",
+      "50 seconds"
+     ],
+     "a": 1,
+     "x": "TL = L/R = 10/5 = 2 seconds.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Capacitors",
+   "eo": [
+    "1.5",
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "fig",
+     "id": "es-03-fig10",
+     "num": 10,
+     "cap": "Capacitor and Symbols",
+     "alt": "A capacitor made of two conducting plates separated by a dielectric, beside its schematic symbols.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.9"
+    },
+    {
+     "t": "p",
+     "text": "When a battery is connected across the plates, charges move until the difference in charge between the plates is equal to the voltage of the battery.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "es-03-fig11",
+     "num": 11,
+     "cap": "Charging a Capacitor",
+     "alt": "Capacitor plates shown neutral, connected to a battery, and charged, with opposite charges collected on Plate A and Plate B.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Very few charges can cross between the plates, so the capacitor stays charged even if the battery is removed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Placing a conductor across the plates neutralizes the charges, and the capacitor is discharged.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Area of conductor plates",
+      "Separation between the plates",
+      "Dielectric constant of insulation material"
+     ],
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What separates the two plates of a capacitor?",
+     "o": [
+      "A coil of wire",
+      "An electrolyte",
+      "A dielectric",
+      "A permeable core"
+     ],
+     "a": 2,
+     "x": "Capacitors are constructed of two metal plates separated by an insulating material, called a dielectric.",
+     "p": "P10"
+    },
+    {
+     "existing": "Q421",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.7",
+     "q": "What does the attraction of charges on opposite capacitor plates oppose?",
+     "o": [
+      "A change in voltage across the capacitor",
+      "A change in current through an inductor",
+      "The flow of magnetic flux",
+      "A change in resistance"
+     ],
+     "a": 0,
+     "x": "The attraction of charges in the opposite plates of a capacitor opposes a change in voltage across the capacitor.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Combining capacitors and the time constant",
+   "eo": [
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "eq",
+     "text": "1/CT = 1/C1 + 1/C2 + ...",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.13"
+    },
+    {
+     "t": "eq",
+     "text": "CT = (C1 x C2) / (C1 + C2), for two capacitors only",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "eq",
+     "text": "CT = C1 + C2 + ...",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.14"
+    },
+    {
+     "t": "p",
+     "text": "Total voltage across capacitors in series is the sum of their working voltages.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The working voltage of capacitors in parallel is only as high as the lowest individual working voltage.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+    },
+    {
+     "t": "p",
+     "text": "Resistance in a circuit causes a delay in the time for charging a capacitor.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+    },
+    {
+     "t": "eq",
+     "text": "TC = RC",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "In each following time constant, the capacitor charges an additional 63.2 percent of the remaining voltage. It is considered fully charged after five time constants.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "es-03-fig18",
+     "num": 18,
+     "cap": "Capacitive Time Constant for Charging Capacitor",
+     "alt": "Graph of capacitor voltage as percent of maximum against time in time constants, rising to 63 percent at one time constant and near full at five.",
+     "cite": "DOE-HDBK-1011/2-92 ES-03 p.17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "What is the total capacitance of a 6 µF and a 3 µF capacitor in series?",
+     "o": [
+      "2 µF",
+      "4.5 µF",
+      "9 µF",
+      "18 µF"
+     ],
+     "a": 0,
+     "x": "Capacitors in series are combined like resistors in parallel: (6 x 3) / (6 + 3) = 2 µF.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.8",
+     "q": "What is the total capacitance of a 4 µF and a 6 µF capacitor in parallel?",
+     "o": [
+      "2.4 µF",
+      "5 µF",
+      "10 µF",
+      "24 µF"
+     ],
+     "a": 2,
+     "x": "Capacitors in parallel are combined like resistors in series: 4 + 6 = 10 µF.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is the time constant of a 100 µF capacitor in series with a 500 ohm resistor?",
+     "o": [
+      "0.005 seconds",
+      "0.05 seconds",
+      "0.5 seconds",
+      "5 seconds"
+     ],
+     "a": 1,
+     "x": "TC = RC = (500)(100 x 10⁻⁶) = 0.05 seconds.",
+     "p": "P16"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "CEMF of an inductor",
+   "eo": "1.2",
+   "page": 3,
+   "problem": "The current through a 4 henry inductor drops from 6 amps to 2 amps in 2 seconds. What is the CEMF?",
+   "steps": [
+    "CEMF = -L (ΔI / Δt).",
+    "ΔI / Δt = (2 - 6) / 2 = -2 amps per second.",
+    "CEMF = -(4)(-2)."
+   ],
+   "answer": "8 volts",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.3"
+  },
+  {
+   "title": "Capacitors in parallel",
+   "eo": "1.8",
+   "page": 16,
+   "problem": "Find the total capacitance of 15 µF-50 V, 10 µF-100 V, and 3 µF-150 V capacitors in parallel. What is the working voltage?",
+   "steps": [
+    "CT = 15 + 10 + 3.",
+    "The working voltage is only as high as the lowest individual working voltage."
+   ],
+   "answer": "28 µF, with a working voltage of 50 volts",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.16"
+  },
+  {
+   "title": "Capacitors in series",
+   "eo": "1.8",
+   "page": 15,
+   "problem": "Find the working voltage of two capacitors in series, each rated 120 V.",
+   "steps": [
+    "Total voltage across capacitors in series is the sum of the individual working voltages.",
+    "Working voltage = 120 V + 120 V."
+   ],
+   "answer": "240 volts",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.15"
+  },
+  {
+   "title": "Capacitive time constant",
+   "eo": "1.9",
+   "page": 18,
+   "problem": "Find the time constant of a 100 µF capacitor in series with a 100 Ω resistor.",
+   "steps": [
+    "TC = RC.",
+    "TC = (100 Ω)(100 µF)."
+   ],
+   "answer": "0.01 seconds",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.18"
+  }
+ ],
+ "facts": [
+  {
+   "q": "How is the time constant for an inductor defined?",
+   "a": "The time required for the current either to increase to 63.2 percent of its maximum value or to decrease by 63.2 percent of its maximum value.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "How many time constants does it take for circuit parameters to reach their final value?",
+   "a": "After five time constants, circuit parameters normally reach their final value.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What does a farad measure?",
+   "a": "Capacitance. A farad will store one coulomb of charge when one volt is applied across the plates.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "What three things does the capacitance of a capacitor depend on?",
+   "a": "Area of the conductor plates, separation between the plates, and the dielectric constant of the insulation material.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "How is the capacitive time constant defined?",
+   "a": "The time required for the capacitor to charge to 63.2 percent of its fully charged voltage.",
+   "p": "P16",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "When an inductor has DC current flowing through it, it stores energy in the form of a magnetic field.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.8"
+  },
+  {
+   "text": "An inductor opposes a change in current flow by the CEMF induced when the field collapses or expands.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.8"
+  },
+  {
+   "text": "Inductors combine like resistors, in series and in parallel.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.8"
+  },
+  {
+   "text": "A capacitor is two conductors separated by a dielectric, and it stores energy in an electric field.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.18"
+  },
+  {
+   "text": "Capacitors in series combine like resistors in parallel, and capacitors in parallel combine like resistors in series.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.18"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook wording",
+   "note": "The summary says a capacitor charges or discharges to 63.2 percent of its fully charged voltage. The chapter defines the time constant for charging, so the lesson uses that.",
+   "cite": "DOE-HDBK-1011/2-92 ES-03 p.18"
+  }
+ ],
+ "page_tags": []
+}

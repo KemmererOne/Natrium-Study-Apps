@@ -1,0 +1,2814 @@
+{
+ "module_id": "HT-03",
+ "slug": "ht-03-fluid-flow",
+ "title": "Fluid Flow",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1012-V3",
+ "handbook": "DOE-HDBK-1012/3-92",
+ "word_file": "Fluid Statics and Dynamics - Part 1.docx",
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Fluid Statics and Dynamics",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given conditions affecting the fluid flow in a system, EVALUATE the effects on the operation of the system.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE how the density of a fluid varies with temperature.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE the term buoyancy.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the relationship between the pressure in a fluid column and the density and depth of the fluid.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE Pascal’s Law.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE the terms mass flow rate and volumetric flow rate.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "CALCULATE either the mass flow rate or the volumetric flow rate for a fluid system.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE the principle of conservation of mass.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "CALCULATE the fluid velocity or flow rate in a specified fluid system using the continuity equation.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DESCRIBE the characteristics and flow velocity profiles of laminar flow and turbulent flow.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DEFINE the property of viscosity.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE how the viscosity of a fluid varies with temperature.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DESCRIBE the characteristics of an ideal fluid.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "DESCRIBE the relationship between the Reynolds number and the degree of turbulence of the flow.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "DESCRIBE the relationship between Bernoulli’s equation and the First Law of Thermodynamics.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "DEFINE the term head with respect to its use in fluid flow.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "EXPLAIN the energy conversions that take place in a fluid system between the velocity, elevation, and pressure heads as flow continues through a piping system.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "Given the initial and final conditions of the system, CALCULATE the unknown fluid properties using the simplified Bernoulli equation.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "DESCRIBE the restrictions applied to Bernoulli’s equation when presented in its simplest form.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.19",
+     "text": "EXPLAIN how to extend the Bernoulli equation to more general applications.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.20",
+     "text": "RELATE Bernoulli’s principle to the operation of a venturi.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.21",
+     "text": "DEFINE the terms head loss, frictional loss, and minor losses.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.22",
+     "text": "DETERMINE friction factors for various flow situations using the Moody chart.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.23",
+     "text": "CALCULATE the head loss in a fluid system due to frictional losses using Darcy’s equation.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.24",
+     "text": "CALCULATE the equivalent length of pipe that would cause the same head loss as the minor losses that occur in individual components.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.25",
+     "text": "DEFINE natural circulation and forced circulation.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.26",
+     "text": "DEFINE thermal driving head.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.27",
+     "text": "DESCRIBE the conditions necessary for natural circulation to exist.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.28",
+     "text": "EXPLAIN the relationship between flow rate and temperature difference in natural circulation flow.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.29",
+     "text": "DESCRIBE how the operator can determine whether natural circulation exists in the reactor coolant system and other heat removal systems.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.30",
+     "text": "DESCRIBE how to enhance natural circulation flow.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.31",
+     "text": "DEFINE two-phase flow.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.32",
+     "text": "DESCRIBE two-phase flow including such phenomena as bubbly, slug, and annular flow.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.33",
+     "text": "DESCRIBE the problems associated with core flow oscillations and flow instability.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.34",
+     "text": "DESCRIBE the conditions that could lead to core flow oscillation and instability.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.35",
+     "text": "DESCRIBE the phenomenon of pipe whip.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.36",
+     "text": "DESCRIBE the phenomenon of water hammer.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.37",
+     "text": "DEFINE the terms net positive suction head and cavitation.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.38",
+     "text": "CALCULATE the new volumetric flow rate, head, or power for a variable speed centrifugal pump using the pump laws.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.39",
+     "text": "DESCRIBE the effect on system flow and pump head for the following changes:",
+     "items": [
+      "a. Changing pump speeds",
+      "b. Adding pumps in parallel",
+      "c. Adding pumps in series"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "As the temperature of the fluid increases, the density decreases and the specific volume increases.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "Buoyancy is defined as the tendency of a body to float or rise when submerged in a fluid.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "A floating body displaces its own weight of the fluid in which it floats.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "the pressure of a liquid is directly proportional to the depth, and for a given depth the liquid exerts the same pressure in all directions.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "is independent of the cross-sectional area of the column.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.5"
+  },
+  {
+   "id": "P6",
+   "quote": "Pressure applied to a confined fluid is transmitted undiminished throughout the confining vessel of the system.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.7"
+  },
+  {
+   "id": "P7",
+   "quote": "The volumetric flow rate ( V̇ ) of a system is a measure of the volume of fluid passing a point in the system per unit time.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.9"
+  },
+  {
+   "id": "P8",
+   "quote": "The mass flow rate (ṁ) of a system is a measure of the mass of fluid passing a point in the system per unit time.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.9"
+  },
+  {
+   "id": "P9",
+   "quote": "all mass flow rates into a control volume are equal to all mass flow rates out of the control volume plus the rate of change of mass within the control volume.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.10"
+  },
+  {
+   "id": "P10",
+   "quote": "Steady-state flow refers to the condition where the fluid properties at any single point in the system do not change over time.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.10"
+  },
+  {
+   "id": "P11",
+   "quote": "The continuity equation is simply a mathematical expression of the principle of conservation of mass.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.11"
+  },
+  {
+   "id": "P12",
+   "quote": "a decrease in pipe diameter will cause an increase in flow velocity.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.12"
+  },
+  {
+   "id": "P13",
+   "quote": "layers of water flowing over one another at different speeds with virtually no mixing between layers",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.17"
+  },
+  {
+   "id": "P14",
+   "quote": "Turbulent flow is characterized by the irregular movement of particles of the fluid.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.17"
+  },
+  {
+   "id": "P15",
+   "quote": "the velocity distribution at a cross section will be parabolic in shape with the maximum velocity at the center being about twice the average velocity in the pipe.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.18"
+  },
+  {
+   "id": "P16",
+   "quote": "In turbulent flow, a fairly flat velocity distribution exists across the section of pipe",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.18"
+  },
+  {
+   "id": "P17",
+   "quote": "The velocity of the fluid in contact with the pipe wall is essentially zero",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.18"
+  },
+  {
+   "id": "P18",
+   "quote": "Viscosity is a fluid property that measures the resistance of the fluid to deforming due to a shear force.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+  },
+  {
+   "id": "P19",
+   "quote": "For most fluids, as the temperature of the fluid increases, the viscosity of the fluid decreases.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+  },
+  {
+   "id": "P20",
+   "quote": "An ideal fluid is one that is incompressible and has no viscosity.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+  },
+  {
+   "id": "P21",
+   "quote": "if the Reynolds number is less than 2000, the flow is laminar. If it is greater than 3500, the flow is turbulent.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.20"
+  },
+  {
+   "id": "P22",
+   "quote": "Most fluid systems in nuclear facilities operate with turbulent flow.",
+   "sec": "Laminar and Turbulent Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.20"
+  },
+  {
+   "id": "P23",
+   "quote": "Bernoulli’s equation results from the application of the general energy equation and the first law of thermodynamics to a steady flow system in which no work is done on or by the fluid, no heat is transferred to or from the fluid, and no change occurs in the internal energy (i.e., no temperature change) of the fluid.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.22"
+  },
+  {
+   "id": "P24",
+   "quote": "The term head is used by engineers in reference to pressure.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+  },
+  {
+   "id": "P25",
+   "quote": "The velocity head represents the kinetic energy of the fluid.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+  },
+  {
+   "id": "P26",
+   "quote": "The water in the pipe of the previous example had a density of 62.44 lbm/ft3.",
+   "sec": "Continuity Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.10"
+  },
+  {
+   "id": "P27",
+   "quote": "Thus, Bernoulli’s equation states that the total head of the fluid is constant.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+  },
+  {
+   "id": "P28",
+   "quote": "a decrease in flow velocity in a horizontal pipe will result in an increase in pressure.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+  },
+  {
+   "id": "P29",
+   "quote": "One serious restriction of the Bernoulli equation in its present form is that no fluid friction is allowed in solving piping problems.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+  },
+  {
+   "id": "P30",
+   "quote": "The second restriction on Bernoulli’s equation is that no work is allowed to be done on or by the fluid.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+  },
+  {
+   "id": "P31",
+   "quote": "The Bernoulli equation can be modified to take into account gains and losses of head.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+  },
+  {
+   "id": "P32",
+   "quote": "the head loss due to friction results in an equivalent increase in the internal energy (u) of the fluid.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+  },
+  {
+   "id": "P33",
+   "quote": "A venturi is a flow measuring device that consists of a gradual contraction followed by a gradual expansion.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.27"
+  },
+  {
+   "id": "P34",
+   "quote": "the flow velocity at the throat of the venturi and the volumetric flow rate are directly proportional to the square root of the differential pressure.",
+   "sec": "Bernoulli's Equation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.29"
+  },
+  {
+   "id": "P35",
+   "quote": "Head loss is a measure of the reduction in the total head (sum of elevation head, velocity head and pressure head) of the fluid as it moves through a fluid system.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.31"
+  },
+  {
+   "id": "P36",
+   "quote": "Frictional loss is that part of the total head loss that occurs as the fluid flows through straight pipes.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.31"
+  },
+  {
+   "id": "P37",
+   "quote": "The head loss for fluid flow is directly proportional to the length of pipe, the square of the fluid velocity, and a term accounting for fluid friction called the friction factor.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.31"
+  },
+  {
+   "id": "P38",
+   "quote": "The Moody Chart can be used to determine the friction factor based on the Reynolds number and the relative roughness.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.32"
+  },
+  {
+   "id": "P39",
+   "quote": "The losses that occur in pipelines due to bends, elbows, joints, valves, etc. are sometimes called minor losses.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+  },
+  {
+   "id": "P40",
+   "quote": "This is a misnomer because in many cases these losses are more important than the losses due to pipe friction",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+  },
+  {
+   "id": "P41",
+   "quote": "Minor losses may be expressed in terms of the equivalent length (Leq) of pipe that would have the same head loss for the same discharge flow rate.",
+   "sec": "Head Loss",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+  },
+  {
+   "id": "P42",
+   "quote": "Circulation of fluid in systems by pumps is referred to as forced circulation.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.37"
+  },
+  {
+   "id": "P43",
+   "quote": "The head required to compensate for the head losses is created by density gradients and elevation changes. Flow that occurs under these circumstances is called natural circulation.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.37"
+  },
+  {
+   "id": "P44",
+   "quote": "Thermal driving head is the force that causes natural circulation to take place.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.37"
+  },
+  {
+   "id": "P45",
+   "quote": "Even after natural circulation has begun, removal of any one of these conditions will cause the natural circulation to stop.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.38"
+  },
+  {
+   "id": "P46",
+   "quote": "The heat source must be at a lower elevation than the heat sink.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.38"
+  },
+  {
+   "id": "P47",
+   "quote": "In general, the greater the temperature difference between the hot and cold areas of fluid, the greater the thermal driving head and the resulting flow rate.",
+   "sec": "Natural Circulation",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.39"
+  },
+  {
+   "id": "P48",
+   "quote": "the flow rates involved in natural circulation are typically below the sensitivity range of the flow instruments designed for forced flow",
+   "sec": "Natural Circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.35 Indications of Natural Circulation"
+  },
+  {
+   "id": "P49",
+   "quote": "A core exit temperature that rises initially and then stabilizes is a good indication of natural circulation flow.",
+   "sec": "Natural Circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.36 Indications of Natural Circulation"
+  },
+  {
+   "id": "P50",
+   "quote": "Air being heated by a sodium to air heat exchanger with stable sodium temperatures is also a good indication of natural circulation flow.",
+   "sec": "Natural Circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.36 Indications of Natural Circulation"
+  },
+  {
+   "id": "P51",
+   "quote": "Generally, removing more heat at the heat sink will enhance natural circulation flow, however care must be taken to avoid freezing the sodium, which would block natural circulation flow.",
+   "sec": "Natural Circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.38 Enhancing Natural Circulation"
+  },
+  {
+   "id": "P52",
+   "quote": "it can take 30 minutes or more before a new equilibrium is reached.",
+   "sec": "Natural Circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.38 Enhancing Natural Circulation"
+  },
+  {
+   "id": "P53",
+   "quote": "At certain important locations in fluid flow systems the simultaneous flow of liquid water and steam occurs, known as two-phase flow.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.41"
+  },
+  {
+   "id": "P54",
+   "quote": "Two-phase flow friction is greater than single-phase friction for the same conduit dimensions and mass flow rate.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.41"
+  },
+  {
+   "id": "P55",
+   "quote": "Other fluids can exhibit this behavior, for example, hydraulic fluid, oil and any of many liquid chemicals used at power plants.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.44 Two-Phase Flow"
+  },
+  {
+   "id": "P56",
+   "quote": "Bubbly flow: there is dispersion of vapor bubbles in a continuum of liquid.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P57",
+   "quote": "This generates the typical bullet-shaped bubbles that are characteristic of the slug-flow regime.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P58",
+   "quote": "Annular flow: the liquid is now distributed between a liquid film flowing up the wall and a dispersion of droplets flowing in the vapor core of the flow.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P59",
+   "quote": "Flow oscillations are variations in flow due to void formations or mechanical obstructions from design and manufacturing.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P60",
+   "quote": "sustained flow oscillations can cause undesirable forced mechanical vibration of components.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P61",
+   "quote": "the critical heat flux (CHF) required for departure from nucleate boiling (DNB) can be lowered by as much as 40% when flow is oscillating.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P62",
+   "quote": "Flow oscillations can be a problem during natural circulation operations because of the low flow rates present.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "id": "P63",
+   "quote": "If a pipe were to rupture, the reaction force created by the high velocity fluid jet could cause the piping to displace and cause extensive damage to components, instrumentation, and equipment in the area of the rupture.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+  },
+  {
+   "id": "P64",
+   "quote": "Water hammer is a liquid shock wave resulting from the sudden starting or stopping of flow.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+  },
+  {
+   "id": "P65",
+   "quote": "If the valve is closed slowly, the loss of kinetic energy is gradual.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+  },
+  {
+   "id": "P66",
+   "quote": "The shock wave caused by water hammer can be of sufficient magnitude to cause physical damage to piping, equipment, and personnel.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+  },
+  {
+   "id": "P67",
+   "quote": "A pressure spike is the resulting rapid rise in pressure above static pressure caused by water hammer.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+  },
+  {
+   "id": "P68",
+   "quote": "Steam hammer is a gaseous shock wave resulting from the sudden starting or stopping of flow.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.45"
+  },
+  {
+   "id": "P69",
+   "quote": "Flow changes in piping systems should be done slowly as part of good operator practice.",
+   "sec": "Two-Phase Fluid Flow",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.45"
+  },
+  {
+   "id": "P70",
+   "quote": "A transfer of momentum to the moving fluid increases the fluid’s velocity.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.47"
+  },
+  {
+   "id": "P71",
+   "quote": "The volute is a region of continuously increasing cross-sectional area designed to convert the kinetic energy of the fluid into fluid pressure.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.47"
+  },
+  {
+   "id": "P72",
+   "quote": "The formation of these vapor bubbles and their subsequent collapse is cavitation.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.48"
+  },
+  {
+   "id": "P73",
+   "quote": "they are damaged by erosion of the impeller, vibration, or some other cavitation-induced problem.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+  },
+  {
+   "id": "P74",
+   "quote": "Net positive suction head (NPSH) for a pump is the difference between the suction pressure and the saturation pressure of the fluid being pumped.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+  },
+  {
+   "id": "P75",
+   "quote": "By maintaining the available NPSH at a level greater than the NPSH required by the pump manufacturer, cavitation can be avoided.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+  },
+  {
+   "id": "P76",
+   "quote": "the flow rate or capacity is directly proportional to the pump speed; the discharge head is directly proportional to the square of the pump speed; and the power required by the pump motor is directly proportional to the cube of the pump speed.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+  },
+  {
+   "id": "P77",
+   "quote": "the system head loss must be directly proportional to the square of the volumetric flow rate.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.52"
+  },
+  {
+   "id": "P78",
+   "quote": "each pump must produce the same pump head. The total flow rate in the system, however, is the sum of the individual flow rates for each pump.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.53"
+  },
+  {
+   "id": "P79",
+   "quote": "the volumetric flow rate is actually less than twice the flow rate achieved by using a single pump.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.54"
+  },
+  {
+   "id": "P80",
+   "quote": "the head produced by both pumps is the sum of the individual heads.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.54"
+  },
+  {
+   "id": "P81",
+   "quote": "an increase in the system back pressure on the flowing stream causes a reduction in the magnitude of volumetric flow rate that the centrifugal pump can maintain.",
+   "sec": "Centrifugal Pumps",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.48"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Buoyancy",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.6 Buoyancy"
+  },
+  {
+   "step": "Pascal's Law",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.9 Pascal’s Law"
+  },
+  {
+   "step": "Volumetric flow rate",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.10 Volumetric Flow Rate"
+  },
+  {
+   "step": "Mass flow rate",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.16 Mass Flow Rate"
+  },
+  {
+   "step": "Continuity equation",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.20 Continuity Equation"
+  },
+  {
+   "step": "Flow regimes",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.39 Flow Regimes"
+  },
+  {
+   "step": "Reynolds number",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.42 Reynolds Number"
+  },
+  {
+   "step": "Viscosity",
+   "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.45 Viscosity"
+  },
+  {
+   "step": "Bernoulli's equation",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.4 Simplified Bernoullis Equation"
+  },
+  {
+   "step": "Extended Bernoulli",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.14 Extended Bernoulli's Equation"
+  },
+  {
+   "step": "Venturi",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.24 Applying Bernoulli’s Equation to a Venturi"
+  },
+  {
+   "step": "Head loss",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.27 Causes of Head Loss"
+  },
+  {
+   "step": "Cavitation",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.43 Cavitation"
+  },
+  {
+   "step": "Two-phase flow",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.44 Two-Phase Flow"
+  },
+  {
+   "step": "Water hammer",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.46 Water Hammer"
+  },
+  {
+   "step": "Natural circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.27 Natural Circulation"
+  },
+  {
+   "step": "Indications of natural circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.35 Indications of Natural Circulation"
+  },
+  {
+   "step": "Enhancing natural circulation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.37 Enhancing Natural Circulation"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Density and buoyancy",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Liquids are considered incompressible, so a pressure rise makes no real change in density. Gases are very compressible.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "When a body is placed in a fluid, it is buoyed up by a force equal to the weight of the fluid it displaces.",
+     "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.48 What happens to an object placed in a fluid according to the principle of buoyancy?"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q329",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What happens to a fluid's density and specific volume as temperature rises?",
+     "o": [
+      "Density decreases and specific volume increases",
+      "Density increases and specific volume decreases",
+      "Both increase",
+      "Both decrease"
+     ],
+     "a": 0,
+     "x": "As the temperature of the fluid increases, the density decreases and the specific volume increases.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.2",
+     "q": "How much fluid does a floating body displace?",
+     "o": [
+      "None",
+      "Half its weight",
+      "Its own weight of the fluid",
+      "Its own volume of the fluid"
+     ],
+     "a": 2,
+     "x": "A floating body displaces its own weight of the fluid in which it floats.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Pressure in a fluid",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig1",
+     "num": 1,
+     "cap": "Pressure Versus Depth",
+     "alt": "Tank of liquid with outlets at different depths; liquid leaves the lower outlets at higher velocity.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.3"
+    },
+    {
+     "t": "eq",
+     "text": "P = ρhg / gc",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.4"
+    },
+    {
+     "t": "p",
+     "text": "This pressure is directly proportional to the height of the column and the density of the fluid, and it",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig2",
+     "num": 2,
+     "cap": "Pascal’s Law",
+     "alt": "Liquid-filled container with pistons A to E; a 50 lbf force on piston A adds 50 lbf to each of the others.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.8"
+    },
+    {
+     "t": "p",
+     "text": "Static and dynamic pressure add to give total pressure in a fluid system.",
+     "cite": "Word: Fluid Statics and Dynamics - Part 1.docx, slide 1.49 What is total pressure in a fluid system?"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q315",
+     "eo": "1.3"
+    },
+    {
+     "existing": "Q317",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q75",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q331",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.3",
+     "q": "A fluid column's pressure at the bottom is NOT affected by which of these?",
+     "o": [
+      "The height of the column",
+      "The cross-sectional area of the column",
+      "The acceleration of gravity",
+      "The fluid density"
+     ],
+     "a": 1,
+     "x": "The pressure is proportional to height and density and is independent of the cross-sectional area.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Flow rates",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "eq",
+     "text": "V̇ = Av",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "ṁ = ρV̇ = ρAv",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Other common units for volumetric flow include gallons per minute. Mass flow rate may be in pounds-mass per hour.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "How is mass flow rate related to volumetric flow rate?",
+     "o": [
+      "They are equal",
+      "Mass flow rate is velocity times area",
+      "Mass flow rate is density times volumetric flow rate",
+      "Mass flow rate is volumetric flow rate divided by area"
+     ],
+     "a": 2,
+     "x": "ṁ = ρV̇.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.6",
+     "q": "Water at 62.44 lbm/ft³ flows at 1.22 ft³/sec. What is the mass flow rate?",
+     "o": [
+      "51.2 lbm/sec",
+      "62.4 lbm/sec",
+      "76.2 lbm/sec",
+      "122 lbm/sec"
+     ],
+     "a": 2,
+     "x": "(62.44 lbm/ft³)(1.22 ft³/sec) = 76.2 lbm/sec.",
+     "p": "P26"
+    }
+   ]
+  },
+  {
+   "title": "Conservation of mass and continuity",
+   "eo": [
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "eq",
+     "text": "(ρAv)inlet = (ρAv)outlet",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.11"
+    },
+    {
+     "t": "p",
+     "text": "With multiple inlets and outlets, the sum of the mass flow rates in equals the sum of the mass flow rates out.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q62",
+     "eo": "1.7"
+    },
+    {
+     "existing": "Q332",
+     "eo": "1.7"
+    },
+    {
+     "existing": "Q333",
+     "eo": "1.8"
+    },
+    {
+     "eo": "1.8",
+     "q": "What happens to flow velocity when a pipe's diameter decreases at steady state?",
+     "o": [
+      "It increases",
+      "It decreases",
+      "It does not change",
+      "It falls to zero"
+     ],
+     "a": 0,
+     "x": "The continuity equation shows a decrease in pipe diameter causes an increase in flow velocity.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Laminar and turbulent flow",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Laminar flow is also called streamline or viscous flow, with fluid particles moving in definite paths and:",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig5",
+     "num": 5,
+     "cap": "Laminar and Turbulent Flow Velocity Profiles",
+     "alt": "Velocity profiles in a pipe: a parabola for laminar flow and a flatter curve for turbulent flow, with smooth and rough pipe walls compared.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "For turbulent flow, the average velocity can be taken as the velocity at the center. For laminar flow, use half the center line value.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q34",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is the shape of the velocity profile for laminar flow in a pipe?",
+     "o": [
+      "Parabolic",
+      "Linear",
+      "Random",
+      "Flat"
+     ],
+     "a": 0,
+     "x": "In laminar flow the velocity distribution is parabolic, with the maximum at the center about twice the average.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is the fluid velocity at the pipe wall?",
+     "o": [
+      "Equal to the average",
+      "Twice the average",
+      "Equal to the center value",
+      "Essentially zero"
+     ],
+     "a": 3,
+     "x": "The velocity of the fluid in contact with the pipe wall is essentially zero.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Viscosity and ideal fluids",
+   "eo": [
+    "1.10",
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Viscosity can also be considered a measure of the resistance of a fluid to flowing.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Viscosity is relatively independent of pressure.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    },
+    {
+     "t": "p",
+     "text": "In gases, viscosity follows temperature changes, so gas viscosity increases with temperature.",
+     "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.31 Viscosity Loss"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Ideal fluids do not actually exist, but they can simplify a problem.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "For most fluids, what happens to viscosity as temperature rises?",
+     "o": [
+      "It doubles",
+      "It rises",
+      "It falls",
+      "It does not change"
+     ],
+     "a": 2,
+     "x": "For most fluids, as temperature increases, viscosity decreases.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.12",
+     "q": "What describes an ideal fluid?",
+     "o": [
+      "A fluid with constant temperature only",
+      "Incompressible with no viscosity",
+      "Compressible with high viscosity",
+      "A fluid at saturation"
+     ],
+     "a": 1,
+     "x": "An ideal fluid is one that is incompressible and has no viscosity.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Reynolds number",
+   "eo": [
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The flow regime is determined by evaluating the Reynolds number, a dimensionless number from the physical characteristics of the flow.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    },
+    {
+     "t": "eq",
+     "text": "NR = ρvD / µgc",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Flows between 2000 and 3500 are sometimes referred to as transitional flows.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q63",
+     "eo": "1.13"
+    },
+    {
+     "existing": "Q330",
+     "eo": "1.13"
+    },
+    {
+     "eo": "1.13",
+     "q": "A flow has a Reynolds number of 5000. What is the flow regime?",
+     "o": [
+      "Ideal",
+      "Laminar",
+      "Transitional",
+      "Turbulent"
+     ],
+     "a": 3,
+     "x": "If the Reynolds number is greater than 3500, the flow is turbulent.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Bernoulli's equation and head",
+   "eo": [
+    "1.14",
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "eq",
+     "text": "(PE + KE + PV)1 = (PE + KE + PV)2",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.22"
+    },
+    {
+     "t": "p",
+     "text": "If one form of energy increases, one or more of the others will decrease to compensate.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "It refers to the height, typically in feet, of a column of water that a given pressure will support. The elevation, velocity, and pressure heads represent potential, kinetic, and flow energy.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q35",
+     "eo": "1.14"
+    },
+    {
+     "existing": "Q335",
+     "eo": "1.15"
+    },
+    {
+     "eo": "1.15",
+     "q": "Which head represents the kinetic energy of a fluid?",
+     "o": [
+      "Velocity head",
+      "Pressure head",
+      "Friction head",
+      "Elevation head"
+     ],
+     "a": 0,
+     "x": "The velocity head represents the kinetic energy of the fluid.",
+     "p": "P25"
+    }
+   ]
+  },
+  {
+   "title": "Energy conversions in a pipe",
+   "eo": [
+    "1.16",
+    "1.17"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In a gradual expansion, the continuity equation requires velocity to fall, so velocity head falls. If the pipe is horizontal, pressure head must rise.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "In a constant diameter pipe that drops in elevation, flow velocity and velocity head must stay constant.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.23"
+    },
+    {
+     "t": "p",
+     "text": "So the decrease in elevation head can only be compensated for by an increase in pressure head.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.24"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "An ideal fluid flows through a horizontal pipe that gradually expands. What happens to its pressure?",
+     "o": [
+      "It falls",
+      "It stays the same",
+      "It drops to zero",
+      "It rises"
+     ],
+     "a": 3,
+     "x": "A decrease in flow velocity in a horizontal pipe results in an increase in pressure.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Extended Bernoulli",
+   "eo": [
+    "1.18",
+    "1.19"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "eq",
+     "text": "z1 + v1²/2g + P1ν1(gc/g) + Hp = z2 + v2²/2g + P2ν2(gc/g) + Hf",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+    },
+    {
+     "t": "p",
+     "text": "Hp is head added by a pump, and Hf is head loss due to fluid friction.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q334",
+     "eo": "1.19"
+    },
+    {
+     "eo": "1.18",
+     "q": "What two restrictions apply to the simplified Bernoulli equation?",
+     "o": [
+      "No gravity and no pressure",
+      "No pipes and no elevation change",
+      "No fluid friction and no work on or by the fluid",
+      "No density and no velocity"
+     ],
+     "a": 2,
+     "x": "No fluid friction is allowed, and no work is allowed to be done on or by the fluid.",
+     "p": "P30"
+    }
+   ]
+  },
+  {
+   "title": "The venturi",
+   "eo": [
+    "1.20"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig6",
+     "num": 6,
+     "cap": "Venturi Meter",
+     "alt": "Venturi tube with a narrowing throat, connected to a U-tube manometer between the inlet at point 1 and the throat at point 2.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.27"
+    },
+    {
+     "t": "p",
+     "text": "Measuring the differential pressure between the inlet and throat lets flow velocity and mass flow rate be found from Bernoulli's equation.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.20",
+     "q": "How is volumetric flow rate through a venturi related to differential pressure?",
+     "o": [
+      "Inversely proportional to differential pressure",
+      "Proportional to the square of differential pressure",
+      "Directly proportional to differential pressure",
+      "Directly proportional to the square root of differential pressure"
+     ],
+     "a": 3,
+     "x": "Flow velocity and volumetric flow rate are directly proportional to the square root of the differential pressure.",
+     "p": "P34"
+    }
+   ]
+  },
+  {
+   "title": "Head loss and friction",
+   "eo": [
+    "1.21",
+    "1.22",
+    "1.23"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "Head loss comes from friction with the pipe walls, friction between fluid particles, and turbulence when flow is redirected.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "Head loss is inversely proportional to the diameter of the pipe.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "eq",
+     "text": "Hf = f (L/D)(v²/2g)",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.32"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q19",
+     "eo": "1.21"
+    },
+    {
+     "existing": "Q37",
+     "eo": "1.22"
+    },
+    {
+     "existing": "Q336",
+     "eo": "1.23"
+    },
+    {
+     "eo": "1.23",
+     "q": "If fluid velocity doubles in a pipe, what happens to frictional head loss?",
+     "o": [
+      "It rises by a factor of four",
+      "It halves",
+      "It stays the same",
+      "It doubles"
+     ],
+     "a": 0,
+     "x": "Head loss is directly proportional to the square of the fluid velocity.",
+     "p": "P37"
+    }
+   ]
+  },
+  {
+   "title": "Minor losses",
+   "eo": [
+    "1.21",
+    "1.24"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "eq",
+     "text": "Hf = k (v²/2g)",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "eq",
+     "text": "Leq = k (D/f)",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+    },
+    {
+     "t": "p",
+     "text": "Multiply the Leq/D value for a component by the pipe diameter to find its equivalent length.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.34"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Conventional globe valve: 400",
+      "Gate valve fully open: 10",
+      "Gate valve 50% open: 150",
+      "90° standard elbow: 30"
+     ],
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.35"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q36",
+     "eo": "1.21"
+    },
+    {
+     "existing": "Q64",
+     "eo": "1.24"
+    },
+    {
+     "eo": "1.21",
+     "q": "Why is the term minor losses a misnomer?",
+     "o": [
+      "They are often more important than pipe friction losses",
+      "They do not exist",
+      "They only occur in gases",
+      "They only occur in straight pipe"
+     ],
+     "a": 0,
+     "x": "In many cases these losses are more important than the losses due to pipe friction.",
+     "p": "P40"
+    }
+   ]
+  },
+  {
+   "title": "Natural circulation",
+   "eo": [
+    "1.25",
+    "1.26",
+    "1.27"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "Thermal driving head is caused by the difference in density between two bodies or areas of fluid.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.37"
+    },
+    {
+     "t": "p",
+     "text": "The hotter fluid has lower density, so gravity tends to cause it to rise and the colder fluid to sink.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.38"
+    },
+    {
+     "t": "list",
+     "items": [
+      "A temperature difference exists (heat source and heat sink exist)",
+      "The heat source is at a lower elevation than the heat sink",
+      "The fluids must be in contact with each other"
+     ],
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "A reactor produces heat even after shutdown, so the design must remove heat through an extended loss of power.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.27 Natural Circulation"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q4",
+     "eo": "1.26"
+    },
+    {
+     "existing": "Q33",
+     "eo": "1.27"
+    },
+    {
+     "eo": "1.27",
+     "q": "Where must the heat source be relative to the heat sink for natural circulation?",
+     "o": [
+      "Elevation does not matter",
+      "At a lower elevation",
+      "At a higher elevation",
+      "At the same elevation"
+     ],
+     "a": 1,
+     "x": "The heat source must be at a lower elevation than the heat sink.",
+     "p": "P46",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "1.25",
+     "q": "What is forced circulation?",
+     "o": [
+      "Flow from a high tank",
+      "Circulation of fluid by pumps",
+      "Circulation from density differences",
+      "Flow through a venturi"
+     ],
+     "a": 1,
+     "x": "Circulation of fluid in systems by pumps is referred to as forced circulation.",
+     "p": "P42",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Natural circulation in a sodium plant",
+   "eo": [
+    "1.28",
+    "1.29",
+    "1.30"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "Natural circulation is usually harder to maintain in two-phase flow.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.39"
+    },
+    {
+     "t": "p",
+     "text": "Decay heat drops slowly after a scram, and both power and temperature difference are related to natural circulation flow rate.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.29 Natural Circulation"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "p",
+     "text": "That means flow must be inferred from temperature instruments rather than measured directly.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.35 Indications of Natural Circulation"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "p",
+     "text": "Operators cannot change the heat produced at the source after a scram, so the only thing they can affect is heat removal at the sink.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.38 Enhancing Natural Circulation"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q65",
+     "eo": "1.28"
+    },
+    {
+     "existing": "Q307",
+     "eo": "1.28"
+    },
+    {
+     "existing": "Q308",
+     "eo": "1.28"
+    },
+    {
+     "eo": "1.29",
+     "q": "Why must natural circulation in the sodium system be inferred from temperature instruments?",
+     "o": [
+      "Flow instruments are removed after a scram",
+      "Natural circulation has no flow",
+      "Its flow rates are typically below the sensitivity range of forced flow instruments",
+      "Sodium has no temperature"
+     ],
+     "a": 2,
+     "x": "Natural circulation flow rates are typically below the sensitivity range of flow instruments designed for forced flow.",
+     "p": "P48",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "1.29",
+     "q": "Which core exit temperature behavior indicates natural circulation flow?",
+     "o": [
+      "Rises initially and then stabilizes",
+      "Rises without stopping",
+      "Falls to the freezing point",
+      "Oscillates rapidly"
+     ],
+     "a": 0,
+     "x": "A core exit temperature that rises initially and then stabilizes is a good indication of natural circulation flow.",
+     "p": "P49",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "1.30",
+     "q": "When enhancing natural circulation by removing more heat at the sink, what must be avoided?",
+     "o": [
+      "Raising the sodium level",
+      "Starting the core",
+      "Closing the air path to the reactor building",
+      "Freezing the sodium"
+     ],
+     "a": 3,
+     "x": "Care must be taken to avoid freezing the sodium, which would block natural circulation flow.",
+     "p": "P51",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Two-phase flow",
+   "eo": [
+    "1.31",
+    "1.32"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "p",
+     "text": "The two-phase friction multiplier (R) is the two-phase head loss divided by the head loss evaluated with saturated liquid properties. R is much higher at lower pressures.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "p",
+     "text": "Slug flow: bubbles grow by coalescence until they are about the diameter of the tube.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.31",
+     "q": "How does two-phase flow friction compare with single-phase friction for the same conduit and mass flow?",
+     "o": [
+      "It is less",
+      "It is equal",
+      "It is zero",
+      "It is greater"
+     ],
+     "a": 3,
+     "x": "Two-phase flow friction is greater than single-phase friction for the same conduit dimensions and mass flow rate.",
+     "p": "P54"
+    },
+    {
+     "eo": "1.32",
+     "q": "Which two-phase flow pattern has a liquid film on the wall and droplets in a vapor core?",
+     "o": [
+      "Bubbly flow",
+      "Slug flow",
+      "Annular flow",
+      "Laminar flow"
+     ],
+     "a": 2,
+     "x": "In annular flow, the liquid is distributed between a film on the wall and droplets in the vapor core.",
+     "p": "P58"
+    }
+   ]
+  },
+  {
+   "title": "Flow oscillations",
+   "eo": [
+    "1.33",
+    "1.34"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "Unstable flow can occur in the form of flow oscillations or flow reversals.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "p",
+     "text": "Conditions that cause oscillations and instabilities include a core outside design conditions, a mechanical failure causing flow blockage, and inadequate core cooling during natural circulation, such that boiling is occurring.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.46"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.33",
+     "q": "Which problem can sustained flow oscillations cause?",
+     "o": [
+      "Lower fluid viscosity",
+      "A higher critical heat flux",
+      "Component failure from fatigue due to forced vibration",
+      "Lower system pressure in all cases"
+     ],
+     "a": 2,
+     "x": "Sustained oscillations can cause undesirable forced mechanical vibration, which can lead to failure due to fatigue.",
+     "p": "P60"
+    }
+   ]
+  },
+  {
+   "title": "Pipe whip and water hammer",
+   "eo": [
+    "1.35",
+    "1.36"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "p",
+     "text": "This type of failure is analyzed to minimize damage near safety-related equipment.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "p",
+     "text": "It is also known as fluid hammer.",
+     "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.46 Water Hammer"
+    },
+    {
+     "t": "p",
+     "text": "It is affected by initial system pressure, fluid density, the speed of sound in the fluid, elasticity of the fluid and pipe, the change in fluid velocity, pipe diameter and thickness, and valve operating time.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "p",
+     "text": "A quick closure loses kinetic energy very rapidly, and that rapid loss produces a shock wave.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "eq",
+     "text": "∆P = ρc∆v / gc",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q337",
+     "eo": "1.36"
+    },
+    {
+     "existing": "Q338",
+     "eo": "1.36"
+    },
+    {
+     "existing": "Q339",
+     "eo": "1.36"
+    },
+    {
+     "eo": "1.36",
+     "q": "What is water hammer?",
+     "o": [
+      "Vapor bubbles collapsing on an impeller",
+      "Slow erosion of a pipe",
+      "Natural circulation stopping",
+      "A liquid shock wave from the sudden starting or stopping of flow"
+     ],
+     "a": 3,
+     "x": "Water hammer is a liquid shock wave resulting from the sudden starting or stopping of flow.",
+     "p": "P64"
+    },
+    {
+     "eo": "1.35",
+     "q": "What causes pipe whip?",
+     "o": [
+      "Natural circulation",
+      "The reaction force of a high velocity fluid jet after a pipe rupture",
+      "Slow valve operation",
+      "Low fluid viscosity"
+     ],
+     "a": 1,
+     "x": "After a rupture, the reaction force of the fluid jet could displace the piping.",
+     "p": "P63"
+    }
+   ]
+  },
+  {
+   "title": "Steam hammer",
+   "eo": [
+    "1.36"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "p",
+     "text": "Steam hammer is less severe than water hammer because the steam's compressibility dampens the shock wave, the speed of sound in steam is about one third that in water, and steam is about 1600 times less dense.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.45"
+    },
+    {
+     "t": "p",
+     "text": "To prevent water and steam hammer, ensure liquid systems are properly vented and gaseous or steam systems are properly drained during start-up.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.45"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.36",
+     "q": "Why is steam hammer less severe than water hammer?",
+     "o": [
+      "Steam flows only in small pipes",
+      "Steam's compressibility dampens the shock wave",
+      "Steam is denser than water",
+      "Steam has a higher speed of sound than water"
+     ],
+     "a": 1,
+     "x": "Steam's compressibility dampens the shock wave, and steam has a lower speed of sound and much lower density.",
+     "p": "P68",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cavitation and NPSH",
+   "eo": [
+    "1.37"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "p",
+     "text": "Pressure falls where liquid enters the eye of the pump. If it falls below the saturation pressure, vapor bubbles form. Those bubbles collapse as pressure rises along the impeller.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "eq",
+     "text": "NPSH = Psuction - Psaturation",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q38",
+     "eo": "1.37"
+    },
+    {
+     "existing": "Q340",
+     "eo": "1.37"
+    },
+    {
+     "eo": "1.37",
+     "q": "How can cavitation be avoided?",
+     "o": [
+      "Keep available NPSH above the NPSH required by the manufacturer",
+      "Keep suction pressure below saturation",
+      "Raise pump speed",
+      "Heat the suction fluid"
+     ],
+     "a": 0,
+     "x": "Maintaining available NPSH greater than the required NPSH avoids cavitation.",
+     "p": "P75",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    },
+    {
+     "eo": "1.37",
+     "q": "What does the volute of a centrifugal pump do?",
+     "o": [
+      "Removes vapor bubbles",
+      "Converts kinetic energy of the fluid into pressure",
+      "Adds heat to the fluid",
+      "Measures flow"
+     ],
+     "a": 1,
+     "x": "The volute has a continuously increasing area designed to convert kinetic energy into fluid pressure.",
+     "p": "P71",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Pump laws",
+   "eo": [
+    "1.38"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "eq",
+     "text": "V̇ ∝ n    Hp ∝ n²    p ∝ n³",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.49"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig8",
+     "num": 8,
+     "cap": "Changing Speeds for Centrifugal Pump",
+     "alt": "Pump head against flow at two speeds, with the higher speed curve above the lower one.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.51"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q39",
+     "eo": "1.38"
+    },
+    {
+     "eo": "1.38",
+     "q": "A pump at 1800 rpm uses 45 kW. What power does it need at 3600 rpm?",
+     "o": [
+      "90 kW",
+      "180 kW",
+      "270 kW",
+      "360 kW"
+     ],
+     "a": 3,
+     "x": "Power varies with the cube of speed, and 45 (2)³ = 360 kW.",
+     "p": "P76",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Pump and system curves",
+   "eo": [
+    "1.39"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P81"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig7",
+     "num": 7,
+     "cap": "Typical Centrifugal Pump Characteristic Curve",
+     "alt": "Pump head falling as volumetric flow rate rises at one pump speed.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P77"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig9",
+     "num": 9,
+     "cap": "Typical System Head Loss Curve",
+     "alt": "System head loss rising as a parabola with volumetric flow rate.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.52"
+    },
+    {
+     "t": "p",
+     "text": "Graphing the system curve and the pump curve together identifies the point at which the pump must operate.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.52"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig10",
+     "num": 10,
+     "cap": "Operating Point for a Centrifugal Pump",
+     "alt": "Pump curve crossing two system curves; opening a valve moves the operating point to higher flow and lower head.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.52"
+    },
+    {
+     "t": "p",
+     "text": "Opening a valve reduces the system's resistance, so the pump maintains a larger flow rate at a smaller pump head.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.53"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q66",
+     "eo": "1.39"
+    },
+    {
+     "eo": "1.39",
+     "q": "How does system head loss vary with volumetric flow rate?",
+     "o": [
+      "Directly with the square of the flow rate",
+      "Directly with the flow rate",
+      "Inversely with the flow rate",
+      "It does not vary"
+     ],
+     "a": 0,
+     "x": "System head loss is directly proportional to the square of the volumetric flow rate.",
+     "p": "P77",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Pumps in parallel and series",
+   "eo": [
+    "1.39"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P78"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig11",
+     "num": 11,
+     "cap": "Pump Characteristic Curve for Two Identical Centrifugal Pumps Used in Parallel",
+     "alt": "Curves for one pump and two pumps in parallel: at each head, the parallel curve has twice the flow.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.53"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig12",
+     "num": 12,
+     "cap": "Operating Point for Two Parallel Centrifugal Pumps",
+     "alt": "Operating points for one and two parallel pumps on a system curve.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.54"
+    },
+    {
+     "t": "quote",
+     "p": "P79"
+    },
+    {
+     "t": "quote",
+     "p": "P80"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig13",
+     "num": 13,
+     "cap": "Pump Characteristic Curve for Two Identical Centrifugal Pumps Used in Series",
+     "alt": "Curves for one pump and two pumps in series: at each flow, the series curve has twice the head.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.54"
+    },
+    {
+     "t": "fig",
+     "id": "ht-03-fig14",
+     "num": 14,
+     "cap": "Operating Point for Two Centrifugal Pumps in Series",
+     "alt": "Operating points for one and two series pumps on a system curve.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.55"
+    },
+    {
+     "t": "p",
+     "text": "Pumps in series provide adequate pump head and also maintain a slightly higher volumetric flow rate.",
+     "cite": "DOE-HDBK-1012/3-92 HT-03 p.55"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q40",
+     "eo": "1.39"
+    },
+    {
+     "eo": "1.39",
+     "q": "Two identical centrifugal pumps run in parallel. How does system flow compare with one pump?",
+     "o": [
+      "Higher, but less than twice",
+      "The same",
+      "Lower",
+      "Exactly twice"
+     ],
+     "a": 0,
+     "x": "The greater system head means the flow rate is actually less than twice that of one pump.",
+     "p": "P79",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    },
+    {
+     "eo": "1.39",
+     "q": "For two identical centrifugal pumps in series, how is the combined curve found?",
+     "o": [
+      "Multiply the speeds",
+      "Subtract the head losses",
+      "Add the individual heads at any given flow",
+      "Add the individual flows at any given head"
+     ],
+     "a": 2,
+     "x": "The head produced by both pumps is the sum of the individual heads.",
+     "p": "P80",
+     "place": [
+      "Components",
+      "Pumps"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Pressure at depth",
+   "eo": "1.3",
+   "page": 5,
+   "problem": "A tank is filled with water at 62.4 lbm/ft³. What is the pressure at a depth of 10 feet?",
+   "steps": [
+    "P = ρhg/gc = 624 lbf/ft²",
+    "(624 lbf/ft²)(1 ft²/144 in²)"
+   ],
+   "answer": "4.33 lbf/in²",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.5"
+  },
+  {
+   "title": "Volumetric flow rate",
+   "eo": "1.6",
+   "page": 9,
+   "problem": "A pipe with an inner diameter of 4 inches has water flowing at 14 ft/sec. Find the volumetric flow rate.",
+   "steps": [
+    "V̇ = (πr²)v",
+    "V̇ = (3.14)(2/12 ft)²(14 ft/sec)"
+   ],
+   "answer": "1.22 ft³/sec",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.9"
+  },
+  {
+   "title": "Mass flow rate",
+   "eo": "1.6",
+   "page": 10,
+   "problem": "The water has a density of 62.44 lbm/ft³ and the flow is 1.22 ft³/sec. Find the mass flow rate.",
+   "steps": [
+    "ṁ = ρV̇",
+    "ṁ = (62.44)(1.22)"
+   ],
+   "answer": "76.2 lbm/sec",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.10"
+  },
+  {
+   "title": "Piping expansion",
+   "eo": "1.8",
+   "page": 12,
+   "problem": "Steady flow goes from a 6 in. pipe at 22.4 ft/sec to an 8 in. pipe at constant density. Find the velocity in the 8 in. section.",
+   "steps": [
+    "ρ1A1v1 = ρ2A2v2",
+    "v2 = v1 (πr1²/πr2²)",
+    "v2 = 22.4 (3 in)²/(4 in)²"
+   ],
+   "answer": "12.6 ft/sec",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.12"
+  },
+  {
+   "title": "Multiple outlets",
+   "eo": "1.8",
+   "page": 15,
+   "problem": "500 lbm/sec enters a Y. The 10 in. leg (0.545 ft²) flows at 10 ft/sec, and the 8 in. leg is 0.349 ft². Density is 62.4 lbm/ft³. Find the velocity in the 8 in. leg.",
+   "steps": [
+    "ṁ8 = ṁ12 - ṁ10",
+    "v8 = (500 - (62.4)(0.545)(10))/((62.4)(0.349))"
+   ],
+   "answer": "7.3 ft/sec",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.15"
+  },
+  {
+   "title": "Bernoulli in a conical pipe",
+   "eo": "1.17",
+   "page": 24,
+   "problem": "Frictionless flow at 125.6 ft³/sec passes through a horizontal cone from 2.0 ft to 4.0 ft diameter. Pressure head at the small end is 16 ft. Find the velocities and the head at the large end.",
+   "steps": [
+    "v1 = 125.6/π(1 ft)² = 40 ft/sec",
+    "v2 = 125.6/π(2 ft)² = 10 ft/sec",
+    "Head = 16 ft + (40² - 10²)/2(32.17)"
+   ],
+   "answer": "39.3 ft",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.24"
+  },
+  {
+   "title": "Pump head with Extended Bernoulli",
+   "eo": "1.19",
+   "page": 27,
+   "problem": "A system has a 65 ft elevation increase, v1 = 0, v2 = 0.178 ft/sec, and 2 ft of friction head. Find the pump head Hp.",
+   "steps": [
+    "Hp = (z2 - z1) + (v2² - v1²)/2g + 0 + Hf",
+    "The velocity term is negligible"
+   ],
+   "answer": "67 ft",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.27"
+  },
+  {
+   "title": "Darcy head loss",
+   "eo": "1.23",
+   "page": 33,
+   "problem": "Flow at 5.35 ft/sec passes through 100 ft of 20 in. pipe, with friction factor f = 0.012. Find the head loss.",
+   "steps": [
+    "Hf = f (L/D)(v²/2g)",
+    "Hf = 0.012 (100 ft / (20/12 ft)) (5.35²/2(32.17))"
+   ],
+   "answer": "0.32 ft",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.33"
+  },
+  {
+   "title": "Equivalent length of a valve",
+   "eo": "1.24",
+   "page": 35,
+   "problem": "A fully open gate valve is in a 10 in. pipe. Find the equivalent length.",
+   "steps": [
+    "Leq = (L/D) D",
+    "Leq = 10 (10 inches)"
+   ],
+   "answer": "100 inches",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.35"
+  },
+  {
+   "title": "Pump laws",
+   "eo": "1.38",
+   "page": 51,
+   "problem": "A pump at 1800 rpm has a head of 48 ft and uses 45 kW. Find head and power at 3600 rpm.",
+   "steps": [
+    "Head: 48 ft (3600/1800)²",
+    "Power: 45 kW (3600/1800)³"
+   ],
+   "answer": "192 ft and 360 kW",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.51"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is thermal driving head?",
+   "a": "The force that causes natural circulation, caused by the difference in density between two areas of fluid.",
+   "p": "P44",
+   "place": [
+    "Thermodynamics",
+    "Thermal Hydraulics"
+   ]
+  },
+  {
+   "q": "What are the Reynolds number limits for flow regimes?",
+   "a": "Below 2000 is laminar. Above 3500 is turbulent. Between them is transitional.",
+   "p": "P21",
+   "place": null
+  },
+  {
+   "q": "What is the term head with respect to fluid flow?",
+   "a": "A reference to pressure, as the height in feet of a column of water that a given pressure will support.",
+   "p": "P24",
+   "place": null
+  },
+  {
+   "q": "What are the pump laws?",
+   "a": "Flow varies with speed, head with the square of speed, and power with the cube of speed.",
+   "p": "P76",
+   "place": [
+    "Components",
+    "Pumps"
+   ]
+  },
+  {
+   "q": "What is cavitation?",
+   "a": "The formation of vapor bubbles and their subsequent collapse in a pump.",
+   "p": "P72",
+   "place": [
+    "Components",
+    "Pumps"
+   ]
+  },
+  {
+   "q": "How does a venturi measure flow?",
+   "a": "Flow is proportional to the square root of the differential pressure between its inlet and throat.",
+   "p": "P34",
+   "place": null
+  },
+  {
+   "q": "What is two-phase flow?",
+   "a": "The simultaneous flow of liquid and vapor, such as water and steam.",
+   "p": "P53",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "What are the indications of natural circulation in the sodium system?",
+   "a": "Core exit temperature rising initially and then stabilizing, and air heated by a sodium to air heat exchanger with stable sodium temperatures.",
+   "p": "P49",
+   "place": [
+    "Thermodynamics",
+    "Thermal Hydraulics"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "The principle of conservation of mass gives the continuity equation for a control volume.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.16"
+  },
+  {
+   "text": "Laminar flow has a parabolic velocity profile, and turbulent flow is fairly flat across the center of a pipe.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.20"
+  },
+  {
+   "text": "An increasing Reynolds number indicates an increasing turbulence of flow.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.20"
+  },
+  {
+   "text": "Bernoulli's equation is an application of the First Law of Thermodynamics, and it can be modified to take into account friction losses and pump work.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.30"
+  },
+  {
+   "text": "Head loss is the reduction in the total head of a fluid caused by friction in the fluid's motion.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.36"
+  },
+  {
+   "text": "Natural circulation needs a heat source, a heat sink above it, and flowpaths between the warm and cold fluid.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.40"
+  },
+  {
+   "text": "Water hammer is a liquid shock wave from a sudden starting or stopping of flow.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.46"
+  },
+  {
+   "text": "Pump laws give the effect of speed on flow, head, and power, and the operating point is where the pump and system curves cross.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.56"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "User decision",
+   "note": "Two-phase flow and steam hammer are kept, on pages tagged Water-system only. Flow oscillations rest on the same two-phase material, so that page has the same tag. PWR natural circulation checks on p.39 to p.40 are removed, and sodium indications from Thermal Hydraulics.docx are used for objectives 1.29 and 1.30. Decided Nov 5, 2026.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.39"
+  },
+  {
+   "type": "User decision",
+   "note": "The reactor coolant pump example on p.13 is left off because it is tied to a water reactor coolant system. Generic examples that use water as the fluid are kept without a tag.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.13"
+  },
+  {
+   "type": "Rule 8",
+   "note": "p.42 says coolant is also used as the moderator. That reason for flow oscillation trouble, and the PWR power level on p.42, are left off.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.42"
+  },
+  {
+   "type": "Handbook error",
+   "note": "The pressure spike example on p.44 prints 92,631 lbf/ft², but its numbers with gc = 32.17 give about 92,717. The example is left off.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.44"
+  },
+  {
+   "type": "Scope",
+   "note": "Natural circulation cooling of fuel in pools of water on p.39 is left off. Cavitation on p.48 says the liquid flashes to steam, and the page uses the general vapor wording instead.",
+   "cite": "DOE-HDBK-1012/3-92 HT-03 p.39"
+  },
+  {
+   "type": "Word claim",
+   "note": "Fluid Statics and Dynamics - Part 2.docx says head loss rises exponentially with flow, where the handbook says with the square of velocity. The lesson uses the handbook.",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.57 What happens to head loss when the system flow is raised?"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Sonic flow on Part 2 slide 1.26 and positive displacement pump slides are outside these handbook objectives and are left off.",
+   "cite": "Word: Fluid Statics and Dynamics - Part 2.docx, slide 1.26 Venturi Sonic (Choke) Flow"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

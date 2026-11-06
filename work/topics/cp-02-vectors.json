@@ -1,0 +1,719 @@
+{
+ "module_id": "CP-02",
+ "slug": "cp-02-vectors",
+ "title": "Vectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1010",
+ "handbook": "DOE-HDBK-1010-92",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Basic Energy Concepts",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Using vectors, DETERMINE the net force acting on an object.",
+   "items": [],
+   "page": {
+    "pdf": 43,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following as they relate to vectors:",
+     "items": [
+      "a. Scalar quantity",
+      "b. Vector quantity",
+      "c. Vector component",
+      "d. Resultant"
+     ],
+     "page": {
+      "pdf": 43,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DETERMINE components of a vector from a resultant vector.",
+     "items": [],
+     "page": {
+      "pdf": 43,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "ADD vectors using the following methods:",
+     "items": [
+      "a. Graphical",
+      "b. Component addition",
+      "c. Analytical"
+     ],
+     "page": {
+      "pdf": 43,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "A scalar quantity is defined as a quantity that has magnitude only.",
+   "sec": "Scalar and Vector Quantities",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "A vector quantity is defined as a quantity that has both magnitude and direction.",
+   "sec": "Scalar and Vector Quantities",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Typical examples of scalar quantities are time, speed, temperature, and volume.",
+   "sec": "Scalar and Vector Quantities",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Displacement, velocity, acceleration, and force are examples of vector quantities.",
+   "sec": "Scalar and Vector Quantities",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "The length of the line represents the magnitude of the vector, and the arrow represents the direction of the vector.",
+   "sec": "Scalar and Vector Quantities",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "The intersection of the axes is called the point of origin.",
+   "sec": "Vector Identification",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "the line segment can be rotated counterclockwise from the x-axis to the proper orientation",
+   "sec": "Vector Identification",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "A resultant vector is the result or sum of vector addition.",
+   "sec": "Vectors: Resultants and Components",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.8"
+  },
+  {
+   "id": "P9",
+   "quote": "Components of a vector are vectors, which when added, yield the vector.",
+   "sec": "Vectors: Resultants and Components",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.10"
+  },
+  {
+   "id": "P10",
+   "quote": "Trigonometry may also be used to determine vector components.",
+   "sec": "Vectors: Resultants and Components",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+  },
+  {
+   "id": "P11",
+   "quote": "Either one of these methods will provide fairly accurate results.",
+   "sec": "Graphic Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.16"
+  },
+  {
+   "id": "P12",
+   "quote": "If a high degree of accuracy is required, an analytical method using geometric and trigonometric functions is required.",
+   "sec": "Graphic Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.16"
+  },
+  {
+   "id": "P13",
+   "quote": "Always start the tail of the new vector at the head of the previous vector.",
+   "sec": "Graphic Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.17"
+  },
+  {
+   "id": "P14",
+   "quote": "from the point of origin of the axes to the head of the final vector.",
+   "sec": "Graphic Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.17"
+  },
+  {
+   "id": "P15",
+   "quote": "Mathematically combine all x-axis components.",
+   "sec": "Component Addition Method",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.20"
+  },
+  {
+   "id": "P16",
+   "quote": "The Pythagorean Theorem states that in any right triangle, the square of the length of the hypotenuse equals the sum of the squares of the lengths of the other two sides.",
+   "sec": "Analytical Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.23"
+  },
+  {
+   "id": "P17",
+   "quote": "calculators will specify angles in quadrants I and IV only.",
+   "sec": "Analytical Method of Vector Addition",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.24"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Scalars and vectors",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Density, mass, and energy are additional examples of scalar quantities.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "A car moving at 50 miles per hour describes speed, a scalar. The same car traveling at 50 mph due east describes velocity, a vector, because it has magnitude and direction.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Vectors have a starting point at one end (tail) and an arrow at the opposite end (head).",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig2",
+     "num": 2,
+     "cap": "Vector",
+     "alt": "A horizontal arrow with its tail labeled at the left end and its head labeled at the right end.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which of these is a vector quantity?",
+     "o": [
+      "Temperature",
+      "Volume",
+      "Time",
+      "Force"
+     ],
+     "a": 3,
+     "x": "Displacement, velocity, acceleration, and force are examples of vector quantities. Temperature, volume, and time have magnitude only.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Locating vectors on a graph",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Vector quantities are graphed on the rectangular coordinate system, a two-dimensional system that uses an x-axis and a y-axis.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Values to the right of the origin on the x-axis are positive and values to the left are negative. On the y-axis, values above the origin are positive and values below it are negative.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "It is very important to use the same units on both axes.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Quadrant I is above and to the right of the origin, quadrant II is above and to the left, quadrant III is below and to the left, and quadrant IV is below and to the right.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig3",
+     "num": 3,
+     "cap": "Rectangular Coordinate System",
+     "alt": "Rectangular coordinate system with x and y axes crossing at the origin, marked in equal divisions, and quadrants I to IV labeled.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "A vector's tail goes at the point of origin. Its head is located from (x,y) coordinates, or by rotating the line segment counterclockwise from the x-axis when the vector is described in degrees.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A vector is described in degrees. How is its line segment positioned?",
+     "o": [
+      "Rotated clockwise from the y-axis",
+      "Rotated counterclockwise from the x-axis",
+      "Drawn from the head toward the origin",
+      "Rotated clockwise from the x-axis"
+     ],
+     "a": 1,
+     "x": "If the vector is described in degrees, the line segment can be rotated counterclockwise from the x-axis to the proper orientation.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Resultants and components",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "A resultant is a single vector that can replace two or more vectors.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "Walking five miles east and then three miles east gives a resultant displacement of eight miles. Walking five miles east and then three miles west gives two miles east.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.8"
+    },
+    {
+     "t": "p",
+     "text": "Four miles east and then three miles north gives a resultant of 5 miles at 37 degrees north of east.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig10",
+     "num": 10,
+     "cap": "Vector Addition Not in Same Line",
+     "alt": "Right triangle on a scale drawing: 4 miles east, then 3 miles north, with the resultant of 5 miles drawn from the origin at 37 degrees.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Components can be obtained for any two non-parallel directions if the vectors are in the same plane.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "To find components graphically, plot the resultant on rectangular coordinates and project it to each axis. The length along the x-axis is Fx and the length along the y-axis is Fy.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig12",
+     "num": 12,
+     "cap": "Component Vectors",
+     "alt": "FR of 50 lbf at 53 degrees plotted on x and y axes, with dashed lines projected to the axes to give Fx and Fy.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.11"
+    },
+    {
+     "t": "p",
+     "text": "Trigonometry also gives the components, using the ratios of a right triangle:",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig13",
+     "num": 13,
+     "cap": "Right Triangle",
+     "alt": "Right triangle with angle theta, hypotenuse c, opposite side a, and adjacent side b.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+    },
+    {
+     "t": "eq",
+     "text": "sin θ = opposite / hypotenuse",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+    },
+    {
+     "t": "eq",
+     "text": "cos θ = adjacent / hypotenuse",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+    },
+    {
+     "t": "eq",
+     "text": "tan θ = opposite / adjacent",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+    },
+    {
+     "t": "p",
+     "text": "For a resultant FR at angle θ, Fx = FR cos θ and Fy = FR sin θ.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q487",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.2",
+     "q": "A resultant of 100 lbf acts at 53°. Using cos 53° = 0.6018, what is the x component?",
+     "o": [
+      "60 lbf",
+      "80 lbf",
+      "100 lbf",
+      "166 lbf"
+     ],
+     "a": 0,
+     "x": "Fx = FR cos θ = (100)(0.6018), which is about 60 lbf.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Graphic method of addition",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The graphic method uses linear graph paper, a ruler, a protractor, and a pencil, in five steps:",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.16"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Plot the first vector on the x-y axes, with its tail at the origin and the same scale on both axes.",
+      "Draw the second vector with its tail at the head of the first, to scale and at the proper angle.",
+      "Add other vectors one at a time.",
+      "Draw and label the resultant, FR, from the origin to the head of the final vector.",
+      "Measure the displacement and angle of the resultant from the graph."
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-02 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig18",
+     "num": 18,
+     "cap": "Resultant",
+     "alt": "Vectors F1 and F2 drawn head to tail on x and y axes, with the resultant drawn from the origin to the head of the last vector.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "In the graphic method, where is the resultant drawn?",
+     "o": [
+      "From the head of the first vector to the tail of the last",
+      "From the origin of the axes to the head of the final vector",
+      "From the tail of the last vector to the origin",
+      "Along the x-axis to the head of the first vector"
+     ],
+     "a": 1,
+     "x": "When all given vectors have been drawn, the resultant is drawn from the point of origin of the axes to the head of the final vector.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Component addition method",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The method adds vector coordinates on a rectangular (x,y) coordinate system, in four steps:",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.20"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig21",
+     "num": 21,
+     "cap": "Vector Addition Component Method",
+     "alt": "Point at coordinates (4,3) on a rectangular grid, with a vector drawn to it from the origin.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.20"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Determine the x- and y-axes components of all original vectors.",
+      "Mathematically combine all x-axis components.",
+      "Mathematically combine all y-axis components.",
+      "The resulting (x,y) components are the components of the resultant."
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-02 p.20"
+    },
+    {
+     "t": "p",
+     "text": "A positive x component at 180° is equivalent to a negative x component at 0°, and a positive y component at 270° is equivalent to a negative y component at 90°.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.20"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Using component addition, what is the sum of F1 = (3,5) and F2 = (-1,2)?",
+     "o": [
+      "(4,7)",
+      "(2,3)",
+      "(2,7)",
+      "(4,3)"
+     ],
+     "a": 2,
+     "x": "Combine the x components: 3 + (-1) = 2. Combine the y components: 5 + 2 = 7. The resultant is (2,7).",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Analytical method",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The graphic and component methods can be hard to use and time consuming, and their accuracy depends on the scale of the diagram. The analytical method can be simpler and far more accurate.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "c² = a² + b²",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.23"
+    },
+    {
+     "t": "p",
+     "text": "A man walks 3 miles, turns 90°, and walks 4 more miles. His new location is 5 miles at 53° from his starting point.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "cp-02-fig24",
+     "num": 24,
+     "cap": "Hypotenuse and Angle",
+     "alt": "Right triangle with a 3 mile side and a 4 mile side. The hypotenuse R and the angle theta are the unknowns.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.24"
+    },
+    {
+     "t": "p",
+     "text": "Sine values are positive in quadrants I and II. Cosine values are positive in quadrants I and IV. Tangent values are positive in quadrants I and III.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.24"
+    },
+    {
+     "t": "p",
+     "text": "A caution when solving for tan θ:",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Actual angles may be in quadrants II and III, so each problem should be analyzed graphically. Those angles may be obtained by adding or subtracting 180° from the calculated value.",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.24"
+    },
+    {
+     "t": "p",
+     "text": "The model for several vectors has five steps:",
+     "cite": "DOE-HDBK-1010-92 CP-02 p.27"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Draw x and y coordinates and the forces from the point of origin.",
+      "Resolve each vector into its rectangular components.",
+      "Sum the x and y components.",
+      "Calculate the magnitude: FR = √(FRx² + FRy²).",
+      "Calculate the angle: θ = tan⁻¹(FRy / FRx)."
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-02 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "A person walks 6 miles, turns 90°, and walks 8 more miles. What is the net displacement?",
+     "o": [
+      "2 miles",
+      "10 miles",
+      "14 miles",
+      "48 miles"
+     ],
+     "a": 1,
+     "x": "By the Pythagorean Theorem, R = √(6² + 8²) = √100 = 10 miles.",
+     "p": "P16"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Components by trigonometry",
+   "eo": "1.2",
+   "page": 13,
+   "problem": "Determine the component vectors, Fx and Fy, for FR = 50 lbf at 53°.",
+   "steps": [
+    "Fx = (50)(cos 53°) = (50)(0.6018) = 30 lbf on the x-axis.",
+    "Fy = (50)(sin 53°) = (50)(0.7986) = 40 lbf on the y-axis."
+   ],
+   "answer": "Fx = 30 lbf at 0° and Fy = 40 lbf at 90°",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.13"
+  },
+  {
+   "title": "Components in quadrant III",
+   "eo": "1.2",
+   "page": 15,
+   "problem": "What are the component vectors, given FR = 80 lbf at 220°?",
+   "steps": [
+    "Fx = (80)(cos 220°) = (80)(-0.766) = -61 lbf at 0°, or 61 lbf at 180°.",
+    "Fy = (80)(sin 220°) = (80)(-0.6428) = -51 lbf at 90°, or 51 lbf at 270°."
+   ],
+   "answer": "Fx = 61 lbf at 180° and Fy = 51 lbf at 270°",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.15"
+  },
+  {
+   "title": "Component addition",
+   "eo": "1.3",
+   "page": 21,
+   "problem": "Find the resultant of F1 = (4,10), F2 = (-6,4), F3 = (2,-4), and F4 = (10,-2).",
+   "steps": [
+    "Fx = 4 + (-6) + 2 + 10 = 10.",
+    "Fy = 10 + 4 + (-4) + (-2) = 8."
+   ],
+   "answer": "FR = (10,8)",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.21"
+  },
+  {
+   "title": "Analytical addition of three forces",
+   "eo": "1.3",
+   "page": 29,
+   "problem": "Find the resultant of F1 = 90 lbf at 39°, F2 = 50 lbf at 120°, and F3 = 125 lbf at 250°.",
+   "steps": [
+    "Resolve each force: F1x = 69.9, F1y = 56.6; F2x = -25, F2y = 43.3; F3x = -42.8, F3y = -117.5 (all lbf).",
+    "Sum: FRx = 2.1 lbf and FRy = -17.6 lbf.",
+    "Magnitude: FR = √((2.1)² + (-17.6)²) = 17.7 lbf.",
+    "Angle: tan θ = -17.6/2.1 = -8.381, so θ = -83.2°. A negative angle means a clockwise rotation from the zero axis."
+   ],
+   "answer": "FR = 17.7 lbf at -83.2° or 276.8°",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.29"
+  }
+ ],
+ "facts": [
+  {
+   "q": "Name four examples of vector quantities.",
+   "a": "Displacement, velocity, acceleration, and force.",
+   "p": "P4",
+   "place": null
+  },
+  {
+   "q": "What does the length of a drawn vector represent, and what does the arrow represent?",
+   "a": "The length represents the magnitude of the vector, and the arrow represents its direction.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What are the components of a vector?",
+   "a": "Vectors which, when added, yield the vector.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "Which vector addition method is required for a high degree of accuracy?",
+   "a": "An analytical method using geometric and trigonometric functions.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "State the Pythagorean Theorem.",
+   "a": "In any right triangle, the square of the length of the hypotenuse equals the sum of the squares of the lengths of the other two sides.",
+   "p": "P16",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Scalars have magnitude only. Vectors have both magnitude and direction.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.3"
+  },
+  {
+   "text": "A resultant is a single vector that can replace two or more vectors, and components are determined graphically or analytically.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.15"
+  },
+  {
+   "text": "In the graphic method, each new vector starts at the head of the preceding vector, and the resultant runs from the origin to the head of the final vector.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.19"
+  },
+  {
+   "text": "In the component method, x components and y components are combined separately, and the results are the components of the resultant.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.22"
+  },
+  {
+   "text": "The analytical method resolves vectors into rectangular components, sums them, and then calculates the magnitude and angle of the resultant.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.30"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Extraction",
+   "note": "The Greek letter theta extracts as the digit 2 in the PDF text, so equations were read from the surrounding text and written with θ. No quote contains an equation.",
+   "cite": "DOE-HDBK-1010-92 CP-02 p.12"
+  }
+ ],
+ "page_tags": []
+}

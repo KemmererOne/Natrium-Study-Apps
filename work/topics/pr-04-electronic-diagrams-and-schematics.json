@@ -1,0 +1,974 @@
+{
+ "module_id": "PR-04",
+ "slug": "pr-04-electronic-diagrams-and-schematics",
+ "title": "Electronic Diagrams and Schematics",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V2",
+ "handbook": "DOE-HDBK-1016/2-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Controllers and Positioners",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a block diagram, print, or schematic, IDENTIFY the basic component symbols as presented in this module.",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the symbols used on engineering electronic block diagrams, prints, and schematics, for the following components.",
+     "items": [
+      "a. Fixed resistor",
+      "b. Variable resistor",
+      "c. Tapped resistor",
+      "d. Fixed capacitor",
+      "e. Variable capacitor",
+      "f. Fixed inductor",
+      "g. Variable inductor",
+      "h. Diode",
+      "i. Light emitting diode (LED)",
+      "j. Ammeter",
+      "k. Voltmeter",
+      "l. Wattmeter",
+      "m. Chassis ground",
+      "n. Circuit ground",
+      "o. Fuse",
+      "p. Plug",
+      "q. Headset",
+      "r. Light bulb",
+      "s. Silicon controlled rectifier (SCR)",
+      "t. Half wave rectifier",
+      "u. Full wave rectifier",
+      "v. Oscillator",
+      "w. Potentiometer",
+      "x. Rheostat",
+      "y. Antenna",
+      "z. Amplifier",
+      "aa. PNP and NPN transistors",
+      "bb. Junction"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the purpose of a block diagram and an electronic schematic diagram. . .",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Electronic prints fall into two basic categories, electronic schematics and block diagrams.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Electronic schematics represent the most detailed category of electronic drawings.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "They depict every component in a circuit, the component's technical information (such as its ratings), and how each component is wired into the circuit.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Block diagrams are the simplest type of drawing.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "This type of drawing provides the level of information needed to troubleshoot electronic circuits.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "Figure 1 and Figure 2 illustrate the most common electronic symbols used on electronic schematics.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "The schematics do not show placement or scale, merely function and flow.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "These drawings show the actual layout of the components on the circuit board.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.5"
+  },
+  {
+   "id": "P9",
+   "quote": "As with electrical systems, the relays and contacts shown are always in the de-energized condition.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+  },
+  {
+   "id": "P10",
+   "quote": "The first observation in dealing with a detailed electronic schematic is the source and polarity of power.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+  },
+  {
+   "id": "P11",
+   "quote": "In this convention, dots on the primary and secondary indicate current flow into the primary and out of the secondary at a given instant of time.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "Unless specified as an Alternating Current (AC) power source, the voltages can normally be assumed to be Direct Current (DC).",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+  },
+  {
+   "id": "P13",
+   "quote": "In any circuit, a ground must be established to create a complete current path.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.8"
+  },
+  {
+   "id": "P14",
+   "quote": "Using conventional current flow (i.e. from + to -), current will travel through the transistor from most positive to least positive and in the direction of the arrow on the emitter.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "If the input is also positive, the transistor will conduct.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+  },
+  {
+   "id": "P16",
+   "quote": "If the input goes negative, as in Figure 8, the conduction of the device stops because the input, or in this case the base junction, controls the transistor condition.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+  },
+  {
+   "id": "P17",
+   "quote": "The same rules apply as above except that this time polarities of power must change to allow current flow.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.10"
+  },
+  {
+   "id": "P18",
+   "quote": "However, diodes are simpler than transistors because they have only one junction and conduct in only one direction, as indicated in Figure 10.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.10"
+  },
+  {
+   "id": "P19",
+   "quote": "The diode symbol, like the transistor symbol, shows the direction of conduction by the direction of the arrow, which is from positive to negative.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.10"
+  },
+  {
+   "id": "P20",
+   "quote": "In most cases, bistables will be indicated by a box or circle, as shown in Figure 11 (A).",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+  },
+  {
+   "id": "P21",
+   "quote": "This may be done in many ways, but generally the line or conductor to be continued will end at a terminal board.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+  },
+  {
+   "id": "P22",
+   "quote": "Block diagrams are designed to present flow or functional information about the circuit or system, not detailed component data.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+  },
+  {
+   "id": "P23",
+   "quote": "Whatever the block represents will be written inside.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "The use of block diagrams is not restricted to electronic circuits.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+  },
+  {
+   "id": "P25",
+   "quote": "The creator of the block diagram decides the content of each block based on the intended use of the drawing.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "In many cases, two or more types of drawings will be combined into a single print.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.13"
+  },
+  {
+   "id": "P27",
+   "quote": "A block diagram presents the flow or functional information about a circuit, but it is not a detailed depiction of the circuit.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.17"
+  },
+  {
+   "id": "P28",
+   "quote": "An electronic schematic diagram presents the detailed information about the circuit, each of its components, and how they are wired into the circuit.",
+   "sec": "Electronic Diagrams, Prints, and Schematics",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.17"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Two kinds of electronic prints",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "A block diagram shows any part, component, or system as a simple geometric shape. One block can stand for a single component, such as a relay, or an entire system. The intended use of the drawing sets the level of detail.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q500",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is the purpose of an electronic schematic diagram?",
+     "o": [
+      "To show the physical route of cables",
+      "To show the building layout",
+      "To present detailed information about the circuit, each component, and how they are wired",
+      "To show the flow of a signal with no component detail"
+     ],
+     "a": 2,
+     "x": "An electronic schematic diagram presents the detailed information about the circuit, each of its components, and how they are wired into the circuit.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Electronic symbols",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig1",
+     "num": 1,
+     "cap": "Electronic Symbols",
+     "alt": "Symbol chart: fixed, tapped, and variable resistors, rheostat, potentiometer, fixed and variable capacitors, inductors, transformers, battery, plugs and jacks, lamp, headset, antenna, and grounds.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig2",
+     "num": 2,
+     "cap": "Electronic Symbols (Continued)",
+     "alt": "Symbol chart: terminal board, PNP and NPN transistors, diode, light emitting diode, zener diode, rectifiers, SCR, amplifier, switches, fuse, meters, oscillator, and a table of abbreviations.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.4"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Meters: a circle marked A for ammeter, V for voltmeter, or W for wattmeter",
+      "Oscillator: listed with A/C source in a meter style circle",
+      "Diode: an arrowhead against a bar",
+      "Light emitting diode: a diode with arrows pointing away",
+      "Amplifier: a triangle",
+      "Antenna: a Y or a V shape on a line",
+      "Junction: a dot where conductors connect"
+     ],
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Schematics are the hardest drawings to read, because they require knowing how each component affects, or is affected by, an electrical current.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which symbol represents an amplifier on an electronic schematic?",
+     "o": [
+      "A zigzag line",
+      "Two parallel lines",
+      "A triangle",
+      "A circle marked A"
+     ],
+     "a": 2,
+     "x": "Figure 2 shows the amplifier as a triangle. A circle marked A is an ammeter.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.1",
+     "q": "On an electronic schematic, how is a light emitting diode told apart from a plain diode?",
+     "o": [
+      "Arrows point away from the diode symbol",
+      "A circle is drawn with a slash",
+      "It has a triangle pointing to a bar and a third lead",
+      "It is drawn as a zigzag"
+     ],
+     "a": 0,
+     "x": "Figure 2 shows the light emitting diode as a diode symbol with arrows pointing away from it.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which symbol letter marks an ammeter on an electronic drawing?",
+     "o": [
+      "V",
+      "W",
+      "R",
+      "A"
+     ],
+     "a": 3,
+     "x": "Figure 2 shows meters as circles marked with a letter: A for ammeter, V for voltmeter, and W for wattmeter.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Schematic and pictorial layout",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "pr-04-fig3",
+     "num": 3,
+     "cap": "Example of an Electronic Schematic Diagram",
+     "alt": "Electronic schematic with an antenna, two transistors, resistors, capacitors, a transformer, and a ground.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "A second type, the pictorial layout diagram, is less a schematic than a picture of how the circuit actually looks.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "It is a two-dimensional drawing, usually looking down from the top, and normally comes with a parts list.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig4",
+     "num": 4,
+     "cap": "Comparison of an Electronic Schematic Diagram and its Pictorial Layout Diagram",
+     "alt": "A circuit schematic above the same circuit in pictorial layout format, showing the parts on the board.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "What does a pictorial layout diagram show that an electronic schematic does not?",
+     "o": [
+      "The value of each resistor",
+      "How current flows through a transistor",
+      "The source of power",
+      "The actual layout of components on the circuit board"
+     ],
+     "a": 3,
+     "x": "These drawings show the actual layout of the components on the circuit board. Schematics do not show placement or scale.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Finding power and ground",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Reading a print means identifying the condition of the components and following the events as the circuit functions.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Modern electronic systems usually have few, if any, relays or contacts.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "Power is generally shown either as an input transformer or as a numerical value.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig5",
+     "num": 5,
+     "cap": "Transformer Polarity Markings",
+     "alt": "Transformer with a dot on the top of the primary and the bottom of the secondary, and arrows showing current in and out at the dots.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+    },
+    {
+     "t": "p",
+     "text": "The power source is generally stated at the point it enters the schematic, with polarity, such as +15 volts or -15 volts. These markings are usually at the top and bottom of schematics, but not always.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig6",
+     "num": 6,
+     "cap": "Schematic Showing Power Supply Connections",
+     "alt": "Schematic with a +15 volt supply at the top and a -15 volt supply at the bottom.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "The direction of current flow can be found from the polarity of the power supplies. When polarities are shown, ground may not always be shown.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "What is the first observation when reading a detailed electronic schematic?",
+     "o": [
+      "The drawing scale",
+      "The revision number",
+      "The transistor type",
+      "The source and polarity of power"
+     ],
+     "a": 3,
+     "x": "The first observation in dealing with a detailed electronic schematic is the source and polarity of power.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.0",
+     "q": "A schematic shows +15 volts with no other marking. What type of power may normally be assumed?",
+     "o": [
+      "Pulsed",
+      "Direct current",
+      "Alternating current",
+      "Three-phase"
+     ],
+     "a": 1,
+     "x": "Unless specified as an Alternating Current (AC) power source, the voltages can normally be assumed to be Direct Current (DC).",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Transistors and diodes",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The transistor and the diode are the most common semiconductor devices. A semiconductor will be one of two varieties, the PNP or NPN.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.8"
+    },
+    {
+     "t": "p",
+     "text": "The direction of the arrow indicates the type.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+    },
+    {
+     "t": "p",
+     "text": "Only the common emitter configuration is shown here.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig7",
+     "num": 7,
+     "cap": "NPN Transistor-Conducting",
+     "alt": "NPN transistor with positive supply, ground on the emitter, and a positive input, with current flowing in the direction of the arrow.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig8",
+     "num": 8,
+     "cap": "NPN Transistor-Nonconducting",
+     "alt": "The same NPN transistor with a negative input and no current flow.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig9",
+     "num": 9,
+     "cap": "PNP Transistor",
+     "alt": "PNP transistor circuit shown conducting and nonconducting, with the supply polarities reversed.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig10",
+     "num": 10,
+     "cap": "Diode",
+     "alt": "Diode with positive on the arrow side conducting, and with the polarity reversed not conducting.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "An NPN transistor has a positive supply and ground on the emitter. The input goes negative. What happens?",
+     "o": [
+      "Current reverses direction",
+      "The emitter becomes positive",
+      "Conduction stops",
+      "Conduction increases"
+     ],
+     "a": 2,
+     "x": "If the input goes negative, the conduction of the device stops because the base junction controls the transistor condition.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which way does the arrow on a diode symbol point?",
+     "o": [
+      "From negative to positive",
+      "Toward ground in all cases",
+      "It does not show direction",
+      "From positive to negative"
+     ],
+     "a": 3,
+     "x": "The diode symbol shows the direction of conduction by the direction of the arrow, which is from positive to negative.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why is a diode simpler than a transistor?",
+     "o": [
+      "It has only one junction and conducts in only one direction",
+      "It has no polarity",
+      "It conducts in both directions",
+      "It needs no power source"
+     ],
+     "a": 0,
+     "x": "Diodes are simpler than transistors because they have only one junction and conduct in only one direction.",
+     "p": "P18"
+    }
+   ]
+  },
+  {
+   "title": "Bistables and continuing a circuit",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "The lines in or around bistables mark them as bistables and also show how they function.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig11",
+     "num": 11,
+     "cap": "Bistable Symbols",
+     "alt": "Bistable symbols: a box or circle holding a step line. Conventions show trips on decreasing signal, trips on increasing signal, and trips and resets at different setpoints.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+    },
+    {
+     "t": "p",
+     "text": "One circuit often connects to other circuits, so the reader must be able to follow a wire or signal path from one drawing to the next.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "The board is labeled and numbered with the continuation drawing indicated. With no terminal board, the conductor should end with a number and the next drawing number. Some drawings add coordinates, and the second drawing refers back to the first.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "How is a line continued from one electronic drawing to another generally shown?",
+     "o": [
+      "It ends at a labeled terminal board",
+      "It ends at a revision cloud",
+      "It ends at a chassis ground",
+      "It is drawn as a dashed line"
+     ],
+     "a": 0,
+     "x": "Generally the line or conductor to be continued will end at a terminal board, labeled and numbered with the continuation drawing indicated.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Block diagrams",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig12",
+     "num": 12,
+     "cap": "Example Blocks",
+     "alt": "Basic blocks: a rectangle or circle holding a component description, a triangle commonly used for an amplifier, and arrows showing the direction of signal flow.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "Block diagrams often accompany complex schematics, and show complex instrument channels and other systems when only the signal flowpath matters.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig13",
+     "num": 13,
+     "cap": "Example Block Diagram",
+     "alt": "Block diagram of a neutron flux channel, from detector through preamp and pulse stages to a meter, with bistables and isolation amplifiers sending outputs to other systems.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Each block in this example is a stage in developing a signal that goes to the meter or to systems outside the drawing. Not all blocks are equal: some are several functions, and some are a single stage.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "fig",
+     "id": "pr-04-fig15",
+     "num": 15,
+     "cap": "Example Combination Diagram of Electrical Single Line, and Block Diagram",
+     "alt": "Generator protection circuitry drawn with an electrical single line and electronic blocks on one print.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.16"
+    },
+    {
+     "t": "p",
+     "text": "Figure 15 combines an electronic block diagram with an electrical single line, for part of the generator protection circuitry at a nuclear power generating plant.",
+     "cite": "DOE-HDBK-1016/2-93 PR-04 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What do arrows on a block diagram show?",
+     "o": [
+      "The direction of signal flow",
+      "The physical cable route",
+      "The polarity of a supply",
+      "A revision"
+     ],
+     "a": 0,
+     "x": "Figure 12 shows arrows indicating the direction of signal flow. Block diagrams present flow or functional information.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.2",
+     "q": "Who decides what each block on a block diagram contains?",
+     "o": [
+      "The creator of the diagram, based on its intended use",
+      "The component vendor",
+      "A national standard",
+      "The operator using it"
+     ],
+     "a": 0,
+     "x": "The creator of the block diagram decides the content of each block based on the intended use of the drawing.",
+     "p": "P25"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Read component values",
+   "eo": "1.1",
+   "page": 21,
+   "fig": {
+    "t": "fig",
+    "id": "pr-04-fig16",
+    "num": 16,
+    "cap": "Example 1",
+    "alt": "Electronic schematic with transistors Q1 to Q4, resistors R1 to R15, diodes CR1 to CR8, capacitor C1, relay K1, supplies at +15 and -15 volts, and numbered circles 1 to 11 on selected parts.",
+    "cite": "DOE-HDBK-1016/2-93 PR-04 p.19"
+   },
+   "problem": "Using this schematic, what are the values of R13 and C1?",
+   "steps": [
+    "Find R13 and read the value printed beside it: 3.3K.",
+    "Find C1 and read the value printed beside it: 50uf."
+   ],
+   "answer": "R13 is 3.3 kilo-ohm, or 3300 ohms. C1 is 50 microfarads, or 0.000050 farads.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.21"
+  },
+  {
+   "title": "Identify numbered components",
+   "eo": "1.1",
+   "page": 21,
+   "problem": "On the same schematic, which numbers mark the PNP transistor, the NPN transistor, the positive supply, the negative supply, the circuit ground, and the potentiometer?",
+   "steps": [
+    "Check the transistor arrows for the numbers 1 and 2.",
+    "Find the +15 volt and -15 volt supplies.",
+    "Find the ground symbol and the part marked POT."
+   ],
+   "answer": "PNP transistor 2, NPN transistor 1, positive supply 7, negative supply 8, circuit ground 11, potentiometer 5.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.21"
+  },
+  {
+   "title": "Decide if a transistor conducts",
+   "eo": "1.1",
+   "page": 21,
+   "problem": "On the same schematic, the input to Q1 is at -15 volts. Will the transistor be conducting or nonconducting?",
+   "steps": [
+    "Compare the base and the emitter potentials.",
+    "The base (-15 v) is not positive relative to the emitter (-15 v)."
+   ],
+   "answer": "Nonconducting.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.21"
+  },
+  {
+   "title": "Count parts on a second schematic",
+   "eo": "1.1",
+   "page": 23,
+   "fig": {
+    "t": "fig",
+    "id": "pr-04-fig17",
+    "num": 17,
+    "cap": "Example 2",
+    "alt": "Schematic with amplifier U2, transistors Q2 and Q3, diodes CR3 and CR4, capacitor C7, resistors, and a 24 VDC battery.",
+    "cite": "DOE-HDBK-1016/2-93 PR-04 p.22"
+   },
+   "problem": "How many resistors, transistors, and capacitors are in this circuit, and what is CR4?",
+   "steps": [
+    "Count the resistors: R11, R13, R14, R20, R12, R1, and RL.",
+    "Count Q2 and Q3, and read their type from the symbols.",
+    "C7 is the only capacitor. CR4 has the diode symbol."
+   ],
+   "answer": "Seven resistors, two NPN transistors, one capacitor. CR4 is a diode.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.23"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two basic categories of electronic prints?",
+   "a": "Electronic schematics and block diagrams.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "In what condition do electronic prints show relays and contacts?",
+   "a": "Always in the de-energized condition.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What is the first thing to look for on a detailed electronic schematic?",
+   "a": "The source and polarity of power.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "What voltage type can be assumed on an electronic schematic unless stated otherwise?",
+   "a": "Direct Current (DC).",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "Which way does current flow through a transistor, using conventional current flow?",
+   "a": "From most positive to least positive, in the direction of the arrow on the emitter.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "How does a diode differ from a transistor?",
+   "a": "A diode has only one junction and conducts in only one direction.",
+   "p": "P18",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "This chapter covered the common symbols for basic electronic components on diagrams, prints, and schematics.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.17"
+  },
+  {
+   "text": "A block diagram presents the flow or functional information about a circuit, but it is not a detailed depiction of it.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.17"
+  },
+  {
+   "text": "An electronic schematic diagram presents the detailed information about the circuit, each of its components, and how they are wired.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.17"
+  },
+  {
+   "text": "The exercises practiced print reading on two electronic schematics.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.23"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. The neutron flux channel in Figure 13 is a generic block diagram example, and its detector type is not taught.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.12"
+  },
+  {
+   "type": "Objective",
+   "note": "Reading power, ground, bistables, and layouts has no enabling objective, so these pages cite terminal objective 1.0.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.7"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.8 prints \"silicone\" for the semiconductor material. The lesson does not repeat that sentence.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.8"
+  },
+  {
+   "type": "Handbook error",
+   "note": "The answer on p.23 calls the 1-5 VDC input to U2 a power supply, but Figure 17 labels it an input and shows U2 on +15 and -15. The power supply question is left out of the lesson.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.23"
+  },
+  {
+   "type": "Figure",
+   "note": "Figure 14, a combined drawing of a steam pressure control system, is left off because it is too dense to read at phone width and is steam specific. Figure 15 prints sideways in the handbook and is turned upright.",
+   "cite": "DOE-HDBK-1016/2-93 PR-04 p.15"
+  }
+ ],
+ "page_tags": []
+}

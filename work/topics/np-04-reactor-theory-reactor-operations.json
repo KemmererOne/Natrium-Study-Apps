@@ -1,0 +1,1503 @@
+{
+ "module_id": "NP-04",
+ "slug": "np-04-reactor-theory-reactor-operations",
+ "title": "Reactor Theory (Reactor Operations)",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1019-V2",
+ "handbook": "DOE-HDBK-1019/2-93",
+ "word_file": "Subcritical Multiplication.docx",
+ "quiz_t": "Reactor Theory",
+ "quiz_topic": "Reactor Kinetics and Neutron Sources",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the necessary information and equations, EXPLAIN how subcritical multiplication occurs.",
+   "items": [],
+   "page": {
+    "pdf": 89,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Subcritical multiplication",
+      "b. Subcritical multiplication factor"
+     ],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given a neutron source strength and a subcritical system of known keff, CALCULATE the steady-state neutron level.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given an initial count rate and keff, CALCULATE the final count rate that will result from the addition of a known amount of reactivity.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given count rates vs. the parameter being adjusted, ESTIMATE the value of the parameter at which the reactor will become critical through the use of a 1/M plot.",
+     "items": [],
+     "page": {
+      "pdf": 89,
+      "printed": "v"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "Given the necessary information and equations, DESCRIBE how power changes in a reactor that is near criticality.",
+   "items": [],
+   "page": {
+    "pdf": 90,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Reactor period",
+      "b. Doubling time",
+      "c. Reactor startup rate"
+     ],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "DESCRIBE the relationship between the delayed neutron fraction, average delayed neutron fraction, and effective delayed neutron fraction.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "WRITE the period equation and IDENTIFY each symbol.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "Given the reactivity of the core and values for the effective average delayed neutron fraction and decay constant, CALCULATE the reactor period and the startup rate.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "Given the initial power level and either the doubling or halving time, CALCULATE the power at any later time.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "Given the initial power level and the reactor period, CALCULATE the power at any later time.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "EXPLAIN what is meant by the terms prompt drop and prompt jump.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "DEFINE the term prompt critical.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "DESCRIBE reactor behavior during the prompt critical condition.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "2.10",
+     "text": "EXPLAIN the use of measuring reactivity in units of dollars.",
+     "items": [],
+     "page": {
+      "pdf": 90,
+      "printed": "vi"
+     }
+    }
+   ]
+  },
+  {
+   "number": "3.0",
+   "text": "Without references, EXPLAIN the concepts concerning reactor startup, operation, and shutdown.",
+   "items": [],
+   "page": {
+    "pdf": 91,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "3.1",
+     "text": "EXPLAIN why a startup neutron source may be required for a reactor.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.2",
+     "text": "LIST four variables typically involved in a reactivity balance.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.3",
+     "text": "EXPLAIN how a reactivity balance may be used to predict the conditions under which the reactor will become critical.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.4",
+     "text": "LIST three methods used to shape or flatten the core power distribution.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.5",
+     "text": "DESCRIBE the concept of power tilt.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.6",
+     "text": "DEFINE the term shutdown margin.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.7",
+     "text": "EXPLAIN the rationale behind the one stuck rod criterion.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.8",
+     "text": "IDENTIFY five changes that will occur during and after a reactor shutdown that will affect the reactivity of the core.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.9",
+     "text": "EXPLAIN why decay heat is present following reactor operation.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.10",
+     "text": "LIST three variables that will affect the amount of decay heat present following reactor shutdown.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "3.11",
+     "text": "ESTIMATE the approximate amount of decay heat that will exist one hour after a shutdown from steady state conditions.",
+     "items": [],
+     "page": {
+      "pdf": 91,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Subcritical multiplication is the effect of fissions in the fuel increasing the effective source strength of a reactor with a keff less than one.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.9"
+  },
+  {
+   "id": "P2",
+   "quote": "Subcritical multiplication factor is the factor that relates the source level to the steady-state neutron level of the core.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.9"
+  },
+  {
+   "id": "P3",
+   "quote": "A neutron source strength of 100 neutrons per generation will result in 250 neutrons per generation being produced from a combination of sources and fission in a shutdown reactor with a keff of 0.6.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Notice from this example that the count rate doubled as the reactivity was halved (e.g., reactivity was changed from -1000 pcm to -500 pcm).",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.6"
+  },
+  {
+   "id": "P5",
+   "quote": "For a critical reactor, 1/M is equal to zero.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.7"
+  },
+  {
+   "id": "P6",
+   "quote": "1/M plots can be used to predict the point of criticality.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.9"
+  },
+  {
+   "id": "P7",
+   "quote": "The neutron population will typically reach its new steady-state value within 1-2 minutes, but the closer the reactor is to criticality, the longer the time will be to stabilize the neutron population.",
+   "sec": "Subcritical Multiplication",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.7"
+  },
+  {
+   "id": "P8",
+   "quote": "Reactor period is the time required for reactor power to change by a factor of e (2.718).",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "id": "P9",
+   "quote": "Doubling time is the time required for reactor power to double.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "id": "P10",
+   "quote": "Reactor startup rate is the number of factors of ten that reactor power changes in one minute.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "id": "P11",
+   "quote": "If the reactor period is positive, reactor power is increasing.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.11"
+  },
+  {
+   "id": "P12",
+   "quote": "is the weighted average of the total delayed neutron fractions of the different types of fuel used in a particular reactor.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "id": "P13",
+   "quote": "delayed neutrons are born at lower average energies than fast neutrons.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "id": "P14",
+   "quote": "Prompt jump is the small, immediate power increase that follows a positive reactivity insertion related to an increase in the prompt neutron population.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "id": "P15",
+   "quote": "Prompt drop is the small, immediate power decrease that follows a negative reactivity insertion related to a decrease in the prompt neutron population.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "id": "P16",
+   "quote": "Prompt critical is the condition when the reactor is critical on prompt neutrons alone.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "id": "P17",
+   "quote": "When a reactor is prompt critical, the neutron population, and hence power, can increase as quickly as the prompt neutron generation time allows.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "id": "P18",
+   "quote": "A reactor whose reactivity even approaches prompt critical is likely to suffer damage due to the rapid rise in power to a very high level.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.16"
+  },
+  {
+   "id": "P19",
+   "quote": "Measuring reactivity in units of dollars is useful when determining if a reactor is prompt critical.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "id": "P20",
+   "quote": "A reactivity unit related to the dollar is the cent, where one cent is one-hundredth of a dollar.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.16"
+  },
+  {
+   "id": "P21",
+   "quote": "Because the effective delayed neutron fraction is dependent upon the nuclides used as fuel, the value of the dollar is also dependent on the nuclides used as fuel.",
+   "sec": "Reactor Kinetics",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.16"
+  },
+  {
+   "id": "P22",
+   "quote": "An installed neutron source, together with the subcritical multiplication process, may be needed to increase the neutron population to a level where it can be monitored throughout the startup procedure.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "id": "P23",
+   "quote": "Without the installed source, it may be possible to withdraw the control rods to the point of criticality, and then continue withdrawal without detecting criticality because the reactor goes critical below the indicating range.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.24"
+  },
+  {
+   "id": "P24",
+   "quote": "An alternative to using a startup source is to limit the rate of rod withdrawal, or require waiting periods between rod withdrawal increments.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.24"
+  },
+  {
+   "id": "P25",
+   "quote": "A reactivity balance called an Estimated Critical Position is used to predict the position of the control rods at which criticality will be achieved during a startup.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "id": "P26",
+   "quote": "This process provides an added margin of safety because a large discrepancy between actual and estimated critical rod positions would indicate that the core was not performing as designed.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.24"
+  },
+  {
+   "id": "P27",
+   "quote": "In fast reactor systems, reflectors are not composed of moderating materials because it is desired to keep neutron energy high.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.25"
+  },
+  {
+   "id": "P28",
+   "quote": "The reflector functions by scattering some of the neutrons, which would have leaked from a bare (unreflected) core, back into the fuel to produce additional fissions.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.25"
+  },
+  {
+   "id": "P29",
+   "quote": "Varying fuel concentrations or poison loading for flux shaping is frequently referred to as zoning.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.26"
+  },
+  {
+   "id": "P30",
+   "quote": "Power tilt is a non-symmetrical variation of core power in one quadrant of the core relative to the other quadrants.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "id": "P31",
+   "quote": "Shutdown margin is the instantaneous amount of reactivity by which a reactor is subcritical or would be subcritical from its present condition assuming all control rods are fully inserted except for the single rod with the highest integral worth, which is assumed to be fully withdrawn.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "id": "P32",
+   "quote": "The stuck rod criterion is applied to the shutdown margin to ensure that the failure of a single control rod will not prevent the control rod system from shutting down the reactor.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "id": "P33",
+   "quote": "Shutdown margin is required to exist at all times, even when the reactor is critical.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.28"
+  },
+  {
+   "id": "P34",
+   "quote": "The inherent stability and power turning ability of a negative temperature coefficient are ineffective below the point of adding heat.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.29"
+  },
+  {
+   "id": "P35",
+   "quote": "The half-life of the longest lived delayed neutron precursor results in a reactor period of around -80 seconds or a startup rate of -1/3 DPM for most reactors after a reactor shutdown.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.32"
+  },
+  {
+   "id": "P36",
+   "quote": "Decay heat is always present following reactor operation due to energy resulting from the decay of fission products.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "id": "P37",
+   "quote": "The amount of decay heat production after shutdown is directly influenced by the power history of the reactor prior to shutdown.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "id": "P38",
+   "quote": "This decay heat generation rate diminishes to less than 1% approximately one hour after shutdown.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "id": "P39",
+   "quote": "Decay heat is a long-term consideration and impacts spent fuel handling, reprocessing, waste management, and reactor safety.",
+   "sec": "Reactor Operation",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "id": "P40",
+   "quote": "It is the factor by which source neutrons are multiplied to get neutron population",
+   "sec": "x",
+   "cite": "Word: Subcritical Multiplication.docx, slide 1.15 Subcritical Multiplication factor (M)"
+  },
+  {
+   "id": "P41",
+   "quote": "A prompt drop is often associated with a reactor scram where a very large amount of negative reactivity is added.",
+   "sec": "x",
+   "cite": "Word: Power Changes.docx, slide 1.23 Step Insertion – Prompt Drop"
+  },
+  {
+   "id": "P42",
+   "quote": "Some of the worst accidents in the history of nuclear power involve reactors that have achieved prompt criticality.",
+   "sec": "x",
+   "cite": "Word: Power Changes.docx, slide 1.28 Prompt Criticality"
+  },
+  {
+   "id": "P43",
+   "quote": "At low values, response to small changes in the reactivity is magnified and power can change more quickly",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 5"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Subcritical multiplication",
+   "cite": "Word: Subcritical Multiplication.docx, slide 1.3 Subcritical Multiplication"
+  },
+  {
+   "step": "Subcritical multiplication factor",
+   "cite": "Word: Subcritical Multiplication.docx, slide 1.15 Subcritical Multiplication factor (M)"
+  },
+  {
+   "step": "Count rates",
+   "cite": "Word: Subcritical Multiplication.docx, slide 1.18 Count Rates and Keff"
+  },
+  {
+   "step": "Reactor period",
+   "cite": "Word: Power Changes.docx, slide 1.3 Reactor Period"
+  },
+  {
+   "step": "Startup rate",
+   "cite": "Word: Power Changes.docx, slide 1.12 Startup Rate"
+  },
+  {
+   "step": "Prompt jump",
+   "cite": "Word: Power Changes.docx, slide 1.19 Step Insertion – Prompt Jump"
+  },
+  {
+   "step": "Prompt drop",
+   "cite": "Word: Power Changes.docx, slide 1.23 Step Insertion – Prompt Drop"
+  },
+  {
+   "step": "Prompt criticality",
+   "cite": "Word: Power Changes.docx, slide 1.28 Prompt Criticality"
+  },
+  {
+   "step": "Delayed neutron fractions",
+   "cite": "Word: Delayed Neutron Importance.docx, slide 1.14 Delayed neutron Fraction"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Subcritical multiplication",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "eq",
+     "text": "M = 1 / (1 - keff)   and   N = S / (1 - keff)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The factor rises as positive reactivity is added to a shutdown reactor.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q24",
+     "eo": "1.2"
+    },
+    {
+     "existing": "Q292",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q293",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q295",
+     "eo": "1.2"
+    }
+   ]
+  },
+  {
+   "title": "Count rate and 1/M plots",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "eq",
+     "text": "CR1 / CR2 = (1 - k2) / (1 - k1)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Instrument count rate is proportional to neutron level, so the source strength cancels out of the equation.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "M grows without limit near criticality, so its inverse is plotted, using 1/M = CRo / CR with a reference count rate.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "np-04-fig1",
+     "num": 1,
+     "cap": "1/M Plot vs. Rod Withdrawal",
+     "alt": "1/M plotted against rod withdrawal in inches, falling toward zero, with an extrapolation showing the point of criticality.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q294",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.4",
+     "q": "On a 1/M plot, what value of 1/M marks criticality?",
+     "o": [
+      "0.5",
+      "Zero",
+      "One",
+      "Infinity"
+     ],
+     "a": 1,
+     "x": "For a critical reactor, 1/M is equal to zero.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Period, doubling time and startup rate",
+   "eo": [
+    "2.1",
+    "2.5",
+    "2.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "eq",
+     "text": "P = Po e^(t/τ)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.11"
+    },
+    {
+     "t": "eq",
+     "text": "P = Po 10^(SUR t)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.17"
+    },
+    {
+     "t": "eq",
+     "text": "P = Po 2^(t/DT)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.18"
+    },
+    {
+     "t": "eq",
+     "text": "SUR = 26.06 / τ   and   DT = τ (ln 2)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q22",
+     "eo": "2.1"
+    },
+    {
+     "existing": "Q23",
+     "eo": "2.1"
+    },
+    {
+     "eo": "2.5",
+     "q": "A reactor at 1000 watts has a doubling time of 2 minutes. What is its power 4 minutes later?",
+     "o": [
+      "2,000 W",
+      "4,000 W",
+      "8,000 W",
+      "16,000 W"
+     ],
+     "a": 1,
+     "x": "P = (1000 W)(2)^(4/2) = 4000 W.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Delayed neutron fractions",
+   "eo": [
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "β is the fraction of all fission neutrons born delayed for a particular type of fuel.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The effective fraction is the average fraction multiplied by an importance factor, which accounts for the fact that",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "Delayed neutrons average about 0.5 MeV, compared with about 2 MeV for prompt neutrons.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q296",
+     "eo": "2.2"
+    },
+    {
+     "existing": "Q297",
+     "eo": "2.2"
+    },
+    {
+     "existing": "Q139",
+     "eo": "2.2"
+    }
+   ]
+  },
+  {
+   "title": "The period equation",
+   "eo": [
+    "2.3",
+    "2.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "eq",
+     "text": "τ = ℓ*/ρ + (β̄eff - ρ) / (λeff ρ + ρ̇)   (prompt term plus delayed term)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+    },
+    {
+     "t": "p",
+     "text": "τ is reactor period, ℓ* is prompt generation lifetime, β̄eff is the effective delayed neutron fraction, ρ is reactivity, λeff is the effective precursor decay constant, and ρ̇ is the rate of change of reactivity.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+    },
+    {
+     "t": "eq",
+     "text": "Stable period: τ = (β̄eff - ρ) / (λeff ρ)",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+    },
+    {
+     "t": "p",
+     "text": "Approximate values for λeff are 0.08 per second at steady state, 0.1 per second for a power increase, and 0.05 per second for a power decrease.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q378",
+     "eo": "2.4"
+    },
+    {
+     "eo": "2.4",
+     "q": "If a stable reactor period is 26.06 seconds, what is the startup rate?",
+     "o": [
+      "0.26 DPM",
+      "1 DPM",
+      "2.6 DPM",
+      "26 DPM"
+     ],
+     "a": 1,
+     "x": "SUR = 26.06 / τ = 26.06 / 26.06 = 1 DPM.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Prompt jump and prompt drop",
+   "eo": [
+    "2.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "np-04-fig2",
+     "num": 2,
+     "cap": "Reactor Power Response to Positive Reactivity Addition",
+     "alt": "Reactor power against time after a positive reactivity addition: a small immediate jump, then a slower rise.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "np-04-fig3",
+     "num": 3,
+     "cap": "Reactor Power Response to Negative Reactivity Addition",
+     "alt": "Reactor power against time after a negative reactivity addition: a small immediate drop, then a slower fall.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.7",
+     "q": "What is a prompt jump?",
+     "o": [
+      "A rise in delayed neutron precursors after a scram",
+      "A step change in coolant temperature",
+      "A small, immediate power increase after a positive reactivity insertion",
+      "A sudden rise to prompt critical"
+     ],
+     "a": 2,
+     "x": "Prompt jump is the small, immediate power increase that follows a positive reactivity insertion, related to an increase in the prompt neutron population.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Prompt critical and dollars",
+   "eo": [
+    "2.8",
+    "2.9",
+    "2.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "One dollar of reactivity is equal to the effective delayed neutron fraction, so a reactor with one dollar of positive reactivity is prompt critical.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q54",
+     "eo": "2.8"
+    },
+    {
+     "existing": "Q377",
+     "eo": "2.8"
+    },
+    {
+     "eo": "2.10",
+     "q": "A reactor has one dollar of positive reactivity. What is its condition?",
+     "o": [
+      "Exactly critical on delayed neutrons",
+      "Subcritical",
+      "Shut down",
+      "Prompt critical"
+     ],
+     "a": 3,
+     "x": "One dollar of reactivity is equivalent to the effective delayed neutron fraction, so the reactor is prompt critical.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Startup and reactivity balance",
+   "eo": [
+    "3.1",
+    "3.2",
+    "3.3"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "The handbook's balance combines basic core reactivity, temperature reactivity, and two xenon terms. The xenon terms are thermal reactor content, so they stay off this page and objective 3.2 is marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q244",
+     "eo": "3.1"
+    },
+    {
+     "eo": "3.3",
+     "q": "Why is an Estimated Critical Position calculated before startup?",
+     "o": [
+      "It replaces the 1/M plot",
+      "It sets the scram setpoints",
+      "A large difference from the actual position would show the core was not performing as designed",
+      "It sets the source strength"
+     ],
+     "a": 2,
+     "x": "It provides an added margin of safety because a large discrepancy between actual and estimated positions would indicate that the core was not performing as designed.",
+     "p": "P26",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Core power distribution",
+   "eo": [
+    "3.4",
+    "3.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Three methods are used to shape or flatten core power: reflectors, neutron poisons, and axial or radial variation of fuel enrichment.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "fig",
+     "id": "np-04-fig5",
+     "num": 5,
+     "cap": "Effect of Non-Uniform Enrichment on Radial Flux Shape",
+     "alt": "Radial flux shape for uniform and non-uniform enrichment, with higher enrichment in the outer regions reducing the central peak.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Over-insertion of control rods in one part of the core is one cause.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q564",
+     "eo": "3.4"
+    },
+    {
+     "eo": "3.4",
+     "q": "Why are fast reactor reflectors not made of moderating materials?",
+     "o": [
+      "It is desired to keep neutron energy high",
+      "Moderators melt in sodium",
+      "Moderating materials cannot scatter neutrons",
+      "They would raise the delayed neutron fraction"
+     ],
+     "a": 0,
+     "x": "In fast reactor systems, reflectors are not composed of moderating materials because it is desired to keep neutron energy high.",
+     "p": "P27",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Shutdown margin",
+   "eo": [
+    "3.6",
+    "3.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q55",
+     "eo": "3.6"
+    },
+    {
+     "eo": "3.7",
+     "q": "What is the reason for the stuck rod criterion?",
+     "o": [
+      "To set the startup rate limit",
+      "To size the neutron source",
+      "So the failure of a single control rod will not prevent shutting down the reactor",
+      "To limit rod withdrawal speed"
+     ],
+     "a": 2,
+     "x": "The stuck rod criterion ensures that the failure of a single control rod will not prevent the control rod system from shutting down the reactor.",
+     "p": "P32",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Shutdown behavior",
+   "eo": [
+    "3.8"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "Factors that change during and after shutdown include control rod position and the temperature of the fuel and coolant.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+    },
+    {
+     "t": "p",
+     "text": "The objective asks for five changes. The handbook's summary lists three, one of which is soluble poison, so objective 3.8 is marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "After a large negative reactivity addition, the neutron level falls about two decades in a prompt drop, then falls as the precursors decay.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q300",
+     "eo": "3.8"
+    },
+    {
+     "existing": "Q301",
+     "eo": "3.8"
+    },
+    {
+     "eo": "3.8",
+     "q": "What reactor period is typical shortly after a reactor shutdown?",
+     "o": [
+      "About +80 seconds",
+      "About -80 seconds",
+      "About -8 seconds",
+      "About -800 seconds"
+     ],
+     "a": 1,
+     "x": "The longest lived delayed neutron precursor results in a period of around -80 seconds, or a startup rate of -1/3 DPM.",
+     "p": "P35",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Decay heat",
+   "eo": [
+    "3.9",
+    "3.10",
+    "3.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "The amount depends on three factors: the pre-shutdown power level, how long the reactor operated, and the time since shutdown.",
+     "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3.10",
+     "q": "Which three variables affect the amount of decay heat after shutdown?",
+     "o": [
+      "Pre-shutdown power level, how long the reactor operated, and time since shutdown",
+      "Coolant flow, rod position, and source strength",
+      "Fuel enrichment, reflector type, and core size",
+      "Startup rate, period, and doubling time"
+     ],
+     "a": 0,
+     "x": "Decay heat depends on the pre-shutdown power level, how long the reactor operated, and the amount of time since shutdown.",
+     "p": "P37",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    },
+    {
+     "eo": "3.11",
+     "q": "About how much decay heat exists one hour after a shutdown from full power?",
+     "o": [
+      "Less than 1%",
+      "About 3%",
+      "About 10%",
+      "About 25%"
+     ],
+     "a": 0,
+     "x": "The decay heat generation rate diminishes to less than 1% approximately one hour after shutdown.",
+     "p": "P38",
+     "place": [
+      "Reactor Theory",
+      "Reactor Operational Physics"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Subcritical multiplication factor",
+   "eo": [
+    "1.1"
+   ],
+   "page": 3,
+   "problem": "Calculate M for keff = 0.6, and the neutron level with a source of 1000 neutrons/sec.",
+   "steps": [
+    "M = 1 / (1 - 0.6) = 2.5",
+    "N = S x M = (1000 neutrons/sec)(2.5)"
+   ],
+   "answer": "2500 neutrons/sec",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.3"
+  },
+  {
+   "title": "Steady-state neutron level",
+   "eo": [
+    "1.2"
+   ],
+   "page": 4,
+   "problem": "A source produces 110,000 neutrons per second and keff is 0.986. Calculate the stable total neutron production rate.",
+   "steps": [
+    "N = S / (1 - keff)",
+    "N = (110,000 neutrons/sec) / (1 - 0.986)"
+   ],
+   "answer": "7.86 x 10^6 neutrons per second",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.4"
+  },
+  {
+   "title": "Count rate after a reactivity addition",
+   "eo": [
+    "1.3"
+   ],
+   "page": 6,
+   "problem": "A reactor at -1000 pcm reads 42 cps. Find the count rate after adding 500 pcm from control rod withdrawal.",
+   "steps": [
+    "k1 = 1 / (1 + 0.01000) and k2 = 1 / (1 + 0.00500)",
+    "CR2 = CR1 (1 - k1) / (1 - k2)"
+   ],
+   "answer": "83 cps",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.6"
+  },
+  {
+   "title": "Stable period and startup rate",
+   "eo": [
+    "2.4"
+   ],
+   "page": 18,
+   "problem": "A reactor has λeff of 0.10 per second and an effective delayed neutron fraction of 0.0070. If keff is 1.0025, find the stable period and SUR.",
+   "steps": [
+    "ρ = (keff - 1) / keff = 0.00249 Δk/k",
+    "τ = (0.0070 - 0.00249) / ((0.10 per sec)(0.00249)) = 18.1 sec",
+    "SUR = 26.06 / 18.1 sec"
+   ],
+   "answer": "τ = 18.1 sec and SUR = 1.44 DPM",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.18"
+  },
+  {
+   "title": "Power after a negative reactivity addition",
+   "eo": [
+    "2.6"
+   ],
+   "page": 19,
+   "problem": "130 pcm of negative reactivity is added to a reactor critical at 100 watts. The reactor period is -124.6 seconds. Find power 2 minutes later.",
+   "steps": [
+    "P = Po e^(t/τ)",
+    "P = (100 W) e^(120 s / -124.6 s)"
+   ],
+   "answer": "38.2 W",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.19"
+  },
+  {
+   "title": "Power from doubling time",
+   "eo": [
+    "2.5"
+   ],
+   "page": 20,
+   "problem": "A reactor has a power level of 1000 watts and a doubling time of 2 minutes. What is the power 10 minutes later?",
+   "steps": [
+    "P = Po 2^(t/DT)",
+    "P = (1000 W)(2)^(10 min / 2 min)"
+   ],
+   "answer": "32,000 W",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.20"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is subcritical multiplication?",
+   "a": "The effect of fissions in the fuel increasing the effective source strength of a reactor with a keff less than one.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What is reactor startup rate?",
+   "a": "The number of factors of ten that reactor power changes in one minute.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "What is doubling time?",
+   "a": "The time required for reactor power to double.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What is prompt drop?",
+   "a": "The small, immediate power decrease that follows a negative reactivity insertion.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What does a dollar of reactivity equal?",
+   "a": "The effective delayed neutron fraction.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "What is shutdown margin?",
+   "a": "The reactivity by which a reactor is or would be subcritical with all rods fully inserted except the highest worth rod, which is assumed fully withdrawn.",
+   "p": "P31",
+   "place": [
+    "Reactor Theory",
+    "Reactor Operational Physics"
+   ]
+  },
+  {
+   "q": "What is power tilt?",
+   "a": "A non-symmetrical variation of core power in one quadrant of the core relative to the others.",
+   "p": "P30",
+   "place": [
+    "Reactor Theory",
+    "Reactor Operational Physics"
+   ]
+  },
+  {
+   "q": "What reactor period follows a shutdown for most reactors?",
+   "a": "Around -80 seconds, or a startup rate of -1/3 DPM.",
+   "p": "P35",
+   "place": [
+    "Reactor Theory",
+    "Reactor Operational Physics"
+   ]
+  },
+  {
+   "q": "Why is a negative temperature coefficient ineffective at very low power?",
+   "a": "It is ineffective below the point of adding heat, because power changes there do not change temperature.",
+   "p": "P34",
+   "place": [
+    "Reactor Theory",
+    "Reactor Operational Physics"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "A subcritical reactor multiplies its source by M = 1 / (1 - keff). 1/M plots predict criticality.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.9"
+  },
+  {
+   "text": "Period, doubling time and startup rate describe power change.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.21"
+  },
+  {
+   "text": "Prompt jump and prompt drop are small, immediate changes. One dollar of reactivity is prompt critical.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.22"
+  },
+  {
+   "text": "Fast reactor reflectors are not moderating materials.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.25"
+  },
+  {
+   "text": "Shutdown margin assumes the highest worth rod is fully withdrawn.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "text": "Decay heat comes from fission product decay and falls to less than 1% about one hour after shutdown.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "The handbook p.33 and p.34 say decay heat right after shutdown is about 5 to 6%. The Batch 5 decision says the handbook's 7%, taken from the HT material, and hides 6%. The two handbook statements differ, so neither starting value is on this page. NP-01 p.62's seven percent is a share of fission energy. Existing Q56 says 5-6%.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.33"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Delayed neutron totals differ inside the handbook: NP-04 Table 1 gives U-238 0.0157 and Pu-239 0.00200, p.31 gives U-235 0.0064, and NP-02 p.30 gives 0.0148, 0.0021 and 0.0065. The page gives no fractions and sends the learner to NP-02.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.12"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 3.8 asks for five changes, and the handbook's summary lists three.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.34"
+  },
+  {
+   "type": "Scope",
+   "note": "Objectives 3.2, 3.3 and 3.8 carry Needs sodium review. The manifest did not flag this module, so this is reported. Xenon terms, chemical shim, moderator pressure and flow effects, BWR flow control, heavy water behavior and burnup effects on the moderator coefficient are left off. Figures 4 and 6 show thermal flux and are not used.",
+   "cite": "DOE-HDBK-1019/2-93 NP-04 p.25"
+  },
+  {
+   "type": "Word claim",
+   "note": "Power Changes.docx slide 1.24 gives a decay constant of 0.0124 per second for the -80 second period. The handbook does not give that value, so it is left off.",
+   "cite": "Word: Power Changes.docx, slide 1.24 Step Insertion – Reactor Trip"
+  },
+  {
+   "type": "Word source",
+   "note": "The Word files teach with tables and practice problems that use plant-specific beta values, which are left off. Their prompt jump equation is on slide 1.20 as a picture.",
+   "cite": "Word: Power Changes.docx, slide 1.20 Prompt change in power"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}

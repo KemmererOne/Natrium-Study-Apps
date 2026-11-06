@@ -1,0 +1,2636 @@
+{
+ "module_id": "HT-02",
+ "slug": "ht-02-heat-transfer",
+ "title": "Heat Transfer",
+ "status": "Reviewed",
+ "scope_tags": [
+  "Draft source"
+ ],
+ "source_id": "DOE-1012-V2",
+ "handbook": "DOE-HDBK-1012/2-92",
+ "word_file": "Heat Transfer.docx",
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Heat Transfer and Heat Exchangers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the operating conditions of a thermodynamic system and the necessary formulas, EVALUATE the heat transfer processes which are occurring.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the difference between heat and temperature.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the difference between heat and work.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the Second Law of Thermodynamics and how it relates to heat transfer.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the three modes of heat transfer.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE the following terms as they relate to heat transfer:",
+     "items": [
+      "a. Heat flux",
+      "b. Thermal conductivity",
+      "c. Log mean temperature difference",
+      "d. Convective heat transfer coefficient",
+      "e. Overall heat transfer coefficient",
+      "f. Bulk temperature"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given Fourier’s Law of Conduction, CALCULATE the conduction heat flux in a rectangular coordinate system.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Given the formula and the necessary values, CALCULATE the equivalent thermal resistance.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "Given Fourier’s Law of Conduction, CALCULATE the conduction heat flux in a cylindrical coordinate system.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "Given the formula for heat transfer and the operating conditions of the system, CALCULATE the rate of heat transfer by convection.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE how the following terms relate to radiant heat transfer:",
+     "items": [
+      "a. Black body radiation",
+      "b. Emissivity",
+      "c. Radiation configuration factor"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE the difference in the temperature profiles for counter-flow and parallel flow heat exchangers.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DESCRIBE the differences between regenerative and non-regenerative heat exchangers.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "Given the temperature changes across a heat exchanger, CALCULATE the log mean temperature difference for the heat exchanger.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "Given the formulas for calculating the conduction and convection heat transfer coefficients, CALCULATE the overall heat transfer coefficient of a system.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "DESCRIBE the process that occurs in the following regions of the boiling heat transfer curve:",
+     "items": [
+      "a. Nucleate boiling",
+      "b. Partial film boiling",
+      "c. Film boiling",
+      "d. Departure from nucleate boiling (DNB)",
+      "e. Critical heat flux"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "Given the operating conditions of a typical nuclear reactor, DESCRIBE the heat transfer processes which are occurring.",
+   "items": [],
+   "page": {
+    "pdf": 21,
+    "printed": "ix"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "DESCRIBE the power generation process in a nuclear reactor core and the factors that affect the power generation.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "DESCRIBE the relationship between temperature, flow, and power during operation of a nuclear reactor.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Nuclear enthalpy rise hot channel factor",
+      "b. Average linear power density",
+      "c. Nuclear heat flux hot channel factor",
+      "d. Heat generation rate of a core",
+      "e. Volumetric thermal source strength"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "CALCULATE the average linear power density for an average reactor core fuel rod.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "DESCRIBE a typical reactor core axial and radial flux profile.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "DESCRIBE a typical reactor core fuel rod axial and radial temperature profile.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "DEFINE the term decay heat.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "Given the operating conditions of a reactor core and the necessary formulas, CALCULATE the core decay heat generation.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "DESCRIBE two categories of methods for removing decay heat from a reactor core.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Temperature is a measure of the amount of energy possessed by the molecules of a substance.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Heat is energy in transit.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Heat can be transferred into or out of a system and work can be done on or by a system, but a system cannot contain or store either heat or work.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "the natural flow of energy is from the hotter body to the colder body.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Conduction involves the transfer of heat by the interactions of atoms or molecules of a material through which the heat is being transferred.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "Convection involves the transfer of heat by the mixing and motion of macroscopic portions of a fluid.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "Radiation, or radiant heat transfer, involves the transfer of heat by electromagnetic radiation that arises due to the temperature of a body.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "The heat flux can be determined by dividing the heat transfer rate by the area through which the heat is being transferred.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "It is a measure of a substance’s ability to transfer heat through a solid by conduction.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "A precise temperature change between two fluids across the heat exchanger is best represented by the log mean temperature difference",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+  },
+  {
+   "id": "P11",
+   "quote": "The convective heat transfer coefficient is sometimes referred to as a film coefficient",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "The overall heat transfer coefficient combines the heat transfer coefficient of the two heat exchanger fluids and the thermal conductivity of the heat exchanger tubes.",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "For flow adjacent to a hot or cold surface, Tb is the temperature of the fluid that is \"far\" from the surface",
+   "sec": "Heat Transfer Terminology",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.4"
+  },
+  {
+   "id": "P14",
+   "quote": "It is possible to compare heat transfer to current flow in electrical circuits.",
+   "sec": "Conduction Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "Across a cylindrical wall, the heat transfer surface area is continually increasing or decreasing.",
+   "sec": "Conduction Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.11"
+  },
+  {
+   "id": "P16",
+   "quote": "it is necessary to define a log mean cross-sectional area (Alm).",
+   "sec": "Conduction Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.12"
+  },
+  {
+   "id": "P17",
+   "quote": "The term natural convection is used if this motion and mixing is caused by density variations resulting from temperature differences within the fluid.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.18"
+  },
+  {
+   "id": "P18",
+   "quote": "The term forced convection is used if this motion and mixing is caused by an outside force, such as a pump.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.18"
+  },
+  {
+   "id": "P19",
+   "quote": "Typically, the convective heat transfer coefficient for laminar flow is relatively low compared to the convective heat transfer coefficient for turbulent flow.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.19"
+  },
+  {
+   "id": "P20",
+   "quote": "The basic relationship for heat transfer by convection has the same form as that for heat transfer by conduction",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.19"
+  },
+  {
+   "id": "P21",
+   "quote": "This is due to turbulent flow having a thinner stagnant fluid film layer on the heat transfer surface.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.19"
+  },
+  {
+   "id": "P22",
+   "quote": "Many of the heat transfer processes encountered in nuclear facilities involve a combination of both conduction and convection.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.20"
+  },
+  {
+   "id": "P23",
+   "quote": "the tube wall thickness is small compared to the tube diameter.",
+   "sec": "Convection Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.22"
+  },
+  {
+   "id": "P24",
+   "quote": "the flow nearest to the wall is slower than the flow in the middle of the channel",
+   "sec": "Convection Heat Transfer",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.5 Laminar Flow"
+  },
+  {
+   "id": "P25",
+   "quote": "The addition of the wire tends to break up the laminar boundary layer by making the surface rough instead of smooth.",
+   "sec": "Convection Heat Transfer",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.7 Wire Wrapped Fuel Pins"
+  },
+  {
+   "id": "P26",
+   "quote": "Changes to enhance convection such as higher flow and wire wrapping, lead to larger values of convective heat transfer coefficient, h.",
+   "sec": "Convection Heat Transfer",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.13 Convective Heat Transfer Coefficient Equation"
+  },
+  {
+   "id": "P27",
+   "quote": "Radiant heat transfer does not need a medium, such as air or metal, to take place.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.26"
+  },
+  {
+   "id": "P28",
+   "quote": "A body that emits the maximum amount of heat for its absolute temperature is called a black body.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.26"
+  },
+  {
+   "id": "P29",
+   "quote": "They radiate less heat than a black body and are called gray bodies.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.27"
+  },
+  {
+   "id": "P30",
+   "quote": "Emissivity is a dimensionless number and has a maximum value of 1.0.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.27"
+  },
+  {
+   "id": "P31",
+   "quote": "which takes into account the emissivity of both bodies and their relative geometry.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.28"
+  },
+  {
+   "id": "P32",
+   "quote": "Radiant heat flux should only be included in a problem when it is greater than 20% of the problem.",
+   "sec": "Radiant Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.28"
+  },
+  {
+   "id": "P33",
+   "quote": "The most common design has one fluid flowing through metal tubes and the other fluid flowing around the tubes.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.30"
+  },
+  {
+   "id": "P34",
+   "quote": "On either side of the tube, heat is transferred by convection. Heat is transferred through the tube wall by conduction.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.30"
+  },
+  {
+   "id": "P35",
+   "quote": "A counter-flow heat exchanger is one in which the direction of the flow of one of the working fluids is opposite to the direction to the flow of the other fluid.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.31"
+  },
+  {
+   "id": "P36",
+   "quote": "In a parallel flow exchanger, both fluids in the heat exchanger flow in the same direction.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.31"
+  },
+  {
+   "id": "P37",
+   "quote": "Under comparable conditions, more heat is transferred in a counter-flow arrangement than in a parallel flow heat exchanger.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.31"
+  },
+  {
+   "id": "P38",
+   "quote": "the temperature of the cold fluid exiting the heat exchanger never exceeds the lowest temperature of the hot fluid.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.32"
+  },
+  {
+   "id": "P39",
+   "quote": "the outlet temperature of the cold fluid can approach the highest temperature of the hot fluid (the inlet temperature).",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.33"
+  },
+  {
+   "id": "P40",
+   "quote": "One fluid cools or heats the other with no interconnection between the two fluids.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.34"
+  },
+  {
+   "id": "P41",
+   "quote": "A regenerative heat exchanger typically uses the fluid from a different area of the same system for both the hot and cold fluids.",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.34"
+  },
+  {
+   "id": "P42",
+   "quote": "The primary advantage of a regenerative heat exchanger application is conservation of system energy",
+   "sec": "Heat Exchangers",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.35"
+  },
+  {
+   "id": "P43",
+   "quote": "Fouling of heat exchanger tubes lowers the efficiency of a heat exchanger by decreasing the thermal conductivity of the tubes.",
+   "sec": "Heat Exchangers",
+   "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+  },
+  {
+   "id": "P44",
+   "quote": "Admit the colder fluid to the heat exchanger first, followed by the hotter fluid.",
+   "sec": "Heat Exchangers",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P45",
+   "quote": "In nucleate boiling, steam bubbles form at the heat transfer surface and then break away and are carried into the main stream of the fluid.",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.40"
+  },
+  {
+   "id": "P46",
+   "quote": "This phenomenon is referred to as bulk boiling.",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+  },
+  {
+   "id": "P47",
+   "quote": "covering small areas of the heat transfer surface with a film of steam. This is known as partial film boiling.",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+  },
+  {
+   "id": "P48",
+   "quote": "The condition after the stable steam blanket has formed is referred to as film boiling.",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+  },
+  {
+   "id": "P49",
+   "quote": "The point of transition from nucleate boiling to film boiling is called the point of departure from nucleate boiling, commonly written as DNB.",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.42"
+  },
+  {
+   "id": "P50",
+   "quote": "The heat flux associated with DNB is commonly called the critical heat flux (CHF).",
+   "sec": "Boiling Heat Transfer",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.42"
+  },
+  {
+   "id": "P51",
+   "quote": "the size of the reactor core is dependent upon and limited by how much liquid can be passed through the core to remove the generated thermal energy.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.44"
+  },
+  {
+   "id": "P52",
+   "quote": "The density of the fuel, the neutron flux, and the type of fuel all affect the fission rate and, therefore, the heat generation rate.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+  },
+  {
+   "id": "P53",
+   "quote": "The thermal power produced by a reactor is directly related to the mass flow rate of the reactor coolant and the temperature difference across the core.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+  },
+  {
+   "id": "P54",
+   "quote": "If flow rate is constant, temperature will vary directly with power. If power is constant, temperature will vary inversely with flow rate.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+  },
+  {
+   "id": "P55",
+   "quote": "This peaking factor is referred to as the hot channel factor.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+  },
+  {
+   "id": "P56",
+   "quote": "the flux profiles become much flatter although the peak still occurs near the center.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+  },
+  {
+   "id": "P57",
+   "quote": "The nuclear heat flux hot channel factor (HFHCF) is the ratio of the maximum heat flux expected at any area to the average heat flux for the core.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+  },
+  {
+   "id": "P58",
+   "quote": "The nuclear enthalpy rise hot channel factor is the ratio of the total kW heat generation along the fuel rod with the highest total kW to the total kW of the average fuel rod.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+  },
+  {
+   "id": "P59",
+   "quote": "dividing the total thermal output of the core by the total length of all the fuel components in the core.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+  },
+  {
+   "id": "P60",
+   "quote": "The heat generation rate divided by the volume of fuel will give the average volumetric thermal source strength.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.50"
+  },
+  {
+   "id": "P61",
+   "quote": "The areas with the highest heat generation rate (power) will produce the most heat and have the highest temperatures.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.49"
+  },
+  {
+   "id": "P62",
+   "quote": "the fuel cladding and, thus, the fuel temperatures are higher in the upper axial region of the core.",
+   "sec": "Heat Generation",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.49"
+  },
+  {
+   "id": "P63",
+   "quote": "we expect the gap material to be liquid sodium, which has fabulous heat transfer.",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.10 Radial Fuel Temperature Profile"
+  },
+  {
+   "id": "P64",
+   "quote": "Generally the core power density is highest near the center of the core, so temperature rises quickest where power density is highest",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.18 Axial Temperature Profiles"
+  },
+  {
+   "id": "P65",
+   "quote": "As the flow is raised, the coolant spends less time in the core, and so heats up less.",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.20 Axial Temperature Profiles Changes"
+  },
+  {
+   "id": "P66",
+   "quote": "a small fraction of the flow, usually about 5% to 10% of the total, is used to cool other components.",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.16 Bypass Flow"
+  },
+  {
+   "id": "P67",
+   "quote": "sodium conducts heat much better than water, which allows for higher power density in the fuel.",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.11 Advantages to Sodium as a Coolant"
+  },
+  {
+   "id": "P68",
+   "quote": "Sodium’s boiling point is also greater than 1600 degrees Fahrenheit.",
+   "sec": "Heat Generation",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.11 Advantages to Sodium as a Coolant"
+  },
+  {
+   "id": "P69",
+   "quote": "FCCI: Major contributor to metallic fuel pin failure due to formation of low melting- point intermetallic eutectic between the uranium and iron at the fuel-cladding interface",
+   "sec": "Heat Generation",
+   "cite": "NRC slides ML19149A371, slide 24"
+  },
+  {
+   "id": "P70",
+   "quote": "this eutectic penetration is delayed and reduced",
+   "sec": "Heat Generation",
+   "cite": "NRC slides ML19149A371, slide 24"
+  },
+  {
+   "id": "P71",
+   "quote": "is the dominant failure mode for metallic fuel",
+   "sec": "Heat Generation",
+   "cite": "NRC slides ML19149A371, slide 24"
+  },
+  {
+   "id": "P72",
+   "quote": "This release of energy by the decay of fission products is called decay heat.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+  },
+  {
+   "id": "P73",
+   "quote": "Typically, the amount of decay heat that will be present in the reactor immediately following shutdown will be roughly 7% of the power level that the reactor operated at prior to shutdown.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+  },
+  {
+   "id": "P74",
+   "quote": "Decay heat may decrease to about 2% of the pre-shutdown power level within the first hour after shutdown and to 1% within the first day.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+  },
+  {
+   "id": "P75",
+   "quote": "If adequate heat removal is not available, decay heat will increase the temperatures in the core to the point that fuel melting and core damage will occur.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.53"
+  },
+  {
+   "id": "P76",
+   "quote": "If the mass of the coolant and the specific heat of the coolant are known, the heat generation rate can be accurately calculated.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.54"
+  },
+  {
+   "id": "P77",
+   "quote": "One category includes methods which circulate fluid through the reactor core in a closed loop, using some type of heat exchanger to transfer heat out of the system.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.56"
+  },
+  {
+   "id": "P78",
+   "quote": "The other category includes methods which operate in an open system, drawing in cool fluid from some source and discharging warmer fluid to some storage area or the environment.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.56"
+  },
+  {
+   "id": "P79",
+   "quote": "In most reactors, decay heat is normally removed by the same methods used to remove heat generated by fission during reactor operation.",
+   "sec": "Decay Heat",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.56"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "What is heat",
+   "cite": "Word: Heat Transfer.docx, slide 1.8 What is heat?"
+  },
+  {
+   "step": "Types of heat transfer",
+   "cite": "Word: Heat Transfer.docx, slide 1.9 3 Types of Heat Transfer"
+  },
+  {
+   "step": "Heat transfer terms",
+   "cite": "Word: Heat Transfer.docx, slide 1.18 Heat Transfer Terms"
+  },
+  {
+   "step": "Heat exchangers",
+   "cite": "Word: Heat Transfer.docx, slide 1.26 Heat Exchangers"
+  },
+  {
+   "step": "Regenerative and non-regenerative",
+   "cite": "Word: Heat Transfer.docx, slide 1.30 Non Regenerative Heat Exchangers"
+  },
+  {
+   "step": "Laminar flow near a fuel pin",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.5 Laminar Flow"
+  },
+  {
+   "step": "Wire wrapped fuel pins",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.7 Wire Wrapped Fuel Pins"
+  },
+  {
+   "step": "Radial temperature profile",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.10 Radial Fuel Temperature Profile"
+  },
+  {
+   "step": "Sodium as a coolant",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.11 Advantages to Sodium as a Coolant"
+  },
+  {
+   "step": "Bypass flow",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.16 Bypass Flow"
+  },
+  {
+   "step": "Axial temperature profiles",
+   "cite": "Word: Thermal Hydraulics.docx, slide 1.18 Axial Temperature Profiles"
+  },
+  {
+   "step": "Thermal limit differences",
+   "cite": "Word: Core Thermal Limits word.docx, slide 1.2 Differences"
+  },
+  {
+   "step": "Heat exchanger classification",
+   "cite": "Word: Heat Exchangers.docx, slide 1.12 Heat Exchanger Classification"
+  },
+  {
+   "step": "Startup and operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "step": "Fouling",
+   "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Heat, temperature, and work",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Temperature is a relative measure of how hot or cold a substance is and can be used to predict the direction of heat transfer.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Heat transfer occurs at the molecular level as a result of a temperature difference.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Work is the transfer of energy resulting from a force acting through a distance. Heat is energy transferred as the result of a temperature difference.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "When a temperature difference exists across a boundary, the Second Law of Thermodynamics indicates:",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The Second Law implies that heat will not transfer from a colder to a hotter body without some external source of energy.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is the difference between heat and temperature?",
+     "o": [
+      "They mean the same thing",
+      "Temperature is energy in transit, and heat is a property",
+      "Heat is measured in °F, and temperature in Btu",
+      "Heat is energy in transit, and temperature measures the energy of the molecules"
+     ],
+     "a": 3,
+     "x": "Temperature is a measure of the energy possessed by the molecules of a substance. Heat is energy in transit.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.2",
+     "q": "Can a system contain or store heat or work?",
+     "o": [
+      "Work only",
+      "Both",
+      "Neither",
+      "Heat only"
+     ],
+     "a": 2,
+     "x": "A system cannot contain or store either heat or work.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Three modes of heat transfer",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Conduction problems usually study a solid, convection problems involve a fluid medium, and radiation problems involve surfaces separated by a gas, vapor, or vacuum.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q302",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which mode of heat transfer involves the mixing and motion of macroscopic portions of a fluid?",
+     "o": [
+      "Radiation",
+      "Sublimation",
+      "Conduction",
+      "Convection"
+     ],
+     "a": 3,
+     "x": "Convection involves the transfer of heat by the mixing and motion of macroscopic portions of a fluid.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Heat transfer terms",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "Heat flux = Q̇ / A, in Btu/hr-ft²",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Thermal conductivity (k) is measured in Btu/hr-ft-°F.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "eq",
+     "text": "∆Tlm = (∆T2 - ∆T1) / ln(∆T2 / ∆T1)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+    },
+    {
+     "t": "p",
+     "text": "∆T2 is the larger temperature difference between the two fluid streams at either end, and ∆T1 is the smaller.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "It represents the thermal resistance of a relatively stagnant layer of fluid between a heat transfer surface and the fluid medium.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = UoAo∆To",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What is heat flux?",
+     "o": [
+      "The rate of heat transfer per unit area",
+      "The temperature difference across a wall",
+      "The thermal resistance of a film",
+      "The total heat in a system"
+     ],
+     "a": 0,
+     "x": "Heat flux is the heat transfer rate divided by the area through which the heat is transferred.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.5",
+     "q": "What does the overall heat transfer coefficient combine?",
+     "o": [
+      "The inlet and outlet temperatures",
+      "The two fluids' heat transfer coefficients and the tube thermal conductivity",
+      "Only the tube wall thickness",
+      "The fluid flow rates"
+     ],
+     "a": 1,
+     "x": "It combines the heat transfer coefficient of the two heat exchanger fluids and the thermal conductivity of the tubes.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is another name for the convective heat transfer coefficient?",
+     "o": [
+      "Overall coefficient",
+      "Film coefficient",
+      "Thermal conductivity",
+      "Emissivity"
+     ],
+     "a": 1,
+     "x": "The convective heat transfer coefficient is sometimes referred to as a film coefficient.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Conduction through a flat wall",
+   "eo": [
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Conduction depends on the driving force of temperature difference and the resistance to heat transfer. Fourier's Law of Conduction is the most common way to correlate them.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.6"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = kA(∆T / ∆x)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "Heat transfer rate is like current flow, and temperature difference is the potential that drives it. The Fourier equation can be written in a form similar to Ohm's Law.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.9"
+    },
+    {
+     "t": "eq",
+     "text": "Heat flux = ∆T / Rth, with Rth = ∆x / k",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig2",
+     "num": 2,
+     "cap": "Equivalent Resistance",
+     "alt": "Composite wall of three layers beside an electrical analogy of three resistors in series.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q44",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.7",
+     "q": "In the equivalent resistance method, what plays the part of voltage?",
+     "o": [
+      "Temperature difference",
+      "Wall thickness",
+      "Heat flux",
+      "Thermal conductivity"
+     ],
+     "a": 0,
+     "x": "The temperature difference is the potential or driving function for the heat flow.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Conduction through a cylinder",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "The surface area of a pipe is A = 2πrL, so neither the inner nor the outer area alone can be used.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = 2πkL(∆T) / ln(ro / ri)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.13"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig5",
+     "num": 5,
+     "cap": "Pipe Insulation Problem",
+     "alt": "Cross section of a pipe with insulation: r1 = 5 in, r2 = 6 in, r3 = 9 in, 550 °F inside and 100 °F outside.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "Why is a log mean area used for conduction through a pipe wall?",
+     "o": [
+      "The temperature is constant",
+      "The pipe wall is a fluid",
+      "The heat transfer area changes across the wall",
+      "The pipe has no thickness"
+     ],
+     "a": 2,
+     "x": "Across a cylindrical wall the heat transfer surface area continually changes, so a log mean area is needed.",
+     "p": "P16"
+    }
+   ]
+  },
+  {
+   "title": "Convection and the boundary layer",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = hA∆T",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Convection is treated empirically because of the factors that affect the stagnant film thickness:",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.18"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Fluid velocity",
+      "Fluid viscosity",
+      "Heat flux",
+      "Surface roughness",
+      "Type of flow (single-phase/two-phase)"
+     ],
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "With little mass transfer near the wall, there is little convection there. Raising flow makes each layer thinner.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.5 Laminar Flow"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "With power, area, and sodium temperature held constant, raising h means the fuel pin temperature must be lower.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.13 Convective Heat Transfer Coefficient Equation"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q305",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "Why is the convective heat transfer coefficient higher for turbulent flow than for laminar flow?",
+     "o": [
+      "Turbulent flow has a lower velocity",
+      "Laminar flow has no fluid film",
+      "Turbulent flow has a lower temperature",
+      "Turbulent flow has a thinner stagnant film layer"
+     ],
+     "a": 3,
+     "x": "Turbulent flow has a thinner stagnant fluid film layer on the heat transfer surface.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.9",
+     "q": "What causes natural convection?",
+     "o": [
+      "Density variations from temperature differences in the fluid",
+      "Electromagnetic radiation",
+      "A pressure gauge",
+      "A pump"
+     ],
+     "a": 0,
+     "x": "Natural convection is motion and mixing caused by density variations resulting from temperature differences within the fluid.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.9",
+     "q": "How does wire wrap on a fuel pin affect the laminar boundary layer?",
+     "o": [
+      "It thickens it",
+      "It has no effect",
+      "It stops all flow",
+      "It tends to break it up"
+     ],
+     "a": 3,
+     "x": "The wire tends to break up the laminar boundary layer by making the surface rough instead of smooth.",
+     "p": "P25",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Overall heat transfer coefficient",
+   "eo": [
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig6",
+     "num": 6,
+     "cap": "Overall Heat Transfer Coefficient",
+     "alt": "Flat wall with fluid on both sides, showing the overall coefficient built from two film coefficients and the wall's conductivity.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.20"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig7",
+     "num": 7,
+     "cap": "Combined Heat Transfer",
+     "alt": "Section of a pipe wall, with temperatures T1 to T4 from the bulk fluid inside to the bulk fluid outside.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.21"
+    },
+    {
+     "t": "p",
+     "text": "Across a pipe, heat moves by convection from T1 to T2, by conduction from T2 to T3, and by convection from T3 to T4.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.21"
+    },
+    {
+     "t": "p",
+     "text": "The equation can be simplified for a thin-walled tube, where:",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "eq",
+     "text": "Uo = 1 / (1/h1 + ∆r/k + 1/h2)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.23"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q60",
+     "eo": "1.14"
+    },
+    {
+     "eo": "1.14",
+     "q": "Heat passes from one fluid through a tube wall to a second fluid. What are the three processes, in order?",
+     "o": [
+      "Conduction, convection, conduction",
+      "Convection, conduction, convection",
+      "Radiation, conduction, radiation",
+      "Convection, radiation, convection"
+     ],
+     "a": 1,
+     "x": "Heat moves by convection to the wall, conduction through it, and convection to the second fluid.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Radiant heat transfer",
+   "eo": [
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "Any material with a temperature above absolute zero gives off some radiant energy.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = σAT⁴, with T in °R",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = εσAT⁴",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = fσA(T1⁴ - T2⁴)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.28"
+    },
+    {
+     "t": "p",
+     "text": "The radiation configuration factor (f) is a dimensionless factor:",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What is the maximum value of emissivity?",
+     "o": [
+      "No maximum",
+      "0.174",
+      "0.5",
+      "1.0"
+     ],
+     "a": 3,
+     "x": "Emissivity is a dimensionless number and has a maximum value of 1.0.",
+     "p": "P30"
+    },
+    {
+     "eo": "1.10",
+     "q": "What does the radiation configuration factor take into account?",
+     "o": [
+      "The velocity of the fluid",
+      "The conductivity of the medium",
+      "The emissivity of both bodies and their relative geometry",
+      "Only the temperature of the hotter body"
+     ],
+     "a": 2,
+     "x": "It takes into account the emissivity of both bodies and their relative geometry.",
+     "p": "P31"
+    }
+   ]
+  },
+  {
+   "title": "Heat exchanger flow paths",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig8",
+     "num": 8,
+     "cap": "Typical Tube and Shell Heat Exchanger",
+     "alt": "Tube and shell heat exchanger, with tube-side fluid through tubes held by tube sheets and shell-side fluid around them.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig9",
+     "num": 9,
+     "cap": "Fluid Flow Direction",
+     "alt": "Two sketches of heat exchanger tubes: fluids moving the same way in parallel flow and opposite ways in counter-flow.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig10",
+     "num": 10,
+     "cap": "Heat Exchanger Temperature Profiles",
+     "alt": "Temperature against length: parallel flow curves start far apart and converge, and counter-flow curves stay about evenly spaced.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.33"
+    },
+    {
+     "t": "p",
+     "text": "Parallel flow has a large temperature difference at the ends, which causes large thermal stresses.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "A counter-flow exchanger's more uniform temperature difference minimizes thermal stresses and gives a more uniform rate of heat transfer.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.33"
+    },
+    {
+     "t": "p",
+     "text": "A parallel flow design is advantageous when two fluids must be brought to nearly the same temperature.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.33"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q43",
+     "eo": "1.11"
+    },
+    {
+     "existing": "Q284",
+     "eo": "1.11"
+    },
+    {
+     "eo": "1.11",
+     "q": "In a parallel flow heat exchanger, how does the cold fluid outlet temperature compare with the hot fluid?",
+     "o": [
+      "It never exceeds the lowest temperature of the hot fluid",
+      "It always exceeds the hot outlet temperature",
+      "It equals the hot inlet temperature",
+      "It can approach the hot inlet temperature"
+     ],
+     "a": 0,
+     "x": "In parallel flow, the cold fluid exiting never exceeds the lowest temperature of the hot fluid.",
+     "p": "P38"
+    }
+   ]
+  },
+  {
+   "title": "Heat exchanger applications and care",
+   "eo": [
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "Heat removed from the hotter fluid is usually rejected to the environment or some other heat sink.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "Admitting fluids slowly allows uniform expansion of all types of metals and helps prevent thermal shock.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "Turbulent flow aids heat transfer by disrupting the laminar film.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q285",
+     "eo": "1.12"
+    },
+    {
+     "existing": "Q286",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.12",
+     "q": "What is the primary advantage of a regenerative heat exchanger?",
+     "o": [
+      "Higher fluid velocity",
+      "Conservation of system energy",
+      "Mixing of two fluids",
+      "Rejecting heat to the environment"
+     ],
+     "a": 1,
+     "x": "The primary advantage of a regenerative application is conservation of system energy.",
+     "p": "P42"
+    },
+    {
+     "eo": "1.12",
+     "q": "How does a non-regenerative heat exchanger differ from a regenerative one?",
+     "o": [
+      "It has no tubes",
+      "It has no heat sink",
+      "It uses two separate fluids with no interconnection",
+      "It uses one fluid from the same system for hot and cold sides"
+     ],
+     "a": 2,
+     "x": "In a non-regenerative application, one fluid cools or heats the other with no interconnection between them.",
+     "p": "P40"
+    }
+   ]
+  },
+  {
+   "title": "Log mean temperature difference",
+   "eo": [
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "LMTD is the temperature difference at one end minus the temperature difference at the other, divided by the natural log of their ratio.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.20"
+    },
+    {
+     "t": "p",
+     "text": "This assumes specific heats do not vary significantly with temperature and convection coefficients are relatively constant.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.20"
+    },
+    {
+     "t": "p",
+     "text": "A heat exchanger can be analyzed by an overall energy balance, with Q̇ = ṁ∆h or Q̇ = ṁcp∆T.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.36"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = UoAo∆Tlm",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.37"
+    },
+    {
+     "t": "p",
+     "text": "The rate of heat transfer varies along the exchanger, because it depends on the temperature difference at each point.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.33"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.13",
+     "q": "A counterflow exchanger has temperature differences of 280 °F at one end and 190 °F at the other. What is the LMTD?",
+     "o": [
+      "90 °F",
+      "190 °F",
+      "232 °F",
+      "280 °F"
+     ],
+     "a": 2,
+     "x": "(280 - 190)/ln(280/190) = 232 °F.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Boiling heat transfer",
+   "eo": [
+    "1.15"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "Once in the main fluid stream, the bubbles collapse, because the bulk temperature is below the surface temperature.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.40"
+    },
+    {
+     "t": "p",
+     "text": "As temperature rises or pressure drops, the bulk fluid can reach saturation and bubbles no longer collapse.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "When more bubbles form than can be carried away, they group together,",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "Steam has a lower convective heat transfer coefficient than water, so the patches insulate the surface.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig13",
+     "num": 13,
+     "cap": "Boiling Heat Transfer Curve",
+     "alt": "Heat flux against temperature difference, rising through natural convection and nucleate boiling to a peak, falling through partial film boiling, and rising again in film boiling.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "What is the heat flux associated with DNB called?",
+     "o": [
+      "Nucleate heat flux",
+      "Critical heat flux",
+      "Bulk heat flux",
+      "Latent heat flux"
+     ],
+     "a": 1,
+     "x": "The heat flux associated with DNB is commonly called the critical heat flux.",
+     "p": "P50",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.15",
+     "q": "In film boiling, what covers the heat transfer surface?",
+     "o": [
+      "Subcooled liquid",
+      "Small bubbles that collapse",
+      "Oxide scale",
+      "A stable blanket of steam"
+     ],
+     "a": 3,
+     "x": "Film boiling is the condition after a stable steam blanket has formed.",
+     "p": "P48",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    },
+    {
+     "eo": "1.15",
+     "q": "What happens to bubbles in nucleate boiling?",
+     "o": [
+      "They stay fixed on the surface",
+      "They form only in the bulk fluid",
+      "They cover the whole surface",
+      "They form at the surface, break away, and are carried into the main stream"
+     ],
+     "a": 3,
+     "x": "In nucleate boiling, bubbles form at the surface and then break away into the main stream of the fluid.",
+     "p": "P45",
+     "place": [
+      "Thermodynamics",
+      "Steam"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Heat generation in the core",
+   "eo": [
+    "2.1",
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = G N σf φ Vf",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+    },
+    {
+     "t": "p",
+     "text": "G is energy per fission, N is fissionable nuclei per unit volume, σf is the microscopic fission cross-section, φ is neutron flux, and Vf is the volume of the fuel.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = ṁ cp ∆T",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q61",
+     "eo": "2.2"
+    },
+    {
+     "eo": "2.2",
+     "q": "If reactor power stays constant and flow rate rises, what happens to the temperature difference across the core?",
+     "o": [
+      "It stays the same",
+      "It doubles",
+      "It rises",
+      "It falls"
+     ],
+     "a": 3,
+     "x": "If power is constant, temperature will vary inversely with flow rate.",
+     "p": "P54",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "2.1",
+     "q": "Which of these affect the fission rate and therefore the heat generation rate?",
+     "o": [
+      "Atmospheric pressure",
+      "Fuel density, neutron flux, and type of fuel",
+      "Pump speed only",
+      "Pipe roughness and length"
+     ],
+     "a": 1,
+     "x": "The density of the fuel, the neutron flux, and the type of fuel all affect the fission rate.",
+     "p": "P52",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Flux profiles and power density",
+   "eo": [
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ht-02-fig14",
+     "num": 14,
+     "cap": "Axial Flux Profile",
+     "alt": "Axial flux profile: flux against core height, peaking near the core midplane.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig15",
+     "num": 15,
+     "cap": "Radial Flux Profile",
+     "alt": "Radial flux profile: flux across the core, peaking at the center and falling toward the edges.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+    },
+    {
+     "t": "p",
+     "text": "A radial distribution looks at flux from the center of the core out to the edges. An axial distribution looks at flux from bottom to top.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+    },
+    {
+     "t": "p",
+     "text": "The figures omit control rods. Once control rods and reflectors are taken into account,",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "p",
+     "text": "A hot channel factor of 1.0 would imply a flat flux profile.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "p",
+     "text": "Average linear power density is found by",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "p",
+     "text": "Common units are kW/ft.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+    },
+    {
+     "t": "p",
+     "text": "Maximum linear power density equals the nuclear heat flux hot channel factor times the average linear power density.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q45",
+     "eo": "2.3"
+    },
+    {
+     "existing": "Q46",
+     "eo": "2.3"
+    },
+    {
+     "eo": "2.4",
+     "q": "How is average linear power density found?",
+     "o": [
+      "Peak flux divided by average flux",
+      "Heat generation rate divided by fuel volume",
+      "Total flow divided by core area",
+      "Total thermal power divided by total fuel rod length"
+     ],
+     "a": 3,
+     "x": "Average linear power density is the total thermal output divided by the total length of all the fuel components.",
+     "p": "P59",
+     "place": [
+      "Thermodynamics",
+      "Core Thermal Limits"
+     ]
+    },
+    {
+     "eo": "2.3",
+     "q": "What does a hot channel factor of 1.0 imply?",
+     "o": [
+      "A peak at the core edge",
+      "No fission",
+      "Twice the average flux",
+      "A flat flux profile"
+     ],
+     "a": 3,
+     "x": "A hot channel factor of 1.0 would imply a flat flux profile.",
+     "p": "P55",
+     "place": [
+      "Thermodynamics",
+      "Core Thermal Limits"
+     ]
+    },
+    {
+     "eo": "2.3",
+     "q": "What is the average volumetric thermal source strength?",
+     "o": [
+      "The neutron flux at the center",
+      "The coolant flow times ∆T",
+      "The heat generation rate divided by the volume of fuel",
+      "The heat flux times the fuel area"
+     ],
+     "a": 2,
+     "x": "The heat generation rate divided by the volume of fuel gives the average volumetric thermal source strength.",
+     "p": "P60",
+     "place": [
+      "Thermodynamics",
+      "Core Thermal Limits"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Core temperature profiles",
+   "eo": [
+    "2.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The temperature of the coolant increases throughout the entire length of a channel.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.48"
+    },
+    {
+     "t": "p",
+     "text": "The rate of increase varies with the linear heat flux of the channel.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "fig",
+     "id": "ht-02-fig17",
+     "num": 17,
+     "cap": "Radial Temperature Profile Across a Fuel Rod and Coolant Channel",
+     "alt": "Temperature falling from the fuel centerline through the fuel, across the cladding, and through the coolant fluid.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.49"
+    },
+    {
+     "t": "p",
+     "text": "Inside a fuel pin, heat is generated and also moves outward, so the slope gets steeper toward the edge of the fuel.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.10 Radial Fuel Temperature Profile"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "p",
+     "text": "The temperature drop is not very steep through the gap. The cladding conducts heat about as well as the fuel.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.10 Radial Fuel Temperature Profile"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q309",
+     "eo": "2.6"
+    },
+    {
+     "eo": "2.6",
+     "q": "Why are fuel temperatures higher in the upper axial region of the core?",
+     "o": [
+      "Flow is lower at the bottom",
+      "The coolant increases in temperature as it flows up the channel",
+      "The flux is highest at the top",
+      "The cladding is thinner at the top"
+     ],
+     "a": 1,
+     "x": "Since the coolant increases in temperature as it flows up the channel, the cladding and fuel temperatures are higher in the upper region.",
+     "p": "P62",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "2.6",
+     "q": "What gap material is expected in the fuel pins of this sodium reactor?",
+     "o": [
+      "Liquid sodium",
+      "Nitrogen",
+      "Helium",
+      "Water"
+     ],
+     "a": 0,
+     "x": "Unlike a typical light water reactor, the gap material is expected to be liquid sodium, which has very good heat transfer.",
+     "p": "P63",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "2.6",
+     "q": "If coolant flow is raised, what happens to the coolant temperature rise through the core?",
+     "o": [
+      "It gets larger",
+      "It stays the same",
+      "It reverses",
+      "It gets smaller"
+     ],
+     "a": 3,
+     "x": "As flow is raised, the coolant spends less time in the core, and so heats up less.",
+     "p": "P65",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Sodium coolant and bypass flow",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "p",
+     "text": "The Natrium reactor operates near atmospheric pressure.",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 1.1, p. 1.1-1"
+    },
+    {
+     "t": "p",
+     "text": "Most sodium pumped through the core is directed to cool the fuel. Some cools control rods, secondary control rods, reflector assemblies, and shield assemblies.",
+     "cite": "Word: Thermal Hydraulics.docx, slide 1.16 Bypass Flow"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q306",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q141",
+     "eo": "From the lesson plan"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "About what fraction of sodium flow is typically bypass flow?",
+     "o": [
+      "Less than 1%",
+      "5% to 10%",
+      "25% to 30%",
+      "More than 50%"
+     ],
+     "a": 1,
+     "x": "A small fraction of the flow, usually about 5% to 10% of the total, is used to cool other components.",
+     "p": "P66",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Fuel-cladding chemical interaction in metallic fuel",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fuel-cladding chemical interaction (FCCI) is:",
+     "cite": "NRC slides ML19149A371, slide 24"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    },
+    {
+     "t": "p",
+     "text": "When zirconium is used in the metal fuel alloy:",
+     "cite": "NRC slides ML19149A371, slide 24"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "p",
+     "text": "Fission-gas pressure induced cladding strain leading to thermal creep, accelerated due to FCCI:",
+     "cite": "NRC slides ML19149A371, slide 24"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q243",
+     "eo": "From the lesson plan"
+    }
+   ]
+  },
+  {
+   "title": "Decay heat",
+   "eo": [
+    "2.7",
+    "2.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "All radioactive materials in the reactor at shutdown continue to decay and release energy.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "p",
+     "text": "The amount present depends on the power levels at which the reactor operated and the time spent at those levels.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "p",
+     "text": "It will continue to decrease more slowly, and is significant weeks and even months after shutdown.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = Q̇o (1/2)^(time / half-life)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.53"
+    },
+    {
+     "t": "p",
+     "text": "The single half-life is a rough approximation of the overall decay of the core.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.53"
+    },
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "eq",
+     "text": "Q̇ = m cp (∆T / ∆t)",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.54"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.7",
+     "q": "What is decay heat?",
+     "o": [
+      "Heat stored in the coolant",
+      "Heat from friction in pumps",
+      "Energy released by the decay of fission products",
+      "Heat from fission after shutdown"
+     ],
+     "a": 2,
+     "x": "The release of energy by the decay of fission products is called decay heat.",
+     "p": "P72",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    },
+    {
+     "eo": "2.7",
+     "q": "What does the amount of decay heat depend on?",
+     "o": [
+      "The pump speed",
+      "The atmospheric pressure",
+      "The reactor's power history",
+      "Only the coolant type"
+     ],
+     "a": 2,
+     "x": "The amount of radioactive material at shutdown depends on the power levels and the time spent at them.",
+     "p": "P72",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Removing decay heat",
+   "eo": [
+    "2.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P77"
+    },
+    {
+     "t": "quote",
+     "p": "P78"
+    },
+    {
+     "t": "quote",
+     "p": "P79"
+    },
+    {
+     "t": "p",
+     "text": "Many reactors are designed so natural circulation between the core and a heat exchanger can remove decay heat. That is an example of the first category.",
+     "cite": "DOE-HDBK-1012/2-92 HT-02 p.56"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.9",
+     "q": "What are the two categories of methods for removing decay heat?",
+     "o": [
+      "Conduction and radiation",
+      "Pumped and throttled",
+      "Primary and backup diesel",
+      "Closed loop and open system (once through)"
+     ],
+     "a": 3,
+     "x": "One category circulates fluid in a closed loop through a heat exchanger. The other draws in cool fluid and discharges warmer fluid.",
+     "p": "P78",
+     "place": [
+      "Thermodynamics",
+      "Thermal Hydraulics"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Temperature difference across a slab",
+   "eo": "1.6",
+   "page": 8,
+   "problem": "1000 Btu/hr passes through a 1 ft² slab 1 in. thick with k = 0.12 Btu/hr-ft-°F. Find ∆T.",
+   "steps": [
+    "∆T = Q̇(∆x)/(kA)",
+    "∆T = 1000 (1/12 ft)/(0.12)(1 ft²)"
+   ],
+   "answer": "694 °F",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.8"
+  },
+  {
+   "title": "Thermal resistance of a composite wall",
+   "eo": "1.7",
+   "page": 10,
+   "problem": "A wall has 1 in. of copper (k = 240), 1/8 in. of asbestos (k = 0.048), and 2 in. of fiberglass (k = 0.022). Find each layer's thermal resistance.",
+   "steps": [
+    "R = ∆x/k with ∆x in feet",
+    "RCu = (1/12)/240",
+    "Rasb = (0.125/12)/0.048",
+    "Rfib = (2/12)/0.022"
+   ],
+   "answer": "0.000347, 0.2170, and 7.5758 hr-ft²-°F/Btu",
+   "fig": {
+    "t": "fig",
+    "id": "ht-02-fig2",
+    "num": 2,
+    "cap": "Equivalent Resistance",
+    "alt": "Composite wall of three layers beside an electrical analogy of three resistors in series.",
+    "cite": "DOE-HDBK-1012/2-92 HT-02 p.10"
+   },
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.10"
+  },
+  {
+   "title": "Heat transfer through a pipe wall",
+   "eo": "1.8",
+   "page": 13,
+   "problem": "A 35 ft stainless steel pipe has an inner diameter of 0.92 ft and an outer diameter of 1.08 ft. Inner surface is 122 °F, outer is 118 °F, and k = 108 Btu/hr-ft-°F. Find the heat transfer rate.",
+   "steps": [
+    "Q̇ = 2πkL(Th - Tc)/ln(ro/ri)",
+    "Q̇ = 6.28 (108)(35)(122 - 118)/ln(0.54/0.46)"
+   ],
+   "answer": "5.92 x 10⁵ Btu/hr",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.13"
+  },
+  {
+   "title": "Interior temperature of a pipe",
+   "eo": "1.8",
+   "page": 14,
+   "problem": "A 10 ft pipe has inner radius 1 in. and outer radius 1.25 in., with an outer surface at 250 °F. Heat transfer is 30,000 Btu/hr and k = 25 Btu/hr-ft-°F. Find the interior temperature.",
+   "steps": [
+    "Th = Tc + Q̇ ln(ro/ri)/(2πkL)",
+    "Th = 250 + 30,000 ln(1.25)/(2(3.14)(25)(10))"
+   ],
+   "answer": "254 °F",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.14"
+  },
+  {
+   "title": "Bulk temperature from convection",
+   "eo": "1.9",
+   "page": 24,
+   "problem": "Insulation 1 in. thick (k = 0.8) has 600 °F on the wall side and 105 °F on the outer surface. The convection coefficient is 950 Btu/hr-ft²-°F. Find the bulk temperature.",
+   "steps": [
+    "Heat flux = 0.8 (600 - 105)/(1/12) = 4752 Btu/hr-ft²",
+    "Tb = 105 - 4752/950"
+   ],
+   "answer": "100 °F",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.24"
+  },
+  {
+   "title": "Log mean temperature difference",
+   "eo": "1.13",
+   "page": 36,
+   "problem": "A counterflow exchanger heats a cold fluid from 120 °F to 310 °F. The hot fluid enters at 500 °F and leaves at 400 °F. Find the LMTD.",
+   "steps": [
+    "∆T2 = 400 - 120 = 280 °F",
+    "∆T1 = 500 - 310 = 190 °F",
+    "∆Tlm = (280 - 190)/ln(280/190)"
+   ],
+   "answer": "232 °F",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.36"
+  },
+  {
+   "title": "Overall coefficient of a thin tube",
+   "eo": "1.14",
+   "page": 38,
+   "problem": "Find Uo with h1 = 2000, h2 = 1500, a 0.1 in. wall, and k = 200.",
+   "steps": [
+    "Uo = 1/(1/h1 + ∆r/k + 1/h2)",
+    "Uo = 1/(1/2000 + (0.1/12)/200 + 1/1500)"
+   ],
+   "answer": "827.6 Btu/hr-ft²-°F",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.38"
+  },
+  {
+   "title": "Average linear power density",
+   "eo": "2.4",
+   "page": 47,
+   "problem": "A 3400 MW core has 12 ft fuel rods, 264 rods per assembly, and 193 assemblies. Find the average linear power density.",
+   "steps": [
+    "Average = total thermal power / total fuel rod length",
+    "3.4 x 10⁶ kW / 12 (264)(193)"
+   ],
+   "answer": "5.56 kW/ft",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.47"
+  },
+  {
+   "title": "Maximum linear power density",
+   "eo": "2.3",
+   "page": 48,
+   "problem": "With a nuclear heat flux hot channel factor of 1.83 and an average of 5.56 kW/ft, find the maximum.",
+   "steps": [
+    "Maximum = HFHCF x average",
+    "1.83 (5.56) kW/ft"
+   ],
+   "answer": "10.18 kW/ft",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.48"
+  },
+  {
+   "title": "Decay heat after 12 hours",
+   "eo": "2.8",
+   "page": 54,
+   "problem": "Effective power at shutdown was 120 MW. Decay heat at shutdown is 7% of it, with a 1 hr half life. How much heat removal is needed 12 hours later?",
+   "steps": [
+    "(120 MW)(0.07) = 8.4 MW at shutdown",
+    "8.4 MW (1/2)^(12 hr / 1 hr) = 2.05 x 10⁻³ MW",
+    "Convert with 3.413 x 10⁶ Btu/hr per MW"
+   ],
+   "answer": "7000 Btu/hr",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.54"
+  },
+  {
+   "title": "Decay heat from a heatup rate",
+   "eo": "2.8",
+   "page": 55,
+   "problem": "A primary system with 24,000 lbm of coolant (cp = 0.8 Btu/lbm-°F) heats up at 0.8 °F/hr with cooling secured. Each heat exchanger removes 12,000 Btu/hr. Is one enough?",
+   "steps": [
+    "Q̇ = (24,000)(0.8)(0.8 °F / 1 hr) = 15,360 Btu/hr",
+    "Compare with 12,000 Btu/hr"
+   ],
+   "answer": "No. One heat exchanger will not be sufficient.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.55"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three modes of heat transfer?",
+   "a": "Conduction, convection, and radiation.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What is the equation for convection heat transfer?",
+   "a": "Q̇ = hA∆T.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What is a black body?",
+   "a": "A body that emits the maximum amount of heat for its absolute temperature.",
+   "p": "P28",
+   "place": null
+  },
+  {
+   "q": "What is emissivity?",
+   "a": "A factor applied to black body heat transfer to account for a real object, with a maximum value of 1.0.",
+   "p": "P30",
+   "place": null
+  },
+  {
+   "q": "What are the advantages of a counter-flow heat exchanger?",
+   "a": "More uniform temperature difference, lower thermal stress, and a cold outlet that can approach the hot inlet temperature.",
+   "p": "P39",
+   "place": null
+  },
+  {
+   "q": "What is DNB?",
+   "a": "Departure from nucleate boiling: the point of transition from nucleate boiling to film boiling.",
+   "p": "P49",
+   "place": [
+    "Thermodynamics",
+    "Steam"
+   ]
+  },
+  {
+   "q": "How do temperature, flow, and power relate in the core?",
+   "a": "At constant flow, temperature varies directly with power. At constant power, temperature varies inversely with flow.",
+   "p": "P54",
+   "place": [
+    "Thermodynamics",
+    "Thermal Hydraulics"
+   ]
+  },
+  {
+   "q": "About how much does decay heat fall after shutdown, per the handbook?",
+   "a": "From roughly 7% of prior power to about 2% within the first hour and 1% within the first day.",
+   "p": "P74",
+   "place": [
+    "Thermodynamics",
+    "Thermal Hydraulics"
+   ]
+  },
+  {
+   "q": "What is FCCI?",
+   "a": "Fuel Cladding Chemical Interaction: metallic fuel reacting with the cladding at high temperature to form a low melting point eutectic.",
+   "p": "P69",
+   "place": [
+    "Thermodynamics",
+    "Core Thermal Limits"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Heat is energy transferred as a result of a temperature difference. Temperature is a measure of the molecular energy in a substance.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.5"
+  },
+  {
+   "text": "Heat flux is the rate of heat transfer per unit area.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.5"
+  },
+  {
+   "text": "Fourier's Law of Conduction solves rectangular and cylindrical problems, and conduction problems can use electrical analogies.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.17"
+  },
+  {
+   "text": "When conduction and convection both occur, the overall heat transfer coefficient must be used.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.25"
+  },
+  {
+   "text": "Counter-flow heat exchangers typically remove more heat than parallel flow heat exchangers.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.39"
+  },
+  {
+   "text": "Regenerative heat exchangers return energy to the system. Non-regenerative heat exchangers reject heat to the surroundings.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.39"
+  },
+  {
+   "text": "The thermal power of a reactor is directly related to coolant mass flow rate and the temperature difference across the core.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.51"
+  },
+  {
+   "text": "Decay heat depends on the reactor's power history, and methods for removing it are closed loop or once through.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.57"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 10",
+   "note": "Boiling heat transfer is on a page tagged Water-system only. Cooling towers, the steam line example on p.19, and condenser text on p.37 are left off.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.40"
+  },
+  {
+   "type": "Rule 8",
+   "note": "p.44 and p.51 say heat generation is proportional to the thermal neutron flux. The lesson uses the wording on p.45, which says the neutron flux.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.44"
+  },
+  {
+   "type": "User decision",
+   "note": "The handbook's 7% decay heat value is used by the user's decision, Nov 5, 2026. Thermal Hydraulics.docx slide 1.27 says approximately 6%, and that value is not shown.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.52"
+  },
+  {
+   "type": "Conflict",
+   "note": "p.50 says heat crosses the helium gap of oxide fuel by convection. Heat Transfer.docx slides 1.15 and 1.23 say conduction. Neither is used, since the gap in this reactor is liquid sodium (Thermal Hydraulics.docx slide 1.10). Existing item Q304 teaches conduction and should be reviewed.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.50"
+  },
+  {
+   "type": "Scope",
+   "note": "Fuel changes on p.50 and p.51 (zircaloy, oxide pellets, clad creep, crud) describe other reactors. Water injection cooling on p.56, the regenerative purification example on p.34, and the PWR axial profile in Figure 16 are also left off. The 3400 MW example has no water content and is kept for objective 2.4.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.50"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.26 gives the Stefan-Boltzmann constant as 0.174 Btu/hr-ft²-°R⁴, and the p.28 furnace example gives 4.29 x 10¹⁴ Btu/hr. The value looks off by a large power of ten, but no approved Heat Transfer source settles it. The constant and the example are left off.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.26"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.3 uses the same symbol for heat transfer rate and heat flux. p.45 cites Equation 2-14 for what is Equation 2-15, and p.54 cites 2-15 for 2-16.",
+   "cite": "DOE-HDBK-1012/2-92 HT-02 p.3"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Heat Transfer.docx is partly a draft storyboard, so this topic carries the Draft source tag. Core Thermal Limits word.docx and Thermal Hydraulics.docx add sodium content beyond the handbook objectives, shown on two pages marked From the lesson plan.",
+   "cite": "Word: Heat Transfer.docx, slide 3.1 Storyboard Notice"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

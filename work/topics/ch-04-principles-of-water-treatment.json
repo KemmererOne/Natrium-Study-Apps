@@ -1,0 +1,996 @@
+{
+ "module_id": "CH-04",
+ "slug": "ch-04-principles-of-water-treatment",
+ "title": "Principles of Water Treatment",
+ "status": "Reviewed",
+ "scope_tags": [
+  "Water-system only"
+ ],
+ "source_id": "DOE-1015-V2",
+ "handbook": "DOE-HDBK-1015/2-93",
+ "word_file": "Demineralizers and Ion Exchangers.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Demineralizers and Ion Exchangers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, EXPLAIN the concept and application of ion exchange in water purification.",
+   "items": [],
+   "page": {
+    "pdf": 55,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "LIST the three reasons for removing impurities from water prior to use in reactor systems.",
+     "items": [],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Ion exchange",
+      "b. Demineralize",
+      "c. Cation",
+      "d. Anion",
+      "e. Polymer",
+      "f. Mixed-bed demineralizer",
+      "g. Affinity",
+      "h. Decontamination factor"
+     ],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the following:",
+     "items": [
+      "a. Resin bead",
+      "b. Cation resin",
+      "c. Anion resin"
+     ],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DISCUSS the following factors of ion exchange:",
+     "items": [
+      "a. Relative affinity",
+      "b. Decontamination factor"
+     ],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "WRITE the reaction for removal of NaCl and CaSO4 by a mixed-bed ion exchanger such as one containing HOH resin.",
+     "items": [],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "EXPLAIN the three basic methods used to remove dissolved gases from water.",
+     "items": [],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "LIST five filtration mediums used to remove suspended solids from water.",
+     "items": [],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "EXPLAIN how mixed-bed ion exchangers may be used to control pH.",
+     "items": [],
+     "page": {
+      "pdf": 55,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DISCUSS resin malfunctions, including the following:",
+     "items": [
+      "a. Channeling",
+      "b. Breakthrough",
+      "c. Exhaustion"
+     ],
+     "page": {
+      "pdf": 56,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "LIST the maximum conductivity and approximate concentration of electrolyte for each level of purity for makeup water.",
+     "items": [],
+     "page": {
+      "pdf": 56,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "To minimize corrosion, which is enhanced by impurities.",
+   "sec": "Purpose of Water Treatment",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "To minimize radiation levels in a reactor facility.",
+   "sec": "Purpose of Water Treatment",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "To minimize fouling of heat transfer surfaces.",
+   "sec": "Purpose of Water Treatment",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "An ion exchange is the reversible exchange of ions between a liquid and a solid.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "the process whereby impurities present in the incoming fluid (water) are removed by exchanging impure ions with H+ and OH- ions, resulting in the formation of pure water.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "There are two general types of ion exchange resins: those that exchange positive ions, called cation resins, and those that exchange negative ions, called anion resins.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "which are extremely large molecules that are formed by the combination of many molecules of one or two compounds in a repeating structure that produces long chains.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "The ratio is normally 2 parts cation resin to 3 parts anion resin.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "The term affinity is often used to describe the attraction between a resin and a given ion.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.7"
+  },
+  {
+   "id": "P10",
+   "quote": "Because of the different densities of anion and cation resins, the flow of solution (impure water) is from top to bottom.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.9"
+  },
+  {
+   "id": "P11",
+   "quote": "the efficiency for removal of impurities is greater in a mixed-bed resin than a layered arrangement.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.9"
+  },
+  {
+   "id": "P12",
+   "quote": "The ion exchange process is reversible.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+  },
+  {
+   "id": "P13",
+   "quote": "which is defined as a ratio of the concentration (or activity) of the fluid at the inlet compared to the concentration (or activity) at the effluent",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+  },
+  {
+   "id": "P14",
+   "quote": "In the reaction with NaCl, both Na+ and Cl- ions are removed from solution and replaced by H+ and OH- ions, respectively",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.12"
+  },
+  {
+   "id": "P15",
+   "quote": "By this process, the original NaCl solution becomes pure water.",
+   "sec": "Water Treatment Processes",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.12"
+  },
+  {
+   "id": "P16",
+   "quote": "the CO2 is \"stripped\" from the water and vented to the atmosphere.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.17"
+  },
+  {
+   "id": "P17",
+   "quote": "The water is heated to a temperature sufficient for slow boiling to occur.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.17"
+  },
+  {
+   "id": "P18",
+   "quote": "Numerous materials are used as filter media and include sand, activated charcoal, anthracite, diatomaceous earth, and to some extent resin in an ion exchanger.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.20"
+  },
+  {
+   "id": "P19",
+   "quote": "Sand is not normally used in nuclear applications because of the silicate ion",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.20"
+  },
+  {
+   "id": "P20",
+   "quote": "(90% or less for filtration versus approximately 100% for most ion exchange reactions).",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.21"
+  },
+  {
+   "id": "P21",
+   "quote": "Thus, the resin serves both to purify the coolant and to help maintain the pH of the coolant by releasing NH4OH.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.21"
+  },
+  {
+   "id": "P22",
+   "quote": "Channeling is a condition in which the resin allows a direct flow of water through the ion exchanger.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.22"
+  },
+  {
+   "id": "P23",
+   "quote": "Channeling most often results from improper filling of the ion exchanger with resin.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.22"
+  },
+  {
+   "id": "P24",
+   "quote": "Eventually, as the exchange zone approaches the end of the column, small amounts of NH4 + begin to appear in the effluent. The point at which this occurs is called breakthrough.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.24"
+  },
+  {
+   "id": "P25",
+   "quote": "This condition is called exhaustion and indicates that essentially all the exchange capacity of the resin has been used.",
+   "sec": "Dissolved Gases, Suspended Solids, and pH Control",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.24"
+  },
+  {
+   "id": "P26",
+   "quote": "Conductivity will very quickly indicate the presence of any ionic impurities, even if the impurity concentration is extremely small.",
+   "sec": "Water Purity",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.29"
+  },
+  {
+   "id": "P27",
+   "quote": "the specification that is identified as Very Pure",
+   "sec": "Water Purity",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.30"
+  },
+  {
+   "id": "P28",
+   "quote": "((50 - 0.5) / 50) x 100 = 99%",
+   "sec": "Decontamination factor",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.41 What is the percent of impurities removed if the inlet conductivity is 50 μmho/cm and the outlet conductivity is 0.5 μmho/cm?"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Purpose",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.4 Demineralizers and Ion Exchangers Purpose"
+  },
+  {
+   "step": "Principles of operation",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.6 Principles of Demineralizer Operation"
+  },
+  {
+   "step": "Ion exchange",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.7 Ion Exchange"
+  },
+  {
+   "step": "Factors affecting operation",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.17 Factors Affecting Demineralizer Operation"
+  },
+  {
+   "step": "Channeling",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.20 Channeling"
+  },
+  {
+   "step": "Breakthrough and leakage",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.22 Breakthrough and Leakage"
+  },
+  {
+   "step": "Decontamination factor",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.29 Decontamination Factor"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Why water is treated",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Water as found in nature contains impurities that must be controlled or eliminated.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Deaeration strips dissolved gases, filtration removes insoluble solids, and ion exchange replaces undesirable ions with acceptable ones.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q447",
+     "eo": "1.1"
+    }
+   ]
+  },
+  {
+   "title": "Ion exchange and resins",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Ion exchange devices are commonly called demineralizers. To demineralize is",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "A cation is an ion with a positive charge, and an anion is an ion with a negative charge. Both resins belong to a group of compounds called polymers,",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Resin beads are very small and look like damp, transparent, amber sand. Cross-linked polystyrene is the polymer commonly used.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "A mixed-bed demineralizer is a vessel containing a uniform mixture of cation and anion resins.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "A resin is usually named by the ion on its active sites, such as hydrogen form or hydroxyl form.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q253",
+     "eo": "1.2"
+    },
+    {
+     "existing": "Q448",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is the normal ratio in a mixed-bed demineralizer?",
+     "o": [
+      "1 part cation to 4 parts anion",
+      "2 parts cation resin to 3 parts anion resin",
+      "3 parts cation to 2 parts anion",
+      "Equal parts"
+     ],
+     "a": 1,
+     "x": "The ratio is normally 2 parts cation resin to 3 parts anion resin.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.3",
+     "q": "What does an anion resin exchange?",
+     "o": [
+      "Dissolved gases",
+      "Negative ions",
+      "Positive ions",
+      "Neutrons"
+     ],
+     "a": 1,
+     "x": "Anion resins exchange negative ions, and cation resins exchange positive ions.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Affinity and the ion exchanger",
+   "eo": [
+    "1.2",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "For cations, Na+ has a higher affinity than H+, and H+ higher than Li+. For anions, Cl- has a higher affinity than OH-.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "ch-04-fig3",
+     "num": 3,
+     "cap": "Schematic Diagram of a Typical Ion Exchanger",
+     "alt": "Ion exchanger vessel with an inlet at the top, a resin bed held by retention elements, and an outlet at the bottom.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "If the capacity of the resin is exceeded, previously removed substances may return to the solution.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What does affinity describe in ion exchange?",
+     "o": [
+      "The attraction between a resin and a given ion",
+      "The size of the resin bead",
+      "The flow through the bed",
+      "The heat of reaction"
+     ],
+     "a": 0,
+     "x": "Affinity describes the attraction between a resin and a given ion.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.2",
+     "q": "Why does solution flow from top to bottom in a mixed bed?",
+     "o": [
+      "Different resin densities would otherwise separate the resins",
+      "Gravity is needed for exchange",
+      "To vent gases",
+      "To cool the bed"
+     ],
+     "a": 0,
+     "x": "Because of the different densities of the resins, the flow is from top to bottom.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Decontamination factor",
+   "eo": [
+    "1.2",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Decontamination factor (DF) is",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "eq",
+     "text": "DF = influent concentration, conductivity, or radioactivity / effluent concentration, conductivity, or radioactivity",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "ch-04-fig4",
+     "num": 4,
+     "cap": "Typical History Curve",
+     "alt": "History curve of DF against time, staying high and then falling, with exhaustion at point X.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.11"
+    },
+    {
+     "t": "p",
+     "text": "To find percent of impurities removed, divide the amount removed by the amount entering.",
+     "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.29 Decontamination Factor"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q252",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q449",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "An ion exchanger has 15 ppm chloride at the inlet and 0.1 ppm at the outlet. What is the DF?",
+     "o": [
+      "1.5",
+      "15",
+      "150",
+      "1500"
+     ],
+     "a": 2,
+     "x": "DF = 15 ppm / 0.1 ppm = 150.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.4",
+     "q": "Inlet conductivity is 50 μmho/cm and outlet is 0.5 μmho/cm. What percent of impurities is removed?",
+     "o": [
+      "85%",
+      "90%",
+      "95%",
+      "99%"
+     ],
+     "a": 3,
+     "x": "((50 - 0.5) / 50) x 100 = 99%.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Mixed-bed reactions",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "eq",
+     "text": "H-R + R-OH + Na+ + Cl- → Na-R + R-Cl + H+ + OH-",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.12"
+    },
+    {
+     "t": "eq",
+     "text": "H-R + R-OH + Ca++ + SO4-- → Ca-R + R-SO4 + H+ + OH-",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "H+ and OH- ions from the resin mostly combine to form water.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What is the result of passing NaCl solution through a mixed bed of hydrogen and hydroxyl resins?",
+     "o": [
+      "Hydrochloric acid",
+      "Salt water",
+      "Pure water",
+      "Sodium hydroxide"
+     ],
+     "a": 2,
+     "x": "Na+ and Cl- are replaced by H+ and OH-, so the NaCl solution becomes pure water.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Dissolved gases and suspended solids",
+   "eo": [
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Dissolved gases are removed by aeration, deaeration, or scavengers.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+    },
+    {
+     "t": "p",
+     "text": "In aeration, water is sprayed through a tower or air is blown through it, and",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "In deaeration, water is stored in vented tanks.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Scavengers such as hydrogen, hydrazine, and morpholine combine with the gas and remove it chemically.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+    },
+    {
+     "t": "p",
+     "text": "Filtration removes insoluble solids by passing water through a porous filter medium.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Pressure filters are the most widely used, because they can be installed in a pressurized system.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "Which method heats water to a slow boil to strip dissolved gases?",
+     "o": [
+      "Filtration",
+      "Deaeration",
+      "Aeration",
+      "Scavenging"
+     ],
+     "a": 1,
+     "x": "In deaeration, the water is heated to a temperature sufficient for slow boiling to occur.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.7",
+     "q": "Why is sand not normally used as a filter in nuclear applications?",
+     "o": [
+      "It dissolves quickly",
+      "The silicate ion associated with it",
+      "It is too costly",
+      "It is radioactive"
+     ],
+     "a": 1,
+     "x": "Sand is not normally used because of the silicate ion, which tends to increase corrosion.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "pH control and resin malfunctions",
+   "eo": [
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A hydroxyl form anion resin and a cation resin in a form other than hydrogen can release hydroxyl ions to help control pH.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "The first indication of depletion is breakthrough.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+    },
+    {
+     "t": "p",
+     "text": "Overheated anion resin releases trimethylamine (TMA), and overheated cation resin destroys its exchange capacity and produces an acid.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q250",
+     "eo": "1.9"
+    },
+    {
+     "existing": "Q251",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is channeling in an ion exchanger?",
+     "o": [
+      "A direct flow of water through the resin with poor contact",
+      "Resin floating to the top",
+      "Loss of all exchange capacity",
+      "A drop in pH"
+     ],
+     "a": 0,
+     "x": "Channeling is a condition in which the resin allows a direct flow of water through the ion exchanger.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is exhaustion of a resin bed?",
+     "o": [
+      "The bed channels",
+      "Essentially all the exchange capacity has been used",
+      "The first small amount of impurity appears in the effluent",
+      "The bed overheats"
+     ],
+     "a": 1,
+     "x": "Exhaustion indicates that essentially all the exchange capacity of the resin has been used.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is breakthrough in a resin bed?",
+     "o": [
+      "Small amounts of impurity begin to appear in the effluent",
+      "All exchange capacity is used",
+      "Water bypasses the bed",
+      "The resin melts"
+     ],
+     "a": 0,
+     "x": "Breakthrough is the point when small amounts of the impurity begin to appear in the effluent.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Water purity",
+   "eo": [
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Pure: 10 µmhos/cm maximum, 2-5 mg/l electrolyte",
+      "Very Pure: 1 µmhos/cm maximum, 0.2-0.5 mg/l",
+      "Ultrapure: 0.1 µmhos/cm maximum, 0.01-0.02 mg/l",
+      "Theoretically Pure: 0.054 µmhos/cm maximum, 0.00 mg/l"
+     ],
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "For most nuclear facility applications,",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "is used, at 1.0 µmho/cm maximum conductivity.",
+     "cite": "DOE-HDBK-1015/2-93 CH-04 p.30"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What maximum conductivity is listed for Very Pure water?",
+     "o": [
+      "10 µmhos/cm",
+      "1 µmhos/cm",
+      "0.1 µmhos/cm",
+      "0.054 µmhos/cm"
+     ],
+     "a": 1,
+     "x": "Table 3 gives Very Pure a maximum conductivity of 1 µmhos/cm.",
+     "p": "P27"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "DF from chloride",
+   "eo": "1.4",
+   "page": 10,
+   "problem": "Influent has 15 ppm chloride, and effluent has 0.1 ppm. Find the DF.",
+   "steps": [
+    "DF = influent / effluent",
+    "DF = 15 / 0.1"
+   ],
+   "answer": "150",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+  },
+  {
+   "title": "DF from activity",
+   "eo": "1.4",
+   "page": 10,
+   "problem": "Influent activity is 2.8 x 10⁻² µCi/ml, and effluent is 1.0 x 10⁻⁴ µCi/ml. Find the DF.",
+   "steps": [
+    "DF = influent / effluent",
+    "DF = (2.8 x 10⁻²)/(1.0 x 10⁻⁴)"
+   ],
+   "answer": "280",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.10"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three reasons for using very pure water in a reactor facility?",
+   "a": "To minimize corrosion, radiation levels, and fouling of heat transfer surfaces.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What is a decontamination factor?",
+   "a": "The ratio of concentration or activity at the inlet to that at the effluent of an ion exchanger.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "What is the difference between breakthrough and exhaustion?",
+   "a": "Breakthrough is when small amounts of impurity first appear in the effluent. Exhaustion is when essentially all exchange capacity has been used.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "What are the three basic methods of removing dissolved gases from water?",
+   "a": "Aeration, deaeration, and adding scavengers.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "How efficient is a resin bed as a filter?",
+   "a": "90% or less, compared with approximately 100% for most ion exchange.",
+   "p": "P20",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "There are three general reasons to treat water for its impurities.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.2"
+  },
+  {
+   "text": "Decontamination factor defines the effectiveness of the ion exchange process.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.13"
+  },
+  {
+   "text": "Dissolved gases are removed by aeration, deaeration, or scavengers.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+  },
+  {
+   "text": "Suspended solids are removed by mechanical filters.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+  },
+  {
+   "text": "When impurity concentration is the same before and after the resin, the resin has reached exhaustion.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.27"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "Demineralizers and Ion Exchangers.docx slide 1.39 says breakthrough indicates resin exhaustion. The handbook separates them: breakthrough is the first impurity in the effluent, and exhaustion comes later on p.24. The lesson uses the handbook. Existing item Q255 follows the Word file, so it is not reused here and should be reviewed.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.24"
+  },
+  {
+   "type": "User decision",
+   "note": "PWR pressurizer venting and PWR steam plant oxygen control on p.18 and p.19 are left off under the Nov 5, 2026 decision. The lesson keeps general aeration, deaeration, and scavengers.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.18"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.29 says a mho is one millionth of a mho, where it means micromho. The NaCl example on p.30 prints 2.2 µmho/cm, but its numbers give about 2.1, so the example is left off. Figure 6 is used twice, on p.16 and p.23.",
+   "cite": "DOE-HDBK-1015/2-93 CH-04 p.29"
+  },
+  {
+   "type": "Word source",
+   "note": "Most slides are pictures, so the lesson uses only the text they contain. Regeneration slides are not in the handbook objectives and are left off.",
+   "cite": "Word: Demineralizers and Ion Exchangers.docx, slide 1.10 Resin Regeneration"
+  }
+ ],
+ "page_tags": []
+}

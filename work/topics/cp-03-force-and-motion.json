@@ -1,0 +1,552 @@
+{
+ "module_id": "CP-03",
+ "slug": "cp-03-force-and-motion",
+ "title": "Force and Motion",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1010",
+ "handbook": "DOE-HDBK-1010-92",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Basic Energy Concepts",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "APPLY Newton's laws of motion to a body.",
+   "items": [],
+   "page": {
+    "pdf": 81,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE Newton's first law of motion.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE Newton's second law of motion.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE Newton's third law of motion.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE Newton's law of universal gravitation.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE momentum.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "EXPLAIN the conservation of momentum.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Using the conservation of momentum, CALCULATE the velocity for an object (or objects) following a collision of two objects.",
+     "items": [],
+     "page": {
+      "pdf": 81,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "an object remains at rest (if originally at rest) or moves in a straight line with constant velocity if the net force on it is zero.",
+   "sec": "Newton's Laws of Motion",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "the acceleration of a body is proportional to the net (i.e., sum or resultant) force acting on it and in the direction of that net force.",
+   "sec": "Newton's Laws of Motion",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "if a body exerts a force on a second body, the second body exerts an equal and opposite force on the first.",
+   "sec": "Newton's Laws of Motion",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "forces always occur in pairs of equal and opposite forces.",
+   "sec": "Newton's Laws of Motion",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "For any two masses, the force is directly proportional to the product of the two masses and is inversely proportional to the square of the distance between them.",
+   "sec": "Newton's Laws of Motion",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "It is the result of the product of the body's mass and the velocity at which it is moving.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "Momentum is a vector quantity since it results from the velocity of the object.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "The rate at which momentum changes with time is equal to the net force applied to an object.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.6"
+  },
+  {
+   "id": "P9",
+   "quote": "if no net external force acts upon an object, the momentum of the object remains constant.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.7"
+  },
+  {
+   "id": "P10",
+   "quote": "In an elastic collision, both momentum and kinetic energy (i.e., energy due to an objects velocity) are conserved.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+  },
+  {
+   "id": "P11",
+   "quote": "In an inelastic collision, momentum is conserved, but system kinetic energy is not conserved.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+  },
+  {
+   "id": "P12",
+   "quote": "the sum of a system's initial momentum is equal to the sum of a system's final momentum.",
+   "sec": "Momentum Principles",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Newton's three laws",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Newton's first law of motion states:",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Newton's second law states:",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "eq",
+     "text": "F = ma",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+    },
+    {
+     "t": "p",
+     "text": "F is force, m is mass, and a is acceleration. This law is used to define force units.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+    },
+    {
+     "t": "p",
+     "text": "For an object's weight at the surface of the earth, the acceleration is g, which equals 9.8 m/sec² or 32.17 ft/sec², so the equation becomes F = mg.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Newton's third law of motion states:",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "It has also been stated as, for every action there is an equal and opposite reaction.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q410",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.2",
+     "q": "Under Newton's second law, the acceleration of a body is:",
+     "o": [
+      "Proportional to the net force and in the direction of that net force",
+      "Inversely proportional to the net force",
+      "Independent of the net force",
+      "Proportional to the net force and opposite to its direction"
+     ],
+     "a": 0,
+     "x": "The acceleration of a body is proportional to the net force acting on it and in the direction of that net force.",
+     "p": "P2"
+    },
+    {
+     "existing": "Q411",
+     "eo": "1.3"
+    }
+   ]
+  },
+  {
+   "title": "Universal gravitation",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Each mass in the universe exerts a mutual, attractive gravitational force on every other mass.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "eq",
+     "text": "F = G m1 m2 / r²",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "G is the universal constant of gravitation, m1 and m2 are the two masses, and r is the distance between their centers.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "The value of g varies with altitude, but 30 km of height only changes it from 9.8 m/sec² to 9.7 m/sec². So g is normally treated as a constant for objects close to the surface of the earth.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "The distance between two masses is doubled. What happens to the gravitational force between them?",
+     "o": [
+      "It doubles",
+      "It is cut in half",
+      "It is cut to one fourth",
+      "It does not change"
+     ],
+     "a": 2,
+     "x": "The force is inversely proportional to the square of the distance. Doubling the distance divides the force by 2², which is 4.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Momentum",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Momentum is, in a sense, the measure of the motion of a moving body.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "eq",
+     "text": "P = mv",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "If different momentum quantities are added vectorially, the direction of each must be taken into account.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "F = ΔP / Δt",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What is the momentum of a 10 lbm object moving at 5 ft/sec?",
+     "o": [
+      "2 ft-lbm/sec",
+      "15 ft-lbm/sec",
+      "50 ft-lbm/sec",
+      "250 ft-lbm/sec"
+     ],
+     "a": 2,
+     "x": "P = mv = (10 lbm)(5 ft/sec) = 50 ft-lbm/sec.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Conservation of momentum",
+   "eo": [
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "If force is equal to zero, then ΔP = 0. This is most important for collisions and explosions, where the external force is negligible.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.7"
+    },
+    {
+     "t": "p",
+     "text": "When a gun is fired, the momentum of the recoiling gun is equal and opposite to the momentum of the bullet.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "When two bodies collide and have identical final velocities:",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+    },
+    {
+     "t": "eq",
+     "text": "m1v1 + m2v2 = (m1 + m2)vf",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+    },
+    {
+     "t": "eq",
+     "text": "vf = (m1v1 + m2v2) / (m1 + m2)",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "cp-03-fig1",
+     "num": 1,
+     "cap": "Momentum",
+     "alt": "Two railroad cars before a collision with velocities v1 and v2, and after it coupled and moving together at vf.",
+     "cite": "DOE-HDBK-1010-92 CP-03 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "Which statement is true of an inelastic collision?",
+     "o": [
+      "Momentum and kinetic energy are both conserved",
+      "Neither momentum nor kinetic energy is conserved",
+      "Kinetic energy is conserved, but momentum is not",
+      "Momentum is conserved, but system kinetic energy is not"
+     ],
+     "a": 3,
+     "x": "In an inelastic collision, momentum is conserved, but system kinetic energy is not conserved.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.7",
+     "q": "A 1000 lbm car moving at 20 ft/sec couples with a 3000 lbm car moving at 4 ft/sec in the same direction. What is their final velocity?",
+     "o": [
+      "8 ft/sec",
+      "12 ft/sec",
+      "16 ft/sec",
+      "24 ft/sec"
+     ],
+     "a": 0,
+     "x": "vf = [(1000)(20) + (3000)(4)] / (1000 + 3000) = 32,000 / 4000 = 8 ft/sec.",
+     "p": "P12"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Momentum of a bowling ball",
+   "eo": "1.5",
+   "page": 6,
+   "problem": "Calculate the momentum for a 16 lbm bowling ball rolling down a lane at 22 ft/sec.",
+   "steps": [
+    "P = mv.",
+    "P = (16 lbm)(22 ft/sec)."
+   ],
+   "answer": "352 ft-lbm/sec",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.6"
+  },
+  {
+   "title": "Force from a change in velocity",
+   "eo": "1.5",
+   "page": 7,
+   "problem": "A rocket with a mass of 5 tons must increase its velocity by 110 ft/sec in 9 sec. Calculate the required thrust.",
+   "steps": [
+    "The change in velocity, v - vo, is 110 ft/sec.",
+    "F = m (v - vo) / (t - to).",
+    "F = (10,000 lbm)(110 ft/sec) / (9 sec)."
+   ],
+   "answer": "1.2 x 10⁵ ft-lbm/sec²",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.7"
+  },
+  {
+   "title": "Coupled railroad cars",
+   "eo": "1.7",
+   "page": 9,
+   "problem": "Car 1 (2300 lbm) moves at 29 ft/sec and overtakes car 2 (2800 lbm) moving at 11 ft/sec. They couple. Calculate the final velocity.",
+   "steps": [
+    "vf = (m1v1 + m2v2) / (m1 + m2).",
+    "vf = [(2300 lbm)(29 ft/sec) + (2800 lbm)(11 ft/sec)] / (2300 lbm + 2800 lbm)."
+   ],
+   "answer": "19.1 ft/sec",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.9"
+  }
+ ],
+ "facts": [
+  {
+   "q": "How is force related to the rate of change of momentum?",
+   "a": "The rate at which momentum changes with time is equal to the net force applied to an object.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "Why is momentum a vector quantity?",
+   "a": "It results from the velocity of the object.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What is conserved in an elastic collision?",
+   "a": "Both momentum and kinetic energy.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "State Newton's second law.",
+   "a": "The acceleration of a body is proportional to the net force acting on it and in the direction of that net force.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "State the universal law of gravitation for two masses.",
+   "a": "The force is directly proportional to the product of the two masses and inversely proportional to the square of the distance between them.",
+   "p": "P5",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "An object remains at rest or moves in a straight line with constant velocity if the net force on it is zero.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.4"
+  },
+  {
+   "text": "The forces of action and reaction between interacting bodies are equal in magnitude and opposite in direction.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.4"
+  },
+  {
+   "text": "Gravitational force is directly proportional to the product of the two masses and inversely proportional to the square of the distance between them.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.4"
+  },
+  {
+   "text": "Momentum is the product of a body's mass and its velocity, P = mv.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.10"
+  },
+  {
+   "text": "If no net external force acts upon a system, the momentum of the system remains constant.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.10"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook inconsistency",
+   "note": "The railroad car solution says to use Equation 3-8, but the equation shown is 3-11. The lesson shows the equation itself.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.9"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The summary words the second law differently from the chapter text, in terms of a particle. The lesson uses the chapter text.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.4"
+  },
+  {
+   "type": "Handbook units",
+   "note": "The rocket example gives thrust in ft-lbm/sec², with no conversion to lbf. It is shown as printed.",
+   "cite": "DOE-HDBK-1010-92 CP-03 p.7"
+  }
+ ],
+ "page_tags": []
+}

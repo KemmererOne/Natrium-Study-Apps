@@ -1,0 +1,1937 @@
+{
+ "module_id": "PR-02",
+ "slug": "pr-02-engineering-fluid-diagrams-and-prints",
+ "title": "Engineering Fluid Diagrams and Prints",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V1",
+ "handbook": "DOE-HDBK-1016/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Valves",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an engineering print, READ and INTERPRET facility engineering Piping and Instrument Drawings.",
+   "items": [],
+   "page": {
+    "pdf": 49,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following types of valves:",
+     "items": [
+      "a. Globe valve",
+      "b. Gate valve",
+      "c. Ball valve",
+      "d. Check valve",
+      "e. Stop check valve",
+      "f. Butterfly valve",
+      "g. Relief valve",
+      "h. Rupture disk",
+      "i. Three-way valve",
+      "j. Four-way valve",
+      "k. Throttle (needle) valve",
+      "l. Pressure regulator"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following types of valve operators:",
+     "items": [
+      "a. Diaphragm valve operator",
+      "b. Motor valve operator",
+      "c. Solenoid valve operator",
+      "d. Piston (hydraulic) valve operator",
+      "e. Hand (manual) valve operator",
+      "f. Reach-rod valve operator"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for educators and ejectors.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following lines:",
+     "items": [
+      "a. Process",
+      "b. Pneumatic",
+      "c. Hydraulic",
+      "d. Inert gas",
+      "e. Instrument signal (electrical)",
+      "f. Instrument capillary",
+      "g. Electrical"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following basic types of instrumentation:",
+     "items": [
+      "a. Differential pressure cell",
+      "b. Temperature element",
+      "c. Venturi",
+      "d. Orifice",
+      "e. Rotometer",
+      "f. Conductivity or salinity cell",
+      "g. Radiation detector"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "IDENTIFY the symbols used on engineering P&IDs to denote the location, either local or board mounted, of instruments, indicators, and controllers.",
+     "items": [],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following types of instrument signal controllers and modifiers:",
+     "items": [
+      "a. Proportional",
+      "b. Proportional-integral",
+      "c. Proportional-integral-differential",
+      "d. Square root extractors"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "IDENTIFY the symbols used on engineering P&IDs for the following types of system components:",
+     "items": [
+      "a. Centrifugal pumps",
+      "b. Positive displacement pumps",
+      "c. Heat exchangers",
+      "d. Compressors",
+      "e. Fans",
+      "f. Tanks",
+      "g. Filters/strainers"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE how the following valve conditions are depicted on an engineering P&ID:",
+     "items": [
+      "a. Open valve",
+      "b. Closed valve",
+      "c. Throttled valve",
+      "d. Combination valves (3- or 4-way valve)",
+      "e. Locked-closed valve",
+      "f. Locked-open valve",
+      "g. Fail-open valve",
+      "h. Fail-closed valve",
+      "i. Fail-as-is valve"
+     ],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "Given an engineering P&ID, IDENTIFY components and DETERM INE the flowpath(s) for a given valve lineup.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "IDENTIFY the symbols used on engineering fluid power drawings for the following components:",
+     "items": [
+      "a. Pump",
+      "b. Compressor",
+      "c. Reservoir",
+      "d. Actuators",
+      "e. Piping and piping junctions",
+      "f. Valves"
+     ],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "Given a fluid power type drawing, DETERM INE the operation or resultant action of the stated component when hydraulic pressure is applied/removed.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "To read and interpret piping and instrument drawings (P&IDs), the reader must learn the meaning of the symbols.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "The reader should note that this chapter is only representative of fluid system symbology, rather than being all-inclusive.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "Valves are used to control the direction, flow rate, and pressure of fluids.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "Figure 1 shows the symbols that depict the major valve types.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "Some valves are provided with actuators to allow remote operation, to increase mechanical advantage, or both.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "Figure 2 shows the symbols for the common valve actuators.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "If no actuator is shown on a valve symbol, it may be assumed the valve is equipped only with a handwheel for manual operation.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "The combination of a valve and an actuator is commonly called a control valve.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "it does not provide enough information to determine how those components react to a control signal.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+  },
+  {
+   "id": "P10",
+   "quote": "A positioner is symbolized by a square box on the stem of the control valve actuator.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "An additional aspect of some control valves is a valve positioner, which allows more precise control of the valve.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "To differentiate between valve uses, a balloon labeling system is used to identify the function of a control valve, as shown in Figure 6.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "The common convention is that the first letter used in the valve designator indicates the parameter to be controlled by the valve.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "Figure 7 shows commonly used symbols for indicating the medium",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.7"
+  },
+  {
+   "id": "P15",
+   "quote": "Figure 8 shows symbols used to depict pipe fittings.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+  },
+  {
+   "id": "P16",
+   "quote": "One of the main purposes of a P&ID is to provide functional information about how instrumentation in a system or piece of equipment interfaces with the system or piece of equipment.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+  },
+  {
+   "id": "P17",
+   "quote": "The first three columns above are combined such that the resulting instrument identifier indicates its sensed parameter, the function of the instrument, and the type of instrument.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "To create a usable signal, a device must be inserted into the system to detect the desired parameter.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.10"
+  },
+  {
+   "id": "P19",
+   "quote": "Figure 9 shows the symbols used for the various sensors and detectors.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.10"
+  },
+  {
+   "id": "P20",
+   "quote": "Figure 10 also illustrates the common notations used to indicate the location of an instrument, i.e., local or board mounted.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+  },
+  {
+   "id": "P21",
+   "quote": "Each sensor or detector must be coupled with appropriate modifiers and/or transmitters.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+  },
+  {
+   "id": "P22",
+   "quote": "Controllers process the signal from an instrument loop and use it to position or manipulate some other system component.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+  },
+  {
+   "id": "P23",
+   "quote": "Note that these types of controllers are also called signal conditioners.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "Figure 15 shows the engineering symbols for the most common major components.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.13"
+  },
+  {
+   "id": "P25",
+   "quote": "Figure 16 lists and explains four of the more common miscellaneous symbols.",
+   "sec": "Engineering Fluids Diagrams and Prints",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.15"
+  },
+  {
+   "id": "P26",
+   "quote": "Unless otherwise stated, P&IDs indicate valves in their \"normal\" position.",
+   "sec": "Reading Engineering P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+  },
+  {
+   "id": "P27",
+   "quote": "An exception is safety systems, which are normally shown in their",
+   "sec": "Reading Engineering P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+  },
+  {
+   "id": "P28",
+   "quote": "3-way valves are sometimes drawn in the position that they will fail to instead of always being drawn in their \"normal\" position.",
+   "sec": "Reading Engineering P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+  },
+  {
+   "id": "P29",
+   "quote": "Figure 17 illustrates the symbols used to indicate valve status.",
+   "sec": "Reading Engineering P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+  },
+  {
+   "id": "P30",
+   "quote": "Fluid power systems are divided into five basic parts: pumps, reservoirs, actuators, valves, and lines.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+  },
+  {
+   "id": "P31",
+   "quote": "Fluid power includes either gas (such as air) or hydraulic (such as water or oil) motive media.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+  },
+  {
+   "id": "P32",
+   "quote": "Hydraulic pumps are shown by solid arrow heads.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+  },
+  {
+   "id": "P33",
+   "quote": "Pneumatic compressors are represented by hollow arrow heads.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+  },
+  {
+   "id": "P34",
+   "quote": "Reservoirs provide a location for storage of the motive media (hydraulic fluid or compressed gas).",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+  },
+  {
+   "id": "P35",
+   "quote": "An actuator in a fluid power system is any device that converts the hydraulic or pneumatic pressure into mechanical work.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+  },
+  {
+   "id": "P36",
+   "quote": "Linear actuators have some form of piston device.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+  },
+  {
+   "id": "P37",
+   "quote": "The difference between them is that the point of the arrow touches the circle in a pump and the tail of the arrow touches the circle in a motor.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.25"
+  },
+  {
+   "id": "P38",
+   "quote": "Rotary actuators are generally called motors and may be fixed or variable.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.25"
+  },
+  {
+   "id": "P39",
+   "quote": "The sole purpose of piping in a fluid power system is to transport the working media, at pressure, from one point to another.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.26"
+  },
+  {
+   "id": "P40",
+   "quote": "Valves are the most complicated symbols in fluid power systems.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+  },
+  {
+   "id": "P41",
+   "quote": "Fluid power valves, when electrically operated by a solenoid, are drawn in the de-energized position.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+  },
+  {
+   "id": "P42",
+   "quote": "Energizing the solenoid will cause the valve to shift to the other port.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+  },
+  {
+   "id": "P43",
+   "quote": "When system pressure exceeds its setpoint, the valve opens and returns the hydraulic fluid back to the reservoir.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.32"
+  },
+  {
+   "id": "P44",
+   "quote": "When PB-1 is pushed and S-1 energized, the 1-2 ports are aligned and 3-4 ports are aligned.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.32"
+  },
+  {
+   "id": "P45",
+   "quote": "A pictorial diagram shows the physical arrangement of the elements in a system.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.33"
+  },
+  {
+   "id": "P46",
+   "quote": "A cutaway diagram shows both the physical arrangement and the operation of the different components.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.33"
+  },
+  {
+   "id": "P47",
+   "quote": "A schematic diagram uses symbols to show the elements in a system.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+  },
+  {
+   "id": "P48",
+   "quote": "They do not accurately represent the relative location of the components.",
+   "sec": "Fluid Power P&IDs",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Valve symbols",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Facility drafting standards give the symbols used at a site.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig1",
+     "num": 1,
+     "cap": "Valve Symbols",
+     "alt": "Chart of valve symbols with alternatives: globe, gate, ball, needle, butterfly, plug, diaphragm, relief, three-way, four-way, check, stop check, angle, rupture disc, and pressure regulator. Most are two triangles meeting point to point on a line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Globe and gate valves will often be shown by the same symbol. The valve type may then be given by the component identification number or the notes and legend, but in many cases even those will not say.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A P&ID shows a globe valve and a gate valve with the same symbol. Where might the valve type be given?",
+     "o": [
+      "The revision block",
+      "The drawing scale",
+      "The component identification number or the notes and legend",
+      "The grid coordinates"
+     ],
+     "a": 2,
+     "x": "Information on the valve type may be conveyed by the component identification number or the notes and legend, though in many instances even that may not hold true.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "What are valves used to control?",
+     "o": [
+      "Only the temperature of fluids",
+      "Only the level in tanks",
+      "Only the speed of pumps",
+      "The direction, flow rate, and pressure of fluids"
+     ],
+     "a": 3,
+     "x": "Valves are used to control the direction, flow rate, and pressure of fluids.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Valve actuators and control valves",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig2",
+     "num": 2,
+     "cap": "Valve Actuator Symbols",
+     "alt": "Valve actuator symbols on a valve body: a dome for diaphragm, a box with M for electric motor, a box with S for solenoid, a box with H or a split box for piston, an angled line for reach rod, and a T for manual.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Each actuator is shown on a gate valve, but an actuator can be attached to any type of valve body.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Control valves are shown by combining the valve symbol and the actuator symbol. Most are controlled manually from a remote station, automatically from an instrument, or both.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig3",
+     "num": 3,
+     "cap": "Remotely Controlled Valve",
+     "alt": "Air line to a process control valve, with a small solenoid three-way valve in the line that can supply or vent the diaphragm.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Remote control often uses a small intermediate control valve in the line that supplies motive force to the process control valve. In this example, a solenoid-operated 3-way valve can supply air to the diaphragm or vent it to the atmosphere.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "The symbols alone do not show whether air pressure opens or closes the valve, or whether energizing the solenoid pressurizes or vents the diaphragm.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig4",
+     "num": 4,
+     "cap": "Level Control Valve",
+     "alt": "Tank with a level controller marked LC, which positions an air-operated diaphragm control valve in the outlet line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+    },
+    {
+     "t": "p",
+     "text": "A control valve run by an instrument is drawn the same way, except the output of the controlling instrument goes to the actuator.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig5",
+     "num": 5,
+     "cap": "Control Valves with Valve Positioners",
+     "alt": "Two control valves with a square positioner box on the actuator stem, one with a level controller signal and one with an air supply only.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The positioner symbol may appear only on detailed diagrams. Larger overall system diagrams may show the same valve as an air-operated valve with no special features.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "No actuator is shown on a valve symbol. What may be assumed?",
+     "o": [
+      "The valve has only a handwheel for manual operation",
+      "The valve is air operated",
+      "The valve is a check valve",
+      "The valve fails open"
+     ],
+     "a": 0,
+     "x": "If no actuator is shown on a valve symbol, it may be assumed the valve is equipped only with a handwheel for manual operation.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.2",
+     "q": "On a P&ID valve actuator symbol, what does a box with the letter M mean?",
+     "o": [
+      "Electric motor",
+      "Manual handwheel",
+      "Mechanical reach rod",
+      "Modifier"
+     ],
+     "a": 0,
+     "x": "Figure 2 shows a box marked M on the valve stem for an electric motor actuator. The box marked S is a solenoid.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.2",
+     "q": "How is a valve positioner symbolized?",
+     "o": [
+      "A circle on the pipe upstream of the valve",
+      "A dashed line around the valve",
+      "The letters LO beside the valve",
+      "A square box on the stem of the control valve actuator"
+     ],
+     "a": 3,
+     "x": "A positioner is symbolized by a square box on the stem of the control valve actuator.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is a control valve?",
+     "o": [
+      "The combination of a valve and an actuator",
+      "Any valve with a handwheel",
+      "A valve shown in its normal position",
+      "A valve with a locked position"
+     ],
+     "a": 0,
+     "x": "The combination of a valve and an actuator is commonly called a control valve.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Control valve designations",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "list",
+     "items": [
+      "F = flow",
+      "T = temperature",
+      "L = level",
+      "P = pressure",
+      "H = hand (manually operated valve)"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The second letter is usually a C, which identifies the valve as a controller, or active component. The third letter is a V, which shows the equipment is a valve.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig6",
+     "num": 6,
+     "cap": "Control Valve Designations",
+     "alt": "Valves with balloons: FCV for flow, TCV for temperature, LCV for level, and PCV for pressure control valve.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What does the balloon label PCV mean on a valve?",
+     "o": [
+      "Pneumatic control vent",
+      "Process cooling valve",
+      "Pressure control valve",
+      "Positioner check valve"
+     ],
+     "a": 2,
+     "x": "The first letter gives the controlled parameter, C identifies a controller, and V identifies a valve.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Piping and fitting symbols",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "One system's piping may carry more than one medium, and a fluid system diagram may also show instrument signals and electrical wires.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig7",
+     "num": 7,
+     "cap": "Piping Symbols",
+     "alt": "Line symbols: solid for process flow, double slashes for pneumatic, a long and short dash or L marks for hydraulic, single slashes for inert gas, dashes for instrument signal, X marks for instrument capillary, and dots or dashes for electrical wires.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.7"
+    },
+    {
+     "t": "p",
+     "text": "The auxiliary piping symbols identify their mediums, but the process flow line symbol does not.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig8",
+     "num": 8,
+     "cap": "More Piping Symbols",
+     "alt": "Fitting symbols, including eductor, ejector, pipe reducer, hose connection, screw cap, weld cap, loop seal, atmospheric vent, flexible connection, removable spool, cross, lateral, true Y, blank flange, screwed union, and flange.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+    },
+    {
+     "t": "p",
+     "text": "Eductor and ejector symbols are both drawn in the line with a curved upper section and a nozzle shape below.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "On a P&ID line symbol, what do X marks along the line show?",
+     "o": [
+      "Instrument capillary",
+      "Inert gas",
+      "Hydraulic line",
+      "Electrical wires"
+     ],
+     "a": 0,
+     "x": "Figure 7 shows X marks along the line for instrument capillary.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.4",
+     "q": "On a P&ID line symbol, what do pairs of slashes along the line show?",
+     "o": [
+      "Pneumatic (air) line",
+      "Inert gas line",
+      "Instrument capillary",
+      "Process flow line"
+     ],
+     "a": 0,
+     "x": "Figure 7 shows pairs of slashes for a pneumatic (air) line. Single slashes mark an inert gas line.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which P&ID line symbol does not identify the medium it carries?",
+     "o": [
+      "The pneumatic line",
+      "The inert gas line",
+      "The process flow line",
+      "The hydraulic line"
+     ],
+     "a": 2,
+     "x": "Although the auxiliary piping symbols identify their mediums, the symbol for the process flow line does not identify its medium.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Instrument identifiers",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Instrument symbols fall into four categories, and each generally uses the identifying scheme in Table 1.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Sensed parameter: F flow, T temperature, P pressure, I current, L level, V voltage, Z position",
+      "Indicator or controller: R recorder, I indicator, C controller",
+      "Component: T transmitter, M modifier, E element",
+      "Signal: I current, V voltage, P pneumatic"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "The fourth column is used only for a modifier, to show the signals being modified.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.9"
+    },
+    {
+     "t": "list",
+     "items": [
+      "FIC: flow indicating controller",
+      "TT: temperature transmitter",
+      "FM: flow modifier",
+      "PT: pressure transmitter",
+      "TE: temperature element",
+      "FE: flow element",
+      "TR: temperature recorder",
+      "LIC: level indicating controller"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What does the instrument identifier LIC mean?",
+     "o": [
+      "Level input converter",
+      "Level indicating controller",
+      "Level instrument cell",
+      "Local indicating console"
+     ],
+     "a": 1,
+     "x": "The letters give the sensed parameter, the function, and the type of instrument. LIC is listed as level indicating controller.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.5",
+     "q": "What does the instrument identifier TE mean?",
+     "o": [
+      "Thermal equalizer",
+      "Temperature element",
+      "Temperature transmitter",
+      "Test element"
+     ],
+     "a": 1,
+     "x": "Table 1 builds TE from T for temperature and E for element.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Sensors and detectors",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "In some cases, a device creates special conditions so that another device can supply the measurement.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig9",
+     "num": 9,
+     "cap": "Detector and Sensing Device Symbols",
+     "alt": "Detector symbols: orifice as two short bars across the line, venturi as two curves, flow element, temperature element with or without a well, thermocouple, rotometer, differential pressure cell, conductivity cell, and radiation detector.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "On a P&ID, which device is drawn as two curved lines bowing toward the pipe?",
+     "o": [
+      "Rotometer",
+      "Thermocouple",
+      "Venturi",
+      "Orifice"
+     ],
+     "a": 2,
+     "x": "Figure 9 shows the venturi as two curves on either side of the line. The orifice is drawn as short bars across the line.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Modifiers, transmitters, and instrument location",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "The exceptions are certain local instruments with mechanical readouts, such as bourdon tube pressure gages and bimetallic thermometers.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig10",
+     "num": 10,
+     "cap": "Transmitters and Instruments",
+     "alt": "Instrument location symbols: a plain circle for locally mounted, a circle with a solid line across it for board mounted, and a circle with a dashed line for behind the board. Examples of modifiers and transmitters follow.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "A transmitter converts the signal from a sensor or detector to a form that can be sent to a remote point. The output can be electronic (voltage or current), pneumatic, or hydraulic.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+    },
+    {
+     "t": "p",
+     "text": "A modifier may be identified only by its input and output signals, such as I/P for one that converts an electrical input to a pneumatic output, rather than by the monitored parameter, such as PM for pressure modifier.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig11",
+     "num": 11,
+     "cap": "Indicators and Recorders",
+     "alt": "Examples of indicator and recorder symbols, locally and board mounted, such as FI, TI, FR, TR, and PR balloons.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Indicators and recorders convert the signal from an instrument loop into a readable form. Like modifiers and transmitters, the symbol shows whether they are locally or board mounted.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "On a P&ID, what does a circle with a solid line across it mean?",
+     "o": [
+      "A locally mounted instrument",
+      "An instrument behind the board",
+      "A failed instrument",
+      "A board mounted instrument"
+     ],
+     "a": 3,
+     "x": "Figure 10 shows a plain circle for a locally mounted instrument, a solid line across the circle for board mounted, and a dashed line for behind the board.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.6",
+     "q": "What does a modifier marked I/P do?",
+     "o": [
+      "Converts an electrical input to a pneumatic output",
+      "Converts a pneumatic input to an electrical output",
+      "Indicates pressure locally",
+      "Records current and pressure"
+     ],
+     "a": 0,
+     "x": "Modifiers may be identified by input and output signal, such as I/P for one that converts an electrical input to a pneumatic output.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.6",
+     "q": "Which instruments do not need a modifier or transmitter?",
+     "o": [
+      "All flow elements",
+      "All temperature elements",
+      "Certain local instruments with mechanical readouts",
+      "All board mounted instruments"
+     ],
+     "a": 2,
+     "x": "The exceptions are certain types of local instrumentation having mechanical readouts, such as bourdon tube pressure gages and bimetallic thermometers.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Controllers and signal conditioners",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Controllers are generally shown by placing a C in the balloon after the controlling parameter.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig12",
+     "num": 12,
+     "cap": "Controllers",
+     "alt": "Balloons marked FC, TC, PC, and LC for flow, temperature, pressure, and level controllers.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig13",
+     "num": 13,
+     "cap": "Signal Conditioners",
+     "alt": "Balloons marked P for proportional, PI for proportional-integral, PID for proportional-integral-differential, and I/P for current to pneumatic.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Figure 10 shows a square root extractor as a circle or square holding a square root sign.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig14",
+     "num": 14,
+     "cap": "Instrumentation System Examples",
+     "alt": "Two instrument loops. A: a temperature transmitter feeds a recorder and a PID controller, then an I/P modifier and a valve. B: a tank level transmitter feeds a level modifier, a recorder, and a level control valve.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.13"
+    },
+    {
+     "t": "p",
+     "text": "In Figure 14 (A), a temperature transmitter sends one signal to a board-mounted recorder and one to a PID controller. An I/P modifier converts the controller output to a pneumatic signal, commonly 3 psi to 15 psi, which operates the valve. The loop modifies flow based on process fluid temperature.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.13"
+    },
+    {
+     "t": "p",
+     "text": "In Figure 14 (B), a pneumatic level transmitter feeds a board-mounted level modifier, which drives a recorder and sends a modified pneumatic signal to the level control valve.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Neither loop shows how the sensed value and the valve are related. Knowing the setpoint and the purpose of the system will usually be enough to work out how the loop operates.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "Which symbol marks a proportional-integral-differential controller?",
+     "o": [
+      "A balloon marked PI",
+      "A balloon marked P",
+      "A balloon marked I/P",
+      "A balloon marked PID"
+     ],
+     "a": 3,
+     "x": "Figure 13 shows P, PI, and PID balloons for the three controllers. I/P is current to pneumatic.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is another name for proportional, proportional-integral, and proportional-integral-differential controllers on a P&ID?",
+     "o": [
+      "Signal conditioners",
+      "Transmitters",
+      "Positioners",
+      "Sensing elements"
+     ],
+     "a": 0,
+     "x": "These types of controllers are also called signal conditioners.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.7",
+     "q": "How is a controller generally denoted in an instrument balloon?",
+     "o": [
+      "A square around the balloon",
+      "A C after the controlling parameter",
+      "A T after the controlling parameter",
+      "A dashed line across the balloon"
+     ],
+     "a": 1,
+     "x": "Controllers are generally denoted by placing a C in the balloon after the controlling parameter.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Major components and miscellaneous symbols",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig15",
+     "num": 15,
+     "cap": "Symbols for Major Components",
+     "alt": "Component symbols with alternatives: centrifugal pump, positive displacement pump, heat exchanger, compressor, fan, tank, and strainer.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig16",
+     "num": 16,
+     "cap": "Miscellaneous Symbols",
+     "alt": "Flags marked with a drawing number and grid coordinate, pointing out, in, or both ways, plus a dashed building or area boundary line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "Pipe or wire continuation flags give the other drawing and its grid coordinates. The flag shape shows whether flow is to that drawing, from that drawing, or in both directions.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "What does a P&ID continuation flag give the reader?",
+     "o": [
+      "The valve failure mode",
+      "The instrument setpoint",
+      "The pipe size",
+      "The other drawing number and grid coordinates"
+     ],
+     "a": 3,
+     "x": "Figure 16 shows that the symbol gives the drawing number, the grid coordinate, and the flow direction.",
+     "p": "P25"
+    }
+   ]
+  },
+  {
+   "title": "Valve status",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The reader must be able to determine the valve position, know if it is normal, know how the valve will fail, and in some cases know if it is normally locked in that position.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig17",
+     "num": 17,
+     "cap": "Valve Status Symbols",
+     "alt": "Valve status symbols: closed is solid black, open is outlined, throttled is half solid, LO locked open, LC locked closed, FO fails open, FC fails closed, FAI fails as is, and a three-way valve with the closed port solid.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Open valve: outlined, not filled",
+      "Closed valve: filled solid",
+      "Throttled valve: one half filled",
+      "Three-way valve: the closed port is filled",
+      "Locked open: LO; locked closed: LC",
+      "Fails open: FO; fails closed: FC; fails as is: FAI"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "This is usually taken as the normal or primary flowpath for the system. Safety systems are the exception, and are normally shown in their standby or non-accident condition.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "This will be defined as the standard for the system of drawings or noted on the drawing.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q450",
+     "eo": "1.9"
+    },
+    {
+     "eo": "1.9",
+     "q": "How is a closed valve shown on a P&ID?",
+     "o": [
+      "With a dashed outline",
+      "With the valve symbol filled solid",
+      "With the valve symbol outlined",
+      "With one half filled"
+     ],
+     "a": 1,
+     "x": "Figure 17 shows the closed valve filled solid. An open valve is outlined and a throttled valve has one half filled.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.9",
+     "q": "What marking shows a locked-closed valve on a P&ID?",
+     "o": [
+      "LO",
+      "FAI",
+      "LC",
+      "FC"
+     ],
+     "a": 2,
+     "x": "Figure 17 shows LC under a solid valve for locked closed.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.9",
+     "q": "In what condition are safety systems normally shown on a P&ID?",
+     "o": [
+      "Accident condition",
+      "De-energized and isolated",
+      "Failed condition",
+      "Standby or non-accident condition"
+     ],
+     "a": 3,
+     "x": "An exception to the normal position rule is safety systems, which are normally shown in their standby or non-accident condition.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "Fluid power pumps and reservoirs",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fluid power diagrams use a different set of symbols, though some match or resemble those on P&IDs.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "The basic pump symbol is a circle with one or more arrow heads showing the flow direction, with the points of the arrows touching the circle.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig19",
+     "num": 19,
+     "cap": "Fluid Power Pump and Compressor Symbols",
+     "alt": "Circles with arrowheads touching the rim: a fixed displacement pump with a solid arrowhead, a variable displacement pump with a diagonal arrow through the circle, and a compressor with a hollow arrowhead.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Pneumatic reservoirs are usually simple tanks, drawn as a variation of a cylinder. Hydraulic reservoirs can be more complex, so their symbols show how fluid is admitted and removed.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig20",
+     "num": 20,
+     "cap": "Fluid Power Reservoir Symbols",
+     "alt": "Reservoir symbols: open, pressurized, and with connecting lines above or below the fluid level for hydraulic systems, and an oblong tank for air or gases.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "On a fluid power drawing, how is a compressor told apart from a hydraulic pump?",
+     "o": [
+      "A compressor has hollow arrow heads",
+      "A compressor has solid arrow heads",
+      "A compressor has no circle",
+      "A compressor has a square symbol"
+     ],
+     "a": 0,
+     "x": "Hydraulic pumps are shown by solid arrow heads. Pneumatic compressors are represented by hollow arrow heads.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.11",
+     "q": "What are the five basic parts of a fluid power system?",
+     "o": [
+      "Pumps, reservoirs, actuators, valves, and lines",
+      "Pumps, motors, tanks, filters, and gages",
+      "Sensors, transmitters, modifiers, controllers, and valves",
+      "Compressors, accumulators, heaters, fans, and strainers"
+     ],
+     "a": 0,
+     "x": "Fluid power systems are divided into five basic parts: pumps, reservoirs, actuators, valves, and lines.",
+     "p": "P30"
+    }
+   ]
+  },
+  {
+   "title": "Fluid power actuators and lines",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "Actuators are classified as linear or rotary.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig21",
+     "num": 21,
+     "cap": "Symbols for Linear Actuators",
+     "alt": "Single-acting and double-acting cylinders, each shown as a pictorial, a force illustration, and a drawing symbol.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig22",
+     "num": 22,
+     "cap": "Symbols for Rotary Actuators",
+     "alt": "Rotary motor symbols for fixed displacement, variable displacement, and oscillating motors, with the arrow tails touching the circle.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig23",
+     "num": 23,
+     "cap": "Fluid Power Line Symbols",
+     "alt": "Fluid power line symbols: working, pilot, drain, flexible, joining, and crossing lines, connectors, flow direction, vented manifold, plugged connection, test station, power takeoff, restrictions, and strainer.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.26"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "How does the symbol for a rotary motor differ from the symbol for a pump?",
+     "o": [
+      "In a motor, the tail of the arrow touches the circle",
+      "In a motor, the point of the arrow touches the circle",
+      "A motor has no arrow",
+      "A motor is drawn as a square"
+     ],
+     "a": 0,
+     "x": "The point of the arrow touches the circle in a pump and the tail of the arrow touches the circle in a motor.",
+     "p": "P37"
+    },
+    {
+     "eo": "1.11",
+     "q": "What does an actuator do in a fluid power system?",
+     "o": [
+      "Filters the working fluid",
+      "Routes fluid between ports",
+      "Converts hydraulic or pneumatic pressure into mechanical work",
+      "Stores the motive media"
+     ],
+     "a": 2,
+     "x": "An actuator is any device that converts the hydraulic or pneumatic pressure into mechanical work.",
+     "p": "P35"
+    }
+   ]
+  },
+  {
+   "title": "Fluid power valves",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "A fluid power valve commonly has three to eight pipes attached and can route one or more fluids in many combinations, so its symbol must hold more information than a standard P&ID valve.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig24",
+     "num": 24,
+     "cap": "Valve Operation",
+     "alt": "Cutaway of a four-way, three-position valve, with the flow shown in each of three positions.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig25",
+     "num": 25,
+     "cap": "Valve Symbol Development",
+     "alt": "Five steps to build a valve symbol: start with a box, add ports, show the flow in each position in its own box, add the actuating mechanism, then combine them.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.28"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig26",
+     "num": 26,
+     "cap": "Fluid Power Valve Symbols",
+     "alt": "Chart of fluid power valve symbols: check, manual shutoff, maximum pressure relief, single and multiple flow path boxes, and directional valves with two or three positions.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "p",
+     "text": "If the valve is operated by something other than a solenoid or is a multiport valve, the information needed will be on the drawing or its legend print.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "In what position are solenoid-operated fluid power valves drawn?",
+     "o": [
+      "The energized position",
+      "The fail-as-is position",
+      "The middle position",
+      "The de-energized position"
+     ],
+     "a": 3,
+     "x": "Fluid power valves, when electrically operated by a solenoid, are drawn in the de-energized position.",
+     "p": "P41"
+    }
+   ]
+  },
+  {
+   "title": "Reading a fluid power diagram",
+   "eo": [
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "pr-02-fig27",
+     "num": 27,
+     "cap": "Simple Hydraulic Power System",
+     "alt": "Hand pump on a well, with a hose running to a nozzle.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.30"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig28",
+     "num": 28,
+     "cap": "Line Diagram of Simple Hydraulic Power System",
+     "alt": "Legend of symbols for the hand pump system, and the same system as a fluid power line diagram.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Each part of a simple system can be listed with its symbol and redrawn as a fluid power diagram.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.30"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig29",
+     "num": 29,
+     "cap": "Typical Fluid Power Diagram",
+     "alt": "Press circuit: an open reservoir with a strainer feeds a motor-driven pump, a relief valve with a gage, a four-way two-position valve with solenoid S-1 and pushbutton PB-1, and a cylinder.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.31"
+    },
+    {
+     "t": "p",
+     "text": "First get an overall view. In this diagram, the arrows between A and B show the system presses or clamps a part between two sections of the machine.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.31"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Area 1: open reservoir with a strainer that cleans the oil",
+      "Area 2: fixed displacement pump, electrically operated",
+      "Area 3: spring-operated relief valve with a separate pressure gage",
+      "Area 4: 4-way, 2-position valve, shown de-energized",
+      "Area 5: actuating cylinder and piston"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "As drawn, high pressure fluid goes from Port 1 to Port 3 and to the bottom chamber, which holds the piston retracted. When the piston is fully retracted, the relief valve lifts and holds system pressure at setpoint.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "Fluid then enters the top chamber and drives the piston down, while the bottom chamber drains through ports 3-4 to the reservoir. The piston travels until PB-1 is released or full travel is reached.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.32"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.12",
+     "q": "In the press circuit, what happens when PB-1 is pushed and S-1 is energized?",
+     "o": [
+      "Fluid enters the top chamber and drives the piston down",
+      "Fluid enters the bottom chamber and retracts the piston",
+      "The pump stops",
+      "The reservoir is isolated"
+     ],
+     "a": 0,
+     "x": "With ports 1-2 and 3-4 aligned, fluid enters the top chamber and drives the piston down while the bottom chamber drains to the reservoir.",
+     "p": "P44"
+    },
+    {
+     "eo": "1.12",
+     "q": "What does the relief valve do when system pressure exceeds its setpoint?",
+     "o": [
+      "Closes and isolates the pump",
+      "Energizes the solenoid",
+      "Vents the fluid to the atmosphere",
+      "Opens and returns hydraulic fluid to the reservoir"
+     ],
+     "a": 3,
+     "x": "When system pressure exceeds its setpoint, the valve opens and returns the hydraulic fluid back to the reservoir.",
+     "p": "P43"
+    }
+   ]
+  },
+  {
+   "title": "Types of fluid power diagrams",
+   "eo": [
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "Pictorial diagrams show outlines of each item, not internal function, and are not especially valuable for maintenance or troubleshooting.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.33"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig30",
+     "num": 30,
+     "cap": "Pictorial Fluid Power Diagram",
+     "alt": "Pictorial fluid power diagram with a parts list: reservoir, electric motor, pump, relief valve, directional valve, flow control valve, check valve, and cylinder.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "Cutaway diagrams are generally used for instruction. They need so much space that they are not usually used for complicated systems.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.33"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig31",
+     "num": 31,
+     "cap": "Cutaway Fluid Power Diagram",
+     "alt": "The same system as a cutaway diagram, with the internal parts of each component visible.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "p",
+     "text": "Schematics supply the functional information of the system, and are useful in maintenance and troubleshooting.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+    },
+    {
+     "t": "fig",
+     "id": "pr-02-fig32",
+     "num": 32,
+     "cap": "Schematic Fluid Power Diagram",
+     "alt": "The same system as a schematic diagram, using only fluid power symbols.",
+     "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.12",
+     "q": "Which fluid power diagram type is most useful for troubleshooting?",
+     "o": [
+      "Isometric projection",
+      "Schematic diagram",
+      "Pictorial diagram",
+      "Assembly drawing"
+     ],
+     "a": 1,
+     "x": "Schematics are useful in maintenance work, and understanding them is an important part of troubleshooting. Pictorial diagrams are not especially valuable for this.",
+     "p": "P47"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Identify components on a P&ID",
+   "eo": "1.10",
+   "page": 21,
+   "fig": {
+    "t": "fig",
+    "id": "pr-02-fig18",
+    "num": 18,
+    "cap": "Exercise P&ID",
+    "alt": "Exercise P&ID: tank E feeds pumps A and B through motor valves 2 and 3. Two trains run through check, motor, and air-operated valves, with heat exchangers C and D, to outlets F, G, H, and I. Valves 18 and 19 are locked-closed cross-connects.",
+    "cite": "DOE-HDBK-1016/1-93 PR-02 p.19"
+   },
+   "problem": "Using the exercise P&ID, identify a centrifugal pump, a heat exchanger, the tank, the venturi, the rupture disc, a relief valve, and the current-to-pneumatic converter.",
+   "steps": [
+    "Pumps are drawn as circles with a tangent outlet: A and B.",
+    "Heat exchangers are circles with a zigzag tube: C and D.",
+    "The tank is E, the venturi is 31, and the rupture disc is 1.",
+    "Relief valves are 8 and 17. The I/P box is 28."
+   ],
+   "answer": "Pump A or B, heat exchanger C or D, tank E, venturi 31, rupture disc 1, relief valve 8 or 17, converter 28.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.21"
+  },
+  {
+   "title": "Read valve types and status",
+   "eo": "1.10",
+   "page": 21,
+   "problem": "On the same P&ID, identify the motor-operated valves, the air-operated valves, the check valves, the solenoid valves, and the locked valves.",
+   "steps": [
+    "A box marked M on the stem is a motor operator: 2, 3, 7, and 16.",
+    "A dome on the stem is an air-operated diaphragm: 10 and 21.",
+    "Check valves are 5 and 14. Solenoid valves are 11 and 23.",
+    "Solid valves marked LC are locked closed: 18 and 19. Valve 4 is marked LO."
+   ],
+   "answer": "Motor 2, 3, 7, 16; air 10, 21; check 5, 14; solenoid 11, 23; locked closed 18, 19; locked open 4.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.21"
+  },
+  {
+   "title": "Find the controlling parameter",
+   "eo": "1.10",
+   "page": 21,
+   "problem": "What is the controlling parameter for Valves 10 and 21?",
+   "steps": [
+    "Trace the signal back from each valve's diaphragm to the I/P modifier.",
+    "Follow the dashed signal lines from the modifier to the elements marked TE."
+   ],
+   "answer": "Temperature, as sensed by the temperature elements (TE).",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.21"
+  },
+  {
+   "title": "Set a valve lineup",
+   "eo": "1.10",
+   "page": 21,
+   "problem": "Which valves must change position for Pump B to supply flow to only points G and H?",
+   "steps": [
+    "Pump B must reach the upper train, so a closed cross-connect has to open.",
+    "Flow to outlets F and I must be stopped at their outlet valves."
+   ],
+   "answer": "Open 18 and/or 19. Shut 13 and 25.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.21"
+  },
+  {
+   "title": "Read the failure modes",
+   "eo": "1.10",
+   "page": 21,
+   "problem": "Which valves fail open, fail closed, and fail as is?",
+   "steps": [
+    "Look for the FO, FC, and FAI marks next to each valve."
+   ],
+   "answer": "Fail open: 2 and 3. Fail closed: 10 and 21. Fail as is: 7 and 16.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.21"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What does the first letter of a control valve designator show?",
+   "a": "The parameter to be controlled by the valve: F flow, T temperature, L level, P pressure, or H hand.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "What may be assumed if no actuator is shown on a valve symbol?",
+   "a": "The valve is equipped only with a handwheel for manual operation.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "How does a P&ID show where an instrument is mounted?",
+   "a": "A plain circle is locally mounted, a solid line across the circle is board mounted, and a dashed line is behind the board.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "How does a fluid power drawing tell a pump from a motor?",
+   "a": "The point of the arrow touches the circle in a pump. The tail of the arrow touches the circle in a motor.",
+   "p": "P37",
+   "place": null
+  },
+  {
+   "q": "How does a fluid power drawing tell a hydraulic pump from a compressor?",
+   "a": "Hydraulic pumps have solid arrow heads. Pneumatic compressors have hollow arrow heads.",
+   "p": "P33",
+   "place": null
+  },
+  {
+   "q": "How are safety systems normally shown on a P&ID?",
+   "a": "In their standby or non-accident condition.",
+   "p": "P27",
+   "place": null
+  },
+  {
+   "q": "In what position are solenoid-operated fluid power valves drawn?",
+   "a": "The de-energized position.",
+   "p": "P41",
+   "place": null
+  },
+  {
+   "q": "What are the three types of fluid power diagrams?",
+   "a": "Pictorial, cutaway, and schematic.",
+   "p": "P47",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "This chapter reviewed the common P&ID symbols for valves, valve operators, process piping, instrumentation, and common system components.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.15"
+  },
+  {
+   "text": "P&IDs show valves in their normal position unless otherwise stated, with symbols for valve condition and failure mode.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.16"
+  },
+  {
+   "text": "Reading a P&ID means identifying the components, then working out the flowpath for a given valve lineup.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.18"
+  },
+  {
+   "text": "Fluid power diagrams use their own symbols for pumps, reservoirs, actuators, valves, and lines.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.23"
+  },
+  {
+   "text": "Pictorial, cutaway, and schematic diagrams all show fluid power systems, and schematics give the functional information.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.34"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. The water named on p.7 and p.23 is a generic example of a fluid, and steam heat tracing in Figure 7 is one line symbol.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.7"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.3 prints \"educators.\" Figure 8 labels the symbols eductor and ejector, and the lesson uses the figure's spelling outside the verbatim objective.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.8"
+  },
+  {
+   "type": "Handbook error",
+   "note": "Figure 10 labels the third pneumatic to current modifier symbol E/I, where the other two show P/I. The figure is shown as printed and is not tested.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+  },
+  {
+   "type": "Objective",
+   "note": "Objective 1.7 lists square root extractors. Figure 10 is the only place that shows one, so the lesson cites it there.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.11"
+  },
+  {
+   "type": "Figure",
+   "note": "Figure 18 prints sideways in the handbook. It is turned upright for phone reading, with nothing else changed.",
+   "cite": "DOE-HDBK-1016/1-93 PR-02 p.19"
+  }
+ ],
+ "page_tags": []
+}

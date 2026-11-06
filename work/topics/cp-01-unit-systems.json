@@ -1,0 +1,630 @@
+{
+ "module_id": "CP-01",
+ "slug": "cp-01-unit-systems",
+ "title": "Unit Systems",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1010",
+ "handbook": "DOE-HDBK-1010-92",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Thermodynamic Units and Properties",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given appropriate conversion tables, CONVERT between English and SI system units of measurement.",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the three fundamental dimensions: length, mass, and time.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "LIST standard units of the fundamental dimensions for each of the following systems:",
+     "items": [
+      "a. International System of Units (SI)",
+      "b. English System"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DIFFERENTIATE between fundamental and derived measurements.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given appropriate conversion tables, CONVERT between English and SI units of length.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given appropriate conversion tables, CONVERT between English and SI units of mass.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "CONVERT time measurements between the following:",
+     "items": [
+      "a. Years",
+      "b. Weeks",
+      "c. Days",
+      "d. Hours",
+      "e. Minutes",
+      "f. Seconds"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Length, mass, and time are the three fundamental dimensions on which the measurement of all physical quantities is dependent.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Mass is the amount of material present in an object.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Weight (a derived unit, not a fundamental unit) is a measurement that describes the force of gravity on the \"mass\" of an object.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Length is the distance between two points.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "Time is the duration between two instants.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "A number alone is not sufficient to describe a physical quantity.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "There are two unit systems in use at the present time, English units and International System of Units (SI).",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "The SI system is made up of two related systems, the meter-kilogram-second (MKS) system and the centimeter-gram-second (CGS) system.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "The foot-pound-second (FPS) system is the usual unit system used in the U.S. when dealing with physics.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "When these dimensions or measurements are combined, they produce what are referred to as derived units.",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.6"
+  },
+  {
+   "id": "P11",
+   "quote": "Density is a measure of the mass of an object per unit volume",
+   "sec": "Fundamental Dimensions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "Conversion factors are based on relationships of equivalents from different measurement systems.",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.9"
+  },
+  {
+   "id": "P13",
+   "quote": "Conversion is basically a multiplication by 1.",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+  },
+  {
+   "id": "P14",
+   "quote": "1 in. = 0.0254 m",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+  },
+  {
+   "id": "P15",
+   "quote": "2.205 lbm = 1 kg",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "3600 sec = 1 hr",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "If an equivalent relationship between the given units and the desired units cannot be found in the conversion tables, multiple conversion factors must be used.",
+   "sec": "Unit Conversions",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.12"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Fundamental dimensions",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Mass describes how much material makes up an object.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Mass and weight are often confused because the units used to describe them are similar.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The concept of length is needed to locate the position of a point in space and to describe the size of a physical object or system.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Time is described in units of seconds, minutes, or hours.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Why is weight not one of the three fundamental dimensions?",
+     "o": [
+      "It describes the distance between two points",
+      "It is a derived unit that describes the force of gravity on a mass",
+      "It describes the duration between two instants",
+      "It is the amount of material in an object"
+     ],
+     "a": 1,
+     "x": "The handbook calls weight a derived unit, not a fundamental unit. It describes the force of gravity on the mass of an object.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Unit systems",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "The unit defines the magnitude of a measurement, and the same physical quantity may be measured using a variety of different units.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The English system is based on three standard units:",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Foot",
+      "Pound",
+      "Second"
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "The MKS standard units are the meter, kilogram, and second.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+    },
+    {
+     "t": "p",
+     "text": "The CGS standard units are the centimeter, gram, and second.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+    },
+    {
+     "t": "p",
+     "text": "MKS and CGS use a decimal-based system in which prefixes denote powers of ten. One kilometer is 1000 meters, and one centimeter is one one-hundredth of a meter.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The English system has odd units of conversion. A mile is 5280 feet, and an inch is one twelfth of a foot.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q486",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which units are the standard units of the English system?",
+     "o": [
+      "Inch, ounce, and minute",
+      "Yard, ton, and hour",
+      "Foot, pound, and second",
+      "Mile, pound, and day"
+     ],
+     "a": 2,
+     "x": "The foot-pound-second (FPS) system is the usual unit system used in the U.S. when dealing with physics.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Fundamental and derived measurements",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Most physical quantities have units that are combinations of the three fundamental dimensions of length, mass, and time.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "Area is the product of two lengths, so it has units of length squared, such as in.² or m².",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.6"
+    },
+    {
+     "t": "p",
+     "text": "Volume is the product of three lengths, so it has units of length cubed, such as in.³ or m³. One liter equals 1000 cm³.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Density has units of mass divided by length cubed, such as kg/m³ or lbs/ft³.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.7"
+    },
+    {
+     "t": "p",
+     "text": "Velocity is the change in length per unit time, with units such as km/h or ft/s.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.7"
+    },
+    {
+     "t": "p",
+     "text": "Acceleration is the change in velocity per unit time, with units such as cm/s² or ft/s².",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Which of these is a derived measurement?",
+     "o": [
+      "Mass",
+      "Density",
+      "Length",
+      "Time"
+     ],
+     "a": 1,
+     "x": "Density combines mass and length: it is mass per unit volume. Mass, length, and time are the fundamental dimensions.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Unit conversion",
+   "eo": [
+    "1.4",
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "Conversion tables define the equivalent relationships between different units of measurement.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "Common length equivalents: 1 yd = 0.9144 m, 12 in. = 1 ft, 5280 ft = 1 mile, 1 m = 3.281 ft, and 1 in. = 0.0254 m.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Common mass equivalents: 1 lbm = 0.4535 kg, 2.205 lbm = 1 kg, and 1 kg = 1000 g.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Common time equivalents: 60 sec = 1 min and 3600 sec = 1 hr.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Longer time equivalents: 1 day = 86,400 seconds = 1440 minutes = 24 hours, and 1 year = 8760 hours = 365 days.",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The conversion takes three steps:",
+     "cite": "DOE-HDBK-1010-92 CP-01 p.16"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Select the equivalent relationship from the conversion table.",
+      "Express the relationship as a conversion factor.",
+      "Multiply the given quantity by the conversion factor."
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "Using 1 in. = 0.0254 m, what is 100.00 in. in meters?",
+     "o": [
+      "0.254 m",
+      "2.54 m",
+      "25.4 m",
+      "3937 m"
+     ],
+     "a": 1,
+     "x": "100.00 in. x 0.0254 m/in. = 2.54 m.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.5",
+     "q": "Using 2.205 lbm = 1 kg, what is 10 kg in lbm?",
+     "o": [
+      "4.535 lbm",
+      "12.205 lbm",
+      "22.05 lbm",
+      "220.5 lbm"
+     ],
+     "a": 2,
+     "x": "10 kg x 2.205 lbm/kg = 22.05 lbm.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.6",
+     "q": "Using 3600 sec = 1 hr, how many seconds are in 3 hours?",
+     "o": [
+      "180 sec",
+      "1200 sec",
+      "3603 sec",
+      "10,800 sec"
+     ],
+     "a": 3,
+     "x": "3 hr x 3600 sec/hr = 10,800 sec.",
+     "p": "P16"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Feet to inches",
+   "eo": "1.4",
+   "page": 11,
+   "problem": "Convert 5 feet to inches.",
+   "steps": [
+    "Select the relationship: 1 ft = 12 inches.",
+    "Express it as a factor equal to 1: 12 inches / 1 foot.",
+    "Multiply: 5 feet x 12 inches/foot = 5 x 12 inches."
+   ],
+   "answer": "60 inches",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.11"
+  },
+  {
+   "title": "Meters to feet",
+   "eo": "1.4",
+   "page": 11,
+   "problem": "Convert 795 m to ft.",
+   "steps": [
+    "Select the relationship: 1 meter = 3.281 ft.",
+    "Divide to get the ratio desired units / present units: 3.281 ft / 1 m.",
+    "Multiply: 795 m x 3.281 ft/m = 795 x 3.281 ft."
+   ],
+   "answer": "2608.395 ft",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.11"
+  },
+  {
+   "title": "Multiple conversion factors",
+   "eo": "1.4",
+   "page": 13,
+   "problem": "Convert 2.91 sq miles to sq meters.",
+   "steps": [
+    "No direct conversion is in the table, so go from sq miles to sq yd to sq ft to sq m.",
+    "(2.91 sq miles) x (3.098 x 10⁶ sq yd / 1 sq mile) = 9.015 x 10⁶ sq yd.",
+    "(9.015 x 10⁶ sq yd) x (9 sq ft / 1 sq yd) = 8.114 x 10⁷ sq ft.",
+    "(8.114 x 10⁷ sq ft) x (1 sq m / 10.764 sq ft)."
+   ],
+   "answer": "7.538 x 10⁶ sq m",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.13"
+  },
+  {
+   "title": "Valve dimensions in MKS units",
+   "eo": "1.4",
+   "page": 13,
+   "problem": "A valve stem is 57.20 in. long. The valve inlet and outlet are 22.00 in. I.D. and 27.50 in. O.D. List these in the MKS system.",
+   "steps": [
+    "Stem: 57.20 in. x 0.0254 m/in. = 1.453 m.",
+    "I.D.: 22.00 x 0.0254 = 0.559 m.",
+    "O.D.: 27.50 x 0.0254 = 0.699 m."
+   ],
+   "answer": "1.453 m stem, 0.559 m I.D., 0.699 m O.D.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.13"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three fundamental dimensions?",
+   "a": "Length, mass, and time.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "How does the handbook define mass?",
+   "a": "Mass is the amount of material present in an object.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "What two related systems make up the SI system?",
+   "a": "The meter-kilogram-second (MKS) system and the centimeter-gram-second (CGS) system.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "What must be done when the conversion table has no direct relationship between two units?",
+   "a": "Use multiple conversion factors, performing the conversion in several steps until the measurement is in the desired units.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What are conversion factors based on?",
+   "a": "Relationships of equivalents from different measurement systems.",
+   "p": "P12",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Length is the distance between two points, mass is the amount of material in an object, and time is the duration between two instants.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+  },
+  {
+   "text": "The English system is based on the foot, pound, and second.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+  },
+  {
+   "text": "The SI system uses the meter, kilogram, and second (MKS), or the centimeter, gram, and second (CGS).",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+  },
+  {
+   "text": "Derived units combine units to describe quantities such as area, volume, and density.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.8"
+  },
+  {
+   "text": "Conversion tables list equivalent relationships, and conversion factors are obtained by dividing to get a multiplying factor of 1.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.16"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Objective gap",
+   "note": "Objective 1.6 lists weeks, but Tables 7 and 8 give no conversion for weeks. The lesson teaches the time units the tables list.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.15"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "Table 7 gives 1 lbm = 0.4535 kg, while Table 8 gives 0.45359 kg. The lesson uses Table 7, the table used in the chapter text.",
+   "cite": "DOE-HDBK-1010-92 CP-01 p.14"
+  }
+ ],
+ "page_tags": []
+}

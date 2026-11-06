@@ -1,0 +1,2159 @@
+{
+ "module_id": "IC-07",
+ "slug": "ic-07-process-controls",
+ "title": "Process Controls",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V2",
+ "handbook": "DOE-HDBK-1013/2-92",
+ "word_file": "Controllers and Positioners.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Controllers and Positioners",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a process control system, SUMMARIZE the operation of the system based on changing system inputs.",
+   "items": [],
+   "page": {
+    "pdf": 106,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following process control terms:",
+     "items": [
+      "a. Control system",
+      "b. Control system input",
+      "c. Control system output",
+      "d. Open-loop system",
+      "e. Closed-loop system",
+      "f. Feedback",
+      "g. Controlled variable",
+      "h. Manipulated variable"
+     ],
+     "page": {
+      "pdf": 106,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the operation of a control loop diagram including the following components:",
+     "items": [
+      "a. Controlled system",
+      "b. Controlled elements",
+      "c. Feedback elements",
+      "d. Reference point",
+      "e. Controlled output",
+      "f. Feedback signal",
+      "g. Actuating signal",
+      "h. Manipulated variable",
+      "i. Disturbance"
+     ],
+     "page": {
+      "pdf": 106,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "EXPLAIN how capacitance, resistance, and transportation time affect a control system’s lag time.",
+     "items": [],
+     "page": {
+      "pdf": 106,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the characteristics of the following types of automatic control systems:",
+     "items": [
+      "a. Two position control system",
+      "b. Proportional control system",
+      "c. Integral control",
+      "d. Proportional plus reset control system",
+      "e. Proportional plus rate control",
+      "f. Proportional plus reset plus rate control"
+     ],
+     "page": {
+      "pdf": 106,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the purpose of the following components of a typical control station:",
+     "items": [
+      "a. Setpoint indicator",
+      "b. Setpoint adjustment",
+      "c. Deviation indicator",
+      "d. Output meter",
+      "e. Manual-automatic transfer switch",
+      "f. Manual output adjust knob"
+     ],
+     "page": {
+      "pdf": 107,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the operation of a self-balancing control station.",
+     "items": [],
+     "page": {
+      "pdf": 107,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the operation of the following types of actuators:",
+     "items": [
+      "a. Pneumatic",
+      "b. Hydraulic",
+      "c. Solenoid",
+      "d. Electric motor"
+     ],
+     "page": {
+      "pdf": 107,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "A control system is a system of integrated elements whose function is to maintain a process variable at a desired value or within a desired range of values.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "Automatic control systems neither replace nor relieve the operator of the responsibility for maintaining the facility.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Control system input is the stimulus applied to a control system from an external source to produce a specified response from the control system.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Control system output is the actual response obtained from a control system.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "An open-loop control system is one in which the control action is independent of the output.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.6"
+  },
+  {
+   "id": "P6",
+   "quote": "A closed-loop control system is one in which control action is dependent on the output.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "Feedback is information in a closed-loop control system about the condition of a process variable.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.6"
+  },
+  {
+   "id": "P8",
+   "quote": "A controlled variable is the process variable that is maintained at a specified value or within a specified range.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "A manipulated variable is the process variable that is acted on by the control system to maintain the controlled variable at the specified value or within the specified range.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "An automatic control system is a preset closed-loop control system that requires no operator action.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "the four basic functions that occur are:",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "The three functional elements needed to perform the functions of an automatic control system are:",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "The measuring element performs the measuring function by sensing and evaluating the controlled variable.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.5"
+  },
+  {
+   "id": "P14",
+   "quote": "The final control element responds to the error signal by correcting the manipulated variable of the process.",
+   "sec": "Principles of Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.5"
+  },
+  {
+   "id": "P15",
+   "quote": "the block diagram represents flowpaths of control signals, but does not represent flow of energy through the system or process.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.9"
+  },
+  {
+   "id": "P16",
+   "quote": "The plant is the system or process through which a particular quantity or condition is controlled.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "The control elements are components needed to generate the appropriate control signal applied to the plant.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P18",
+   "quote": "The feedback elements are components needed to identify the functional relationship between the feedback signal and the controlled output.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P19",
+   "quote": "The reference point is an external signal applied to the summing point of the control system to cause the plant to produce a specified action.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P20",
+   "quote": "The actuating signal represents the control action of the control loop and is equal to the algebraic sum of the reference input signal and feedback signal.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P21",
+   "quote": "The disturbance is an undesirable input signal that upsets the value of the controlled output of the plant.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+  },
+  {
+   "id": "P22",
+   "quote": "The lube oil temperature is the controlled variable because it is maintained at a desired value (the setpoint).",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.12"
+  },
+  {
+   "id": "P23",
+   "quote": "Cooling water flow rate is the manipulated variable because it is adjusted by the temperature control valve to maintain the lube oil temperature.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "Process time lags are caused by three properties of the process.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P25",
+   "quote": "Capacitance is the ability of a process to store energy.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "Resistance is that part of the process that opposes the transfer of energy between capacities.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P27",
+   "quote": "Transportation time is time required to carry a change in a process variable from one point to another in the process.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P28",
+   "quote": "it is an actual time delay during which no change occurs.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P29",
+   "quote": "Stability is the ability of a control loop to return a controlled variable to a steady, non-cyclic value, following a disturbance.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+  },
+  {
+   "id": "P30",
+   "quote": "This is the condition desired in an automatic control system.",
+   "sec": "Control Loop Diagrams",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.14"
+  },
+  {
+   "id": "P31",
+   "quote": "A two position controller is a device that has two operating conditions: completely on or completely off.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.18"
+  },
+  {
+   "id": "P32",
+   "quote": "This opening and closing of the final control element results in a cycling characteristic of the measured variable.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.19"
+  },
+  {
+   "id": "P33",
+   "quote": "Deviation is the difference between the setpoint of a process variable and its actual value.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.20"
+  },
+  {
+   "id": "P34",
+   "quote": "In other words, amount of valve movement is proportional to amount of deviation.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.20"
+  },
+  {
+   "id": "P35",
+   "quote": "Proportional band, (also called throttling range), is the change in value of the controlled variable that causes full travel of the final control element.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+  },
+  {
+   "id": "P36",
+   "quote": "Mathematically, gain and sensitivity are reciprocal to proportional band.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+  },
+  {
+   "id": "P37",
+   "quote": "Offset, also called droop, is deviation that remains after a process has stabilized.",
+   "sec": "Two Position Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+  },
+  {
+   "id": "P38",
+   "quote": "Bistables are two-position switches that are either on or off, depending on the input variable.",
+   "sec": "Two Position Control Systems",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.8 Bistable Operation"
+  },
+  {
+   "id": "P39",
+   "quote": "Proportional band is the change in input required to produce a full range of change in the output due to the proportional control action.",
+   "sec": "Proportional Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.22"
+  },
+  {
+   "id": "P40",
+   "quote": "The proportional controller is reverse-acting so that the control valve throttles down to reduce steam flow as the hot water outlet temperature increases",
+   "sec": "Proportional Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.25"
+  },
+  {
+   "id": "P41",
+   "quote": "Direct acting controllers or actuators will respond in the same direction as the control signal",
+   "sec": "Proportional Control Systems",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.17 Process Control Terms"
+  },
+  {
+   "id": "P42",
+   "quote": "Integral control describes a controller in which the output rate of change is dependent on the magnitude of the input.",
+   "sec": "Reset (Integral) Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.28"
+  },
+  {
+   "id": "P43",
+   "quote": "The major advantage of integral controllers is that they have the unique ability to return the controlled variable back to the exact setpoint following a disturbance.",
+   "sec": "Reset (Integral) Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.32"
+  },
+  {
+   "id": "P44",
+   "quote": "the integral control mode is not normally used alone, but is combined with another control mode.",
+   "sec": "Reset (Integral) Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.32"
+  },
+  {
+   "id": "P45",
+   "quote": "Output rate of change = Integral constant x % Error",
+   "sec": "Reset (Integral) Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.30"
+  },
+  {
+   "id": "P46",
+   "quote": "It combines the immediate output characteristics of a proportional control mode with the zero residual offset characteristics of the integral mode.",
+   "sec": "Proportional Plus Reset Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.34"
+  },
+  {
+   "id": "P47",
+   "quote": "a large sustained error signal will eventually cause the controller to drive to its limit, and the result is called \"reset windup.\"",
+   "sec": "Proportional Plus Reset Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.35"
+  },
+  {
+   "id": "P48",
+   "quote": "this control mode is not well-suited for processes that are frequently shut down and started up.",
+   "sec": "Proportional Plus Reset Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.35"
+  },
+  {
+   "id": "P49",
+   "quote": "This derivative section responds to the rate of change of the error signal, not the amplitude",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.37"
+  },
+  {
+   "id": "P50",
+   "quote": "Derivative cannot be used alone as a control mode.",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.38"
+  },
+  {
+   "id": "P51",
+   "quote": "This is because a steady-state input produces a zero output in a differentiator.",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.38"
+  },
+  {
+   "id": "P52",
+   "quote": "Thus, derivative action provides increased stability to the system, but does not eliminate offset error.",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.40"
+  },
+  {
+   "id": "P53",
+   "quote": "Proportional plus rate control is normally used with large capacity or slow-responding processes such as temperature control.",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.41"
+  },
+  {
+   "id": "P54",
+   "quote": "Rate action is not usually employed with fast responding processes such as flow control or noisy processes",
+   "sec": "Proportional Plus Rate Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.41"
+  },
+  {
+   "id": "P55",
+   "quote": "there are some processes that cannot tolerate offset error, yet need good stability.",
+   "sec": "PID Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.43"
+  },
+  {
+   "id": "P56",
+   "quote": "The PID controller combines the three individual modes to achieve the advantages of each.",
+   "sec": "PID Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.46"
+  },
+  {
+   "id": "P57",
+   "quote": "The rate action combined with the proportional action reduces the initial overshoot and cyclic period.",
+   "sec": "PID Control Systems",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.45"
+  },
+  {
+   "id": "P58",
+   "quote": "Control stations perform the function of a controller and provide additional controls and indicators to allow an operator to manually adjust the controller output to the final control element.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.47"
+  },
+  {
+   "id": "P59",
+   "quote": "The setpoint indicator displays the desired value for the controller.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P60",
+   "quote": "The dial adjustment used to vary the setpoint value is the setpoint adjustment.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P61",
+   "quote": "The deviation indicator displays the difference in percentages between the setpoint value and the actual controlled variable value.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P62",
+   "quote": "Percentage display for the output signal is indicated on the output meter.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P63",
+   "quote": "The manual-automatic transfer switch is a five position switch that alters the mode of operation.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P64",
+   "quote": "Located in the center of the transfer switch, the manual output adjustment knob varies the controller output signal in the manual mode of operation.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.53"
+  },
+  {
+   "id": "P65",
+   "quote": "Bumpless transfer is the smooth transfer of a controller from one operating mode to another.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.50"
+  },
+  {
+   "id": "P66",
+   "quote": "Self-balancing describes a control station in which the non-operating mode output signal follows (tracks) the operating mode output signal.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.51"
+  },
+  {
+   "id": "P67",
+   "quote": "Final control elements are devices that complete the control loop.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.52"
+  },
+  {
+   "id": "P68",
+   "quote": "Of the final control elements discussed, the most widely used in power plants are valves.",
+   "sec": "Controllers",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.52"
+  },
+  {
+   "id": "P69",
+   "quote": "These devices are called actuators.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.54"
+  },
+  {
+   "id": "P70",
+   "quote": "A positioner is a device that regulates the supply air pressure to a pneumatic actuator.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.55"
+  },
+  {
+   "id": "P71",
+   "quote": "On a loss of supply air, the actuator in Figure 36 will fail open.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.56"
+  },
+  {
+   "id": "P72",
+   "quote": "This \"fail-safe\" concept is an important consideration in nuclear facility design.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.56"
+  },
+  {
+   "id": "P73",
+   "quote": "when a large amount of force is required to operate a valve",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.57"
+  },
+  {
+   "id": "P74",
+   "quote": "First, they have only two positions: fully open and fully closed. Second, they don’t produce much force, so they usually only operate relatively small valves.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+  },
+  {
+   "id": "P75",
+   "quote": "A major advantage of solenoid actuators is their quick operation.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+  },
+  {
+   "id": "P76",
+   "quote": "Limit switches de-energize the electric motor when the valve has reached a specific position.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+  },
+  {
+   "id": "P77",
+   "quote": "The clutch and clutch lever disconnects the electric motor from the gear assembly and allows the valve to be operated manually with the handwheel.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Controllers and positioners",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.4 Characteristics of Controllers and Positioners"
+  },
+  {
+   "step": "Bistables",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.8 Bistable Operation"
+  },
+  {
+   "step": "Process control terms",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.14 Process Control Terms"
+  },
+  {
+   "step": "Automatic controllers",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.21 Operation of an Automatic Controller"
+  },
+  {
+   "step": "Integral control",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.27 Integral (Reset) Control"
+  },
+  {
+   "step": "PI control",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.34 Proportional Integral Control"
+  },
+  {
+   "step": "PD control",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.41 Proportional-Derivative Control Systems"
+  },
+  {
+   "step": "PID control",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.47 Proportional-Integral-Derivative"
+  },
+  {
+   "step": "Automatic and manual operation",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.54 Automatic and Manual Controller Operation"
+  },
+  {
+   "step": "PLCs",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.9 Programmable Logic Controllers (PLC)"
+  },
+  {
+   "step": "Distributed control system",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.11 Distributed Control System"
+  },
+  {
+   "step": "I/O modules",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.12 Input/Output (I/O) Modules"
+  },
+  {
+   "step": "Communication bus",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.22 Communication (System) Bus"
+  },
+  {
+   "step": "HMI",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.26 Human Machine Interface (HMI)"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Control system terms",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "If a control system fails, the operator must be able to take over and control the process manually.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig2",
+     "num": 2,
+     "cap": "Closed-Loop Control System",
+     "alt": "Closed-loop tank level system: a level transmitter sends a signal to a controller that positions a supply valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig3",
+     "num": 3,
+     "cap": "Feedback in a Closed-Loop Control System",
+     "alt": "Block diagram of feedback: measured level is compared with desired level and fed back to the control action.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q400",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What defines an open-loop control system?",
+     "o": [
+      "It requires feedback",
+      "Control action is independent of the output",
+      "Control action depends on the output",
+      "It has no input"
+     ],
+     "a": 1,
+     "x": "An open-loop control system is one in which the control action is independent of the output.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "In a tank level control system, what is the flow rate of supply water?",
+     "o": [
+      "The controlled variable",
+      "The manipulated variable",
+      "The setpoint",
+      "The feedback"
+     ],
+     "a": 1,
+     "x": "The flow rate of the water supplied to the tank is the manipulated variable.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.1",
+     "q": "In a tank level control system, what is the tank level?",
+     "o": [
+      "The actuating signal",
+      "The controlled variable",
+      "The manipulated variable",
+      "The disturbance"
+     ],
+     "a": 1,
+     "x": "The level is maintained at a specified value, so it is the controlled variable.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Automatic control",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Measurement",
+      "Comparison",
+      "Computation",
+      "Correction"
+     ],
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Three elements perform these functions: a measurement element, an error detection element, and a final control element.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig4",
+     "num": 4,
+     "cap": "Relationships of Functions and Elements in an Automatic Control System",
+     "alt": "Relationship of measurement, error detection, and final control elements around a process.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "The error detection element compares the controlled variable to the desired value and signals an error if there is a deviation.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What are the four basic functions in any automatic control system?",
+     "o": [
+      "Input, output, feedback, and gain",
+      "Heating, cooling, venting, and draining",
+      "Indication, alarm, control, and trip",
+      "Measurement, comparison, computation, and correction"
+     ],
+     "a": 3,
+     "x": "The four basic functions are measurement, comparison, computation, and correction.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Control loop diagrams",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A block diagram shows the cause and effect relationship between the input and output of a physical system. Arrows show signal flow.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.7"
+    },
+    {
+     "t": "p",
+     "text": "A summing point shows addition and subtraction. A takeoff point allows a signal to be used by more than one block or summing point.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.8"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig8",
+     "num": 8,
+     "cap": "Feedback Control System Block Diagram",
+     "alt": "Feedback control block diagram: reference input to a summing point, control elements, the plant, controlled output, and feedback elements, with a disturbance input.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "The reference point is also called the setpoint.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+    },
+    {
+     "t": "p",
+     "text": "The feedback signal is a function of the output signal.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "The actuating signal is also called the error signal.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What is another name for the actuating signal?",
+     "o": [
+      "The error signal",
+      "The setpoint",
+      "The disturbance",
+      "The output"
+     ],
+     "a": 0,
+     "x": "The actuating signal is also called the error signal.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is another name for the reference point?",
+     "o": [
+      "The plant",
+      "The takeoff point",
+      "The feedback",
+      "The setpoint"
+     ],
+     "a": 3,
+     "x": "The reference point represents the desired value and is also called the setpoint.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does a control system block diagram represent?",
+     "o": [
+      "Flow of energy through the process",
+      "Physical pipe layout",
+      "Electrical wiring",
+      "Flowpaths of control signals"
+     ],
+     "a": 3,
+     "x": "The block diagram represents flowpaths of control signals, not the flow of energy.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is a disturbance?",
+     "o": [
+      "The feedback element",
+      "The control valve",
+      "An undesirable input signal that upsets the controlled output",
+      "The desired value"
+     ],
+     "a": 2,
+     "x": "The disturbance is an undesirable input signal that upsets the value of the controlled output.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Example: lube oil cooler",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-07-fig9",
+     "num": 9,
+     "cap": "Lube Oil Cooler Temperature Control System and Equivalent Block Diagram",
+     "alt": "Lube oil cooler with a temperature transmitter, temperature controller, and cooling water valve, and the equivalent block diagram.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.11"
+    },
+    {
+     "t": "p",
+     "text": "Cooling water flows in the shell around tubes that carry lube oil.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "If the temperature is above the setpoint, the controller moves the valve in the open direction, which sends more cooling water through the cooler.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.12"
+    },
+    {
+     "t": "p",
+     "text": "The lube oil cooler is the plant, and the temperature transmitter is the feedback element.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.12"
+    },
+    {
+     "t": "p",
+     "text": "The actuating signal passes through the temperature controller and the control valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "In the lube oil cooler loop, what is the manipulated variable?",
+     "o": [
+      "Control air pressure",
+      "Lube oil temperature",
+      "Cooling water flow rate",
+      "The setpoint"
+     ],
+     "a": 2,
+     "x": "Cooling water flow rate is the manipulated variable, adjusted by the temperature control valve.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Process time lags and stability",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "Instability is caused by a combination of process time lags and time lags within the control system.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.14"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig10",
+     "num": 10,
+     "cap": "Types of Oscillations",
+     "alt": "Three plots of the controlled variable: decreasing, constant, and increasing amplitude oscillations.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.14"
+    },
+    {
+     "t": "p",
+     "text": "Decreasing amplitude oscillations eventually stop.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Constant amplitude never reaches a stable condition. Increasing amplitude causes the process to go out of control.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Which three properties cause process time lags?",
+     "o": [
+      "Gain, offset, and droop",
+      "Input, output, and feedback",
+      "Flow, level, and pressure",
+      "Capacitance, resistance, and transportation time"
+     ],
+     "a": 3,
+     "x": "Process time lags are caused by capacitance, resistance, and transportation time.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is capacitance in a process?",
+     "o": [
+      "The delay carrying a change",
+      "The setpoint range",
+      "The ability of a process to store energy",
+      "Opposition to energy transfer"
+     ],
+     "a": 2,
+     "x": "Capacitance is the ability of a process to store energy.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.3",
+     "q": "How does transportation time differ from a slowing of change?",
+     "o": [
+      "It is an actual time delay during which no change occurs",
+      "It speeds up the change",
+      "It only affects electrical signals",
+      "It only occurs in heat exchangers"
+     ],
+     "a": 0,
+     "x": "This lag is an actual time delay during which no change occurs.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which type of oscillation is desired in an automatic control system?",
+     "o": [
+      "Increasing amplitude",
+      "Random amplitude",
+      "Decreasing amplitude",
+      "Constant amplitude"
+     ],
+     "a": 2,
+     "x": "Decreasing amplitude is the condition desired in an automatic control system.",
+     "p": "P30"
+    }
+   ]
+  },
+  {
+   "title": "Two position control",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A controller generates an output signal based on the error signal it receives.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig12",
+     "num": 12,
+     "cap": "Two Position Controller Input/Output Relationship",
+     "alt": "Waveform showing a controller output switching on and off as the measured variable crosses the setpoint.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.18"
+    },
+    {
+     "t": "p",
+     "text": "The output is determined by whether the error signal is above or below the setpoint.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig13",
+     "num": 13,
+     "cap": "Two Position Control System",
+     "alt": "Tank with a level detector, a two position controller, and a solenoid valve on the supply.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "They may have a reset point above or below the on setpoint to prevent excessive cycling.",
+     "cite": "Word: Controllers and Positioners.docx, slide 1.8 Bistable Operation"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q257",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "What characteristic does a two position controller give the measured variable?",
+     "o": [
+      "A steady value",
+      "A cycling characteristic",
+      "Zero offset",
+      "No deviation"
+     ],
+     "a": 1,
+     "x": "The opening and closing of the final control element results in a cycling characteristic of the measured variable.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Proportional control",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig14",
+     "num": 14,
+     "cap": "Relation Between Valve Position and Controlled Variable Under Proportional Mode",
+     "alt": "Plots showing valve position following controlled temperature under proportional mode.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.20"
+    },
+    {
+     "t": "p",
+     "text": "The proportional mode responds only to the amount of deviation and is insensitive to rate or duration.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "Offset is an inherent characteristic of the proportional mode.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q357",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q403",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "How are gain and proportional band related?",
+     "o": [
+      "They are equal",
+      "They are unrelated",
+      "Gain is the square of proportional band",
+      "They are reciprocal"
+     ],
+     "a": 3,
+     "x": "Gain and sensitivity are reciprocal to proportional band.",
+     "p": "P36"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is offset?",
+     "o": [
+      "The change that causes full valve travel",
+      "The rate of change of the error",
+      "The setpoint range",
+      "Deviation that remains after a process has stabilized"
+     ],
+     "a": 3,
+     "x": "Offset, also called droop, is deviation that remains after a process has stabilized.",
+     "p": "P37"
+    },
+    {
+     "eo": "1.4",
+     "q": "An instrument has a full range of 200 °F and a 50 °F change causes full valve travel. What is the proportional band?",
+     "o": [
+      "4%",
+      "25%",
+      "50%",
+      "200%"
+     ],
+     "a": 1,
+     "x": "50 °F in 200 °F is 25%.",
+     "p": "P35"
+    }
+   ]
+  },
+  {
+   "title": "Integral (reset) control",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "p",
+     "text": "A smaller input causes a slower rate of change of the output. It is also known as reset control.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.28"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig19",
+     "num": 19,
+     "cap": "Integral Output for a Fixed Input",
+     "alt": "Integrator input step and the output ramp that rises at a constant rate.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "A large error moves the final control element rapidly, and a small error moves it slowly.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "Disadvantages are a relatively slow response and a possibly large initial deviation.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q401",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is the major advantage of integral control?",
+     "o": [
+      "It returns the controlled variable to the exact setpoint",
+      "It responds immediately",
+      "It cannot wind up",
+      "It has no gain"
+     ],
+     "a": 0,
+     "x": "Integral controllers can return the controlled variable back to the exact setpoint following a disturbance.",
+     "p": "P43"
+    },
+    {
+     "eo": "1.4",
+     "q": "An integral controller has a constant of 0.1 per second and a 5% error. What is its output rate of change?",
+     "o": [
+      "0.05% per second",
+      "0.5% per second",
+      "5% per second",
+      "50% per second"
+     ],
+     "a": 1,
+     "x": "Output rate of change = integral constant x % error = 0.1 x 5 = 0.5% per second.",
+     "p": "P45"
+    }
+   ]
+  },
+  {
+   "title": "Proportional plus reset (PI)",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Proportional action gives an immediate output but leaves a residual offset. Integral action keeps repositioning the final control element until the error is reduced to zero.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.33"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig22",
+     "num": 22,
+     "cap": "Response of Proportional Plus Reset Control",
+     "alt": "Plots of an error signal and the proportional plus reset controller output, with a step followed by a ramp.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "Reset action also makes the process return to setpoint more quickly.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q358",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is reset windup?",
+     "o": [
+      "A large sustained error drives the controller to its limit",
+      "Derivative action on noise",
+      "Loss of supply air",
+      "A bump on transfer to manual"
+     ],
+     "a": 0,
+     "x": "A large sustained error signal eventually drives the controller to its limit, which is called reset windup.",
+     "p": "P47"
+    },
+    {
+     "eo": "1.4",
+     "q": "What does adding reset to proportional control eliminate?",
+     "o": [
+      "The need for a setpoint",
+      "Feedback",
+      "Offset error",
+      "All deviation at the instant of a change"
+     ],
+     "a": 2,
+     "x": "Proportional plus reset combines the immediate output with zero residual offset.",
+     "p": "P46"
+    }
+   ]
+  },
+  {
+   "title": "Proportional plus rate (PD)",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "p",
+     "text": "Derivative action reduces initial overshoot and helps stabilize the process sooner.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig27",
+     "num": 27,
+     "cap": "Response of Proportional Plus Rate Control",
+     "alt": "Plots of an error signal and the proportional plus rate controller output.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.39"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "p",
+     "text": "It is useful for processes frequently started up and shut down, because it is not susceptible to reset windup.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.41"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q356",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q402",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "Why is rate action not usually used on flow control?",
+     "o": [
+      "It responds to any rate of change, including noise",
+      "It cannot respond fast enough",
+      "It causes reset windup",
+      "It only works on level"
+     ],
+     "a": 0,
+     "x": "Derivative action responds to any rate of change in the error signal, including the noise.",
+     "p": "P54"
+    }
+   ]
+  },
+  {
+   "title": "PID control",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Two position control suits processes that can operate with continuous cycling. Proportional control suits those that cannot.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig30",
+     "num": 30,
+     "cap": "PID Control Action Responses",
+     "alt": "Curves of the proportional, reset, and rate actions and their combined output for a slowly increasing error.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.44"
+    },
+    {
+     "t": "list",
+     "items": [
+      "The proportional action responds to the error amplitude",
+      "The integral action eliminates the offset error",
+      "The derivative action provides additional stability to the process"
+     ],
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "p",
+     "text": "Most PID controllers have the derivative features zeroed out due to potential instability.",
+     "cite": "Word: Controllers and Positioners.docx, slide 1.50 PID Controller Response to Demand Disturbance"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "In a PID controller, which action eliminates offset error?",
+     "o": [
+      "Proportional",
+      "Two position",
+      "Integral",
+      "Derivative"
+     ],
+     "a": 2,
+     "x": "The integral action eliminates the offset error.",
+     "p": "P56"
+    }
+   ]
+  },
+  {
+   "title": "Control stations",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig32",
+     "num": 32,
+     "cap": "Typical Control Station",
+     "alt": "Front panel of a control station with setpoint and deviation indicators, an output meter, and a manual-automatic switch.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "p",
+     "text": "The five positions are AUTO, 0-100 on the auto side, MAN, 0-100 on the manual side, and BAL.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.50"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "p",
+     "text": "Without a match, the final control element could get a sudden change, or bump, causing large swings in the process variable.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.50"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What does the deviation indicator on a control station show?",
+     "o": [
+      "The manual output only",
+      "The difference between setpoint and the controlled variable",
+      "The controller's output percent",
+      "The transfer switch position"
+     ],
+     "a": 1,
+     "x": "The deviation indicator displays the difference between the setpoint value and the actual controlled variable value.",
+     "p": "P61"
+    },
+    {
+     "eo": "1.5",
+     "q": "What does the manual output adjust knob do?",
+     "o": [
+      "Sets proportional band",
+      "Switches to automatic",
+      "Varies controller output in manual mode",
+      "Selects the setpoint"
+     ],
+     "a": 2,
+     "x": "The manual output adjustment knob varies the controller output signal in the manual mode of operation.",
+     "p": "P64"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is bumpless transfer?",
+     "o": [
+      "Loss of supply air",
+      "A sudden setpoint change",
+      "The smooth transfer of a controller from one operating mode to another",
+      "A valve moving at full speed"
+     ],
+     "a": 2,
+     "x": "Bumpless transfer is the smooth transfer of a controller from one operating mode to another.",
+     "p": "P65"
+    }
+   ]
+  },
+  {
+   "title": "Self-balancing stations and final control elements",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig34",
+     "num": 34,
+     "cap": "Self-Balancing Control Station",
+     "alt": "Self-balancing control station with manual push buttons, mode lights, and mode selection buttons.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.51"
+    },
+    {
+     "t": "p",
+     "text": "This station does not need a balancing procedure before shifting modes.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.50"
+    },
+    {
+     "t": "p",
+     "text": "After transfer to manual, the output stays at its previous value until a manual push button is pressed.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.51"
+    },
+    {
+     "t": "p",
+     "text": "After transfer to automatic, any deviation is removed slowly.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.51"
+    },
+    {
+     "t": "p",
+     "text": "Manual push buttons have half-in and full-in positions. At full-in, the output changes about ten times faster.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "p",
+     "text": "Other final control elements include dampers, pumps, and electric heaters.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.52"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What does self-balancing mean on a control station?",
+     "o": [
+      "The setpoint adjusts itself",
+      "The output returns to zero",
+      "The valve balances the flow",
+      "The non-operating mode output tracks the operating mode output"
+     ],
+     "a": 3,
+     "x": "In a self-balancing station, the non-operating mode output signal follows the operating mode output signal.",
+     "p": "P66"
+    }
+   ]
+  },
+  {
+   "title": "Pneumatic actuators",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Valves that must be operated remotely and automatically need special devices to move them.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.54"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig35",
+     "num": 35,
+     "cap": "Pneumatic Actuator: Air-to-Close/Spring-to-Open",
+     "alt": "Pneumatic actuator: supply air above a rubber diaphragm, a spring below, and a stem to the control valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.54"
+    },
+    {
+     "t": "p",
+     "text": "A pneumatic actuator operates by a combination of force created by air and spring force.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.54"
+    },
+    {
+     "t": "p",
+     "text": "With no supply air, the spring holds the valve fully open. Increasing air pressure closes the valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.55"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig36",
+     "num": 36,
+     "cap": "Pneumatic Actuator with Controller and Positioner",
+     "alt": "Pneumatic actuator with a controller and a positioner connected by a feedback linkage.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.56"
+    },
+    {
+     "t": "p",
+     "text": "A positioner compares the demanded position with the actual position.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.55"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "p",
+     "text": "This is called air-to-close, spring-to-open, or fail-open. Others are air-to-open, spring-to-close, or fail-closed.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.56"
+    },
+    {
+     "t": "quote",
+     "p": "P72"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q359",
+     "eo": "1.7"
+    },
+    {
+     "eo": "1.7",
+     "q": "An air-to-close, spring-to-open actuator loses supply air. What does the valve do?",
+     "o": [
+      "Fails as is",
+      "Fails to mid-position",
+      "Fails open",
+      "Fails closed"
+     ],
+     "a": 2,
+     "x": "On a loss of supply air, the spring moves the actuator and the valve fails open.",
+     "p": "P71"
+    }
+   ]
+  },
+  {
+   "title": "Hydraulic, solenoid, and motor actuators",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Hydraulic actuators are normally used",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.57"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig37",
+     "num": 37,
+     "cap": "Hydraulic Actuator",
+     "alt": "Piston-type hydraulic actuator with a spring above the piston and hydraulic oil below.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.57"
+    },
+    {
+     "t": "p",
+     "text": "Hydraulic pressure on the piston overcomes the spring and opens the valve. Draining oil lets the spring close it.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.57"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig38",
+     "num": 38,
+     "cap": "Electric Solenoid Actuator",
+     "alt": "Solenoid actuator with a coil, an armature, a spring, and a stem.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.58"
+    },
+    {
+     "t": "p",
+     "text": "Current through a solenoid coil forms a magnetic field that attracts the armature and opens the valve. When current stops, the spring shuts the valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.58"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "fig",
+     "id": "ic-07-fig39",
+     "num": 39,
+     "cap": "Electric Motor Actuator",
+     "alt": "Electric motor actuator with a motor, a clutch and gear box assembly, a handwheel, and a stem.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+    },
+    {
+     "t": "p",
+     "text": "The motor reverses its rotation to open or close the valve.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.59"
+    },
+    {
+     "t": "quote",
+     "p": "P77"
+    },
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "p",
+     "text": "Torque limiters de-energize the motor when turning force reaches a specified value.",
+     "cite": "DOE-HDBK-1013/2-92 IC-07 p.60"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "When are hydraulic actuators normally used?",
+     "o": [
+      "When a very small valve is used",
+      "When quick response only is needed",
+      "When there is no spring",
+      "When a large amount of force is required"
+     ],
+     "a": 3,
+     "x": "When a large amount of force is required to operate a valve, hydraulic actuators are normally used.",
+     "p": "P73"
+    },
+    {
+     "eo": "1.7",
+     "q": "What are the two disadvantages of solenoid actuators?",
+     "o": [
+      "Slow operation and high cost",
+      "Need for air and oil",
+      "Hard to install and heavy",
+      "Only two positions, and not much force"
+     ],
+     "a": 3,
+     "x": "Solenoid actuators have only two positions and don't produce much force.",
+     "p": "P74"
+    },
+    {
+     "eo": "1.7",
+     "q": "How is an electric motor actuated valve operated by hand?",
+     "o": [
+      "The torque limiter is removed",
+      "The limit switch is held closed",
+      "A clutch disconnects the motor so the handwheel can be used",
+      "The motor is reversed"
+     ],
+     "a": 2,
+     "x": "The clutch and lever disconnect the motor from the gear assembly, allowing use of the handwheel.",
+     "p": "P77"
+    }
+   ]
+  },
+  {
+   "title": "Distributed control systems",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In a typical DCS, input/output modules convert analog signals from field devices into digital data.",
+     "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.33 In a typical DCS, which component is primarily responsible for converting analog signals from field devices into digital data that can be processed by the system?"
+    },
+    {
+     "t": "p",
+     "text": "A setpoint change at the Human-Machine Interface must reach the controller to take effect.",
+     "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.32 If an operator makes a setpoint change via the Human-Machine Interface (HMI), which component must receive this information to implement the change in the process?"
+    },
+    {
+     "t": "p",
+     "text": "A communication bus sends and receives information from one DCS cabinet to another.",
+     "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.34 What is the function of a Communication bus in a Distributed Control System (DCS)?"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q258",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q259",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q260",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q261",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q262",
+     "eo": "From the lesson plan"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Percent proportional band",
+   "eo": "1.4",
+   "page": 21,
+   "problem": "An instrument has a full range of 200 °F, and a 50 °F change causes full valve travel. Find the proportional band.",
+   "steps": [
+    "50 °F in 200 °F",
+    "Express as a percent of full range"
+   ],
+   "answer": "25%",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+  },
+  {
+   "title": "Integral output rate",
+   "eo": "1.4",
+   "page": 30,
+   "problem": "Flow falls from 50 gpm to 45 gpm, giving a positive error of 5%. The controller constant is 0.1 seconds⁻¹. Find the output rate of change.",
+   "steps": [
+    "Output rate of change = integral constant x % error",
+    "0.1 x 5"
+   ],
+   "answer": "0.5% per second",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.30"
+  },
+  {
+   "title": "Proportional band in a temperature system",
+   "eo": "1.4",
+   "page": 25,
+   "problem": "A controller has a 50% proportional band on a 200 °F span. What temperature change causes a 100% output change?",
+   "steps": [
+    "50% of the 200 °F span"
+   ],
+   "answer": "100 °F",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.25"
+  },
+  {
+   "title": "Two position tank control",
+   "eo": "1.4",
+   "page": 19,
+   "problem": "Level falls below the setpoint in a two position system. What happens?",
+   "steps": [
+    "A positive error signal is created",
+    "The controller opens the final control element fully",
+    "When level rises above setpoint, a negative error shuts it"
+   ],
+   "answer": "The measured variable cycles.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.19"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three functional elements of an automatic control system?",
+   "a": "A measurement element, an error detection element, and a final control element.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "What is an actuating signal?",
+   "a": "The control action of the loop, equal to the algebraic sum of the reference input and feedback signals. It is also called the error signal.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What is proportional band?",
+   "a": "The change in the controlled variable that causes full travel of the final control element.",
+   "p": "P35",
+   "place": null
+  },
+  {
+   "q": "Why can't derivative control be used alone?",
+   "a": "A steady-state input produces a zero output in a differentiator.",
+   "p": "P51",
+   "place": null
+  },
+  {
+   "q": "What does each PID action do?",
+   "a": "Proportional responds to error amplitude, integral eliminates offset, and derivative adds stability.",
+   "p": "P56",
+   "place": null
+  },
+  {
+   "q": "What does a positioner do?",
+   "a": "It regulates the supply air pressure to a pneumatic actuator by comparing demanded position with actual position.",
+   "p": "P70",
+   "place": null
+  },
+  {
+   "q": "What does fail-open mean on a pneumatic actuator?",
+   "a": "On a loss of supply air, the spring opens the valve. It is also called air-to-close, spring-to-open.",
+   "p": "P71",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A control system maintains a process variable at a desired value or within a desired range.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.6"
+  },
+  {
+   "text": "Process time lags are affected by capacitance, resistance, and transportation time.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.16"
+  },
+  {
+   "text": "A two position controller has two operating conditions: completely on or completely off.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.21"
+  },
+  {
+   "text": "Proportional plus reset control eliminates any offset error that would occur with proportional control only.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.36"
+  },
+  {
+   "text": "Proportional plus rate control increases system stability but does not eliminate offset error.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.42"
+  },
+  {
+   "text": "The PID controller combines the three individual modes to achieve the advantages of each.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.46"
+  },
+  {
+   "text": "Actuators may be pneumatic, hydraulic, solenoid, or electric motor types.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.60"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook error",
+   "note": "p.23 first describes a 4-in valve stroke, then says a 2 in level change causes the full 3-in stroke. Controllers and Positioners.docx slide 1.26 says 4-inch. The lesson leaves that sentence off, so neither value is shown.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.23"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.18 repeats a sentence about the error signal magnitude, and p.20 and p.21 teach proportional concepts under the Two Position chapter. The lesson places them on the Proportional control page.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.18"
+  },
+  {
+   "type": "Word value",
+   "note": "Controllers and Positioners.docx slide 1.64 sets its heat exchanger example at 95 °C with a ±25 °F band, where the handbook uses 150 °F and ±50 °F. These are different examples, and the lesson uses neither value.",
+   "cite": "Word: Controllers and Positioners.docx, slide 1.64 Controller Response to Demand Changes"
+  },
+  {
+   "type": "Scope",
+   "note": "The heat exchanger example uses steam to heat water, but it teaches control modes rather than a water system, so it is not tagged and its numbers are mostly left off. The cooling water in the lube oil example is treated the same way. p.57 names main steam valves, and that example is left off.",
+   "cite": "DOE-HDBK-1013/2-92 IC-07 p.25"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The DCS lesson is mostly pictures, so only its question text is used, on a page marked From the lesson plan. Slides on digital controllers are not used, since they are not in the handbook objectives.",
+   "cite": "Word: DISTRIBUTED CONTROL SYSTEMS (DCS).docx, slide 1.11 Distributed Control System"
+  }
+ ],
+ "page_tags": []
+}

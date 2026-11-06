@@ -1,0 +1,2031 @@
+{
+ "module_id": "NP-03",
+ "slug": "np-03-reactor-theory-nuclear-parameters",
+ "title": "Reactor Theory (Nuclear Parameters)",
+ "status": "Reviewed",
+ "scope_tags": [
+  "Draft source"
+ ],
+ "source_id": "DOE-1019-V2",
+ "handbook": "DOE-HDBK-1019/2-93",
+ "word_file": "Reactor Neutrons.docx",
+ "quiz_t": "Reactor Theory",
+ "quiz_topic": "Reactivity Coefficients",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Using appropriate references, DESCRIBE the neutron life cycle discussed in this module.",
+   "items": [],
+   "page": {
+    "pdf": 18,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Infinite multiplication factor, k∞",
+      "b. Effective multiplication factor, keff",
+      "c. Subcritical",
+      "d. Critical",
+      "e. Supercritical"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE each term in the six factor formula using the ratio of the number of neutrons present at different points in the neutron life cycle.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given the macroscopic cross sections for various materials, CALCULATE the thermal utilization factor.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given microscopic cross sections for absorption and fission, atom density, and ν, CALCULATE the reproduction factor.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given the numbers of neutrons present at the start of a generation and values for each factor in the six factor formula, CALCULATE the number of neutrons that will be present at any point in the life cycle.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "LIST physical changes in the reactor core that will have an effect on the thermal utilization factor, reproduction factor, or resonance escape probability.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "EXPLAIN the effect that temperature changes will have on the following factors:",
+     "items": [
+      "a. Thermal utilization factor",
+      "b. Resonance escape probability",
+      "c. Fast non-leakage probability",
+      "d. Thermal non-leakage probability"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "Given the number of neutrons in a reactor core and the effective multiplication factor, CALCULATE the number of neutrons present after any number of generations.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DEFINE the term reactivity.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "CONVERT between reactivity and the associated value of keff.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "CONVERT measures of reactivity between the following units:",
+     "items": [
+      "a. ∆k/k",
+      "b. %∆k/k",
+      "c. 10-4 ∆k/k",
+      "d. Percent millirho (pcm)"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "EXPLAIN the relationship between reactivity coefficients and reactivity defects.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "From memory, EXPLAIN how reactivity varies with the thermodynamic properties of the moderator and the fuel.",
+   "items": [],
+   "page": {
+    "pdf": 20,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "EXPLAIN the conditions of over moderation and under moderation.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "EXPLAIN why many reactors are designed to be operated in an under moderated condition.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "STATE the effect that a change in moderator temperature will have on the moderator to fuel ratio.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "DEFINE the temperature coefficient of reactivity.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "EXPLAIN why a negative temperature coefficient of reactivity is desirable.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "EXPLAIN why the fuel temperature coefficient is more effective than the moderator temperature coefficient in terminating a rapid power rise.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "EXPLAIN the concept of Doppler broadening of resonance absorption peaks.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "LIST two nuclides that are present in some types of reactor fuel assemblies that have significant resonance absorption peaks.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "DEFINE the pressure coefficient of reactivity.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.10",
+     "text": "EXPLAIN why the pressure coefficient of reactivity is usually negligible in a reactor cooled and moderated by a subcooled liquid.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.11",
+     "text": "DEFINE the void coefficient of reactivity.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.12",
+     "text": "IDENTIFY the moderator conditions under which the void coefficient of reactivity becomes significant.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "3.0",
+   "text": "Without references, DESCRIBE the use of neutron poisons.",
+   "items": [],
+   "page": {
+    "pdf": 21,
+    "printed": "ix"
+   },
+   "enabling": [
+    {
+     "number": "3.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Burnable poison",
+      "b. Non-burnable poison",
+      "c. Chemical shim"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.2",
+     "text": "EXPLAIN the use of burnable neutron poisons in a reactor core.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.3",
+     "text": "LIST the advantages and disadvantages of chemical shim over fixed burnable poisons.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.4",
+     "text": "STATE two reasons why fixed non-burnable neutron poisons are used in reactor cores.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.5",
+     "text": "STATE an example of a material used as a fixed non-burnable neutron poison.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    }
+   ]
+  },
+  {
+   "number": "4.0",
+   "text": "Without references, DESCRIBE the effects of fission product poisons on a reactor.",
+   "items": [],
+   "page": {
+    "pdf": 22,
+    "printed": "x"
+   },
+   "enabling": [
+    {
+     "number": "4.1",
+     "text": "LIST two methods of production and two methods of removal for xenon-135 during reactor operation.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.2",
+     "text": "STATE the equation for equilibrium xenon-135 concentration.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.3",
+     "text": "DESCRIBE how equilibrium xenon-135 concentration varies with reactor power level.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.4",
+     "text": "DESCRIBE the causes and effects of a xenon oscillation.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.5",
+     "text": "DESCRIBE how xenon-135 concentration changes following a reactor shutdown from steady-state conditions.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.6",
+     "text": "EXPLAIN the effect that pre-shutdown power levels have on the xenon-135 concentration after shutdown.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.7",
+     "text": "STATE the approximate time following a reactor shutdown at which the reactor can be considered \"xenon free.\"",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.8",
+     "text": "EXPLAIN what is meant by the following terms:",
+     "items": [
+      "a. Xenon precluded startup",
+      "b. Xenon dead time"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.9",
+     "text": "DESCRIBE how xenon-135 concentration changes following an increase or a decrease in the power level of a reactor.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.10",
+     "text": "DESCRIBE how samarium-149 is produced and removed from the reactor core during reactor operation.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.11",
+     "text": "STATE the equation for equilibrium samarium-149 concentration.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.12",
+     "text": "DESCRIBE how equilibrium samarium-149 concentration varies with reactor power level.",
+     "items": [],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.13",
+     "text": "DESCRIBE how samarium-149 concentration changes following a reactor shutdown from steady-state conditions.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "4.14",
+     "text": "DESCRIBE how samarium-149 concentration changes following a reactor startup.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "4.15",
+     "text": "STATE the conditions under which helium-3 will have a significant effect on the reactivity of a reactor.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    }
+   ]
+  },
+  {
+   "number": "5.0",
+   "text": "Without references, DESCRIBE how control rods affect the reactor core.",
+   "items": [],
+   "page": {
+    "pdf": 24,
+    "printed": "xii"
+   },
+   "enabling": [
+    {
+     "number": "5.1",
+     "text": "DESCRIBE the difference between a \"grey\" neutron absorbing material and a \"black\" neutron absorbing material.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.2",
+     "text": "EXPLAIN why a \"grey\" neutron absorbing material may be preferable to a \"black\" neutron absorbing material for use in control rods.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.3",
+     "text": "EXPLAIN why resonance absorbers are sometimes preferred over thermal absorbers as a control rod material.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.4",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Integral control rod worth",
+      "b. Differential control rod worth"
+     ],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.5",
+     "text": "DESCRIBE the shape of a typical differential control rod worth curve and explain the reason for the shape.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.6",
+     "text": "DESCRIBE the shape of a typical integral control rod worth curve and explain the reason for the shape.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.7",
+     "text": "Given an integral or differential control rod worth curve, CALCULATE the reactivity change due to a control rod movement between two positions.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    },
+    {
+     "number": "5.8",
+     "text": "Given differential control rod worth data, PLOT differential and integral control rod worth curves.",
+     "items": [],
+     "page": {
+      "pdf": 24,
+      "printed": "xii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The infinite multiplication factor, k∞, is the ratio of the neutrons produced by fission in one generation to the number of neutrons lost through absorption in the preceding generation.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "id": "P2",
+   "quote": "The effective multiplication factor, keff, is the ratio of the number of neutrons produced by fission in one generation to the number of neutrons lost through absorption and leakage in the preceding generation.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "id": "P3",
+   "quote": "Critical is the condition where the neutron chain reaction is self-sustaining and the neutron population is neither increasing nor decreasing.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "id": "P4",
+   "quote": "Subcritical is the condition in which the neutron population is decreasing each generation.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "id": "P5",
+   "quote": "Supercritical is the condition in which the neutron population is increasing each generation.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "id": "P6",
+   "quote": "Virtually all fissions taking place in a fast reactor are caused by fast neutrons.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P7",
+   "quote": "The resonance escape probability is not significant because very few neutrons exist at energies where resonance absorption is significant.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P8",
+   "quote": "The thermal non-leakage probability does not exist because the reactor is designed to avoid the thermalization of neutrons.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P9",
+   "quote": "A separate term to deal with fast fission is not necessary because all fission is fast fission and is handled by the reproduction factor.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P10",
+   "quote": "The thermal utilization factor is modified to describe the utilization of fast neutrons instead of thermal neutrons.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P11",
+   "quote": "The reproduction factor is similarly modified to account for fast fission instead of thermal fission.",
+   "sec": "Neutron Life Cycle",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "id": "P12",
+   "quote": "Reactivity is the fractional change in neutron population per generation.",
+   "sec": "Reactivity",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.22"
+  },
+  {
+   "id": "P13",
+   "quote": "The larger the absolute value of reactivity in the reactor core, the further the reactor is from criticality.",
+   "sec": "Reactivity",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.18"
+  },
+  {
+   "id": "P14",
+   "quote": "Reactivity is a dimensionless number.",
+   "sec": "Reactivity",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.19"
+  },
+  {
+   "id": "P15",
+   "quote": "A reactivity coefficient is the amount of change in reactivity per unit change in the parameter.",
+   "sec": "Reactivity",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.22"
+  },
+  {
+   "id": "P16",
+   "quote": "A reactivity defect is the total reactivity change caused by a change in the parameter.",
+   "sec": "Reactivity",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.22"
+  },
+  {
+   "id": "P17",
+   "quote": "The temperature coefficient of reactivity is the change in reactivity per degree change in temperature.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+  },
+  {
+   "id": "P18",
+   "quote": "A negative temperature coefficient of reactivity is desirable because it makes the reactor more self-regulating.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+  },
+  {
+   "id": "P19",
+   "quote": "The fuel temperature coefficient is the change in reactivity per degree change in fuel temperature.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.26"
+  },
+  {
+   "id": "P20",
+   "quote": "This coefficient is also called the \"prompt\" temperature coefficient because an increase in reactor power causes an immediate change in fuel temperature.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.26"
+  },
+  {
+   "id": "P21",
+   "quote": "The Doppler broadening of resonance peaks occurs because the nuclei may be moving either toward or away from the neutron at the time of interaction.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+  },
+  {
+   "id": "P22",
+   "quote": "Uranium-238 and plutonium-240 are two nuclides present in some reactor fuels that have large resonance absorption peaks.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+  },
+  {
+   "id": "P23",
+   "quote": "The pressure coefficient of reactivity is the change in reactivity per unit change in pressure.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.29"
+  },
+  {
+   "id": "P24",
+   "quote": "The void coefficient of reactivity is the change in reactivity per unit change in void volume.",
+   "sec": "Reactivity Coefficients",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.29"
+  },
+  {
+   "id": "P25",
+   "quote": "A burnable neutron poison is a material that has a high neutron absorption cross section that is converted into a material of relatively low absorption cross section as the result of neutron absorption.",
+   "sec": "Neutron Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+  },
+  {
+   "id": "P26",
+   "quote": "A non-burnable neutron poison is a material that has relatively constant neutron absorption characteristics over core life.",
+   "sec": "Neutron Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+  },
+  {
+   "id": "P27",
+   "quote": "Burnable neutron poisons are used in reactor cores to compensate for the excess positive reactivity of the fuel when the reactor is initially started up.",
+   "sec": "Neutron Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+  },
+  {
+   "id": "P28",
+   "quote": "An example of a material that is used as a fixed non-burnable neutron poison is hafnium.",
+   "sec": "Neutron Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+  },
+  {
+   "id": "P29",
+   "quote": "Chemical shim is a soluble neutron poison that is circulated in the coolant during normal operation.",
+   "sec": "Neutron Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+  },
+  {
+   "id": "P30",
+   "quote": "Helium-3 will become a significant neutron poison if significant amounts of tritium are left in a reactor during a shutdown period that lasts longer than several months.",
+   "sec": "Samarium and Other Fission Product Poisons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.47"
+  },
+  {
+   "id": "P31",
+   "quote": "Generally, the material selected should have a good absorption cross section for neutrons and have a long lifetime as an absorber (not burn out rapidly).",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+  },
+  {
+   "id": "P32",
+   "quote": "A control rod that is referred to as a \"black\" absorber absorbs essentially all incident neutrons.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+  },
+  {
+   "id": "P33",
+   "quote": "A \"grey\" absorber absorbs only a part of them.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+  },
+  {
+   "id": "P34",
+   "quote": "While it takes more grey rods than black rods for a given reactivity effect, the grey rods are often preferred because they cause smaller depressions in the neutron flux and power in the vicinity of the rod.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+  },
+  {
+   "id": "P35",
+   "quote": "Resonance absorbers are sometimes preferred to thermal absorbers as control rod materials because they have a larger area of influence and result in a flatter flux profile.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P36",
+   "quote": "Integral control rod worth is the total reactivity worth of the control rod at a particular degree of withdrawal from the core.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P37",
+   "quote": "Differential control rod worth is the reactivity change per unit movement of a control rod.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P38",
+   "quote": "The typical differential control rod worth curve has a bell shape.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P39",
+   "quote": "The curve has this shape because rod worth is related to neutron flux, and flux is highest in the center of the core.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P40",
+   "quote": "The typical integral control rod worth curve has an \"S\" shape.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  },
+  {
+   "id": "P41",
+   "quote": "It is also the area under the differential rod worth curve at any given withdrawal position.",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.52"
+  },
+  {
+   "id": "P42",
+   "quote": "Addition of a large amount of negative reactivity by rapidly inserting the safety rods is referred to as a \"scram\" or \"trip.\"",
+   "sec": "Control Rods",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+  },
+  {
+   "id": "P43",
+   "quote": "Fast non-leakage can have a greater effect on k-effective than in a light water reactor.",
+   "sec": "x",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.31 Factors Affecting Fast Fission"
+  },
+  {
+   "id": "P44",
+   "quote": "Neutron mean free path is approximately ten times greater than in a traditional LWR.",
+   "sec": "x",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.30 Factors Affecting Fast Fission"
+  },
+  {
+   "id": "P45",
+   "quote": "When the sodium density in a sodium fast reactor is reduced, the reactivity change can be broken down into three components: spectral, leakage, and capture.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.11 Coolant Temperature Coefficient"
+  },
+  {
+   "id": "P46",
+   "quote": "In fast regime, this is a positive reactivity effect",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 10"
+  },
+  {
+   "id": "P47",
+   "quote": "This is a negative reactivity effect in the peripheral regions",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 10"
+  },
+  {
+   "id": "P48",
+   "quote": "This is a relatively minor effect",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 10"
+  },
+  {
+   "id": "P49",
+   "quote": "In Sodium Fast Reactors, the sodium void reactivity worth can be either positive or negative",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.22 Sodium Voids"
+  },
+  {
+   "id": "P50",
+   "quote": "Changes in pressure and voiding large enough to make significant reactivity changes in normal operating bands do not occur",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.21 Void Coefficient"
+  },
+  {
+   "id": "P51",
+   "quote": "In a sodium fast reactor, Doppler is enhanced by high Uranium 238 content, but reduced by the lack of an effective moderator.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients - Module 2.docx, slide 1.13 Doppler Effect"
+  },
+  {
+   "id": "P52",
+   "quote": "Doppler coefficient arises primarily from U-238 resonance broadening",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 8"
+  },
+  {
+   "id": "P53",
+   "quote": "Doppler feedback is not helpful in all transients",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 8"
+  },
+  {
+   "id": "P54",
+   "quote": "Fuel Temperature Coefficient is the quickest acting of all of reactivity coefficients because an increase in power results in an immediate change in fuel temperature.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.5 Axial Expansion Coefficient"
+  },
+  {
+   "id": "P55",
+   "quote": "An increase in the radial dimensions of the core is associated with a reduction in the reactivity of the core, or a negative reactivity feedback.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.4 Core Geometric Expansion"
+  },
+  {
+   "id": "P56",
+   "quote": "Power coefficient is quite negative",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 4"
+  },
+  {
+   "id": "P57",
+   "quote": "Related coefficients are combined into a single coefficient called power reactivity coefficient.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.11 Power Coefficient"
+  },
+  {
+   "id": "P58",
+   "quote": "Contrary to light water reactors, control rods are the primary means of reactivity control, as boron dilution in sodium is not possible.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.16 Control rods"
+  },
+  {
+   "id": "P59",
+   "quote": "This excess reactivity is balanced primarily by the insertion of control rods.",
+   "sec": "x",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.3 Reactivity Control Mechanisms"
+  },
+  {
+   "id": "P60",
+   "quote": "The parasitic capture cross section of fission products and conventional structural materials is much higher in a thermal spectrum",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 12"
+  },
+  {
+   "id": "P61",
+   "quote": "Slow loss of reactivity with burnup",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 3"
+  },
+  {
+   "id": "P62",
+   "quote": "The absorber pins contain cladded, helium-bonded, Boron Carbide absorber pellets.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+  },
+  {
+   "id": "P63",
+   "quote": "Advantage of B4C, it has a high absorption cross section, its readily available which keeps cost low.",
+   "sec": "x",
+   "cite": "Word: Control Rods.docx, slide 1.7 Control Rod Design-2"
+  },
+  {
+   "id": "P64",
+   "quote": "As control rods are moved,it can be thought of as changing the effective core size.",
+   "sec": "x",
+   "cite": "Word: Control Rods.docx, slide 1.8 Control Rods affect on neutron population"
+  },
+  {
+   "id": "P65",
+   "quote": "Generally rods located near the center of the core have more worth than those located near the edge.",
+   "sec": "x",
+   "cite": "Word: Control Rods.docx, slide 1.15 Control Rod Worth"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "keff and criticality",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.4 Effective Multiplication Factor (keff)"
+  },
+  {
+   "step": "Reactivity",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.11 Reactivity"
+  },
+  {
+   "step": "Coefficients and defects",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.6 Coefficients and Defects"
+  },
+  {
+   "step": "Sodium density effects",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.11 Coolant Temperature Coefficient"
+  },
+  {
+   "step": "Void coefficient",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.21 Void Coefficient"
+  },
+  {
+   "step": "Fuel temperature coefficient",
+   "cite": "Word: Reactivity Coefficients - Module 2.docx, slide 1.4 Fuel Temperature Coefficient"
+  },
+  {
+   "step": "Doppler",
+   "cite": "Word: Reactivity Coefficients - Module 2.docx, slide 1.8 Doppler Effect"
+  },
+  {
+   "step": "Core expansion",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.4 Core Geometric Expansion"
+  },
+  {
+   "step": "Power coefficient",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.11 Power Coefficient"
+  },
+  {
+   "step": "Control rods",
+   "cite": "Word: Control Rods.docx, slide 1.5 Core alignment"
+  },
+  {
+   "step": "Rod worth",
+   "cite": "Word: Control Rods.docx, slide 1.15 Control Rod Worth"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Multiplication factors",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "A self-sustaining chain reaction has keff = 1. A supercritical reactor has keff greater than one, and a subcritical reactor has keff less than one.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q1",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q10",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "How does the effective multiplication factor differ from the infinite multiplication factor?",
+     "o": [
+      "keff applies only to thermal reactors",
+      "keff counts only delayed neutrons",
+      "keff also accounts for neutrons lost through leakage",
+      "keff ignores absorption"
+     ],
+     "a": 2,
+     "x": "k∞ counts neutrons lost through absorption. keff counts neutrons lost through absorption and leakage.",
+     "p": "P2",
+     "place": [
+      "Reactor Theory",
+      "Neutron Life Cycle"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Neutron life cycle of a fast reactor",
+   "eo": [
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5",
+    "1.6",
+    "1.7"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook's six factor formula is written for thermal reactors, so it stays off this page and objectives 1.2, 1.3, 1.5, 1.6 and 1.7 are marked for review. The handbook describes how a fast reactor differs.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "eq",
+     "text": "η = σf ν / σa   (for a single nuclide)",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Why is the resonance escape probability not significant in a fast reactor?",
+     "o": [
+      "The fuel has no uranium-238",
+      "The coolant absorbs all resonance neutrons",
+      "Very few neutrons exist at energies where resonance absorption is significant",
+      "All neutrons are thermal"
+     ],
+     "a": 2,
+     "x": "Very few neutrons exist at energies where resonance absorption is significant.",
+     "p": "P7",
+     "place": [
+      "Reactor Theory",
+      "Neutron Life Cycle"
+     ]
+    },
+    {
+     "eo": "1.4",
+     "q": "A nuclide has σf = 2 barns, σa = 2.5 barns and ν = 3. What is its reproduction factor?",
+     "o": [
+      "1.67",
+      "2.4",
+      "3.75",
+      "15"
+     ],
+     "a": 1,
+     "x": "η = σf ν / σa = (2 x 3) / 2.5 = 2.4.",
+     "p": "P11",
+     "place": [
+      "Reactor Theory",
+      "Neutron Life Cycle"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reactivity",
+   "eo": [
+    "1.8",
+    "1.9",
+    "1.10",
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "eq",
+     "text": "Nn = No (keff)^n",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "eq",
+     "text": "ρ = (keff - 1) / keff   and   keff = 1 / (1 - ρ)",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "1% Δk/k = 0.01 Δk/k, and 1 pcm = 0.00001 Δk/k. Some reactors also use a unit of 10^-4 Δk/k.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Reactivity must be in units of Δk/k when it is used to find keff.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.20"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q13",
+     "eo": "1.9"
+    },
+    {
+     "existing": "Q299",
+     "eo": "1.10"
+    },
+    {
+     "existing": "Q21",
+     "eo": "1.11"
+    }
+   ]
+  },
+  {
+   "title": "Coefficients and defects",
+   "eo": [
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "Δρ = αx Δx",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.21"
+    },
+    {
+     "t": "p",
+     "text": "If the parameter increases and positive reactivity is added, the coefficient is positive. If negative reactivity is added, it is negative.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.21"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q25",
+     "eo": "1.12"
+    },
+    {
+     "existing": "Q362",
+     "eo": "1.12"
+    }
+   ]
+  },
+  {
+   "title": "Sodium temperature effects",
+   "eo": [
+    "2.0",
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The objectives on moderator condition and moderator-to-fuel ratio do not apply to a reactor with no moderator. They stay verbatim and are marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "A power rise heats the core, and negative reactivity from the coefficient slows or stops the rise.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Spectral: reduced moderation as sodium density falls",
+      "Leakage: lower sodium density allows more neutron leakage",
+      "Capture: less sodium capture"
+     ],
+     "cite": "NRC slides ML19148A801, slide 10"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q363",
+     "eo": "2.4"
+    },
+    {
+     "existing": "Q371",
+     "eo": "2.5"
+    }
+   ]
+  },
+  {
+   "title": "Fuel temperature and Doppler",
+   "eo": [
+    "2.6",
+    "2.7",
+    "2.8"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "np-03-fig3",
+     "num": 3,
+     "cap": "Effect of Fuel Temperature on Resonance Absorption Peaks",
+     "alt": "Resonance absorption peak at two fuel temperatures: the hotter peak is lower and wider.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "p",
+     "text": "For example, when the fuel is being cooled toward shutdown in an unprotected loss of flow, Doppler is a positive feedback.",
+     "cite": "NRC slides ML19148A801, slide 8"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q26",
+     "eo": "2.6"
+    },
+    {
+     "existing": "Q57",
+     "eo": "2.7"
+    },
+    {
+     "existing": "Q18",
+     "eo": "2.7"
+    },
+    {
+     "existing": "Q17",
+     "eo": "2.8"
+    }
+   ]
+  },
+  {
+   "title": "Pressure and void coefficients",
+   "eo": [
+    "2.9",
+    "2.10",
+    "2.11",
+    "2.12"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "The handbook explains both through water moderator density, so that reasoning stays off this page and objectives 2.10 and 2.12 are marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q364",
+     "eo": "2.11"
+    },
+    {
+     "existing": "Q109",
+     "eo": "2.11"
+    }
+   ]
+  },
+  {
+   "title": "Core expansion and the power coefficient",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "p",
+     "text": "Core expansion results in more neutron leakage, which adds negative reactivity.",
+     "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.4 Core Geometric Expansion"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q107",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q110",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q370",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q373",
+     "eo": "1.0"
+    }
+   ]
+  },
+  {
+   "title": "Neutron poisons",
+   "eo": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Non-burnable poisons are used to shape power and to prevent excessive flux and power peaking near moderator regions.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "p",
+     "text": "The handbook's chemical shim comparison depends on boric acid in water coolant, so objective 3.3 is marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.31"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q475",
+     "eo": "3.2"
+    },
+    {
+     "existing": "Q477",
+     "eo": "3.5"
+    },
+    {
+     "eo": "3.1",
+     "q": "Why can a sodium fast reactor not use boron dilution for reactivity control?",
+     "o": [
+      "Boron dilution adds too much positive reactivity",
+      "Sodium is already borated",
+      "Boron dilution in sodium is not possible, so control rods are the primary means of control",
+      "Boron is not a neutron absorber"
+     ],
+     "a": 2,
+     "x": "Contrary to light water reactors, control rods are the primary means of reactivity control, as boron dilution in sodium is not possible.",
+     "p": "P58",
+     "place": [
+      "Reactor Theory",
+      "Fuel Depletion and Burnable Poisons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Fission product poisons",
+   "eo": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5",
+    "4.6",
+    "4.7",
+    "4.8",
+    "4.9",
+    "4.10",
+    "4.11",
+    "4.12",
+    "4.13",
+    "4.14",
+    "4.15"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook's xenon-135 and samarium-149 chapters describe thermal reactors, so that content stays off this page and objectives 4.1 to 4.14 are marked for review.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q248",
+     "eo": "4.1"
+    },
+    {
+     "eo": "4.15",
+     "q": "When will helium-3 become a significant neutron poison?",
+     "o": [
+      "When significant tritium is left in a reactor during a shutdown longer than several months",
+      "During every full power operating cycle",
+      "Within hours of any scram",
+      "Whenever samarium-149 reaches equilibrium"
+     ],
+     "a": 0,
+     "x": "Helium-3 becomes significant if significant amounts of tritium are left in a reactor during a shutdown period longer than several months.",
+     "p": "P30",
+     "place": [
+      "Reactor Theory",
+      "Fission Product Poisons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Control rod materials",
+   "eo": [
+    "5.1",
+    "5.2",
+    "5.3"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "The resonance and thermal absorber comparison is the handbook's, so objective 5.3 is marked for review. The sodium design is below.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q52",
+     "eo": "5.2"
+    },
+    {
+     "eo": "5.1",
+     "q": "What is the difference between a black and a grey absorber?",
+     "o": [
+      "Grey absorbs more neutrons than black",
+      "They differ only in color",
+      "Black absorbs essentially all incident neutrons, and grey absorbs only part",
+      "Black absorbs only fast neutrons, and grey absorbs only thermal neutrons"
+     ],
+     "a": 2,
+     "x": "A black absorber absorbs essentially all incident neutrons. A grey absorber absorbs only part of them.",
+     "p": "P32",
+     "place": [
+      "Reactor Theory",
+      "Control Rods"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Rod worth",
+   "eo": [
+    "5.4",
+    "5.5",
+    "5.6",
+    "5.7",
+    "5.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "fig",
+     "id": "np-03-fig8",
+     "num": 8,
+     "cap": "Effect of Control Rod on Radial Flux Distribution",
+     "alt": "Radial flux distribution across a reactor with and without a central control rod, with the rod depressing the flux at the center.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.50"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "np-03-fig9",
+     "num": 9,
+     "cap": "Integral Control Rod Worth",
+     "alt": "Integral rod worth against rod position: an S-shaped curve.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.51"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "The slope is relatively flat at the top and bottom of the core and is at its maximum at the center.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+    },
+    {
+     "t": "fig",
+     "id": "np-03-fig10",
+     "num": 10,
+     "cap": "Differential Control Rod Worth",
+     "alt": "Differential rod worth against rod position: a bell-shaped curve peaking at the core center.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "p",
+     "text": "To plot from data, find pcm per inch for each interval and plot it at the interval center. Summing the values gives the integral curve.",
+     "cite": "DOE-HDBK-1019/2-93 NP-03 p.55"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q53",
+     "eo": "5.6"
+    },
+    {
+     "existing": "Q375",
+     "eo": "5.4"
+    },
+    {
+     "existing": "Q374",
+     "eo": "5.5"
+    },
+    {
+     "eo": "5.7",
+     "q": "An integral rod worth curve reads 40 pcm at 12 inches and 80 pcm at 18 inches. What reactivity is added by withdrawing from 12 to 18 inches?",
+     "o": [
+      "20 pcm",
+      "40 pcm",
+      "80 pcm",
+      "120 pcm"
+     ],
+     "a": 1,
+     "x": "Δρ = 80 pcm - 40 pcm = 40 pcm.",
+     "p": "P36",
+     "place": [
+      "Reactor Theory",
+      "Control Rods"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Neutrons after 50 generations",
+   "eo": [
+    "1.8"
+   ],
+   "page": 18,
+   "problem": "The number of neutrons in the core at time zero is 1000 and keff = 1.002. Calculate the number of neutrons after 50 generations.",
+   "steps": [
+    "Nn = No (keff)^n",
+    "N50 = (1000 neutrons)(1.002)^50"
+   ],
+   "answer": "1105 neutrons",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.18"
+  },
+  {
+   "title": "keff from reactivity",
+   "eo": [
+    "1.10"
+   ],
+   "page": 20,
+   "problem": "Given a reactivity of -20.0 x 10^-4 Δk/k, calculate keff.",
+   "steps": [
+    "keff = 1 / (1 - ρ)",
+    "keff = 1 / (1 - (-20.0 x 10^-4))"
+   ],
+   "answer": "keff = 0.998",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.20"
+  },
+  {
+   "title": "Reactivity from an integral curve",
+   "eo": [
+    "5.7"
+   ],
+   "page": 53,
+   "fig": {
+    "t": "fig",
+    "id": "np-03-fig11",
+    "num": 11,
+    "cap": "Rod Worth Curves for Example Problems",
+    "alt": "Integral and differential rod worth curves against inches withdrawn, used for the example problems.",
+    "cite": "DOE-HDBK-1019/2-93 NP-03 p.53"
+   },
+   "problem": "Using Figure 11, find the reactivity inserted by moving the rod from 12 inches withdrawn to 18 inches withdrawn.",
+   "steps": [
+    "The integral rod worth is 40 pcm at 12 inches and 80 pcm at 18 inches.",
+    "Δρ = 80 pcm - 40 pcm"
+   ],
+   "answer": "40 pcm",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.53"
+  },
+  {
+   "title": "Reactivity from a differential curve",
+   "eo": [
+    "5.7"
+   ],
+   "page": 54,
+   "problem": "Using Figure 11, calculate the reactivity from moving the rod from 10 inches withdrawn to 6 inches withdrawn.",
+   "steps": [
+    "At 8 inches, the central value of rod worth is 5.5 pcm/inch.",
+    "(5.5 pcm/in.)(4 in.), negative because the rod was inserted"
+   ],
+   "answer": "-22 pcm",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.54"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is reactivity?",
+   "a": "The fractional change in neutron population per generation.",
+   "p": "P12",
+   "place": [
+    "Reactor Theory",
+    "Neutron Life Cycle"
+   ]
+  },
+  {
+   "q": "What is subcritical?",
+   "a": "The neutron population is decreasing each generation.",
+   "p": "P4",
+   "place": [
+    "Reactor Theory",
+    "Neutron Life Cycle"
+   ]
+  },
+  {
+   "q": "What is supercritical?",
+   "a": "The neutron population is increasing each generation.",
+   "p": "P5",
+   "place": [
+    "Reactor Theory",
+    "Neutron Life Cycle"
+   ]
+  },
+  {
+   "q": "In a fast reactor, what causes virtually all fissions?",
+   "a": "Fast neutrons.",
+   "p": "P6",
+   "place": [
+    "Reactor Theory",
+    "Neutron Life Cycle"
+   ]
+  },
+  {
+   "q": "What is a reactivity coefficient?",
+   "a": "The amount of change in reactivity per unit change in the parameter.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What are the three components of the reactivity change when sodium density falls?",
+   "a": "Spectral, leakage, and capture.",
+   "p": "P45",
+   "place": null
+  },
+  {
+   "q": "Why is the fuel temperature coefficient called the prompt coefficient?",
+   "a": "An increase in reactor power causes an immediate change in fuel temperature.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What effect does radial core expansion have on reactivity?",
+   "a": "A negative reactivity feedback, because core expansion gives more neutron leakage.",
+   "p": "P55",
+   "place": null
+  },
+  {
+   "q": "What is a burnable neutron poison?",
+   "a": "A high cross section absorber that is converted to relatively low cross section material as a result of neutron absorption.",
+   "p": "P25",
+   "place": [
+    "Reactor Theory",
+    "Fuel Depletion and Burnable Poisons"
+   ]
+  },
+  {
+   "q": "What are the sodium reactor's control rods made of?",
+   "a": "Boron carbide pellets.",
+   "p": "P62",
+   "place": [
+    "Reactor Theory",
+    "Control Rods"
+   ]
+  },
+  {
+   "q": "What is integral control rod worth?",
+   "a": "The total reactivity worth of the rod at a particular degree of withdrawal from the core.",
+   "p": "P36",
+   "place": [
+    "Reactor Theory",
+    "Control Rods"
+   ]
+  },
+  {
+   "q": "What is differential control rod worth?",
+   "a": "The reactivity change per unit movement of a control rod.",
+   "p": "P37",
+   "place": [
+    "Reactor Theory",
+    "Control Rods"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "keff counts absorption and leakage. keff = 1 is critical. Virtually all fissions in a fast reactor are caused by fast neutrons.",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.15"
+  },
+  {
+   "text": "Reactivity is (keff - 1) / keff. A defect is the coefficient times the parameter change.",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.22"
+  },
+  {
+   "text": "Reduced sodium density has spectral, leakage and capture components.",
+   "cite": "NRC slides ML19148A801, slide 10"
+  },
+  {
+   "text": "The fuel temperature coefficient acts first. Doppler comes primarily from U-238 resonance broadening.",
+   "cite": "NRC slides ML19148A801, slide 8"
+  },
+  {
+   "text": "Control rods are the primary means of reactivity control in sodium.",
+   "cite": "Word: Reactivity Coefficients Module 3.docx, slide 1.16 Control rods"
+  },
+  {
+   "text": "Integral rod worth has an S shape, and differential rod worth has a bell shape.",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.58"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Objectives named in the manifest (1.2, 1.3, 1.5 to 1.7, 2.0 to 2.3, 2.6 to 2.8, 2.10, 2.12, 3.1, 3.3, 4.1 to 4.14, 5.3) carry Needs sodium review. The six factor formula, moderator condition, soluble boron, xenon and samarium content is left off. Figures 1, 2 and 4 to 7 are not used.",
+   "cite": "DOE-HDBK-1019/2-93 NP-03 p.14"
+  },
+  {
+   "type": "Scope",
+   "note": "No approved source gives xenon or samarium values for a fast reactor. The page cites the slide that fission product capture is much higher in a thermal spectrum, and Q248. The older xenon and samarium questions stay in the quiz unchanged, and they are thermal-reactor items.",
+   "cite": "NRC slides ML19148A793, slide 12"
+  },
+  {
+   "type": "Word claim",
+   "note": "Reactor Neutrons.docx slide 1.30 says neutrons take longer to thermalize and uses moderator temperature for sodium. That conflicts with a reactor with no moderator, so it is left off.",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.30 Factors Affecting Fast Fission"
+  },
+  {
+   "type": "Word claim",
+   "note": "Reactivity Coefficients - Module 2 slide 1.5 speaks of uranium oxide fuel pellets, while slide 1.20 points to U-10Zr alloy. Slides 1.19 to 1.22 also say neutrons thermalize in the coolant. These are left off.",
+   "cite": "Word: Reactivity Coefficients - Module 2.docx, slide 1.5 FTC Equation"
+  },
+  {
+   "type": "Word claim",
+   "note": "Reactivity Coefficients Module 1 slide 1.23 says its numbers still need verifying for Natrium, so its void values are not used. Module 3 slide 1.15 has TBD text.",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.23 Sodium Voids"
+  },
+  {
+   "type": "Word source",
+   "note": "Shutdown margin on Reactor Neutrons.docx slides 1.24 to 1.27 is taught in NP-04.",
+   "cite": "Word: Reactor Neutrons.docx, slide 1.24 Shutdown Margin"
+  },
+  {
+   "type": "Draft",
+   "note": "Reactivity Coefficients Module 1 and Module 3 are drafts, so the topic is marked Draft source.",
+   "cite": "Word: Reactivity Coefficients Module 1.docx, slide 1.2 Reactivity Coefficients Introduction"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}

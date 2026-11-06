@@ -1,0 +1,7408 @@
+{
+"cp-02-fig2": {
+"module": "CP-02",
+"num": 2,
+"title": "Vector",
+"pdf": 46,
+"page": "2",
+"box": [
+141,
+300,
+449,
+392
+],
+"bytes": 2465
+},
+"cp-02-fig3": {
+"module": "CP-02",
+"num": 3,
+"title": "Rectangular Coordinate System",
+"pdf": 48,
+"page": "4",
+"box": [
+247,
+293,
+539,
+547
+],
+"bytes": 4415
+},
+"cp-02-fig10": {
+"module": "CP-02",
+"num": 10,
+"title": "Vector Addition Not in Same Line",
+"pdf": 53,
+"page": "9",
+"box": [
+98,
+142,
+559,
+522
+],
+"bytes": 26640
+},
+"cp-02-fig12": {
+"module": "CP-02",
+"num": 12,
+"title": "Component Vectors",
+"pdf": 55,
+"page": "11",
+"box": [
+175,
+411,
+482,
+665
+],
+"bytes": 12614
+},
+"cp-02-fig13": {
+"module": "CP-02",
+"num": 13,
+"title": "Right Triangle",
+"pdf": 56,
+"page": "12",
+"box": [
+148,
+227,
+455,
+409
+],
+"bytes": 5687
+},
+"cp-02-fig18": {
+"module": "CP-02",
+"num": 18,
+"title": "Resultant",
+"pdf": 61,
+"page": "17",
+"box": [
+98,
+425,
+316,
+625
+],
+"bytes": 6002
+},
+"cp-02-fig21": {
+"module": "CP-02",
+"num": 21,
+"title": "Vector Addition Component Method",
+"pdf": 64,
+"page": "20",
+"box": [
+296,
+232,
+550,
+467
+],
+"bytes": 5472
+},
+"cp-02-fig24": {
+"module": "CP-02",
+"num": 24,
+"title": "Hypotenuse and Angle",
+"pdf": 68,
+"page": "24",
+"box": [
+71,
+470,
+487,
+670
+],
+"bytes": 11376
+},
+"cp-03-fig1": {
+"module": "CP-03",
+"num": 1,
+"title": "Momentum",
+"pdf": 90,
+"page": "8",
+"box": [
+69,
+532,
+521,
+695
+],
+"bytes": 15197
+},
+"cp-04-fig1": {
+"module": "CP-04",
+"num": 1,
+"title": "Book on a Table",
+"pdf": 106,
+"page": "6",
+"box": [
+62,
+85,
+514,
+339
+],
+"bytes": 6303
+},
+"cp-04-fig3": {
+"module": "CP-04",
+"num": 3,
+"title": "Free-Body Diagram",
+"pdf": 108,
+"page": "8",
+"box": [
+116,
+85,
+460,
+429
+],
+"bytes": 9495
+},
+"cp-04-fig5": {
+"module": "CP-04",
+"num": 5,
+"title": "Net Force",
+"pdf": 112,
+"page": "12",
+"box": [
+62,
+85,
+523,
+321
+],
+"bytes": 12028
+},
+"cp-04-fig7": {
+"module": "CP-04",
+"num": 7,
+"title": "Free-Body Diagram",
+"pdf": 114,
+"page": "14",
+"box": [
+62,
+128,
+478,
+349
+],
+"bytes": 9016
+},
+"cp-04-fig9": {
+"module": "CP-04",
+"num": 9,
+"title": "Frictional Forces",
+"pdf": 118,
+"page": "18",
+"box": [
+62,
+310,
+545,
+546
+],
+"bytes": 14487
+},
+"cp-04-fig10": {
+"module": "CP-04",
+"num": 10,
+"title": "Centripetal Force",
+"pdf": 119,
+"page": "19",
+"box": [
+328,
+392,
+563,
+627
+],
+"bytes": 12338
+},
+"cp-04-fig12": {
+"module": "CP-04",
+"num": 12,
+"title": "Loss of Centripetal Force",
+"pdf": 120,
+"page": "20",
+"box": [
+234,
+397,
+527,
+633
+],
+"bytes": 13390
+},
+"es-01-fig7": {
+"module": "ES-01",
+"num": 7,
+"title": "Potential Difference Between Two Charged Objects",
+"pdf": 29,
+"page": "5",
+"box": [
+260,
+372,
+586,
+594
+],
+"bytes": 28558
+},
+"es-01-fig10": {
+"module": "ES-01",
+"num": 10,
+"title": "Potential Difference Across a Conductor Causes a Current to Flow",
+"pdf": 35,
+"page": "11",
+"box": [
+116,
+491,
+496,
+684
+],
+"bytes": 12605
+},
+"es-01-fig13": {
+"module": "ES-01",
+"num": 13,
+"title": "Generator - Electromagnetic Induction",
+"pdf": 45,
+"page": "21",
+"box": [
+134,
+297,
+550,
+533
+],
+"bytes": 15614
+},
+"es-01-fig22": {
+"module": "ES-01",
+"num": 22,
+"title": "Left-hand Rule for Current Carrying Conductors",
+"pdf": 55,
+"page": "31",
+"box": [
+206,
+495,
+478,
+673
+],
+"bytes": 17981
+},
+"es-01-fig27": {
+"module": "ES-01",
+"num": 27,
+"title": "Typical BH Curve for Two Types of Soft Iron",
+"pdf": 63,
+"page": "39",
+"box": [
+152,
+431,
+532,
+652
+],
+"bytes": 16871
+},
+"es-01-fig28": {
+"module": "ES-01",
+"num": 28,
+"title": "Hysteresis Loop for Magnetic Materials",
+"pdf": 65,
+"page": "41",
+"box": [
+278,
+86,
+586,
+429
+],
+"bytes": 17925
+},
+"es-01-fig29": {
+"module": "ES-01",
+"num": 29,
+"title": "Induced EMF",
+"pdf": 66,
+"page": "42",
+"box": [
+80,
+211,
+460,
+393
+],
+"bytes": 18044
+},
+"es-01-fig30": {
+"module": "ES-01",
+"num": 30,
+"title": "Electrical Symbols",
+"pdf": 70,
+"page": "46",
+"box": [
+26,
+86,
+514,
+660
+],
+"bytes": 71003
+},
+"es-02-fig6": {
+"module": "ES-02",
+"num": 6,
+"title": "Half-Wave Rectifier",
+"pdf": 104,
+"page": "8",
+"box": [
+26,
+213,
+514,
+564
+],
+"bytes": 41785
+},
+"es-02-fig8": {
+"module": "ES-02",
+"num": 8,
+"title": "Bridge Rectifier Circuit",
+"pdf": 106,
+"page": "10",
+"box": [
+26,
+169,
+514,
+391
+],
+"bytes": 21944
+},
+"es-02-fig9": {
+"module": "ES-02",
+"num": 9,
+"title": "Schematic Diagram",
+"pdf": 109,
+"page": "13",
+"box": [
+98,
+86,
+586,
+465
+],
+"bytes": 44744
+},
+"es-02-fig10": {
+"module": "ES-02",
+"num": 10,
+"title": "One-Line Diagram",
+"pdf": 110,
+"page": "14",
+"box": [
+26,
+86,
+514,
+530
+],
+"bytes": 27897
+},
+"es-02-fig11": {
+"module": "ES-02",
+"num": 11,
+"title": "Block Diagram",
+"pdf": 111,
+"page": "15",
+"box": [
+98,
+86,
+586,
+242
+],
+"bytes": 8440
+},
+"es-02-fig12": {
+"module": "ES-02",
+"num": 12,
+"title": "Wiring Diagram",
+"pdf": 111,
+"page": "15",
+"box": [
+123,
+381,
+561,
+667
+],
+"bytes": 24748
+},
+"es-02-fig13": {
+"module": "ES-02",
+"num": 13,
+"title": "Closed Circuit",
+"pdf": 115,
+"page": "19",
+"box": [
+98,
+86,
+586,
+357
+],
+"bytes": 18756
+},
+"es-02-fig14": {
+"module": "ES-02",
+"num": 14,
+"title": "Open Circuit",
+"pdf": 115,
+"page": "19",
+"box": [
+98,
+463,
+586,
+649
+],
+"bytes": 17027
+},
+"es-02-fig15": {
+"module": "ES-02",
+"num": 15,
+"title": "Short Circuit",
+"pdf": 116,
+"page": "20",
+"box": [
+177,
+86,
+514,
+300
+],
+"bytes": 10354
+},
+"es-02-fig16": {
+"module": "ES-02",
+"num": 16,
+"title": "Series Circuit",
+"pdf": 116,
+"page": "20",
+"box": [
+80,
+395,
+460,
+646
+],
+"bytes": 11858
+},
+"es-02-fig17": {
+"module": "ES-02",
+"num": 17,
+"title": "Parallel Circuit",
+"pdf": 117,
+"page": "21",
+"box": [
+98,
+241,
+586,
+477
+],
+"bytes": 22893
+},
+"es-02-fig31": {
+"module": "ES-02",
+"num": 31,
+"title": "Voltage Polarities",
+"pdf": 137,
+"page": "41",
+"box": [
+170,
+86,
+514,
+379
+],
+"bytes": 17440
+},
+"es-02-fig35": {
+"module": "ES-02",
+"num": 35,
+"title": "Illustration of Kirchhoff\u2019s Current Law",
+"pdf": 142,
+"page": "46",
+"box": [
+26,
+86,
+514,
+307
+],
+"bytes": 27492
+},
+"es-02-fig53": {
+"module": "ES-02",
+"num": 53,
+"title": "Open Series Circuit",
+"pdf": 162,
+"page": "66",
+"box": [
+26,
+367,
+514,
+574
+],
+"bytes": 17399
+},
+"es-02-fig56": {
+"module": "ES-02",
+"num": 56,
+"title": "Shorted DC Circuit",
+"pdf": 164,
+"page": "68",
+"box": [
+80,
+171,
+460,
+407
+],
+"bytes": 12207
+},
+"es-03-fig7": {
+"module": "ES-03",
+"num": 7,
+"title": "Time Constant",
+"pdf": 25,
+"page": "5",
+"box": [
+98,
+155,
+586,
+445
+],
+"bytes": 46376
+},
+"es-03-fig10": {
+"module": "ES-03",
+"num": 10,
+"title": "Capacitor and Symbols",
+"pdf": 29,
+"page": "9",
+"box": [
+152,
+451,
+532,
+686
+],
+"bytes": 16305
+},
+"es-03-fig11": {
+"module": "ES-03",
+"num": 11,
+"title": "Charging a Capacitor",
+"pdf": 30,
+"page": "10",
+"box": [
+170,
+141,
+514,
+341
+],
+"bytes": 18691
+},
+"es-03-fig18": {
+"module": "ES-03",
+"num": 18,
+"title": "Capacitive Time Constant for Charging Capacitor",
+"pdf": 37,
+"page": "17",
+"box": [
+152,
+86,
+532,
+321
+],
+"bytes": 24075
+},
+"es-04-fig1": {
+"module": "ES-04",
+"num": 1,
+"title": "Simple Hydrometer",
+"pdf": 50,
+"page": "2",
+"box": [
+238,
+141,
+514,
+665
+],
+"bytes": 27976
+},
+"es-04-fig2": {
+"module": "ES-04",
+"num": 2,
+"title": "Basic Chemical Production of Electrical Power",
+"pdf": 53,
+"page": "5",
+"box": [
+143,
+86,
+541,
+339
+],
+"bytes": 32563
+},
+"es-04-fig4": {
+"module": "ES-04",
+"num": 4,
+"title": "Chemical Action During Discharge",
+"pdf": 54,
+"page": "6",
+"box": [
+44,
+171,
+496,
+479
+],
+"bytes": 25628
+},
+"es-04-fig5": {
+"module": "ES-04",
+"num": 5,
+"title": "Chemical Action During Charging",
+"pdf": 55,
+"page": "7",
+"box": [
+116,
+169,
+568,
+477
+],
+"bytes": 22812
+},
+"es-04-fig6": {
+"module": "ES-04",
+"num": 6,
+"title": "Voltage and Specific Gravity During Charge and Discharge",
+"pdf": 56,
+"page": "8",
+"box": [
+26,
+140,
+514,
+433
+],
+"bytes": 49869
+},
+"es-04-fig7": {
+"module": "ES-04",
+"num": 7,
+"title": "Cells Connected in Series",
+"pdf": 58,
+"page": "10",
+"box": [
+186,
+342,
+514,
+658
+],
+"bytes": 31830
+},
+"es-04-fig8": {
+"module": "ES-04",
+"num": 8,
+"title": "Cells Connected in Parallel",
+"pdf": 59,
+"page": "11",
+"box": [
+278,
+86,
+586,
+393
+],
+"bytes": 19598
+},
+"es-05-fig2": {
+"module": "ES-05",
+"num": 2,
+"title": "Basic DC Machine",
+"pdf": 81,
+"page": "3",
+"box": [
+278,
+319,
+586,
+555
+],
+"bytes": 36839
+},
+"es-05-fig3": {
+"module": "ES-05",
+"num": 3,
+"title": "Basic Operation of a DC Generator",
+"pdf": 84,
+"page": "6",
+"box": [
+38,
+86,
+502,
+321
+],
+"bytes": 53747
+},
+"es-05-fig4": {
+"module": "ES-05",
+"num": 4,
+"title": "Left-Hand Rule for Generators",
+"pdf": 85,
+"page": "7",
+"box": [
+134,
+86,
+550,
+321
+],
+"bytes": 47397
+},
+"es-05-fig5": {
+"module": "ES-05",
+"num": 5,
+"title": "Commutator Segments and Brushes",
+"pdf": 85,
+"page": "7",
+"box": [
+278,
+395,
+586,
+595
+],
+"bytes": 29615
+},
+"es-05-fig6": {
+"module": "ES-05",
+"num": 6,
+"title": "Commutation in a DC Generator",
+"pdf": 86,
+"page": "8",
+"box": [
+26,
+211,
+514,
+519
+],
+"bytes": 41470
+},
+"es-05-fig8": {
+"module": "ES-05",
+"num": 8,
+"title": "Shunt-Wound DC Generator",
+"pdf": 91,
+"page": "13",
+"box": [
+242,
+415,
+586,
+650
+],
+"bytes": 22189
+},
+"es-05-fig9": {
+"module": "ES-05",
+"num": 9,
+"title": "Output Voltage-vs-Load Current for Shunt-Wound DC Generator",
+"pdf": 92,
+"page": "14",
+"box": [
+125,
+255,
+505,
+491
+],
+"bytes": 17658
+},
+"es-05-fig10": {
+"module": "ES-05",
+"num": 10,
+"title": "Series-Wound DC Generator",
+"pdf": 93,
+"page": "15",
+"box": [
+259,
+117,
+567,
+353
+],
+"bytes": 20534
+},
+"es-05-fig11": {
+"module": "ES-05",
+"num": 11,
+"title": "Output Voltage-vs-Load Current for Series-Wound",
+"pdf": 93,
+"page": "15",
+"box": [
+98,
+416,
+406,
+652
+],
+"bytes": 22145
+},
+"es-05-fig12": {
+"module": "ES-05",
+"num": 12,
+"title": "Compounded DC Generator",
+"pdf": 94,
+"page": "16",
+"box": [
+243,
+85,
+551,
+321
+],
+"bytes": 32216
+},
+"es-05-fig13": {
+"module": "ES-05",
+"num": 13,
+"title": "Voltage-vs-Current for a Compounded DC Generator",
+"pdf": 95,
+"page": "17",
+"box": [
+197,
+142,
+505,
+378
+],
+"bytes": 20379
+},
+"es-06-fig2": {
+"module": "ES-06",
+"num": 2,
+"title": "Current-Carrying Conductor in a Magnetic Field",
+"pdf": 106,
+"page": "2",
+"box": [
+26,
+353,
+514,
+571
+],
+"bytes": 40424
+},
+"es-06-fig4": {
+"module": "ES-06",
+"num": 4,
+"title": "Right-Hand Rule for Motors",
+"pdf": 107,
+"page": "3",
+"box": [
+278,
+449,
+586,
+685
+],
+"bytes": 31144
+},
+"es-06-fig5": {
+"module": "ES-06",
+"num": 5,
+"title": "Armature Current in a Basic DC Motor",
+"pdf": 108,
+"page": "4",
+"box": [
+206,
+232,
+514,
+468
+],
+"bytes": 28223
+},
+"es-06-fig6": {
+"module": "ES-06",
+"num": 6,
+"title": "Counterelectromotive Force (CEMF)",
+"pdf": 109,
+"page": "5",
+"box": [
+332,
+241,
+586,
+441
+],
+"bytes": 27135
+},
+"es-06-fig7": {
+"module": "ES-06",
+"num": 7,
+"title": "DC Motor Connections",
+"pdf": 112,
+"page": "8",
+"box": [
+170,
+380,
+514,
+670
+],
+"bytes": 20248
+},
+"es-06-fig8": {
+"module": "ES-06",
+"num": 8,
+"title": "Torque-vs-Speed for a Shunt-Wound DC Motor",
+"pdf": 113,
+"page": "9",
+"box": [
+278,
+323,
+586,
+541
+],
+"bytes": 7661
+},
+"es-06-fig9": {
+"module": "ES-06",
+"num": 9,
+"title": "Torque-vs-Speed for a Series-Wound Motor",
+"pdf": 114,
+"page": "10",
+"box": [
+206,
+86,
+514,
+303
+],
+"bytes": 8494
+},
+"es-07-fig1": {
+"module": "ES-07",
+"num": 1,
+"title": "Simple AC Generator",
+"pdf": 21,
+"page": "1",
+"box": [
+98,
+327,
+586,
+580
+],
+"bytes": 38830
+},
+"es-07-fig2": {
+"module": "ES-07",
+"num": 2,
+"title": "Developing a Sine-Wave Voltage",
+"pdf": 22,
+"page": "2",
+"box": [
+44,
+223,
+496,
+639
+],
+"bytes": 55535
+},
+"es-07-fig3": {
+"module": "ES-07",
+"num": 3,
+"title": "Voltage Sine Wave",
+"pdf": 24,
+"page": "4",
+"box": [
+80,
+490,
+460,
+672
+],
+"bytes": 23543
+},
+"es-07-fig4": {
+"module": "ES-07",
+"num": 4,
+"title": "Effective Value of Current",
+"pdf": 26,
+"page": "6",
+"box": [
+80,
+83,
+460,
+463
+],
+"bytes": 32338
+},
+"es-07-fig5": {
+"module": "ES-07",
+"num": 5,
+"title": "Phase Relationship",
+"pdf": 27,
+"page": "7",
+"box": [
+134,
+379,
+550,
+669
+],
+"bytes": 31863
+},
+"es-08-fig1": {
+"module": "ES-08",
+"num": 1,
+"title": "Current, Self-Induced EMF, and Applied Voltage in an Inductive Circuit",
+"pdf": 40,
+"page": "2",
+"box": [
+80,
+435,
+460,
+671
+],
+"bytes": 24111
+},
+"es-08-fig2": {
+"module": "ES-08",
+"num": 2,
+"title": "Coil Circuit and Phasor Diagram",
+"pdf": 41,
+"page": "3",
+"box": [
+98,
+450,
+586,
+668
+],
+"bytes": 14201
+},
+"es-08-fig3": {
+"module": "ES-08",
+"num": 3,
+"title": "Voltage, Charge, and Current in a Capacitor",
+"pdf": 43,
+"page": "5",
+"box": [
+350,
+418,
+586,
+672
+],
+"bytes": 23436
+},
+"es-08-fig4": {
+"module": "ES-08",
+"num": 4,
+"title": "Circuit and Phasor Diagram",
+"pdf": 45,
+"page": "7",
+"box": [
+110,
+217,
+574,
+435
+],
+"bytes": 12235
+},
+"es-08-fig5": {
+"module": "ES-08",
+"num": 5,
+"title": "Relationship Between Resistance, Reactance, and Impedance",
+"pdf": 48,
+"page": "10",
+"box": [
+62,
+195,
+478,
+413
+],
+"bytes": 8786
+},
+"es-08-fig8": {
+"module": "ES-08",
+"num": 8,
+"title": "Series R-C-L Impedance-Phasor",
+"pdf": 52,
+"page": "14",
+"box": [
+62,
+83,
+478,
+301
+],
+"bytes": 8818
+},
+"es-08-fig10": {
+"module": "ES-08",
+"num": 10,
+"title": "Simple Parallel R-C-L Circuit",
+"pdf": 54,
+"page": "16",
+"box": [
+38,
+481,
+502,
+663
+],
+"bytes": 15427
+},
+"es-09-fig1": {
+"module": "ES-09",
+"num": 1,
+"title": "Power Triangle",
+"pdf": 68,
+"page": "2",
+"box": [
+98,
+83,
+442,
+319
+],
+"bytes": 17182
+},
+"es-09-fig2": {
+"module": "ES-09",
+"num": 2,
+"title": "Lagging Power Factor",
+"pdf": 70,
+"page": "4",
+"box": [
+260,
+410,
+514,
+538
+],
+"bytes": 6144
+},
+"es-09-fig3": {
+"module": "ES-09",
+"num": 3,
+"title": "Leading Power Factor",
+"pdf": 70,
+"page": "4",
+"box": [
+26,
+543,
+256,
+671
+],
+"bytes": 5208
+},
+"es-09-fig10": {
+"module": "ES-09",
+"num": 10,
+"title": "Three-Phase AC",
+"pdf": 84,
+"page": "18",
+"box": [
+26,
+83,
+514,
+301
+],
+"bytes": 34243
+},
+"es-09-fig11": {
+"module": "ES-09",
+"num": 11,
+"title": "3\u03c6 AC Power Connections",
+"pdf": 85,
+"page": "19",
+"box": [
+134,
+83,
+550,
+301
+],
+"bytes": 18942
+},
+"es-09-fig13": {
+"module": "ES-09",
+"num": 13,
+"title": "3\u03c6 Power Triangle",
+"pdf": 87,
+"page": "21",
+"box": [
+350,
+83,
+586,
+247
+],
+"bytes": 8362
+},
+"es-09-fig16": {
+"module": "ES-09",
+"num": 16,
+"title": "3\u03c6 Unbalanced Load",
+"pdf": 90,
+"page": "24",
+"box": [
+26,
+83,
+514,
+319
+],
+"bytes": 25844
+},
+"es-10-fig1": {
+"module": "ES-10",
+"num": 1,
+"title": "Basic AC Generator",
+"pdf": 102,
+"page": "2",
+"box": [
+26,
+199,
+514,
+543
+],
+"bytes": 46423
+},
+"es-10-fig2": {
+"module": "ES-10",
+"num": 2,
+"title": "Comparison of DC and AC Generator Outputs",
+"pdf": 103,
+"page": "3",
+"box": [
+98,
+283,
+586,
+663
+],
+"bytes": 28937
+},
+"es-10-fig4": {
+"module": "ES-10",
+"num": 4,
+"title": "AC Generator Nameplate Ratings",
+"pdf": 109,
+"page": "9",
+"box": [
+332,
+436,
+586,
+654
+],
+"bytes": 18386
+},
+"es-10-fig5": {
+"module": "ES-10",
+"num": 5,
+"title": "Stationary Field, Rotating Armature",
+"pdf": 110,
+"page": "10",
+"box": [
+278,
+489,
+514,
+671
+],
+"bytes": 18746
+},
+"es-10-fig6": {
+"module": "ES-10",
+"num": 6,
+"title": "Simple AC Generator - Rotating Field, Stationary Armature",
+"pdf": 111,
+"page": "11",
+"box": [
+278,
+86,
+586,
+285
+],
+"bytes": 23210
+},
+"es-10-fig8": {
+"module": "ES-10",
+"num": 8,
+"title": "Delta Connection",
+"pdf": 112,
+"page": "12",
+"box": [
+314,
+86,
+514,
+249
+],
+"bytes": 6225
+},
+"es-10-fig9": {
+"module": "ES-10",
+"num": 9,
+"title": "Characteristics of a Delta-Connected Generator",
+"pdf": 112,
+"page": "12",
+"box": [
+26,
+333,
+514,
+533
+],
+"bytes": 28122
+},
+"es-10-fig10": {
+"module": "ES-10",
+"num": 10,
+"title": "Wye Connection",
+"pdf": 113,
+"page": "13",
+"box": [
+314,
+86,
+586,
+249
+],
+"bytes": 12039
+},
+"es-10-fig11": {
+"module": "ES-10",
+"num": 11,
+"title": "Characteristics of a Wye-Connected AC Generator",
+"pdf": 113,
+"page": "13",
+"box": [
+98,
+318,
+586,
+500
+],
+"bytes": 30394
+},
+"es-11-fig1": {
+"module": "ES-11",
+"num": 1,
+"title": "Voltage Regulator Block Diagram",
+"pdf": 124,
+"page": "2",
+"box": [
+26,
+86,
+514,
+321
+],
+"bytes": 12846
+},
+"es-12-fig1": {
+"module": "ES-12",
+"num": 1,
+"title": "Three-Phase Stator",
+"pdf": 22,
+"page": "2",
+"box": [
+62,
+86,
+478,
+537
+],
+"bytes": 70900
+},
+"es-12-fig2": {
+"module": "ES-12",
+"num": 2,
+"title": "Rotating Magnetic Field",
+"pdf": 23,
+"page": "3",
+"box": [
+98,
+183,
+586,
+671
+],
+"bytes": 95635
+},
+"es-12-fig3": {
+"module": "ES-12",
+"num": 3,
+"title": "Induction Motor",
+"pdf": 25,
+"page": "5",
+"box": [
+278,
+115,
+586,
+423
+],
+"bytes": 28603
+},
+"es-12-fig4": {
+"module": "ES-12",
+"num": 4,
+"title": "Torque vs Slip",
+"pdf": 27,
+"page": "7",
+"box": [
+314,
+311,
+586,
+547
+],
+"bytes": 22935
+},
+"es-12-fig6": {
+"module": "ES-12",
+"num": 6,
+"title": "Split-Phase Motor",
+"pdf": 31,
+"page": "11",
+"box": [
+62,
+53,
+550,
+307
+],
+"bytes": 29002
+},
+"es-12-fig8": {
+"module": "ES-12",
+"num": 8,
+"title": "Torque Angle",
+"pdf": 33,
+"page": "13",
+"box": [
+62,
+325,
+550,
+633
+],
+"bytes": 24609
+},
+"es-12-fig9": {
+"module": "ES-12",
+"num": 9,
+"title": "Synchronous Motor Field Excitation",
+"pdf": 34,
+"page": "14",
+"box": [
+74,
+255,
+538,
+547
+],
+"bytes": 28866
+},
+"es-13-fig1": {
+"module": "ES-13",
+"num": 1,
+"title": "Core-Type Transformer",
+"pdf": 48,
+"page": "4",
+"box": [
+26,
+69,
+514,
+379
+],
+"bytes": 34510
+},
+"es-13-fig3": {
+"module": "ES-13",
+"num": 3,
+"title": "Delta Connection",
+"pdf": 52,
+"page": "8",
+"box": [
+98,
+405,
+442,
+605
+],
+"bytes": 9353
+},
+"es-13-fig4": {
+"module": "ES-13",
+"num": 4,
+"title": "Wye Connection",
+"pdf": 53,
+"page": "9",
+"box": [
+98,
+69,
+586,
+271
+],
+"bytes": 17188
+},
+"es-13-fig5": {
+"module": "ES-13",
+"num": 5,
+"title": "3\u03c6 Transformer Connections",
+"pdf": 53,
+"page": "9",
+"box": [
+116,
+380,
+568,
+616
+],
+"bytes": 30524
+},
+"es-13-fig8": {
+"module": "ES-13",
+"num": 8,
+"title": "Auto Transformer Schematic",
+"pdf": 62,
+"page": "18",
+"box": [
+44,
+271,
+496,
+525
+],
+"bytes": 17015
+},
+"es-14-fig1": {
+"module": "ES-14",
+"num": 1,
+"title": "D\u2019Arsonval Meter Movement",
+"pdf": 73,
+"page": "1",
+"box": [
+296,
+379,
+586,
+686
+],
+"bytes": 37466
+},
+"es-14-fig2": {
+"module": "ES-14",
+"num": 2,
+"title": "Electrodynamometer Movement",
+"pdf": 74,
+"page": "2",
+"box": [
+44,
+281,
+496,
+535
+],
+"bytes": 42302
+},
+"es-14-fig3": {
+"module": "ES-14",
+"num": 3,
+"title": "Moving Iron Vane Meter Movement",
+"pdf": 75,
+"page": "3",
+"box": [
+116,
+295,
+568,
+567
+],
+"bytes": 59261
+},
+"es-14-fig4": {
+"module": "ES-14",
+"num": 4,
+"title": "Simple DC Voltmeter",
+"pdf": 77,
+"page": "5",
+"box": [
+170,
+379,
+514,
+614
+],
+"bytes": 14854
+},
+"es-14-fig6": {
+"module": "ES-14",
+"num": 6,
+"title": "Ammeter",
+"pdf": 82,
+"page": "10",
+"box": [
+26,
+379,
+514,
+578
+],
+"bytes": 11911
+},
+"es-14-fig8": {
+"module": "ES-14",
+"num": 8,
+"title": "Ammeter with Shunt",
+"pdf": 85,
+"page": "13",
+"box": [
+278,
+83,
+586,
+283
+],
+"bytes": 7969
+},
+"es-14-fig9": {
+"module": "ES-14",
+"num": 9,
+"title": "Simple Ohm Meter Circuit",
+"pdf": 87,
+"page": "15",
+"box": [
+278,
+323,
+586,
+522
+],
+"bytes": 8408
+},
+"es-14-fig11": {
+"module": "ES-14",
+"num": 11,
+"title": "Wattmeter Schematic",
+"pdf": 92,
+"page": "20",
+"box": [
+206,
+323,
+514,
+558
+],
+"bytes": 14432
+},
+"es-14-fig16": {
+"module": "ES-14",
+"num": 16,
+"title": "Ground Detector Lamp Circuit",
+"pdf": 98,
+"page": "26",
+"box": [
+26,
+83,
+514,
+391
+],
+"bytes": 32705
+},
+"es-14-fig17": {
+"module": "ES-14",
+"num": 17,
+"title": "Simple Megger Circuit Diagram",
+"pdf": 101,
+"page": "29",
+"box": [
+98,
+83,
+586,
+337
+],
+"bytes": 30244
+},
+"es-15-fig1": {
+"module": "ES-15",
+"num": 1,
+"title": "One-Line Distribution Diagram",
+"pdf": 114,
+"page": "2",
+"box": [
+38,
+95,
+502,
+689
+],
+"bytes": 66424
+},
+"es-15-fig2": {
+"module": "ES-15",
+"num": 2,
+"title": "Protective Relaying Zones",
+"pdf": 116,
+"page": "4",
+"box": [
+80,
+225,
+460,
+641
+],
+"bytes": 41246
+},
+"es-15-fig5": {
+"module": "ES-15",
+"num": 5,
+"title": "Cutaway View of Molded Case Circuit Breaker",
+"pdf": 120,
+"page": "8",
+"box": [
+80,
+111,
+460,
+419
+],
+"bytes": 62082
+},
+"es-15-fig7": {
+"module": "ES-15",
+"num": 7,
+"title": "Simple Circuit Breaker Control Circuit - Breaker Open",
+"pdf": 124,
+"page": "12",
+"box": [
+89,
+83,
+451,
+481
+],
+"bytes": 28755
+},
+"es-15-fig12": {
+"module": "ES-15",
+"num": 12,
+"title": "LVP Controller",
+"pdf": 130,
+"page": "18",
+"box": [
+249,
+449,
+514,
+667
+],
+"bytes": 10034
+},
+"es-15-fig13": {
+"module": "ES-15",
+"num": 13,
+"title": "LVR Controller",
+"pdf": 131,
+"page": "19",
+"box": [
+314,
+86,
+586,
+289
+],
+"bytes": 9373
+},
+"es-15-fig15": {
+"module": "ES-15",
+"num": 15,
+"title": "Three-Phase To Single-Phase Connections",
+"pdf": 135,
+"page": "23",
+"box": [
+116,
+83,
+568,
+337
+],
+"bytes": 17143
+},
+"es-15-fig16": {
+"module": "ES-15",
+"num": 16,
+"title": "3-Wire Edison Scheme",
+"pdf": 136,
+"page": "24",
+"box": [
+80,
+83,
+460,
+247
+],
+"bytes": 11074
+},
+"es-15-fig19": {
+"module": "ES-15",
+"num": 19,
+"title": "4-Wire, Three-Phase Wye System",
+"pdf": 139,
+"page": "27",
+"box": [
+206,
+223,
+478,
+520
+],
+"bytes": 13152
+},
+"ht-01-fig1": {
+"module": "HT-01",
+"num": 1,
+"title": "Comparison of Temperature Scales",
+"pdf": 33,
+"page": "7",
+"box": [
+188,
+379,
+496,
+615
+],
+"bytes": 12414
+},
+"ht-01-fig2": {
+"module": "HT-01",
+"num": 2,
+"title": "Pressure Relationships",
+"pdf": 35,
+"page": "9",
+"box": [
+98,
+411,
+586,
+647
+],
+"bytes": 20644
+},
+"ht-01-fig4": {
+"module": "HT-01",
+"num": 4,
+"title": "Piston-cylinder Arrangement",
+"pdf": 59,
+"page": "33",
+"box": [
+152,
+86,
+532,
+285
+],
+"bytes": 11383
+},
+"ht-01-fig5": {
+"module": "HT-01",
+"num": 5,
+"title": "Vapor Pressure Curve",
+"pdf": 59,
+"page": "33",
+"box": [
+350,
+339,
+586,
+575
+],
+"bytes": 11113
+},
+"ht-01-fig7": {
+"module": "HT-01",
+"num": 7,
+"title": "T-V Diagram",
+"pdf": 61,
+"page": "35",
+"box": [
+260,
+408,
+586,
+687
+],
+"bytes": 33163
+},
+"ht-01-fig9": {
+"module": "HT-01",
+"num": 9,
+"title": "P-T Diagram for Water",
+"pdf": 68,
+"page": "42",
+"box": [
+26,
+255,
+514,
+635
+],
+"bytes": 37919
+},
+"ht-01-fig13": {
+"module": "HT-01",
+"num": 13,
+"title": "T-s Diagram for Water",
+"pdf": 72,
+"page": "46",
+"box": [
+80,
+213,
+460,
+539
+],
+"bytes": 34086
+},
+"ht-01-fig14": {
+"module": "HT-01",
+"num": 14,
+"title": "First Law of Thermodynamics",
+"pdf": 81,
+"page": "55",
+"box": [
+62,
+326,
+550,
+634
+],
+"bytes": 25642
+},
+"ht-01-fig15": {
+"module": "HT-01",
+"num": 15,
+"title": "Control Volume Concepts",
+"pdf": 82,
+"page": "56",
+"box": [
+80,
+326,
+532,
+677
+],
+"bytes": 38632
+},
+"ht-01-fig19": {
+"module": "HT-01",
+"num": 19,
+"title": "T-s Diagram with Rankine Cycles",
+"pdf": 87,
+"page": "61",
+"box": [
+260,
+86,
+550,
+548
+],
+"bytes": 35646
+},
+"ht-01-fig20": {
+"module": "HT-01",
+"num": 20,
+"title": "Typical Steam Plant Cycle",
+"pdf": 88,
+"page": "62",
+"box": [
+98,
+219,
+514,
+473
+],
+"bytes": 16553
+},
+"ht-01-fig21": {
+"module": "HT-01",
+"num": 21,
+"title": "Carnot Cycle Representation",
+"pdf": 99,
+"page": "73",
+"box": [
+116,
+169,
+568,
+441
+],
+"bytes": 13023
+},
+"ht-01-fig24": {
+"module": "HT-01",
+"num": 24,
+"title": "Expansion and Compression Processes on T-s Diagram",
+"pdf": 104,
+"page": "78",
+"box": [
+26,
+86,
+280,
+292
+],
+"bytes": 18233
+},
+"ht-01-fig31": {
+"module": "HT-01",
+"num": 31,
+"title": "Rankine Cycle",
+"pdf": 114,
+"page": "88",
+"box": [
+98,
+253,
+442,
+561
+],
+"bytes": 22048
+},
+"ht-01-fig35": {
+"module": "HT-01",
+"num": 35,
+"title": "Typical Steam Cycle",
+"pdf": 117,
+"page": "91",
+"box": [
+98,
+211,
+586,
+519
+],
+"bytes": 29222
+},
+"ht-01-fig40": {
+"module": "HT-01",
+"num": 40,
+"title": "Pressure-Volume Diagram",
+"pdf": 125,
+"page": "99",
+"box": [
+150,
+239,
+457,
+457
+],
+"bytes": 12268
+},
+"ht-02-fig2": {
+"module": "HT-02",
+"num": 2,
+"title": "Equivalent Resistance",
+"pdf": 32,
+"page": "10",
+"box": [
+44,
+83,
+496,
+319
+],
+"bytes": 20639
+},
+"ht-02-fig5": {
+"module": "HT-02",
+"num": 5,
+"title": "Pipe Insulation Problem",
+"pdf": 38,
+"page": "16",
+"box": [
+26,
+195,
+514,
+647
+],
+"bytes": 48117
+},
+"ht-02-fig6": {
+"module": "HT-02",
+"num": 6,
+"title": "Overall Heat Transfer Coefficient",
+"pdf": 42,
+"page": "20",
+"box": [
+107,
+412,
+433,
+666
+],
+"bytes": 15750
+},
+"ht-02-fig7": {
+"module": "HT-02",
+"num": 7,
+"title": "Combined Heat Transfer",
+"pdf": 43,
+"page": "21",
+"box": [
+98,
+216,
+586,
+452
+],
+"bytes": 22001
+},
+"ht-02-fig8": {
+"module": "HT-02",
+"num": 8,
+"title": "Typical Tube and Shell Heat Exchanger",
+"pdf": 53,
+"page": "31",
+"box": [
+98,
+153,
+586,
+407
+],
+"bytes": 33993
+},
+"ht-02-fig9": {
+"module": "HT-02",
+"num": 9,
+"title": "Fluid Flow Direction",
+"pdf": 54,
+"page": "32",
+"box": [
+80,
+83,
+460,
+499
+],
+"bytes": 18020
+},
+"ht-02-fig10": {
+"module": "HT-02",
+"num": 10,
+"title": "Heat Exchanger Temperature Profiles",
+"pdf": 55,
+"page": "33",
+"box": [
+98,
+83,
+586,
+337
+],
+"bytes": 29668
+},
+"ht-02-fig13": {
+"module": "HT-02",
+"num": 13,
+"title": "Boiling Heat Transfer Curve",
+"pdf": 64,
+"page": "42",
+"box": [
+26,
+83,
+514,
+373
+],
+"bytes": 32470
+},
+"ht-02-fig14": {
+"module": "HT-02",
+"num": 14,
+"title": "Axial Flux Profile",
+"pdf": 68,
+"page": "46",
+"box": [
+206,
+113,
+514,
+367
+],
+"bytes": 14323
+},
+"ht-02-fig15": {
+"module": "HT-02",
+"num": 15,
+"title": "Radial Flux Profile",
+"pdf": 68,
+"page": "46",
+"box": [
+206,
+463,
+514,
+663
+],
+"bytes": 12100
+},
+"ht-02-fig17": {
+"module": "HT-02",
+"num": 17,
+"title": "Radial Temperature Profile Across a Fuel Rod and Coolant Channel",
+"pdf": 71,
+"page": "49",
+"box": [
+161,
+287,
+523,
+667
+],
+"bytes": 20117
+},
+"ht-03-fig1": {
+"module": "HT-03",
+"num": 1,
+"title": "Pressure Versus Depth",
+"pdf": 25,
+"page": "3",
+"box": [
+152,
+374,
+532,
+675
+],
+"bytes": 30965
+},
+"ht-03-fig2": {
+"module": "HT-03",
+"num": 2,
+"title": "Pascal\u2019s Law",
+"pdf": 30,
+"page": "8",
+"box": [
+80,
+83,
+460,
+373
+],
+"bytes": 11748
+},
+"ht-03-fig5": {
+"module": "HT-03",
+"num": 5,
+"title": "Laminar and Turbulent Flow Velocity Profiles",
+"pdf": 40,
+"page": "18",
+"box": [
+26,
+241,
+514,
+621
+],
+"bytes": 56667
+},
+"ht-03-fig6": {
+"module": "HT-03",
+"num": 6,
+"title": "Venturi Meter",
+"pdf": 49,
+"page": "27",
+"box": [
+188,
+497,
+496,
+679
+],
+"bytes": 14983
+},
+"ht-03-fig7": {
+"module": "HT-03",
+"num": 7,
+"title": "Typical Centrifugal Pump Characteristic Curve",
+"pdf": 70,
+"page": "48",
+"box": [
+253,
+241,
+514,
+459
+],
+"bytes": 9444
+},
+"ht-03-fig8": {
+"module": "HT-03",
+"num": 8,
+"title": "Changing Speeds for Centrifugal Pump",
+"pdf": 73,
+"page": "51",
+"box": [
+215,
+439,
+469,
+675
+],
+"bytes": 12247
+},
+"ht-03-fig9": {
+"module": "HT-03",
+"num": 9,
+"title": "Typical System Head Loss Curve",
+"pdf": 74,
+"page": "52",
+"box": [
+260,
+86,
+514,
+321
+],
+"bytes": 8453
+},
+"ht-03-fig10": {
+"module": "HT-03",
+"num": 10,
+"title": "Operating Point for a Centrifugal Pump",
+"pdf": 74,
+"page": "52",
+"box": [
+206,
+381,
+514,
+653
+],
+"bytes": 21882
+},
+"ht-03-fig11": {
+"module": "HT-03",
+"num": 11,
+"title": "Pump Characteristic Curve for Two Identical Centrifugal Pumps Used in Parallel",
+"pdf": 75,
+"page": "53",
+"box": [
+98,
+359,
+586,
+577
+],
+"bytes": 20524
+},
+"ht-03-fig12": {
+"module": "HT-03",
+"num": 12,
+"title": "Operating Point for Two Parallel Centrifugal Pumps",
+"pdf": 76,
+"page": "54",
+"box": [
+62,
+179,
+478,
+343
+],
+"bytes": 18974
+},
+"ht-03-fig13": {
+"module": "HT-03",
+"num": 13,
+"title": "Pump Characteristic Curve for Two Identical Centrifugal Pumps Used in Series",
+"pdf": 76,
+"page": "54",
+"box": [
+212,
+366,
+514,
+674
+],
+"bytes": 16994
+},
+"ht-03-fig14": {
+"module": "HT-03",
+"num": 14,
+"title": "Operating Point for Two Centrifugal Pumps in Series",
+"pdf": 77,
+"page": "55",
+"box": [
+152,
+139,
+532,
+555
+],
+"bytes": 33809
+},
+"ic-01-fig1": {
+"module": "IC-01",
+"num": 1,
+"title": "Electrical Resistance-Temperature Curves",
+"pdf": 20,
+"page": "2",
+"box": [
+206,
+115,
+514,
+351
+],
+"bytes": 23554
+},
+"ic-01-fig2": {
+"module": "IC-01",
+"num": 2,
+"title": "Internal Construction of a Typical RTD",
+"pdf": 21,
+"page": "3",
+"box": [
+188,
+127,
+496,
+507
+],
+"bytes": 40880
+},
+"ic-01-fig3": {
+"module": "IC-01",
+"num": 3,
+"title": "RTD Protective Well and Terminal Head",
+"pdf": 22,
+"page": "4",
+"box": [
+26,
+141,
+514,
+341
+],
+"bytes": 22289
+},
+"ic-01-fig5": {
+"module": "IC-01",
+"num": 5,
+"title": "Internal Construction of a Typical Thermocouple",
+"pdf": 24,
+"page": "6",
+"box": [
+242,
+86,
+514,
+375
+],
+"bytes": 18108
+},
+"ic-01-fig6": {
+"module": "IC-01",
+"num": 6,
+"title": "Simple Thermocouple Circuit",
+"pdf": 24,
+"page": "6",
+"box": [
+26,
+437,
+370,
+673
+],
+"bytes": 22359
+},
+"ic-01-fig8": {
+"module": "IC-01",
+"num": 8,
+"title": "Bridge Circuit",
+"pdf": 29,
+"page": "11",
+"box": [
+152,
+83,
+532,
+319
+],
+"bytes": 18667
+},
+"ic-01-fig9": {
+"module": "IC-01",
+"num": 9,
+"title": "Unbalanced Bridge Circuit",
+"pdf": 30,
+"page": "12",
+"box": [
+80,
+365,
+460,
+601
+],
+"bytes": 36054
+},
+"ic-01-fig10": {
+"module": "IC-01",
+"num": 10,
+"title": "Balanced Bridge Circuit",
+"pdf": 31,
+"page": "13",
+"box": [
+170,
+279,
+514,
+515
+],
+"bytes": 30188
+},
+"ic-01-fig11": {
+"module": "IC-01",
+"num": 11,
+"title": "Block Diagram of a Typical Temperature Detection Circuit",
+"pdf": 32,
+"page": "14",
+"box": [
+80,
+169,
+460,
+405
+],
+"bytes": 12400
+},
+"ic-01-fig12": {
+"module": "IC-01",
+"num": 12,
+"title": "Resistance Thermometer Circuit with Precision Resistor in Place of Resistance Bulb",
+"pdf": 33,
+"page": "15",
+"box": [
+152,
+125,
+532,
+361
+],
+"bytes": 20432
+},
+"ic-02-fig1": {
+"module": "IC-02",
+"num": 1,
+"title": "Basic Metallic Bellows",
+"pdf": 43,
+"page": "1",
+"box": [
+224,
+450,
+460,
+668
+],
+"bytes": 12373
+},
+"ic-02-fig2": {
+"module": "IC-02",
+"num": 2,
+"title": "Bourdon Tube",
+"pdf": 44,
+"page": "2",
+"box": [
+232,
+293,
+514,
+533
+],
+"bytes": 30303
+},
+"ic-02-fig3": {
+"module": "IC-02",
+"num": 3,
+"title": "Strain Gauge",
+"pdf": 49,
+"page": "7",
+"box": [
+215,
+86,
+469,
+285
+],
+"bytes": 9462
+},
+"ic-02-fig4": {
+"module": "IC-02",
+"num": 4,
+"title": "Strain Gauge Pressure Transducer",
+"pdf": 49,
+"page": "7",
+"box": [
+170,
+393,
+514,
+665
+],
+"bytes": 15233
+},
+"ic-02-fig5": {
+"module": "IC-02",
+"num": 5,
+"title": "Strain Gauge Used in a Bridge Circuit",
+"pdf": 50,
+"page": "8",
+"box": [
+26,
+183,
+514,
+455
+],
+"bytes": 37980
+},
+"ic-02-fig6": {
+"module": "IC-02",
+"num": 6,
+"title": "Bellows Resistance Transducer",
+"pdf": 51,
+"page": "9",
+"box": [
+188,
+155,
+496,
+409
+],
+"bytes": 24001
+},
+"ic-02-fig7": {
+"module": "IC-02",
+"num": 7,
+"title": "Inductance-Type Pressure Transducer Coil",
+"pdf": 51,
+"page": "9",
+"box": [
+332,
+449,
+586,
+660
+],
+"bytes": 19764
+},
+"ic-02-fig8": {
+"module": "IC-02",
+"num": 8,
+"title": "Differential Transformer",
+"pdf": 52,
+"page": "10",
+"box": [
+116,
+127,
+424,
+435
+],
+"bytes": 27034
+},
+"ic-02-fig9": {
+"module": "IC-02",
+"num": 9,
+"title": "Capacitive Pressure Transducer",
+"pdf": 53,
+"page": "11",
+"box": [
+188,
+157,
+496,
+393
+],
+"bytes": 19728
+},
+"ic-02-fig10": {
+"module": "IC-02",
+"num": 10,
+"title": "Typical Pressure Detection Block Diagram",
+"pdf": 54,
+"page": "12",
+"box": [
+80,
+143,
+460,
+307
+],
+"bytes": 7521
+},
+"ic-03-fig1": {
+"module": "IC-03",
+"num": 1,
+"title": "Transparent Tube",
+"pdf": 65,
+"page": "1",
+"box": [
+98,
+450,
+586,
+668
+],
+"bytes": 10338
+},
+"ic-03-fig5": {
+"module": "IC-03",
+"num": 5,
+"title": "Ball Float Level Mechanism",
+"pdf": 69,
+"page": "5",
+"box": [
+152,
+86,
+532,
+321
+],
+"bytes": 31794
+},
+"ic-03-fig6": {
+"module": "IC-03",
+"num": 6,
+"title": "Chain Float Gauge",
+"pdf": 69,
+"page": "5",
+"box": [
+350,
+463,
+586,
+681
+],
+"bytes": 15125
+},
+"ic-03-fig7": {
+"module": "IC-03",
+"num": 7,
+"title": "Magnetic Bond Detector",
+"pdf": 70,
+"page": "6",
+"box": [
+278,
+86,
+514,
+321
+],
+"bytes": 8735
+},
+"ic-03-fig8": {
+"module": "IC-03",
+"num": 8,
+"title": "Conductivity Probe Level Detection System",
+"pdf": 70,
+"page": "6",
+"box": [
+80,
+425,
+460,
+643
+],
+"bytes": 18756
+},
+"ic-03-fig9": {
+"module": "IC-03",
+"num": 9,
+"title": "Open Tank Differential Pressure Detector",
+"pdf": 71,
+"page": "7",
+"box": [
+98,
+199,
+586,
+435
+],
+"bytes": 24670
+},
+"ic-03-fig10": {
+"module": "IC-03",
+"num": 10,
+"title": "Closed Tank, Dry Reference Leg",
+"pdf": 72,
+"page": "8",
+"box": [
+80,
+86,
+460,
+321
+],
+"bytes": 21793
+},
+"ic-03-fig11": {
+"module": "IC-03",
+"num": 11,
+"title": "Closed Tank, Wet Reference Leg",
+"pdf": 73,
+"page": "9",
+"box": [
+152,
+86,
+532,
+321
+],
+"bytes": 20612
+},
+"ic-03-fig15": {
+"module": "IC-03",
+"num": 15,
+"title": "Block Diagram of a Differential Pressure Level Detection Circuit",
+"pdf": 79,
+"page": "15",
+"box": [
+325,
+514,
+586,
+689
+],
+"bytes": 5376
+},
+"ic-04-fig1": {
+"module": "IC-04",
+"num": 1,
+"title": "Head Flow Meter",
+"pdf": 91,
+"page": "1",
+"box": [
+242,
+434,
+586,
+634
+],
+"bytes": 22988
+},
+"ic-04-fig2": {
+"module": "IC-04",
+"num": 2,
+"title": "Orifice Plates",
+"pdf": 93,
+"page": "3",
+"box": [
+278,
+86,
+586,
+249
+],
+"bytes": 12250
+},
+"ic-04-fig3": {
+"module": "IC-04",
+"num": 3,
+"title": "Venturi Tube",
+"pdf": 94,
+"page": "4",
+"box": [
+26,
+185,
+514,
+439
+],
+"bytes": 24928
+},
+"ic-04-fig4": {
+"module": "IC-04",
+"num": 4,
+"title": "Dall Flow Tube",
+"pdf": 95,
+"page": "5",
+"box": [
+314,
+115,
+586,
+351
+],
+"bytes": 26319
+},
+"ic-04-fig5": {
+"module": "IC-04",
+"num": 5,
+"title": "Pitot Tube",
+"pdf": 96,
+"page": "6",
+"box": [
+26,
+199,
+514,
+435
+],
+"bytes": 15629
+},
+"ic-04-fig6": {
+"module": "IC-04",
+"num": 6,
+"title": "Rotameter",
+"pdf": 98,
+"page": "8",
+"box": [
+332,
+424,
+514,
+650
+],
+"bytes": 6419
+},
+"ic-04-fig7": {
+"module": "IC-04",
+"num": 7,
+"title": "Nutating Disk",
+"pdf": 99,
+"page": "9",
+"box": [
+152,
+313,
+532,
+531
+],
+"bytes": 18519
+},
+"ic-04-fig8": {
+"module": "IC-04",
+"num": 8,
+"title": "Flow Nozzle",
+"pdf": 102,
+"page": "12",
+"box": [
+80,
+337,
+460,
+573
+],
+"bytes": 20723
+},
+"ic-04-fig9": {
+"module": "IC-04",
+"num": 9,
+"title": "Simple Mass Flow Detection System",
+"pdf": 104,
+"page": "14",
+"box": [
+44,
+155,
+496,
+463
+],
+"bytes": 22040
+},
+"ic-04-fig11": {
+"module": "IC-04",
+"num": 11,
+"title": "Differential Pressure Flow Detection Block Diagram",
+"pdf": 107,
+"page": "17",
+"box": [
+170,
+450,
+514,
+668
+],
+"bytes": 9234
+},
+"ic-05-fig1": {
+"module": "IC-05",
+"num": 1,
+"title": "Synchro Schematics",
+"pdf": 120,
+"page": "2",
+"box": [
+38,
+86,
+514,
+393
+],
+"bytes": 50014
+},
+"ic-05-fig2": {
+"module": "IC-05",
+"num": 2,
+"title": "Simple Synchro System",
+"pdf": 121,
+"page": "3",
+"box": [
+110,
+279,
+586,
+515
+],
+"bytes": 17699
+},
+"ic-05-fig3": {
+"module": "IC-05",
+"num": 3,
+"title": "Limit Switches",
+"pdf": 123,
+"page": "5",
+"box": [
+188,
+367,
+496,
+602
+],
+"bytes": 16426
+},
+"ic-05-fig4": {
+"module": "IC-05",
+"num": 4,
+"title": "Reed Switches",
+"pdf": 124,
+"page": "6",
+"box": [
+80,
+227,
+460,
+535
+],
+"bytes": 24077
+},
+"ic-05-fig5": {
+"module": "IC-05",
+"num": 5,
+"title": "Potentiometer Valve Position Indicator",
+"pdf": 126,
+"page": "8",
+"box": [
+116,
+367,
+424,
+602
+],
+"bytes": 11752
+},
+"ic-05-fig6": {
+"module": "IC-05",
+"num": 6,
+"title": "Linear Variable Differential Transformer",
+"pdf": 127,
+"page": "9",
+"box": [
+278,
+171,
+586,
+551
+],
+"bytes": 19345
+},
+"ic-05-fig7": {
+"module": "IC-05",
+"num": 7,
+"title": "Position Indicators",
+"pdf": 130,
+"page": "12",
+"box": [
+26,
+94,
+514,
+691
+],
+"bytes": 59158
+},
+"ic-06-fig1": {
+"module": "IC-06",
+"num": 1,
+"title": "Alpha Particle Specific Ionization -vs- Distance Traveled in Air",
+"pdf": 29,
+"page": "5",
+"box": [
+170,
+83,
+514,
+319
+],
+"bytes": 16184
+},
+"ic-06-fig2": {
+"module": "IC-06",
+"num": 2,
+"title": "Photoelectric Effect",
+"pdf": 30,
+"page": "6",
+"box": [
+278,
+155,
+514,
+355
+],
+"bytes": 21629
+},
+"ic-06-fig3": {
+"module": "IC-06",
+"num": 3,
+"title": "Compton Scattering",
+"pdf": 30,
+"page": "6",
+"box": [
+26,
+393,
+262,
+593
+],
+"bytes": 21893
+},
+"ic-06-fig4": {
+"module": "IC-06",
+"num": 4,
+"title": "Pair Production",
+"pdf": 31,
+"page": "7",
+"box": [
+116,
+209,
+568,
+445
+],
+"bytes": 35076
+},
+"ic-06-fig5": {
+"module": "IC-06",
+"num": 5,
+"title": "Schematic Diagram of a Gas-Filled Detector",
+"pdf": 35,
+"page": "11",
+"box": [
+170,
+317,
+514,
+552
+],
+"bytes": 26066
+},
+"ic-06-fig6": {
+"module": "IC-06",
+"num": 6,
+"title": "Ion Pairs Collected -vs- Applied Voltage",
+"pdf": 39,
+"page": "15",
+"box": [
+116,
+83,
+568,
+463
+],
+"bytes": 49192
+},
+"ic-06-fig7": {
+"module": "IC-06",
+"num": 7,
+"title": "Proportional Counter",
+"pdf": 43,
+"page": "19",
+"box": [
+240,
+230,
+586,
+483
+],
+"bytes": 29959
+},
+"ic-06-fig9": {
+"module": "IC-06",
+"num": 9,
+"title": "Proportional Counter Circuit",
+"pdf": 47,
+"page": "23",
+"box": [
+110,
+331,
+574,
+585
+],
+"bytes": 20619
+},
+"ic-06-fig14": {
+"module": "IC-06",
+"num": 14,
+"title": "Simple Ionization Circuit",
+"pdf": 53,
+"page": "29",
+"box": [
+110,
+139,
+574,
+339
+],
+"bytes": 9543
+},
+"ic-06-fig16": {
+"module": "IC-06",
+"num": 16,
+"title": "Ionization Chamber",
+"pdf": 55,
+"page": "31",
+"box": [
+152,
+111,
+532,
+311
+],
+"bytes": 12424
+},
+"ic-06-fig19": {
+"module": "IC-06",
+"num": 19,
+"title": "Compensated Ion Chamber",
+"pdf": 59,
+"page": "35",
+"box": [
+110,
+400,
+574,
+600
+],
+"bytes": 14530
+},
+"ic-06-fig20": {
+"module": "IC-06",
+"num": 20,
+"title": "Compensated Ion Chamber with Concentric Cylinders",
+"pdf": 60,
+"page": "36",
+"box": [
+38,
+237,
+502,
+437
+],
+"bytes": 29561
+},
+"ic-06-fig21": {
+"module": "IC-06",
+"num": 21,
+"title": "Typical Compensation Curve",
+"pdf": 62,
+"page": "38",
+"box": [
+242,
+83,
+514,
+391
+],
+"bytes": 19648
+},
+"ic-06-fig24": {
+"module": "IC-06",
+"num": 24,
+"title": "Electronic Energy Band of an Ionic Crystal",
+"pdf": 69,
+"page": "45",
+"box": [
+296,
+302,
+586,
+574
+],
+"bytes": 18305
+},
+"ic-06-fig25": {
+"module": "IC-06",
+"num": 25,
+"title": "Scintillation Counter",
+"pdf": 70,
+"page": "46",
+"box": [
+26,
+139,
+514,
+447
+],
+"bytes": 38668
+},
+"ic-06-fig26": {
+"module": "IC-06",
+"num": 26,
+"title": "Photomultiplier Tube Schematic Diagram",
+"pdf": 71,
+"page": "47",
+"box": [
+278,
+83,
+586,
+319
+],
+"bytes": 29065
+},
+"ic-06-fig27": {
+"module": "IC-06",
+"num": 27,
+"title": "Gamma Spectrometer Block Diagram",
+"pdf": 73,
+"page": "49",
+"box": [
+110,
+386,
+574,
+651
+],
+"bytes": 31986
+},
+"ic-06-fig29": {
+"module": "IC-06",
+"num": 29,
+"title": "Self-Powered Neutron Detector",
+"pdf": 75,
+"page": "51",
+"box": [
+134,
+444,
+550,
+644
+],
+"bytes": 18051
+},
+"ic-06-fig35": {
+"module": "IC-06",
+"num": 35,
+"title": "Source Range Channel",
+"pdf": 88,
+"page": "64",
+"box": [
+38,
+111,
+502,
+383
+],
+"bytes": 31803
+},
+"ic-06-fig36": {
+"module": "IC-06",
+"num": 36,
+"title": "Intermediate Range Channel",
+"pdf": 91,
+"page": "67",
+"box": [
+110,
+111,
+574,
+383
+],
+"bytes": 38066
+},
+"ic-06-fig37": {
+"module": "IC-06",
+"num": 37,
+"title": "Power Range Channel",
+"pdf": 94,
+"page": "70",
+"box": [
+38,
+111,
+502,
+311
+],
+"bytes": 21200
+},
+"ic-07-fig2": {
+"module": "IC-07",
+"num": 2,
+"title": "Closed-Loop Control System",
+"pdf": 111,
+"page": "3",
+"box": [
+152,
+167,
+532,
+403
+],
+"bytes": 21084
+},
+"ic-07-fig3": {
+"module": "IC-07",
+"num": 3,
+"title": "Feedback in a Closed-Loop Control System",
+"pdf": 111,
+"page": "3",
+"box": [
+332,
+447,
+586,
+665
+],
+"bytes": 12529
+},
+"ic-07-fig4": {
+"module": "IC-07",
+"num": 4,
+"title": "Relationships of Functions and Elements in an Automatic Control System",
+"pdf": 113,
+"page": "5",
+"box": [
+152,
+181,
+532,
+489
+],
+"bytes": 23306
+},
+"ic-07-fig8": {
+"module": "IC-07",
+"num": 8,
+"title": "Feedback Control System Block Diagram",
+"pdf": 117,
+"page": "9",
+"box": [
+134,
+395,
+550,
+649
+],
+"bytes": 19696
+},
+"ic-07-fig9": {
+"module": "IC-07",
+"num": 9,
+"title": "Lube Oil Cooler Temperature Control System and Equivalent Block Diagram",
+"pdf": 119,
+"page": "11",
+"box": [
+98,
+95,
+586,
+689
+],
+"bytes": 54107
+},
+"ic-07-fig10": {
+"module": "IC-07",
+"num": 10,
+"title": "Types of Oscillations",
+"pdf": 122,
+"page": "14",
+"box": [
+38,
+266,
+502,
+682
+],
+"bytes": 29194
+},
+"ic-07-fig12": {
+"module": "IC-07",
+"num": 12,
+"title": "Two Position Controller Input/Output Relationship",
+"pdf": 126,
+"page": "18",
+"box": [
+80,
+269,
+460,
+577
+],
+"bytes": 9029
+},
+"ic-07-fig13": {
+"module": "IC-07",
+"num": 13,
+"title": "Two Position Control System",
+"pdf": 127,
+"page": "19",
+"box": [
+136,
+141,
+548,
+377
+],
+"bytes": 10444
+},
+"ic-07-fig14": {
+"module": "IC-07",
+"num": 14,
+"title": "Relation Between Valve Position and Controlled Variable Under Proportional Mode",
+"pdf": 128,
+"page": "20",
+"box": [
+80,
+421,
+460,
+657
+],
+"bytes": 17253
+},
+"ic-07-fig17": {
+"module": "IC-07",
+"num": 17,
+"title": "Combined Controller and Final Control Element Action",
+"pdf": 133,
+"page": "25",
+"box": [
+110,
+309,
+574,
+545
+],
+"bytes": 26490
+},
+"ic-07-fig19": {
+"module": "IC-07",
+"num": 19,
+"title": "Integral Output for a Fixed Input",
+"pdf": 137,
+"page": "29",
+"box": [
+116,
+83,
+568,
+391
+],
+"bytes": 16723
+},
+"ic-07-fig22": {
+"module": "IC-07",
+"num": 22,
+"title": "Response of Proportional Plus Reset Control",
+"pdf": 141,
+"page": "33",
+"box": [
+278,
+263,
+586,
+571
+],
+"bytes": 21869
+},
+"ic-07-fig27": {
+"module": "IC-07",
+"num": 27,
+"title": "Response of Proportional Plus Rate Control",
+"pdf": 147,
+"page": "39",
+"box": [
+110,
+167,
+574,
+655
+],
+"bytes": 38613
+},
+"ic-07-fig30": {
+"module": "IC-07",
+"num": 30,
+"title": "PID Control Action Responses",
+"pdf": 152,
+"page": "44",
+"box": [
+59,
+83,
+480,
+571
+],
+"bytes": 34184
+},
+"ic-07-fig32": {
+"module": "IC-07",
+"num": 32,
+"title": "Typical Control Station",
+"pdf": 156,
+"page": "48",
+"box": [
+38,
+83,
+502,
+499
+],
+"bytes": 49179
+},
+"ic-07-fig34": {
+"module": "IC-07",
+"num": 34,
+"title": "Self-Balancing Control Station",
+"pdf": 159,
+"page": "51",
+"box": [
+110,
+83,
+574,
+463
+],
+"bytes": 42075
+},
+"ic-07-fig35": {
+"module": "IC-07",
+"num": 35,
+"title": "Pneumatic Actuator: Air-to-Close/Spring-to-Open",
+"pdf": 162,
+"page": "54",
+"box": [
+206,
+275,
+514,
+673
+],
+"bytes": 26409
+},
+"ic-07-fig36": {
+"module": "IC-07",
+"num": 36,
+"title": "Pneumatic Actuator with Controller and Positioner",
+"pdf": 164,
+"page": "56",
+"box": [
+38,
+83,
+502,
+453
+],
+"bytes": 38122
+},
+"ic-07-fig37": {
+"module": "IC-07",
+"num": 37,
+"title": "Hydraulic Actuator",
+"pdf": 165,
+"page": "57",
+"box": [
+242,
+197,
+586,
+505
+],
+"bytes": 24353
+},
+"ic-07-fig38": {
+"module": "IC-07",
+"num": 38,
+"title": "Electric Solenoid Actuator",
+"pdf": 166,
+"page": "58",
+"box": [
+80,
+211,
+460,
+519
+],
+"bytes": 30785
+},
+"ic-07-fig39": {
+"module": "IC-07",
+"num": 39,
+"title": "Electric Motor Actuator",
+"pdf": 167,
+"page": "59",
+"box": [
+110,
+267,
+574,
+575
+],
+"bytes": 35969
+},
+"ch-01-fig1": {
+"module": "CH-01",
+"num": 1,
+"title": "Schematic of a Simple Atom (Helium)",
+"pdf": 24,
+"page": "2",
+"box": [
+62,
+341,
+527,
+612
+],
+"bytes": 31782
+},
+"ch-01-fig4": {
+"module": "CH-01",
+"num": 4,
+"title": "Regional Schematic of Periodic Table",
+"pdf": 38,
+"page": "16",
+"box": [
+62,
+159,
+514,
+467
+],
+"bytes": 11986
+},
+"ch-01-fig5": {
+"module": "CH-01",
+"num": 5,
+"title": "Electron Shells of Atoms",
+"pdf": 41,
+"page": "19",
+"box": [
+98,
+343,
+559,
+590
+],
+"bytes": 38640
+},
+"ch-01-fig6": {
+"module": "CH-01",
+"num": 6,
+"title": "Ionic Bond, Sodium Chloride",
+"pdf": 46,
+"page": "24",
+"box": [
+62,
+331,
+523,
+584
+],
+"bytes": 47810
+},
+"ch-01-fig7": {
+"module": "CH-01",
+"num": 7,
+"title": "Covalent Bond, Methane CH4",
+"pdf": 47,
+"page": "25",
+"box": [
+98,
+329,
+563,
+583
+],
+"bytes": 23002
+},
+"ch-01-fig8": {
+"module": "CH-01",
+"num": 8,
+"title": "Formation of the Carbon Dioxide Molecule",
+"pdf": 48,
+"page": "26",
+"box": [
+62,
+76,
+527,
+253
+],
+"bytes": 18471
+},
+"ch-02-fig1": {
+"module": "CH-02",
+"num": 1,
+"title": "Formation of Ferrous (Fe++) Ions in the Corrosion of Iron",
+"pdf": 105,
+"page": "3",
+"box": [
+313,
+180,
+572,
+393
+],
+"bytes": 17403
+},
+"ch-02-fig2": {
+"module": "CH-02",
+"num": 2,
+"title": "Metal Surface Showing Arrangement of Micro-cells",
+"pdf": 107,
+"page": "5",
+"box": [
+288,
+76,
+568,
+240
+],
+"bytes": 8372
+},
+"ch-02-fig3": {
+"module": "CH-02",
+"num": 3,
+"title": "A Galvanic Cell",
+"pdf": 109,
+"page": "7",
+"box": [
+98,
+287,
+564,
+577
+],
+"bytes": 44495
+},
+"ch-02-fig5": {
+"module": "CH-02",
+"num": 5,
+"title": "Simplified Schematic Diagram of Oxide Corrosion Film on the Surface of a Metal",
+"pdf": 115,
+"page": "13",
+"box": [
+98,
+76,
+568,
+341
+],
+"bytes": 41939
+},
+"ch-02-fig7": {
+"module": "CH-02",
+"num": 7,
+"title": "Effect of pH on the Corrosion Rate of Iron in Water",
+"pdf": 117,
+"page": "15",
+"box": [
+326,
+76,
+576,
+262
+],
+"bytes": 20537
+},
+"ch-02-fig10": {
+"module": "CH-02",
+"num": 10,
+"title": "Galvanic Corrosion at Iron-Copper Pipe Junction",
+"pdf": 126,
+"page": "24",
+"box": [
+62,
+113,
+536,
+367
+],
+"bytes": 56649
+},
+"ch-02-fig11": {
+"module": "CH-02",
+"num": 11,
+"title": "Differential Aeration Cell",
+"pdf": 130,
+"page": "28",
+"box": [
+62,
+126,
+527,
+416
+],
+"bytes": 52502
+},
+"ch-02-fig12": {
+"module": "CH-02",
+"num": 12,
+"title": "Representation of Crevice Pitting",
+"pdf": 131,
+"page": "29",
+"box": [
+123,
+300,
+539,
+554
+],
+"bytes": 33047
+},
+"ch-02-fig14": {
+"module": "CH-02",
+"num": 14,
+"title": "Intergranular Corrosion Cracking",
+"pdf": 135,
+"page": "33",
+"box": [
+98,
+197,
+563,
+461
+],
+"bytes": 38178
+},
+"ch-03-fig2": {
+"module": "CH-03",
+"num": 2,
+"title": "Corrosion Rate vs. pH for Iron",
+"pdf": 32,
+"page": "14",
+"box": [
+112,
+257,
+492,
+529
+],
+"bytes": 25010
+},
+"ch-04-fig3": {
+"module": "CH-04",
+"num": 3,
+"title": "Schematic Diagram of a Typical Ion Exchanger",
+"pdf": 64,
+"page": "8",
+"box": [
+62,
+76,
+529,
+694
+],
+"bytes": 112822
+},
+"ch-04-fig4": {
+"module": "CH-04",
+"num": 4,
+"title": "Typical History Curve",
+"pdf": 67,
+"page": "11",
+"box": [
+224,
+113,
+460,
+299
+],
+"bytes": 7413
+},
+"ch-05-fig5": {
+"module": "CH-05",
+"num": 5,
+"title": "Typical Static-producing Situations, Including Charge Separation in Pipe",
+"pdf": 128,
+"page": "34",
+"box": [
+62,
+76,
+528,
+428
+],
+"bytes": 70931
+},
+"ch-05-fig6": {
+"module": "CH-05",
+"num": 6,
+"title": "Bonding and Grounding",
+"pdf": 129,
+"page": "35",
+"box": [
+98,
+76,
+564,
+691
+],
+"bytes": 120136
+},
+"ch-05-fig7": {
+"module": "CH-05",
+"num": 7,
+"title": "Grounding Above-Ground Storage Tanks",
+"pdf": 130,
+"page": "36",
+"box": [
+67,
+210,
+526,
+556
+],
+"bytes": 73311
+},
+"ch-05-fig8": {
+"module": "CH-05",
+"num": 8,
+"title": "Bonding During Container Filling",
+"pdf": 132,
+"page": "38",
+"box": [
+62,
+76,
+528,
+692
+],
+"bytes": 95315
+},
+"ch-05-fig9": {
+"module": "CH-05",
+"num": 9,
+"title": "Storage Container With Spring-loaded Cover",
+"pdf": 133,
+"page": "39",
+"box": [
+329,
+275,
+565,
+584
+],
+"bytes": 33090
+},
+"pr-01-fig1": {
+"module": "PR-01",
+"num": 1,
+"title": "Title Block",
+"pdf": 21,
+"page": "3",
+"box": [
+80,
+82,
+568,
+413
+],
+"bytes": 73050
+},
+"pr-01-fig2": {
+"module": "PR-01",
+"num": 2,
+"title": "Example of a Grid",
+"pdf": 23,
+"page": "5",
+"box": [
+80,
+253,
+568,
+633
+],
+"bytes": 41155
+},
+"pr-01-fig3": {
+"module": "PR-01",
+"num": 3,
+"title": "Revision Block",
+"pdf": 24,
+"page": "6",
+"box": [
+44,
+281,
+532,
+661
+],
+"bytes": 47205
+},
+"pr-01-fig4": {
+"module": "PR-01",
+"num": 4,
+"title": "Methods of Denoting Changes",
+"pdf": 25,
+"page": "7",
+"box": [
+80,
+212,
+568,
+591
+],
+"bytes": 62383
+},
+"pr-01-fig5": {
+"module": "PR-01",
+"num": 5,
+"title": "Notes and Legends",
+"pdf": 26,
+"page": "8",
+"box": [
+98,
+225,
+478,
+677
+],
+"bytes": 84278
+},
+"pr-01-fig6": {
+"module": "PR-01",
+"num": 6,
+"title": "Example P&ID",
+"pdf": 28,
+"page": "10",
+"box": [
+44,
+431,
+532,
+702
+],
+"bytes": 49210
+},
+"pr-01-fig7": {
+"module": "PR-01",
+"num": 7,
+"title": "Example of a Single Line",
+"pdf": 29,
+"page": "11",
+"box": [
+242,
+237,
+568,
+563
+],
+"bytes": 29914
+},
+"pr-01-fig8": {
+"module": "PR-01",
+"num": 8,
+"title": "Example of a Schematic",
+"pdf": 30,
+"page": "12",
+"box": [
+71,
+137,
+505,
+668
+],
+"bytes": 110387
+},
+"pr-01-fig9": {
+"module": "PR-01",
+"num": 9,
+"title": "Example of an Electronic Diagram",
+"pdf": 31,
+"page": "13",
+"box": [
+80,
+167,
+568,
+619
+],
+"bytes": 79320
+},
+"pr-01-fig10": {
+"module": "PR-01",
+"num": 10,
+"title": "Example of a Logic Print",
+"pdf": 32,
+"page": "14",
+"box": [
+80,
+209,
+496,
+445
+],
+"bytes": 16363
+},
+"pr-01-fig11": {
+"module": "PR-01",
+"num": 11,
+"title": "Example of a Fabrication Drawing",
+"pdf": 33,
+"page": "15",
+"box": [
+89,
+84,
+558,
+687
+],
+"bytes": 92036
+},
+"pr-01-fig12": {
+"module": "PR-01",
+"num": 12,
+"title": "Example of a Single Line P&ID",
+"pdf": 34,
+"page": "16",
+"box": [
+62,
+281,
+514,
+499
+],
+"bytes": 21669
+},
+"pr-01-fig13": {
+"module": "PR-01",
+"num": 13,
+"title": "Example Pictorial",
+"pdf": 35,
+"page": "17",
+"box": [
+104,
+92,
+478,
+282
+],
+"bytes": 33410
+},
+"pr-01-fig14": {
+"module": "PR-01",
+"num": 14,
+"title": "Example of an Assembly Drawing",
+"pdf": 35,
+"page": "17",
+"box": [
+50,
+425,
+530,
+675
+],
+"bytes": 84646
+},
+"pr-01-fig15": {
+"module": "PR-01",
+"num": 15,
+"title": "Example of a Cutaway",
+"pdf": 36,
+"page": "18",
+"box": [
+62,
+193,
+514,
+699
+],
+"bytes": 184546
+},
+"pr-01-fig16": {
+"module": "PR-01",
+"num": 16,
+"title": "Example Orthographic Projection",
+"pdf": 37,
+"page": "19",
+"box": [
+60,
+285,
+538,
+655
+],
+"bytes": 62489
+},
+"pr-01-fig17": {
+"module": "PR-01",
+"num": 17,
+"title": "Orthographic Projections",
+"pdf": 38,
+"page": "20",
+"box": [
+44,
+165,
+532,
+457
+],
+"bytes": 109002
+},
+"pr-01-fig18": {
+"module": "PR-01",
+"num": 18,
+"title": "Example of an Isometric",
+"pdf": 39,
+"page": "21",
+"box": [
+80,
+224,
+568,
+612
+],
+"bytes": 109828
+},
+"pr-02-fig1": {
+"module": "PR-02",
+"num": 1,
+"title": "Valve Symbols",
+"pdf": 55,
+"page": "3",
+"box": [
+80,
+224,
+568,
+675
+],
+"bytes": 54942
+},
+"pr-02-fig2": {
+"module": "PR-02",
+"num": 2,
+"title": "Valve Actuator Symbols",
+"pdf": 56,
+"page": "4",
+"box": [
+44,
+192,
+532,
+428
+],
+"bytes": 21472
+},
+"pr-02-fig3": {
+"module": "PR-02",
+"num": 3,
+"title": "Remotely Controlled Valve",
+"pdf": 56,
+"page": "4",
+"box": [
+332,
+539,
+532,
+685
+],
+"bytes": 12380
+},
+"pr-02-fig4": {
+"module": "PR-02",
+"num": 4,
+"title": "Level Control Valve",
+"pdf": 57,
+"page": "5",
+"box": [
+179,
+285,
+469,
+485
+],
+"bytes": 17227
+},
+"pr-02-fig5": {
+"module": "PR-02",
+"num": 5,
+"title": "Control Valves with Valve Positioners",
+"pdf": 58,
+"page": "6",
+"box": [
+44,
+82,
+532,
+231
+],
+"bytes": 13720
+},
+"pr-02-fig6": {
+"module": "PR-02",
+"num": 6,
+"title": "Control Valve Designations",
+"pdf": 58,
+"page": "6",
+"box": [
+296,
+491,
+532,
+690
+],
+"bytes": 21432
+},
+"pr-02-fig7": {
+"module": "PR-02",
+"num": 7,
+"title": "Piping Symbols",
+"pdf": 59,
+"page": "7",
+"box": [
+286,
+88,
+562,
+350
+],
+"bytes": 23743
+},
+"pr-02-fig8": {
+"module": "PR-02",
+"num": 8,
+"title": "More Piping Symbols",
+"pdf": 60,
+"page": "8",
+"box": [
+232,
+84,
+532,
+407
+],
+"bytes": 31062
+},
+"pr-02-fig9": {
+"module": "PR-02",
+"num": 9,
+"title": "Detector and Sensing Device Symbols",
+"pdf": 62,
+"page": "10",
+"box": [
+44,
+178,
+532,
+450
+],
+"bytes": 31701
+},
+"pr-02-fig10": {
+"module": "PR-02",
+"num": 10,
+"title": "Transmitters and Instruments",
+"pdf": 63,
+"page": "11",
+"box": [
+224,
+206,
+568,
+639
+],
+"bytes": 53335
+},
+"pr-02-fig11": {
+"module": "PR-02",
+"num": 11,
+"title": "Indicators and Recorders",
+"pdf": 64,
+"page": "12",
+"box": [
+246,
+84,
+532,
+443
+],
+"bytes": 42476
+},
+"pr-02-fig12": {
+"module": "PR-02",
+"num": 12,
+"title": "Controllers",
+"pdf": 64,
+"page": "12",
+"box": [
+44,
+519,
+244,
+665
+],
+"bytes": 13981
+},
+"pr-02-fig13": {
+"module": "PR-02",
+"num": 13,
+"title": "Signal Conditioners",
+"pdf": 64,
+"page": "12",
+"box": [
+260,
+519,
+532,
+665
+],
+"bytes": 16060
+},
+"pr-02-fig14": {
+"module": "PR-02",
+"num": 14,
+"title": "Instrumentation System Examples",
+"pdf": 65,
+"page": "13",
+"box": [
+278,
+111,
+568,
+454
+],
+"bytes": 23094
+},
+"pr-02-fig15": {
+"module": "PR-02",
+"num": 15,
+"title": "Symbols for Major Components",
+"pdf": 66,
+"page": "14",
+"box": [
+44,
+88,
+532,
+623
+],
+"bytes": 64619
+},
+"pr-02-fig16": {
+"module": "PR-02",
+"num": 16,
+"title": "Miscellaneous Symbols",
+"pdf": 67,
+"page": "15",
+"box": [
+143,
+165,
+505,
+383
+],
+"bytes": 40033
+},
+"pr-02-fig17": {
+"module": "PR-02",
+"num": 17,
+"title": "Valve Status Symbols",
+"pdf": 68,
+"page": "16",
+"box": [
+224,
+351,
+532,
+622
+],
+"bytes": 29014
+},
+"pr-02-fig18": {
+"module": "PR-02",
+"num": 18,
+"title": "Exercise P&ID",
+"pdf": 71,
+"page": "19",
+"box": [
+80,
+82,
+568,
+690
+],
+"bytes": 79335
+},
+"pr-02-fig19": {
+"module": "PR-02",
+"num": 19,
+"title": "Fluid Power Pump and Compressor Symbols",
+"pdf": 75,
+"page": "23",
+"box": [
+350,
+421,
+568,
+631
+],
+"bytes": 20429
+},
+"pr-02-fig20": {
+"module": "PR-02",
+"num": 20,
+"title": "Fluid Power Reservoir Symbols",
+"pdf": 76,
+"page": "24",
+"box": [
+44,
+212,
+532,
+555
+],
+"bytes": 35940
+},
+"pr-02-fig21": {
+"module": "PR-02",
+"num": 21,
+"title": "Symbols for Linear Actuators",
+"pdf": 77,
+"page": "25",
+"box": [
+80,
+82,
+568,
+573
+],
+"bytes": 56466
+},
+"pr-02-fig22": {
+"module": "PR-02",
+"num": 22,
+"title": "Symbols for Rotary Actuators",
+"pdf": 78,
+"page": "26",
+"box": [
+177,
+82,
+399,
+298
+],
+"bytes": 18326
+},
+"pr-02-fig23": {
+"module": "PR-02",
+"num": 23,
+"title": "Fluid Power Line Symbols",
+"pdf": 78,
+"page": "26",
+"box": [
+68,
+420,
+507,
+664
+],
+"bytes": 40590
+},
+"pr-02-fig24": {
+"module": "PR-02",
+"num": 24,
+"title": "Valve Operation",
+"pdf": 79,
+"page": "27",
+"box": [
+80,
+407,
+568,
+643
+],
+"bytes": 32451
+},
+"pr-02-fig25": {
+"module": "PR-02",
+"num": 25,
+"title": "Valve Symbol Development",
+"pdf": 80,
+"page": "28",
+"box": [
+54,
+129,
+521,
+553
+],
+"bytes": 67339
+},
+"pr-02-fig26": {
+"module": "PR-02",
+"num": 26,
+"title": "Fluid Power Valve Symbols",
+"pdf": 81,
+"page": "29",
+"box": [
+205,
+110,
+442,
+663
+],
+"bytes": 65925
+},
+"pr-02-fig27": {
+"module": "PR-02",
+"num": 27,
+"title": "Simple Hydraulic Power System",
+"pdf": 82,
+"page": "30",
+"box": [
+250,
+84,
+532,
+377
+],
+"bytes": 40424
+},
+"pr-02-fig28": {
+"module": "PR-02",
+"num": 28,
+"title": "Line Diagram of Simple Hydraulic Power System",
+"pdf": 82,
+"page": "30",
+"box": [
+52,
+419,
+524,
+649
+],
+"bytes": 30323
+},
+"pr-02-fig29": {
+"module": "PR-02",
+"num": 29,
+"title": "Typical Fluid Power Diagram",
+"pdf": 83,
+"page": "31",
+"box": [
+116,
+140,
+532,
+555
+],
+"bytes": 32271
+},
+"pr-02-fig30": {
+"module": "PR-02",
+"num": 30,
+"title": "Pictorial Fluid Power Diagram",
+"pdf": 85,
+"page": "33",
+"box": [
+80,
+212,
+568,
+555
+],
+"bytes": 38884
+},
+"pr-02-fig31": {
+"module": "PR-02",
+"num": 31,
+"title": "Cutaway Fluid Power Diagram",
+"pdf": 86,
+"page": "34",
+"box": [
+44,
+82,
+532,
+305
+],
+"bytes": 37519
+},
+"pr-02-fig32": {
+"module": "PR-02",
+"num": 32,
+"title": "Schematic Fluid Power Diagram",
+"pdf": 86,
+"page": "34",
+"box": [
+62,
+419,
+514,
+691
+],
+"bytes": 33829
+},
+"pr-03-fig1": {
+"module": "PR-03",
+"num": 1,
+"title": "Basic Transformer Symbols",
+"pdf": 98,
+"page": "2",
+"box": [
+206,
+112,
+532,
+455
+],
+"bytes": 34033
+},
+"pr-03-fig2": {
+"module": "PR-03",
+"num": 2,
+"title": "Transformer Polarity",
+"pdf": 98,
+"page": "2",
+"box": [
+206,
+519,
+532,
+668
+],
+"bytes": 15303
+},
+"pr-03-fig3": {
+"module": "PR-03",
+"num": 3,
+"title": "Switches and Switch Symbols",
+"pdf": 99,
+"page": "3",
+"box": [
+80,
+293,
+568,
+673
+],
+"bytes": 87078
+},
+"pr-03-fig4": {
+"module": "PR-03",
+"num": 4,
+"title": "Switch and Switch Status Symbology",
+"pdf": 100,
+"page": "4",
+"box": [
+72,
+153,
+503,
+645
+],
+"bytes": 87095
+},
+"pr-03-fig5": {
+"module": "PR-03",
+"num": 5,
+"title": "Fuse and Circuit Breaker Symbols",
+"pdf": 101,
+"page": "5",
+"box": [
+143,
+168,
+505,
+655
+],
+"bytes": 64709
+},
+"pr-03-fig6": {
+"module": "PR-03",
+"num": 6,
+"title": "Three-phase and Removable Breaker Symbols",
+"pdf": 102,
+"page": "6",
+"box": [
+116,
+165,
+460,
+401
+],
+"bytes": 13837
+},
+"pr-03-fig7": {
+"module": "PR-03",
+"num": 7,
+"title": "Common Electrical Component Symbols",
+"pdf": 103,
+"page": "7",
+"box": [
+80,
+82,
+568,
+443
+],
+"bytes": 60790
+},
+"pr-03-fig8": {
+"module": "PR-03",
+"num": 8,
+"title": "Large Common Electrical Components",
+"pdf": 104,
+"page": "8",
+"box": [
+44,
+82,
+532,
+690
+],
+"bytes": 70095
+},
+"pr-03-fig9": {
+"module": "PR-03",
+"num": 9,
+"title": "Comparison of an Electrical Schematic and a Pictorial Diagram",
+"pdf": 105,
+"page": "9",
+"box": [
+260,
+477,
+568,
+641
+],
+"bytes": 11874
+},
+"pr-03-fig10": {
+"module": "PR-03",
+"num": 10,
+"title": "Comparison of an Electrical Schematic and a Wiring Diagram",
+"pdf": 106,
+"page": "10",
+"box": [
+44,
+178,
+532,
+370
+],
+"bytes": 26578
+},
+"pr-03-fig14": {
+"module": "PR-03",
+"num": 14,
+"title": "Examples of Relays and Relay Contacts",
+"pdf": 110,
+"page": "14",
+"box": [
+44,
+287,
+532,
+649
+],
+"bytes": 49000
+},
+"pr-03-fig15": {
+"module": "PR-03",
+"num": 15,
+"title": "Ganged Switch Symbology",
+"pdf": 111,
+"page": "15",
+"box": [
+80,
+194,
+568,
+591
+],
+"bytes": 32511
+},
+"pr-03-fig16": {
+"module": "PR-03",
+"num": 16,
+"title": "Three-Phase Symbols",
+"pdf": 112,
+"page": "16",
+"box": [
+139,
+180,
+437,
+379
+],
+"bytes": 17203
+},
+"pr-03-fig17": {
+"module": "PR-03",
+"num": 17,
+"title": "Example 1",
+"pdf": 115,
+"page": "19",
+"box": [
+80,
+82,
+568,
+690
+],
+"bytes": 131630
+},
+"pr-03-fig18": {
+"module": "PR-03",
+"num": 18,
+"title": "Example 2",
+"pdf": 116,
+"page": "20",
+"box": [
+44,
+333,
+532,
+677
+],
+"bytes": 42610
+},
+"pr-04-fig1": {
+"module": "PR-04",
+"num": 1,
+"title": "Electronic Symbols",
+"pdf": 21,
+"page": "3",
+"box": [
+118,
+104,
+702,
+560
+],
+"bytes": 110097
+},
+"pr-04-fig2": {
+"module": "PR-04",
+"num": 2,
+"title": "Electronic Symbols (Continued)",
+"pdf": 22,
+"page": "4",
+"box": [
+116,
+85,
+700,
+540
+],
+"bytes": 93498
+},
+"pr-04-fig3": {
+"module": "PR-04",
+"num": 3,
+"title": "Example of an Electronic Schematic Diagram",
+"pdf": 23,
+"page": "5",
+"box": [
+98,
+194,
+568,
+423
+],
+"bytes": 32808
+},
+"pr-04-fig4": {
+"module": "PR-04",
+"num": 4,
+"title": "Comparison of an Electronic Schematic Diagram and its Pictorial Layout Diagram",
+"pdf": 24,
+"page": "6",
+"box": [
+62,
+86,
+547,
+517
+],
+"bytes": 78642
+},
+"pr-04-fig5": {
+"module": "PR-04",
+"num": 5,
+"title": "Transformer Polarity Markings",
+"pdf": 25,
+"page": "7",
+"box": [
+221,
+349,
+459,
+489
+],
+"bytes": 11652
+},
+"pr-04-fig6": {
+"module": "PR-04",
+"num": 6,
+"title": "Schematic Showing Power Supply Connections",
+"pdf": 26,
+"page": "8",
+"box": [
+62,
+82,
+550,
+515
+],
+"bytes": 77258
+},
+"pr-04-fig7": {
+"module": "PR-04",
+"num": 7,
+"title": "NPN Transistor-Conducting",
+"pdf": 27,
+"page": "9",
+"box": [
+197,
+221,
+469,
+403
+],
+"bytes": 15126
+},
+"pr-04-fig8": {
+"module": "PR-04",
+"num": 8,
+"title": "NPN Transistor-Nonconducting",
+"pdf": 27,
+"page": "9",
+"box": [
+197,
+490,
+469,
+672
+],
+"bytes": 14915
+},
+"pr-04-fig9": {
+"module": "PR-04",
+"num": 9,
+"title": "PNP Transistor",
+"pdf": 28,
+"page": "10",
+"box": [
+62,
+123,
+532,
+323
+],
+"bytes": 20652
+},
+"pr-04-fig10": {
+"module": "PR-04",
+"num": 10,
+"title": "Diode",
+"pdf": 28,
+"page": "10",
+"box": [
+107,
+420,
+487,
+585
+],
+"bytes": 12164
+},
+"pr-04-fig11": {
+"module": "PR-04",
+"num": 11,
+"title": "Bistable Symbols",
+"pdf": 29,
+"page": "11",
+"box": [
+125,
+151,
+541,
+478
+],
+"bytes": 52726
+},
+"pr-04-fig12": {
+"module": "PR-04",
+"num": 12,
+"title": "Example Blocks",
+"pdf": 30,
+"page": "12",
+"box": [
+107,
+210,
+487,
+411
+],
+"bytes": 23784
+},
+"pr-04-fig13": {
+"module": "PR-04",
+"num": 13,
+"title": "Example Block Diagram",
+"pdf": 31,
+"page": "13",
+"box": [
+98,
+82,
+568,
+515
+],
+"bytes": 36210
+},
+"pr-04-fig15": {
+"module": "PR-04",
+"num": 15,
+"title": "Example Combination Diagram of Electrical Single Line, and Block Diagram",
+"pdf": 34,
+"page": "16",
+"box": [
+62,
+130,
+532,
+690
+],
+"bytes": 118573
+},
+"pr-04-fig16": {
+"module": "PR-04",
+"num": 16,
+"title": "Example 1",
+"pdf": 37,
+"page": "19",
+"box": [
+70,
+85,
+510,
+490
+],
+"bytes": 82717
+},
+"pr-04-fig17": {
+"module": "PR-04",
+"num": 17,
+"title": "Example 2",
+"pdf": 40,
+"page": "22",
+"box": [
+68,
+108,
+548,
+323
+],
+"bytes": 28808
+},
+"pr-05-fig1": {
+"module": "PR-05",
+"num": 1,
+"title": "Example of a Pump Start Circuit Schematic Diagram",
+"pdf": 52,
+"page": "2",
+"box": [
+132,
+108,
+680,
+478
+],
+"bytes": 123273
+},
+"pr-05-fig2": {
+"module": "PR-05",
+"num": 2,
+"title": "Example of Figure 1 Pump Start Circuit as a Logic Diagram",
+"pdf": 53,
+"page": "3",
+"box": [
+98,
+82,
+559,
+631
+],
+"bytes": 77924
+},
+"pr-05-fig3": {
+"module": "PR-05",
+"num": 3,
+"title": "Basic Logic Symbols",
+"pdf": 55,
+"page": "5",
+"box": [
+98,
+82,
+559,
+376
+],
+"bytes": 24389
+},
+"pr-05-fig4": {
+"module": "PR-05",
+"num": 4,
+"title": "Conventions for Depicting Multiple Inputs",
+"pdf": 55,
+"page": "5",
+"box": [
+158,
+503,
+503,
+685
+],
+"bytes": 14216
+},
+"pr-05-fig5": {
+"module": "PR-05",
+"num": 5,
+"title": "COINCIDENCE Gate",
+"pdf": 56,
+"page": "6",
+"box": [
+338,
+74,
+524,
+264
+],
+"bytes": 12668
+},
+"pr-05-fig6": {
+"module": "PR-05",
+"num": 6,
+"title": "EXCLUSIVE OR and EXCLUSIVE NOR Gates",
+"pdf": 56,
+"page": "6",
+"box": [
+62,
+383,
+523,
+571
+],
+"bytes": 15369
+},
+"pr-05-fig7": {
+"module": "PR-05",
+"num": 7,
+"title": "Type One Time Delay Device",
+"pdf": 57,
+"page": "7",
+"box": [
+98,
+140,
+560,
+378
+],
+"bytes": 22909
+},
+"pr-05-fig8": {
+"module": "PR-05",
+"num": 8,
+"title": "Type Two Time Delay Device",
+"pdf": 57,
+"page": "7",
+"box": [
+98,
+480,
+559,
+682
+],
+"bytes": 21692
+},
+"pr-05-fig9": {
+"module": "PR-05",
+"num": 9,
+"title": "Type-Three Time Delay Device",
+"pdf": 58,
+"page": "8",
+"box": [
+69,
+128,
+517,
+539
+],
+"bytes": 30085
+},
+"pr-05-fig10": {
+"module": "PR-05",
+"num": 10,
+"title": "Symbols for Complex Logic Devices",
+"pdf": 59,
+"page": "9",
+"box": [
+168,
+76,
+500,
+584
+],
+"bytes": 34355
+},
+"pr-05-fig11": {
+"module": "PR-05",
+"num": 11,
+"title": "Truth Tables",
+"pdf": 62,
+"page": "12",
+"box": [
+61,
+82,
+523,
+695
+],
+"bytes": 56106
+},
+"pr-05-fig12": {
+"module": "PR-05",
+"num": 12,
+"title": "Logic Gate Status Notation",
+"pdf": 63,
+"page": "13",
+"box": [
+177,
+199,
+485,
+489
+],
+"bytes": 11834
+},
+"pr-05-fig13": {
+"module": "PR-05",
+"num": 13,
+"title": "Example 1",
+"pdf": 64,
+"page": "14",
+"box": [
+62,
+144,
+523,
+688
+],
+"bytes": 52752
+},
+"pr-05-fig14": {
+"module": "PR-05",
+"num": 14,
+"title": "Example 2",
+"pdf": 66,
+"page": "16",
+"box": [
+62,
+155,
+523,
+705
+],
+"bytes": 49378
+},
+"pr-06-fig1": {
+"module": "PR-06",
+"num": 1,
+"title": "Example of a Fabrication Drawing",
+"pdf": 80,
+"page": "2",
+"box": [
+61,
+106,
+526,
+633
+],
+"bytes": 116089
+},
+"pr-06-fig2": {
+"module": "PR-06",
+"num": 2,
+"title": "Example of a Construction Drawing",
+"pdf": 81,
+"page": "3",
+"box": [
+98,
+177,
+561,
+559
+],
+"bytes": 72354
+},
+"pr-06-fig4": {
+"module": "PR-06",
+"num": 4,
+"title": "Types of Dimensioning Lines",
+"pdf": 84,
+"page": "6",
+"box": [
+89,
+164,
+505,
+454
+],
+"bytes": 28932
+},
+"pr-06-fig5": {
+"module": "PR-06",
+"num": 5,
+"title": "Example of Dimensioning Notation",
+"pdf": 85,
+"page": "7",
+"box": [
+107,
+135,
+559,
+695
+],
+"bytes": 65064
+},
+"pr-06-fig6": {
+"module": "PR-06",
+"num": 6,
+"title": "Symbology Used in Tolerancing Drawings",
+"pdf": 87,
+"page": "9",
+"box": [
+98,
+94,
+564,
+510
+],
+"bytes": 89631
+},
+"pr-06-fig7": {
+"module": "PR-06",
+"num": 7,
+"title": "Examples of Tolerance Symbology",
+"pdf": 88,
+"page": "10",
+"box": [
+62,
+94,
+528,
+704
+],
+"bytes": 70763
+},
+"pr-06-fig8": {
+"module": "PR-06",
+"num": 8,
+"title": "Example of Tolerancing",
+"pdf": 89,
+"page": "11",
+"box": [
+179,
+302,
+487,
+705
+],
+"bytes": 12782
+},
+"pr-06-fig9": {
+"module": "PR-06",
+"num": 9,
+"title": "Example 1",
+"pdf": 91,
+"page": "13",
+"box": [
+172,
+296,
+562,
+708
+],
+"bytes": 34945
+},
+"pr-06-fig10": {
+"module": "PR-06",
+"num": 10,
+"title": "Example 2",
+"pdf": 92,
+"page": "14",
+"box": [
+112,
+338,
+485,
+512
+],
+"bytes": 8504
+},
+"pr-06-fig11": {
+"module": "PR-06",
+"num": 11,
+"title": "Example 3",
+"pdf": 93,
+"page": "15",
+"box": [
+98,
+130,
+564,
+412
+],
+"bytes": 16883
+},
+"ms-01-fig1": {
+"module": "MS-01",
+"num": 1,
+"title": "Bonding Types",
+"pdf": 21,
+"page": "3",
+"box": [
+62,
+82,
+550,
+676
+],
+"bytes": 95415
+},
+"ms-01-fig2": {
+"module": "MS-01",
+"num": 2,
+"title": "Common Lattice Types",
+"pdf": 25,
+"page": "7",
+"box": [
+169,
+240,
+548,
+655
+],
+"bytes": 36696
+},
+"ms-01-fig3": {
+"module": "MS-01",
+"num": 3,
+"title": "Grains and Boundaries",
+"pdf": 28,
+"page": "10",
+"box": [
+62,
+82,
+550,
+341
+],
+"bytes": 69858
+},
+"ms-01-fig4": {
+"module": "MS-01",
+"num": 4,
+"title": "Grain Orientation",
+"pdf": 28,
+"page": "10",
+"box": [
+98,
+503,
+514,
+666
+],
+"bytes": 34657
+},
+"ms-01-fig5": {
+"module": "MS-01",
+"num": 5,
+"title": "Cooling Curve for Unalloyed Uranium",
+"pdf": 30,
+"page": "12",
+"box": [
+224,
+322,
+550,
+576
+],
+"bytes": 21736
+},
+"ms-01-fig6": {
+"module": "MS-01",
+"num": 6,
+"title": "Change in Alpha Uranium Upon Heating From 0 to 300\u00b0C",
+"pdf": 31,
+"page": "13",
+"box": [
+62,
+274,
+541,
+599
+],
+"bytes": 31994
+},
+"ms-01-fig7": {
+"module": "MS-01",
+"num": 7,
+"title": "Point Defects",
+"pdf": 37,
+"page": "19",
+"box": [
+74,
+132,
+545,
+332
+],
+"bytes": 42244
+},
+"ms-01-fig8": {
+"module": "MS-01",
+"num": 8,
+"title": "Line Defects (Dislocations)",
+"pdf": 37,
+"page": "19",
+"box": [
+309,
+356,
+545,
+663
+],
+"bytes": 23526
+},
+"ms-01-fig9": {
+"module": "MS-01",
+"num": 9,
+"title": "Slips",
+"pdf": 38,
+"page": "20",
+"box": [
+78,
+174,
+529,
+500
+],
+"bytes": 47165
+},
+"ms-02-fig1": {
+"module": "MS-02",
+"num": 1,
+"title": "Types of Applied Stress",
+"pdf": 56,
+"page": "4",
+"box": [
+93,
+174,
+509,
+410
+],
+"bytes": 22183
+},
+"ms-02-fig2": {
+"module": "MS-02",
+"num": 2,
+"title": "Change of Shape of Cylinder Under Stress",
+"pdf": 61,
+"page": "9",
+"box": [
+278,
+309,
+550,
+599
+],
+"bytes": 13245
+},
+"ms-02-fig3": {
+"module": "MS-02",
+"num": 3,
+"title": "Typical Ductile Material Stress-Strain Curve",
+"pdf": 69,
+"page": "17",
+"box": [
+307,
+420,
+550,
+605
+],
+"bytes": 18751
+},
+"ms-02-fig4": {
+"module": "MS-02",
+"num": 4,
+"title": "Typical Brittle Material Stress-Strain Curve",
+"pdf": 70,
+"page": "18",
+"box": [
+296,
+223,
+550,
+512
+],
+"bytes": 24881
+},
+"ms-02-fig6": {
+"module": "MS-02",
+"num": 6,
+"title": "Measuring Elongation After Fracture",
+"pdf": 76,
+"page": "24",
+"box": [
+188,
+145,
+424,
+435
+],
+"bytes": 27998
+},
+"ms-02-fig7": {
+"module": "MS-02",
+"num": 7,
+"title": "Malleable Deformation of a Cylinder",
+"pdf": 77,
+"page": "25",
+"box": [
+321,
+412,
+550,
+575
+],
+"bytes": 15756
+},
+"ms-02-fig9": {
+"module": "MS-02",
+"num": 9,
+"title": "Material Toughness Test",
+"pdf": 78,
+"page": "26",
+"box": [
+60,
+452,
+368,
+702
+],
+"bytes": 28061
+},
+"ms-02-fig10": {
+"module": "MS-02",
+"num": 10,
+"title": "Hydrogen Embrittlement",
+"pdf": 90,
+"page": "38",
+"box": [
+330,
+74,
+550,
+208
+],
+"bytes": 19898
+},
+"ms-03-fig2": {
+"module": "MS-03",
+"num": 2,
+"title": "Heatup Stress Profile",
+"pdf": 25,
+"page": "7",
+"box": [
+320,
+76,
+550,
+298
+],
+"bytes": 21760
+},
+"ms-03-fig3": {
+"module": "MS-03",
+"num": 3,
+"title": "Cooldown Stress Profile",
+"pdf": 25,
+"page": "7",
+"box": [
+314,
+370,
+550,
+605
+],
+"bytes": 22171
+},
+"ms-04-fig1": {
+"module": "MS-04",
+"num": 1,
+"title": "Basic Fracture Types",
+"pdf": 36,
+"page": "2",
+"box": [
+26,
+76,
+228,
+255
+],
+"bytes": 11588
+},
+"ms-04-fig2": {
+"module": "MS-04",
+"num": 2,
+"title": "Stress-Temperature Diagram for Crack Initiation and Arrest",
+"pdf": 37,
+"page": "3",
+"box": [
+98,
+207,
+581,
+586
+],
+"bytes": 56567
+},
+"ms-04-fig3": {
+"module": "MS-04",
+"num": 3,
+"title": "Fracture Diagram",
+"pdf": 39,
+"page": "5",
+"box": [
+98,
+111,
+581,
+383
+],
+"bytes": 50702
+},
+"ms-05-fig1": {
+"module": "MS-05",
+"num": 1,
+"title": "Nominal Stress-Strain Curve vs True Stress-Strain Curve",
+"pdf": 89,
+"page": "29",
+"box": [
+62,
+82,
+550,
+380
+],
+"bytes": 27674
+},
+"ms-05-fig2": {
+"module": "MS-05",
+"num": 2,
+"title": "Successive Stages of Creep with Increasing Time",
+"pdf": 90,
+"page": "30",
+"box": [
+62,
+82,
+550,
+287
+],
+"bytes": 7737
+},
+"ms-05-fig3": {
+"module": "MS-05",
+"num": 3,
+"title": "Thermal and Fast Neutrons Interactions with a Solid",
+"pdf": 93,
+"page": "33",
+"box": [
+62,
+176,
+550,
+466
+],
+"bytes": 43281
+},
+"ms-05-fig4": {
+"module": "MS-05",
+"num": 4,
+"title": "Qualitative Representation of Neutron Irradiation Effect on Many Metals",
+"pdf": 100,
+"page": "40",
+"box": [
+62,
+82,
+550,
+305
+],
+"bytes": 15442
+},
+"me-01-fig2": {
+"module": "ME-01",
+"num": 2,
+"title": "Cutaway of a GM V-16 Four-Stroke Supercharged Diesel Engine",
+"pdf": 24,
+"page": "4",
+"box": [
+44,
+82,
+532,
+690
+],
+"bytes": 328676
+},
+"me-01-fig3": {
+"module": "ME-01",
+"num": 3,
+"title": "Cross Section of a V-type Four Stroke Diesel Engine",
+"pdf": 25,
+"page": "5",
+"box": [
+80,
+97,
+568,
+523
+],
+"bytes": 236892
+},
+"me-01-fig6": {
+"module": "ME-01",
+"num": 6,
+"title": "Piston and Piston Rod",
+"pdf": 27,
+"page": "7",
+"box": [
+296,
+449,
+568,
+685
+],
+"bytes": 34152
+},
+"me-01-fig7": {
+"module": "ME-01",
+"num": 7,
+"title": "Diesel Engine Crankshaft and Bearings",
+"pdf": 29,
+"page": "9",
+"box": [
+80,
+82,
+568,
+331
+],
+"bytes": 64371
+},
+"me-01-fig10": {
+"module": "ME-01",
+"num": 10,
+"title": "Diesel Engine Valve Train",
+"pdf": 31,
+"page": "11",
+"box": [
+260,
+251,
+568,
+535
+],
+"bytes": 46316
+},
+"me-01-fig15": {
+"module": "ME-01",
+"num": 15,
+"title": "Compression Ratio",
+"pdf": 38,
+"page": "18",
+"box": [
+161,
+298,
+415,
+592
+],
+"bytes": 29438
+},
+"me-01-fig16": {
+"module": "ME-01",
+"num": 16,
+"title": "Scavenging and Intake",
+"pdf": 42,
+"page": "22",
+"box": [
+368,
+469,
+532,
+688
+],
+"bytes": 16288
+},
+"me-01-fig17": {
+"module": "ME-01",
+"num": 17,
+"title": "Compression",
+"pdf": 43,
+"page": "23",
+"box": [
+411,
+363,
+568,
+574
+],
+"bytes": 16292
+},
+"me-01-fig18": {
+"module": "ME-01",
+"num": 18,
+"title": "Fuel Injection",
+"pdf": 44,
+"page": "24",
+"box": [
+375,
+135,
+532,
+353
+],
+"bytes": 16531
+},
+"me-01-fig19": {
+"module": "ME-01",
+"num": 19,
+"title": "Power",
+"pdf": 44,
+"page": "24",
+"box": [
+375,
+463,
+532,
+681
+],
+"bytes": 16937
+},
+"me-01-fig20": {
+"module": "ME-01",
+"num": 20,
+"title": "Exhaust",
+"pdf": 45,
+"page": "25",
+"box": [
+411,
+122,
+568,
+340
+],
+"bytes": 16074
+},
+"me-01-fig21": {
+"module": "ME-01",
+"num": 21,
+"title": "2-Stroke Exhaust",
+"pdf": 46,
+"page": "26",
+"box": [
+116,
+151,
+296,
+369
+],
+"bytes": 21297
+},
+"me-01-fig22": {
+"module": "ME-01",
+"num": 22,
+"title": "2-Stroke Intake",
+"pdf": 46,
+"page": "26",
+"box": [
+298,
+151,
+460,
+369
+],
+"bytes": 22671
+},
+"me-01-fig23": {
+"module": "ME-01",
+"num": 23,
+"title": "2-Stroke Compression",
+"pdf": 47,
+"page": "27",
+"box": [
+152,
+95,
+316,
+306
+],
+"bytes": 20753
+},
+"me-01-fig24": {
+"module": "ME-01",
+"num": 24,
+"title": "2-Stroke Fuel Injection",
+"pdf": 47,
+"page": "27",
+"box": [
+332,
+95,
+496,
+306
+],
+"bytes": 19074
+},
+"me-01-fig25": {
+"module": "ME-01",
+"num": 25,
+"title": "2-Stroke Power",
+"pdf": 47,
+"page": "27",
+"box": [
+404,
+326,
+568,
+544
+],
+"bytes": 21008
+},
+"me-01-fig26": {
+"module": "ME-01",
+"num": 26,
+"title": "Fuel Injector Cutaway",
+"pdf": 51,
+"page": "31",
+"box": [
+80,
+82,
+568,
+690
+],
+"bytes": 131903
+},
+"me-01-fig28": {
+"module": "ME-01",
+"num": 28,
+"title": "Simplified Mechanical-Hydraulic Governor",
+"pdf": 55,
+"page": "35",
+"box": [
+80,
+251,
+568,
+685
+],
+"bytes": 83075
+},
+"me-02-fig1": {
+"module": "ME-02",
+"num": 1,
+"title": "Tube and Shell Heat Exchanger",
+"pdf": 71,
+"page": "3",
+"box": [
+80,
+82,
+568,
+399
+],
+"bytes": 87536
+},
+"me-02-fig2": {
+"module": "ME-02",
+"num": 2,
+"title": "Plate Heat Exchanger",
+"pdf": 72,
+"page": "4",
+"box": [
+44,
+82,
+532,
+413
+],
+"bytes": 72026
+},
+"me-02-fig3": {
+"module": "ME-02",
+"num": 3,
+"title": "Parallel Flow Heat Exchanger",
+"pdf": 73,
+"page": "5",
+"box": [
+116,
+83,
+568,
+304
+],
+"bytes": 12071
+},
+"me-02-fig4": {
+"module": "ME-02",
+"num": 4,
+"title": "Counter Flow Heat Exchanger",
+"pdf": 73,
+"page": "5",
+"box": [
+116,
+447,
+568,
+668
+],
+"bytes": 12795
+},
+"me-02-fig5": {
+"module": "ME-02",
+"num": 5,
+"title": "Cross Flow Heat Exchanger",
+"pdf": 74,
+"page": "6",
+"box": [
+80,
+195,
+532,
+417
+],
+"bytes": 10810
+},
+"me-02-fig6": {
+"module": "ME-02",
+"num": 6,
+"title": "Single and Multi-Pass Heat Exchangers",
+"pdf": 77,
+"page": "9",
+"box": [
+80,
+82,
+568,
+377
+],
+"bytes": 21367
+},
+"me-02-fig7": {
+"module": "ME-02",
+"num": 7,
+"title": "Regenerative and Non-Regenerative Heat Exchangers",
+"pdf": 78,
+"page": "10",
+"box": [
+116,
+111,
+460,
+545
+],
+"bytes": 37873
+},
+"me-02-fig8": {
+"module": "ME-02",
+"num": 8,
+"title": "U-tube Feedwater Heat Exchanger",
+"pdf": 81,
+"page": "13",
+"box": [
+80,
+125,
+568,
+462
+],
+"bytes": 88202
+},
+"me-02-fig9": {
+"module": "ME-02",
+"num": 9,
+"title": "Single-Pass Condenser",
+"pdf": 83,
+"page": "15",
+"box": [
+80,
+82,
+568,
+352
+],
+"bytes": 62555
+},
+"me-03-fig1": {
+"module": "ME-03",
+"num": 1,
+"title": "Centrifugal Pump",
+"pdf": 96,
+"page": "2",
+"box": [
+44,
+82,
+532,
+359
+],
+"bytes": 45957
+},
+"me-03-fig3": {
+"module": "ME-03",
+"num": 3,
+"title": "Centrifugal Pump Diffuser",
+"pdf": 97,
+"page": "3",
+"box": [
+260,
+85,
+568,
+357
+],
+"bytes": 44309
+},
+"me-03-fig6": {
+"module": "ME-03",
+"num": 6,
+"title": "Radial Flow Centrifugal Pump",
+"pdf": 99,
+"page": "5",
+"box": [
+80,
+82,
+568,
+305
+],
+"bytes": 51669
+},
+"me-03-fig7": {
+"module": "ME-03",
+"num": 7,
+"title": "Axial Flow Centrifugal Pump",
+"pdf": 99,
+"page": "5",
+"box": [
+80,
+432,
+568,
+667
+],
+"bytes": 34433
+},
+"me-03-fig8": {
+"module": "ME-03",
+"num": 8,
+"title": "Mixed Flow Centrifugal Pump",
+"pdf": 100,
+"page": "6",
+"box": [
+80,
+180,
+532,
+387
+],
+"bytes": 38755
+},
+"me-03-fig9": {
+"module": "ME-03",
+"num": 9,
+"title": "Multi-Stage Centrifugal Pump",
+"pdf": 101,
+"page": "7",
+"box": [
+80,
+82,
+568,
+413
+],
+"bytes": 124648
+},
+"me-03-fig10": {
+"module": "ME-03",
+"num": 10,
+"title": "Centrifugal Pump Components",
+"pdf": 102,
+"page": "8",
+"box": [
+44,
+82,
+532,
+467
+],
+"bytes": 67241
+},
+"me-03-fig11": {
+"module": "ME-03",
+"num": 11,
+"title": "Centrifugal Pump Characteristic Curve",
+"pdf": 108,
+"page": "14",
+"box": [
+89,
+499,
+487,
+702
+],
+"bytes": 10603
+},
+"me-03-fig12": {
+"module": "ME-03",
+"num": 12,
+"title": "Reciprocating Positive Displacement Pump Operation",
+"pdf": 113,
+"page": "19",
+"box": [
+80,
+183,
+568,
+437
+],
+"bytes": 29029
+},
+"me-03-fig13": {
+"module": "ME-03",
+"num": 13,
+"title": "Single-Acting and Double-Acting Pumps",
+"pdf": 115,
+"page": "21",
+"box": [
+80,
+82,
+568,
+449
+],
+"bytes": 36385
+},
+"me-03-fig14": {
+"module": "ME-03",
+"num": 14,
+"title": "Simple Gear Pump",
+"pdf": 116,
+"page": "22",
+"box": [
+242,
+367,
+532,
+603
+],
+"bytes": 29395
+},
+"me-03-fig16": {
+"module": "ME-03",
+"num": 16,
+"title": "Lobe Type Pump",
+"pdf": 118,
+"page": "24",
+"box": [
+282,
+85,
+532,
+299
+],
+"bytes": 28160
+},
+"me-03-fig17": {
+"module": "ME-03",
+"num": 17,
+"title": "Two-Screw, Low-Pitch, Screw Pump",
+"pdf": 119,
+"page": "25",
+"box": [
+80,
+82,
+330,
+359
+],
+"bytes": 48276
+},
+"me-03-fig18": {
+"module": "ME-03",
+"num": 18,
+"title": "Three-Screw, High-Pitch, Screw Pump",
+"pdf": 119,
+"page": "25",
+"box": [
+80,
+409,
+334,
+702
+],
+"bytes": 44573
+},
+"me-03-fig19": {
+"module": "ME-03",
+"num": 19,
+"title": "Rotary Moving Vane Pump",
+"pdf": 120,
+"page": "26",
+"box": [
+145,
+245,
+431,
+525
+],
+"bytes": 51229
+},
+"me-03-fig20": {
+"module": "ME-03",
+"num": 20,
+"title": "Diaphragm Pump",
+"pdf": 121,
+"page": "27",
+"box": [
+80,
+82,
+568,
+413
+],
+"bytes": 49898
+},
+"me-03-fig21": {
+"module": "ME-03",
+"num": 21,
+"title": "Positive Displacement Pump Characteristic Curve",
+"pdf": 121,
+"page": "27",
+"box": [
+372,
+477,
+568,
+658
+],
+"bytes": 7998
+},
+"np-01-fig1": {
+"module": "NP-01",
+"num": 1,
+"title": "Bohr's Model of the Hydrogen Atom",
+"pdf": 27,
+"page": "3",
+"box": [
+134,
+300,
+514,
+680
+],
+"bytes": 40554
+},
+"np-01-fig2": {
+"module": "NP-01",
+"num": 2,
+"title": "Nomenclature for Identifying Nuclides",
+"pdf": 29,
+"page": "5",
+"box": [
+400,
+72,
+560,
+236
+],
+"bytes": 10243
+},
+"np-01-fig6": {
+"module": "NP-01",
+"num": 6,
+"title": "Neutron - Proton Plot of the Stable Nuclides",
+"pdf": 38,
+"page": "14",
+"box": [
+44,
+197,
+532,
+523
+],
+"bytes": 25100
+},
+"np-01-fig7": {
+"module": "NP-01",
+"num": 7,
+"title": "Energy Level Diagram - Nickel-60",
+"pdf": 44,
+"page": "20",
+"box": [
+242,
+379,
+514,
+651
+],
+"bytes": 15500
+},
+"np-01-fig9": {
+"module": "NP-01",
+"num": 9,
+"title": "Types of Radioactive Decay Relative to the Line of Stability",
+"pdf": 52,
+"page": "28",
+"box": [
+44,
+72,
+532,
+700
+],
+"bytes": 66411
+},
+"np-01-fig10": {
+"module": "NP-01",
+"num": 10,
+"title": "Radioactive Decay as a Function of Time in Units of Half-Life",
+"pdf": 57,
+"page": "33",
+"box": [
+80,
+98,
+568,
+513
+],
+"bytes": 43248
+},
+"np-01-fig11": {
+"module": "NP-01",
+"num": 11,
+"title": "Linear and Semi-log Plots of Nitrogen-16 Decay",
+"pdf": 61,
+"page": "37",
+"box": [
+80,
+113,
+550,
+294
+],
+"bytes": 25988
+},
+"np-01-fig12": {
+"module": "NP-01",
+"num": 12,
+"title": "Combined Decay of Iron-56, Manganese-54, and Cobalt-60",
+"pdf": 62,
+"page": "38",
+"box": [
+62,
+154,
+532,
+426
+],
+"bytes": 36733
+},
+"np-01-fig14": {
+"module": "NP-01",
+"num": 14,
+"title": "Approach of Sodium-24 to Equilibrium",
+"pdf": 64,
+"page": "40",
+"box": [
+125,
+243,
+469,
+479
+],
+"bytes": 26926
+},
+"np-01-fig15": {
+"module": "NP-01",
+"num": 15,
+"title": "Transient Equilibrium in the Decay of Barium-140",
+"pdf": 65,
+"page": "41",
+"box": [
+80,
+194,
+550,
+501
+],
+"bytes": 40819
+},
+"np-01-fig16": {
+"module": "NP-01",
+"num": 16,
+"title": "Elastic Scattering",
+"pdf": 68,
+"page": "44",
+"box": [
+62,
+72,
+532,
+325
+],
+"bytes": 18006
+},
+"np-01-fig17": {
+"module": "NP-01",
+"num": 17,
+"title": "Inelastic Scattering",
+"pdf": 69,
+"page": "45",
+"box": [
+80,
+380,
+568,
+604
+],
+"bytes": 17409
+},
+"np-01-fig18": {
+"module": "NP-01",
+"num": 18,
+"title": "Liquid Drop Model of Fission",
+"pdf": 74,
+"page": "50",
+"box": [
+44,
+72,
+532,
+341
+],
+"bytes": 15457
+},
+"np-01-fig19": {
+"module": "NP-01",
+"num": 19,
+"title": "Conversion of Fertile Nuclides to Fissile Nuclides",
+"pdf": 76,
+"page": "52",
+"box": [
+44,
+240,
+532,
+511
+],
+"bytes": 22163
+},
+"np-01-fig20": {
+"module": "NP-01",
+"num": 20,
+"title": "Binding Energy per Nucleon vs. Mass Number",
+"pdf": 77,
+"page": "53",
+"box": [
+80,
+183,
+568,
+563
+],
+"bytes": 33829
+},
+"np-01-fig21": {
+"module": "NP-01",
+"num": 21,
+"title": "Uranium-235 Fission Yield vs. Mass Number",
+"pdf": 81,
+"page": "57",
+"box": [
+80,
+72,
+568,
+449
+],
+"bytes": 44790
+},
+"np-01-fig22": {
+"module": "NP-01",
+"num": 22,
+"title": "Change in Binding Energy for Typical Fission",
+"pdf": 82,
+"page": "58",
+"box": [
+44,
+72,
+532,
+449
+],
+"bytes": 24366
+},
+"np-02-fig1": {
+"module": "NP-02",
+"num": 1,
+"title": "Typical Neutron Absorption Cross Section vs. Neutron Energy",
+"pdf": 113,
+"page": "9",
+"box": [
+80,
+366,
+550,
+674
+],
+"bytes": 32462
+},
+"np-02-fig2": {
+"module": "NP-02",
+"num": 2,
+"title": "Prompt Fission Neutron Energy Spectrum for Thermal Fission of Uranium-235",
+"pdf": 137,
+"page": "33",
+"box": [
+254,
+430,
+558,
+673
+],
+"bytes": 21709
+},
+"np-02-fig3": {
+"module": "NP-02",
+"num": 3,
+"title": "Comparison of Neutron Flux Spectra for Thermal and Fast Breeder Reactor",
+"pdf": 138,
+"page": "34",
+"box": [
+62,
+187,
+532,
+487
+],
+"bytes": 40244
+},
+"np-03-fig3": {
+"module": "NP-03",
+"num": 3,
+"title": "Effect of Fuel Temperature on Resonance Absorption Peaks",
+"pdf": 51,
+"page": "27",
+"box": [
+80,
+72,
+568,
+341
+],
+"bytes": 31902
+},
+"np-03-fig8": {
+"module": "NP-03",
+"num": 8,
+"title": "Effect of Control Rod on Radial Flux Distribution",
+"pdf": 74,
+"page": "50",
+"box": [
+44,
+295,
+532,
+585
+],
+"bytes": 32986
+},
+"np-03-fig9": {
+"module": "NP-03",
+"num": 9,
+"title": "Integral Control Rod Worth",
+"pdf": 75,
+"page": "51",
+"box": [
+134,
+211,
+514,
+645
+],
+"bytes": 35144
+},
+"np-03-fig10": {
+"module": "NP-03",
+"num": 10,
+"title": "Differential Control Rod Worth",
+"pdf": 76,
+"page": "52",
+"box": [
+44,
+335,
+532,
+643
+],
+"bytes": 28303
+},
+"np-03-fig11": {
+"module": "NP-03",
+"num": 11,
+"title": "Rod Worth Curves for Example Problems",
+"pdf": 77,
+"page": "53",
+"box": [
+80,
+181,
+568,
+417
+],
+"bytes": 36203
+},
+"np-04-fig1": {
+"module": "NP-04",
+"num": 1,
+"title": "1/M Plot vs. Rod Withdrawal",
+"pdf": 100,
+"page": "8",
+"box": [
+44,
+349,
+532,
+621
+],
+"bytes": 21112
+},
+"np-04-fig2": {
+"module": "NP-04",
+"num": 2,
+"title": "Reactor Power Response to Positive Reactivity Addition",
+"pdf": 106,
+"page": "14",
+"box": [
+62,
+350,
+550,
+688
+],
+"bytes": 19803
+},
+"np-04-fig3": {
+"module": "NP-04",
+"num": 3,
+"title": "Reactor Power Response to Negative Reactivity Addition",
+"pdf": 107,
+"page": "15",
+"box": [
+62,
+152,
+550,
+489
+],
+"bytes": 18695
+},
+"np-04-fig5": {
+"module": "NP-04",
+"num": 5,
+"title": "Effect of Non-Uniform Enrichment on Radial Flux Shape",
+"pdf": 118,
+"page": "26",
+"box": [
+44,
+497,
+532,
+693
+],
+"bytes": 23680
+},
+"me-05-fig1": {
+"module": "ME-05",
+"num": 1,
+"title": "Reciprocating Air Compressor",
+"pdf": 84,
+"page": "2",
+"box": [
+44,
+82,
+532,
+467
+],
+"bytes": 103420
+},
+"me-05-fig2": {
+"module": "ME-05",
+"num": 2,
+"title": "Single-Acting Air Compressor Cylinder",
+"pdf": 85,
+"page": "3",
+"box": [
+80,
+125,
+568,
+487
+],
+"bytes": 70756
+},
+"me-05-fig3": {
+"module": "ME-05",
+"num": 3,
+"title": "Rotary Slide Vane Air Compressor",
+"pdf": 86,
+"page": "4",
+"box": [
+62,
+281,
+514,
+517
+],
+"bytes": 67486
+},
+"me-05-fig4": {
+"module": "ME-05",
+"num": 4,
+"title": "Rotary Lobe Air Compressor",
+"pdf": 87,
+"page": "5",
+"box": [
+298,
+82,
+568,
+305
+],
+"bytes": 42239
+},
+"me-05-fig5": {
+"module": "ME-05",
+"num": 5,
+"title": "Rotary Liquid Seal Ring Air Compressor",
+"pdf": 87,
+"page": "5",
+"box": [
+134,
+447,
+514,
+675
+],
+"bytes": 60654
+},
+"me-05-fig6": {
+"module": "ME-05",
+"num": 6,
+"title": "Simplified Centrifugal Pump",
+"pdf": 88,
+"page": "6",
+"box": [
+262,
+82,
+532,
+323
+],
+"bytes": 30853
+},
+"me-05-fig7": {
+"module": "ME-05",
+"num": 7,
+"title": "Compressor Air Cooler",
+"pdf": 89,
+"page": "7",
+"box": [
+80,
+237,
+568,
+433
+],
+"bytes": 14219
+},
+"me-05-fig8": {
+"module": "ME-05",
+"num": 8,
+"title": "Basic Hydraulic System",
+"pdf": 94,
+"page": "12",
+"box": [
+44,
+82,
+532,
+399
+],
+"bytes": 27398
+},
+"me-05-fig9": {
+"module": "ME-05",
+"num": 9,
+"title": "Typical Fuel Boiler",
+"pdf": 97,
+"page": "15",
+"box": [
+80,
+123,
+568,
+683
+],
+"bytes": 134059
+},
+"me-05-fig10": {
+"module": "ME-05",
+"num": 10,
+"title": "Cooling System Containing Cooling Tower",
+"pdf": 100,
+"page": "18",
+"box": [
+44,
+448,
+532,
+670
+],
+"bytes": 38589
+},
+"me-05-fig11": {
+"module": "ME-05",
+"num": 11,
+"title": "Induced Draft Cooling Tower",
+"pdf": 101,
+"page": "19",
+"box": [
+80,
+281,
+568,
+607
+],
+"bytes": 91106
+},
+"me-05-fig12": {
+"module": "ME-05",
+"num": 12,
+"title": "Natural Convection Cooling Tower",
+"pdf": 104,
+"page": "22",
+"box": [
+98,
+125,
+478,
+527
+],
+"bytes": 43296
+},
+"me-05-fig13": {
+"module": "ME-05",
+"num": 13,
+"title": "Single-Bed Demineralizer",
+"pdf": 107,
+"page": "25",
+"box": [
+80,
+139,
+568,
+429
+],
+"bytes": 30026
+},
+"me-05-fig14": {
+"module": "ME-05",
+"num": 14,
+"title": "Regeneration of a Mixed-Bed Demineralizer",
+"pdf": 109,
+"page": "27",
+"box": [
+80,
+82,
+568,
+665
+],
+"bytes": 75726
+},
+"me-05-fig16": {
+"module": "ME-05",
+"num": 16,
+"title": "Ball Float Steam Trap",
+"pdf": 117,
+"page": "35",
+"box": [
+296,
+336,
+568,
+608
+],
+"bytes": 52505
+},
+"me-05-fig17": {
+"module": "ME-05",
+"num": 17,
+"title": "Bucket Steam Trap",
+"pdf": 118,
+"page": "36",
+"box": [
+262,
+82,
+532,
+287
+],
+"bytes": 32437
+},
+"me-05-fig18": {
+"module": "ME-05",
+"num": 18,
+"title": "Bellows-Type Steam Trap",
+"pdf": 118,
+"page": "36",
+"box": [
+116,
+462,
+460,
+690
+],
+"bytes": 42819
+},
+"me-05-fig19": {
+"module": "ME-05",
+"num": 19,
+"title": "Impulse Steam Trap",
+"pdf": 119,
+"page": "37",
+"box": [
+80,
+239,
+568,
+619
+],
+"bytes": 90909
+},
+"me-05-fig20": {
+"module": "ME-05",
+"num": 20,
+"title": "Typical Multi-Cartridge Filter",
+"pdf": 123,
+"page": "41",
+"box": [
+80,
+82,
+568,
+291
+],
+"bytes": 42296
+},
+"me-05-fig21": {
+"module": "ME-05",
+"num": 21,
+"title": "Cartridge Filter",
+"pdf": 123,
+"page": "41",
+"box": [
+80,
+419,
+337,
+618
+],
+"bytes": 19659
+},
+"me-05-fig22": {
+"module": "ME-05",
+"num": 22,
+"title": "Deep-Bed Filter",
+"pdf": 126,
+"page": "44",
+"box": [
+242,
+295,
+532,
+675
+],
+"bytes": 119527
+},
+"me-05-fig23": {
+"module": "ME-05",
+"num": 23,
+"title": "Y-strainer",
+"pdf": 127,
+"page": "45",
+"box": [
+170,
+363,
+478,
+526
+],
+"bytes": 33210
+},
+"me-05-fig24": {
+"module": "ME-05",
+"num": 24,
+"title": "Common Strainers",
+"pdf": 128,
+"page": "46",
+"box": [
+44,
+120,
+532,
+517
+],
+"bytes": 121929
+},
+"me-04-fig1": {
+"module": "ME-04",
+"num": 1,
+"title": "Basic Parts of a Valve",
+"pdf": 22,
+"page": "2",
+"box": [
+238,
+197,
+532,
+620
+],
+"bytes": 39790
+},
+"me-04-fig2": {
+"module": "ME-04",
+"num": 2,
+"title": "Rising Stems",
+"pdf": 24,
+"page": "4",
+"box": [
+80,
+337,
+496,
+645
+],
+"bytes": 50897
+},
+"me-04-fig3": {
+"module": "ME-04",
+"num": 3,
+"title": "Nonrising Stems",
+"pdf": 25,
+"page": "5",
+"box": [
+80,
+82,
+568,
+323
+],
+"bytes": 45594
+},
+"me-04-fig4": {
+"module": "ME-04",
+"num": 4,
+"title": "Gate Valve",
+"pdf": 29,
+"page": "9",
+"box": [
+80,
+82,
+568,
+690
+],
+"bytes": 147625
+},
+"me-04-fig9": {
+"module": "ME-04",
+"num": 9,
+"title": "Z-Body Globe Valve",
+"pdf": 35,
+"page": "15",
+"box": [
+304,
+82,
+568,
+421
+],
+"bytes": 43242
+},
+"me-04-fig12": {
+"module": "ME-04",
+"num": 12,
+"title": "Typical Ball Valve",
+"pdf": 39,
+"page": "19",
+"box": [
+80,
+82,
+568,
+503
+],
+"bytes": 60058
+},
+"me-04-fig13": {
+"module": "ME-04",
+"num": 13,
+"title": "Plug Valve",
+"pdf": 41,
+"page": "21",
+"box": [
+80,
+183,
+568,
+599
+],
+"bytes": 63207
+},
+"me-04-fig14": {
+"module": "ME-04",
+"num": 14,
+"title": "Straight Through Diaphragm Valve",
+"pdf": 44,
+"page": "24",
+"box": [
+71,
+494,
+505,
+683
+],
+"bytes": 34933
+},
+"me-04-fig15": {
+"module": "ME-04",
+"num": 15,
+"title": "Weir Diaphragm Valve",
+"pdf": 46,
+"page": "26",
+"box": [
+44,
+82,
+532,
+679
+],
+"bytes": 134804
+},
+"me-04-fig16": {
+"module": "ME-04",
+"num": 16,
+"title": "Variable Reducing Valve",
+"pdf": 48,
+"page": "28",
+"box": [
+89,
+183,
+487,
+563
+],
+"bytes": 77372
+},
+"me-04-fig18": {
+"module": "ME-04",
+"num": 18,
+"title": "Pinch Valves",
+"pdf": 50,
+"page": "30",
+"box": [
+242,
+183,
+532,
+475
+],
+"bytes": 67674
+},
+"me-04-fig19": {
+"module": "ME-04",
+"num": 19,
+"title": "Typical Butterfly Valve",
+"pdf": 51,
+"page": "31",
+"box": [
+260,
+309,
+568,
+671
+],
+"bytes": 65787
+},
+"me-04-fig20": {
+"module": "ME-04",
+"num": 20,
+"title": "Needle Valve",
+"pdf": 53,
+"page": "33",
+"box": [
+296,
+181,
+568,
+579
+],
+"bytes": 39798
+},
+"me-04-fig22": {
+"module": "ME-04",
+"num": 22,
+"title": "Swing Check Valve",
+"pdf": 55,
+"page": "35",
+"box": [
+98,
+297,
+550,
+569
+],
+"bytes": 34066
+},
+"me-04-fig24": {
+"module": "ME-04",
+"num": 24,
+"title": "Lift Check Valve",
+"pdf": 57,
+"page": "37",
+"box": [
+116,
+379,
+532,
+665
+],
+"bytes": 35841
+},
+"me-04-fig27": {
+"module": "ME-04",
+"num": 27,
+"title": "Stop Check Valve",
+"pdf": 60,
+"page": "40",
+"box": [
+44,
+82,
+360,
+449
+],
+"bytes": 37349
+},
+"me-04-fig28": {
+"module": "ME-04",
+"num": 28,
+"title": "Relief Valve",
+"pdf": 61,
+"page": "41",
+"box": [
+80,
+82,
+568,
+503
+],
+"bytes": 49894
+},
+"me-04-fig29": {
+"module": "ME-04",
+"num": 29,
+"title": "Safety Valve",
+"pdf": 62,
+"page": "42",
+"box": [
+44,
+82,
+532,
+521
+],
+"bytes": 81559
+},
+"me-04-fig30": {
+"module": "ME-04",
+"num": 30,
+"title": "Fixed Handwheel",
+"pdf": 64,
+"page": "44",
+"box": [
+231,
+450,
+532,
+650
+],
+"bytes": 34025
+},
+"me-04-fig31": {
+"module": "ME-04",
+"num": 31,
+"title": "Hammer Handwheel",
+"pdf": 65,
+"page": "45",
+"box": [
+90,
+82,
+384,
+341
+],
+"bytes": 45418
+},
+"me-04-fig32": {
+"module": "ME-04",
+"num": 32,
+"title": "Manual Gear Head",
+"pdf": 65,
+"page": "45",
+"box": [
+278,
+395,
+568,
+630
+],
+"bytes": 11046
+},
+"me-04-fig33": {
+"module": "ME-04",
+"num": 33,
+"title": "Electric Motor Actuator",
+"pdf": 66,
+"page": "46",
+"box": [
+44,
+253,
+532,
+525
+],
+"bytes": 25385
+},
+"me-04-fig34": {
+"module": "ME-04",
+"num": 34,
+"title": "Pneumatic Actuator",
+"pdf": 67,
+"page": "47",
+"box": [
+246,
+82,
+568,
+575
+],
+"bytes": 79247
+},
+"me-04-fig35": {
+"module": "ME-04",
+"num": 35,
+"title": "Solenoid Actuated Valve",
+"pdf": 68,
+"page": "48",
+"box": [
+224,
+99,
+532,
+479
+],
+"bytes": 49530
+}
+}

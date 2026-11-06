@@ -1,0 +1,1639 @@
+{
+ "module_id": "CH-01",
+ "slug": "ch-01-fundamentals-of-chemistry",
+ "title": "Fundamentals of Chemistry",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1015-V1",
+ "handbook": "DOE-HDBK-1015/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Demineralizers and Ion Exchangers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the characteristics of an atom.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. States of matter",
+      "b. Atomic weight",
+      "c. Molecular weight",
+      "d. Mole",
+      "e. Gram atomic weight",
+      "f. Gram molecular weight"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "LIST the components of an atom, their relative sizes, and charges.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the criterion used to classify an atom chemically.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DEFINE the following subdivisions of the periodic table:",
+     "items": [
+      "a. Periods of the periodic table",
+      "b. Groups of the periodic table",
+      "c. Classes of the periodic table"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a periodic table, IDENTIFY the following subdivisions:",
+     "items": [
+      "a. Periods of the periodic table",
+      "b. Groups of the periodic table",
+      "c. Classes of the periodic table"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "LIST the characteristics that elements in the same group on the periodic table share.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DEFINE the term valence.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "Given an incomplete chemical equation, BALANCE the equation by the method presented.",
+   "items": [],
+   "page": {
+    "pdf": 20,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Ionic bonds",
+      "b. Van der Waals forces",
+      "c. Covalent bonds",
+      "d. Metallic bonds"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "DESCRIBE the physical arrangement and bonding of a polar molecule.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "DESCRIBE the three basic laws of chemical reactions.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "STATE how elements combine to form chemical compounds.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "EXPLAIN the probability of any two elements combining to form a compound.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Mixture",
+      "b. Solvent",
+      "c. Solubility",
+      "d. Solute",
+      "e. Solution",
+      "f. Equilibrium"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "STATE Le Chatelier’s principle.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. ppm",
+      "b. Molarity",
+      "c. Density",
+      "d. Normality"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "BALANCE chemical equations that combine elements and/or compounds.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "3.0",
+   "text": "Given sufficient information about a solution, CALCULATE the pH and pOH of the solution.",
+   "items": [],
+   "page": {
+    "pdf": 21,
+    "printed": "ix"
+   },
+   "enabling": [
+    {
+     "number": "3.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Acid",
+      "b. Salt",
+      "c. pOH",
+      "d. Alkalies",
+      "e. Base",
+      "f. pH",
+      "g. Dissociation constant of water"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.2",
+     "text": "STATE the formula for pH.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.3",
+     "text": "STATE the formula for pOH.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.4",
+     "text": "CALCULATE the pH of a specified solution.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The term states of matter refers to the physical forms in which matter exists: solid, liquid, and gas.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "An atom is composed of a positively-charged nucleus orbited by one or more negatively-charged particles called electrons.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "Together the neutrons and protons give the nucleus its mass, but the proton alone gives the nucleus its positive charge.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "They are very small, with a mass only 1/1835 the mass of a proton or neutron.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "An atom is classified chemically by the number of protons in its nucleus.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "Atoms of the same element with different atomic mass numbers are called isotopes.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "atomic weight of an element is defined as the weighted average of the masses of all of its natural occurring isotopes.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "The weight of a molecule, the molecular weight, is the total mass of the individual atoms.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.7"
+  },
+  {
+   "id": "P9",
+   "quote": "In other words, a mole is Avogadro's number of anything.",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.9"
+  },
+  {
+   "id": "P10",
+   "quote": "The mass of a mole of atoms is called the gram atomic weight (GAW).",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.9"
+  },
+  {
+   "id": "P11",
+   "quote": "The mass of a mole of molecules is called the molar mass or gram molecular weight(GMW).",
+   "sec": "Characteristics of Atoms",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.10"
+  },
+  {
+   "id": "P12",
+   "quote": "Each horizontal row is called a period.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.14"
+  },
+  {
+   "id": "P13",
+   "quote": "Elements with similar chemical properties appear in vertical columns called groups.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.14"
+  },
+  {
+   "id": "P14",
+   "quote": "These are the metals, the non-metals, and the semi-metals.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.16"
+  },
+  {
+   "id": "P15",
+   "quote": "Metals tend to lose electrons to form positive ions rather than to gain electrons and become negative ions.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.16"
+  },
+  {
+   "id": "P16",
+   "quote": "Nonmetals tend to gain electrons to form negative ions rather than to lose electrons to form positive ions.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.17"
+  },
+  {
+   "id": "P17",
+   "quote": "Their reactions with water range from violent with sodium and potassium to imperceptible with gold and platinum.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.17"
+  },
+  {
+   "id": "P18",
+   "quote": "The light metals, which are soft, have a low density, are very reactive chemically, and are unsatisfactory as structural materials.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.17"
+  },
+  {
+   "id": "P19",
+   "quote": "The transition metals, which are hard, have a high density, do not react readily, and are useful structural materials.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.17"
+  },
+  {
+   "id": "P20",
+   "quote": "The most accurate observation is that all elements within a particular group have similar physical and chemical properties.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.18"
+  },
+  {
+   "id": "P21",
+   "quote": "The most active metals are the members of the Alkali Family",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.19"
+  },
+  {
+   "id": "P22",
+   "quote": "The term valence (of an atom) is defined as the number of electrons an element gains or loses, or the number of pairs of electrons it shares when it interacts with other elements.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.21"
+  },
+  {
+   "id": "P23",
+   "quote": "In general, the fewer electrons an element must lose, gain, or share to reach a stable shell structure, the more chemically active the element is.",
+   "sec": "The Periodic Table",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.21"
+  },
+  {
+   "id": "P24",
+   "quote": "An ionic bond is formed when one or more electrons is wholly transferred from one element to another, and the elements are held together by the force of attraction due to the opposing charges.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.24"
+  },
+  {
+   "id": "P25",
+   "quote": "A covalent bond is formed when one or more electrons from an atom pair off with one or more electrons from another atom and form overlapping electron shells in which both atoms share the paired electrons.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.25"
+  },
+  {
+   "id": "P26",
+   "quote": "When the shared pair of electrons is not shared equally, one end of the bond is positive, and the other end is negative.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.26"
+  },
+  {
+   "id": "P27",
+   "quote": "Water is an example of a polar molecule.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.27"
+  },
+  {
+   "id": "P28",
+   "quote": "In the metallic bond, an atom achieves a more stable configuration by sharing the electrons in its outer shell with many other atoms.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.27"
+  },
+  {
+   "id": "P29",
+   "quote": "These forces are generally believed to be caused by a temporary dipole, or unequal charge distribution, as electrons constantly move about in an atom, ion, or molecule.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.27"
+  },
+  {
+   "id": "P30",
+   "quote": "This law states that in a chemical reaction the total mass of the products equals the total mass of the reactants.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+  },
+  {
+   "id": "P31",
+   "quote": "it always contains the same elements in the same proportions by mass.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+  },
+  {
+   "id": "P32",
+   "quote": "the masses of one of the elements combining with a fixed mass of the other are in a simple ratio to one another.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+  },
+  {
+   "id": "P33",
+   "quote": "If two substances are placed together in a container, in any ratio, the result is a mixture.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P34",
+   "quote": "A homogeneous mixture of two or more substances is called a solution.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P35",
+   "quote": "The solvent is the material that dissolves the other substance(s).",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P36",
+   "quote": "The substances that dissolve in the solution are called solutes.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P37",
+   "quote": "Solubility is defined as the maximum amount of a substance that can dissolve in a given amount of solvent at a specific temperature.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P38",
+   "quote": "Equilibrium is the point at which the rates of the forward and reverse reactions are exactly equal for a chemical reaction if the conditions of reaction are constant.",
+   "sec": "Chemical Bonding",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+  },
+  {
+   "id": "P39",
+   "quote": "Le Chatelier's Principle states that if a stress (for example, heat, pressure, concentration of one reactant) is applied to an equilibrium, the system will adjust, if possible, to minimize the effect of the stress.",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.36"
+  },
+  {
+   "id": "P40",
+   "quote": "Density is the measure of the mass per unit volume of a material",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.37"
+  },
+  {
+   "id": "P41",
+   "quote": "Molarity is defined as moles of solute per liter of solution.",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.37"
+  },
+  {
+   "id": "P42",
+   "quote": "Normality (N) is defined as the number of equivalents of solute dissolved in one liter of solution.",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.38"
+  },
+  {
+   "id": "P43",
+   "quote": "One ppm equals one milligram of solute per liter of solution.",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.39"
+  },
+  {
+   "id": "P44",
+   "quote": "a chemical equation must be balanced so that there are exactly the same number of atoms of each element on each side of the equation.",
+   "sec": "Chemical Equations",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.40"
+  },
+  {
+   "id": "P45",
+   "quote": "Acids are substances that dissociate in water to produce hydrogen (H+).",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.46"
+  },
+  {
+   "id": "P46",
+   "quote": "Bases are substances that produce hydroxide ions (OH-) in water solutions.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.47"
+  },
+  {
+   "id": "P47",
+   "quote": "A salt is an ionic compound composed of positive ions and negative ions.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+  },
+  {
+   "id": "P48",
+   "quote": "Certain soluble salts (principally sodium, potassium, magnesium, and calcium) that have the property of combining with acids to form neutral salts are called alkalies.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+  },
+  {
+   "id": "P49",
+   "quote": "This type of acid-base reaction is called neutralization.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+  },
+  {
+   "id": "P50",
+   "quote": "pH = -log [H+]",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+  },
+  {
+   "id": "P51",
+   "quote": "The pOH of a solution is defined as the negative logarithm of the hydroxyl concentration, represented as [OH-] in moles/liter.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.49"
+  },
+  {
+   "id": "P52",
+   "quote": "It should be noted that the equation pH + pOH = 14 is true only at or near 25",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.50"
+  },
+  {
+   "id": "P53",
+   "quote": "pH values less than 7 indicate an acidic solution and values greater than 7 indicate a basic or alkaline solution.",
+   "sec": "Acids, Bases, Salts, and pH",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.51"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Matter and the atom",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Solids have a definite shape and volume. Liquids have definite volumes but indefinite shapes. Gases have indefinite shape and volume.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "ch-01-fig1",
+     "num": 1,
+     "cap": "Schematic of a Simple Atom (Helium)",
+     "alt": "Simple helium atom: a nucleus of protons and neutrons, with electrons orbiting it.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Electron: relative mass 0.00055 amu, relative charge -1",
+      "Proton: relative mass 1.0 amu, relative charge +1",
+      "Neutron: relative mass 1.0 amu, relative charge 0"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The diameter of an atom is about 10⁻⁸ cm, and the nucleus is roughly 10,000 times smaller.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What is used to classify an atom chemically?",
+     "o": [
+      "Its atomic weight",
+      "Its state of matter",
+      "The number of protons in its nucleus",
+      "The number of neutrons"
+     ],
+     "a": 2,
+     "x": "An atom is classified chemically by the number of protons in its nucleus.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which atomic particle gives the nucleus its positive charge?",
+     "o": [
+      "The proton",
+      "The neutron",
+      "The electron",
+      "The positron"
+     ],
+     "a": 0,
+     "x": "The proton alone gives the nucleus its positive charge.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "What are the three states of matter?",
+     "o": [
+      "Solid, liquid, and gas",
+      "Atom, molecule, and ion",
+      "Metal, non-metal, and semi-metal",
+      "Acid, base, and salt"
+     ],
+     "a": 0,
+     "x": "States of matter refers to the physical forms solid, liquid, and gas.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "Atomic weight and the mole",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Atomic masses are given in atomic mass units (amu). 1 amu is defined as 1/12 the mass of the carbon-12 atom.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.4"
+    },
+    {
+     "t": "p",
+     "text": "The",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Avogadro's number is 6.022 x 10²³.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is a mole?",
+     "o": [
+      "The number of protons in an atom",
+      "One liter of solution",
+      "Avogadro's number of anything",
+      "The mass of one atom"
+     ],
+     "a": 2,
+     "x": "A mole is Avogadro's number of anything.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the gram molecular weight?",
+     "o": [
+      "The mass of one molecule",
+      "The number of atoms in a molecule",
+      "The mass of a mole of electrons",
+      "The mass of a mole of molecules"
+     ],
+     "a": 3,
+     "x": "The mass of a mole of molecules is called the molar mass or gram molecular weight.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "The periodic table",
+   "eo": [
+    "1.4",
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "ch-01-fig4",
+     "num": 4,
+     "cap": "Regional Schematic of Periodic Table",
+     "alt": "Regional schematic of the periodic table, with metals to the left and center, semi-metals along a stepped line, and non-metals to the right.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Semi-metals exhibit metal properties under some conditions and non-metal properties under others.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Group IA: Alkali Family, soft metals",
+      "Group IIA: Alkaline Earth Family",
+      "Group VIA: Oxygen Family",
+      "Group VIIA: Halogen Family",
+      "Group 0: inert gases, unreactive"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What is a horizontal row of the periodic table called?",
+     "o": [
+      "A family",
+      "A period",
+      "A group",
+      "A class"
+     ],
+     "a": 1,
+     "x": "Each horizontal row is called a period.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.6",
+     "q": "What do elements in the same group share?",
+     "o": [
+      "The same number of neutrons",
+      "The same state at room temperature only",
+      "Similar physical and chemical properties",
+      "The same atomic weight"
+     ],
+     "a": 2,
+     "x": "All elements within a particular group have similar physical and chemical properties.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.4",
+     "q": "What are the three classes of the periodic table?",
+     "o": [
+      "Solids, liquids, and gases",
+      "Periods, groups, and families",
+      "Acids, bases, and salts",
+      "Metals, non-metals, and semi-metals"
+     ],
+     "a": 3,
+     "x": "The three broad classes are the metals, the non-metals, and the semi-metals.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.5",
+     "q": "How does sodium react with water, according to the handbook?",
+     "o": [
+      "Imperceptibly",
+      "Only when heated above boiling",
+      "It does not react",
+      "Violently"
+     ],
+     "a": 3,
+     "x": "Reactions of metals with water range from violent with sodium and potassium to imperceptible with gold and platinum.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Electron shells and valence",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ch-01-fig5",
+     "num": 5,
+     "cap": "Electron Shells of Atoms",
+     "alt": "Concentric circles showing electron shells around nuclei of several atoms.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Electrons occupy shells at discrete energy levels. Electrons always seek the lowest energy state available.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Chemical reactions involve primarily the electrons in the outermost shell, called the valence shell.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "For A group elements, the number of valence electrons is the same as the group number.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What is the valence of an atom?",
+     "o": [
+      "Its atomic mass number",
+      "The number of shells",
+      "The number of electrons it gains, loses, or pairs of electrons it shares when interacting",
+      "The number of protons"
+     ],
+     "a": 2,
+     "x": "Valence is the number of electrons an element gains or loses, or the number of pairs it shares.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Chemical bonds",
+   "eo": [
+    "2.1",
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "fig",
+     "id": "ch-01-fig6",
+     "num": 6,
+     "cap": "Ionic Bond, Sodium Chloride",
+     "alt": "Sodium atom giving an outer electron to a chlorine atom, and the resulting three-dimensional arrangement of ions.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "fig",
+     "id": "ch-01-fig7",
+     "num": 7,
+     "cap": "Covalent Bond, Methane CH4",
+     "alt": "Methane molecule: one carbon atom sharing electron pairs with four hydrogen atoms.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.25"
+    },
+    {
+     "t": "p",
+     "text": "Covalent bonding can be single, double, or triple, depending on the number of pairs of electrons shared.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.25"
+    },
+    {
+     "t": "fig",
+     "id": "ch-01-fig8",
+     "num": 8,
+     "cap": "Formation of the Carbon Dioxide Molecule",
+     "alt": "Carbon dioxide: a carbon atom sharing two electron pairs with each of two oxygen atoms.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Valence electrons move among atoms in a metal crystal, which is why most metals are malleable and ductile.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "Van der Waals forces are small compared to the forces of chemical bonding.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.28"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q493",
+     "eo": "2.1"
+    },
+    {
+     "eo": "2.1",
+     "q": "In which bond do two atoms share paired electrons in overlapping shells?",
+     "o": [
+      "Covalent",
+      "Ionic",
+      "Metallic",
+      "Van der Waals"
+     ],
+     "a": 0,
+     "x": "A covalent bond forms overlapping electron shells in which both atoms share the paired electrons.",
+     "p": "P25"
+    },
+    {
+     "eo": "2.2",
+     "q": "What makes a molecule polar?",
+     "o": [
+      "Equal sharing of electrons",
+      "Complete transfer of an electron",
+      "Having no electrons",
+      "Electrons shared unequally, giving a positive end and a negative end"
+     ],
+     "a": 3,
+     "x": "When a pair is not shared equally, one end of the bond is positive and the other negative.",
+     "p": "P26"
+    },
+    {
+     "eo": "2.1",
+     "q": "What causes van der Waals forces?",
+     "o": [
+      "Transfer of electrons",
+      "Sharing of valence electrons by a crystal",
+      "A neutron in the nucleus",
+      "A temporary dipole"
+     ],
+     "a": 3,
+     "x": "They are generally believed to be caused by a temporary dipole, or unequal charge distribution.",
+     "p": "P29"
+    }
+   ]
+  },
+  {
+   "title": "Chemical laws and combining elements",
+   "eo": [
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Law of Conservation of Mass:",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "The Law of Definite Proportions says that however a compound is prepared,",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "The Law of Multiple Proportions says that if two elements form more than one compound,",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Regardless of the type of bond, specific amounts of one element react with specific amounts of the element it combines with.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.33"
+    },
+    {
+     "t": "p",
+     "text": "The likelihood of elements forming compounds is strongly influenced by the valence shell and by the stability of the resulting molecule.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.35"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.3",
+     "q": "What does the Law of Conservation of Mass state?",
+     "o": [
+      "A compound always has the same elements in the same proportions",
+      "Masses combine in simple ratios",
+      "Energy cannot be destroyed",
+      "The total mass of the products equals the total mass of the reactants"
+     ],
+     "a": 3,
+     "x": "In a chemical reaction the total mass of the products equals the total mass of the reactants.",
+     "p": "P30"
+    },
+    {
+     "eo": "2.3",
+     "q": "Carbon forms CO and CO2, with oxygen masses in a 2:1 ratio. Which law does this show?",
+     "o": [
+      "Law of Conservation of Mass",
+      "Le Chatelier's Principle",
+      "Law of Multiple Proportions",
+      "Law of Definite Proportions"
+     ],
+     "a": 2,
+     "x": "The masses combining with a fixed mass of the other element are in a simple ratio.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Mixtures and solutions",
+   "eo": [
+    "2.6",
+    "2.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "If dissolving consumes heat, a temperature rise increases solubility. If dissolving gives off heat, a temperature rise decreases it.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.36"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.7",
+     "q": "What does Le Chatelier's Principle state?",
+     "o": [
+      "Stress on a system is always permanent",
+      "Reactions always run to completion",
+      "A system at equilibrium adjusts to minimize the effect of a stress",
+      "Mass is conserved in a reaction"
+     ],
+     "a": 2,
+     "x": "If a stress is applied to an equilibrium, the system will adjust, if possible, to minimize its effect.",
+     "p": "P39"
+    },
+    {
+     "eo": "2.6",
+     "q": "What is solubility?",
+     "o": [
+      "The mass of a solute",
+      "The temperature of a solution",
+      "The maximum amount of a substance that can dissolve in a given amount of solvent at a specific temperature",
+      "The speed of a reaction"
+     ],
+     "a": 2,
+     "x": "Solubility is the maximum amount of a substance that can dissolve in a given amount of solvent at a specific temperature.",
+     "p": "P37"
+    },
+    {
+     "eo": "2.6",
+     "q": "In a solution, what is the solvent?",
+     "o": [
+      "A solid left behind",
+      "The container",
+      "The material that dissolves the other substances",
+      "The substance that dissolves"
+     ],
+     "a": 2,
+     "x": "The solvent is the dissolving medium.",
+     "p": "P35"
+    }
+   ]
+  },
+  {
+   "title": "Concentration and balancing equations",
+   "eo": [
+    "2.8",
+    "2.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "One ppb is equal to one microgram solute per liter of solution.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.39"
+    },
+    {
+     "t": "p",
+     "text": "In a chemical equation, reactants are on the left of the arrow and products on the right.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Do not change a compound's correct formula",
+      "Start with the compound with the most atoms, usually not with hydrogen, oxygen, or a polyatomic ion",
+      "Balance each element with coefficients",
+      "Balance polyatomic ions, then hydrogen, then oxygen",
+      "Use whole number coefficients at the lowest ratios"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.41"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q494",
+     "eo": "2.9"
+    },
+    {
+     "eo": "2.8",
+     "q": "What does one ppm equal?",
+     "o": [
+      "One microgram per liter",
+      "One milligram of solute per liter of solution",
+      "One gram of solute per liter",
+      "One mole per liter"
+     ],
+     "a": 1,
+     "x": "One ppm equals one milligram of solute per liter of solution.",
+     "p": "P43"
+    },
+    {
+     "eo": "2.8",
+     "q": "What is molarity?",
+     "o": [
+      "Mass per unit volume",
+      "Grams per mole",
+      "Moles of solute per liter of solution",
+      "Equivalents per liter"
+     ],
+     "a": 2,
+     "x": "Molarity is defined as moles of solute per liter of solution.",
+     "p": "P41"
+    }
+   ]
+  },
+  {
+   "title": "Acids, bases, and salts",
+   "eo": [
+    "3.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "Acid solutions taste sour and react with many metals to form hydrogen gas.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.46"
+    },
+    {
+     "t": "p",
+     "text": "Acids turn litmus paper red and conduct electricity.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "Basic solutions taste bitter, feel slippery, turn litmus blue, conduct electricity, and neutralize acids.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "An acid and a base react to form water and a salt.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3.1",
+     "q": "What are bases?",
+     "o": [
+      "Substances that produce hydroxide ions in water solutions",
+      "Substances that produce hydrogen in water",
+      "Compounds of positive and negative ions only",
+      "Neutral metals"
+     ],
+     "a": 0,
+     "x": "Bases are substances that produce hydroxide ions (OH-) in water solutions.",
+     "p": "P46"
+    },
+    {
+     "eo": "3.1",
+     "q": "What two products form when an acid reacts with a base?",
+     "o": [
+      "Water and a salt",
+      "Hydrogen and oxygen",
+      "An alkali and a gas",
+      "Carbon dioxide and a metal"
+     ],
+     "a": 0,
+     "x": "When an acid reacts with a base, water and a salt are formed.",
+     "p": "P47"
+    }
+   ]
+  },
+  {
+   "title": "pH and pOH",
+   "eo": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "eq",
+     "text": "pH = -log [H+]    [H+] = 10⁻ᵖᴴ",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "eq",
+     "text": "pOH = -log [OH-]",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.49"
+    },
+    {
+     "t": "p",
+     "text": "For water solutions at 25 °C, the product of the hydrogen and hydroxyl concentrations is 1 x 10⁻¹⁴, so pH + pOH = 14.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.49"
+    },
+    {
+     "t": "p",
+     "text": "This product, Kw, is called the Ion Product Constant, Ionization Constant, or Dissociation Constant. It varies with temperature.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.50"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "p",
+     "text": "The pH of pure water at 25 °C is 7.",
+     "cite": "DOE-HDBK-1015/1-93 CH-01 p.51"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q444",
+     "eo": "3.2"
+    },
+    {
+     "eo": "3.3",
+     "q": "What is the formula for pOH?",
+     "o": [
+      "pOH = 14 x pH",
+      "pOH = [OH-] / [H+]",
+      "pOH = -log [OH-]",
+      "pOH = log [H+]"
+     ],
+     "a": 2,
+     "x": "The pOH is the negative logarithm of the hydroxyl concentration.",
+     "p": "P51"
+    },
+    {
+     "eo": "3.1",
+     "q": "A solution has a pH of 5 at 25 °C. What is it?",
+     "o": [
+      "Neutral",
+      "A salt",
+      "Acidic",
+      "Basic"
+     ],
+     "a": 2,
+     "x": "pH values less than 7 indicate an acidic solution.",
+     "p": "P53"
+    },
+    {
+     "eo": "3.1",
+     "q": "When is pH + pOH = 14 true?",
+     "o": [
+      "Only at or near 25 °C",
+      "At all temperatures",
+      "Only in acids",
+      "Only above 100 °C"
+     ],
+     "a": 0,
+     "x": "The equation pH + pOH = 14 is true only at or near 25 °C.",
+     "p": "P52"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Molecular weight of water",
+   "eo": "1.1",
+   "page": 8,
+   "problem": "Find the molecular weight of water, H2O.",
+   "steps": [
+    "1 atom x 16.000 = 16.000 amu",
+    "2 atoms x 1.008 = 2.016 amu"
+   ],
+   "answer": "18.016 amu",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.8"
+  },
+  {
+   "title": "Moles of silver",
+   "eo": "1.1",
+   "page": 10,
+   "problem": "A silver bar has a mass of 1870 grams. One mole of silver is 107.87 grams. How many moles are in the bar?",
+   "steps": [
+    "1870 grams x (1 mole / 107.87 grams)"
+   ],
+   "answer": "17.3 moles",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.10"
+  },
+  {
+   "title": "Normality of sulfuric acid",
+   "eo": "2.8",
+   "page": 39,
+   "problem": "49 grams of H2SO4 is one equivalent. A one liter solution holds 78.32 grams. Find the normality.",
+   "steps": [
+    "78.32 / 49 = 1.6 equivalents",
+    "Normality is equivalents per liter"
+   ],
+   "answer": "1.6 N",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.39"
+  },
+  {
+   "title": "Balancing an equation",
+   "eo": "2.9",
+   "page": 42,
+   "problem": "Balance FeS2 + O2 → Fe2O3 + SO2.",
+   "steps": [
+    "2FeS2 balances the Fe",
+    "4SO2 balances the S",
+    "5.5O2 balances the O",
+    "Multiply by two to get whole numbers"
+   ],
+   "answer": "4FeS2 + 11O2 → 2Fe2O3 + 8SO2",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.42"
+  },
+  {
+   "title": "pH from hydrogen concentration",
+   "eo": "3.4",
+   "page": 49,
+   "problem": "[H+] is 4.8 x 10⁻⁸ moles/liter. Find the pH.",
+   "steps": [
+    "pH = -log [H+]",
+    "pH = -log (4.8 x 10⁻⁸)"
+   ],
+   "answer": "7.32",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.49"
+  },
+  {
+   "title": "Hydrogen concentration from pH",
+   "eo": "3.4",
+   "page": 49,
+   "problem": "A solution has a pH of 3.83. Find [H+].",
+   "steps": [
+    "[H+] = 10⁻ᵖᴴ",
+    "[H+] = 10⁻³·⁸³ moles/liter"
+   ],
+   "answer": "1.48 x 10⁻⁴ moles/liter",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.49"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are isotopes?",
+   "a": "Atoms of the same element with different atomic mass numbers.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "How do metals and nonmetals differ in forming ions?",
+   "a": "Metals tend to lose electrons to form positive ions. Nonmetals tend to gain electrons to form negative ions.",
+   "p": "P16",
+   "place": null
+  },
+  {
+   "q": "What are the three basic laws of chemical reactions?",
+   "a": "Conservation of Mass, Definite Proportions, and Multiple Proportions.",
+   "p": "P30",
+   "place": null
+  },
+  {
+   "q": "What is normality?",
+   "a": "The number of equivalents of solute dissolved in one liter of solution.",
+   "p": "P42",
+   "place": null
+  },
+  {
+   "q": "How is a metallic bond formed?",
+   "a": "An atom shares the electrons in its outer shell with many other atoms.",
+   "p": "P28",
+   "place": null
+  },
+  {
+   "q": "What is an alkali?",
+   "a": "A soluble salt, principally of sodium, potassium, magnesium, or calcium, that combines with acids to form neutral salts.",
+   "p": "P48",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The components of an atom are protons, neutrons, and electrons.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.11"
+  },
+  {
+   "text": "An atom is classified chemically by the number of protons in its nucleus.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.11"
+  },
+  {
+   "text": "The subdivisions of the periodic table are periods, groups, and classes.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.22"
+  },
+  {
+   "text": "Ionic, covalent, and metallic bonds join atoms, and van der Waals forces are attractions between nonpolar covalent molecules.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.34"
+  },
+  {
+   "text": "Le Chatelier's principle states that if a stress is applied to an equilibrium, the system will adjust to minimize its effect.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.45"
+  },
+  {
+   "text": "pH is the negative logarithm of the hydrogen concentration, and pOH is the negative logarithm of the hydroxyl concentration.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.53"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "pH, Kw, and acids in water are general chemistry, like the battery chemistry in ES-04, so these pages take no Water-system only tag.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.48"
+  },
+  {
+   "type": "Handbook error",
+   "note": "Table 2 on p.6 lists silicon as atomic number 34 and weight 78.96, the same as selenium. Table 3 on p.13 gives 14 and 28.086. The tables are not reproduced in the lesson.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.6"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.4 calls the atomic mass number Z, though the same page uses A for it and Z for atomic number. The lesson does not repeat that sentence.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.4"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.50 refers to the Kw graph as both Figure 17 and Figure 16, and the lesson leaves the figure off. Organic chemistry on p.28 to p.31 has no objective and is left off.",
+   "cite": "DOE-HDBK-1015/1-93 CH-01 p.50"
+  }
+ ],
+ "page_tags": []
+}

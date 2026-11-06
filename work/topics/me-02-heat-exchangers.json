@@ -1,0 +1,1220 @@
+{
+ "module_id": "ME-02",
+ "slug": "me-02-heat-exchangers",
+ "title": "Heat Exchangers",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1018-V1",
+ "handbook": "DOE-HDBK-1018/1-93",
+ "word_file": "Heat Exchangers.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Heat Exchangers and Condensers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the purpose, construction, and principles of operation for each major type of heat exchanger: parallel flow, counter flow, and cross flow.",
+   "items": [],
+   "page": {
+    "pdf": 67,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the two types of heat exchanger construction.",
+     "items": [],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Provided with a drawing of a heat exchanger, IDENTIFY the following internal parts:",
+     "items": [
+      "a. Tubes",
+      "b. Tube sheet",
+      "c. Shell",
+      "d. Baffles"
+     ],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE hot and cold fluid flow in parallel flow, counter flow, and cross flow heat exchangers.",
+     "items": [],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DIFFERENTIATE between the following types of heat exchangers:",
+     "items": [
+      "a. Single-pass versus multi-pass heat exchangers.",
+      "b. Regenerative versus non-regenerative heat exchangers."
+     ],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST at least three applications of heat exchangers.",
+     "items": [],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "STATE the purpose of a condenser.",
+     "items": [],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Hotwell",
+      "b. Condensate depression"
+     ],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE why condensers in large steam cycles are operated at a vacuum.",
+     "items": [],
+     "page": {
+      "pdf": 67,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "A heat exchanger is a component that allows the transfer of heat from one fluid (liquid or gas) to another fluid.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Heat can flow only from the hotter to the cooler fluid.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "In a heat exchanger there is no direct contact between the two fluids.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Although heat exchangers come in every shape and size imaginable, the construction of most heat exchangers fall into one of two categories: tube and shell, or plate.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "This type of heat exchanger consists of a set of tubes in a container called a shell.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "At the ends of the tubes, the tube side fluid is separated from the shell side fluid by the tube sheet(s).",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "In systems where the two fluids are at vastly different pressures, the higher pressure fluid is typically directed through the tubes and the lower pressure fluid is circulated on the shell side.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "The support plates shown on Figure 1 also act as baffles to direct the flow of fluid within the shell back and forth across the tubes.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+  },
+  {
+   "id": "P9",
+   "quote": "A plate type heat exchanger, as illustrated in Figure 2, consists of plates instead of tubes to separate the hot and cold fluids.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "Note that the hottest cold-fluid temperature is always less than the coldest hot-fluid temperature.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "Counter flow heat exchangers are the most efficient of the three types.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "Cross flow, as illustrated in Figure 5, exists when one fluid flows perpendicular to the second fluid; that is, one fluid flows through tubes and the second fluid passes around the tubes at 90° angle.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "Cross flow heat exchangers are usually found in applications where one of the fluids changes state (2-phase flow).",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "In actuality, most large heat exchangers are not purely parallel flow, counter flow, or cross flow; they are usually a combination of the two or all three types of heat exchangers.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.8"
+  },
+  {
+   "id": "P15",
+   "quote": "When a heat exchanger's fluids pass each other more than once, a heat exchanger is called a multi-pass heat exchanger.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.8"
+  },
+  {
+   "id": "P16",
+   "quote": "If the fluids pass each other only once, the heat exchanger is called a single-pass heat exchanger.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.8"
+  },
+  {
+   "id": "P17",
+   "quote": "A regenerative heat exchanger is one in which the same fluid is both the cooling fluid and the cooled fluid, as illustrated in Figure 7.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "In a nonregenerative heat exchanger, as illustrated in Figure 7, the hot fluid is cooled by fluid from a separate system and the energy (heat) removed is not returned to the system.",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.10"
+  },
+  {
+   "id": "P19",
+   "quote": "It is important to remember that the term regenerative/nonregenerative only refers to \"how\" a heat exchanger functions in a system, and does not indicate any single type (tube and shell, plate, parallel flow, counter flow, etc.).",
+   "sec": "Types of Heat Exchangers",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.9"
+  },
+  {
+   "id": "P20",
+   "quote": "Some of the more common applications are found in heating, ventilation and air conditioning (HVAC) systems, radiators on internal combustion engines, boilers, condensers, and as preheaters or coolers in fluid systems.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.12"
+  },
+  {
+   "id": "P21",
+   "quote": "The fins improve the efficiency of a heat exchanger",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+  },
+  {
+   "id": "P22",
+   "quote": "All air conditioning systems contain at least two heat exchangers, usually called the evaporator and the condenser.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+  },
+  {
+   "id": "P23",
+   "quote": "Preheating in stages increases the plant's efficiency and minimizes thermal shock stress to components, as compared to injecting ambient temperature liquid into a boiler or other device that operates at high temperatures.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "It is a closed space into which the steam exits the turbine and is forced to give up its latent heat of vaporization.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+  },
+  {
+   "id": "P25",
+   "quote": "The difference between the saturation temperature for the existing condenser vacuum and the temperature of the condensate is termed condensate depression.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+  },
+  {
+   "id": "P26",
+   "quote": "The bottom area of the condenser is the hotwell, as shown in Figure 9.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.15"
+  },
+  {
+   "id": "P27",
+   "quote": "Condensers operate at a vacuum to ensure the temperature (and thus the pressure) of the steam is as low as possible.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.18"
+  },
+  {
+   "id": "P28",
+   "quote": "This maximizes the ∆T and ∆P between the source and the heat sink, ensuring the highest cycle efficiency possible.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.18"
+  },
+  {
+   "id": "P29",
+   "quote": "If noncondensable gasses are allowed to build up in the condenser, vacuum will decrease and the saturation temperature at which the steam will condense increases.",
+   "sec": "Heat Exchanger Applications",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.15"
+  },
+  {
+   "id": "P30",
+   "quote": "Admit the colder fluid to the heat exchanger first, followed by the hotter fluid.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P31",
+   "quote": "Thermal shock is a severe stress produced in a body or in a material because of a sudden, unequally distributed change in temperature.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P32",
+   "quote": "Vent prior to placing heat exchanger in service to remove air and noncondensable gases.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P33",
+   "quote": "When securing a heat exchanger, first stop the hot fluid by shutting the discharge valve.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P34",
+   "quote": "A heat exchanger that contains liquid should not be isolated in such a manner that it does not have overpressure protection.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "id": "P35",
+   "quote": "The flow of the cooling fluid also affects the heat exchanger outlet temperature because increasing the flow of cooling fluid lowers the outlet temperature of the cooled fluid.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.26 Temperature Control"
+  },
+  {
+   "id": "P36",
+   "quote": "Fouling of heat exchanger tubes lowers the efficiency of a heat exchanger by decreasing the thermal conductivity of the tubes.",
+   "sec": "Heat Exchanger Startup and Operation",
+   "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Types of heat exchangers",
+   "cite": "Word: Heat Exchangers.docx, slide 1.5 Types of Heat Exchangers"
+  },
+  {
+   "step": "Applications",
+   "cite": "Word: Heat Exchangers.docx, slide 1.8 Heat Exchanger Applications"
+  },
+  {
+   "step": "Classification by flow path",
+   "cite": "Word: Heat Exchangers.docx, slide 1.11 Heat Exchanger Classification"
+  },
+  {
+   "step": "Comparison and log mean temperature",
+   "cite": "Word: Heat Exchangers.docx, slide 1.13 Heat Exchanger Comparison"
+  },
+  {
+   "step": "Combined types",
+   "cite": "Word: Heat Exchangers.docx, slide 1.21 Other Heat Exchanger Characteristics"
+  },
+  {
+   "step": "Single-pass and multi-pass",
+   "cite": "Word: Heat Exchangers.docx, slide 1.22 Other Heat Exchanger Characteristics"
+  },
+  {
+   "step": "Regenerative and non-regenerative",
+   "cite": "Word: Heat Exchangers.docx, slide 1.23 Other Heat Exchanger Characteristics"
+  },
+  {
+   "step": "Startup and shutdown",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "step": "Temperature control",
+   "cite": "Word: Heat Exchangers.docx, slide 1.26 Temperature Control"
+  },
+  {
+   "step": "Fouling",
+   "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "What a heat exchanger does",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "To heat a cooler fluid by means of a hotter fluid",
+      "To reduce the temperature of a hot fluid by means of a cooler fluid",
+      "To boil a liquid by means of a hotter fluid",
+      "To condense a gaseous fluid by means of a cooler fluid",
+      "To boil a liquid while condensing a hotter gaseous fluid"
+     ],
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.1"
+    },
+    {
+     "t": "p",
+     "text": "To transfer heat, the fluids must be at different temperatures and must come into thermal contact.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The heat moves from the hot fluid to the metal isolating the two fluids, and then to the cooler fluid.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "How does heat get from one fluid to the other in a heat exchanger?",
+     "o": [
+      "Through a third fluid in the shell",
+      "From the hot fluid to the metal between them, then to the cooler fluid",
+      "By direct mixing of the two fluids",
+      "From the cooler fluid to the hotter fluid"
+     ],
+     "a": 1,
+     "x": "There is no direct contact between the two fluids. The heat is transferred from the hot fluid to the metal isolating the two fluids and then to the cooler fluid.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Construction",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The tube and shell is the most basic and most common type.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig1",
+     "num": 1,
+     "cap": "Tube and Shell Heat Exchanger",
+     "alt": "Tube and shell heat exchanger cut open, labeling the tube sheet, support plates, steam inlet, feedwater connections, and water box.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The fluid inside the tubes is the tube side fluid, and the fluid outside them is the shell side fluid.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Tubes are rolled and press-fitted or welded into the tube sheet to give a leak tight seal.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "This is due to economy, because tubes can be made to withstand higher pressures than the shell for a much lower cost.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig2",
+     "num": 2,
+     "cap": "Plate Heat Exchanger",
+     "alt": "Plate heat exchanger: a stack of plates with gaskets between frame ends, with hot and cold fluids alternating between plates.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.4"
+    },
+    {
+     "t": "p",
+     "text": "Hot and cold fluids alternate between the plates, and baffles direct the flow. The large plate area lets a plate unit transfer much more heat than a similarly sized tube and shell unit.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What are the two types of heat exchanger construction?",
+     "o": [
+      "Regenerative and non-regenerative",
+      "Tube and shell, and plate",
+      "Parallel and counter flow",
+      "Single-pass and multi-pass"
+     ],
+     "a": 1,
+     "x": "The construction of most heat exchangers falls into one of two categories: tube and shell, or plate.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.2",
+     "q": "What separates the tube side fluid from the shell side fluid at the ends of the tubes?",
+     "o": [
+      "The shell",
+      "The support plates",
+      "The tube sheet",
+      "The baffles"
+     ],
+     "a": 2,
+     "x": "At the ends of the tubes, the tube side fluid is separated from the shell side fluid by the tube sheet(s).",
+     "p": "P6"
+    },
+    {
+     "eo": "1.2",
+     "q": "What do baffles do in a tube and shell heat exchanger?",
+     "o": [
+      "Seal the tubes to the tube sheet",
+      "Separate the tube side fluid from the shell",
+      "Hold the higher pressure fluid",
+      "Direct the fluid back and forth across the tubes"
+     ],
+     "a": 3,
+     "x": "The support plates also act as baffles to direct the flow of fluid within the shell back and forth across the tubes.",
+     "p": "P8"
+    },
+    {
+     "existing": "Q283",
+     "eo": "1.1"
+    }
+   ]
+  },
+  {
+   "title": "Parallel, counter, and cross flow",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Parallel flow exists when both fluids flow in the same direction. They enter from the same end with a large temperature difference, and their temperatures approach each other.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig3",
+     "num": 3,
+     "cap": "Parallel Flow Heat Exchanger",
+     "alt": "Parallel flow: both fluids enter at the same end, and a graph shows their temperatures closing toward each other along the length.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "Counter flow exists when the two fluids flow in opposite directions, entering at opposite ends. The cooler fluid leaves where the hot fluid enters, so it approaches the hot fluid's inlet temperature.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig4",
+     "num": 4,
+     "cap": "Counter Flow Heat Exchanger",
+     "alt": "Counter flow: the fluids enter at opposite ends, and a graph shows a nearly constant temperature difference along the length.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "A counter flow unit can have the hottest cold-fluid temperature greater than the coldest hot-fluid temperature.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig5",
+     "num": 5,
+     "cap": "Cross Flow Heat Exchanger",
+     "alt": "Cross flow: one fluid passes through tubes while the other crosses them at a right angle, with a graph of both temperatures.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "Counter flow is the most efficient per unit surface area because the average temperature difference between the fluids over the length of the exchanger is maximized.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "In a parallel flow heat exchanger, how do the two fluids flow?",
+     "o": [
+      "At 90° to each other",
+      "Back and forth through U bends only",
+      "In the same direction",
+      "In opposite directions"
+     ],
+     "a": 2,
+     "x": "Parallel flow exists when both the tube side fluid and the shell side fluid flow in the same direction.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.3",
+     "q": "In which arrangement can the hottest cold-fluid temperature exceed the coldest hot-fluid temperature?",
+     "o": [
+      "Only in a regenerative unit",
+      "Counter flow",
+      "Parallel flow",
+      "Neither arrangement"
+     ],
+     "a": 1,
+     "x": "In contrast to parallel flow, a counter flow heat exchanger can have the hottest cold-fluid temperature greater than the coldest hot-fluid temperature.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.3",
+     "q": "Where are cross flow heat exchangers usually found?",
+     "o": [
+      "Only in small oil coolers",
+      "Only in plate construction",
+      "Where one of the fluids changes state",
+      "Where both fluids stay liquid at low flow"
+     ],
+     "a": 2,
+     "x": "Cross flow heat exchangers are usually found in applications where one of the fluids changes state.",
+     "p": "P13"
+    },
+    {
+     "existing": "Q43",
+     "eo": "1.3"
+    },
+    {
+     "existing": "Q284",
+     "eo": "1.3"
+    }
+   ]
+  },
+  {
+   "title": "Single-pass, multi-pass, regenerative, and non-regenerative",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig6",
+     "num": 6,
+     "cap": "Single and Multi-Pass Heat Exchangers",
+     "alt": "Single-pass unit with straight tubes, and multi-pass unit with fluid reversing through U bends and shell baffles.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.9"
+    },
+    {
+     "t": "p",
+     "text": "A multi-pass unit commonly reverses the flow in the tubes with U bends. Baffles on the shell side give the same effect for the shell side fluid.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "The hot fluid leaving a system gives up its heat to reheat the fluid returning to the system. These units are usually found in high temperature systems where part of the fluid is removed from the main process and then returned.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig7",
+     "num": 7,
+     "cap": "Regenerative and Non-Regenerative Heat Exchangers",
+     "alt": "Two process diagrams: in the regenerative unit the outgoing fluid heats the returning fluid, and in the non-regenerative unit a separate cooling system removes the heat.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What makes a heat exchanger multi-pass?",
+     "o": [
+      "Its fluids pass each other more than once",
+      "It has more than one shell",
+      "It uses two different fluids",
+      "It has plates instead of tubes"
+     ],
+     "a": 0,
+     "x": "When a heat exchanger's fluids pass each other more than once, it is called a multi-pass heat exchanger.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.4",
+     "q": "What defines a regenerative heat exchanger?",
+     "o": [
+      "The same fluid is both the cooling fluid and the cooled fluid",
+      "The hot fluid is cooled by a separate system",
+      "The fluids pass only once",
+      "The heat is rejected to an external medium"
+     ],
+     "a": 0,
+     "x": "A regenerative heat exchanger is one in which the same fluid is both the cooling fluid and the cooled fluid.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.4",
+     "q": "What does the term non-regenerative tell you about a heat exchanger?",
+     "o": [
+      "How it functions in a system, not its construction or flow type",
+      "That it must be tube and shell",
+      "That it must be counter flow",
+      "That it has only one pass"
+     ],
+     "a": 0,
+     "x": "The term regenerative/nonregenerative only refers to how a heat exchanger functions in a system, and does not indicate any single type.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Applications",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "A radiator is an air-to-liquid heat exchanger. Hot coolant flows through the tubes, and cooler air over the outside of the tubes picks up the heat.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Air is a poor conductor of heat, so fins on the outside of the tubes maximize the heat transfer area.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Fins are common on most liquid-to-air heat exchangers and in some high efficiency liquid-to-liquid units.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "In the condenser, hot, high pressure refrigerant gas condenses to a subcooled liquid. In the evaporator, cool refrigerant absorbs heat from air flowing over the tubes, which cools the air and boils the refrigerant.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which is a common application of a heat exchanger?",
+     "o": [
+      "A strainer in a suction line",
+      "A pressure gauge on a tank",
+      "A radiator on an internal combustion engine",
+      "A check valve in a pump discharge"
+     ],
+     "a": 2,
+     "x": "Common applications include HVAC systems, radiators on internal combustion engines, boilers, condensers, and preheaters or coolers in fluid systems.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.5",
+     "q": "Why do radiators have fins on their tubes?",
+     "o": [
+      "Air is a poor conductor, so the heat transfer area must be maximized",
+      "To strengthen the tubes against pressure",
+      "To slow the coolant",
+      "To prevent corrosion"
+     ],
+     "a": 0,
+     "x": "Because air is such a poor conductor of heat, the heat transfer area is maximized by using fins on the outside of the tubes.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Preheaters",
+   "eo": [
+    "1.5"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "In a steam system, process steam is tapped off to heat the feedwater in preheater stages.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig8",
+     "num": 8,
+     "cap": "U-tube Feedwater Heat Exchanger",
+     "alt": "U-tube feedwater heat exchanger: steam enters the shell from the top and condenses, while feedwater flows through the U-tubes.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.13"
+    },
+    {
+     "t": "p",
+     "text": "The steam gives up sensible heat and latent heat of vaporization on the shell side. The shell side fluid level sets how many tubes are exposed to the hot steam, so it is very important to efficiency.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Why is an input fluid preheated in stages?",
+     "o": [
+      "It lowers the pressure of the fluid",
+      "It removes dissolved gases",
+      "It reduces the number of pumps",
+      "It increases plant efficiency and minimizes thermal shock stress"
+     ],
+     "a": 3,
+     "x": "Preheating in stages increases the plant's efficiency and minimizes thermal shock stress to components.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Steam condensers",
+   "eo": [
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "fig",
+     "id": "me-02-fig9",
+     "num": 9,
+     "cap": "Single-Pass Condenser",
+     "alt": "Single-pass condenser: cooling water flows through straight tubes between water boxes while steam condenses on the shell side and collects in the hotwell.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "A condenser turns used steam back into water for return as feedwater, and it raises cycle efficiency by letting the cycle operate with the largest possible delta-T and delta-P between source and heat sink.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "Condensate collects in the hotwell, and the condensate pump takes its suction there.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "A few degrees of subcooling prevents condensate pump cavitation. Excessive condensate depression lowers plant efficiency, because the subcooled condensate must be reheated.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "An air ejector or vacuum pump establishes and helps maintain condenser vacuum, because air and other noncondensable gasses cannot be kept out.",
+     "cite": "DOE-HDBK-1018/1-93 ME-02 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What is the purpose of a steam condenser?",
+     "o": [
+      "To remove the latent heat of vaporization and condense the vapor into a liquid",
+      "To superheat the steam",
+      "To raise the turbine exhaust pressure",
+      "To remove sensible heat from feedwater only"
+     ],
+     "a": 0,
+     "x": "The purpose of a condenser is to remove the latent heat of vaporization, condensing the vapor into a liquid.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is the hotwell?",
+     "o": [
+      "The top of the condenser, where steam enters",
+      "The water box at the tube inlet",
+      "The air ejector suction",
+      "The bottom area of the condenser, where condensate collects"
+     ],
+     "a": 3,
+     "x": "The bottom area of the condenser is the hotwell. This is where the condensate collects and the condensate pump takes its suction.",
+     "p": "P26"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is condensate depression?",
+     "o": [
+      "The drop in cooling water pressure",
+      "The level of water in the hotwell",
+      "How far the condensate is cooled below saturation temperature",
+      "The vacuum in the condenser"
+     ],
+     "a": 2,
+     "x": "Condensate depression is the difference between the saturation temperature for the existing condenser vacuum and the temperature of the condensate.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.8",
+     "q": "Why are condensers in large steam cycles operated at a vacuum?",
+     "o": [
+      "To prevent air from leaving the condenser",
+      "To increase the cooling water flow",
+      "To keep steam temperature and pressure as low as possible for highest cycle efficiency",
+      "To raise the boiling point of feedwater"
+     ],
+     "a": 2,
+     "x": "Condensers operate at a vacuum to ensure the temperature and pressure of the steam is as low as possible, which maximizes the delta-T and delta-P and the cycle efficiency.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "Startup, temperature control, and fouling",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Consider the difference in operating temperature between the two fluids when placing a heat exchanger in service, to prevent thermal shock.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.24 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "Thermal shock is most severe where different metals are joined. Fluids are admitted slowly to allow uniform expansion.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Pockets of air or gas decrease the cooling surface area and may disrupt flow.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "After that, stop the colder fluid flow.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Liquid isolated in the exchanger could warm up and expand. A relief valve, or leaving the discharge valve open, gives overpressure protection.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "Fouling is foreign material such as algae, scale, or debris building up in a heat exchanger.",
+     "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Hydro lancing",
+      "Chemical cleaning",
+      "Operating practices, the most effective method"
+     ],
+     "cite": "Word: Heat Exchangers.docx, slide 1.28 Fouling of Heat Exchange Surfaces"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q285",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q286",
+     "eo": "1.0"
+    },
+    {
+     "existing": "Q287",
+     "eo": "1.0"
+    },
+    {
+     "eo": "1.0",
+     "q": "When securing a heat exchanger, which fluid is stopped first?",
+     "o": [
+      "Whichever is at the higher pressure",
+      "The hot fluid",
+      "The cold fluid",
+      "Both at the same moment"
+     ],
+     "a": 1,
+     "x": "When securing a heat exchanger, first stop the hot fluid by shutting the discharge valve. Second, stop the colder fluid.",
+     "p": "P33"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Counter flow against parallel flow",
+   "eo": [
+    "1.3"
+   ],
+   "page": 7,
+   "fig": {
+    "t": "fig",
+    "id": "me-02-fig4",
+    "num": 4,
+    "cap": "Counter Flow Heat Exchanger",
+    "alt": "Counter flow arrangement with its temperature graph.",
+    "cite": "DOE-HDBK-1018/1-93 ME-02 p.5"
+   },
+   "problem": "The same heat exchanger runs first as counter flow and then as parallel flow. Hot fluid: 200°F in, 145°F out. Cold fluid: 80°F in, 120°F out. Uo = 70 BTU/hr-ft²-°F and Ao = 75 ft². Compare the heat transfer rates.",
+   "steps": [
+    "ΔTlm = (ΔT2 - ΔT1) / ln(ΔT2 / ΔT1), and Q = Uo Ao ΔTlm.",
+    "Counter flow: the end differences are 200 - 120 = 80°F and 145 - 80 = 65°F, so ΔTlm = 15 / ln(80/65) = 72°F.",
+    "Parallel flow: the end differences are 200 - 80 = 120°F and 145 - 120 = 25°F, so ΔTlm = 95 / ln(120/25) = 61°F.",
+    "Counter flow: Q = 70 x 75 x 72 = 3.8 x 10^5 BTU/hr.",
+    "Parallel flow: Q = 70 x 75 x 61 = 3.2 x 10^5 BTU/hr."
+   ],
+   "answer": "Counter flow transfers more heat under the same conditions: 3.8 x 10^5 BTU/hr against 3.2 x 10^5 BTU/hr.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.7"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two types of heat exchanger construction?",
+   "a": "Tube and shell, and plate.",
+   "p": "P4",
+   "place": null
+  },
+  {
+   "q": "What are the four internal parts of a tube and shell heat exchanger named in DOE-HDBK-1018?",
+   "a": "Tubes, tube sheet, shell, and baffles.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What is cross flow in a heat exchanger?",
+   "a": "One fluid flows perpendicular to the second, at a 90° angle. It is usually used where one fluid changes state.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "What is a hotwell?",
+   "a": "The bottom area of a condenser, where condensate collects and the condensate pump takes its suction.",
+   "p": "P26",
+   "place": null
+  },
+  {
+   "q": "What is condensate depression?",
+   "a": "The amount the condensate is cooled below saturation temperature, in degrees subcooled.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "Why do large steam condensers run at a vacuum?",
+   "a": "To keep steam temperature and pressure as low as possible, which maximizes the difference between source and heat sink for highest cycle efficiency.",
+   "p": "P27",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Most heat exchangers are tube and shell or plate. The main internal parts are the tubes, tube sheet, shell, and baffles.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.11"
+  },
+  {
+   "text": "Parallel flow runs in the same direction, counter flow in opposite directions, and cross flow at 90°. Counter flow is the most efficient.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.11"
+  },
+  {
+   "text": "Multi-pass units pass the fluids more than once. Regenerative units use the same fluid for heating and cooling.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.11"
+  },
+  {
+   "text": "Applications include preheaters, radiators, air conditioning evaporators and condensers, and steam condensers.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.18"
+  },
+  {
+   "text": "Admit the colder fluid first, stop the hot fluid first, and vent before placing the unit in service.",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "Heat Exchangers.docx slide 1.13 says both of the flow types have advantages and compares two types. The handbook p.6 compares three, including cross flow. The lesson teaches all three from the handbook. No values differ.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.6"
+  },
+  {
+   "type": "Word claim",
+   "note": "Slide 1.6 and the handbook p.2 give the same reason for putting the higher pressure fluid in the tubes. Slide 1.25 links air pockets to steam generator feedwater oxygen, which is water-system material, so that point is left off.",
+   "cite": "Word: Heat Exchangers.docx, slide 1.25 Heat Exchanger Startup & Operation"
+  },
+  {
+   "type": "Scope",
+   "note": "Slides 1.37 to 1.39 cover steam generator tube rupture and borated water, so they are left off under the PWR rule. Slide 1.26 and 1.27 temperature control is reduced to the cooling fluid effect that Q287 tests.",
+   "cite": "Word: Heat Exchangers.docx, slide 1.37 Heat Exchanger Tube Failure"
+  },
+  {
+   "type": "Scope",
+   "note": "Pages on preheaters and condensers carry Water-system only, following the Batch 5 decision on steam pages. The handbook's cross flow example, which is a steam condenser, is left off the untagged flow page. Figure 1 is labeled for steam and feedwater but is the handbook's only tube and shell drawing, so it stays on an untagged page for objective 1.2.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.3"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Knowledge checks 1.19, 1.20, 1.29, 1.30 and 1.36 keep their question text in pictures, so they are not used. The heat balance on slides 1.31 to 1.36 is a picture. HT-02 teaches the same equation.",
+   "cite": "Word: Heat Exchangers.docx, slide 1.36 Knowledge Check"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Jet pump and air ejector detail on p.16 and p.17 has no objective and is left off, apart from the statement that an air ejector or vacuum pump maintains vacuum. Objective 1.6 is answered from the p.18 summary, whose wording the check follows.",
+   "cite": "DOE-HDBK-1018/1-93 ME-02 p.16"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

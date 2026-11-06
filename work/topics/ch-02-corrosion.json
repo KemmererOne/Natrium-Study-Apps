@@ -1,0 +1,1647 @@
+{
+ "module_id": "CH-02",
+ "slug": "ch-02-corrosion",
+ "title": "Corrosion",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1015-V1",
+ "handbook": "DOE-HDBK-1015/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Demineralizers and Ion Exchangers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the causes and effects of corrosion on metals and the type of chemistry used in a plant to minimize corrosion.",
+   "items": [],
+   "page": {
+    "pdf": 99,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Ionization",
+      "b. Conductivity",
+      "c. Corrosion",
+      "d. Electrolysis",
+      "e. General corrosion"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE an electrochemical cell with respect to the corrosion of metals.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE what happens to a metal during the oxidation step of the oxidation-reduction process.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE what happens to a metal during the reduction step of the oxidation-reduction process.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Passivity",
+      "b. Polarization"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the affects of passivity and polarization on the corrosion process.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "LIST the two conditions that contribute to general corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DESCRIBE how the rate of corrosion occurring in the plant is affected by the following:",
+     "items": [
+      "a. Temperature",
+      "b. Water velocity",
+      "c. Oxygen",
+      "d. pH",
+      "e. Condition and composition of the metal surface"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "LIST the three products that are formed from the general corrosion of iron.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "IDENTIFY the action taken for initial fill of a reactor system to limit general corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "STATE the four methods used to chemically control general plant corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "LIST the six water chemistry conditions that limit corrosion of aluminum.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Crud",
+      "b. Scale",
+      "c. Galvanic corrosion"
+     ],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "IDENTIFY the five problems associated with the presence or release of crud into reactor coolant.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "STATE the four causes of crud bursts.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "STATE the two conditions that can cause galvanic corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "EXPLAIN the mechanism for galvanic corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "IDENTIFY the two locations that are susceptible to galvanic corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.19",
+     "text": "STATE the five control measures used to minimize galvanic corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.20",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Pitting corrosion",
+      "b. Crevice corrosion",
+      "c. Stress corrosion cracking"
+     ],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.21",
+     "text": "STATE the two conditions necessary for pitting corrosion to occur.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.22",
+     "text": "STATE the particular hazard associated with pitting corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.23",
+     "text": "STATE the four controls used to minimize pitting corrosion.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.24",
+     "text": "IDENTIFY the three conditions necessary for stress corrosion cracking to occur.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.25",
+     "text": "DEFINE the term chemisorption.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.26",
+     "text": "STATE the hazard of stress corrosion cracking.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.27",
+     "text": "STATE the three controls used to prevent stress corrosion cracking.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.28",
+     "text": "DESCRIBE the two types of stress corrosion cracking that are of major concern to nuclear facilities including:",
+     "items": [
+      "a. Conditions for occurrence",
+      "b. Method(s) used to minimize the probability of occurrence"
+     ],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Rapid localized corrosion may lead to penetration of the metal containing the coolant.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Ionization is the process of adding electrons to or removing electrons from atoms or molecules, creating ions.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "Conductivity is a measure of the ability of a substance to allow electron flow.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Corrosion is the deterioration of a material due to interaction with its environment.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Electrolysis is the decomposition by electric current",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "This chapter will concentrate on the corrosion of metals in water-based environments (electrolytes).",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "Corrosion is electrochemical in nature because the corrosive chemical reactions involve transfer of charge.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "The process in which electrons are given up and positive metal ions are formed is called oxidation.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "In order for corrosion to occur, the micro-cells must also be connected through some conducting path external to the metal.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "Oxidation is the process of losing electrons; reduction is the process of gaining electrons.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "The metal atoms release electrons (are oxidized) and become positive ions. The site at which this occurs is known as the anode.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "An oxidation process cannot take place without a simultaneous reduction (gain of electrons) process.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.5"
+  },
+  {
+   "id": "P13",
+   "quote": "General corrosion is the process whereby the surface of a metal undergoes a slow, relatively uniform; removal of material.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "Passivity is the characteristic of a metal exhibited when that metal does not become active in the corrosion reaction.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "Passivity is caused by the buildup of a stable, tenacious layer of metal oxide on the surface of the metal.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "In electrochemical cells, the decrease in cell potential caused by the operation of the cell (current flow) is called polarization.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.7"
+  },
+  {
+   "id": "P17",
+   "quote": "Both concentration and activation polarization decrease the net oxidation-reduction reaction rate.",
+   "sec": "Corrosion Theory",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "The two conditions typically required for a metal to undergo general corrosion are: 1) metal and water in the same environment, and 2) a chemical reaction between the metal and water that forms an oxide.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.11"
+  },
+  {
+   "id": "P19",
+   "quote": "the oxide layer represents a barrier to continued corrosion and tends to slow the corrosion rate.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+  },
+  {
+   "id": "P20",
+   "quote": "A rule of thumb is that the reaction rate doubles with a 20",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+  },
+  {
+   "id": "P21",
+   "quote": "Water velocities of 30 to 40 ft per second are usually considered to cause erosion.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+  },
+  {
+   "id": "P22",
+   "quote": "The presence of oxygen in water to which iron is exposed increases the corrosion rate.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+  },
+  {
+   "id": "P23",
+   "quote": "that remove the absorbed atomic hydrogen are called depolarizers.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.14"
+  },
+  {
+   "id": "P24",
+   "quote": "Deposits, scale, or irregular surfaces create areas on the metal where local corrosion can initiate and proceed at a faster rate than normal.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+  },
+  {
+   "id": "P25",
+   "quote": "This process, referred to as pretreatment, or pickling, involves careful control of reactor coolant water chemistry and temperature during the pretreatment period.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+  },
+  {
+   "id": "P26",
+   "quote": "The use of cathodic protection, supplying an external electric current to the iron so that it acts as a cathode and has no anodic areas, is another method of preventative chemical control.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+  },
+  {
+   "id": "P27",
+   "quote": "The three products formed from general corrosion of iron are FeO, Fe2O3, and Fe3O4.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.20"
+  },
+  {
+   "id": "P28",
+   "quote": "Dissolved solids tend to make it easier for current to flow, which results in a higher corrosion rate.",
+   "sec": "General Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.20"
+  },
+  {
+   "id": "P29",
+   "quote": "corrosion products in the form of finely divided, insoluble oxide particles called crud become suspended in the reactor coolant or loosely adhere to metal surfaces.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.22"
+  },
+  {
+   "id": "P30",
+   "quote": "The most undesirable characteristic of crud, however, is that it becomes activated when exposed to radiation.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.22"
+  },
+  {
+   "id": "P31",
+   "quote": "The release of crud in this fashion is termed a crud burst.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+  },
+  {
+   "id": "P32",
+   "quote": "Another corrosion byproduct is scale, which is made up of deposits on surfaces from the formation of insoluble compounds from normally soluble salts.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+  },
+  {
+   "id": "P33",
+   "quote": "Galvanic corrosion is the corrosion that results when two dissimilar metals with different potentials are placed in electrical contact in an electrolyte.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+  },
+  {
+   "id": "P34",
+   "quote": "The less resistant, active metal becomes the anodic corrosion site. The stronger, more noble metal is cathodic and protected.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+  },
+  {
+   "id": "P35",
+   "quote": "Two locations susceptible to galvanic corrosion is a piping transition from one metal to another and a sacrificial anode (such as zinc).",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+  },
+  {
+   "id": "P36",
+   "quote": "The metal that corrodes to protect another metal is called a sacrificial anode.",
+   "sec": "Crud and Galvanic Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.24"
+  },
+  {
+   "id": "P37",
+   "quote": "Pitting corrosion occurs where the anodic site becomes fixed in a small area and the formation of holes (deep attack) in an otherwise unaffected area takes place.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.28"
+  },
+  {
+   "id": "P38",
+   "quote": "Crevice corrosion is a type of pitting corrosion that occurs specifically within the low flow region of a crevice.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.28"
+  },
+  {
+   "id": "P39",
+   "quote": "Pitting corrosion requires two conditions to occur, low flow and areas of both high and low oxygen concentration.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.36"
+  },
+  {
+   "id": "P40",
+   "quote": "Pitting and crevice corrosion are a major hazard to a nuclear facility because of the rapid penetration of the metal with little overall loss of mass.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+  },
+  {
+   "id": "P41",
+   "quote": "Stress corrosion cracking (SCC) is a type of intergranular attack corrosion that occurs at the grain boundaries under tensile stress.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+  },
+  {
+   "id": "P42",
+   "quote": "Stress corrosion cracking occurs when three conditions are met; the alloy is susceptible to stress corrosion cracking, the alloy is exposed to specific environment, and the alloy is in a stressed condition.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.36"
+  },
+  {
+   "id": "P43",
+   "quote": "According to the most widely accepted theory, stress corrosion cracking is caused by a process called chemisorption.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+  },
+  {
+   "id": "P44",
+   "quote": "The formation of this chemisorbed layer greatly reduces the attraction between neighboring metal atoms.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+  },
+  {
+   "id": "P45",
+   "quote": "SCC is of great concern because it can readily crack metal of appreciable thickness.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+  },
+  {
+   "id": "P46",
+   "quote": "The three conditions that must be present for chloride stress corrosion to occur are as follows.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.32"
+  },
+  {
+   "id": "P47",
+   "quote": "In stress cracking that is induced by a caustic environment, the presence of dissolved oxygen is not necessary for the cracking to occur.",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.34"
+  },
+  {
+   "id": "P48",
+   "quote": "Available data indicates that caustic concentrations greater than 10,000 ppm, and probably up to 50,000 ppm, are required to induce caustic stress cracking",
+   "sec": "Specialized Corrosion",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.35"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Corrosion terms",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Corroded cladding can become brittle, and corrosion products can become radioactive in the core and deposit outside it.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q443",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is corrosion?",
+     "o": [
+      "The deterioration of a material due to interaction with its environment",
+      "The decomposition of a material by electric current",
+      "Removing electrons from a neutral atom",
+      "Metal fatigue from cycling"
+     ],
+     "a": 0,
+     "x": "Corrosion is the deterioration of a material due to interaction with its environment.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is electrolysis?",
+     "o": [
+      "Adding electrons to atoms",
+      "Uniform removal of material",
+      "Decomposition by electric current",
+      "Loss of metal to water"
+     ],
+     "a": 2,
+     "x": "Electrolysis is the decomposition by electric current.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Electrochemical cells",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig1",
+     "num": 1,
+     "cap": "Formation of Ferrous (Fe++) Ions in the Corrosion of Iron",
+     "alt": "Iron going into solution as Fe++ ions, leaving electrons behind in the metal.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.3"
+    },
+    {
+     "t": "p",
+     "text": "As metal ions go into solution, the metal becomes negatively charged with respect to the electrolyte, and a potential difference is produced.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig2",
+     "num": 2,
+     "cap": "Metal Surface Showing Arrangement of Micro-cells",
+     "alt": "Metal surface with many small anodic and cathodic areas forming micro-cells.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Oxidation sites become electrochemical cells of micro-electrodes, connected through the bulk of the metal.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Why is corrosion electrochemical in nature?",
+     "o": [
+      "Its reactions involve transfer of charge",
+      "It occurs only with electric power",
+      "It needs a magnetic field",
+      "It occurs only in batteries"
+     ],
+     "a": 0,
+     "x": "Corrosion is electrochemical because the corrosive reactions involve transfer of charge.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Oxidation and reduction",
+   "eo": [
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The primary effect of the oxidation step is that atoms leave the metallic state, and the metal deteriorates.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Oxidation occurs at anodic areas and reduction at cathodic areas.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What happens to a metal during oxidation?",
+     "o": [
+      "It becomes a negative ion",
+      "It releases electrons and becomes a positive ion",
+      "It gains electrons",
+      "It gains a neutron"
+     ],
+     "a": 1,
+     "x": "The metal atoms release electrons and become positive ions.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is reduction?",
+     "o": [
+      "A drop in temperature",
+      "The process of gaining electrons",
+      "The process of losing electrons",
+      "The loss of metal"
+     ],
+     "a": 1,
+     "x": "Oxidation is losing electrons, and reduction is gaining electrons.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Passivity and polarization",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Once formed, the film is a barrier. Reactants must diffuse through it, so corrosion decreases markedly or stops.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig3",
+     "num": 3,
+     "cap": "A Galvanic Cell",
+     "alt": "Galvanic cell with zinc and copper electrodes joined by a wire.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.7"
+    },
+    {
+     "t": "p",
+     "text": "Concentration polarization results from changes in concentrations. Activation polarization results from absorbed atomic hydrogen at the cathode.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What causes passivity?",
+     "o": [
+      "A rough metal surface",
+      "A stable, tenacious layer of metal oxide on the surface",
+      "A high electric current",
+      "Absorbed neutrons"
+     ],
+     "a": 1,
+     "x": "Passivity is caused by the buildup of a stable, tenacious layer of metal oxide.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.6",
+     "q": "What effect does polarization have on the corrosion reaction?",
+     "o": [
+      "It decreases the reaction rate",
+      "It increases the reaction rate",
+      "It has no effect",
+      "It reverses the reaction"
+     ],
+     "a": 0,
+     "x": "Both concentration and activation polarization decrease the net oxidation-reduction reaction rate.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "General corrosion of iron",
+   "eo": [
+    "1.7",
+    "1.9"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Iron ions combine with hydroxyl ions at the surface, forming FeO, then layers of Fe3O4 and Fe2O3 build up.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig5",
+     "num": 5,
+     "cap": "Simplified Schematic Diagram of Oxide Corrosion Film on the Surface of a Metal",
+     "alt": "Oxide film on a metal surface in layers of FeO, Fe3O4, and Fe2O3, between the metal and the water.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What two conditions are typically required for general corrosion?",
+     "o": [
+      "Metal and water together, and a reaction that forms an oxide",
+      "High voltage and a magnet",
+      "Two dissimilar metals and a wire",
+      "Tensile stress and chlorides"
+     ],
+     "a": 0,
+     "x": "They are metal and water in the same environment, and a chemical reaction between them that forms an oxide.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.9",
+     "q": "Which three products form from the general corrosion of iron?",
+     "o": [
+      "FeCl2, FeS, and Fe",
+      "Fe, H2, and O2",
+      "FeCO3, H2O, and CO2",
+      "FeO, Fe2O3, and Fe3O4"
+     ],
+     "a": 3,
+     "x": "The three products are FeO, Fe2O3, and Fe3O4.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "Factors affecting corrosion rate",
+   "eo": [
+    "1.8"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "list",
+     "items": [
+      "Temperature: corrosion rates increase as temperature increases",
+      "Water velocity: extremely high velocity removes the protective oxide",
+      "Oxygen: increases the corrosion rate of iron in water",
+      "Condition of the surface: deposits and irregular surfaces speed local corrosion"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Oxygen reacts rapidly with the polarizing layer of atomic hydrogen on the oxide layer.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig7",
+     "num": 7,
+     "cap": "Effect of pH on the Corrosion Rate of Iron in Water",
+     "alt": "Corrosion rate of iron against pH, high below pH 4, level from pH 4 to 10, and falling above pH 10.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.15"
+    },
+    {
+     "t": "p",
+     "text": "In aerated water at room temperature, the corrosion rate is relatively independent of pH from 4 to 10. Below pH 4, ferrous oxide is soluble.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q442",
+     "eo": "1.8"
+    },
+    {
+     "eo": "1.8",
+     "q": "Why does oxygen increase the corrosion rate of iron in water?",
+     "o": [
+      "It thickens the oxide film",
+      "It lowers conductivity",
+      "It reacts rapidly with the polarizing layer of atomic hydrogen",
+      "It raises the temperature"
+     ],
+     "a": 2,
+     "x": "Oxygen removes the polarizing layer and can react directly with the metal or oxide.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.8",
+     "q": "How do dissolved solids affect the corrosion rate?",
+     "o": [
+      "They stop corrosion",
+      "They raise it by making current flow easier",
+      "They lower it by coating the metal",
+      "They have no effect"
+     ],
+     "a": 1,
+     "x": "Dissolved solids tend to make it easier for current to flow, which results in a higher corrosion rate.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Chemical control of corrosion",
+   "eo": [
+    "1.10",
+    "1.11"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "A tightly adhering corrosion film inhibits further corrosion, so great care is taken during initial fill.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Passivators and inhibitors",
+      "Cathodic protection",
+      "Removing corrosive agents",
+      "Chemical addition"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.21"
+    },
+    {
+     "t": "p",
+     "text": "Passivators, if added to water, undergo reduction at the metal surface. A common inhibitor is potassium chromate.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "Removal uses deaerators for dissolved oxygen, and softening and demineralization for dissolved solids.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.17"
+    },
+    {
+     "t": "p",
+     "text": "Chemical addition includes filming amines, phosphates, and sodium hydroxide.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What is done during initial fill of a reactor system to limit general corrosion?",
+     "o": [
+      "Pretreatment, or pickling",
+      "Cathodic protection",
+      "Crud bursting",
+      "Chemisorption"
+     ],
+     "a": 0,
+     "x": "Pretreatment, or pickling, involves careful control of coolant water chemistry and temperature.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.11",
+     "q": "What does cathodic protection do?",
+     "o": [
+      "Heats the metal",
+      "Supplies a current so the metal acts as a cathode with no anodic areas",
+      "Adds oxygen to the water",
+      "Removes the oxide film"
+     ],
+     "a": 1,
+     "x": "Cathodic protection supplies an external electric current so the iron acts as a cathode and has no anodic areas.",
+     "p": "P26"
+    }
+   ]
+  },
+  {
+   "title": "Corrosion of aluminum",
+   "eo": [
+    "1.12"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "Corrosion of aluminum depends on many variables, and impurities are major contributors.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.17"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Maintaining pH slightly acidic, depending largely on operating temperature",
+      "Elimination of dissolved oxygen",
+      "Elimination of soluble and solid impurities",
+      "Prevention of the introduction of organic impurities",
+      "Pretreatment (or pickling)",
+      "Maintaining water purity"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.18"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "title": "Crud and scale",
+   "eo": [
+    "1.13",
+    "1.14",
+    "1.15"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Fouling of coolant flow paths",
+      "Fouling of heat transfer surfaces",
+      "High general background (ambient) radiation levels",
+      "Radiation hot spots",
+      "Radioactive waste disposal"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Increased oxygen concentration",
+      "Reduced (or significantly changed) pH",
+      "Large temperature change",
+      "Physical shock"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.26"
+    },
+    {
+     "t": "p",
+     "text": "Physical shocks include starting, stopping, or changing pump speeds, a reactor scram, or a relief valve lift.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q446",
+     "eo": "1.14"
+    },
+    {
+     "eo": "1.13",
+     "q": "What is the most undesirable characteristic of crud?",
+     "o": [
+      "It is magnetic",
+      "It becomes activated when exposed to radiation",
+      "It raises pH",
+      "It dissolves quickly"
+     ],
+     "a": 1,
+     "x": "The most undesirable characteristic of crud is that it becomes activated when exposed to radiation.",
+     "p": "P30"
+    },
+    {
+     "eo": "1.15",
+     "q": "Which is a cause of a crud burst?",
+     "o": [
+      "A large temperature change",
+      "Steady flow",
+      "Constant pH",
+      "Low oxygen"
+     ],
+     "a": 0,
+     "x": "The causes are increased oxygen, a changed pH, a large temperature change, and physical shock.",
+     "p": "P31"
+    }
+   ]
+  },
+  {
+   "title": "Galvanic corrosion",
+   "eo": [
+    "1.13",
+    "1.16",
+    "1.17",
+    "1.18",
+    "1.19"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "A difference in electrical potential drives current through the electrolyte. The larger the difference, the greater the probability of galvanic corrosion.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.23"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig10",
+     "num": 10,
+     "cap": "Galvanic Corrosion at Iron-Copper Pipe Junction",
+     "alt": "Junction of iron and copper pipes: the iron corrodes near the junction.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Cathodic protection with a third metal, or using metals close on the activity series",
+      "Choosing relative surface areas",
+      "Separating dissimilar metals with a non-conducting material",
+      "Separating the metals from a conductive environment",
+      "Use of poorly conducting electrolytes"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.26"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.17",
+     "q": "In galvanic corrosion, which metal corrodes?",
+     "o": [
+      "The less resistant, active metal",
+      "The more noble metal",
+      "Both equally",
+      "Neither"
+     ],
+     "a": 0,
+     "x": "The active metal becomes the anodic corrosion site, and the noble metal is cathodic and protected.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.16",
+     "q": "What two conditions cause galvanic corrosion?",
+     "o": [
+      "Heat and oxygen",
+      "Dissimilar metals with different potentials in electrical contact, in an electrolyte",
+      "Tensile stress and chlorides",
+      "High flow and low pH"
+     ],
+     "a": 1,
+     "x": "Galvanic corrosion results when two dissimilar metals are placed in electrical contact in an electrolyte.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.19",
+     "q": "What is a sacrificial anode?",
+     "o": [
+      "An insulating gasket",
+      "A metal that corrodes to protect another metal",
+      "A protective oxide film",
+      "A noble metal coating"
+     ],
+     "a": 1,
+     "x": "The metal that corrodes to protect another metal is called a sacrificial anode.",
+     "p": "P36"
+    }
+   ]
+  },
+  {
+   "title": "Pitting and crevice corrosion",
+   "eo": [
+    "1.20",
+    "1.21",
+    "1.22",
+    "1.23"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig11",
+     "num": 11,
+     "cap": "Differential Aeration Cell",
+     "alt": "Differential aeration cell: two iron electrodes in solution, one with air bubbled around it and one with nitrogen, joined by a wire.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.28"
+    },
+    {
+     "t": "p",
+     "text": "Loss of metal occurs at the electrode that is deficient in oxygen.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.28"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig12",
+     "num": 12,
+     "cap": "Representation of Crevice Pitting",
+     "alt": "A crevice with low oxygen inside and higher oxygen outside, with a pit forming inside the crevice.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Avoiding stagnant or low flow conditions",
+      "Using metals and alloys that are less susceptible",
+      "Avoiding agents that cause pitting, such as chlorides and oxygen",
+      "Designing the system so no crevices are present"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q440",
+     "eo": "1.21"
+    },
+    {
+     "existing": "Q441",
+     "eo": "1.20"
+    },
+    {
+     "eo": "1.22",
+     "q": "What is the particular hazard of pitting corrosion?",
+     "o": [
+      "A rise in radiation only",
+      "Loss of pH control",
+      "Rapid penetration of the metal with little overall loss of mass",
+      "Uniform thinning"
+     ],
+     "a": 2,
+     "x": "Pitting is a hazard because of the rapid penetration of the metal with little overall loss of mass.",
+     "p": "P40"
+    }
+   ]
+  },
+  {
+   "title": "Stress corrosion cracking",
+   "eo": [
+    "1.20",
+    "1.24",
+    "1.25",
+    "1.26",
+    "1.27"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "Most pure metals are immune to this type of attack.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+    },
+    {
+     "t": "fig",
+     "id": "ch-02-fig14",
+     "num": 14,
+     "cap": "Intergranular Corrosion Cracking",
+     "alt": "Cracks running along the grain boundaries of a metal under tensile stress.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "The crack can lead to a serious failure, with contamination, loss of coolant, and loss of pressure.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.31"
+    },
+    {
+     "t": "p",
+     "text": "It is prevented by proper design, reducing stress, and avoiding stagnant areas and crevices where chlorides and hydroxides might concentrate.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.37"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.24",
+     "q": "What three conditions are needed for stress corrosion cracking?",
+     "o": [
+      "Two metals, a wire, and water",
+      "Heat, fuel, and oxygen",
+      "Low flow, oxygen, and pure water",
+      "A susceptible alloy, a specific environment, and a stressed condition"
+     ],
+     "a": 3,
+     "x": "SCC occurs when the alloy is susceptible, exposed to a specific environment, and in a stressed condition.",
+     "p": "P42"
+    },
+    {
+     "eo": "1.25",
+     "q": "What process is believed to cause stress corrosion cracking?",
+     "o": [
+      "Polarization",
+      "Passivation",
+      "Electrolysis",
+      "Chemisorption"
+     ],
+     "a": 3,
+     "x": "Stress corrosion cracking is caused by a process called chemisorption.",
+     "p": "P43"
+    },
+    {
+     "eo": "1.26",
+     "q": "Why is stress corrosion cracking a great concern?",
+     "o": [
+      "It can readily crack metal of appreciable thickness",
+      "It only affects paint",
+      "It raises coolant pH",
+      "It is easily seen before failure"
+     ],
+     "a": 0,
+     "x": "SCC can readily crack metal of appreciable thickness, sometimes in a very short time.",
+     "p": "P45"
+    }
+   ]
+  },
+  {
+   "title": "Chloride and caustic stress corrosion",
+   "eo": [
+    "1.28"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Chloride ions are present in the environment",
+      "Dissolved oxygen is present in the environment",
+      "Metal is under tensile stress"
+     ],
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.32"
+    },
+    {
+     "t": "p",
+     "text": "It is controlled by maintaining low chloride ion and oxygen content and using low carbon steels.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.32"
+    },
+    {
+     "t": "p",
+     "text": "Caustic stress corrosion attacks mild steels and stainless steels exposed to concentrated caustic environments under tensile stress.",
+     "cite": "DOE-HDBK-1015/1-93 CH-02 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.28",
+     "q": "Which of these is required for chloride stress corrosion but not for caustic stress corrosion?",
+     "o": [
+      "A concentrated environment of any kind",
+      "Dissolved oxygen",
+      "Tensile stress",
+      "A metal"
+     ],
+     "a": 1,
+     "x": "Dissolved oxygen is one of the three conditions for chloride stress corrosion. It is not necessary for caustic cracking.",
+     "p": "P47"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Decide which metal corrodes",
+   "eo": "1.17",
+   "page": 24,
+   "problem": "Iron and copper pipes join in an electrolyte. Which metal corrodes?",
+   "steps": [
+    "The oxidation potential of iron is greater than that of copper",
+    "Iron becomes the anode"
+   ],
+   "answer": "Iron corrodes near the junction.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.24"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is passivity?",
+   "a": "The characteristic of a metal that does not become active in the corrosion reaction, caused by a stable oxide layer.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What is polarization?",
+   "a": "The decrease in cell potential caused by the operation of an electrochemical cell.",
+   "p": "P16",
+   "place": null
+  },
+  {
+   "q": "What are the four methods used to chemically control general corrosion?",
+   "a": "Passivators and inhibitors, cathodic protection, removing corrosive agents, and chemical addition.",
+   "p": "P26",
+   "place": null
+  },
+  {
+   "q": "What is crud?",
+   "a": "Finely divided, insoluble oxide corrosion particles suspended in reactor coolant or loosely adhering to metal surfaces.",
+   "p": "P29",
+   "place": null
+  },
+  {
+   "q": "What is scale?",
+   "a": "Deposits on surfaces from the formation of insoluble compounds from normally soluble salts.",
+   "p": "P32",
+   "place": null
+  },
+  {
+   "q": "What are the two locations susceptible to galvanic corrosion?",
+   "a": "A piping transition between two metals and a sacrificial anode.",
+   "p": "P35",
+   "place": null
+  },
+  {
+   "q": "What is the minimum caustic concentration for caustic stress cracking?",
+   "a": "Greater than 10,000 ppm.",
+   "p": "P48",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Corrosion is electrochemical in nature because the reactions involve a transfer of charge.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.9"
+  },
+  {
+   "text": "Passivity and polarization both slow or stop the corrosion process.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.10"
+  },
+  {
+   "text": "The three products formed from general corrosion of iron are FeO, Fe2O3, and Fe3O4.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.20"
+  },
+  {
+   "text": "Crud problems include fouling, radiation levels, hot spots, and waste disposal.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.25"
+  },
+  {
+   "text": "In galvanic corrosion, the active metal becomes anodic and the noble metal becomes cathodic.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.26"
+  },
+  {
+   "text": "Stress corrosion cracking can readily crack metal of appreciable thickness.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.37"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 10",
+   "note": "p.2 says the module concentrates on water-based environments. General electrochemistry, passivity, polarization, galvanic corrosion, and stress corrosion cracking are untagged. Pages built on water chemistry carry the Water-system only tag: general corrosion of iron, corrosion rate factors, chemical control, aluminum, crud, pitting, and chloride and caustic cracking.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.2"
+  },
+  {
+   "type": "User decision",
+   "note": "The reactor coolant hydrogen discussion on p.16 is left off under the Nov 5, 2026 decision on water reactor coolant systems. Objective 1.14 and 1.15 on crud stay because they name reactor coolant generally, on a tagged page.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.16"
+  },
+  {
+   "type": "Handbook error",
+   "note": "Table 1 on p.4 lists nickel at -2.250 volts, between cobalt at -0.277 and tin at -0.136, which looks like a misprint. It also shows iron with Fe+++ at -0.44, while the text uses Fe++. The table is not reproduced.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.4"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "p.25 says a much larger surface area of the non-active metal accelerates attack, while p.26 says to choose areas so the protected material has a larger area than the active metal. The lesson lists only that surface areas are chosen, and no check tests the direction.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.25"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.21 calls passivators a naturally active metal, while p.16 calls them chemical substances added to water. The lesson uses p.16. p.31 writes the ammonium ion as NH3+, and the lesson leaves it off.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.21"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.20 says a pH between 4 and 10 gives a minimal corrosion rate, while p.15 says the rate is relatively independent of pH in that range for aerated water. The lesson uses p.15.",
+   "cite": "DOE-HDBK-1015/1-93 CH-02 p.20"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

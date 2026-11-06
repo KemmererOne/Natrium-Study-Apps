@@ -1,0 +1,1113 @@
+{
+ "module_id": "PR-05",
+ "slug": "pr-05-logic-diagrams",
+ "title": "Logic Diagrams",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V2",
+ "handbook": "DOE-HDBK-1016/2-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Controllers and Positioners",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a logic diagram, READ and INTERPRET the diagrams.",
+   "items": [],
+   "page": {
+    "pdf": 49,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the symbols used on logic diagrams to represent the following components:",
+     "items": [
+      "a. AND gate",
+      "b. NAND gate",
+      "c. COINCIDENCE gate",
+      "d. OR gate",
+      "e. NOR gate",
+      "f. EXCLUSIVE OR gate",
+      "g. NOT gate or inverter",
+      "h. Adder",
+      "i. Time-delay",
+      "j. Counter",
+      "k. Shift register",
+      "l. Flip-flop",
+      "m. Logic memories"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN the operation of the three types of time delay devices.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DEVELOP the truth tables for the following logic gates:",
+     "items": [
+      "a. AND gate",
+      "b. OR gate",
+      "c. NOT gate",
+      "d. NAND gate",
+      "e. NOR gate",
+      "f. EXCLUSIVE OR gate"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "IDENTIFY the symbols used to denote a logical 1 (or high) and a logical 0 (or low) as used in logic diagrams.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a logic diagram and appropriate information, DETERMINE the output of each component and the logic circuit.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The use of logic symbology results in a diagram that allows the user to determine the operation of a given component or system as the various input signals change.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The logic symbols, called gates, depict the operation/start/stop circuits of components and systems.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "There are three basic types of logic gates. They are AND, OR, and NOT gates.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P4",
+   "quote": "The states of a gate are also commonly referred to as high or low, 1 or 0, or True or False, where on = high = 1 = True, and off = low = 0 = False.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "AND gate - provides an output (on) when all its inputs are on. When any one of the inputs is off, the gate's output is off.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "OR gate - provides an output (on) when any one or more of its inputs is on. The gate is off only when all of its inputs are off.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "NOT gate - provides a reversal of the input. If the input is on, the output will be off. If the input is off, the output will be on.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "NAND gate - is the opposite (NOT) of an AND gate's output. It provides an output (on) except when all the inputs are on.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "NOR gate - is the opposite (NOT) of an OR gate's output. It provides an output only when all inputs are off.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "The IEEE/ANSI symbols are used most often; however, other symbol conventions are provided on Figure 3 for information.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "Theoretically, there is no limit to the number of inputs a gate can have.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "The fraction in the logic symbol indicates that the AND gate is a COINCIDENCE gate.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "The numerator of the fraction indicates the number of inputs that must be on for the gate to be on.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "The COINCIDENCE gate behaves like an AND gate except that only a specific number of the total number of inputs needs to be on for the gate's output to be on.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "EXCLUSIVE OR - provides an output (on) when only one of the inputs is on. Any other combination results in no output (off).",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "EXCLUSIVE NOR - is the opposite (NOT) of an EXCLUSIVE OR gate's output. It provides an output only when all inputs are on or when all inputs are off.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P17",
+   "quote": "Two variations of the OR gate are the EXCLUSIVE OR and its opposite, the EXCLUSIVE NOR.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+  },
+  {
+   "id": "P18",
+   "quote": "the Type-One Time Delay Device delays the output (on) for the specified period of time, but the output will stop (off) as soon as the input signal is removed, as illustrated by Figure 7.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+  },
+  {
+   "id": "P19",
+   "quote": "but the output is maintained only for a specified period of time once the input signal (off) has been removed.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+  },
+  {
+   "id": "P20",
+   "quote": "Type-Three Time Delay Devices provide an output signal for a specified period of time, regardless of the duration of the input.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.8"
+  },
+  {
+   "id": "P21",
+   "quote": "The two input signals to a memory device are called set and reset.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.8"
+  },
+  {
+   "id": "P22",
+   "quote": "A flip-flop is a complex circuit constructed from OR and NOT gates, but is used so frequently in complex circuits that it has its own symbol.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.9"
+  },
+  {
+   "id": "P23",
+   "quote": "Several types of binary counters exist, all of which are constructed of flip-flops.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "id": "P24",
+   "quote": "Shift register - Is a storage device constructed of flip-flops that is used in computers to provide temporary storage of a binary word.",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "id": "P25",
+   "quote": "Half adder - Is a logic circuit that is used in computer circuits to allow the computer to \"carry\" numbers when it is performing mathematical operations",
+   "sec": "Engineering Logic Diagrams",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "id": "P26",
+   "quote": "A truth table has a column for the input of each gate and column for the output of each gate.",
+   "sec": "Truth Tables and Exercises",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.11"
+  },
+  {
+   "id": "P27",
+   "quote": "In truth tables, the on and off status of the inputs and outputs is represented using 0s and 1s.",
+   "sec": "Truth Tables and Exercises",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.11"
+  },
+  {
+   "id": "P28",
+   "quote": "The symbol is drawn so that the first part of the square wave indicates the normal state of the gate.",
+   "sec": "Truth Tables and Exercises",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+  },
+  {
+   "id": "P29",
+   "quote": "The second part of the square wave indicates the off-normal state of the gate.",
+   "sec": "Truth Tables and Exercises",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+  },
+  {
+   "id": "P30",
+   "quote": "It simply requires the reader to choose the initial conditions, determine the response of the circuits, and modify the inputs as needed.",
+   "sec": "Truth Tables and Exercises",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Why logic diagrams are used",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "At DOE facilities, the main use of logic diagrams is to present component and system operational information.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig1",
+     "num": 1,
+     "cap": "Example of a Pump Start Circuit Schematic Diagram",
+     "alt": "Dense relay and contact schematic of a large pump start circuit.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig2",
+     "num": 2,
+     "cap": "Example of Figure 1 Pump Start Circuit as a Logic Diagram",
+     "alt": "The same pump start circuit drawn with logic gates, which is much simpler to follow.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Once the basic symbols are understood, working out how the pump responds to its inputs from the logic diagram is fast and easy compared with tracing the relays and contacts of the schematic.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.1"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What does a logic diagram let the user determine?",
+     "o": [
+      "The drawing scale",
+      "The wire size in the circuit",
+      "The operation of a component or system as the input signals change",
+      "The physical location of each relay"
+     ],
+     "a": 2,
+     "x": "Logic symbology allows the user to determine the operation of a given component or system as the various input signals change.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "The basic gates",
+   "eo": [
+    "1.1",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Each gate is a simple device with only two states, on and off.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The state of a gate, also called its output, is set by the status of its inputs.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Because the NOT gate is often used with AND and OR gates, combinations have their own symbols. An AND gate with a NOT gate is a NAND gate. An OR gate with a NOT gate is a NOR gate.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig3",
+     "num": 3,
+     "cap": "Basic Logic Symbols",
+     "alt": "Table of AND, NAND, OR, NOR, and NOT symbols in seven conventions. In the IEEE/ANSI column, AND has a flat back and round front, OR has a curved back and pointed front, NOT is a triangle with a small circle, and NAND and NOR add a small circle at the output.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "An AND gate has three inputs, and two are on. What is its output?",
+     "o": [
+      "On",
+      "On for a set time",
+      "It reverses each cycle",
+      "Off"
+     ],
+     "a": 3,
+     "x": "When any one of the inputs is off, the gate's output is off.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "An OR gate has three inputs, and one is on. What is its output?",
+     "o": [
+      "Off after a delay",
+      "It depends on which input is on",
+      "On",
+      "Off"
+     ],
+     "a": 2,
+     "x": "An OR gate provides an output when any one or more of its inputs is on.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.1",
+     "q": "A NAND gate has two inputs, and both are on. What is its output?",
+     "o": [
+      "It holds its last state",
+      "Off",
+      "On",
+      "On for a set time"
+     ],
+     "a": 1,
+     "x": "A NAND gate provides an output except when all the inputs are on.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.1",
+     "q": "When does a NOR gate provide an output?",
+     "o": [
+      "Only when all inputs are off",
+      "When any one input is on",
+      "When all inputs are on",
+      "When only one input is on"
+     ],
+     "a": 0,
+     "x": "A NOR gate provides an output only when all inputs are off.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which logic value means the same as off?",
+     "o": [
+      "True",
+      "0",
+      "1",
+      "High"
+     ],
+     "a": 1,
+     "x": "On = high = 1 = True, and off = low = 0 = False.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "COINCIDENCE and EXCLUSIVE gates",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Gates are not limited to two inputs, but the symbol must change as inputs are added.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig4",
+     "num": 4,
+     "cap": "Conventions for Depicting Multiple Inputs",
+     "alt": "Two ways to draw multiple inputs: a gate with a stretched back for several input lines, and two OR gates joined by an extension line.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "The denominator states the total number of inputs to the gate.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig5",
+     "num": 5,
+     "cap": "COINCIDENCE Gate",
+     "alt": "COINCIDENCE gates: AND gate symbols holding the fractions 2/4 and 2/3, for 2 of 4 and 2 of 3 functions.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig6",
+     "num": 6,
+     "cap": "EXCLUSIVE OR and EXCLUSIVE NOR Gates",
+     "alt": "EXCLUSIVE NOR and EXCLUSIVE OR symbols in several conventions, each with an added curved line at the back of the gate.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A COINCIDENCE gate shows the fraction 2/3. Two inputs are on. What is its output?",
+     "o": [
+      "On",
+      "Off",
+      "On only if all three are on",
+      "Off after a delay"
+     ],
+     "a": 0,
+     "x": "The numerator is the number of inputs that must be on for the gate to be on, and the denominator is the total number of inputs.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.1",
+     "q": "An EXCLUSIVE OR gate has two inputs, and both are on. What is its output?",
+     "o": [
+      "On",
+      "On for a set time",
+      "It holds its last state",
+      "Off"
+     ],
+     "a": 3,
+     "x": "An EXCLUSIVE OR provides an output when only one of the inputs is on. Any other combination results in no output.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Time delay devices",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Logic diagrams for start/stop/operate circuits must also show timing devices. There are three major types of timers.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "Type One, on receipt of the input signal:",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig7",
+     "num": 7,
+     "cap": "Type One Time Delay Device",
+     "alt": "Type One symbol, a box with an arrow marked 4 SEC. A 2 second input gives no output. An 8 second input gives an output that starts 4 seconds after the input and stops with it.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+    },
+    {
+     "t": "p",
+     "text": "Type Two gives an output signal immediately when the input is received,",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig8",
+     "num": 8,
+     "cap": "Type Two Time Delay Device",
+     "alt": "Type Two symbol marked 4 SEC. The output starts with the input and stays on 4 seconds after the input is removed.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig9",
+     "num": 9,
+     "cap": "Type-Three Time Delay Device",
+     "alt": "Type Three symbol marked 4 SEC. Short and long inputs each give a 4 second output.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "A Type-One device is set for 4 seconds. The input is on for 2 seconds. What is the output?",
+     "o": [
+      "On for 6 seconds",
+      "No output",
+      "On for 2 seconds",
+      "On for 4 seconds"
+     ],
+     "a": 1,
+     "x": "The output is delayed for the specified time, and it stops as soon as the input is removed. Figure 7 shows a 2 second input giving no output.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.2",
+     "q": "A Type-Two device is set for 4 seconds. What happens when the input is removed?",
+     "o": [
+      "The output starts after 4 seconds",
+      "The output stays on until reset",
+      "The output stays on for 4 seconds, then stops",
+      "The output stops at once"
+     ],
+     "a": 2,
+     "x": "The output is maintained only for a specified period of time once the input signal has been removed.",
+     "p": "P19"
+    },
+    {
+     "existing": "Q455",
+     "eo": "1.2"
+    }
+   ]
+  },
+  {
+   "title": "Complex logic devices",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A memory device can remember the last command or position.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig10",
+     "num": 10,
+     "cap": "Symbols for Complex Logic Devices",
+     "alt": "Symbols: flip-flop box marked S, FF, R; binary counter box; adder; half adder; shift register marked SR; retentive memory; off-return memory; and retentive memory with actuation block.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.9"
+    },
+    {
+     "t": "p",
+     "text": "A flip-flop is a device whose output changes as one or more of its inputs change.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "A flip-flop is principally used in solid state logic diagrams (computers).",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "A counter lets a computer count higher than 1, the highest number one flip-flop can represent.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What are the two input signals to a memory device called?",
+     "o": [
+      "Start and stop",
+      "Set and reset",
+      "On and off",
+      "High and low"
+     ],
+     "a": 1,
+     "x": "The two input signals to a memory device are called set and reset.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is a binary counter built from?",
+     "o": [
+      "Time delay devices",
+      "Half adders",
+      "Memory devices",
+      "Flip-flops"
+     ],
+     "a": 3,
+     "x": "Several types of binary counters exist, all of which are constructed of flip-flops.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.1",
+     "q": "What does a shift register do?",
+     "o": [
+      "Delays an output signal",
+      "Reverses an input signal",
+      "Provides temporary storage of a binary word",
+      "Carries numbers during addition"
+     ],
+     "a": 2,
+     "x": "A shift register is a storage device constructed of flip-flops that provides temporary storage of a binary word.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Truth tables",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Truth tables help as the number of inputs and the complexity of a circuit grow.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "The number of rows lists every combination of input signal. Mathematically it is 2 raised to the power n, where n is the number of inputs.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig11",
+     "num": 11,
+     "cap": "Truth Tables",
+     "alt": "Truth tables with inputs A and B for AND, OR, NAND, NOR, EXCLUSIVE OR, and EXCLUSIVE NOR, and input A for NOT.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "AND: output 1 only for inputs 1, 1",
+      "OR: output 0 only for inputs 0, 0",
+      "NOT: input 0 gives 1, and input 1 gives 0",
+      "NAND: output 0 only for inputs 1, 1",
+      "NOR: output 1 only for inputs 0, 0",
+      "EXCLUSIVE OR: output 1 for inputs 0, 1 and 1, 0"
+     ],
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "How many rows does a truth table need for a gate with three inputs?",
+     "o": [
+      "3",
+      "6",
+      "8",
+      "9"
+     ],
+     "a": 2,
+     "x": "The number of rows is 2 raised to the power n, where n is the number of inputs. Two to the third power is 8.",
+     "p": "P26"
+    },
+    {
+     "eo": "1.3",
+     "q": "In a truth table for an OR gate, which inputs give an output of 0?",
+     "o": [
+      "0 and 0",
+      "0 and 1",
+      "1 and 0",
+      "1 and 1"
+     ],
+     "a": 0,
+     "x": "The OR gate is off only when all of its inputs are off.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.3",
+     "q": "In a truth table for a NOR gate, which inputs give an output of 1?",
+     "o": [
+      "0 and 0",
+      "0 and 1",
+      "1 and 0",
+      "1 and 1"
+     ],
+     "a": 0,
+     "x": "Figure 11 shows a NOR output of 1 only for inputs 0 and 0.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "Reading logic diagrams",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The reader usually must decide the input values to each gate. Occasionally the print gives the normal state of each gate, with a symbol similar to the bistable symbol.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "fig",
+     "id": "pr-05-fig12",
+     "num": 12,
+     "cap": "Logic Gate Status Notation",
+     "alt": "Step lines marked normal-high, non-normal-low and normal-low, non-normal-high, and a NAND gate with these marks at its inputs and output.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+    },
+    {
+     "t": "p",
+     "text": "A diagram with no status marks is no harder to read.",
+     "cite": "DOE-HDBK-1016/2-93 PR-05 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q453",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.5",
+     "q": "A logic diagram gives no gate status. How do you read it?",
+     "o": [
+      "Assume every input is on",
+      "Assume every input is off",
+      "Use the electrical schematic instead",
+      "Choose the initial conditions, determine the response, and modify the inputs as needed"
+     ],
+     "a": 3,
+     "x": "It simply requires the reader to choose the initial conditions, determine the response of the circuits, and modify the inputs as needed.",
+     "p": "P30"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Fan start circuit: identify and time",
+   "eo": "1.5",
+   "page": 18,
+   "fig": {
+    "t": "fig",
+    "id": "pr-05-fig13",
+    "num": 13,
+    "cap": "Example 1",
+    "alt": "Fan start logic: a safety signal passes a 10 minute time delay (1) to AND gate 2 with the AUTO signal. Gate 2 and the START signal enter OR gate 3, which feeds retentive memory 4 with a STOP input. The memory starts emergency fan 1A-A. A 45 second delay, a flow switch, and gates feed low flow alarm 5.",
+    "cite": "DOE-HDBK-1016/2-93 PR-05 p.14"
+   },
+   "problem": "Identify the AND, OR, time delay, and retentive memory symbols. How long must the safety signal be present before the time delay passes an on signal to Gate 2?",
+   "steps": [
+    "Use the numbers on the drawing: AND is 2, OR is 3, the time delay is 1, and the retentive memory is 4.",
+    "The time delay is marked 10 MINUTES."
+   ],
+   "answer": "The safety signal must be received for greater than 10 minutes. If it is removed sooner, no signal is passed to Gate 2.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.18"
+  },
+  {
+   "title": "Fan start circuit: Gate 2 and the alarm",
+   "eo": "1.5",
+   "page": 18,
+   "problem": "When does Gate 2 turn on, and when does the low flow alarm sound?",
+   "steps": [
+    "Gate 2 is an AND gate, so both of its inputs must be on.",
+    "The alarm follows the 45 second delay and flow switch 30-38, or the same condition on the 1B-B fan."
+   ],
+   "answer": "Gate 2 turns on when the hand switch is in AUTO and a safety signal has been received for greater than 10 minutes. The alarm sounds if FS 30-38 senses less than 20,000 cfm 45 seconds after the fan has started, or the same condition exists on the 1B-B fan.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.18"
+  },
+  {
+   "title": "Fan start circuit: losing the safety signal",
+   "eo": "1.5",
+   "page": 18,
+   "problem": "Twelve minutes after first receiving a safety signal, with the switch in AUTO, the safety signal is removed. What happens to the fan?",
+   "steps": [
+    "The fan started ten minutes after the safety signal.",
+    "Removing the safety signal removes only the continuous start signal.",
+    "The retentive memory keeps the fan on until a STOP signal."
+   ],
+   "answer": "The fan continues to run until the hand switch is placed in the stop position.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.18"
+  },
+  {
+   "title": "Fan start circuit: ways to start and stop",
+   "eo": "1.5",
+   "page": 18,
+   "problem": "How many ways can the fan be started and stopped?",
+   "steps": [
+    "Start: the START signal through OR gate 3, or AUTO plus the safety signal through Gate 2.",
+    "Stop: the STOP signal to the memory."
+   ],
+   "answer": "It can be started by two signals, START and AUTO plus a safety signal. It can be stopped by one signal, STOP, but will only remain stopped if no safety signal is present or the switch is held in the stop position.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.18"
+  },
+  {
+   "title": "Valve circuit: status at Gate 4",
+   "eo": "1.5",
+   "page": 18,
+   "fig": {
+    "t": "fig",
+    "id": "pr-05-fig14",
+    "num": 14,
+    "cap": "Example 2",
+    "alt": "Valve logic: AND gate 1 takes the valve fully open signal, the safety signal through a NOT gate, and AUTO. Gate 1 and the OPEN signal enter OR gate 2. Gate 2 and the CLOSED signal through NOT gate 3 enter AND gate 4, which energizes solenoid valve FSV 1-147 to operate air valve FCV 1-147.",
+    "cite": "DOE-HDBK-1016/2-93 PR-05 p.16"
+   },
+   "problem": "With the hand switch in AUTO and no safety signal, what is the status of the two inputs to Gate 4?",
+   "steps": [
+    "Right input: the CLOSE contacts are open, so the signal is off. The NOT gate reverses it to on.",
+    "Gate 1: the safety NOT input is on and AUTO is on, but the fully open signal is off, so Gate 1 is off.",
+    "Gate 2: the OPEN signal is off and Gate 1 is off, so Gate 2 is off."
+   ],
+   "answer": "The right input is on and the left input is off.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.18"
+  },
+  {
+   "title": "Valve circuit: is the solenoid correct?",
+   "eo": "1.5",
+   "page": 19,
+   "problem": "Electrical components are drawn de-energized. Is FSV-1-147 in its correct position, and how many ways can it be energized and de-energized?",
+   "steps": [
+    "Gate 4 is an AND gate with one input off, so it passes no on signal.",
+    "The hand switch in OPEN momentarily energizes it.",
+    "CLOSE de-energizes it, and so does a safety signal once the valve is open."
+   ],
+   "answer": "Yes, de-energized is correct. It can be energized one way, by the OPEN position. It can be de-energized two ways, by the CLOSE position or by a safety signal with the valve open.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.19"
+  },
+  {
+   "title": "Valve circuit: opening with a safety signal",
+   "eo": "1.5",
+   "page": 19,
+   "problem": "If a safety signal is present, can FCV-1-147 be opened?",
+   "steps": [
+    "The OPEN position passes through OR gate 2 directly.",
+    "When the switch returns to AUTO, the safety signal's NOT gate removes the on signal to Gate 1."
+   ],
+   "answer": "Yes, it can be opened, but it will not remain open when the hand switch spring returns to AUTO.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.19"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the three basic types of logic gates?",
+   "a": "AND, OR, and NOT gates.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "When does an AND gate provide an output?",
+   "a": "When all its inputs are on.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "When is an OR gate off?",
+   "a": "Only when all of its inputs are off.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "When does a NAND gate provide an output?",
+   "a": "Except when all the inputs are on.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "What does the fraction in a COINCIDENCE gate symbol mean?",
+   "a": "The numerator is the number of inputs that must be on. The denominator is the total number of inputs.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "When does an EXCLUSIVE OR gate provide an output?",
+   "a": "When only one of the inputs is on.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What does a Type-Two Time Delay Device do?",
+   "a": "It gives an output at once on the input, and holds it for a specified time after the input is removed.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "How many rows does a truth table need?",
+   "a": "Every combination of input signal: 2 raised to the power n, where n is the number of inputs.",
+   "p": "P26",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "This chapter reviewed the seven basic symbols used on logic diagrams and the symbols for six of the more complex logic devices.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "text": "Type One delays the output for a specified time, Type Two holds the output for a specified time, and Type Three outputs for the specified time regardless of input duration.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "text": "Status is shown by a symbol similar to the bistable: the first part of the square wave is the normal state, and the second part is the off-normal state.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.20"
+  },
+  {
+   "text": "Truth tables were presented for each of the seven basic logic gates.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.20"
+  },
+  {
+   "text": "The examples practiced reading logic diagrams of simple fan and valve circuits.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.20"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. Logic diagrams are general and the fan and valve circuits are not tied to a coolant.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.14"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The p.10 summary says Type Two \"only generates an output for the specified period of time.\" p.7 and Figure 8 show the output starting with the input and held for the set time after the input is removed. The lesson teaches p.7. Q454 uses the summary wording, which could also fit Type Three, so it is not reused here.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  },
+  {
+   "type": "Exponent",
+   "note": "p.11 prints the row count as 2n in the extracted text. The page image shows 2 raised to the power n, so the lesson states it in words and does not quote it.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.11"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.19 says \"the output of the OR gate (1).\" The OR gate is Gate 2, and the lesson uses the gate numbers from Figure 14. The chapter says page 18 holds the answers, and p.18 to p.19 do.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.19"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.9 prints \"Flop-flop\" and p.7 to p.8 print \"reciept.\" The lesson does not quote those words.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.9"
+  },
+  {
+   "type": "Objective",
+   "note": "Objective 1.1 lists an adder and a counter. Figure 10 shows both, and the text describes the half adder and binary counter.",
+   "cite": "DOE-HDBK-1016/2-93 PR-05 p.10"
+  }
+ ],
+ "page_tags": []
+}

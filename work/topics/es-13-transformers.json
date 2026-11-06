@@ -1,0 +1,720 @@
+{
+ "module_id": "ES-13",
+ "slug": "es-13-transformers",
+ "title": "Transformers",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V4",
+ "handbook": "DOE-HDBK-1011/4-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the type of a transformer, DESCRIBE the operating characteristics and applications for that transformer type.",
+   "items": [],
+   "page": {
+    "pdf": 43,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms as they pertain to transformers:",
+     "items": [
+      "a. Mutual induction",
+      "b. Turns ratio",
+      "c. Impedance ratio",
+      "d. Efficiency"
+     ],
+     "page": {
+      "pdf": 43,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the differences between a wye-connected and delta-connected transformer.",
+     "items": [],
+     "page": {
+      "pdf": 43,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given the type of connection and turns ratios for the primary and secondary of a transformer, CALCULATE voltage, current, and power for each of the following types:",
+     "items": [
+      "a. ∆-∆",
+      "b. ∆-Y",
+      "c. Y-∆",
+      "d. Y-Y"
+     ],
+     "page": {
+      "pdf": 43,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the applications of each of the following types of transformers:",
+     "items": [
+      "a. Distribution",
+      "b. Power",
+      "c. Control",
+      "d. Auto",
+      "e. Isolation",
+      "f. Instrument potential",
+      "g. Instrument current"
+     ],
+     "page": {
+      "pdf": 43,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The inducing of an EMF in a coil by magnetic flux lines generated in another coil is called mutual induction.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "The turns ratio is defined as the ratio of turns of wire in the primary winding to the number of turns of wire in the secondary winding.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "The ratio between the two impedances is referred to as the impedance ratio",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "Maximum power is transferred from one circuit to another through a transformer when the impedances are equal, or matched.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Efficiency of a transformer is the ratio of the power output to the power input",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The coil of a transformer that is energized from an AC source is called the primary winding (coil), and the coil that delivers this AC to the load is called the secondary winding (coil)",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "The voltage of the windings in a transformer is directly proportional to the number of turns on the coils.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "the voltage ratio is equal to the turns ratio.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.5"
+  },
+  {
+   "id": "P9",
+   "quote": "the transformer is referred to as a \"step-up\" transformer.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.5"
+  },
+  {
+   "id": "P10",
+   "quote": "The current in the windings of a transformer is inversely proportional to the voltage in the windings.",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.7"
+  },
+  {
+   "id": "P11",
+   "quote": "In the delta connection, all three phases are connected in series to form a closed loop",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.8"
+  },
+  {
+   "id": "P12",
+   "quote": "In the wye connection, three common ends of each phase are connected together at a common terminal",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "Distribution transformers are generally used in electrical power distribution and transmission systems.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.17"
+  },
+  {
+   "id": "P14",
+   "quote": "Power transformers are used in electronic circuits and come in many different types and applications.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.17"
+  },
+  {
+   "id": "P15",
+   "quote": "Control transformers are generally used in electronic circuits that require constant voltage or constant current with a low power or volt-amp rating.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+  },
+  {
+   "id": "P16",
+   "quote": "The auto transformer is generally used in low power applications where a variable voltage is required.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+  },
+  {
+   "id": "P17",
+   "quote": "Isolation transformers are normally low power transformers used to isolate noise from or to ground electronic circuits.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+  },
+  {
+   "id": "P18",
+   "quote": "The instrument potential transformer (PT) steps down voltage of a circuit to a low value that can be effectively and safely used for operation of instruments",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.19"
+  },
+  {
+   "id": "P19",
+   "quote": "secondary line current = 4(20) = 80 amps",
+   "sec": "Transformer Theory",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.11"
+  },
+  {
+   "id": "P20",
+   "quote": "A current transformer should always be short-circuited when not connected to an external load.",
+   "sec": "Transformer Types",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.19"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Transformer terms and theory",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "eq",
+     "text": "Turns ratio = NP / NS",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The impedance ratio equals the square of the turns ratio, so a set turns ratio can match impedances.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "eq",
+     "text": "Efficiency = (Power output / Power input) x 100",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Energy is transferred by magnetic induction from one set of coils to another by means of a varying magnetic flux.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "es-13-fig1",
+     "num": 1,
+     "cap": "Core-Type Transformer",
+     "alt": "Core-type transformer with primary and secondary coils on separate legs of an iron core, connected to an AC source and a load.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "VP / VS = NP / NS",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.5"
+    },
+    {
+     "t": "p",
+     "text": "If the secondary voltage is greater than the primary voltage, the transformer is a step-up transformer. If it is less, it is a step-down transformer.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "eq",
+     "text": "IS / IP = NP / NS",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.7"
+    },
+    {
+     "t": "p",
+     "text": "A transformer that steps up voltage steps down the current proportionally.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.8"
+    },
+    {
+     "t": "p",
+     "text": "All transformers have copper and core losses. Copper loss is power lost to the ohmic resistance of the windings.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.11"
+    },
+    {
+     "t": "p",
+     "text": "Core losses are caused by hysteresis and eddy current losses.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is mutual induction?",
+     "o": [
+      "The inducing of an EMF in a coil by magnetic flux lines generated in another coil",
+      "The ratio of primary to secondary turns",
+      "The loss of power in the windings",
+      "The opposition to current in a coil"
+     ],
+     "a": 0,
+     "x": "The inducing of an EMF in a coil by magnetic flux lines generated in another coil is called mutual induction.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.1",
+     "q": "A transformer has 1200 primary turns and 300 secondary turns, with 480 volts on the primary. What is the secondary voltage?",
+     "o": [
+      "120 volts",
+      "240 volts",
+      "1920 volts",
+      "4 volts"
+     ],
+     "a": 0,
+     "x": "The voltage ratio equals the turns ratio: VS = 480 x 300/1200 = 120 volts.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.1",
+     "q": "When are impedances matched across a transformer most useful?",
+     "o": [
+      "When no load is connected",
+      "To transfer maximum power from one circuit to another",
+      "To stop all current flow",
+      "To raise the core losses"
+     ],
+     "a": 1,
+     "x": "Maximum power is transferred from one circuit to another through a transformer when the impedances are equal, or matched.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "A transformer takes in 5000 watts and delivers 4500 watts. What is its efficiency?",
+     "o": [
+      "10 percent",
+      "50 percent",
+      "90 percent",
+      "111 percent"
+     ],
+     "a": 2,
+     "x": "Efficiency = (4500 / 5000) x 100 = 90 percent.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Three-phase connections",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Three-phase transformer operation is identical to single-phase, except that three single-phase windings are used.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "es-13-fig3",
+     "num": 3,
+     "cap": "Delta Connection",
+     "alt": "Delta connection: three windings in a closed triangle with lines from the corners.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "es-13-fig4",
+     "num": 4,
+     "cap": "Wye Connection",
+     "alt": "Wye connection: three windings joined at a neutral point N, with the other ends going to the line.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The windings may be connected to form a three-phase bank in four ways: ∆-∆, ∆-Y, Y-∆, and Y-Y.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "es-13-fig5",
+     "num": 5,
+     "cap": "3φ Transformer Connections",
+     "alt": "Four transformer bank connections, delta-delta, delta-wye, wye-delta, and wye-wye, marked with voltages and currents.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.9"
+    },
+    {
+     "t": "p",
+     "text": "With line voltage V and line current I, a delta primary winding has voltage V, and a wye primary winding has voltage V divided by √3.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.10"
+    },
+    {
+     "t": "p",
+     "text": "A delta primary winding has phase current I divided by √3, and a wye primary winding has phase current I.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.10"
+    },
+    {
+     "t": "p",
+     "text": "With turns ratio a, the secondary line current is aI for ∆-∆ and Y-Y, and √3 aI for Y-∆.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "How are the three phases of a delta connection arranged?",
+     "o": [
+      "Joined at a common neutral",
+      "In series to form a closed loop",
+      "All in parallel with the load",
+      "Each to a separate core only"
+     ],
+     "a": 1,
+     "x": "In the delta connection, all three phases are connected in series to form a closed loop.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.3",
+     "q": "Line voltage to a Y-Y transformer bank is 173 volts. Using √3 = 1.73, what is the voltage across each primary winding?",
+     "o": [
+      "58 volts",
+      "100 volts",
+      "173 volts",
+      "300 volts"
+     ],
+     "a": 1,
+     "x": "In a wye primary, winding voltage is line voltage divided by √3: 173 / 1.73 = 100 volts.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.3",
+     "q": "A ∆-∆ bank has a turns ratio of 5:1 and a primary line current of 10 amps. What is the secondary line current?",
+     "o": [
+      "2 amps",
+      "10 amps",
+      "50 amps",
+      "86.5 amps"
+     ],
+     "a": 2,
+     "x": "For ∆-∆, secondary line current is aI = 5 x 10 = 50 amps. In the handbook's example, a 4:1 ratio and 20 amps give 80 amps.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Types of transformers",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "This class has the highest power ratings and the highest continuous voltage rating.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "The auto transformer consists of only one winding. Tapping it at certain points gives different voltages.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "es-13-fig8",
+     "num": 8,
+     "cap": "Auto Transformer Schematic",
+     "alt": "Auto transformer schematic: one winding with an input across it and an output tap.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "A transformer cannot pass DC voltage from primary to secondary, so DC such as noise is isolated.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "The instrument current transformer (CT) steps down the current of a circuit to a lower value and is used in the same types of equipment.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Otherwise the magnetizing current builds up a large flux, inducing an excessively high voltage in the secondary under no load.",
+     "cite": "DOE-HDBK-1011/4-92 ES-13 p.19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "Which transformer type has the highest power and voltage ratings?",
+     "o": [
+      "Control",
+      "Distribution",
+      "Isolation",
+      "Instrument potential"
+     ],
+     "a": 1,
+     "x": "Distribution transformers have the highest power, or volt-ampere, ratings and the highest continuous voltage rating.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which transformer has only one winding and gives a variable voltage?",
+     "o": [
+      "Isolation transformer",
+      "Current transformer",
+      "Auto transformer",
+      "Distribution transformer"
+     ],
+     "a": 2,
+     "x": "The auto transformer consists of only one winding, generally used in low power applications where a variable voltage is required.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.4",
+     "q": "What should be done with a current transformer that is not connected to an external load?",
+     "o": [
+      "Leave its secondary open",
+      "Short-circuit it",
+      "Ground its primary only",
+      "Raise its voltage"
+     ],
+     "a": 1,
+     "x": "A current transformer should always be short-circuited when not connected to an external load.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is an isolation transformer used for?",
+     "o": [
+      "To isolate noise from or to ground electronic circuits",
+      "To step up generator voltage",
+      "To supply distribution lines",
+      "To measure current"
+     ],
+     "a": 0,
+     "x": "Isolation transformers are normally low power transformers used to isolate noise from or to ground electronic circuits.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.4",
+     "q": "What does an instrument potential transformer do?",
+     "o": [
+      "Steps up current",
+      "Steps down voltage for instruments",
+      "Isolates DC noise",
+      "Gives constant current"
+     ],
+     "a": 1,
+     "x": "The instrument potential transformer steps down voltage of a circuit to a low value that can be used for operation of instruments.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.4",
+     "q": "Where are control transformers generally used?",
+     "o": [
+      "Transmission systems",
+      "Circuits needing constant voltage or current at low power",
+      "Generator output lines",
+      "High voltage breakers"
+     ],
+     "a": 1,
+     "x": "Control transformers are generally used in electronic circuits that require constant voltage or constant current with a low power or volt-amp rating.",
+     "p": "P15"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Secondary voltage",
+   "eo": "1.1",
+   "page": 6,
+   "problem": "A transformer has a primary voltage of 240 volts, 250 turns in the primary, and 50 turns in the secondary. Find the secondary voltage.",
+   "steps": [
+    "VP / VS = NP / NS.",
+    "VS = 240 x 50 / 250."
+   ],
+   "answer": "48 volts",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.6"
+  },
+  {
+   "title": "Primary winding voltage",
+   "eo": "1.3",
+   "page": 10,
+   "problem": "Line voltage is 440 V to a three-phase transformer bank. Find the voltage across each primary winding.",
+   "steps": [
+    "∆-∆ and ∆-Y: primary voltage = V = 440 volts.",
+    "Y-Y and Y-∆: primary voltage = V / √3."
+   ],
+   "answer": "440 volts for a delta primary and 254.3 volts for a wye primary",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.10"
+  },
+  {
+   "title": "Secondary line current",
+   "eo": "1.3",
+   "page": 11,
+   "problem": "Primary line current is 20 amps and the turns ratio is 4:1. Find the secondary line current for Y-∆.",
+   "steps": [
+    "Secondary line current = √3 aI.",
+    "(1.73)(4)(20)."
+   ],
+   "answer": "138.4 amps",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.11"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is a step-up transformer?",
+   "a": "One whose secondary voltage is greater than its primary voltage.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "How do transformer current and voltage relate?",
+   "a": "The current in the windings is inversely proportional to the voltage in the windings.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "What is the voltage ratio of a transformer equal to?",
+   "a": "The turns ratio.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "What is the primary winding of a transformer?",
+   "a": "The coil that is energized from an AC source.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "Where are power transformers used?",
+   "a": "In electronic circuits, in many different types and applications.",
+   "p": "P14",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The turns ratio is the ratio of turns of wire in the primary winding to the number of turns in the secondary winding.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.16"
+  },
+  {
+   "text": "In a delta connection, all three phases are connected in series to form a closed loop. In a wye connection, three common ends of each phase are connected together at a common terminal.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.16"
+  },
+  {
+   "text": "Distribution transformers are generally used in power distribution and transmission systems.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.20"
+  },
+  {
+   "text": "Instrument potential and current transformers are used for operation of instruments and protective relays.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.20"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "The efficiency example prints 98.2%, but its own numbers, 9000 W out of 9170 W, give 98.1%. The example is not used.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.13"
+  },
+  {
+   "type": "Objective coverage",
+   "note": "Objective 1.3 lists power, but Table 1 and the examples give only voltage and current. The lesson teaches those two.",
+   "cite": "DOE-HDBK-1011/4-92 ES-13 p.10"
+  }
+ ],
+ "page_tags": []
+}

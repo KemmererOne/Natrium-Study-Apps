@@ -1,0 +1,1227 @@
+{
+ "module_id": "IC-01",
+ "slug": "ic-01-temperature-detectors",
+ "title": "Temperature Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V1",
+ "handbook": "DOE-HDBK-1013/1-92",
+ "word_file": "Temperature Detectors.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a temperature instrument, RELATE the associated fundamental principles, including possible failure modes, to that instrument.",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the construction of a basic RTD including:",
+     "items": [
+      "a. Major component arrangement",
+      "b. Materials used"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN how RTD resistance varies for the following:",
+     "items": [
+      "a. An increase in temperature",
+      "b. A decrease in temperature"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "EXPLAIN how an RTD provides an output representative of the measured temperature.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the basic construction of a thermocouple including:",
+     "items": [
+      "a. Major component arrangement",
+      "b. Materials used"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "EXPLAIN how a thermocouple provides an output representative of the measured temperature.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "STATE the three basic functions of temperature detectors.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the two alternate methods of determining temperature when the normal temperature sensing devices are inoperable.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the two environmental concerns which can affect the accuracy and reliability of temperature detection instrumentation.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "Given a simplified schematic diagram of a basic bridge circuit, STATE the purpose of the following components:",
+     "items": [
+      "a. R1 and R2",
+      "b. Rx",
+      "c. Adjustable resistor",
+      "d. Sensitive ammeter"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the bridge circuit conditions that create a balanced bridge.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "Given a block diagram of a basic temperature instrument detection and control system, STATE the purpose of the following blocks:",
+     "items": [
+      "a. RTD",
+      "b. Bridge circuit",
+      "c. DC-AC converter",
+      "d. Amplifier",
+      "e. Balancing motor/mechanical linkage"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DESCRIBE the temperature instrument indication(s) for the following circuit faults:",
+     "items": [
+      "a. Short circuit",
+      "b. Open circuit"
+     ],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "EXPLAIN the three methods of bridge circuit compensation for changes in ambient temperature.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "temperature is a measure of the kinetic energy of the material in question.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "RTDs act somewhat like an electrical transducer, converting changes in temperature to voltage signals by the measurement of resistance.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "RTD elements are normally constructed of platinum, copper, or nickel.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "because of their linear resistance-temperature characteristics (as shown in Figure 1), their high coefficient of resistance, and their ability to withstand repeated temperature cycles.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "RTD elements are usually long, spring-like wires surrounded by an insulator and enclosed in a sheath of metal.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The insulator prevents a short circuit between the wire and the metal sheath.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "Inconel, a nickel-iron-chromium alloy, is normally used in manufacturing the RTD sheath because of its inherent corrosion resistance.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "The well protects the RTD from damage by the gas or liquid being measured.",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "The resistance of an RTD varies directly with temperature",
+   "sec": "Resistance Temperature Detectors (RTDs)",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "A thermocouple is constructed of two dissimilar metal wires joined at one end.",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "The most important factor to be considered when selecting a pair of materials is the \"thermoelectric difference\" between the two materials.",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "Magnesium oxide surrounds the thermocouple wires to prevent vibration that could damage the fine wires and to enhance heat transfer between the measuring junction and the medium surrounding the thermocouple.",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "The amount of current that will be produced is dependent on the temperature difference between the measurement and reference junction",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "Heating the measuring junction of the thermocouple produces a voltage that is greater than the voltage across the reference junction.",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.7"
+  },
+  {
+   "id": "P15",
+   "quote": "In order to convert the millivolt reading to its corresponding temperature, you must refer to tables",
+   "sec": "Thermocouples",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.7"
+  },
+  {
+   "id": "P16",
+   "quote": "temperature detectors are used to provide three basic functions: indication, alarm, and control.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+  },
+  {
+   "id": "P17",
+   "quote": "The dual-element RTD has two sensing elements of which only one is normally connected.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+  },
+  {
+   "id": "P18",
+   "quote": "a contact pyrometer (portable thermocouple) may be used to obtain temperature readings on those pieces of equipment or systems that are accessible.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+  },
+  {
+   "id": "P19",
+   "quote": "Ambient temperature variations will affect the accuracy and reliability of temperature detection instrumentation.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+  },
+  {
+   "id": "P20",
+   "quote": "High humidity causes moisture to collect on the equipment.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+  },
+  {
+   "id": "P21",
+   "quote": "This moisture can cause short circuits, grounds, and corrosion, which, in turn, may damage components.",
+   "sec": "Functional Uses of Temperature Detectors",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+  },
+  {
+   "id": "P22",
+   "quote": "Resistors R1 and R2 are the ratio arms of the bridge.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.11"
+  },
+  {
+   "id": "P23",
+   "quote": "R3 is a variable resistor known as the standard arm that is adjusted to match the unknown resistor.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.11"
+  },
+  {
+   "id": "P24",
+   "quote": "The sensing ammeter visually displays the current that is flowing through the bridge circuit.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.11"
+  },
+  {
+   "id": "P25",
+   "quote": "When this condition exists, there is no current flow through the ammeter, and the bridge is said to be balanced.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+  },
+  {
+   "id": "P26",
+   "quote": "then the resistance of Rx is the same as R3, or Rx = R3.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+  },
+  {
+   "id": "P27",
+   "quote": "The unbalanced bridge circuit (Figure 9) uses a millivoltmeter that is calibrated in units of temperature that correspond to the RTD resistance.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+  },
+  {
+   "id": "P28",
+   "quote": "The balanced bridge circuit (Figure 10) uses a galvanometer to compare the RTD resistance with that of a fixed resistor.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.13"
+  },
+  {
+   "id": "P29",
+   "quote": "A slidewire resistor is used to balance the arms of the bridge.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.13"
+  },
+  {
+   "id": "P30",
+   "quote": "The bridge network converts this resistance to a DC voltage signal.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "id": "P31",
+   "quote": "The AC voltage is then amplified to a higher (usable) voltage that is used to drive a bi-directional motor.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "id": "P32",
+   "quote": "The bi-directional motor positions the slider on the slidewire to balance the circuit resistance.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "id": "P33",
+   "quote": "If the RTD becomes open in either the unbalanced and balanced bridge circuits, the resistance will be infinite, and the meter will indicate a very high temperature.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "id": "P34",
+   "quote": "If it becomes shorted, resistance will be zero, and the meter will indicate a very low temperature.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "id": "P35",
+   "quote": "When calibrating the circuit, a precision resistor of known value is substituted for the resistance bulb",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+  },
+  {
+   "id": "P36",
+   "quote": "The resistors that are used in the measuring circuitry are selected so that their resistance will remain constant over the range of temperature expected.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+  },
+  {
+   "id": "P37",
+   "quote": "Temperature compensation is also accomplished through the design of the electronic circuitry",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+  },
+  {
+   "id": "P38",
+   "quote": "To compensate for this change, three and four wire RTD circuits are used.",
+   "sec": "Temperature Detection Circuitry",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+  },
+  {
+   "id": "P39",
+   "quote": "will cause it to fail to the reference junction temperature.",
+   "sec": "Thermocouples",
+   "cite": "Word: Temperature Detectors.docx, slide 1.27 Quiz"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "RTDs",
+   "cite": "Word: Temperature Detectors.docx, slide 1.5 Resistance Temperature Detectors"
+  },
+  {
+   "step": "RTD internals",
+   "cite": "Word: Temperature Detectors.docx, slide 1.8 RTD Internals"
+  },
+  {
+   "step": "Bridge circuits",
+   "cite": "Word: Temperature Detectors.docx, slide 1.10 Bridge RTD Circuits"
+  },
+  {
+   "step": "Thermocouples",
+   "cite": "Word: Temperature Detectors.docx, slide 1.13 Thermocouple Temperature Detectors"
+  },
+  {
+   "step": "Environmental effects",
+   "cite": "Word: Temperature Detectors.docx, slide 1.16 Environmental Effects"
+  },
+  {
+   "step": "Failures",
+   "cite": "Word: Temperature Detectors.docx, slide 1.19 Temperature Detector Failures"
+  },
+  {
+   "step": "Alternate detection",
+   "cite": "Word: Temperature Detectors.docx, slide 1.26 Alternate Temperature Detection"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "RTD construction and operation",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "RTDs use pure metals or certain alloys that increase in resistance as temperature increases and decrease in resistance as temperature decreases.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig1",
+     "num": 1,
+     "cap": "Electrical Resistance-Temperature Curves",
+     "alt": "Graph of RTD element resistance against temperature for nickel, copper, and platinum, all rising with temperature.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "These metals are best suited for RTD applications",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig2",
+     "num": 2,
+     "cap": "Internal Construction of a Typical RTD",
+     "alt": "Cutaway of an RTD with a platinum element inside a porcelain insulator and an Inconel sheath, with connecting wires at the top.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The sheath reaches the temperature of the medium, and the platinum wire heats or cools, producing a proportional change in resistance. A precision measuring device, normally a bridge circuit, is calibrated to give the temperature.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig3",
+     "num": 3,
+     "cap": "RTD Protective Well and Terminal Head",
+     "alt": "RTD with a threaded protective well and a terminal head.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What happens to RTD resistance when temperature decreases?",
+     "o": [
+      "It goes to infinity",
+      "It increases",
+      "It decreases",
+      "It stays the same"
+     ],
+     "a": 2,
+     "x": "The resistance of an RTD varies directly with temperature, so a decrease in temperature decreases resistance.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.1",
+     "q": "What are RTD elements normally made of?",
+     "o": [
+      "Magnesium oxide",
+      "Carbon steel or cast iron",
+      "Platinum, copper, or nickel",
+      "Porcelain or glass"
+     ],
+     "a": 2,
+     "x": "RTD elements are normally constructed of platinum, copper, or nickel.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why is Inconel normally used for the RTD sheath?",
+     "o": [
+      "Its low melting point",
+      "Its inherent corrosion resistance",
+      "Its high resistance",
+      "Its low cost"
+     ],
+     "a": 1,
+     "x": "Inconel is normally used for the sheath because of its inherent corrosion resistance.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.1",
+     "q": "What does the insulator in an RTD do?",
+     "o": [
+      "Raises the resistance of the wire",
+      "Protects the sheath from the process",
+      "Measures the current",
+      "Prevents a short circuit between the wire and the sheath"
+     ],
+     "a": 3,
+     "x": "The insulator prevents a short circuit between the wire and the metal sheath.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Thermocouples",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "When one end of each wire is connected to a measuring instrument, the thermocouple becomes a sensitive and highly accurate device.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig5",
+     "num": 5,
+     "cap": "Internal Construction of a Typical Thermocouple",
+     "alt": "Thermocouple in a rigid sheath, with the measuring junction at the bottom and magnesium oxide around the wires.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The leads are encased in a rigid metal sheath, and the measuring junction is normally formed at the bottom of the housing.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig6",
+     "num": 6,
+     "cap": "Simple Thermocouple Circuit",
+     "alt": "Simple thermocouple circuit with a measuring junction, a reference junction, and a voltmeter.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "The difference between the two voltages is proportional to the difference in temperature and can be measured on a voltmeter.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "RTDs are more accurate than thermocouples.",
+     "cite": "Word: Temperature Detectors.docx, slide 1.23 Fill in the Blank Q4"
+    },
+    {
+     "t": "p",
+     "text": "A short or an open in a thermocouple causes it to fail to the reference junction temperature.",
+     "cite": "Word: Temperature Detectors.docx, slide 1.27 Quiz"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q389",
+     "eo": "1.5"
+    },
+    {
+     "existing": "Q256",
+     "eo": "1.5"
+    },
+    {
+     "existing": "Q247",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is a thermocouple constructed of?",
+     "o": [
+      "Two dissimilar metal wires joined at one end",
+      "One platinum wire in a porcelain insulator",
+      "A bimetallic strip",
+      "A slidewire resistor"
+     ],
+     "a": 0,
+     "x": "A thermocouple is constructed of two dissimilar metal wires joined at one end.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is the most important factor when selecting thermocouple materials?",
+     "o": [
+      "The cost of the sheath",
+      "The length of the leads",
+      "The size of the terminal head",
+      "The thermoelectric difference between the two materials"
+     ],
+     "a": 3,
+     "x": "The most important factor is the thermoelectric difference between the two materials.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.4",
+     "q": "Why does magnesium oxide surround thermocouple wires?",
+     "o": [
+      "To raise the voltage",
+      "To stop corrosion of the sheath only",
+      "To prevent vibration damage and enhance heat transfer",
+      "To insulate against all heat"
+     ],
+     "a": 2,
+     "x": "Magnesium oxide prevents vibration that could damage the fine wires and enhances heat transfer.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Uses and detector problems",
+   "eo": [
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Temperatures may be displayed in a central location, with audible and visual alarms at preset limits. Control functions start or stop equipment, or cause a protective action.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+    },
+    {
+     "t": "p",
+     "text": "If key temperature sensing instruments fail, some applications use installed spare detectors or dual-element RTDs.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "If only the circuitry has failed, an external bridge circuit can be connected to the detector, and readings taken from the calibration curves.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Ambient variations can directly affect the resistance of bridge components and of the thermocouple reference junction.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What are the three basic functions of temperature detectors?",
+     "o": [
+      "Alarm, shutdown, and reset",
+      "Indication, alarm, and control",
+      "Heating, cooling, and venting",
+      "Sensing, amplifying, and storing"
+     ],
+     "a": 1,
+     "x": "Temperature detectors provide three basic functions: indication, alarm, and control.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.7",
+     "q": "If an installed spare is not available, what can measure temperature on accessible equipment?",
+     "o": [
+      "A venturi",
+      "A strain gauge",
+      "A bourdon tube",
+      "A contact pyrometer"
+     ],
+     "a": 3,
+     "x": "A contact pyrometer, a portable thermocouple, may be used on equipment or systems that are accessible.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.8",
+     "q": "Which two environmental concerns can affect temperature detection instrumentation?",
+     "o": [
+      "Altitude and wind",
+      "Ambient temperature and humidity",
+      "Noise and vibration",
+      "Radiation and light"
+     ],
+     "a": 1,
+     "x": "Ambient temperature variations and humidity both affect the instrumentation.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "The bridge circuit",
+   "eo": [
+    "1.9",
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A basic bridge circuit has three known resistances, R1, R2, and R3 (variable), an unknown variable resistor Rx (the RTD), a voltage source, and a sensitive ammeter.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig8",
+     "num": 8,
+     "cap": "Bridge Circuit",
+     "alt": "Diamond-shaped bridge with R1 and R2 on top, R3 and Rx below, a voltage source, and an ammeter across the center.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "eq",
+     "text": "R1 / R3 = R2 / Rx, so Rx = R2R3 / R1",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "Most of the time the bridge is constructed so that R1 = R2. When this is the case and the bridge is balanced,",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "When balance exists, R3 equals the unknown resistance even if the voltage source is unstable or not accurately known.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What condition shows that a bridge circuit is balanced?",
+     "o": [
+      "The ammeter reads full scale",
+      "All resistors are equal to zero",
+      "The voltage source is off",
+      "The ammeter reads zero current"
+     ],
+     "a": 3,
+     "x": "With no current flow through the ammeter, the bridge is said to be balanced.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.9",
+     "q": "In a bridge circuit, what is the purpose of R1 and R2?",
+     "o": [
+      "They supply the voltage",
+      "They are the ratio arms of the bridge",
+      "They measure temperature",
+      "They display the current"
+     ],
+     "a": 1,
+     "x": "Resistors R1 and R2 are the ratio arms of the bridge.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.9",
+     "q": "What does the adjustable resistor R3 do?",
+     "o": [
+      "It drives the motor",
+      "It is adjusted to match the unknown resistor",
+      "It senses temperature",
+      "It rectifies the current"
+     ],
+     "a": 1,
+     "x": "R3 is the standard arm, adjusted to match the unknown resistor.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Unbalanced and balanced bridges",
+   "eo": [
+    "1.9",
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig9",
+     "num": 9,
+     "cap": "Unbalanced Bridge Circuit",
+     "alt": "Unbalanced bridge with a battery, rheostat, fixed resistor, range resistors, RTD, and millivoltmeter across points X and Y.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+    },
+    {
+     "t": "p",
+     "text": "As the RTD's resistance changes, the voltage at points X and Y changes, and the meter detects the unequal division of current.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig10",
+     "num": 10,
+     "cap": "Balanced Bridge Circuit",
+     "alt": "Balanced bridge with a slide wire, fixed resistor, RTD, and galvanometer.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "The resistance of the slide wire is adjusted until the galvanometer indicates zero, and that value determines the temperature.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "What instrument does an unbalanced bridge circuit use to indicate temperature?",
+     "o": [
+      "A galvanometer",
+      "A contact pyrometer",
+      "A bi-directional motor",
+      "A millivoltmeter"
+     ],
+     "a": 3,
+     "x": "The unbalanced bridge circuit uses a millivoltmeter calibrated in units of temperature.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.10",
+     "q": "In a balanced bridge circuit, what is moved to balance the arms?",
+     "o": [
+      "The battery",
+      "The ammeter",
+      "The RTD",
+      "The slider on a slidewire resistor"
+     ],
+     "a": 3,
+     "x": "A slidewire resistor is used to balance the arms of the bridge.",
+     "p": "P29"
+    }
+   ]
+  },
+  {
+   "title": "Detection circuit and faults",
+   "eo": [
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-01-fig11",
+     "num": 11,
+     "cap": "Block Diagram of a Typical Temperature Detection Circuit",
+     "alt": "Block diagram: RTD into a bridge, a DC to AC converter, an amplifier, and a balancing motor that drives mechanical linkage back to the bridge and an indicator.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+    },
+    {
+     "t": "p",
+     "text": "The RTD is felt as resistance to the bridge network.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "The DC voltage is converted to an AC voltage.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q246",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.12",
+     "q": "An RTD becomes shorted. What does the temperature meter indicate?",
+     "o": [
+      "A very high temperature",
+      "Mid-scale",
+      "The last value",
+      "A very low temperature"
+     ],
+     "a": 3,
+     "x": "If it becomes shorted, resistance will be zero, and the meter will indicate a very low temperature.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.11",
+     "q": "In a temperature detection circuit, what does the balancing motor do?",
+     "o": [
+      "Positions the slider on the slidewire to balance the circuit",
+      "Converts AC to DC",
+      "Measures temperature",
+      "Supplies bridge voltage"
+     ],
+     "a": 0,
+     "x": "The bi-directional motor positions the slider on the slidewire to balance the circuit resistance.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.11",
+     "q": "What does the bridge network do in a temperature detection circuit?",
+     "o": [
+      "Converts the detector's resistance to a DC voltage signal",
+      "Amplifies the AC signal",
+      "Drives the indicator motor",
+      "Converts AC to DC power"
+     ],
+     "a": 0,
+     "x": "The bridge network converts the resistance to a DC voltage signal.",
+     "p": "P30"
+    }
+   ]
+  },
+  {
+   "title": "Compensation and calibration",
+   "eo": [
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Changes in ambient temperature mean the circuitry must be compensated, in three ways.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "The same amount of lead wire is then used in both branches of the bridge, so the change in resistance is felt on both and is negated.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "fig",
+     "id": "ic-01-fig12",
+     "num": 12,
+     "cap": "Resistance Thermometer Circuit with Precision Resistor in Place of Resistance Bulb",
+     "alt": "Bridge with a precision resistor in place of the resistance bulb.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+    },
+    {
+     "t": "p",
+     "text": "Battery voltage is then adjusted until the meter indication is correct for the known resistance.",
+     "cite": "DOE-HDBK-1013/1-92 IC-01 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.13",
+     "q": "Why are three and four wire RTD circuits used?",
+     "o": [
+      "To raise the signal voltage",
+      "To add a spare element",
+      "To detect humidity",
+      "To compensate for lead wire resistance changes from ambient temperature"
+     ],
+     "a": 3,
+     "x": "Three and four wire circuits put the same amount of lead wire in both branches, negating the change.",
+     "p": "P38"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "An RTD lead opens",
+   "eo": "1.12",
+   "page": 14,
+   "problem": "An RTD in a bridge circuit becomes open. What does the operator see?",
+   "steps": [
+    "An open means the resistance is infinite",
+    "High resistance is read as high temperature"
+   ],
+   "answer": "The meter indicates a very high temperature.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.14"
+  },
+  {
+   "title": "Balancing a bridge with equal ratio arms",
+   "eo": "1.10",
+   "page": 12,
+   "problem": "A bridge has R1 = R2 and the ammeter reads zero. How does Rx compare with R3?",
+   "steps": [
+    "Zero ammeter current means the bridge is balanced",
+    "With R1 = R2, the arms are equal"
+   ],
+   "answer": "Rx = R3",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.12"
+  }
+ ],
+ "facts": [
+  {
+   "q": "How does an RTD respond to a temperature rise?",
+   "a": "Its resistance increases, because resistance varies directly with temperature.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What is a dual-element RTD?",
+   "a": "An RTD with two sensing elements, of which only one is normally connected. The second can be used if the first fails.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What is a contact pyrometer?",
+   "a": "A portable thermocouple used to read temperature on accessible equipment.",
+   "p": "P18",
+   "place": null
+  },
+  {
+   "q": "What are the three methods of bridge compensation for ambient temperature?",
+   "a": "Measuring circuit resistor selection, electronic circuitry design, and three or four wire RTD circuits.",
+   "p": "P38",
+   "place": null
+  },
+  {
+   "q": "How does an open RTD fail compared with a shorted RTD?",
+   "a": "Open reads very high temperature. Shorted reads very low temperature.",
+   "p": "P33",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The resistance of an RTD varies directly with temperature, and it is constructed of a fine, pure, metallic wire in an insulator and metal sheath.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.4"
+  },
+  {
+   "text": "A thermocouple's measuring junction produces a voltage greater than the reference junction, and the difference is proportional to temperature difference.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.7"
+  },
+  {
+   "text": "Temperature detectors are used for indication, alarm, and control functions.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.9"
+  },
+  {
+   "text": "The bridge circuit is balanced when the sensing ammeter reads zero current.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.16"
+  },
+  {
+   "text": "An open circuit reads very high temperature, and a short circuit reads very low temperature.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.16"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "The list of temperatures on p.8 names PWR items such as the pressurizer, and is left off. The reference table in Figure 7 is not used.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+  },
+  {
+   "type": "Handbook error",
+   "note": "Figure 7 on p.7 prints 4.332 at 500 °C plus 60, between 4.732 and 4.933. It looks like a misprint of 4.832, and the table is not used.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.7"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.7 asks for two alternate methods. The text gives spares or dual-element RTDs, a contact pyrometer, and an external bridge circuit. The lesson shows all of them.",
+   "cite": "DOE-HDBK-1013/1-92 IC-01 p.8"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. The bimetallic strip is in the lesson plan but not in the handbook, and it is left off because it is mostly pictures.",
+   "cite": "Word: Temperature Detectors.docx, slide 1.4 Bimetallic Strip Thermostat"
+  }
+ ],
+ "page_tags": []
+}

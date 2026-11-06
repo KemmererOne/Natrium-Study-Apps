@@ -1,0 +1,1232 @@
+{
+ "module_id": "PR-01",
+ "slug": "pr-01-introduction-to-print-reading",
+ "title": "Introduction To Print Reading",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V1",
+ "handbook": "DOE-HDBK-1016/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Valves",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an engineering print, READ and INTERPRET the information contained in the title block, the notes and legend, the revision block, and the drawing grid.",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the five types of information provided in the title block of an engineering drawing.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE how the grid system on an engineering drawing is used to locate a piece of equipment.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the three types of information provided in the revision block of an engineering drawing.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the purpose of the notes and legend section of an engineering drawing.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST the five drawing categories used on engineering drawings.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Engineering drawings are the industry's means of communicating detailed and accurate information on how to fabricate, assemble, troubleshoot, repair, and operate a piece of equipment or a system.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Because of the extreme variation in format, location of information, and types of information presented on drawings from vendor to vendor and site to site, all drawings will not necessarily contain the following information or format, but will usually be similar in nature.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "In this handbook the terms print, drawing, and diagram are used interchangeably to denote the complete drawing.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Failure to understand these areas can result in improper use or the misinterpretation of the drawing.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "The title block of a drawing, usually located on the bottom or lower right hand corner, contains all the information necessary to identify the drawing and to verify its validity.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "The first area of the title block contains the drawing title, the drawing number, and lists the location, the site, or the vendor.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "Drawings are usually filed by their drawing number because the drawing title may be common to several prints or series of prints.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "The second area of the title block contains the signatures and approval dates, which provide information as to when and by whom the component/system was designed and when and by whom the drawing was drafted and verified for final approval.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+  },
+  {
+   "id": "P9",
+   "quote": "The third area of the title block is the reference block.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "The reference block lists other drawings that are related to the system/component, or it can list all the other drawings that are cross-referenced on the drawing, depending on the site's or vendor's conventions.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.3"
+  },
+  {
+   "id": "P11",
+   "quote": "Drawings without a scale usually are intended to present only functional information about the component or system.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "Scale drawings usually present the information used to fabricate or construct a component or system.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "The grid can consist of letters, numbers, or both that run horizontally and vertically around the drawing as illustrated on Figure 2.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+  },
+  {
+   "id": "P14",
+   "quote": "Like a city map, the drawing is divided into smaller blocks, each having a unique two letter or number identifier.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+  },
+  {
+   "id": "P15",
+   "quote": "For example, when a pipe is continued from one drawing to another, not only is the second drawing referenced on the first drawing, but so are the grid coordinates locating the continued pipe.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+  },
+  {
+   "id": "P16",
+   "quote": "When a drawing is first issued, it is called revision zero, and the revision block is empty.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+  },
+  {
+   "id": "P17",
+   "quote": "This entry will provide the revision number, a title or summary of the revision, and the date of the revision.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+  },
+  {
+   "id": "P18",
+   "quote": "The old Revision 2 drawing will be filed and maintained in the filing system for historical purposes.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+  },
+  {
+   "id": "P19",
+   "quote": "The cloud method indicates changes from the most recent revision only, whereas the second method indicates all revisions to the drawing because all of the previous revision circles remain on the drawing.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.7"
+  },
+  {
+   "id": "P20",
+   "quote": "The notes and legends section of a drawing lists and explains any special symbols and conventions used on the drawing, as illustrated on Figure 5.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.8"
+  },
+  {
+   "id": "P21",
+   "quote": "Because of the importance of understanding all of the symbols and conventions used on a drawing, the notes and legend section must be reviewed before reading a drawing.",
+   "sec": "Introduction to Print Reading",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.8"
+  },
+  {
+   "id": "P22",
+   "quote": "They are 1) piping and instrument drawings (P&IDs), 2) electrical single lines and schematics, 3) electronic diagrams and schematics, 4) logic diagrams and prints, and 5) fabrication, construction, and architectural drawings.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.10"
+  },
+  {
+   "id": "P23",
+   "quote": "As a rule P&IDs do not have a drawing scale and present only the relationship or sequence between components.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.11"
+  },
+  {
+   "id": "P24",
+   "quote": "These drawings only present information on how a system functions, not the actual physical relationships.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.11"
+  },
+  {
+   "id": "P25",
+   "quote": "Electronic diagrams and schematics are designed to present information about the individual components (resistors, transistors, and capacitors) used in a circuit, as illustrated in Figure 9.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "The most common use is to provide a simplified functional representation of an electrical circuit, as illustrated in Figure 10.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+  },
+  {
+   "id": "P27",
+   "quote": "These drawings do not replace schematics, but they are easier to use for certain applications.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+  },
+  {
+   "id": "P28",
+   "quote": "Fabrication, construction, and architectural drawings are designed to present the detailed information required to construct or fabricate a part, system, or structure.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+  },
+  {
+   "id": "P29",
+   "quote": "All three types of drawings, fabrication, construction, and architectural, are usually drawn to scale.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+  },
+  {
+   "id": "P30",
+   "quote": "The standard formats are single line, pictorial or double line, and cutaway.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+  },
+  {
+   "id": "P31",
+   "quote": "The single line format represents all piping, regardless of size, as single line.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+  },
+  {
+   "id": "P32",
+   "quote": "Pictorial or double line drawings present the same type information as a single line, but the equipment is represented as if it had been photographed.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+  },
+  {
+   "id": "P33",
+   "quote": "As seen in Figure 14, an assembly drawing is a pictorial view of the object with all the components shown as they go together.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.17"
+  },
+  {
+   "id": "P34",
+   "quote": "In a cutaway, as the name implies, the component or system has a portion cut away to reveal the internal parts of the component or system.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.18"
+  },
+  {
+   "id": "P35",
+   "quote": "Orthographic projections present the component or system through the use of three views,",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.19"
+  },
+  {
+   "id": "P36",
+   "quote": "The isometric projection presents a single view of the component or system.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.21"
+  },
+  {
+   "id": "P37",
+   "quote": "The view is commonly from above and at an angle of 30°.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.21"
+  },
+  {
+   "id": "P38",
+   "quote": "Isometric projections may or may not be drawn to a scale.",
+   "sec": "Introduction to the Types of Drawings, Views, and Perspectives",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.21"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Why the non-drawing areas matter",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Title block",
+      "Grid system",
+      "Revision block",
+      "Notes and legends",
+      "Engineering drawing (graphic portion)"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+    },
+    {
+     "t": "p",
+     "text": "The first four parts give important information about the actual drawing, and understanding them is as important as reading the drawing itself.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What can result from failing to understand the non-drawing areas of a print?",
+     "o": [
+      "A change in the drawing scale",
+      "Improper use or misinterpretation of the drawing",
+      "A change to the drawing number",
+      "Loss of the revision history"
+     ],
+     "a": 1,
+     "x": "Failure to understand these areas can result in improper use or the misinterpretation of the drawing.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "The title block",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig1",
+     "num": 1,
+     "cap": "Title Block",
+     "alt": "Lower right corner of a drawing sheet showing the title block, with drawing title, drawing number, signature and approval lines, and a reference block.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "The drawing title and number are used for identification and filing. The number is usually unique to the drawing and is a code that can hold information such as the site, system, type of drawing, sheet number, or revision level.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "These names can help locate further design or operating data, and can help resolve a discrepancy between the drawing and another source of information.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "Other information, such as contract numbers and drawing scale, may also be in the title block and varies from site to site and vendor to vendor.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.3"
+    },
+    {
+     "t": "list",
+     "items": [
+      "The drawing title",
+      "The drawing number",
+      "Location, site, or vendor issuing the drawing",
+      "The design, review, and approval signatures",
+      "The reference block"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Why are drawings usually filed by drawing number instead of by title?",
+     "o": [
+      "The title changes with each revision",
+      "The number shows the drawing scale",
+      "The title is kept only in the notes",
+      "The title may be common to several prints"
+     ],
+     "a": 3,
+     "x": "Drawings are usually filed by their drawing number because the drawing title may be common to several prints or series of prints.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which area of the title block lists other drawings related to the system or component?",
+     "o": [
+      "The reference block",
+      "The first area",
+      "The signature area",
+      "The revision block"
+     ],
+     "a": 0,
+     "x": "The third area of the title block is the reference block, which lists related or cross-referenced drawings.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.1",
+     "q": "Where is the title block usually located on a drawing?",
+     "o": [
+      "Along the left margin",
+      "In the center of the graphic portion",
+      "On the bottom or lower right hand corner",
+      "Across the top edge"
+     ],
+     "a": 2,
+     "x": "The title block is usually located on the bottom or lower right hand corner.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Drawing scale",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "All drawings are either drawn to scale or not drawn to scale.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "Not every dimension has to be written on a scale drawing, because the user can measure the distance on the drawing and divide or multiply by the stated scale.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+    },
+    {
+     "t": "list",
+     "items": [
+      "1\" = 1\" is read as 1 inch on the drawing equals 1 inch on the component. It can also be stated as FULL SIZE.",
+      "3/8\" = 1' is read as 3/8 inch on the drawing equals 1 foot on the component.",
+      "1/2\" = 1' is read as 1/2 inch on the drawing equals 1 foot on the component."
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A drawing scale reads 3/8\" = 1'. A part measures 9/8 inch on the drawing. How long is the actual part?",
+     "o": [
+      "1 foot",
+      "2 feet",
+      "3 feet",
+      "4 feet"
+     ],
+     "a": 2,
+     "x": "9/8 inch divided by 3/8 inch per foot is 3 feet. The handbook example uses 6/8 inch for 2 feet.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.1",
+     "q": "What do drawings without a scale usually present?",
+     "o": [
+      "Only functional information about the component or system",
+      "Exact dimensions and tolerances",
+      "Fabrication details for a machine shop",
+      "Only the building layout"
+     ],
+     "a": 0,
+     "x": "Drawings without a scale usually are intended to present only functional information about the component or system.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "The grid system",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Drawings tend to be large and complex, so finding a specific point can be difficult, especially when a wire or pipe run continues on a second drawing. Most drawings, especially P&IDs and electrical schematics, have a grid system.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig2",
+     "num": 2,
+     "cap": "Example of a Grid",
+     "alt": "Drawing sheet with numbers across the top edge and letters down the side edge, forming grid coordinates.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Searching the one block is much easier than searching the whole drawing.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "When a pipe continues from one drawing to another, what does the first drawing reference?",
+     "o": [
+      "Only the revision number",
+      "The notes and legend of the second drawing",
+      "The second drawing and the grid coordinates of the continued pipe",
+      "Only the second drawing's title"
+     ],
+     "a": 2,
+     "x": "Both the second drawing and the grid coordinates locating the continued pipe are referenced on the first drawing.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.2",
+     "q": "How does the grid system help locate a piece of equipment?",
+     "o": [
+      "It draws each component to full scale",
+      "It marks each component with a revision cloud",
+      "It divides the drawing into smaller blocks with unique identifiers",
+      "It lists every component by page number"
+     ],
+     "a": 2,
+     "x": "Like a city map, the drawing is divided into smaller blocks, each having a unique two letter or number identifier.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "The revision block",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "When a component or system changes, the drawings that show it must be redrafted and reissued.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "An entry is placed in the revision block as each revision is made.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig3",
+     "num": 3,
+     "cap": "Revision Block",
+     "alt": "Drawing sheet with the revision block ruled across the top of the sheet.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The revision number may also appear at the end of the drawing number or in its own block. It goes up by one with each update, and the drawing number stays the same.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "There are two common ways to show where a revision changed a drawing: a hand-drawn cloud around each change, or a circle, triangle, or other shape holding the revision number next to each affected portion.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig4",
+     "num": 4,
+     "cap": "Methods of Denoting Changes",
+     "alt": "Drawing with a change enclosed by a cloud shape and a triangle holding a revision number next to another change.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q498",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is a drawing called when it is first issued?",
+     "o": [
+      "Revision zero",
+      "Revision one",
+      "Issue A",
+      "Draft"
+     ],
+     "a": 0,
+     "x": "When a drawing is first issued, it is called revision zero, and the revision block is empty.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which method of marking changes shows only the most recent revision?",
+     "o": [
+      "The grid method",
+      "The cloud method",
+      "The revision circle method",
+      "The revision triangle method"
+     ],
+     "a": 1,
+     "x": "The cloud method indicates changes from the most recent revision only. Revision circles stay on the drawing and show all revisions.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Notes and legend",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Most symbols and lines are self-explanatory or standard, but a few unique symbols and conventions must be explained for each drawing.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig5",
+     "num": 5,
+     "cap": "Notes and Legends",
+     "alt": "Notes and legend section of a drawing, with numbered notes above a legend that explains symbols and line types.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.8"
+    },
+    {
+     "t": "p",
+     "text": "The notes section also lists any information the designer or draftsman felt was necessary to use or understand the drawing correctly.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q499",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "When must the notes and legend section be reviewed?",
+     "o": [
+      "Only when a revision is issued",
+      "Only on drawings with no scale",
+      "Before reading a drawing",
+      "After the graphic portion is read"
+     ],
+     "a": 2,
+     "x": "The notes and legend section must be reviewed before reading a drawing.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "The five drawing categories",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig6",
+     "num": 6,
+     "cap": "Example P&ID",
+     "alt": "Example P&ID: a tank feeding two pumps, valves, heat exchangers, and instruments, drawn as functional symbols.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Two pieces of equipment drawn side by side are not necessarily even in the same building.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "Electrical single lines and schematics give the same kind of functional information for electrical systems that P&IDs give for piping and instrument systems, and are usually not drawn to scale. Schematics give more detail than single lines, such as individual relays, relay contacts, fuses, motors, lights, and instrument sensors.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig7",
+     "num": 7,
+     "cap": "Example of a Single Line",
+     "alt": "Electrical single line of a switchgear unit: two transformers feed buses, which feed breakers and loads drawn as circles.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig8",
+     "num": 8,
+     "cap": "Example of a Schematic",
+     "alt": "Motor start circuit schematic, drawn as numbered horizontal lines of contacts, switches, coils, and lamps between two vertical power lines.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "These drawings are usually used by circuit designers and electronics repair personnel.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.13"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig9",
+     "num": 9,
+     "cap": "Example of an Electronic Diagram",
+     "alt": "Electronic diagram with resistors, capacitors, diodes, and transistors, each marked with its value.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig10",
+     "num": 10,
+     "cap": "Example of a Logic Print",
+     "alt": "Logic print: inputs a through g pass through AND and OR gate symbols to a single output.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Construction drawings give the detail to assemble a structure on site. Architectural drawings give the conceptual design of a building or structure. Fabrication drawings are usually found in machine shops and give a craftsman the detail to fabricate a part.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.14"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig11",
+     "num": 11,
+     "cap": "Example of a Fabrication Drawing",
+     "alt": "Fabrication drawing of a machined part in section, with a parts list and title block.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which is one of the five drawing categories?",
+     "o": [
+      "Vendor manuals",
+      "Title blocks",
+      "Revision drawings",
+      "Logic diagrams and prints"
+     ],
+     "a": 3,
+     "x": "The five categories are P&IDs, electrical single lines and schematics, electronic diagrams and schematics, logic diagrams and prints, and fabrication, construction, and architectural drawings.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.5",
+     "q": "Two pumps are drawn next to each other on a P&ID. What does that tell you?",
+     "o": [
+      "They are in the same room",
+      "They are the same size",
+      "They are in the same building",
+      "Only that one follows the other in the system"
+     ],
+     "a": 3,
+     "x": "P&IDs present only the relationship or sequence between components, not the actual physical relationships.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.5",
+     "q": "Do logic prints replace electrical schematics?",
+     "o": [
+      "No, but they are easier to use for certain applications",
+      "Yes, in all cases",
+      "Yes, once the plant is built",
+      "No, because they show less than a P&ID"
+     ],
+     "a": 0,
+     "x": "These drawings do not replace schematics, but they are easier to use for certain applications.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which drawing category is usually drawn to scale?",
+     "o": [
+      "P&IDs",
+      "Electrical single lines",
+      "Logic prints",
+      "Fabrication, construction, and architectural drawings"
+     ],
+     "a": 3,
+     "x": "All three types of drawings, fabrication, construction, and architectural, are usually drawn to scale.",
+     "p": "P29"
+    }
+   ]
+  },
+  {
+   "title": "Drawing formats",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig12",
+     "num": 12,
+     "cap": "Example of a Single Line P&ID",
+     "alt": "Single line P&ID of a pipe run with a globe valve, gate valve, check valve, reducer, and fittings, each labeled.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "By simplifying piping and equipment, single lines let the reader clearly understand how the equipment and instruments relate.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig13",
+     "num": 13,
+     "cap": "Example Pictorial",
+     "alt": "Pictorial drawing of the same pipe run, with the valves and fittings drawn as they look.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "This format is rarely used because it takes more effort than a single line and adds no information on how the system functions. It is often used in advertising and training material.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig14",
+     "num": 14,
+     "cap": "Example of an Assembly Drawing",
+     "alt": "Assembly drawing of a pump with its parts spread out along one axis, each numbered.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "Assembly drawings are usually found in vendor manuals and are used for parts identification and general assembly information.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.17"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig15",
+     "num": 15,
+     "cap": "Example of a Cutaway",
+     "alt": "Cutaway of a pneumatic instrument with the housing removed and each internal part labeled.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Cutaways are very helpful in maintenance and training, where the way internal parts are assembled matters.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.18"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "Which format represents all piping, regardless of size, as one line?",
+     "o": [
+      "Assembly",
+      "Single line",
+      "Pictorial",
+      "Cutaway"
+     ],
+     "a": 1,
+     "x": "The single line format represents all piping, regardless of size, as single line.",
+     "p": "P31"
+    },
+    {
+     "eo": "1.0",
+     "q": "What does a cutaway drawing show?",
+     "o": [
+      "Only the outside shape",
+      "The electrical wiring",
+      "The revision history",
+      "The internal parts of a component or system"
+     ],
+     "a": 3,
+     "x": "In a cutaway, a portion is cut away to reveal the internal parts.",
+     "p": "P34"
+    }
+   ]
+  },
+  {
+   "title": "Views and perspectives",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Formats can be drawn in different views. The most common are the orthographic projection and the isometric projection.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "list",
+     "items": [
+      "A top view",
+      "A side view",
+      "A front view"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Other views, such as a bottom view, are used when needed. Orthographic projection is widely used for fabrication and construction drawings.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig16",
+     "num": 16,
+     "cap": "Example Orthographic Projection",
+     "alt": "House drawn in orthographic projection: a roof plan above front and end elevations, with dimensions.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig17",
+     "num": 17,
+     "cap": "Orthographic Projections",
+     "alt": "Block projected onto three planes, showing how the top, front, and side views are obtained.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.20"
+    },
+    {
+     "t": "p",
+     "text": "The three views, with dimensions and a drawing scale, contain the information needed to fabricate or construct the component or system.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "pr-01-fig18",
+     "num": 18,
+     "cap": "Example of an Isometric",
+     "alt": "Piping system drawn in isometric view, seen from above at an angle.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.21"
+    },
+    {
+     "t": "p",
+     "text": "This view makes it easier to see how the system looks and how its parts relate to one another.",
+     "cite": "DOE-HDBK-1016/1-93 PR-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "How many views does an orthographic projection normally use?",
+     "o": [
+      "Five",
+      "One",
+      "Two",
+      "Three"
+     ],
+     "a": 3,
+     "x": "Orthographic projections use three views: a top view, a side view, and a front view.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.0",
+     "q": "What does an isometric projection present?",
+     "o": [
+      "A single view, commonly from above at an angle of 30°",
+      "Three separate flat views",
+      "Only the top view at full scale",
+      "Only the internal parts"
+     ],
+     "a": 0,
+     "x": "The isometric projection presents a single view, commonly from above and at an angle of 30°.",
+     "p": "P37"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Reading a drawing scale",
+   "eo": "1.1",
+   "page": 4,
+   "problem": "A drawing scale reads 3/8\" = 1'. A component part measures 6/8 inch on the drawing. How long is the actual part?",
+   "steps": [
+    "Read the scale: 3/8 inch on the drawing equals 1 foot on the component.",
+    "Divide the measured length by the scale: 6/8 divided by 3/8 is 2."
+   ],
+   "answer": "The actual component measures 2 feet.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+  },
+  {
+   "title": "Reading a second scale",
+   "eo": "1.1",
+   "page": 4,
+   "problem": "A drawing scale reads 1/2\" = 1'. A part measures 1-1/2 inches on the drawing. How long is the actual part?",
+   "steps": [
+    "Read the scale: 1/2 inch on the drawing equals 1 foot on the component.",
+    "Divide the measured length by the scale: 1-1/2 divided by 1/2 is 3."
+   ],
+   "answer": "The actual component measures 3 feet.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What five parts make up a generic engineering drawing?",
+   "a": "The title block, grid system, revision block, notes and legends, and the engineering drawing (graphic portion).",
+   "p": "P4",
+   "place": null
+  },
+  {
+   "q": "What three things does a revision block entry provide?",
+   "a": "The revision number, a title or summary of the revision, and the date of the revision.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What are the five categories of engineering drawings?",
+   "a": "P&IDs, electrical single lines and schematics, electronic diagrams and schematics, logic diagrams and prints, and fabrication, construction, and architectural drawings.",
+   "p": "P22",
+   "place": null
+  },
+  {
+   "q": "What is the difference between the cloud method and the revision circle method?",
+   "a": "The cloud method shows changes from the most recent revision only. Revision circles stay on the drawing and show all revisions.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "What do P&IDs present about the location of equipment?",
+   "a": "Only the relationship or sequence between components, not the actual physical relationships.",
+   "p": "P23",
+   "place": null
+  },
+  {
+   "q": "What are the three standard drawing formats?",
+   "a": "Single line, pictorial or double line, and cutaway.",
+   "p": "P30",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The title block of a drawing contains the drawing title, the drawing number, the location, site, or vendor, the design, review, and approval signatures, and the reference block.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+  },
+  {
+   "text": "The grid system allows information to be more easily identified, using coordinate letters and numbers that break the drawing into smaller blocks.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+  },
+  {
+   "text": "The revision block provides the revision number, a title or summary, and the date of each revision.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+  },
+  {
+   "text": "The notes and legend section explains special symbols or conventions, and any other information needed to understand the drawing.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+  },
+  {
+   "text": "The five drawing categories are P&IDs, electrical single lines and schematics, electronic diagrams and schematics, logic diagrams and prints, and fabrication, construction, and architectural drawings.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.22"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Print reading is general, so no scope tag applies. The cooling water system named in the sample title block is only an example.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.3"
+  },
+  {
+   "type": "Objective",
+   "note": "Drawing formats and views have no enabling objective, so these pages cite terminal objective 1.0.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.16"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.4 calls 3/8\" = 1' \"3/8 scale\" and 1/2\" = 1' \"1/2 scale.\" The lesson shows the ratios and does not repeat that name.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.4"
+  },
+  {
+   "type": "Quiz",
+   "note": "Q498 and Q499 are reused. Items C612 and C613 already cover the title block and grid.",
+   "cite": "DOE-HDBK-1016/1-93 PR-01 p.9"
+  }
+ ],
+ "page_tags": []
+}

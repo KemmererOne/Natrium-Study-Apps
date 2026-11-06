@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<title>Sodium Leak Detectors</title>
+<style>
+:root { --bg: #f4f4f1; --card: #ffffff; --fg: #1c2230; --muted: #5a6376; --line: #d6d9e0; --accent: #8a5f00; --good: #1f6f43; --bad: #a33a2c; color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131821; --card: #1b222e; --fg: #e7eaf0; --muted: #9aa3b4; --line: #2c3645; --accent: #f2c14e; --good: #6fcf97; --bad: #f08a7b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.55;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 640px; margin: 0 auto; min-width: 0; }
+.js .page { display: none; } .js .page.on { display: block; }
+.page { margin-bottom: 40px; min-width: 0; } .js .page { margin-bottom: 0; }
+a { color: var(--accent); font-weight: 600; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.9rem; }
+.home { text-decoration: none; padding: 8px 0; display: inline-block; } .plans { margin-left: 12px; }
+.count { color: var(--muted); font-size: 0.85rem; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 1.6rem; margin: 8px 0 6px; } h2 { font-size: 1.3rem; margin: 8px 0 12px; }
+h3 { font-size: 1rem; margin: 16px 0 6px; }
+p { margin: 0 0 12px; } ul, ol { margin: 0 0 12px; padding-left: 22px; } li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.tag { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: 0.78rem; font-weight: 600; margin: 0; }
+cite { display: inline; font-style: normal; font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; white-space: normal; }
+cite::before { content: "["; } cite::after { content: "]"; }
+blockquote { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--card); border-radius: 0 8px 8px 0; }
+.eq { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; overflow-wrap: anywhere; }
+.eq b { font-family: ui-monospace, Menlo, monospace; font-weight: 600; font-size: 0.95rem; }
+.fig { margin: 0 0 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fig img { display: block; width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+.fig figcaption { background: var(--card); color: var(--fg); font-size: 0.85rem; padding: 6px 10px; border-top: 1px solid var(--line); }
+.menu { margin: 8px 0 14px; font-size: 0.9rem; } .menu summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 6px 0; }
+.menu ol { margin-top: 6px; }
+.letters { list-style: none; padding-left: 1.25em; }
+.obj { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.check, .ex { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 14px; min-width: 0; }
+.meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 0.8rem; margin-bottom: 6px; }
+.opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.opt { text-align: left; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.opt[disabled] { cursor: default; } .opt.right { border-color: var(--good); color: var(--good); font-weight: 600; } .opt.wrong { border-color: var(--bad); color: var(--bad); }
+.result { margin: 0; } .result[hidden] { display: none; }
+.verdict { font-weight: 700; margin-bottom: 4px; } .verdict.right { color: var(--good); } .verdict.wrong { color: var(--bad); }
+.report { font-size: 0.85rem; }
+.answer { font-weight: 600; margin-bottom: 8px; }
+.pager { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 20px; padding-top: 12px; }
+.pager a { text-decoration: none; padding: 8px 0; max-width: 48%; } .pager .next { text-align: right; margin-left: auto; }
+</style>
+<main class="wrap">
+<section class="page" id="objectives">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 1 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<p>Sodium system lesson, built from the lesson plan.</p><div class="obj"><h3>Terminal objective</h3><p><span class="num">TLO 6</span> Sodium Leak Detectors <cite>Word: Sodium Leak Detectors.docx, slide 1.1 TLO 6: Sodium Leak Detectors</cite></p></div>
+<div class="pager"><a class="next" href="#concept-1">Why sodium leaks must be detected <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 2 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Why sodium leaks must be detected</h2><p class="count">From the cited sources</p><p>Sodium leak detection is important for three reasons: <cite>NRC slides ML19149A378, slide 25</cite></p>
+<blockquote>"Primary sodium is radioactive" <cite>NRC slides ML19149A378, slide 25</cite></blockquote>
+<blockquote>"Liquid sodium will burn in air" <cite>NRC slides ML19149A378, slide 25</cite></blockquote>
+<blockquote>"Loss of sodium could impair heat transport systems" <cite>NRC slides ML19149A378, slide 25</cite></blockquote>
+<p>Sodium systems run at low pressure, so under the leak before break approach: <cite>NRC slides ML19149A433, slide 21</cite></p>
+<blockquote>"Due to low pressure, sodium leaks are generally small and can be detected before larger piping breaks occur" <cite>NRC slides ML19149A433, slide 21</cite></blockquote>
+<blockquote>"Detection of small leaks helps prevent large leaks from occurring." <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></blockquote>
+<div class="pager"><a href="#objectives"><span aria-hidden="true">←</span> Objectives</a><a class="next" href="#check-1">Knowledge check: Why sodium leaks must be detected <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-1">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 3 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Why sodium leaks must be detected</h2><div class="check" data-a="0">
+  <div class="meta"><span></span><span>Q1609</span></div>
+  <p>Why does the leak before break approach suit sodium piping?</p>
+  <div class="opts"><button type="button" class="opt">A. Low pressure makes leaks generally small, so they can be detected before larger breaks</button><button type="button" class="opt">B. Sodium piping cannot leak at all</button><button type="button" class="opt">C. Sodium freezes at every leak and seals it</button><button type="button" class="opt">D. Water systems are routed beside the piping to detect leaks</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Because of the low pressure, sodium leaks are generally small and can be detected before larger piping breaks occur. <cite>NRC slides ML19149A433, slide 21</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1609&amp;body=Item%3A%20Q1609%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20Why%20does%20the%20leak%20before%20break%20approach%20suit%20sodium%20piping%3F%0ASource%3A%20ML19149A433%20(ML19149A433.pdf)%2C%20slide%2021%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-1"><span aria-hidden="true">←</span> Why sodium leaks must be detected</a><a class="next" href="#concept-2">Types of sodium leak detectors <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 4 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Types of sodium leak detectors</h2><p class="count">From the cited sources</p><p>NRC training slides list these ways of detecting sodium leaks: <cite>NRC slides ML19149A433, slide 21</cite></p>
+<ul><li>Smoke detectors</li><li>Contact detectors (spark plugs)</li><li>Cable detectors</li><li>Aerosol monitors</li><li>Inspections</li></ul><p><cite>NRC slides ML19149A433, slide 21</cite></p>
+<blockquote>"Leaks can be detected by conductivity probes (usually in low spots below sodium-containing tanks) or by sensing of sodium aerosols" <cite>NRC slides ML19149A378, slide 25</cite></blockquote>
+<p>Double-walled piping may also carry leak detectors in the gap between the walls. <cite>NRC slides ML19149A433, slide 21</cite></p>
+<div class="pager"><a href="#check-1"><span aria-hidden="true">←</span> Knowledge check: Why sodium leaks must be detected</a><a class="next" href="#check-2">Knowledge check: Types of sodium leak detectors <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-2">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 5 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Types of sodium leak detectors</h2><div class="check" data-a="2">
+  <div class="meta"><span></span><span>Q1610</span></div>
+  <p>Where are sodium conductivity probes usually located?</p>
+  <div class="opts"><button type="button" class="opt">A. Inside the fuel assemblies</button><button type="button" class="opt">B. On the outside of the containment wall</button><button type="button" class="opt">C. In low spots below sodium-containing tanks</button><button type="button" class="opt">D. At the top of the cover gas space</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is C. Leaks can be detected by conductivity probes, usually in low spots below sodium-containing tanks. <cite>NRC slides ML19149A378, slide 25</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1610&amp;body=Item%3A%20Q1610%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20Where%20are%20sodium%20conductivity%20probes%20usually%20located%3F%0ASource%3A%20ML19149A378%20(ML19149A378.pdf)%2C%20slide%2025%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-2"><span aria-hidden="true">←</span> Types of sodium leak detectors</a><a class="next" href="#concept-3">Spark plug type detectors <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 6 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Spark plug type detectors</h2><p class="count">From the cited sources</p><blockquote>"spark plug type leak detectors function on the principal of fluid completing an open circuit." <cite>Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1</cite></blockquote>
+<p>So the detector's circuit is normally open, and leaking fluid closes it. The lesson plan's diagrams are pictures and are not used. <cite>Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1</cite></p>
+<div class="pager"><a href="#check-2"><span aria-hidden="true">←</span> Knowledge check: Types of sodium leak detectors</a><a class="next" href="#check-3">Knowledge check: Spark plug type detectors <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-3">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 7 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Spark plug type detectors</h2><div class="check" data-a="0">
+  <div class="meta"><span></span><span>Q509</span></div>
+  <p>A spark plug type sodium leak detector works by leaking fluid:</p>
+  <div class="opts"><button type="button" class="opt">A. Completing an open circuit</button><button type="button" class="opt">B. Opening a closed circuit</button><button type="button" class="opt">C. Energizing a heater coil</button><button type="button" class="opt">D. Changing the frequency of an oscillator</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. Spark plug type leak detectors function on the principle of fluid completing an open circuit. <cite>LP-SODIUM-LEAK-DETECTORS, slide 1.5 Knowledge Check 1</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q509&amp;body=Item%3A%20Q509%0ATopic%3A%20Sensors%20and%20Detectors%0AQuestion%3A%20A%20spark%20plug%20type%20sodium%20leak%20detector%20works%20by%20leaking%20fluid%3A%0ASource%3A%20LP-SODIUM-LEAK-DETECTORS%2C%20slide%201.5%20Knowledge%20Check%201%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-3"><span aria-hidden="true">←</span> Spark plug type detectors</a><a class="next" href="#concept-4">Leak detection at Natrium <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 8 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Leak detection at Natrium</h2><p class="count">From the cited sources</p><p>The Sodium Leak Detection, Collection, and Containment System (NNA): <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10</cite></p>
+<blockquote>"detects, collects, and contains sodium leaks to mitigate sodium fires" <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10</cite></blockquote>
+<blockquote>"The specific type of sodium leak detector is based on the needs of the installation location and configuration." <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></blockquote>
+<blockquote>"Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans." <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></blockquote>
+<blockquote>"Detectors will generally be based on conductivity detection with a self-test function." <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></blockquote>
+<blockquote>"In areas where sodium reactions may occur (e.g., Intermediate Air Cooling stacks), smoke detection is provided." <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></blockquote>
+<blockquote>"The sodium leak detectors activate an alarm within the MCR upon detection of sodium." <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></blockquote>
+<blockquote>"Leak detection is provided at multiple points between pipe supports along all normally sodium containing systems" <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3</cite></blockquote>
+<blockquote>"The leak detectors are capable of detecting leaks within the entire length of pipe it covers." <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3</cite></blockquote>
+<blockquote>"SPS leak detection uses devices such as wire and cable, spark plugs, and mutual inductance type sensors." <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47</cite></blockquote>
+<p>Sodium leakage from the reactor vessel into the guard vessel is watched through the cover gas system. <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28</cite></p>
+<blockquote>"Annulus gas is recirculated and monitored for sodium buildup via absolute filter differential pressure changes, oxygen concentrations, and radiation levels." <cite>PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28</cite></blockquote>
+<div class="pager"><a href="#check-3"><span aria-hidden="true">←</span> Knowledge check: Spark plug type detectors</a><a class="next" href="#check-4">Knowledge check: Leak detection at Natrium <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-4">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 9 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: Leak detection at Natrium</h2><div class="check" data-a="0">
+  <div class="meta"><span></span><span>Q84</span></div>
+  <p>What is the design basis strategy of the Sodium Leak Detection, Collection, and Containment System (NNA)?</p>
+  <div class="opts"><button type="button" class="opt">A. Mitigate the effects of a sodium fire once a leak has occurred</button><button type="button" class="opt">B. Prevent sodium leaks from occurring</button><button type="button" class="opt">C. Detect smoke and notify personnel of fire emergencies</button><button type="button" class="opt">D. Distribute fire water to hydrants and water-based suppression</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The PSAR states NNA mitigates sodium fires after a leak and that leak prevention is outside its scope; smoke detection and fire water distribution belong to other fire protection subsystems it describes. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q84&amp;body=Item%3A%20Q84%0ATopic%3A%20PSAR%3A%20Ancillary%20Systems%0AQuestion%3A%20What%20is%20the%20design%20basis%20strategy%20of%20the%20Sodium%20Leak%20Detection%2C%20Collection%2C%20and%20Containment%20System%20(NNA)%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.2.1%2C%20p.%207.5-10%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="0">
+  <div class="meta"><span></span><span>Q1611</span></div>
+  <p>What detection principle will Natrium sodium leak detectors generally be based on?</p>
+  <div class="opts"><button type="button" class="opt">A. Conductivity detection with a self-test function</button><button type="button" class="opt">B. Ultrasonic detection</button><button type="button" class="opt">C. Neutron detection</button><button type="button" class="opt">D. Thermal expansion of a bimetal strip</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is A. The PSAR says detectors will generally be based on conductivity detection with a self-test function. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1611&amp;body=Item%3A%20Q1611%0ATopic%3A%20PSAR%3A%20Ancillary%20Systems%0AQuestion%3A%20What%20detection%20principle%20will%20Natrium%20sodium%20leak%20detectors%20generally%20be%20based%20on%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.2.3.4%2C%20p.%207.5-16%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span></span><span>Q1612</span></div>
+  <p>In the Natrium design, where are sodium leak detectors located?</p>
+  <div class="opts"><button type="button" class="opt">A. Only on the reactor head</button><button type="button" class="opt">B. Only in the main control room</button><button type="button" class="opt">C. Only in the turbine building</button><button type="button" class="opt">D. Within leak mitigative features, at vulnerable valves, and inside catch pans</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1612&amp;body=Item%3A%20Q1612%0ATopic%3A%20PSAR%3A%20Ancillary%20Systems%0AQuestion%3A%20In%20the%20Natrium%20design%2C%20where%20are%20sodium%20leak%20detectors%20located%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.2.3.4%2C%20p.%207.5-16%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="check" data-a="3">
+  <div class="meta"><span></span><span>Q1613</span></div>
+  <p>What do Natrium sodium leak detectors activate on detection of sodium?</p>
+  <div class="opts"><button type="button" class="opt">A. A reactor scram</button><button type="button" class="opt">B. A water fire suppression system</button><button type="button" class="opt">C. A sodium dump to the guard vessel</button><button type="button" class="opt">D. An alarm within the main control room</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. The sodium leak detectors activate an alarm within the MCR upon detection of sodium. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1613&amp;body=Item%3A%20Q1613%0ATopic%3A%20PSAR%3A%20Ancillary%20Systems%0AQuestion%3A%20What%20do%20Natrium%20sodium%20leak%20detectors%20activate%20on%20detection%20of%20sodium%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.2.3.4%2C%20p.%207.5-16%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-4"><span aria-hidden="true">←</span> Leak detection at Natrium</a><a class="next" href="#concept-5">What a leak signal does <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="concept-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 10 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>What a leak signal does</h2><p class="count">From the cited sources</p><p>NNA leak detection signals support automatic actions for the primary Sodium Processing System (SPS-P): <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12</cite></p>
+<ul><li>NNA sends a signal to the Auxiliary Monitoring and Control System (AMC), which automatically closes the SPS-P supply valve.</li><li>AMC automatically trips the SPS-P pumps.</li><li>NNA sends a signal to the Utility Monitoring and Control System (UMC), which automatically closes NI HVAC dampers to isolate the SPS cells.</li></ul><p><cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12</cite></p>
+<div class="pager"><a href="#check-4"><span aria-hidden="true">←</span> Knowledge check: Leak detection at Natrium</a><a class="next" href="#check-5">Knowledge check: What a leak signal does <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="check-5">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 11 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Knowledge check: What a leak signal does</h2><div class="check" data-a="3">
+  <div class="meta"><span></span><span>Q1614</span></div>
+  <p>At Natrium, which system automatically trips the SPS-P pumps on a sodium leak detection signal from NNA?</p>
+  <div class="opts"><button type="button" class="opt">A. The Reactor Protection System</button><button type="button" class="opt">B. The Utility Monitoring and Control System (UMC)</button><button type="button" class="opt">C. The Nuclear Island Fire Water Distribution System</button><button type="button" class="opt">D. The Auxiliary Monitoring and Control System (AMC)</button></div>
+  <div class="result" hidden>
+    <p class="verdict"></p>
+    <p>The answer is D. NNA sends the leak detection signal to AMC, and AMC automatically trips the SPS-P pumps. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12</cite></p>
+    <a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20Q1614&amp;body=Item%3A%20Q1614%0ATopic%3A%20PSAR%3A%20Ancillary%20Systems%0AQuestion%3A%20At%20Natrium%2C%20which%20system%20automatically%20trips%20the%20SPS-P%20pumps%20on%20a%20sodium%20leak%20detection%20signal%20from%20NNA%3F%0ASource%3A%20PSAR%20Rev%201%2C%20ML25276A288%2C%20Sec.%207.5.2.2%2C%20p.%207.5-12%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem</a>
+  </div>
+</div>
+<div class="pager"><a href="#concept-5"><span aria-hidden="true">←</span> What a leak signal does</a><a class="next" href="#summary">Summary <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="summary">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 12 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>Summary</h2><ul><li>Leak detection matters because primary sodium is radioactive, sodium burns in air, and sodium loss could impair heat transport. <cite>NRC slides ML19149A378, slide 25</cite></li><li>Detection methods include smoke, contact (spark plug), cable and aerosol detectors, and inspections. <cite>NRC slides ML19149A433, slide 21</cite></li><li>In a spark plug type detector, leaking fluid completes an open circuit. <cite>Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1</cite></li><li>Natrium detectors will generally use conductivity detection with a self-test function, and they alarm in the main control room. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16</cite></li><li>Detection of small leaks helps prevent large leaks from occurring. <cite>PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4</cite></li><li>NNA signals drive automatic SPS-P valve closure, pump trip and cell damper closure. <cite>PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12</cite></li></ul>
+<div class="pager"><a href="#check-5"><span aria-hidden="true">←</span> Knowledge check: What a leak signal does</a><a class="next" href="#references">References <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="page" id="references">
+<div class="top"><span><a class="home" href="../../"><span aria-hidden="true">←</span> Home</a> <a class="home plans" href="../../lessons/">Lesson plans</a></span><span class="count">Page 13 of 13</span></div>
+<h1>Sodium Leak Detectors</h1>
+<ul class="tags"><li class="tag">Reviewed</li></ul>
+<details class="menu"><summary>All pages</summary><ol><li><a href="#objectives">Objectives</a></li><li><a href="#concept-1">Why sodium leaks must be detected</a></li><li><a href="#check-1">Knowledge check: Why sodium leaks must be detected</a></li><li><a href="#concept-2">Types of sodium leak detectors</a></li><li><a href="#check-2">Knowledge check: Types of sodium leak detectors</a></li><li><a href="#concept-3">Spark plug type detectors</a></li><li><a href="#check-3">Knowledge check: Spark plug type detectors</a></li><li><a href="#concept-4">Leak detection at Natrium</a></li><li><a href="#check-4">Knowledge check: Leak detection at Natrium</a></li><li><a href="#concept-5">What a leak signal does</a></li><li><a href="#check-5">Knowledge check: What a leak signal does</a></li><li><a href="#summary">Summary</a></li><li><a href="#references">References</a></li></ol></details>
+<h2>References</h2><p>Everything in this lesson comes from the sources below. No outside material was used.</p>
+
+<div class="obj"><h3>NRC fast reactor training slides</h3><p>File: ML19149A378.pdf</p><p>Slides 25</p></div><div class="obj"><h3>NRC fast reactor training slides</h3><p>File: ML19149A433.pdf</p><p>Slides 21</p></div><div class="obj"><h3>Kemmerer Unit 1 PSAR</h3><p>File: ML25276A288.pdf</p><p>Pages 7.2-28, 7.2-47, 7.5-10, 7.5-12, 7.5-16, 8.2-3, 8.2-4</p></div><div class="obj"><h3>Lesson plan</h3><p>File: Sodium Leak Detectors.docx</p><p>Slides 1.1, 1.5</p></div>
+<div class="obj"><h3>Lesson plan sequence</h3><ol><li>Spark plug type detector operation <cite>Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1</cite></li></ol></div>
+<p>Quiz questions from this lesson: Q1609, Q1610, Q509, Q84, Q1611, Q1612, Q1613, Q1614.</p><p>Flashcards from this lesson: C1040, C1041, C1042, C1043, C1044.</p>
+<p><a href="../../reference/">All sources and references</a></p>
+<p><a class="report" href="mailto:natriumfundamentals@gmail.com?subject=Problem%20with%20lesson%20NA-03&amp;body=Lesson%3A%20NA-03%20Sodium%20Leak%20Detectors%0APage%3A%0A%0AWhat%20looks%20wrong%3A%0A">Report a problem with this lesson</a></p>
+<div class="pager"><a href="#summary"><span aria-hidden="true">←</span> Summary</a></div>
+</section>
+</main>
+<script>
+document.documentElement.classList.add("js");
+const pages = [...document.querySelectorAll(".page")];
+function show() {
+  const id = location.hash.slice(1), page = pages.find(p => p.id === id) || pages[0];
+  pages.forEach(p => p.classList.toggle("on", p === page));
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", show); show();
+document.querySelectorAll(".check").forEach(c => {
+  const opts = [...c.querySelectorAll(".opt")], key = +c.dataset.a, result = c.querySelector(".result"), verdict = c.querySelector(".verdict");
+  opts.forEach((b, i) => b.addEventListener("click", () => {
+    opts.forEach((o, j) => { o.disabled = true; if (j === key) o.classList.add("right"); });
+    if (i !== key) b.classList.add("wrong");
+    verdict.textContent = i === key ? "Correct" : "Not correct";
+    verdict.classList.add(i === key ? "right" : "wrong");
+    result.hidden = false;
+  }));
+});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+</script>
+</html>

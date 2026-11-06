@@ -1,0 +1,2444 @@
+{
+ "module_id": "MS-05",
+ "slug": "ms-05-plant-materials",
+ "title": "Plant Materials",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1017-V2",
+ "handbook": "DOE-HDBK-1017/2-93",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Brittle Fracture and Vessel Thermal Stress",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the considerations commonly used when selecting material for use in a reactor plant.",
+   "items": [],
+   "page": {
+    "pdf": 57,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Machinability",
+      "b. Formability",
+      "c. Stability",
+      "d. Fabricability"
+     ],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "IDENTIFY the importance of a material property and its application in a reactor plant.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "LIST the four radioactive materials that fission by thermal neutrons and are used as reactor fuels.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the four considerations in selecting fuel material and the desired effect on the nuclear properties of the selected fuel material.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the four major characteristics necessary in a material used for fuel cladding.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "IDENTIFY the four materials suitable for use as fuel cladding material and their applications.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE the purpose of a reflector.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "LIST the five essential requirements for reflector material in a thermal reactor.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE the five common poisons used as control rod material.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "IDENTIFY the advantage(s) and/or disadvantages of the five common poisons used as control rod material.",
+     "items": [],
+     "page": {
+      "pdf": 57,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE the requirements of a material used to shield against the following types of radiation:",
+     "items": [
+      "a. Beta",
+      "b. Gamma",
+      "c. High energy neutron",
+      "d. Low energy neutron"
+     ],
+     "page": {
+      "pdf": 58,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "STATE the nuclear reactor core problems and causes associated with the following:",
+     "items": [
+      "a. Pellet-cladding interaction",
+      "b. Fuel densification",
+      "c. Fuel cladding embrittlement",
+      "d. Fuel burnup and fission product swelling"
+     ],
+     "page": {
+      "pdf": 58,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "STATE the measures taken to counteract or minimize the effects of the following:",
+     "items": [
+      "a. Pellet-cladding interaction",
+      "b. Fuel densification",
+      "c. Fuel cladding embrittlement",
+      "d. Fission product swelling of a fuel element"
+     ],
+     "page": {
+      "pdf": 58,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Fatigue failure",
+      "b. Work hardening",
+      "c. Creep"
+     ],
+     "page": {
+      "pdf": 58,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "STATE the measures taken to counteract or minimize the effects of the following:",
+     "items": [
+      "a. Fatigue failure",
+      "b. Work hardening",
+      "c. Creep"
+     ],
+     "page": {
+      "pdf": 58,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "STATE how the following types of radiation interact with metals:",
+     "items": [
+      "a. Gamma",
+      "b. Alpha",
+      "c. Beta",
+      "d. Fast neutron",
+      "e. Slow neutron"
+     ],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Knock-on",
+      "b. Vacancy",
+      "c. Interstitial"
+     ],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Thermal spike",
+      "b. Displacement spike"
+     ],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.19",
+     "text": "STATE the effect a large number of displacement spikes has on the properties of a metal.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.20",
+     "text": "DESCRIBE how the emission of radiation can cause dislocation of the atom emitting the radiation.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.21",
+     "text": "STATE the two effects on a crystalline structure resulting from the capture of a neutron.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.22",
+     "text": "STATE how thermal neutrons can produce atomic displacements.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.23",
+     "text": "STATE how gamma and beta radiation effect organic materials.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.24",
+     "text": "IDENTIFY the change in organic compounds due to radiation.",
+     "items": [
+      "a. Nylon",
+      "b. High-density polyethylene marlex 50",
+      "c. Rubber"
+     ],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.25",
+     "text": "IDENTIFY the chemical bond with the least resistance to radiation.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.26",
+     "text": "DEFINE the term polymerization.",
+     "items": [],
+     "page": {
+      "pdf": 59,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.27",
+     "text": "STATE the applications and the property that makes aluminum desirable in reactors operating at:",
+     "items": [
+      "a. Low kilowatt power",
+      "b. Low temperature ranges",
+      "c. Moderate temperature range"
+     ],
+     "page": {
+      "pdf": 60,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "1.28",
+     "text": "STATE why aluminum is undesirable in high temperature power reactors.",
+     "items": [],
+     "page": {
+      "pdf": 60,
+      "printed": "x"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The initial fuel for the core is sodium-bonded uranium - 10 weight percent Zirconium (U-10Zr) that is encapsulated by HT-9 ferritic-martensitic steel cladding.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1"
+  },
+  {
+   "id": "P2",
+   "quote": "The absorber pins contain cladded, helium-bonded, Boron Carbide absorber pellets.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+  },
+  {
+   "id": "P3",
+   "quote": "Many components used in nuclear reactor construction use machined parts that require very close tolerances and very smooth surfaces.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "This becomes important in selecting materials that have to be made into specific shapes by such means as rolling or bending and still retain their required strength.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Stability of a material refers to its mechanical and chemical inertness under the conditions to which it will be subjected.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "High corrosion resistance is desirable in reactor systems because low corrosion resistance leads to increased production of corrosion products that may be transported through the core.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "The availability of a material used in the construction of nuclear plants refers to the ease with which a material can be obtained and its cost.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "Fabricability is a measure of the ease with which a material can be worked and made into desirable shapes and forms.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "Good heat transfer properties are desirable from the fuel boundary to the coolant in order that the heat produced will be efficiently transferred.",
+   "sec": "Properties Considered When Selecting Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "The isotopes uranium-238 (238U) and thorium-232 (232Th) are fissionable by fast neutrons.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "Mixed oxides of uranium and plutonium are used in liquid-metal fast breeder reactors (LMFBR).",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+  },
+  {
+   "id": "P12",
+   "quote": "Under the much more severe conditions in a fast reactor, however, even inert UO2 begins to respond to its environment in a manner that is often detrimental to fuel performance.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "The cladding protects the fuel from attack by the coolant, prevents the escape of fission products, and provides geometrical integrity.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "The nuclear properties of a material must be the first consideration in the selection of a suitable nuclear fuel.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.8"
+  },
+  {
+   "id": "P15",
+   "quote": "High thermal conductivity allows high power density and high specific power without excessive fuel temperature gradients.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.9"
+  },
+  {
+   "id": "P16",
+   "quote": "The dimensional stability of the fuel under conditions of high temperature and high burnup is of primary importance in determining the usable lifetime.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.9"
+  },
+  {
+   "id": "P17",
+   "quote": "The main cause of fuel element swelling is the accumulation of two fission product atoms for each atom fissioned.",
+   "sec": "Fuel Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.9"
+  },
+  {
+   "id": "P18",
+   "quote": "Cladding is used to provide surface protection for retaining fission products and minimizing corrosion.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+  },
+  {
+   "id": "P19",
+   "quote": "Mechanical properties, such as ductility, impact strength, tensile strength, and creep, must be adequate for the operating conditions of the reactor core.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+  },
+  {
+   "id": "P20",
+   "quote": "The cladding must have a high corrosion resistance to its operating environment.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+  },
+  {
+   "id": "P21",
+   "quote": "Thermal conductivity should be high to minimize thermal stresses arising from temperature differences, and the coefficient of expansion should be low or well-matched with that of other materials.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+  },
+  {
+   "id": "P22",
+   "quote": "The essential requirements for these materials are high melting point, retention of satisfactory physical and mechanical properties, a low swelling rate when irradiated by large fluences of fast neutrons, and good corrosion resistance, especially to molten sodium.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+  },
+  {
+   "id": "P23",
+   "quote": "At present, stainless steel is the preferred fuel cladding material for sodium-cooled fast breeder reactors (LMFBRs).",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "A reflector gets its name from the fact that neutrons leaving the reactor core hit the reflector and are returned to the core.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+  },
+  {
+   "id": "P25",
+   "quote": "In the case of a fast reactor, neutron thermalization is not desirable, and the reflector will consist of a dense element of high mass number.",
+   "sec": "Cladding and Reflectors",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "The most widely-used poisons are hafnium, silver, indium, cadmium, and boron.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.15"
+  },
+  {
+   "id": "P27",
+   "quote": "Because of the limited availability and high cost of hafnium, its use as a control material in civilian power reactors has been restricted.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.15"
+  },
+  {
+   "id": "P28",
+   "quote": "The absorption cross section of boron is large over a considerable range of neutron energies, making it suitable for not only control materials but also for neutron shielding.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+  },
+  {
+   "id": "P29",
+   "quote": "Boron is nonmetallic and is not suitable for control rod use in its pure form.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+  },
+  {
+   "id": "P30",
+   "quote": "The production of atoms having about twice the volume of the original atoms leads to severe swelling, hence these materials have not been used as control rods in commercial power reactors.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+  },
+  {
+   "id": "P31",
+   "quote": "Control rods of this nature have been used in PWRs, BWRs, and HTGRs and have been proposed for use in fast breeder reactors employing oxide fuels.",
+   "sec": "Control Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+  },
+  {
+   "id": "P32",
+   "quote": "At low energies (less than 0.1 MeV), low mass number materials, such as hydrogen in H2O, are best for slowing down neutrons.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.18"
+  },
+  {
+   "id": "P33",
+   "quote": "To offset this decrease in cross section with increased neutron energy, materials with good inelastic scattering properties, such as iron, are used.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.19"
+  },
+  {
+   "id": "P34",
+   "quote": "Gamma radiation is the most difficult to shield against and, therefore, presents the biggest problem in the reactor plant.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.19"
+  },
+  {
+   "id": "P35",
+   "quote": "Gamma shielding is therefore more effectively performed by materials with high atomic mass number and high density.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+  },
+  {
+   "id": "P36",
+   "quote": "Because of its low melting point, lead can be used only where the temperatures do not exceed its melting point.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+  },
+  {
+   "id": "P37",
+   "quote": "As a general shield material, there is much to recommend about concrete; it is strong, inexpensive, and adaptable to both block and monolithic types of construction.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+  },
+  {
+   "id": "P38",
+   "quote": "The beta particle can generally be stopped by a sheet of aluminum.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+  },
+  {
+   "id": "P39",
+   "quote": "Since alpha and beta particles can be easily shielded against, they do not present a major problem in the nuclear reactor plant.",
+   "sec": "Shielding Materials",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.21"
+  },
+  {
+   "id": "P40",
+   "quote": "Fuel pellet-cladding interaction (PCI) may lead to cladding failure and subsequent release of fission products into the reactor coolant.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.22"
+  },
+  {
+   "id": "P41",
+   "quote": "Expansion of the fuel pellets due to high internal temperatures, cracking due to thermal stresses, and irradiation-induced swelling may lead to contact of the fuel with the cladding.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.22"
+  },
+  {
+   "id": "P42",
+   "quote": "Operational limitations such as rate of power increase and power for a given power ramp rate are imposed to lessen the effect of PCI.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.23"
+  },
+  {
+   "id": "P43",
+   "quote": "Such behavior can cause the fuel material to contract and lead to irregularities in the thermal power generation.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.23"
+  },
+  {
+   "id": "P44",
+   "quote": "The process of fuel densification is complete within 200 hours of reactor operation.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.23"
+  },
+  {
+   "id": "P45",
+   "quote": "Irradiation at high temperatures can lead to brittle fracture of stainless steels used as cladding in fast liquid metal breeder reactors.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.24"
+  },
+  {
+   "id": "P46",
+   "quote": "Swelling can cause excessive pressure on the cladding, which could lead to fuel element cladding failure.",
+   "sec": "Nuclear Reactor Core Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.25"
+  },
+  {
+   "id": "P47",
+   "quote": "Fatigue failure is defined as the tendency of a material to fracture by means of progressive brittle cracking under repeated alternating or cyclic stresses of an intensity considerably below the normal strength.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.27"
+  },
+  {
+   "id": "P48",
+   "quote": "Thermal fatigue can arise from thermal stresses produced by cyclic changes in temperature.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.27"
+  },
+  {
+   "id": "P49",
+   "quote": "Heatup and cooldown limitations, pressure limitations, and pump operating curves are all used to minimize cyclic stress.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.28"
+  },
+  {
+   "id": "P50",
+   "quote": "In some cases, cycle logs may be kept on various pieces of equipment.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.28"
+  },
+  {
+   "id": "P51",
+   "quote": "Work hardening reduces ductility, which increases the chances of brittle failure.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.28"
+  },
+  {
+   "id": "P52",
+   "quote": "At elevated temperatures and constant stress or load, many materials continue to deform at a slow rate.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.29"
+  },
+  {
+   "id": "P53",
+   "quote": "For safe operation, the total deformation due to creep must be well below the strain at which failure occurs.",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.30"
+  },
+  {
+   "id": "P54",
+   "quote": "Similarly, creep is a consideration at the temperatures that stainless-steel cladding encounters in gas-cooled reactors and fast reactors",
+   "sec": "Plant Material Problems",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.30"
+  },
+  {
+   "id": "P55",
+   "quote": "The net effect of beta and gamma radiation on metal is to generate a small amount of heat.",
+   "sec": "Atomic Displacement Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.32"
+  },
+  {
+   "id": "P56",
+   "quote": "Heavier particles, such as protons, α-particles, fast neutrons, and fission fragments, will usually transfer sufficient energy through elastic or inelastic collisions to remove nuclei from their lattice (crystalline) positions.",
+   "sec": "Atomic Displacement Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.32"
+  },
+  {
+   "id": "P57",
+   "quote": "A single fast neutron in the greater than or equal to 1 MeV range can displace a few thousand atoms.",
+   "sec": "Atomic Displacement Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.33"
+  },
+  {
+   "id": "P58",
+   "quote": "The presence of interstitials and vacancies makes it more difficult for dislocations to move through the lattice.",
+   "sec": "Atomic Displacement Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.34"
+  },
+  {
+   "id": "P59",
+   "quote": "This increases the strength and reduces the ductility of a material.",
+   "sec": "Atomic Displacement Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.34"
+  },
+  {
+   "id": "P60",
+   "quote": "Some of the distortion from the heating can be frozen as a stress in this microscopic area.",
+   "sec": "Thermal and Displacement Spikes Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.35"
+  },
+  {
+   "id": "P61",
+   "quote": "The presence of many displacement spikes will change the properties of the material being irradiated.",
+   "sec": "Thermal and Displacement Spikes Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.35"
+  },
+  {
+   "id": "P62",
+   "quote": "The presence of large numbers of vacancies and interstitials in the lattice of a metal will generally increase hardness and decrease ductility.",
+   "sec": "Thermal and Displacement Spikes Due to Irradiation",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.35"
+  },
+  {
+   "id": "P63",
+   "quote": "When a gamma-ray photon is emitted by the excited compound nucleus formed by neutron capture, the residual atom suffers recoil (sometimes referred to as the shotgun effect).",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.38"
+  },
+  {
+   "id": "P64",
+   "quote": "The absorption or capture of lower energy thermal neutrons can produce two effects.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.37"
+  },
+  {
+   "id": "P65",
+   "quote": "Thermal neutrons cannot produce atomic displacements directly, but they can do so indirectly as the result of radioactive capture (n,γ) and other neutron reactions or elastic scattering.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.37"
+  },
+  {
+   "id": "P66",
+   "quote": "In stainless steel, trace amounts of boron undergo a (n,α) reaction that generates helium bubbles which lead to the deterioration of mechanical properties.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.39"
+  },
+  {
+   "id": "P67",
+   "quote": "The general physical and mechanical effects of the irradiation of metals by fast neutrons and other high-energy particles are summarized in Table 1.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.39"
+  },
+  {
+   "id": "P68",
+   "quote": "The increase in the NDT temperature is one of the most important effects of irradiation from the standpoint of nuclear power system design.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.40"
+  },
+  {
+   "id": "P69",
+   "quote": "The swelling can cause changes in the dimensions of the coolant channels and also interfere with the free movement of control elements.",
+   "sec": "Effect Due to Neutron Capture",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.41"
+  },
+  {
+   "id": "P70",
+   "quote": "Ionization is the major damage mechanism in organic compounds.",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.45"
+  },
+  {
+   "id": "P71",
+   "quote": "Nylon begins to suffer degradation of its toughness at relatively low doses, but suffers little loss in strength.",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.45"
+  },
+  {
+   "id": "P72",
+   "quote": "High-density (linear) polyethylene marlex 50 loses both strength and ductility at relatively low doses.",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+  },
+  {
+   "id": "P73",
+   "quote": "In general, rubber will harden upon being irradiated.",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+  },
+  {
+   "id": "P74",
+   "quote": "It is important that oils and greases be evaluated for their resistance to radiation if they are to be employed in a high-radiation environment.",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+  },
+  {
+   "id": "P75",
+   "quote": "This recombination of broken hydrocarbon chains into longer ones is called",
+   "sec": "Radiation Effects in Organic Compounds",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+  },
+  {
+   "id": "P76",
+   "quote": "Generally, at high temperatures, the relative low strength and poor corrosion properties of aluminum make it unsuitable as a structural material in power reactors due to hydrogen generation.",
+   "sec": "Reactor Use of Aluminum",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.49"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Properties that drive material selection",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Selection covers both non-fuel materials, used for structures and components, and fuel materials. The properties below are the ones the handbook lists for nuclear facility construction.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Machinability describes how a metal reacts to mechanical deformation by removing chips, with respect to the amount of metal effectively removed and the surface finish attainable.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Formability is a material's ability to withstand peripheral expansion without failure, or its capacity to be manufactured into the final required shape.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Those corrosion products become irradiated and contaminate the system, which contributes to high radiation levels after shutdown.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Ductility: important for materials under tension and compression, and essential for reactor vessel steels",
+      "Heat transfer: most important for core cladding and heat exchanger tubes",
+      "Mechanical strength: desirable because of possible degradation from radiation damage and the need to contain radioactive liquids and fuel",
+      "Cost: a major part of facility capital cost is plant material"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What does the stability of a material refer to?",
+     "o": [
+      "How it reacts to removal of metal chips",
+      "The ease with which it can be obtained",
+      "Its mechanical and chemical inertness under the conditions it will see",
+      "The ease with which it can be worked into shapes"
+     ],
+     "a": 2,
+     "x": "Stability of a material refers to its mechanical and chemical inertness under the conditions to which it will be subjected.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which term measures the ease with which a material can be worked and made into desirable shapes and forms?",
+     "o": [
+      "Stability",
+      "Availability",
+      "Ductility",
+      "Fabricability"
+     ],
+     "a": 3,
+     "x": "Fabricability is a measure of the ease with which a material can be worked and made into desirable shapes and forms.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.2",
+     "q": "Why is high corrosion resistance desirable in reactor systems?",
+     "o": [
+      "Low resistance produces more corrosion products that may be carried through the core",
+      "It raises the thermal conductivity of the metal",
+      "It makes the material easier to machine",
+      "It lowers the cost of the material"
+     ],
+     "a": 0,
+     "x": "Low corrosion resistance leads to increased production of corrosion products that may be transported through the core.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which components make good heat transfer a major selection consideration?",
+     "o": [
+      "Valve handwheels and yokes",
+      "Pump casings and baffles",
+      "Core cladding and heat exchanger tubes",
+      "Shielding and concrete walls"
+     ],
+     "a": 2,
+     "x": "The handbook names materials used as core cladding and heat exchanger tubes.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Fast-spectrum fuel materials",
+   "eo": [
+    "1.3"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "Objective 1.3 asks for the materials that fission by thermal neutrons. That list is thermal-spectrum content, so it stays off this page under scope Rule 8, and the objective is marked for review. The handbook's fast-spectrum statements are below.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Plutonium dioxide is not used alone as a reactor fuel. It is mixed with uranium dioxide, at about 20% plutonium dioxide for fast reactor fuel.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The use of plutonium-239 in fast reactors is economical because breeding takes place, which produces more plutonium-239 than fission consumes.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "Uranium dioxide pellets are clad with stainless steel in fast sodium-cooled reactors to form fuel elements.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "At Natrium, the PSAR says:",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.1, p. 7.1-1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What is the initial fuel for the Natrium core, and what cladding encapsulates it?",
+     "o": [
+      "Sodium-bonded U-10Zr in HT-9 steel cladding",
+      "Uranium dioxide pellets in zircaloy cladding",
+      "Mixed oxide pellets in aluminum cladding",
+      "Thorium metal in stainless steel cladding"
+     ],
+     "a": 0,
+     "x": "The PSAR says the initial fuel is sodium-bonded uranium - 10 weight percent zirconium (U-10Zr), encapsulated by HT-9 ferritic-martensitic steel cladding.",
+     "p": "P1",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Nuclear Heat Supply Systems"
+     ]
+    },
+    {
+     "eo": "1.3",
+     "q": "Which isotopes does the handbook name as fissionable by fast neutrons?",
+     "o": [
+      "Uranium-238 and thorium-232",
+      "Uranium-233 and uranium-235",
+      "Plutonium-239 and plutonium-241",
+      "Boron-10 and hafnium-177"
+     ],
+     "a": 0,
+     "x": "The isotopes uranium-238 and thorium-232 are fissionable by fast neutrons.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.3",
+     "q": "What three things does fuel cladding do, according to the fuel materials chapter?",
+     "o": [
+      "Removes decay heat, seals the pump shaft, and supports the core",
+      "Protects fuel from coolant attack, prevents escape of fission products, and provides geometrical integrity",
+      "Moderates neutrons, reflects neutrons, and absorbs gamma rays",
+      "Raises the melting point, lowers the fuel density, and adds reactivity"
+     ],
+     "a": 1,
+     "x": "The cladding protects the fuel from attack by the coolant, prevents the escape of fission products, and provides geometrical integrity.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Selecting a fuel material",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "Those nuclear properties bear on neutron economy: absorption and fission cross sections, the reactions and products that result, neutron production, and the energy released.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "High thermal conductivity, so high power can be reached without excessive fuel temperature gradients",
+      "Resistance to radiation damage, so physical properties are not degraded",
+      "Chemical stability with respect to coolant in case of cladding failure",
+      "Physical and mechanical properties that permit economical fabrication"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Swelling compromises dimensional stability. It constricts the coolant channels and may lead to rupture of the metal cladding and escape of fission products into the coolant.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Some of the fission products are gases, so a ceramic fuel's ability to retain and accommodate fission gases is of primary importance to core lifetime.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What must be the first consideration in selecting a nuclear fuel?",
+     "o": [
+      "Its purchase cost",
+      "Its color and surface finish",
+      "Its coefficient of friction",
+      "Its nuclear properties"
+     ],
+     "a": 3,
+     "x": "The nuclear properties of a material must be the first consideration in the selection of a suitable nuclear fuel.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.4",
+     "q": "Why is high thermal conductivity wanted in a fuel?",
+     "o": [
+      "It raises the neutron absorption of the fuel",
+      "It increases fission gas production",
+      "It lowers the fuel melting point",
+      "It allows high power density without excessive fuel temperature gradients"
+     ],
+     "a": 3,
+     "x": "High thermal conductivity allows high power density and high specific power without excessive fuel temperature gradients.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is the main cause of fuel element swelling?",
+     "o": [
+      "Loss of fissile atoms from the fuel",
+      "Thermal contraction of the cladding",
+      "The accumulation of two fission product atoms for each atom fissioned",
+      "Corrosion of the cladding by the coolant"
+     ],
+     "a": 2,
+     "x": "The main cause of fuel element swelling is the accumulation of two fission product atoms for each atom fissioned.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Fuel cladding",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Cladding also contains pelletized fuel in the required physical configuration.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "It must have a high melting temperature to withstand abnormal conditions such as high temperature transients, and it should not be susceptible to radiation damage.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Objective 1.6 names four materials chosen for low thermal-neutron absorption, used in water-cooled and gas-cooled reactors. Those are left off this page, and the objective is marked for review. The handbook's fast reactor statement follows.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.11"
+    },
+    {
+     "t": "p",
+     "text": "The choice of cladding for fast reactors is less dependent on the neutron absorption cross section than for thermal reactors.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Why should fuel cladding have high thermal conductivity?",
+     "o": [
+      "To increase the neutron absorption cross section",
+      "To allow the cladding to melt at lower temperature",
+      "To increase the fuel swelling rate",
+      "To minimize thermal stresses arising from temperature differences"
+     ],
+     "a": 3,
+     "x": "Thermal conductivity should be high to minimize thermal stresses arising from temperature differences.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.6",
+     "q": "What does the handbook give as the preferred fuel cladding material for sodium-cooled fast breeder reactors?",
+     "o": [
+      "Magnox",
+      "Aluminum 1100",
+      "Stainless steel",
+      "Zircaloy-4"
+     ],
+     "a": 2,
+     "x": "At present, stainless steel is the preferred fuel cladding material for sodium-cooled fast breeder reactors.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.6",
+     "q": "Which is an essential requirement for fast reactor cladding?",
+     "o": [
+      "A low swelling rate under large fluences of fast neutrons",
+      "A large thermal-neutron absorption cross section",
+      "A low melting point",
+      "Solubility in molten sodium"
+     ],
+     "a": 0,
+     "x": "The essential requirements include a low swelling rate when irradiated by large fluences of fast neutrons.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Reflectors",
+   "eo": [
+    "1.7",
+    "1.8"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "The primary consideration for selecting a reflector material is its nuclear properties.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Objective 1.8 lists requirements for a reflector in a thermal reactor. That list is left off under scope Rule 8, and the objective is marked for review. The handbook's fast reactor statement follows.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What is the purpose of a reflector?",
+     "o": [
+      "To contain fission gases",
+      "To return neutrons leaving the core back to the core",
+      "To absorb neutrons leaving the core",
+      "To remove heat from the fuel"
+     ],
+     "a": 1,
+     "x": "Neutrons leaving the reactor core hit the reflector and are returned to the core.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.8",
+     "q": "What does a fast reactor reflector consist of, according to the handbook?",
+     "o": [
+      "A light element of low mass number",
+      "A hydrogen-rich liquid",
+      "A strong neutron absorber",
+      "A dense element of high mass number"
+     ],
+     "a": 3,
+     "x": "In a fast reactor, neutron thermalization is not desirable, and the reflector will consist of a dense element of high mass number.",
+     "p": "P25"
+    }
+   ]
+  },
+  {
+   "title": "Control materials",
+   "eo": [
+    "1.9",
+    "1.10"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "Reactors are most commonly controlled by inserting or withdrawing control rods made of poisons, materials with a large cross section for the absorption of neutrons.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "The handbook ties the advantages of hafnium and of silver-indium-cadmium alloys to water-cooled, water-moderated reactors, so those advantages stay off this page and the objectives are marked for review. What remains is below.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "Boron is generally built into a metallic material for reactor use. In boron-stainless-steel materials, the alpha particle from the boron-10 reaction becomes a helium atom.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Boron carbide (B4C) has been used alone or as a dispersion in aluminum, and these materials suffer from burnup limitation. Long stainless-steel tubes hold the powdered boron carbide.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "At Natrium, the PSAR says:",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.1.1.3.1, p. 7.1-10"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "Which group lists the most widely used control rod poisons?",
+     "o": [
+      "Uranium, plutonium, thorium, and protactinium",
+      "Hafnium, silver, indium, cadmium, and boron",
+      "Zirconium, magnesium, aluminum, and beryllium",
+      "Lead, iron, concrete, and water"
+     ],
+     "a": 1,
+     "x": "The most widely-used poisons are hafnium, silver, indium, cadmium, and boron.",
+     "p": "P26"
+    },
+    {
+     "eo": "1.10",
+     "q": "What has restricted the use of hafnium in civilian power reactors?",
+     "o": [
+      "Poor neutron absorption",
+      "A very low melting point",
+      "Severe swelling from helium gas",
+      "Limited availability and high cost"
+     ],
+     "a": 3,
+     "x": "Because of the limited availability and high cost of hafnium, its use as a control material in civilian power reactors has been restricted.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.10",
+     "q": "Why is pure boron not used for control rods?",
+     "o": [
+      "It is a liquid at reactor temperature",
+      "It is nonmetallic",
+      "It has no neutron absorption",
+      "It is too expensive"
+     ],
+     "a": 1,
+     "x": "Boron is nonmetallic and is not suitable for control rod use in its pure form.",
+     "p": "P29"
+    }
+   ]
+  },
+  {
+   "title": "Shielding materials",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Shield design depends on the location, intensity, and energy distribution of the radiation sources, and on the permissible radiation levels away from them.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Materials containing hydrogen are called hydrogenous material, and their value as a neutron shield is set by their hydrogen content. Water ranks high as a neutron shield but is a poor absorber of gamma radiation.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "These materials cause a large change in neutron energy after collision for high energy neutrons, but have little effect on neutrons below 0.1 MeV.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "p",
+     "text": "Iron also works well as a gamma attenuator, and it is often chosen for structural, temperature, and economic reasons.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "All materials described for neutron and gamma radiation also attenuate beta radiation.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "Which materials are best for slowing neutrons at low energies, below 0.1 MeV?",
+     "o": [
+      "Thin sheets of aluminum",
+      "Low mass number materials such as hydrogen in water",
+      "High mass number materials such as lead",
+      "Materials with good inelastic scattering such as iron"
+     ],
+     "a": 1,
+     "x": "At low energies, low mass number materials, such as hydrogen in H2O, are best for slowing down neutrons.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.11",
+     "q": "What property is used to shield high energy neutrons?",
+     "o": [
+      "High hydrogen content alone",
+      "A low atomic mass number",
+      "Good inelastic scattering, as in iron",
+      "A low melting point, as in lead"
+     ],
+     "a": 2,
+     "x": "To offset the lower cross section at higher energy, materials with good inelastic scattering properties, such as iron, are used.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.11",
+     "q": "What makes a good gamma shield?",
+     "o": [
+      "High atomic mass number and high density",
+      "Low atomic mass number and low density",
+      "High hydrogen content",
+      "A large thermal-neutron cross section"
+     ],
+     "a": 0,
+     "x": "Gamma shielding is more effectively performed by materials with high atomic mass number and high density.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.11",
+     "q": "What generally stops a beta particle?",
+     "o": [
+      "Several feet of concrete",
+      "A thick lead wall",
+      "A thin sheet of paper",
+      "A sheet of aluminum"
+     ],
+     "a": 3,
+     "x": "The beta particle can generally be stopped by a sheet of aluminum.",
+     "p": "P38"
+    }
+   ]
+  },
+  {
+   "title": "Pellet-cladding interaction and fission product swelling",
+   "eo": [
+    "1.12",
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "p",
+     "text": "PCI tends to occur under power ramping conditions, and it appears more likely during initial power increase.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.22"
+    },
+    {
+     "t": "list",
+     "items": [
+      "An increase in the cladding thickness",
+      "An increase in the cladding-pellet gap, with pressurization to prevent cladding collapse",
+      "A layer of graphite or other lubricant between the fuel and the cladding"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "p",
+     "text": "Swelling of oxide fuels is attributed to gaseous fission-product bubble formation and the accumulation of solid fission products.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "Fuel element life, or core burnup, is also set by the decrease in reactivity from the loss of fissile material and the accumulation of fission-product poisons. Operational maximum and minimum coolant flow limits help prevent extensive fuel element damage.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q386",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.13",
+     "q": "Which design feature counteracts pellet-cladding interaction?",
+     "o": [
+      "Faster power increases",
+      "A layer of graphite or other lubricant between fuel and cladding",
+      "Thinner cladding",
+      "A smaller gap between pellet and cladding"
+     ],
+     "a": 1,
+     "x": "Design features include increased cladding thickness, an increased gap with pressurization, and a lubricant layer such as graphite.",
+     "p": "P40"
+    },
+    {
+     "eo": "1.12",
+     "q": "What can swelling of the fuel do to the cladding?",
+     "o": [
+      "Place excessive pressure on it, which could lead to failure",
+      "Cool it below the coolant temperature",
+      "Remove it from the fuel column",
+      "Increase its ductility"
+     ],
+     "a": 0,
+     "x": "Swelling can cause excessive pressure on the cladding, which could lead to fuel element cladding failure.",
+     "p": "P46"
+    }
+   ]
+  },
+  {
+   "title": "Fuel densification",
+   "eo": [
+    "1.12",
+    "1.13"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "Densification is the reverse of swelling, and it results from irradiation. The handbook describes it for uranium dioxide fuels.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "list",
+     "items": [
+      "An increase in the linear heat generation rate, directly proportional to the decrease in pellet length",
+      "An increased local neutron flux and a local power spike in axial gaps in the fuel column",
+      "A decrease in the clearance gap heat conductance between pellets and cladding, which raises fuel temperature"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.23"
+    },
+    {
+     "t": "p",
+     "text": "The handbook's measures against densification come from PWR fuel rods and water-reactor accident limits, so they are left off this page and the objective is marked for review. The general measure is that plant procedures limit the rate at which power may be increased.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.24"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "title": "Cladding embrittlement",
+   "eo": [
+    "1.12",
+    "1.13"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook's cladding embrittlement section is mainly about hydrogen from zircaloy corrosion in water, which is left off this page. The objective is marked for review. Its fast reactor statement follows.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "As with metals in general, irradiation decreases ductility and increases embrittlement.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.24"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "title": "Fatigue, work hardening, and creep",
+   "eo": [
+    "1.14",
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "There is very little, if any, warning before failure if the crack is not noticed. The number of cycles to failure at a given peak stress is generally large, but it decreases as the stress increases.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "p",
+     "text": "The reactor vessel and piping see cyclic stresses from temperature variations during startup, power changes, and shutdown. Because they see large load variations at a low cycle frequency, high ductility is the main requirement for their steel.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.27"
+    },
+    {
+     "t": "p",
+     "text": "Fatigue can start at microscopic cracks and notches, and even at grinding and machining marks, so such defects must be avoided in materials under cyclic stress.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "p",
+     "text": "Work hardening occurs when a metal is strained beyond the yield point. An increasing stress is then needed for more plastic deformation, and the metal apparently becomes stronger and harder to deform.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.28"
+    },
+    {
+     "t": "fig",
+     "id": "ms-05-fig1",
+     "num": 1,
+     "cap": "Nominal Stress-Strain Curve vs True Stress-Strain Curve",
+     "alt": "Stress against strain with two curves: true stress keeps rising, while nominal stress reaches a maximum and falls.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "p",
+     "text": "Prior work hardening, or cold working, gives the treated material an apparently higher yield stress, so the metal is strengthened.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "p",
+     "text": "That behavior is creep. Stage I is primary or transient creep, where the rate starts high and soon decreases. Stage II is secondary or steady-state creep, with a small rate. In Stage III, tertiary or accelerating creep, the rate increases and the strain may result in failure.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.29"
+    },
+    {
+     "t": "fig",
+     "id": "ms-05-fig2",
+     "num": 2,
+     "cap": "Successive Stages of Creep with Increasing Time",
+     "alt": "Strain against time, with a steep start in Stage I, a nearly flat Stage II, and a sharp rise in Stage III.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.30"
+    },
+    {
+     "t": "p",
+     "text": "The creep rate depends strongly on both stress and temperature.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.14",
+     "q": "What is fatigue failure?",
+     "o": [
+      "Fracture by progressive brittle cracking under cyclic stresses well below normal strength",
+      "Slow deformation at high temperature under constant load",
+      "Sudden yielding above the ultimate strength",
+      "Loss of metal by uniform corrosion"
+     ],
+     "a": 0,
+     "x": "Fatigue failure is the tendency of a material to fracture by progressive brittle cracking under repeated alternating or cyclic stresses of an intensity considerably below the normal strength.",
+     "p": "P47"
+    },
+    {
+     "eo": "1.15",
+     "q": "Which plant controls minimize cyclic stress?",
+     "o": [
+      "Control rod worth limits",
+      "Radiation area postings",
+      "Heatup and cooldown limits, pressure limits, and pump operating curves",
+      "Coolant purity limits and filter changes"
+     ],
+     "a": 2,
+     "x": "Heatup and cooldown limitations, pressure limitations, and pump operating curves are all used to minimize cyclic stress.",
+     "p": "P49"
+    },
+    {
+     "eo": "1.14",
+     "q": "What effect does work hardening have on a metal?",
+     "o": [
+      "It removes all residual stress",
+      "It lowers the melting point",
+      "It reduces ductility, which increases the chances of brittle failure",
+      "It increases ductility and lowers yield stress"
+     ],
+     "a": 2,
+     "x": "Work hardening reduces ductility, which increases the chances of brittle failure.",
+     "p": "P51"
+    },
+    {
+     "eo": "1.14",
+     "q": "What is creep?",
+     "o": [
+      "Loss of strength from corrosion",
+      "Slow continued deformation at elevated temperature under constant stress or load",
+      "Cracking under cyclic stress at room temperature",
+      "Sudden brittle fracture at low temperature"
+     ],
+     "a": 1,
+     "x": "At elevated temperatures and constant stress or load, many materials continue to deform at a slow rate. This is creep.",
+     "p": "P52"
+    },
+    {
+     "eo": "1.15",
+     "q": "How is creep kept from causing failure?",
+     "o": [
+      "The load is applied and removed rapidly",
+      "The temperature is raised to anneal the metal",
+      "Total creep deformation is kept well below the strain at which failure occurs",
+      "The metal is cycled through heatups"
+     ],
+     "a": 2,
+     "x": "For safe operation, the total deformation due to creep must be well below the strain at which failure occurs.",
+     "p": "P53"
+    }
+   ]
+  },
+  {
+   "title": "Radiation interactions with metals",
+   "eo": [
+    "1.16",
+    "1.17"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Beta and gamma radiation produce ionization and excitation of electrons in metals, which does very little damage because electrons are relatively free to move and are soon replaced.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "p",
+     "text": "A struck nucleus that gains about 25 eV of kinetic energy, 25 eV to 30 eV for most metals, is displaced from its equilibrium position in the crystal lattice.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.33"
+    },
+    {
+     "t": "fig",
+     "id": "ms-05-fig3",
+     "num": 3,
+     "cap": "Thermal and Fast Neutrons Interactions with a Solid",
+     "alt": "Flow diagram of thermal and fast neutron interactions with a solid, leading through knock-ons and ionization to displaced atoms and heat.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.33"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Knock-on: the displaced target nucleus, or recoiling atom",
+      "Vacancy: the site vacated when a metal atom is ejected from its crystal lattice",
+      "Interstitial: a permanently displaced atom that has lost its energy and sits at a position other than a normal lattice site"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    },
+    {
+     "t": "p",
+     "text": "Most of those displacements are temporary. Over a long irradiation many displaced atoms return to normal lattice sites.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.16",
+     "q": "What is the net effect of beta and gamma radiation on metal?",
+     "o": [
+      "Permanent swelling",
+      "Transmutation into helium",
+      "A small amount of heat",
+      "Severe displacement of atoms"
+     ],
+     "a": 2,
+     "x": "The net effect of beta and gamma radiation on metal is to generate a small amount of heat.",
+     "p": "P55"
+    },
+    {
+     "eo": "1.16",
+     "q": "How do fast neutrons damage a metal?",
+     "o": [
+      "They bond to the metal and lower its density",
+      "Collisions transfer enough energy to remove nuclei from their lattice positions",
+      "They ionize electrons, which do little damage",
+      "They only generate a small amount of heat"
+     ],
+     "a": 1,
+     "x": "Heavier particles, such as fast neutrons, usually transfer sufficient energy through elastic or inelastic collisions to remove nuclei from their lattice positions.",
+     "p": "P56"
+    },
+    {
+     "eo": "1.17",
+     "q": "About how much kinetic energy must a struck nucleus gain in most metals to be displaced?",
+     "o": [
+      "2 eV to 3 eV",
+      "25 eV to 30 eV",
+      "1 MeV to 2 MeV",
+      "5 MeV to 10 MeV"
+     ],
+     "a": 1,
+     "x": "If a struck nucleus gains about 25 eV of kinetic energy, 25 eV to 30 eV for most metals, it is displaced from its equilibrium position.",
+     "p": "P57"
+    }
+   ]
+  },
+  {
+   "title": "Thermal and displacement spikes",
+   "eo": [
+    "1.18",
+    "1.19"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A thermal spike occurs when radiation deposits energy as a knock-on, which transfers its excess energy to the surrounding atoms as vibrational energy, or heat.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "p",
+     "text": "A displacement spike occurs when many atoms in a small area are displaced by a knock-on or a cascade of knock-ons. A 1 MeV neutron may affect about 5000 atoms in one spike.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.18",
+     "q": "What is a displacement spike?",
+     "o": [
+      "A single vacancy in a crystal lattice",
+      "A burst of gamma rays from capture",
+      "Many atoms in a small area displaced by a knock-on or cascade of knock-ons",
+      "A sudden rise in reactor power"
+     ],
+     "a": 2,
+     "x": "A displacement spike occurs when many atoms in a small area are displaced by a knock-on or cascade of knock-ons.",
+     "p": "P62"
+    },
+    {
+     "eo": "1.19",
+     "q": "What does a large number of displacement spikes do to a metal?",
+     "o": [
+      "Generally decreases hardness and increases ductility",
+      "Leaves properties unchanged",
+      "Raises thermal conductivity",
+      "Generally increases hardness and decreases ductility"
+     ],
+     "a": 3,
+     "x": "Large numbers of vacancies and interstitials in the lattice of a metal will generally increase hardness and decrease ductility.",
+     "p": "P62"
+    }
+   ]
+  },
+  {
+   "title": "Recoil from emitted radiation",
+   "eo": [
+    "1.20"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Highly energetic recoil nuclei can be produced indirectly by the absorption of a neutron and the emission of a gamma ray.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "p",
+     "text": "The gamma photon has momentum, so the nucleus must take an equal and opposite momentum. The recoil energy is often large enough to displace the atom and produce a cascade of displacements.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.38"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.20",
+     "q": "Why does an atom recoil when it emits a gamma ray?",
+     "o": [
+      "The photon has momentum, so the nucleus takes an equal and opposite momentum",
+      "The gamma ray ionizes the nucleus",
+      "The atom loses its electrons",
+      "The nucleus gains mass"
+     ],
+     "a": 0,
+     "x": "The gamma photon has momentum, which means that the nucleus must have an equal and opposite momentum.",
+     "p": "P63"
+    }
+   ]
+  },
+  {
+   "title": "Effects of thermal neutron capture",
+   "eo": [
+    "1.21",
+    "1.22"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "These two objectives are about thermal neutrons, so this page has no knowledge check and is marked for review. The handbook's general statements about what capture does in a solid are below.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Introduction of an impurity atom, from transmutation of the absorbing nucleus",
+      "Atomic displacement caused by recoil atoms or knock-ons"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P65"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "title": "Fast neutron effects on metal properties",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Properties that increase: yield strength, tensile strength, NDT temperature, Young's modulus (slightly), hardness, and high-temperature creep rate during irradiation",
+      "Properties that decrease: ductility, stress-rupture strength, density, impact strength, and thermal conductivity"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.39"
+    },
+    {
+     "t": "p",
+     "text": "The effects are generally less significant at elevated temperatures for a given fluence, and some defects can be removed by heating, or annealing.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.39"
+    },
+    {
+     "t": "fig",
+     "id": "ms-05-fig4",
+     "num": 4,
+     "cap": "Qualitative Representation of Neutron Irradiation Effect on Many Metals",
+     "alt": "Stress against strain for an unirradiated metal and for medium and high fluence: yield strength rises and elongation shrinks as fluence rises.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "p",
+     "text": "A rising NDT temperature with lower ductility increases the chance of brittle fracture.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.40"
+    },
+    {
+     "t": "p",
+     "text": "Irradiation often decreases the density of a metal over a certain temperature range, so a specimen swells. This swelling in stainless steel structures and fuel rod cladding is a matter of great concern in fast reactors.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    },
+    {
+     "t": "p",
+     "text": "When irradiation-induced swelling occurs, it is usually significant only from roughly 0.3 Tm to 0.5 Tm, where Tm is the melting point of the metal in kelvin.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "p",
+     "text": "Helium bubbles can also enhance embrittlement. The accepted view is stress-induced bubble growth at the grain boundaries, where bubbles link up and cause intergranular failure.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.43"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "Which property does fast-neutron irradiation decrease in metals?",
+     "o": [
+      "NDT temperature",
+      "Ductility",
+      "Yield strength",
+      "Hardness"
+     ],
+     "a": 1,
+     "x": "Table 1 lists ductility among the properties that decrease.",
+     "p": "P67"
+    },
+    {
+     "eo": "1.0",
+     "q": "Why is swelling of stainless steel a concern in fast reactors?",
+     "o": [
+      "It can change coolant channel dimensions and interfere with control element movement",
+      "It raises the sodium melting point",
+      "It removes all fission gas from the fuel",
+      "It makes the steel more ductile"
+     ],
+     "a": 0,
+     "x": "The swelling can cause changes in the dimensions of the coolant channels and also interfere with the free movement of control elements.",
+     "p": "P69"
+    },
+    {
+     "eo": "1.0",
+     "q": "What generates helium bubbles in stainless steel under irradiation?",
+     "o": [
+      "Beta decay of iron",
+      "Oxidation at the surface",
+      "An (n,α) reaction in trace amounts of boron",
+      "Radiolysis of the coolant"
+     ],
+     "a": 2,
+     "x": "In stainless steel, trace amounts of boron undergo a (n,α) reaction that generates helium bubbles.",
+     "p": "P66"
+    }
+   ]
+  },
+  {
+   "title": "Radiation effects in organic compounds",
+   "eo": [
+    "1.23",
+    "1.24",
+    "1.25",
+    "1.26"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Gamma and beta radiation cause very little damage in metals, but they break the chemical bonds of organic compounds, prevent bond recombination, and cause permanent damage.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "p",
+     "text": "Materials sensitive to ionization include insulators, dielectrics, plastics, lubricants, hydraulic fluids, and rubber.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "p",
+     "text": "Butyl or Thiokol rubber, however, will soften or become liquid with high radiation doses.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "p",
+     "text": "The chemical bond with the least resistance to decomposition is the covalent bond, in which outer electrons are shared by two atoms rather than firmly attached to one.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    },
+    {
+     "t": "p",
+     "text": "That word is polymerization. It is one of the reactions that takes place in organic compounds during irradiation, and it changes their properties.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.46"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.23",
+     "q": "What do gamma and beta radiation do to organic materials?",
+     "o": [
+      "Generate a small amount of heat with no lasting change",
+      "Displace atoms from a crystal lattice only",
+      "Transmute carbon into boron",
+      "Break chemical bonds and cause permanent damage"
+     ],
+     "a": 3,
+     "x": "Incident gamma and beta radiation will break the chemical bonds and prevent bond recombination of organic compounds and cause permanent damage.",
+     "p": "P70"
+    },
+    {
+     "eo": "1.24",
+     "q": "How does nylon respond to radiation?",
+     "o": [
+      "It hardens at all doses",
+      "It becomes liquid at high doses",
+      "Its toughness degrades at relatively low doses, with little loss in strength",
+      "It loses both strength and ductility at low doses"
+     ],
+     "a": 2,
+     "x": "Nylon begins to suffer degradation of its toughness at relatively low doses, but suffers little loss in strength.",
+     "p": "P71"
+    },
+    {
+     "eo": "1.24",
+     "q": "What generally happens to rubber when irradiated?",
+     "o": [
+      "It melts at low doses",
+      "It gains ductility",
+      "It is unaffected",
+      "It hardens"
+     ],
+     "a": 3,
+     "x": "In general, rubber will harden upon being irradiated.",
+     "p": "P73"
+    },
+    {
+     "eo": "1.25",
+     "q": "Which chemical bond has the least resistance to radiation decomposition?",
+     "o": [
+      "Ionic",
+      "Metallic",
+      "Hydrogen",
+      "Covalent"
+     ],
+     "a": 3,
+     "x": "The chemical bond with the least resistance to decomposition is the covalent bond.",
+     "p": "P74"
+    },
+    {
+     "eo": "1.26",
+     "q": "What is polymerization?",
+     "o": [
+      "The formation of helium bubbles",
+      "The recombination of broken hydrocarbon chains into longer ones",
+      "The breaking of long chains into gases",
+      "The displacement of atoms by neutrons"
+     ],
+     "a": 1,
+     "x": "The recombination of broken hydrocarbon chains into longer ones is called polymerization.",
+     "p": "P75"
+    }
+   ]
+  },
+  {
+   "title": "Aluminum in reactors",
+   "eo": [
+    "1.27",
+    "1.28"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "Objective 1.27 is about low-power research and training reactors, and it rests on aluminum's low thermal neutron absorption. That content and aluminum's corrosion in water are left off this page, and the objective is marked for review.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "p",
+     "text": "Alloying can improve aluminum's high temperature strength and corrosion properties, but only at the expense of a higher neutron capture cross section.",
+     "cite": "DOE-HDBK-1017/2-93 MS-05 p.49"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.28",
+     "q": "Why is aluminum unsuitable as a structural material in high temperature power reactors?",
+     "o": [
+      "It is too dense",
+      "Relatively low strength and poor corrosion properties at high temperature",
+      "Its neutron capture cross section is too low",
+      "It is too expensive to obtain"
+     ],
+     "a": 1,
+     "x": "At high temperatures, the relative low strength and poor corrosion properties of aluminum make it unsuitable as a structural material in power reactors.",
+     "p": "P76"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Recoil energy after a capture gamma",
+   "eo": [
+    "1.20"
+   ],
+   "page": 38,
+   "tag": "Needs sodium review",
+   "problem": "An atom of mass number 10 emits a 7 MeV gamma ray after capturing a neutron. Find the recoil energy and compare it with the energy needed to displace an atom.",
+   "steps": [
+    "The handbook gives Er = 5.4 x 10^-4 x Eγ² / A, with energies in MeV and A in atomic mass units.",
+    "Er = 5.4 x 10^-4 x (7)² / 10 = 5.4 x 10^-4 x 4.9 = 2.6 x 10^-3 MeV.",
+    "That is about 2.6 keV, or 2600 eV."
+   ],
+   "answer": "About 2.6 keV, far above the roughly 25 eV needed to displace an atom. This agrees with the handbook's 2 keV to 3 keV for an element of low atomic mass.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.38"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the preferred fuel cladding material for sodium-cooled fast reactors, according to DOE-HDBK-1017?",
+   "a": "Stainless steel.",
+   "p": "P23",
+   "place": null
+  },
+  {
+   "q": "What are the Natrium primary and secondary control rods constructed of?",
+   "a": "Boron carbide pellets.",
+   "p": "P2",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Nuclear Heat Supply Systems"
+   ]
+  },
+  {
+   "q": "What does a fast reactor reflector consist of?",
+   "a": "A dense element of high mass number, because neutron thermalization is not desirable.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "Which materials shield low energy neutrons, high energy neutrons, and gamma rays best?",
+   "a": "Low energy neutrons: low mass number, hydrogenous materials. High energy neutrons: good inelastic scatterers such as iron. Gamma: high atomic mass number and high density, such as lead.",
+   "p": "P35",
+   "place": null
+  },
+  {
+   "q": "What is fatigue failure?",
+   "a": "Fracture by progressive brittle cracking under repeated cyclic stresses considerably below normal strength.",
+   "p": "P47",
+   "place": null
+  },
+  {
+   "q": "What is creep?",
+   "a": "Slow continued deformation of a material at elevated temperature under constant stress or load.",
+   "p": "P52",
+   "place": null
+  },
+  {
+   "q": "What are a knock-on, a vacancy, and an interstitial?",
+   "a": "A knock-on is the displaced nucleus. A vacancy is the site it left. An interstitial is a permanently displaced atom sitting at a position other than a normal lattice site.",
+   "p": "P58",
+   "place": null
+  },
+  {
+   "q": "What does a large number of displacement spikes do to a metal?",
+   "a": "It generally increases hardness and decreases ductility.",
+   "p": "P62",
+   "place": null
+  },
+  {
+   "q": "Which chemical bond is least resistant to radiation?",
+   "a": "The covalent bond.",
+   "p": "P74",
+   "place": null
+  },
+  {
+   "q": "What problems does swelling of stainless steel cause in a fast reactor?",
+   "a": "Changes in coolant channel dimensions and interference with the free movement of control elements.",
+   "p": "P69",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Selection considers machinability, formability, ductility, stability, availability, fabricability, heat transfer, cost, and mechanical strength.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.4"
+  },
+  {
+   "text": "Fuel selection considers thermal conductivity, resistance to radiation damage, chemical stability with coolant, and properties that permit economical fabrication.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.10"
+  },
+  {
+   "text": "Stainless steel is the preferred cladding for sodium-cooled fast breeder reactors, and a fast reactor reflector is a dense element of high mass number.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.12"
+  },
+  {
+   "text": "Gamma shielding needs high atomic mass number and high density. Neutron shielding depends on energy.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.21"
+  },
+  {
+   "text": "Fatigue, work hardening, and creep are managed by design and by controlled operation.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.31"
+  },
+  {
+   "text": "Fast neutrons displace atoms, which raises strength and hardness and lowers ductility. Stainless steel swelling is a concern in fast reactors.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.39"
+  },
+  {
+   "text": "Gamma and beta radiation cause permanent damage in organic compounds, and the covalent bond is the least resistant.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.48"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Objectives 1.3, 1.6, 1.8, 1.9, 1.10, 1.12, 1.13, 1.21, 1.22, 1.27 and 1.28 stay verbatim. Their pages carry Needs sodium review because each objective is thermal, moderator, or water-reactor based, or cannot be fully taught. Fast-spectrum statements from the handbook are kept in their place.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.5"
+  },
+  {
+   "type": "Scope",
+   "note": "Left off: the thermal fissile list (p.5, p.10), thorium and the LWBR (p.7, p.8), water-reactor cladding uses (p.12), thermal reflector requirements (p.12), reflector materials (p.13), hafnium and silver-indium-cadmium advantages (p.15, p.16), chemical shim and burnable poisons (p.16, p.17), the PWR steel and water shield (p.19), zircaloy hydrogen embrittlement (p.24), PWR densification measures and the loss of coolant limit (p.23, p.24), the pressurizer fatigue case and thermal sleeves (p.27, p.28), zircaloy creep (p.29, p.30), the thermal reactor stainless data and vessel surveillance (p.40, p.41), organic moderators and water radiolysis (p.46 to p.48), and aluminum in water (p.49, p.50).",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.5"
+  },
+  {
+   "type": "Scope",
+   "note": "Water stays on the shielding page as a generic shield material, untagged, because the shielding objective asks for low energy neutron shielding and no reactor system is involved. The chapter's slowing-down model is not used.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.18"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.49 calls aluminum the preferred cladding for pressurized and boiling water reactors, while p.12 says zircaloy is widely used there and p.14 repeats that. Neither is shown.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.49"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.12 includes fuel burnup, and the p.26 summary says high burnup can force early refueling, a point the p.25 text does not make. It is not repeated.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.26"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.38 lists (n,p) and (n,γ) as other reactions with little significance in thermal reactors, after using (n,γ) as the main case. That sentence is left off.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.38"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Quotes containing exponents were avoided. The recoil equation is written out from Equation 5-3 on p.38.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.38"
+  },
+  {
+   "type": "Figures",
+   "note": "Figure 5 (NDT steels below 232°C), Figure 6 (uranium rod), Figure 7 (hydrocarbons considered as moderators), and Figure 8 (aluminum) are off. Table 2 is off because its values come from water-reactor steels and thermal conditions.",
+   "cite": "DOE-HDBK-1017/2-93 MS-05 p.41"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}

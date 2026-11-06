@@ -1,0 +1,840 @@
+{
+ "module_id": "CP-04",
+ "slug": "cp-04-application-of-newton-s-laws",
+ "title": "Application of Newton's Laws",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1010",
+ "handbook": "DOE-HDBK-1010-92",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Basic Energy Concepts",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "From memory, APPLY the principles of force to stationary or moving bodies.",
+   "items": [],
+   "page": {
+    "pdf": 99,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following:",
+     "items": [
+      "a. Force",
+      "b. Weight"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the purpose of a free-body diagram.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given all necessary information, CONSTRUCT a free-body diagram.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the conditions necessary for a body to be in force equilibrium.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE the following:",
+     "items": [
+      "a. Net force",
+      "b. Equilibrant"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DEFINE the following:",
+     "items": [
+      "a. Tensile force",
+      "b. Compressive force",
+      "c. Frictional force"
+     ],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "EXPLAIN the difference between a static-friction force and a kinetic-friction force.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE two factors that affect the magnitude of the friction force.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "EXPLAIN the difference between centripetal force and centrifugal force.",
+     "items": [],
+     "page": {
+      "pdf": 99,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Force is defined as a vector quantity that tends to produce an acceleration of a body in the direction of its application.",
+   "sec": "Force and Weight",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "Force is characterized by its point of application, its magnitude, and its direction.",
+   "sec": "Force and Weight",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+  },
+  {
+   "id": "P3",
+   "quote": "It is defined as the force exerted on an object by the gravitational field of the earth, or more specifically the pull of the earth on the body.",
+   "sec": "Force and Weight",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "The mass of a body is the same wherever the body is, whether on the moon or on the earth.",
+   "sec": "Force and Weight",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "The diagram of such an isolated body with the representation of all external forces acting on it is called a Free-Body Diagram.",
+   "sec": "Free-Body Diagrams",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.5"
+  },
+  {
+   "id": "P6",
+   "quote": "A normal force is defined as any perpendicular force with which any two surfaces are pressed against each other.",
+   "sec": "Free-Body Diagrams",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "Do not show the forces that the object exerts on anything else, since these forces do not affect the object itself.",
+   "sec": "Free-Body Diagrams",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.6"
+  },
+  {
+   "id": "P8",
+   "quote": "The force which results from all the forces acting on a body is defined as the net force.",
+   "sec": "Force Equilibrium",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.11"
+  },
+  {
+   "id": "P9",
+   "quote": "Inertia is the tendency of a body to resist a change in its state of motion.",
+   "sec": "Force Equilibrium",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.12"
+  },
+  {
+   "id": "P10",
+   "quote": "If the sum of all forces acting upon a body is equal to zero, that body is said to be in force equilibrium.",
+   "sec": "Force Equilibrium",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.15"
+  },
+  {
+   "id": "P11",
+   "quote": "If the sum of all the forces is not equal to zero, any force or system of forces capable of balancing the system is defined as an equilibrant.",
+   "sec": "Force Equilibrium",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.15"
+  },
+  {
+   "id": "P12",
+   "quote": "If an applied force on a member tends to pull the member apart, it is said to be in tension.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+  },
+  {
+   "id": "P13",
+   "quote": "ropes, cables, etc., that are attached to bodies can only support tensile loads",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+  },
+  {
+   "id": "P14",
+   "quote": "fluid forces are almost always compressive forces.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+  },
+  {
+   "id": "P15",
+   "quote": "Such forces are referred to as friction forces.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+  },
+  {
+   "id": "P16",
+   "quote": "As soon as the block has been set in motion, the magnitude of F drops from FM to a lower value",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.18"
+  },
+  {
+   "id": "P17",
+   "quote": "do not depend upon the area of the surfaces in contact.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+  },
+  {
+   "id": "P18",
+   "quote": "Both coefficients, however, depend strongly on the nature of the surfaces in contact.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+  },
+  {
+   "id": "P19",
+   "quote": "frictional forces are always opposite in direction to the motion (or impending motion) of the object.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+  },
+  {
+   "id": "P20",
+   "quote": "This force is known as centripetal force.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+  },
+  {
+   "id": "P21",
+   "quote": "This is actually a fictitious force, but is an apparent force that is used to describe the forces present due to an object's rotation.",
+   "sec": "Types of Force",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.20"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Force and weight",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "eq",
+     "text": "F = ma",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Two or more forces may act upon an object without affecting its state of motion. A book on a table has a downward force from gravity and an upward force from the table top, and the net force is zero.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Weight is a special application of the concept of force.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "eq",
+     "text": "W = mg / gc",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+    },
+    {
+     "t": "p",
+     "text": "W is weight in lbf, m is mass in lbm, g is the local acceleration of gravity (32.17 ft/sec²), and gc is a conversion constant equal to 32.17 ft-lbm/lbf-sec².",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The weight of a body depends upon the local acceleration of gravity, so an object weighs less on the moon than on the earth.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What three things characterize a force?",
+     "o": [
+      "Its mass, velocity, and time",
+      "Its point of application, magnitude, and direction",
+      "Its length, width, and depth",
+      "Its area, volume, and density"
+     ],
+     "a": 1,
+     "x": "Force is characterized by its point of application, its magnitude, and its direction.",
+     "p": "P2"
+    },
+    {
+     "existing": "Q414",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "A body moves from the earth to the moon. What happens to its mass and weight?",
+     "o": [
+      "Mass decreases and weight stays the same",
+      "Both decrease",
+      "Mass stays the same and weight decreases",
+      "Both stay the same"
+     ],
+     "a": 2,
+     "x": "Mass is the same wherever the body is. Weight depends on the local acceleration of gravity, which is less on the moon.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Free-body diagrams",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "To account for all the forces on a body, the body must be isolated from all other bodies.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The isolation of a body clearly separates cause and effect and focuses attention on the literal application of a principle.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "A book resting on a table has its weight (W) and the normal force (N) from the table, which is equal to the weight of the book.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig1",
+     "num": 1,
+     "cap": "Book on a Table",
+     "alt": "A book on a table, and beside it the free-body diagram of the book with weight W pointing down and normal force N pointing up.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "A free-body diagram is usually constructed in four steps:",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.6"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Determine which body or combination of bodies is to be isolated.",
+      "Isolate it with a diagram that represents its complete external boundaries.",
+      "Represent all forces that act on the isolated body, in their proper positions.",
+      "Indicate the choice of coordinate axes directly on the diagram."
+     ],
+     "cite": "DOE-HDBK-1010-92 CP-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "A car being towed has four forces on its diagram: the applied force, the frictional force that opposes it, the weight of the car, and the normal force from the road.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig3",
+     "num": 3,
+     "cap": "Free-Body Diagram",
+     "alt": "Free-body diagram of a car with the applied force to the right, friction FK to the left, weight W down, and normal force N up.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q413",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which forces are left off a free-body diagram?",
+     "o": [
+      "The normal force on the object",
+      "The weight of the object",
+      "Forces the object exerts on anything else",
+      "Frictional forces on the object"
+     ],
+     "a": 2,
+     "x": "Do not show the forces that the object exerts on anything else, since these forces do not affect the object itself.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Force equilibrium",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Forces are vector quantities, so both the magnitude and the direction of each force must be accounted for. This is best done using a free-body diagram.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig5",
+     "num": 5,
+     "cap": "Net Force",
+     "alt": "Three views of a book on a table: at rest with zero net force, with an applied force, and a free-body diagram with N and W canceling.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Newton's first law of motion is also called the law of inertia.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "eq",
+     "text": "ΣF = 0",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.13"
+    },
+    {
+     "t": "p",
+     "text": "This condition applies to objects in motion with constant velocity and to bodies at rest.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q412",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is an equilibrant?",
+     "o": [
+      "Any force or system of forces capable of balancing the system",
+      "The force of gravity on an object",
+      "The force that results from all forces acting on a body",
+      "The tendency of a body to resist a change in motion"
+     ],
+     "a": 0,
+     "x": "If the sum of all the forces is not equal to zero, any force or system of forces capable of balancing the system is defined as an equilibrant.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.5",
+     "q": "How does the handbook define net force?",
+     "o": [
+      "The largest single force on a body",
+      "The force which results from all the forces acting on a body",
+      "The force needed to balance a system",
+      "The perpendicular force between two surfaces"
+     ],
+     "a": 1,
+     "x": "The force which results from all the forces acting on a body is defined as the net force.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Tensile, compressive, and frictional forces",
+   "eo": [
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "If a force tends to compress the member, it is in compression.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "Forces from two surfaces in contact, where one surface is attempting to move parallel to or over the other, are friction forces.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.17"
+    },
+    {
+     "t": "p",
+     "text": "With a small applied force, a block does not move, because the static-friction force balances the applied force.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.18"
+    },
+    {
+     "t": "p",
+     "text": "As the applied force increases, the static-friction force increases until it reaches a maximum value, FM. Beyond that, the block starts sliding.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig9",
+     "num": 9,
+     "cap": "Frictional Forces",
+     "alt": "A block on a surface with weight W and normal force N, then with applied force P and friction F, and a graph of friction force rising to FM and dropping to FK at motion.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "That lower value, FK, is the kinetic-friction force, which remains approximately constant as the block slides.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.18"
+    },
+    {
+     "t": "eq",
+     "text": "FM = μs N",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "eq",
+     "text": "FK = μK N",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q415",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "What kind of load can a cable support?",
+     "o": [
+      "Compressive loads only",
+      "Tensile loads only",
+      "Both tensile and compressive loads",
+      "Frictional loads only"
+     ],
+     "a": 1,
+     "x": "Ropes, cables, and similar objects attached to bodies can only support tensile loads.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.7",
+     "q": "A block that was held by static friction starts to slide. What happens to the friction force?",
+     "o": [
+      "It rises above the maximum static value",
+      "It drops to zero",
+      "It stays at the maximum static value",
+      "It drops to a lower value, the kinetic-friction force"
+     ],
+     "a": 3,
+     "x": "As soon as the block has been set in motion, the magnitude of the friction force drops from FM to a lower value, FK.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.8",
+     "q": "Which of these does NOT change the coefficients of friction?",
+     "o": [
+      "The area of the surfaces in contact",
+      "The nature of the surfaces in contact",
+      "The exact condition of the surfaces",
+      "The type of surfaces in contact"
+     ],
+     "a": 0,
+     "x": "The coefficients of friction do not depend upon the area of the surfaces in contact. They depend strongly on the nature of the surfaces.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Centripetal and centrifugal force",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "An object moving at constant speed in a circle is not in equilibrium, because the direction of its velocity is continually changing.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "p",
+     "text": "A net force acts towards the center of the circular path.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Without this force, an object will move in a straight line.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig10",
+     "num": 10,
+     "cap": "Centripetal Force",
+     "alt": "A plane moving in a circle, with an arrow for centripetal force pointing toward the center.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Centrifugal force appears to be a force directed away from the center of the circular path.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "If a string holding a plane in a circle is cut, the plane flies off in a straight line tangent to the circle. If an actual centrifugal force were present, it would fly directly away from the circle.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.20"
+    },
+    {
+     "t": "fig",
+     "id": "cp-04-fig12",
+     "num": 12,
+     "cap": "Loss of Centripetal Force",
+     "alt": "A plane leaving the circular path in a straight line tangent to the circle after centripetal force goes to zero.",
+     "cite": "DOE-HDBK-1010-92 CP-04 p.20"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "How does centrifugal force differ from centripetal force?",
+     "o": [
+      "Centrifugal force acts toward the center and is a real force",
+      "Centrifugal force is a fictitious force that appears directed away from the center",
+      "Both are real forces directed toward the center",
+      "Centrifugal force exists only in straight-line motion"
+     ],
+     "a": 1,
+     "x": "Centripetal force acts towards the center of the path. Centrifugal force is a fictitious, apparent force that appears to be directed away from the center.",
+     "p": "P21"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Weight on the earth",
+   "eo": "1.1",
+   "page": 3,
+   "problem": "Calculate the weight of a person with a mass of 185 lbm.",
+   "steps": [
+    "W = mg / gc.",
+    "W = (185 lbm)(32.17 ft/sec²) / (32.17 ft-lbm/lbf-sec²)."
+   ],
+   "answer": "185 lbf",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.3"
+  },
+  {
+   "title": "Weight on the moon",
+   "eo": "1.1",
+   "page": 3,
+   "problem": "Calculate the weight of the same person on the moon, where gravity is 5.36 ft/sec².",
+   "steps": [
+    "W = mg / gc.",
+    "W = (185 lbm)(5.36 ft/sec²) / (32.17 ft-lbm/lbf-sec²)."
+   ],
+   "answer": "28.19 lbf",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.3"
+  },
+  {
+   "title": "Tension in a cable",
+   "eo": "1.4",
+   "page": 15,
+   "fig": {
+    "t": "fig",
+    "id": "cp-04-fig7",
+    "num": 7,
+    "cap": "Free-Body Diagram",
+    "alt": "Free-body diagram of the cable junction with T1 at 30 degrees up and right, T2 to the left, and T3 straight down, equal to the 125 lbf weight.",
+    "cite": "DOE-HDBK-1010-92 CP-04 p.14"
+   },
+   "problem": "An object weighing 125 lbf hangs motionless from cables. Calculate the tension T1 in the cable at 30° with the horizontal.",
+   "steps": [
+    "The object is in equilibrium, so the sum of the y components is zero.",
+    "Choose + as upward. The upward component of T1 is T1 sin 30°, T3 is -125 lbf, and T2 has no y component.",
+    "(T1 sin 30°) - 125 lbf = 0.",
+    "0.5 T1 = 125 lbf."
+   ],
+   "answer": "T1 = 250 lbf",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.15"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is inertia?",
+   "a": "The tendency of a body to resist a change in its state of motion.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What is a normal force?",
+   "a": "Any perpendicular force with which any two surfaces are pressed against each other.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "How does the handbook define force?",
+   "a": "A vector quantity that tends to produce an acceleration of a body in the direction of its application.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What direction do frictional forces act?",
+   "a": "Always opposite in direction to the motion, or impending motion, of the object.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "Are fluid forces usually tensile or compressive?",
+   "a": "Fluid forces are almost always compressive forces.",
+   "p": "P14",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Force is a vector quantity that tends to produce an acceleration of a body in the direction of its application.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.4"
+  },
+  {
+   "text": "Weight is the force exerted on an object due to gravity.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.4"
+  },
+  {
+   "text": "A free-body diagram isolates a body and illustrates all the forces that act on the body.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.10"
+  },
+  {
+   "text": "If the vector sum of all the forces acting on an object is equal to zero, then the object is in equilibrium.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.16"
+  },
+  {
+   "text": "Any force or system of forces capable of balancing a system so that the net force is zero is an equilibrant.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.16"
+  },
+  {
+   "text": "Static-frictional forces are present when an object is stationary, and kinetic-frictional forces are present between two objects that are moving.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.21"
+  },
+  {
+   "text": "Centripetal force is directed towards the center of the path. Centrifugal force is a fictitious force that appears directed away from it.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.21"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "The car equilibrant example prints the acceleration as 2 ft-sec. That looks like a misprint for ft/sec², so the example is not used.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.15"
+  },
+  {
+   "type": "Objective mismatch",
+   "note": "Objective 1.8 asks for two factors that affect friction, but the summary lists three: weight, the surface of the object, and the surface it moves on. The check on this objective tests the coefficients instead.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.21"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "Equation number 4-5 is used twice, on pages 13 and 19. The lesson does not use equation numbers.",
+   "cite": "DOE-HDBK-1010-92 CP-04 p.19"
+  }
+ ],
+ "page_tags": []
+}

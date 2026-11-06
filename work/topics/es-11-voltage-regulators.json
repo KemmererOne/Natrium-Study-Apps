@@ -1,0 +1,311 @@
+{
+ "module_id": "ES-11",
+ "slug": "es-11-voltage-regulators",
+ "title": "Voltage Regulators",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V3",
+ "handbook": "DOE-HDBK-1011/3-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Controllers and Positioners",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given a block diagram, DESCRIBE the operation of a typical voltage regulator.",
+   "items": [],
+   "page": {
+    "pdf": 121,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the purpose for voltage regulation equipment.",
+     "items": [],
+     "page": {
+      "pdf": 121,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given a block diagram of a typical voltage regulator, DESCRIBE the function of each of the following components:",
+     "items": [
+      "a. Sensing circuit",
+      "b. Reference circuit",
+      "c. Comparison circuit",
+      "d. Amplification circuit(s)",
+      "e. Signal output circuit",
+      "f. Feedback circuit"
+     ],
+     "page": {
+      "pdf": 121,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The purpose of a voltage regulator is to maintain the output voltage of a generator at a desired value.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "the output voltage of an AC generator varies with both changes in load (i.e., current) and changes in power factor.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "The sensing circuit senses output voltage of the AC generator.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "The reference circuit maintains a constant output for reference.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "The comparison circuit electrically compares the reference voltage to the sensed voltage and provides an error signal.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "takes the signal from the comparison circuit and amplifies the milliamp input to an amp output",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "The signal output circuit, which controls field excitation of the AC generator, increases or decreases field excitation to either raise or lower the AC output voltage.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "It does this to prevent overshooting or undershooting of the desired voltage by slowing down the circuit response.",
+   "sec": "Voltage Regulators",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.3"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Why voltage is regulated",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "As load on an AC generator changes, the voltage tends to change, mainly because of the changing voltage drop across the armature winding.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The IR drop depends on the load change only. The IXL drop depends on the load change and also the power factor of the circuit.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What two changes make the output voltage of an AC generator vary?",
+     "o": [
+      "Changes in load and changes in power factor",
+      "Changes in frequency and rotor weight",
+      "Changes in brush size and slip",
+      "Changes in temperature and pole count"
+     ],
+     "a": 0,
+     "x": "The output voltage of an AC generator varies with both changes in load (current) and changes in power factor.",
+     "p": "P2"
+    }
+   ]
+  },
+  {
+   "title": "The regulator circuits",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "es-11-fig1",
+     "num": 1,
+     "cap": "Voltage Regulator Block Diagram",
+     "alt": "Block diagram of a voltage regulator: sensing and reference circuits feed a comparison circuit, then an amplifier and signal output circuit to the generator field, with a feedback path.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Its signal is proportional to output voltage and goes to the comparison circuit.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "This reference is the desired voltage output of the AC generator.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The amplification circuit:",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The feedback circuit takes some of the output of the signal output circuit and feeds it back to the amplification circuit.",
+     "cite": "DOE-HDBK-1011/3-92 ES-11 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q432",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which voltage regulator circuit controls the field excitation of the AC generator?",
+     "o": [
+      "Sensing circuit",
+      "Reference circuit",
+      "Signal output circuit",
+      "Comparison circuit"
+     ],
+     "a": 2,
+     "x": "The signal output circuit controls field excitation, increasing or decreasing it to raise or lower the AC output voltage.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does the feedback circuit prevent?",
+     "o": [
+      "Overshooting or undershooting of the desired voltage",
+      "Loss of the reference voltage",
+      "Sensing of the output voltage",
+      "Excitation of the field"
+     ],
+     "a": 0,
+     "x": "The feedback circuit prevents overshooting or undershooting of the desired voltage by slowing down the circuit response.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does the reference circuit of a voltage regulator do?",
+     "o": [
+      "Amplifies the error signal",
+      "Maintains a constant output for reference",
+      "Senses the generator output",
+      "Slows the circuit response"
+     ],
+     "a": 1,
+     "x": "The reference circuit maintains a constant output for reference, which is the desired voltage output.",
+     "p": "P4"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Load increases",
+   "eo": "1.2",
+   "page": 3,
+   "problem": "Generator load increases and output voltage drops. Follow the regulator's response.",
+   "steps": [
+    "The sensing circuit senses the decrease and lowers its input to the comparison circuit.",
+    "The reference stays constant, so the comparison circuit develops a positive error signal.",
+    "The amplifier circuit amplifies it and sends it to the signal output circuit.",
+    "The signal output circuit increases field excitation."
+   ],
+   "answer": "Generated voltage increases to the desired output",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.3"
+  },
+  {
+   "title": "Load decreases",
+   "eo": "1.2",
+   "page": 3,
+   "problem": "Generator load decreases and output voltage rises. What does the regulator do?",
+   "steps": [
+    "The comparison circuit develops a negative error signal.",
+    "The signal output circuit decreases field excitation."
+   ],
+   "answer": "Generated voltage decreases to the desired output",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.3"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What does the comparison circuit of a voltage regulator produce?",
+   "a": "An error signal, from comparing the reference voltage to the sensed voltage.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What does the sensing circuit of a voltage regulator do?",
+   "a": "It senses the output voltage of the AC generator.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What does the amplification circuit of a voltage regulator do?",
+   "a": "It takes the signal from the comparison circuit and amplifies the milliamp input to an amp output.",
+   "p": "P6",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The purpose of a voltage regulator is to maintain the output voltage of a generator at a desired value.",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.4"
+  },
+  {
+   "text": "A regulator has sensing, reference, comparison, amplification, signal output, and feedback circuits.",
+   "cite": "DOE-HDBK-1011/3-92 ES-11 p.4"
+  }
+ ],
+ "blend_notes": [],
+ "page_tags": []
+}

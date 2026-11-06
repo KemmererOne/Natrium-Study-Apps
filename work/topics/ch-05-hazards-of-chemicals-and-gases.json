@@ -1,0 +1,1421 @@
+{
+ "module_id": "CH-05",
+ "slug": "ch-05-hazards-of-chemicals-and-gases",
+ "title": "Hazards of Chemicals and Gases",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1015-V2",
+ "handbook": "DOE-HDBK-1015/2-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Demineralizers and Ion Exchangers",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DISCUSS the hazards associated with chemicals (liquid and gas) found in a nuclear plant.",
+   "items": [],
+   "page": {
+    "pdf": 93,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the hazards associated with the use of corrosives.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the general safety precautions necessary for the handling, storage, and disposal of corrosives.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "LIST the general safety precautions regarding toxic compounds.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "LIST the criteria used to determine if a compound is a health hazard.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the methods by which toxic compounds may enter the body.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "SUMMARIZE the purpose and general contents of the following:",
+     "items": [
+      "a. Material Safety Data Sheets (MSDS)",
+      "b. Toxic Substance List"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Compressed gas",
+      "b. Non-liquified gases",
+      "c. Liquified gases",
+      "d. Dissolved gases"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the five major families of gases.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE the general safety precautions regarding the use, handling, and storage of gases.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "STATE the safety precautions for working with cryogenic liquids.",
+     "items": [],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "LIST the physical properties and special precautions for the following gases:",
+     "items": [
+      "a. Hydrogen",
+      "b. Oxygen",
+      "c. Nitrogen"
+     ],
+     "page": {
+      "pdf": 93,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Flammable liquid",
+      "b. Combustible liquid"
+     ],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "STATE general safety precautions regarding the use, handling, and storage of flammable and combustible liquids.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "STATE the reasons for and techniques used in bonding and grounding of flammable liquid containers.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "LIST four sources of ignition of flammable liquids.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "STATE the health hazards associated with flammable and/or combustible liquids.",
+     "items": [],
+     "page": {
+      "pdf": 94,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Acids are corrosive in any form, and in high concentrations destroy body tissue and cause severe burns on contact with the skin.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Acids also react with many metals resulting in the liberation of hydrogen, a highly flammable gas, which upon ignition in air may cause an explosion.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "usually a minimum washing time of 15 minutes.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "The alkalies, whether in solid form or concentrated liquid solution, are more destructive to tissue than most acids.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Therefore, cold water must be used to dissolve solid alkalies, otherwise the solution may boil, and splatter corrosive liquid over a wide area.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "Alkalies are much more injurious to the eyes than acids because strong acids tend to precipitate a protein barrier, which prevents further penetration into the tissue.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "No attempt should be made to neutralize the corrosive prior to treatment with water.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "Under no circumstance should corrosives be transferred from the original labeled container to an unmarked container.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "must be opened slowly and cautiously because of the possible buildup of pressure within the container.",
+   "sec": "Corrosives (Acids and Alkalies)",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.5"
+  },
+  {
+   "id": "P10",
+   "quote": "Toxicity is the capacity of a material to produce injury or harm to a living organism.",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.8"
+  },
+  {
+   "id": "P11",
+   "quote": "Hazard is the possibility that a material will cause injury when a specific quantity is used under specific conditions.",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.9"
+  },
+  {
+   "id": "P12",
+   "quote": "In general, industrial poisonings usually result from inhalation, ingestion, and absorption.",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.9"
+  },
+  {
+   "id": "P13",
+   "quote": "Acute poisoning is characterized by rapid absorption of the material and sudden, severe exposure.",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.10"
+  },
+  {
+   "id": "P14",
+   "quote": "Chronic poisoning is characterized by absorption of a harmful material in small doses over a long period of time",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.10"
+  },
+  {
+   "id": "P15",
+   "quote": "The purpose of The Toxic Substances List is to identify \"all known toxic substances\"",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "A listing does mean, however, that the substance has the documented potential of being hazardous if misused",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "The purpose of the Material Safety Data Sheet (MSDS) is to ensure the individuals working with chemicals and in the vicinity of chemicals have specific information on these chemicals.",
+   "sec": "Toxic Compounds",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "Non-liquified gases, which are gases that do not liquify in containers at ambient temperatures and under pressures attained in commercially used containers",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+  },
+  {
+   "id": "P19",
+   "quote": "Liquified gases, which are gases that do become liquids to a very large extent in containers at ordinary ambient temperatures",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+  },
+  {
+   "id": "P20",
+   "quote": "A dissolved gas is defined as a gas that is dissolved into a solution.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+  },
+  {
+   "id": "P21",
+   "quote": "The major families of gases are atmospheric gases, fuel gases, refrigerant gases, aerosol gases, and poison gases.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.18"
+  },
+  {
+   "id": "P22",
+   "quote": "Practically all gases can act as simple asphyxiants by displacing the oxygen in air.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.19"
+  },
+  {
+   "id": "P23",
+   "quote": "Although oxygen does not ignite, it lowers the ignition point of flammable substances and greatly accelerates combustion.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.19"
+  },
+  {
+   "id": "P24",
+   "quote": "Cylinders should not be dragged or rolled across the floor; they should be moved by a hand truck.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.20"
+  },
+  {
+   "id": "P25",
+   "quote": "All cryogenic liquids produce large volumes of gas when they vaporize.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.20"
+  },
+  {
+   "id": "P26",
+   "quote": "Tongs, or a similar device, should be used to withdraw objects immersed in a cryogenic liquid.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.21"
+  },
+  {
+   "id": "P27",
+   "quote": "Gloves should be loose fitting so that they can be removed quickly if liquids are spilled into them.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.21"
+  },
+  {
+   "id": "P28",
+   "quote": "It is flammable in oxygen or air, and has a flammable range of from 4.1 percent to 74.2 percent by volume in air.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P29",
+   "quote": "Pure hydrogen burns quietly in air with an almost invisible flame",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P30",
+   "quote": "Metallic sodium and potassium are examples of some chemicals that react violently when exposed to water, producing hydrogen, which may flame spontaneously due to the heat of the reaction.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P31",
+   "quote": "A lead-acid battery will produce hydrogen when it is being charged.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P32",
+   "quote": "It will not burn or support combustion.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P33",
+   "quote": "If a large amount of nitrogen were released into the air of an enclosed space, it could cause a serious oxygen deficiency.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "id": "P34",
+   "quote": "Oxygen (O2) supports combustion, but does not burn.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.26"
+  },
+  {
+   "id": "P35",
+   "quote": "When oxygen comes in contact with oil, grease, or fuel oils, it may ignite violently.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.26"
+  },
+  {
+   "id": "P36",
+   "quote": "Finally, oxygen valves should be operated slowly.",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.26"
+  },
+  {
+   "id": "P37",
+   "quote": "These factors are fuel, heat, and oxygen (which is normally supplied by air).",
+   "sec": "Compressed Gases",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.27"
+  },
+  {
+   "id": "P38",
+   "quote": "Since it is the vapor-air mixture formed from the evaporation of the liquid that poses the hazard",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.31"
+  },
+  {
+   "id": "P39",
+   "quote": "The minimum temperature at which a liquid gives off vapor in sufficient concentration to form an ignitible mixture with air near the surface of the liquid",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.31"
+  },
+  {
+   "id": "P40",
+   "quote": "combustible liquids should be treated as flammable when they are heated",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.32"
+  },
+  {
+   "id": "P41",
+   "quote": "Avoid accidental mixture of flammable and combustible liquids.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.33"
+  },
+  {
+   "id": "P42",
+   "quote": "Static electricity is generated by the contact and separation of dissimilar material.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.33"
+  },
+  {
+   "id": "P43",
+   "quote": "The principal hazards created by static electricity are fire and explosion, which are caused by spark discharges.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.33"
+  },
+  {
+   "id": "P44",
+   "quote": "bonding eliminates a difference in potential between objects. Grounding eliminates a difference in potential between an object and ground.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.34"
+  },
+  {
+   "id": "P45",
+   "quote": "Bonding and grounding are effective only when the bonded objects are conductive.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.34"
+  },
+  {
+   "id": "P46",
+   "quote": "a wire bond should be provided between the storage container and the container being filled, unless a metallic path between the container is otherwise present.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.36"
+  },
+  {
+   "id": "P47",
+   "quote": "Most vapors from flammable and combustible liquids are heavier than air and will flow into pits, tank openings, confined areas, and low places",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.39"
+  },
+  {
+   "id": "P48",
+   "quote": "Irritation results from the solvent action of many flammable liquids on the natural skin oils and tissue.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.39"
+  },
+  {
+   "id": "P49",
+   "quote": "Storage of flammable and combustible liquids in open containers should not be permitted.",
+   "sec": "Flammable and Combustible Liquids",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.40"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Hazards of acids and alkalies",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "The eyes are very susceptible, and permanent damage or loss of sight may result.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Alkali dusts, mists, and sprays may irritate the eyes and respiratory tract, and strong alkalies cause severe burns and scarring.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q497",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why are alkalies more injurious to the eyes than acids?",
+     "o": [
+      "Strong acids precipitate a protein barrier, and alkalies do not",
+      "Alkalies are always hotter",
+      "Acids evaporate faster",
+      "Alkalies contain hydrogen"
+     ],
+     "a": 0,
+     "x": "Strong acids tend to precipitate a protein barrier. Alkalies continue to soak into the tissue.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.1",
+     "q": "What gas do acids liberate when they react with many metals?",
+     "o": [
+      "Carbon dioxide",
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen"
+     ],
+     "a": 1,
+     "x": "Acids react with many metals, liberating hydrogen, a highly flammable gas.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why must cold water be used to dissolve solid alkalies?",
+     "o": [
+      "Warm water neutralizes them",
+      "They will not dissolve otherwise",
+      "Warm water makes them toxic",
+      "Much heat is evolved, and the solution may boil and splatter"
+     ],
+     "a": 3,
+     "x": "Much heat is evolved, so with warmer water the solution may boil and splatter corrosive liquid.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Handling and storing corrosives",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If a corrosive enters the eyes, irrigate them with water for at least 15 minutes and consult a physician immediately.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Treatment of local contact starts with immediate removal of the acid with a large amount of water,",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Chemical safety goggles should be worn, and eyewash fountains and safety showers must be available.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Fire-resistant construction",
+      "Chemical-resistant, washable floors with adequate drainage",
+      "Well-lit and ventilated, with adequate outlets for water",
+      "Relatively cool and dry",
+      "Electrical fixtures protected against corrosive mists"
+     ],
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What is the first treatment for a corrosive on the skin?",
+     "o": [
+      "Apply oil",
+      "Remove it with a large amount of water",
+      "Neutralize it with another chemical",
+      "Cover it with a dry dressing"
+     ],
+     "a": 1,
+     "x": "No attempt should be made to neutralize the corrosive prior to treatment with water.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.2",
+     "q": "Why must corrosive containers be opened slowly?",
+     "o": [
+      "Pressure may have built up",
+      "To avoid static electricity",
+      "To allow the chemical to cool",
+      "To prevent freezing"
+     ],
+     "a": 0,
+     "x": "Containers must be opened slowly and cautiously because of the possible buildup of pressure.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Toxic compounds",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Proper ventilation, hygienic practices, housekeeping, protective clothing, and training diminish many of the hazards.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Toxicity of the materials used",
+      "Physical properties of these materials",
+      "Absorption probabilities of these materials by individuals",
+      "Extent and intensity of exposure to these materials",
+      "Control measures used"
+     ],
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q496",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.5",
+     "q": "By which methods can toxic compounds enter the body?",
+     "o": [
+      "Absorption only",
+      "Inhalation, ingestion, and absorption",
+      "Radiation, conduction, and convection",
+      "Inhalation only"
+     ],
+     "a": 1,
+     "x": "Industrial poisonings usually result from inhalation, ingestion, and absorption.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.4",
+     "q": "How does hazard differ from toxicity?",
+     "o": [
+      "Hazard is a physical constant",
+      "Toxicity depends only on quantity",
+      "Hazard is the possibility of injury under specific conditions of use",
+      "They mean the same thing"
+     ],
+     "a": 2,
+     "x": "Toxicity is the capacity to harm. Hazard is the possibility of injury with a specific quantity under specific conditions.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "MSDS and the Toxic Substances List",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "The MSDS identifies the chemical by technical and common name, and lists physical and chemical characteristics and fire, explosion, and reactivity hazards.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.12"
+    },
+    {
+     "t": "p",
+     "text": "It also specifies health hazards, first aid procedures, and safe handling and control measures.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Absence from the list does not necessarily mean a substance is not toxic.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What is the purpose of a Material Safety Data Sheet?",
+     "o": [
+      "To set worker pay",
+      "To record exposures",
+      "To give specific information on chemicals to the people working with them",
+      "To list all known toxic substances"
+     ],
+     "a": 2,
+     "x": "The MSDS ensures that individuals working with chemicals have specific information on them.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.6",
+     "q": "What does listing a substance on the Toxic Substances List mean?",
+     "o": [
+      "It must be avoided",
+      "It cannot be stored",
+      "It is not toxic",
+      "It has the documented potential of being hazardous if misused"
+     ],
+     "a": 3,
+     "x": "Presence on the list does not mean avoid it. It means it has documented potential to be hazardous if misused.",
+     "p": "P16"
+    }
+   ]
+  },
+  {
+   "title": "Compressed gases",
+   "eo": [
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A compressed gas gives a pressure reading of either 25 psig at 70 °F or 125 psig at 130 °F, or if flammable, 25 psig at 100 °F.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Acetylene is sometimes referred to as a dissolved gas.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "Which is one of the five major families of gases?",
+     "o": [
+      "Liquid gases",
+      "Dissolved gases",
+      "Heavy gases",
+      "Fuel gases"
+     ],
+     "a": 3,
+     "x": "The families are atmospheric, fuel, refrigerant, aerosol, and poison gases.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is a dissolved gas?",
+     "o": [
+      "A gas under high pressure",
+      "A gas with no odor",
+      "A gas that is dissolved into a solution",
+      "A gas that liquifies in its container"
+     ],
+     "a": 2,
+     "x": "A dissolved gas is defined as a gas that is dissolved into a solution.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Gas safety and cryogenic liquids",
+   "eo": [
+    "1.9",
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "The chief precaution is adequate ventilation of enclosed areas. Do not enter unventilated areas without breathing apparatus.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Oxygen should be stored no closer than 10 feet to cylinders or tanks containing flammable gases.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "Cylinders should be chained so they cannot fall, and a broken valve could make a cylinder a projectile.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.20"
+    },
+    {
+     "t": "p",
+     "text": "Cryogenic liquids and their boil-off vapor can rapidly freeze human tissue and make materials brittle.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "Vaporized in a sealed container, they produce enormous pressures, so containers usually have two pressure-relief devices.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.20"
+    },
+    {
+     "t": "p",
+     "text": "Stand clear of boiling or splashing liquid, and never let an unprotected body part touch uninsulated pipes or vessels.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "What is the chief precaution against gases acting as asphyxiants?",
+     "o": [
+      "Cooling the area",
+      "Grounding the cylinder",
+      "Adding oxygen",
+      "Adequate ventilation of enclosed areas"
+     ],
+     "a": 3,
+     "x": "Practically all gases can displace oxygen, and the chief precaution is adequate ventilation.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.10",
+     "q": "Why should gloves for cryogenic work be loose fitting?",
+     "o": [
+      "To prevent static",
+      "To improve grip",
+      "So they can be removed quickly if liquids are spilled into them",
+      "To keep hands warm"
+     ],
+     "a": 2,
+     "x": "Gloves should be loose fitting so they can be removed quickly if liquids are spilled into them.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.9",
+     "q": "How should gas cylinders be moved?",
+     "o": [
+      "Dragged by the valve",
+      "Carried by the cap",
+      "By hand truck",
+      "Rolled across the floor"
+     ],
+     "a": 2,
+     "x": "Cylinders should not be dragged or rolled across the floor. They should be moved by a hand truck.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Hydrogen, nitrogen, and oxygen",
+   "eo": [
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Hydrogen is the lightest of all elements and cannot be detected by any of the senses.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "Precautions include adequate ventilation and eliminating possible sources of ignition. Hydrogen is classified as an asphyxiant.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+    },
+    {
+     "t": "p",
+     "text": "Nitrogen makes up more than 78 percent of the atmosphere, and it is frequently used to inert systems.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "p",
+     "text": "Oxygen should never be used to run pneumatic equipment, and it should always be called oxygen, not air.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.26"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "What is the flammable range of hydrogen in air, by volume?",
+     "o": [
+      "4.1 to 74.2 percent",
+      "1 to 10 percent",
+      "21 to 78 percent",
+      "50 to 100 percent"
+     ],
+     "a": 0,
+     "x": "Hydrogen has a flammable range of from 4.1 percent to 74.2 percent by volume in air.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.11",
+     "q": "What happens when metallic sodium is exposed to water?",
+     "o": [
+      "It forms a passive film",
+      "It releases only nitrogen",
+      "It reacts violently, producing hydrogen that may flame spontaneously",
+      "It dissolves quietly"
+     ],
+     "a": 2,
+     "x": "Metallic sodium reacts violently with water, producing hydrogen, which may flame spontaneously.",
+     "p": "P30"
+    },
+    {
+     "eo": "1.11",
+     "q": "What may happen when oxygen contacts oil or grease?",
+     "o": [
+      "The oil freezes",
+      "It may ignite violently",
+      "Nothing",
+      "It forms water"
+     ],
+     "a": 1,
+     "x": "When oxygen comes in contact with oil, grease, or fuel oils, it may ignite violently.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.11",
+     "q": "What is the hazard of a large nitrogen release into an enclosed space?",
+     "o": [
+      "Toxic poisoning",
+      "Serious oxygen deficiency",
+      "Fire",
+      "Explosion"
+     ],
+     "a": 1,
+     "x": "A large release could cause a serious oxygen deficiency. Nitrogen is an asphyxiant.",
+     "p": "P33"
+    }
+   ]
+  },
+  {
+   "title": "Fire and ignition sources",
+   "eo": [
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Fire needs three factors in the right quantity at one place and time.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "To prevent a fire, keep one of these factors away from the other two.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.27"
+    },
+    {
+     "t": "list",
+     "items": [
+      "All sources of static electricity",
+      "Improper type of electrical equipment, or poorly maintained electrical equipment",
+      "Flame-producing operations such as smoking, grinding, or welding",
+      "Improper hand tools that cause sparks"
+     ],
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.43"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "What three factors are needed for a fire?",
+     "o": [
+      "Heat, pressure, and hydrogen",
+      "Oxygen, sparks, and water",
+      "Fuel, heat, and oxygen",
+      "Fuel, water, and nitrogen"
+     ],
+     "a": 2,
+     "x": "The factors are fuel, heat, and oxygen.",
+     "p": "P37"
+    }
+   ]
+  },
+  {
+   "title": "Flammable and combustible liquids",
+   "eo": [
+    "1.12",
+    "1.13",
+    "1.16"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A flammable liquid has a flash point below 100 °F and a vapor pressure not exceeding 40 psia at 100 °F.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Combustible liquids have flash points at or above 100 °F, but below 200 °F.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Flash point is",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "p",
+     "text": "Lines, valves, and tanks should be labeled so different substances are not mixed. Smoking and spark-producing devices should not be permitted.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "p",
+     "text": "Containers should be aired and tested for toxic and flammable atmosphere and oxygen level before entry.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.39"
+    },
+    {
+     "t": "fig",
+     "id": "ch-05-fig9",
+     "num": 9,
+     "cap": "Storage Container With Spring-loaded Cover",
+     "alt": "Storage can with a spring-loaded cover that opens to relieve internal vapor pressure.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.39"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.12",
+     "q": "What separates a flammable liquid from a combustible liquid?",
+     "o": [
+      "Container size",
+      "Flash point",
+      "Color",
+      "Viscosity"
+     ],
+     "a": 1,
+     "x": "A flammable liquid has a flash point below 100 °F, and a combustible liquid at or above 100 °F but below 200 °F.",
+     "p": "P39"
+    },
+    {
+     "eo": "1.13",
+     "q": "When should a combustible liquid be treated as flammable?",
+     "o": [
+      "When it is heated",
+      "When it is stored cold",
+      "Never",
+      "Only in winter"
+     ],
+     "a": 0,
+     "x": "Combustible liquids should be treated as flammable when they are heated.",
+     "p": "P40"
+    },
+    {
+     "eo": "1.16",
+     "q": "Why are vapors from flammable liquids a hazard in low places?",
+     "o": [
+      "They are all odorless",
+      "Most are heavier than air and collect there",
+      "They rise and leave the area",
+      "They become water"
+     ],
+     "a": 1,
+     "x": "Most vapors are heavier than air and flow into pits and low places, causing a toxic and explosive atmosphere.",
+     "p": "P47"
+    }
+   ]
+  },
+  {
+   "title": "Bonding and grounding",
+   "eo": [
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "fig",
+     "id": "ch-05-fig5",
+     "num": 5,
+     "cap": "Typical Static-producing Situations, Including Charge Separation in Pipe",
+     "alt": "Examples of static electricity generated by fluid flow through a pipe and into a tank.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.34"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "A spark occurs when there is a poor conductive path between two bodies, so flammable liquid containers need grounding or bonding.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "fig",
+     "id": "ch-05-fig6",
+     "num": 6,
+     "cap": "Bonding and Grounding",
+     "alt": "Diagrams comparing unbonded, bonded, and grounded objects and their charges.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "fig",
+     "id": "ch-05-fig8",
+     "num": 8,
+     "cap": "Bonding During Container Filling",
+     "alt": "Bond wire between two containers during filling.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.38"
+    },
+    {
+     "t": "p",
+     "text": "High static charge is controlled by reducing flow rates, avoiding splashing, and allowing relaxation time.",
+     "cite": "DOE-HDBK-1015/2-93 CH-05 p.37"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.14",
+     "q": "What does bonding eliminate?",
+     "o": [
+      "A difference in potential between objects",
+      "The need for a ground",
+      "All static charge",
+      "Flammable vapor"
+     ],
+     "a": 0,
+     "x": "Bonding eliminates a difference in potential between objects. Grounding does so between an object and ground.",
+     "p": "P44"
+    },
+    {
+     "eo": "1.14",
+     "q": "What is the principal hazard of static electricity?",
+     "o": [
+      "Corrosion",
+      "Loss of level indication",
+      "Fire and explosion from spark discharges",
+      "Electrical shock only"
+     ],
+     "a": 2,
+     "x": "The principal hazards are fire and explosion, caused by spark discharges.",
+     "p": "P43"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Compressed gas pressure in psig",
+   "eo": "1.7",
+   "page": 17,
+   "problem": "The definition uses 40 psi absolute at 70 °F. What gauge reading is that at sea level?",
+   "steps": [
+    "Absolute pressure is atmospheric pressure (14.7 psi) plus gauge pressure",
+    "The handbook simplifies this reading"
+   ],
+   "answer": "25 psig at 70 °F",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.17"
+  }
+ ],
+ "facts": [
+  {
+   "q": "How long should eyes be irrigated after contact with a corrosive?",
+   "a": "With water for at least 15 minutes, and a physician should be consulted immediately.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "How do acute and chronic poisoning differ?",
+   "a": "Acute is rapid absorption from sudden, severe exposure. Chronic is absorption of small doses over a long period of time.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What does oxygen do to combustion?",
+   "a": "It does not burn, but it lowers the ignition point of flammable substances and greatly accelerates combustion.",
+   "p": "P23",
+   "place": null
+  },
+  {
+   "q": "How much do cryogenic liquids expand on vaporizing?",
+   "a": "They produce large volumes of gas. One volume of liquid nitrogen vaporizes to 696.5 volumes of gas at room temperature.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "What is flash point?",
+   "a": "The minimum temperature at which a liquid gives off vapor in sufficient concentration to form an ignitible mixture with air near its surface.",
+   "p": "P39",
+   "place": null
+  },
+  {
+   "q": "What does a lead-acid battery produce while being charged?",
+   "a": "Hydrogen.",
+   "p": "P31",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Acids can destroy body tissue, and alkalies are more destructive than the acids.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.7"
+  },
+  {
+   "text": "Toxic compounds may enter the body by ingestion, inhalation, and absorption.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.15"
+  },
+  {
+   "text": "The major families of gases are atmospheric, fuel, refrigerant, aerosol, and poison gases.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.28"
+  },
+  {
+   "text": "Hydrogen, nitrogen, and oxygen each need their own precautions.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.29"
+  },
+  {
+   "text": "Bonding eliminates a difference in potential between objects, and grounding between an object and ground.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.43"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook wording",
+   "note": "p.31 gives Class III as flash points above 140 °F and Class IIIA as at or above 140 °F, and p.30 describes combustible liquids as below 200 °F. The classes are not taught, and no check tests them.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.31"
+  },
+  {
+   "type": "Scope",
+   "note": "These hazards apply across plant systems, so no tag is used. Sodium's reaction with water on p.25 stays because it is general hazard information. Mention of steam cleaning on p.37 and boilers on p.25 is left off.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.25"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Figures of the MSDS and Toxic Substances List are form images and are left off. The treatment of cold-contact burns on p.23 has no objective and is left off.",
+   "cite": "DOE-HDBK-1015/2-93 CH-05 p.23"
+  }
+ ],
+ "page_tags": []
+}

@@ -1,0 +1,694 @@
+{
+ "module_id": "CP-05",
+ "slug": "cp-05-energy-work-and-power",
+ "title": "Energy, Work, and Power",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1010",
+ "handbook": "DOE-HDBK-1010-92",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Basic Energy Concepts",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given necessary information about a system, CALCULATE the work performed and/or power produced or used by that system.",
+   "items": [],
+   "page": {
+    "pdf": 129,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Energy",
+      "b. Potential energy",
+      "c. Kinetic energy",
+      "d. Work",
+      "e. Power"
+     ],
+     "page": {
+      "pdf": 129,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the mathematical expression for:",
+     "items": [
+      "a. Potential energy",
+      "b. Kinetic energy",
+      "c. Work",
+      "d. Power"
+     ],
+     "page": {
+      "pdf": 129,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "For a mechanical system, CALCULATE energy, work, and power.",
+     "items": [],
+     "page": {
+      "pdf": 129,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the First Law of Thermodynamics, \"Conservation of Energy.\"",
+     "items": [],
+     "page": {
+      "pdf": 129,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Energy is defined as the measure of the ability to do work.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Transient energy is energy in motion, that is, energy being transferred from one place to another.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Stored energy is the energy contained within a substance or object.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "referred to as transient energy or, more commonly in the case of thermal energy, heat.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "Potential energy is defined as the energy stored in an object because of its position.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+  },
+  {
+   "id": "P6",
+   "quote": "Kinetic energy is defined as the energy stored in an object because of its motion.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "the g c is used only when using the English system of measurement.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "Internal energy is the energy stored in a substance because of the motion and position of the particles of the substance.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "Transient mechanical energy is commonly referred to as work.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "Work is done by a force acting on a moving object if the object has some component of motion in the direction of the force.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "if no movement is achieved, no work has been accomplished.",
+   "sec": "Energy and Work",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "energy cannot be created or destroyed, only altered in form.",
+   "sec": "Law of Conservation of Energy",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "Any energy balance is a statement of the Law of Conservation of Energy.",
+   "sec": "Law of Conservation of Energy",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.7"
+  },
+  {
+   "id": "P14",
+   "quote": "Power is defined as the amount of energy used per unit time or rate of doing work.",
+   "sec": "Power",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.8"
+  },
+  {
+   "id": "P15",
+   "quote": "Thermal power is the measure of thermal energy used per unit time.",
+   "sec": "Power",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.8"
+  },
+  {
+   "id": "P16",
+   "quote": "Mechanical power is the rate at which work is done.",
+   "sec": "Power",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+  },
+  {
+   "id": "P17",
+   "quote": "One horsepower is equivalent to 550 ft-lbf/s and 745.7 watts.",
+   "sec": "Power",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Energy",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Energy determines the capacity of a system to perform work and may be stored in various forms.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+    },
+    {
+     "t": "p",
+     "text": "Both thermal and mechanical energy can be separated into two categories, transient and stored.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Thermal energy is related to temperature: the higher the temperature, the greater the molecular movement and the greater the energy. Thermal energy in motion is commonly called heat.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Stored mechanical energy exists in one of two forms, kinetic or potential.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is thermal energy in motion commonly called?",
+     "o": [
+      "Work",
+      "Heat",
+      "Internal energy",
+      "Potential energy"
+     ],
+     "a": 1,
+     "x": "Energy moving from one place to another is transient energy. In the case of thermal energy, it is more commonly called heat.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Potential and kinetic energy",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The measure of an object's position is its vertical distance above a reference point. Its potential energy represents the work required to elevate it to that position from the reference point.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+    },
+    {
+     "t": "eq",
+     "text": "PE = mgz / gc",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+    },
+    {
+     "t": "p",
+     "text": "PE is in ft-lbf, m is mass in lbm, g is 32.17 ft/sec², gc is 32.17 (lbm-ft)/(lbf-sec²), and z is height above a reference in ft.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "eq",
+     "text": "KE = mv² / 2gc",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+    },
+    {
+     "t": "p",
+     "text": "KE is in ft-lbf, m is mass in lbm, v is velocity in ft/sec, and gc is 32.17 (lbm-ft)/(lbf-sec²).",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+    },
+    {
+     "t": "p",
+     "text": "An object's kinetic energy represents the energy required to increase its velocity from rest to its final velocity.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A body's energy is stored because of its position. What type of energy is this?",
+     "o": [
+      "Kinetic energy",
+      "Internal energy",
+      "Potential energy",
+      "Transient energy"
+     ],
+     "a": 2,
+     "x": "Potential energy is defined as the energy stored in an object because of its position.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.2",
+     "q": "Which expression gives kinetic energy in English units?",
+     "o": [
+      "mgz / gc",
+      "mv² / 2gc",
+      "Fd / t",
+      "Fv / 550"
+     ],
+     "a": 1,
+     "x": "KE = mv² / 2gc. The expression mgz / gc is potential energy, and the others are power.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is the potential energy of a 20 lbm object held 10 feet above the ground?",
+     "o": [
+      "2 ft-lbf",
+      "30 ft-lbf",
+      "200 ft-lbf",
+      "6434 ft-lbf"
+     ],
+     "a": 2,
+     "x": "PE = mgz / gc = (20 lbm)(32.17 ft/sec²)(10 ft) / 32.17 = 200 ft-lbf.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Work",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "eq",
+     "text": "W = F x d",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+    },
+    {
+     "t": "p",
+     "text": "W is work done in ft-lbf, F is the force applied in lbf, and d is the distance the object is moved in ft.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Even if you feel fatigued, no work has been done if nothing moved.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q488",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.3",
+     "q": "A constant force of 300 lbf is applied to a box, but the box does not move. How much work is done?",
+     "o": [
+      "0 ft-lbf",
+      "300 ft-lbf",
+      "150 ft-lbf",
+      "It depends on how long the force is applied"
+     ],
+     "a": 0,
+     "x": "W = F x d = 300 lbf x 0 ft = 0 ft-lbf. If no movement is achieved, no work has been accomplished.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.3",
+     "q": "A horizontal force of 100 lbf moves a box 6 feet horizontally. How much work is done?",
+     "o": [
+      "16.7 ft-lbf",
+      "106 ft-lbf",
+      "600 ft-lbf",
+      "3600 ft-lbf"
+     ],
+     "a": 2,
+     "x": "W = F x d = 100 lbf x 6 ft = 600 ft-lbf.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Conservation of energy",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The First Law of Thermodynamics is simply stated:",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "The energy expended in raising an object equals the potential energy it gains because of its height.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.6"
+    },
+    {
+     "t": "eq",
+     "text": "Energy(initial) + Energy(added) - Energy(removed) = Energy(final)",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "Neglecting heat, the balance can be written with work terms alone. This simplified energy balance applies only to mechanical problems.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.7"
+    },
+    {
+     "t": "eq",
+     "text": "KE1 + PE1 + Won = KE2 + PE2 + Wby",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "How is the First Law of Thermodynamics simply stated?",
+     "o": [
+      "Energy cannot be created or destroyed, only altered in form",
+      "Energy always flows from high to low temperature",
+      "Work equals force times distance",
+      "Energy is lost whenever work is done"
+     ],
+     "a": 0,
+     "x": "The First Law of Thermodynamics is simply stated: energy cannot be created or destroyed, only altered in form.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Power",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Thermal power is the rate of heat transfer or heat flow rate, calculated as heat used divided by time required.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Mechanical power is expressed in joules/sec or watts in the mks system, and in ft-lbf/s or horsepower in the English system.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+    },
+    {
+     "t": "eq",
+     "text": "P = work done / time required",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+    },
+    {
+     "t": "eq",
+     "text": "P = Fd / t",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "eq",
+     "text": "P (hp) = Fv / 550",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+    },
+    {
+     "t": "p",
+     "text": "These equations assume force and velocity are constant, or that average values are used.",
+     "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q489",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.2",
+     "q": "With force in lbf and velocity in ft/s, which expression gives power in horsepower?",
+     "o": [
+      "Fv x 550",
+      "F / 550v",
+      "Fv / 550",
+      "550 / Fv"
+     ],
+     "a": 2,
+     "x": "P = Fv / 550, because one horsepower is equivalent to 550 ft-lbf/s.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.3",
+     "q": "A steady force of 100 lbf moves an object at a constant 11 ft/s. What is the power in horsepower?",
+     "o": [
+      "0.5 hp",
+      "2 hp",
+      "11 hp",
+      "1100 hp"
+     ],
+     "a": 1,
+     "x": "P = Fv / 550 = (100 lbf)(11 ft/s) / 550 = 2 hp.",
+     "p": "P17"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Potential energy",
+   "eo": "1.3",
+   "page": 2,
+   "problem": "What is the potential energy of a 50 lbm object suspended 10 feet above the ground?",
+   "steps": [
+    "PE = mgz / gc.",
+    "PE = (50 lbm)(32.17 ft/sec²)(10 ft) / (32.17 lbm-ft/lbf-sec²)."
+   ],
+   "answer": "500 ft-lbf",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.2"
+  },
+  {
+   "title": "Kinetic energy",
+   "eo": "1.3",
+   "page": 3,
+   "problem": "What is the kinetic energy of a 10 lbm object that has a velocity of 8 ft/sec?",
+   "steps": [
+    "KE = mv² / 2gc.",
+    "KE = (10 lbm)(8 ft/sec)² / (2)(32.17 lbm-ft/lbf-sec²)."
+   ],
+   "answer": "9.95 ft-lbf",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.3"
+  },
+  {
+   "title": "Work on a box",
+   "eo": "1.3",
+   "page": 4,
+   "problem": "You apply a horizontal force of 200 lbf to a box, and it moves five feet horizontally. How much work have you done?",
+   "steps": [
+    "W = F x d.",
+    "W = 200 lbf x 5 ft."
+   ],
+   "answer": "1000 ft-lbf",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.4"
+  },
+  {
+   "title": "Power of a pump",
+   "eo": "1.3",
+   "page": 10,
+   "problem": "A pump does 1.5 x 10⁸ ft-lbf of work every 100 minutes. What is the power of the pump in hp?",
+   "steps": [
+    "Power = work done / time required.",
+    "P = (1.5 x 10⁸ ft-lbf / 100 min)(1 min / 60 sec)(1 hp / 550 ft-lbf/sec)."
+   ],
+   "answer": "45.5 hp",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.10"
+  },
+  {
+   "title": "Power from force and velocity",
+   "eo": "1.3",
+   "page": 10,
+   "problem": "A steady force of 1 lbf gives a ball a constant velocity of 5 ft/s. What is the power used?",
+   "steps": [
+    "P = Fv / 550.",
+    "P = (1 lbf)(5 ft/sec) / 550."
+   ],
+   "answer": "9 x 10⁻³ hp",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.10"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two categories of thermal and mechanical energy?",
+   "a": "Transient and stored.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What is internal energy?",
+   "a": "The energy stored in a substance because of the motion and position of the particles of the substance.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "What is transient mechanical energy commonly called?",
+   "a": "Work.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "How many ft-lbf/s and watts equal one horsepower?",
+   "a": "550 ft-lbf/s and 745.7 watts.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What is thermal power?",
+   "a": "The measure of thermal energy used per unit time.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What is mechanical power?",
+   "a": "The rate at which work is done.",
+   "p": "P16",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Energy is the ability to do work.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.5"
+  },
+  {
+   "text": "The work done by a force on an object is the product of the force and the distance the object moves in the direction of the force.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.5"
+  },
+  {
+   "text": "Kinetic energy is the energy an object has because of its motion. Potential energy is the energy of an object due to its position.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.5"
+  },
+  {
+   "text": "Energy cannot be created or destroyed, only altered in form.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.7"
+  },
+  {
+   "text": "Power is the amount of energy used per unit time.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.11"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "Example 3 calls one quarter mile 1455 ft, but CP-01 gives 5280 ft = 1 mile, which makes it 1320 ft. The example is not used.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.11"
+  },
+  {
+   "type": "Left off the page",
+   "note": "The handbook lists Btu as a unit of power and of thermal power, although it defines power as energy per unit time. The lesson does not repeat those units.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.8"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "Equation number 5-6 is used twice, on pages 7 and 9. The lesson does not use equation numbers.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.9"
+  },
+  {
+   "type": "Rule 10",
+   "note": "Examples that involve water (burning hydrogen and oxygen to form water, water added to a fluid system, a waterwheel) are left off the page.",
+   "cite": "DOE-HDBK-1010-92 CP-05 p.6"
+  }
+ ],
+ "page_tags": []
+}

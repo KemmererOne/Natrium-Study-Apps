@@ -1,0 +1,2946 @@
+{
+ "module_id": "IC-06",
+ "slug": "ic-06-radiation-detectors",
+ "title": "Radiation Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1013-V2",
+ "handbook": "DOE-HDBK-1013/2-92",
+ "word_file": "Sensors and Detectors Part 2.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "SUMMARIZE radiation protection principles to include definition of terms, types of radiation, and the basic operation of a gas-filled detector.",
+   "items": [],
+   "page": {
+    "pdf": 20,
+    "printed": "viii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following radiation detection terms:",
+     "items": [
+      "a. Electron-ion pair",
+      "b. Specific ionization",
+      "c. Stopping power"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "EXPLAIN the relationship between stopping power and specific ionization.",
+     "items": [],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the following types of radiation to include the definition and interactions with matter.",
+     "items": [
+      "a. Alpha (α)",
+      "b. Beta (β)",
+      "c. Gamma (γ)",
+      "d. Neutron (n)"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the principles of operation of a gas-filled detector to include:",
+     "items": [
+      "a. How the electric field affects ion pairs",
+      "b. How gas amplification occurs"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a diagram of an ion pairs collected -vs- detector voltage curve, DESCRIBE the regions of the curve to include:",
+     "items": [
+      "a. The name of the region",
+      "b. Interactions taking place within the gas of the detector",
+      "c. Difference between the alpha and beta curves, where applicable"
+     ],
+     "page": {
+      "pdf": 20,
+      "printed": "viii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "SUMMARIZE the principles of operation of various types of radiation detectors.",
+   "items": [],
+   "page": {
+    "pdf": 21,
+    "printed": "ix"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "DESCRIBE the operation of a proportional counter to include:",
+     "items": [
+      "a. Radiation detection",
+      "b. Quenching",
+      "c. Voltage variations"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "Given a block diagram of a proportional counter circuit, STATE the purpose of the following major blocks:",
+     "items": [
+      "a. Proportional counter",
+      "b. Preamplifier/amplifier",
+      "c. Single channel analyzer/discriminator",
+      "d. Scaler",
+      "e. Timer"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "DESCRIBE the operation of an ionization chamber to include:",
+     "items": [
+      "a. Radiation detection",
+      "b. Voltage variations",
+      "c. Gamma sensitivity reduction"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "DESCRIBE how a compensated ion chamber compensates for gamma radiation.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "DESCRIBE the operation of an electroscope ionization chamber.",
+     "items": [],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "DESCRIBE the operation of a Geiger-Müller (G-M) detector to include:",
+     "items": [
+      "a. Radiation detection",
+      "b. Quenching",
+      "c. Positive ion sheath"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "DESCRIBE the operation of a scintillation counter to include:",
+     "items": [
+      "a. Radiation detection",
+      "b. Three classes of phosphors",
+      "c. Photomultiplier tube operation"
+     ],
+     "page": {
+      "pdf": 21,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "DESCRIBE the operation of a gamma spectrometer to include:",
+     "items": [
+      "a. Type of detector used",
+      "b. Multichannel analyzer operation"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "DESCRIBE how the following detect neutrons:",
+     "items": [
+      "a. Self-powered neutron detector",
+      "b. Wide range fission chamber",
+      "c. Flux wire"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "2.10",
+     "text": "DESCRIBE how a photographic film is used to measure the following:",
+     "items": [
+      "a. Total radiation dose",
+      "b. Neutron dose"
+     ],
+     "page": {
+      "pdf": 22,
+      "printed": "x"
+     }
+    }
+   ]
+  },
+  {
+   "number": "3.0",
+   "text": "SUMMARIZE the operation of typical source, intermediate, and power range nuclear instruments.",
+   "items": [],
+   "page": {
+    "pdf": 23,
+    "printed": "xi"
+   },
+   "enabling": [
+    {
+     "number": "3.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Signal-to-noise ratio",
+      "b. Discriminator",
+      "c. Analog",
+      "d. Logarithm",
+      "e. Period",
+      "f. Decades per minute (DPM)",
+      "g. Scalar"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "3.2",
+     "text": "LIST the type of detector used in each of the following nuclear instruments:",
+     "items": [
+      "a. Source range",
+      "b. Intermediate range",
+      "c. Power range"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "3.3",
+     "text": "Given a block diagram of a typical source range instrument, STATE the purpose of major components.",
+     "items": [
+      "a. Linear amplifier",
+      "b. Discriminator",
+      "c. Pulse integrator",
+      "d. Log count rate amplifier",
+      "e. Differentiator"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "3.4",
+     "text": "Given a block diagram of a typical intermediate range instrument, STATE the purpose of major components.",
+     "items": [
+      "a. Log n amplifier",
+      "b. Differentiator",
+      "c. Reactor protection interface"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "3.5",
+     "text": "STATE the reason gamma compensation is NOT required in the power range.",
+     "items": [],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    },
+    {
+     "number": "3.6",
+     "text": "Given a block diagram of a typical power range instrument, STATE the purpose of major components.",
+     "items": [
+      "a. Linear amplifier",
+      "b. Reactor protection interface"
+     ],
+     "page": {
+      "pdf": 23,
+      "printed": "xi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The products of a single ionizing event are called an electron-ion pair.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Specific ionization is that number of ion pairs produced per centimeter of travel through matter.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "A particle’s charge has the greatest effect on specific ionization.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "As the energy of a particle decreases, it produces more ion pairs for the same amount of distance traveled.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "Stopping power or linear energy transfer (LET) is the energy lost per unit path length.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "Stopping power, or LET, is proportional to the specific ionization.",
+   "sec": "Radiation Detection Terminology",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "The alpha particle is a helium nucleus produced from the radioactive decay of heavy metals and some nuclear reactions.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "Alpha particles are the least penetrating radiation.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "Due to its highly charged state, large mass, and low velocity, the specific ionization of an alpha particle is very high.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "The beta particle is an ordinary electron or positron ejected from the nucleus of a beta-unstable radioactive atom.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "The specific ionization of a beta particle is low due to its small mass, small charge, and relatively high speed of travel.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "The gamma ray is a photon of electromagnetic radiation with a very short wavelength and high energy.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "There are three methods of attenuating (reducing the energy level of) gamma-rays: photoelectric effect, compton scattering, and pair production.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "The photoelectric effect is most predominant with low energy gammas",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "Compton scattering is an elastic collision between an electron and a photon",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "the original gamma must have at least 1.02 MeV energy.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.7"
+  },
+  {
+   "id": "P17",
+   "quote": "Neutrons have no electrical charge and have nearly the same mass as a proton",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+  },
+  {
+   "id": "P18",
+   "quote": "Neutrons may collide with nuclei causing one of the following reactions: inelastic scattering, elastic scattering, radiative capture, or fission.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+  },
+  {
+   "id": "P19",
+   "quote": "Radiative capture (n, γ) takes place when a neutron is absorbed to produce an excited nucleus.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+  },
+  {
+   "id": "P20",
+   "quote": "Secondary ionization caused by the capture of neutrons is important in the detection of neutrons.",
+   "sec": "Radiation Types",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.9"
+  },
+  {
+   "id": "P21",
+   "quote": "Gases are used in radiation detectors since their ionized particles can travel more freely than those of a liquid or a solid.",
+   "sec": "Gas-Filled Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.11"
+  },
+  {
+   "id": "P22",
+   "quote": "The positive anode attracts the electrons, or negative particles. The detector wall, or cathode, attracts the positive charges.",
+   "sec": "Gas-Filled Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.11"
+  },
+  {
+   "id": "P23",
+   "quote": "This multiplication of electrons is termed gas amplification.",
+   "sec": "Gas-Filled Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.12"
+  },
+  {
+   "id": "P24",
+   "quote": "An alpha particle will create more ion pairs than a beta since the alpha has a much greater mass.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.14"
+  },
+  {
+   "id": "P25",
+   "quote": "Gas ionization instruments are, therefore, not operated in this region of response.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.15"
+  },
+  {
+   "id": "P26",
+   "quote": "This region is called the ionization chamber region.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+  },
+  {
+   "id": "P27",
+   "quote": "This region is called the proportional region since the gas amplification factor (A) is proportional to applied voltage.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+  },
+  {
+   "id": "P28",
+   "quote": "it is not used for detector operation.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+  },
+  {
+   "id": "P29",
+   "quote": "The pulse height in the Geiger-Müller region (Region V) is independent of the type of radiation causing the initial ionizations.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+  },
+  {
+   "id": "P30",
+   "quote": "the detector cannot be used for radiation detection.",
+   "sec": "Detector Voltage",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.17"
+  },
+  {
+   "id": "P31",
+   "quote": "Argon and helium are the most frequently used fill gases and allow for the detection of alpha, beta, and gamma radiation.",
+   "sec": "Proportional Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.19"
+  },
+  {
+   "id": "P32",
+   "quote": "The high amplification factor of the proportional counter is the major advantage over the ionization chamber.",
+   "sec": "Proportional Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+  },
+  {
+   "id": "P33",
+   "quote": "These pulses must be eliminated or \"quenched.\"",
+   "sec": "Proportional Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+  },
+  {
+   "id": "P34",
+   "quote": "One method for quenching these discharges is to add a small amount (≈ 10%) of an organic gas, such as methane, in the chamber.",
+   "sec": "Proportional Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+  },
+  {
+   "id": "P35",
+   "quote": "Varying the detector voltage within the proportional region increases or decreases the gas amplification factor.",
+   "sec": "Proportional Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.22"
+  },
+  {
+   "id": "P36",
+   "quote": "the analyzer will give an output pulse only when the input pulse is between 2 and 2.2 volts.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.24"
+  },
+  {
+   "id": "P37",
+   "quote": "This output is fed to a scaler which counts the number of pulses it receives.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.25"
+  },
+  {
+   "id": "P38",
+   "quote": "A timer gates the scaler so that the scaler counts the pulses for a predetermined length of time.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.25"
+  },
+  {
+   "id": "P39",
+   "quote": "When a neutron interacts with a boron atom, an alpha particle is emitted.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.25"
+  },
+  {
+   "id": "P40",
+   "quote": "neutron pulses are much larger than gamma ray-produced pulses.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.25"
+  },
+  {
+   "id": "P41",
+   "quote": "A discriminator is basically a single channel analyzer with only one setting.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.26"
+  },
+  {
+   "id": "P42",
+   "quote": "Proportional counters cannot be used at high power levels because they are pulse-type detectors.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.27"
+  },
+  {
+   "id": "P43",
+   "quote": "The preamplifier/amplifier amplifies the voltage pulse to a usable size.",
+   "sec": "Proportional Counter Circuitry",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.27"
+  },
+  {
+   "id": "P44",
+   "quote": "Ionization chambers have two distinct disadvantages when compared to proportional counters: they are less sensitive, and they have a slower response time.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.28"
+  },
+  {
+   "id": "P45",
+   "quote": "the pulse counting ionization chamber and the integrating ionization chamber.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.28"
+  },
+  {
+   "id": "P46",
+   "quote": "Any further increase in voltage has no effect on the number of electrons collected.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.30"
+  },
+  {
+   "id": "P47",
+   "quote": "Gamma rays have very little trouble in penetrating the metal walls of the chamber.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.31"
+  },
+  {
+   "id": "P48",
+   "quote": "Gamma sensitivity reduction is accomplished by either reducing the amount of chamber gas or increasing the boron coated surface area.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.34"
+  },
+  {
+   "id": "P49",
+   "quote": "These chambers are used at high reactor powers and are referred to as uncompensated ion chambers.",
+   "sec": "Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.33"
+  },
+  {
+   "id": "P50",
+   "quote": "The coated chamber is sensitive to both gamma rays and neutrons, while the uncoated chamber is sensitive only to gamma rays.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.35"
+  },
+  {
+   "id": "P51",
+   "quote": "The boron coated chamber is referred to as the working chamber; the uncoated chamber is called the compensating chamber.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.36"
+  },
+  {
+   "id": "P52",
+   "quote": "Therefore, the compensating chamber cancels the current due to gamma rays.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.36"
+  },
+  {
+   "id": "P53",
+   "quote": "The use of concentric cylinders has an advantage because both chambers are exposed to nearly the same radiation field.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.36"
+  },
+  {
+   "id": "P54",
+   "quote": "If the compensating voltage is set too high, or overcompensated, some neutron current, as well as all of the gamma current, is blocked",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.38"
+  },
+  {
+   "id": "P55",
+   "quote": "The compensating chamber cancels too much current from the working chamber, and the meter reads low.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.37"
+  },
+  {
+   "id": "P56",
+   "quote": "If compensating voltage is set too low, or undercompensated, not all of the gamma current is blocked, and indicated power is higher than actual core power.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.38"
+  },
+  {
+   "id": "P57",
+   "quote": "It is extremely important, however, that the chamber be properly compensated during reactor startup and shutdown.",
+   "sec": "Compensated Ion Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.38"
+  },
+  {
+   "id": "P58",
+   "quote": "As the gas (air) is ionized by the incident radiation, the fiber moves toward the position of zero charge.",
+   "sec": "Electroscope Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.41"
+  },
+  {
+   "id": "P59",
+   "quote": "A self-reading pocket dosimeter is an example of an electroscope ionization chamber.",
+   "sec": "Electroscope Ionization Chamber",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.41"
+  },
+  {
+   "id": "P60",
+   "quote": "However, discrimination is not possible, since the pulse height is independent of the type of radiation.",
+   "sec": "Geiger-Müller Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.42"
+  },
+  {
+   "id": "P61",
+   "quote": "The positive ion sheath reduces the field strength of the central wire and prevents further electrons from reaching the wire.",
+   "sec": "Geiger-Müller Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+  },
+  {
+   "id": "P62",
+   "quote": "In order to prevent this secondary pulse, a quenching gas is used, usually an organic compound.",
+   "sec": "Geiger-Müller Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+  },
+  {
+   "id": "P63",
+   "quote": "This is the reason G-M counters are not adaptable for use as neutron detectors.",
+   "sec": "Geiger-Müller Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+  },
+  {
+   "id": "P64",
+   "quote": "The G-M detector is mainly used for portable instrumentation due to its sensitivity, simple counting circuit, and ability to detect low-level radiation.",
+   "sec": "Geiger-Müller Detector",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+  },
+  {
+   "id": "P65",
+   "quote": "The scintillation counter is a solid state radiation detector which uses a scintillation crystal (phosphor) to detect radiation and produce light pulses.",
+   "sec": "Scintillation Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.45"
+  },
+  {
+   "id": "P66",
+   "quote": "There are three classes of solid state scintillation phosphors: organic crystals, inorganic crystals, and plastic phosphors.",
+   "sec": "Scintillation Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.46"
+  },
+  {
+   "id": "P67",
+   "quote": "Thus, they exhibit high efficiency for detection of gamma rays and are capable of handling high count rates.",
+   "sec": "Scintillation Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.46"
+  },
+  {
+   "id": "P68",
+   "quote": "This amplification continues through 10 to 12 stages.",
+   "sec": "Scintillation Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.47"
+  },
+  {
+   "id": "P69",
+   "quote": "scintillation counters can be used to determine the energy, as well as the number, of the exciting particles (or gamma photons).",
+   "sec": "Scintillation Counter",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.47"
+  },
+  {
+   "id": "P70",
+   "quote": "The detector is normally a sodium iodide (NaI) scintillation counter.",
+   "sec": "Gamma Spectroscopy",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.49"
+  },
+  {
+   "id": "P71",
+   "quote": "The multichannel pulse height analyzer is a device that will separate pulses based on pulse height.",
+   "sec": "Gamma Spectroscopy",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.50"
+  },
+  {
+   "id": "P72",
+   "quote": "A detailed analysis of the gamma ray energy spectrum is used to determine the identity and quantity of gamma emitters present in a material.",
+   "sec": "Gamma Spectroscopy",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.49"
+  },
+  {
+   "id": "P73",
+   "quote": "The self-powered neutron detector requires no voltage supply for operation.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.51"
+  },
+  {
+   "id": "P74",
+   "quote": "The central wire of a self-powered neutron detector is made from a material that absorbs a neutron and undergoes radioactive decay by emitting an electron (beta decay).",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+  },
+  {
+   "id": "P75",
+   "quote": "Fission chambers use neutron-induced fission to detect neutrons.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+  },
+  {
+   "id": "P76",
+   "quote": "Fission chambers are also capable of operating over the source and intermediate ranges of neutron levels.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+  },
+  {
+   "id": "P77",
+   "quote": "After activation, the flux wire or foil is rapidly removed from the reactor core and the activity counted.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+  },
+  {
+   "id": "P78",
+   "quote": "This general darkening of the film is used to determine overall radiation exposure.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+  },
+  {
+   "id": "P79",
+   "quote": "Counting the tracks yields the film’s exposure to fast neutrons.",
+   "sec": "Miscellaneous Detectors",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+  },
+  {
+   "id": "P80",
+   "quote": "Signal-to-noise ratio is the ratio of the electrical output signal to the electrical noise generated in the cable run or in the instrumentation.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.55"
+  },
+  {
+   "id": "P81",
+   "quote": "A discriminator circuit selects the minimum or maximum pulse height that is to be counted.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.55"
+  },
+  {
+   "id": "P82",
+   "quote": "Analog is defined as a mechanism in which data is represented by continuously variable physical quantities.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.56"
+  },
+  {
+   "id": "P83",
+   "quote": "These ranges utilize logarithms due to the wide range of measured flux and the necessity to measure that flux on a single meter scale.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.56"
+  },
+  {
+   "id": "P84",
+   "quote": "Reactor period is defined as that amount of time, normally in seconds, required for neutron flux (power) to change by a factor of e, or 2.718.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.56"
+  },
+  {
+   "id": "P85",
+   "quote": "These meters indicate how fast reactor power is changing in decades (power of 10) in each minute.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+  },
+  {
+   "id": "P86",
+   "quote": "Startup rate (SUR) equates to reactor period using Equation 6-10.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.61"
+  },
+  {
+   "id": "P87",
+   "quote": "This term refers to a measurement or quantity that is capable of being represented on a scale",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+  },
+  {
+   "id": "P88",
+   "quote": "The source range normally uses a proportional counter, while the intermediate and power ranges use ionization chambers.",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+  },
+  {
+   "id": "P89",
+   "quote": "Two stages of amplification are used in most detection circuits",
+   "sec": "Circuitry and Circuit Elements",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+  },
+  {
+   "id": "P90",
+   "quote": "Protective functions are not normally associated with source range instrumentation because of inherent limitations in this range.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.63"
+  },
+  {
+   "id": "P91",
+   "quote": "The linear amplifier amplifies the input signal by a factor of several thousand to raise the pulse height to several volts.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.64"
+  },
+  {
+   "id": "P92",
+   "quote": "The function of the discriminator is to exclude noise and gamma pulses that are lower in magnitude than neutron pulses.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.64"
+  },
+  {
+   "id": "P93",
+   "quote": "The pulse integrator provides an output signal proportional to the logarithm of the count rate.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.65"
+  },
+  {
+   "id": "P94",
+   "quote": "The log count rate amplifier amplifies the signal for display on a meter.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.65"
+  },
+  {
+   "id": "P95",
+   "quote": "The differentiator provides an output signal proportional to the rate of power change.",
+   "sec": "Source Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.65"
+  },
+  {
+   "id": "P96",
+   "quote": "The compensated ion chamber is utilized in the intermediate range because the current output is proportional to the relatively stable neutron flux, and it compensates for signals from gamma flux.",
+   "sec": "Intermediate Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.66"
+  },
+  {
+   "id": "P97",
+   "quote": "The log n amplifier is a logarithmic current amplifier that converts the detector output to a signal proportional to the logarithm of the detector current.",
+   "sec": "Intermediate Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+  },
+  {
+   "id": "P98",
+   "quote": "Startup rate in the intermediate range is more stable because the neutron level signal is subject to less sudden large variations.",
+   "sec": "Intermediate Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+  },
+  {
+   "id": "P99",
+   "quote": "The reactor protective interface provides signals for protective actions.",
+   "sec": "Intermediate Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+  },
+  {
+   "id": "P100",
+   "quote": "Uncompensated ion chambers are utilized in the power range because gamma compensation is unnecessary; the neutron-to-gamma flux ratio is high.",
+   "sec": "Power Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.69"
+  },
+  {
+   "id": "P101",
+   "quote": "Protective actions may be initiated by high power level on any two channels; this is termed coincidence operation.",
+   "sec": "Power Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.69"
+  },
+  {
+   "id": "P102",
+   "quote": "This output drives a linear amplifier which amplifies the signal to a useful level.",
+   "sec": "Power Range Nuclear Instrumentation",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.70"
+  },
+  {
+   "id": "P103",
+   "quote": "There could be a fill-gas leak which would impact the detector output.",
+   "sec": "Malfunctions",
+   "cite": "Word: Failed Fuel Detectors.docx, slide 1.7 Malfunctions"
+  },
+  {
+   "id": "P104",
+   "quote": "Loss of voltage will fail the detector low",
+   "sec": "Malfunctions",
+   "cite": "Word: Failed Fuel Detectors.docx, slide 1.7 Malfunctions"
+  },
+  {
+   "id": "P105",
+   "quote": "The advantages of a TLD over other personnel monitors are its linearity of response to dose, its relative energy independence, and its sensitivity to low doses.",
+   "sec": "Dosimetry",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.70 Thermoluminescent Dosimeter"
+  },
+  {
+   "id": "P106",
+   "quote": "The principal advantage of a pocket dosimeter is its ability to provide the wearer an immediate reading of their accumulated radiation dose.",
+   "sec": "Dosimetry",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.74 Self-Reading Pocket Dosimeter"
+  },
+  {
+   "id": "P107",
+   "quote": "electronic dosimeters record dose information and dose rate.",
+   "sec": "Dosimetry",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.77 Electronic Dosimeter"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Radiation detection concepts",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.6 Radiation Detection Concepts"
+  },
+  {
+   "step": "Radiation types",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.10 Radiation Types"
+  },
+  {
+   "step": "Gas-filled detector",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.19 Gas-Filled Detector"
+  },
+  {
+   "step": "Detector voltage",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.24 Detector Voltage"
+  },
+  {
+   "step": "Proportional counter",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.32 Proportional Counter Theory"
+  },
+  {
+   "step": "Ionization chamber",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.40 Ionization Chamber"
+  },
+  {
+   "step": "Compensated ion chamber",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.47 Compensated Ion Chamber"
+  },
+  {
+   "step": "Geiger-Mueller detector",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.50 Geiger-Mueller Detector"
+  },
+  {
+   "step": "Scintillation detector",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.56 Scintillation Detector"
+  },
+  {
+   "step": "Personnel monitoring",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.62 Personnel Radiation Monitoring"
+  },
+  {
+   "step": "Nuclear instruments",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.82 Nuclear Instrument Detectors"
+  },
+  {
+   "step": "Gas amplification curve",
+   "cite": "Word: Failed Fuel Detectors.docx, slide 1.3 Gas Amp Curve"
+  },
+  {
+   "step": "Malfunctions",
+   "cite": "Word: Failed Fuel Detectors.docx, slide 1.7 Malfunctions"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Ionization terms",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Ionization is the process of removing one or more electrons from a neutral atom.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Specific ionization depends on the mass, charge, and energy of the particle and on the electron density of matter.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q491",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is specific ionization?",
+     "o": [
+      "The number of ion pairs produced per centimeter of travel through matter",
+      "The energy lost per unit path length",
+      "The charge of an electron",
+      "The product of one ionizing event"
+     ],
+     "a": 0,
+     "x": "Specific ionization is the number of ion pairs produced per centimeter of travel through matter.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.2",
+     "q": "How are stopping power and specific ionization related?",
+     "o": [
+      "They are unrelated",
+      "Stopping power is the square of specific ionization",
+      "Stopping power is proportional to specific ionization",
+      "They are inversely proportional"
+     ],
+     "a": 2,
+     "x": "Stopping power, or LET, is proportional to the specific ionization.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which factor has the greatest effect on specific ionization?",
+     "o": [
+      "The detector voltage",
+      "The air temperature",
+      "A particle's charge",
+      "A particle's color"
+     ],
+     "a": 2,
+     "x": "A particle's charge has the greatest effect on specific ionization.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Alpha and beta particles",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "It has two protons and two neutrons, with a charge of +2.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig1",
+     "num": 1,
+     "cap": "Alpha Particle Specific Ionization -vs- Distance Traveled in Air",
+     "alt": "Graph of specific ionization against distance traveled in air, rising to a sharp peak near the end of the alpha particle's path.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "The beta has a single negative or positive charge and a very small mass. It follows a tortuous path through absorbing material.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q492",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which is the least penetrating radiation?",
+     "o": [
+      "Neutron",
+      "Alpha",
+      "Beta",
+      "Gamma"
+     ],
+     "a": 1,
+     "x": "Alpha particles are the least penetrating radiation.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.3",
+     "q": "Why is the specific ionization of a beta particle low?",
+     "o": [
+      "Small mass, small charge, and relatively high speed",
+      "Large mass and low speed",
+      "No charge",
+      "High charge and short range"
+     ],
+     "a": 0,
+     "x": "The specific ionization of a beta particle is low due to its small mass, small charge, and relatively high speed of travel.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Gamma rays",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig2",
+     "num": 2,
+     "cap": "Photoelectric Effect",
+     "alt": "Photoelectric effect: a photon strikes an orbital electron, which is ejected from the atom.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+    },
+    {
+     "t": "p",
+     "text": "In the photoelectric effect, the total energy of the gamma is expended in ejecting the electron from its orbit.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig3",
+     "num": 3,
+     "cap": "Compton Scattering",
+     "alt": "Compton scattering: a photon strikes an electron and a lower energy photon leaves.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "Compton scattering is most predominant with gammas in the 1.0 to 2.0 MeV range.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig4",
+     "num": 4,
+     "cap": "Pair Production",
+     "alt": "Pair production: a gamma near a nucleus disappears, and an electron and a positron appear.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.7"
+    },
+    {
+     "t": "p",
+     "text": "In pair production, a high energy gamma close to a heavy nucleus disappears, and an electron and a positron appear.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What minimum energy must a gamma have for pair production?",
+     "o": [
+      "0.51 MeV",
+      "1.02 MeV",
+      "2.0 MeV",
+      "10 MeV"
+     ],
+     "a": 1,
+     "x": "For this reaction to take place, the original gamma must have at least 1.02 MeV energy.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which gamma attenuation method is most predominant with low energy gammas?",
+     "o": [
+      "Compton scattering",
+      "Pair production",
+      "Radiative capture",
+      "Photoelectric effect"
+     ],
+     "a": 3,
+     "x": "The photoelectric effect is most predominant with low energy gammas.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Neutrons",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Because of its size and lack of charge, the neutron is fairly difficult to stop and has a relatively high penetrating power.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Inelastic scattering leaves the nucleus excited, and the excitation energy is emitted as a gamma ray. Elastic scattering shares kinetic energy without exciting the nucleus.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "Neutrons interact with B-10 to produce Li-7 and He-4, which share the energy and produce easily detectable secondary ionizations.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Why is a neutron fairly difficult to stop?",
+     "o": [
+      "Its high charge",
+      "Its low mass and high charge",
+      "It has no energy",
+      "Its size and lack of charge"
+     ],
+     "a": 3,
+     "x": "Because of its size and lack of charge, the neutron is fairly difficult to stop.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which of these is a neutron reaction with a nucleus?",
+     "o": [
+      "Photoelectric effect",
+      "Radiative capture",
+      "Pair production",
+      "Compton scattering"
+     ],
+     "a": 1,
+     "x": "Neutrons may cause inelastic scattering, elastic scattering, radiative capture, or fission.",
+     "p": "P18"
+    }
+   ]
+  },
+  {
+   "title": "Gas-filled detectors",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "Typical gases are argon and helium, with boron-trifluoride for neutrons.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig5",
+     "num": 5,
+     "cap": "Schematic Diagram of a Gas-Filled Detector",
+     "alt": "Gas-filled chamber with a central electrode, connected to a voltage source, a resistor, and a capacitor.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Collecting these charges reduces the capacitor voltage, causing a pulse across the resistor that is recorded.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.11"
+    },
+    {
+     "t": "p",
+     "text": "The ion pairs formed by the radiation can reach a velocity that causes secondary ionization, and those electrons cause further ionizations.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "eq",
+     "text": "∆V = Ane / C",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q238",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "What is gas amplification?",
+     "o": [
+      "Raising the pressure in a detector",
+      "Recombination of ions",
+      "Multiplication of electrons from secondary ionizations",
+      "Adding more gas to a detector"
+     ],
+     "a": 2,
+     "x": "The multiplication of electrons from further ionizations is termed gas amplification.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.4",
+     "q": "In a gas-filled detector, what attracts the electrons?",
+     "o": [
+      "The detector wall",
+      "The fill gas",
+      "The resistor",
+      "The positive anode"
+     ],
+     "a": 3,
+     "x": "The positive anode attracts the electrons, and the detector wall attracts the positive charges.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Detector voltage regions",
+   "eo": [
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-06-fig6",
+     "num": 6,
+     "cap": "Ion Pairs Collected -vs- Applied Voltage",
+     "alt": "Ion pairs collected against applied voltage, with separate alpha and beta curves through Regions I to VI.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The alpha curve is higher than the beta curve from Region I to part of Region IV.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Region I, recombination: ions tend to recombine before they are collected",
+      "Region II, ionization: all ions are collected, with no gas amplification"
+     ],
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "The gas amplification factor in Region III varies from 10³ to 10⁴.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+    },
+    {
+     "t": "p",
+     "text": "In the limited proportional region (Region IV), positive ions reduce the electric field to a point where further avalanches are impossible, and",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "In the continuous discharge region (Region VI), a steady discharge current flows, so",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q394",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.5",
+     "q": "In which region is pulse height independent of the type of radiation?",
+     "o": [
+      "Ionization",
+      "Proportional",
+      "Geiger-Müller",
+      "Recombination"
+     ],
+     "a": 2,
+     "x": "The pulse height in the Geiger-Müller region is independent of the type of radiation causing the initial ionizations.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.5",
+     "q": "Why is the alpha curve above the beta curve at lower voltages?",
+     "o": [
+      "Alpha particles travel faster",
+      "Alpha particles are gases",
+      "An alpha creates more ion pairs than a beta",
+      "Beta particles have no charge"
+     ],
+     "a": 2,
+     "x": "An alpha particle creates more ion pairs than a beta since it has a much greater mass.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.5",
+     "q": "Why is the gas amplification region called proportional?",
+     "o": [
+      "Ions are proportional to pressure",
+      "All pulses are equal",
+      "The gas amplification factor is proportional to applied voltage",
+      "Pulse height is proportional to temperature"
+     ],
+     "a": 2,
+     "x": "It is called proportional since the gas amplification factor is proportional to applied voltage.",
+     "p": "P27"
+    }
+   ]
+  },
+  {
+   "title": "Proportional counters",
+   "eo": [
+    "2.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A proportional counter operates in the proportional region.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig7",
+     "num": 7,
+     "cap": "Proportional Counter",
+     "alt": "Simple proportional counter circuit with a chamber, a center wire, and a voltage supply.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "For neutrons, detectors are usually filled with boron-trifluoride gas.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Each pulse corresponds to one gamma ray or neutron interaction, and the charge in each pulse is proportional to the original electrons produced.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Positive ions neutralized at the wall can release energy and cause more ionization, setting off a series of unrelated pulses.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Quenching gas molecules are eventually consumed, which limits the lifetime of the counter.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.1",
+     "q": "Why is a quenching gas added to a proportional counter?",
+     "o": [
+      "To cool the chamber",
+      "To eliminate pulses unrelated to the radiation being detected",
+      "To raise the detector voltage",
+      "To detect neutrons"
+     ],
+     "a": 1,
+     "x": "Pulses from positive ions are unrelated to the radiation, and they must be quenched.",
+     "p": "P33"
+    },
+    {
+     "eo": "2.1",
+     "q": "What is the major advantage of a proportional counter over an ionization chamber?",
+     "o": [
+      "Its lack of fill gas",
+      "Its high amplification factor",
+      "Its use at high power",
+      "Its simple circuit"
+     ],
+     "a": 1,
+     "x": "The high amplification factor of the proportional counter is the major advantage over the ionization chamber.",
+     "p": "P32"
+    }
+   ]
+  },
+  {
+   "title": "Proportional counter circuit",
+   "eo": [
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "ic-06-fig9",
+     "num": 9,
+     "cap": "Proportional Counter Circuit",
+     "alt": "Block diagram: proportional counter, preamplifier, amplifier, single channel analyzer, scaler, and timer.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.23"
+    },
+    {
+     "t": "p",
+     "text": "The capacitor converts the charge pulse to a voltage pulse.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "A single channel analyzer has LEVEL and WINDOW dials. With the level at 2 volts and the window at 0.2 volts,",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "p",
+     "text": "The BF3 proportional counter is used to monitor low power levels in a reactor.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q239",
+     "eo": "2.2"
+    },
+    {
+     "existing": "Q360",
+     "eo": "2.2"
+    },
+    {
+     "eo": "2.2",
+     "q": "In a proportional counter circuit, what does the scaler do?",
+     "o": [
+      "Amplifies the pulse",
+      "Sets the voltage",
+      "Gates the timer",
+      "Counts the number of pulses it receives"
+     ],
+     "a": 3,
+     "x": "The output is fed to a scaler, which counts the number of pulses it receives.",
+     "p": "P37"
+    },
+    {
+     "eo": "2.2",
+     "q": "Why can't proportional counters be used at high power levels?",
+     "o": [
+      "They are pulse-type detectors",
+      "They burn up their gas instantly",
+      "They have no amplifier",
+      "They only detect gamma"
+     ],
+     "a": 0,
+     "x": "Proportional counters cannot be used at high power levels because they are pulse-type detectors.",
+     "p": "P42"
+    }
+   ]
+  },
+  {
+   "title": "Ionization chambers",
+   "eo": [
+    "2.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Ionization chambers detect radiation with the voltage set to the ionization region.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "p",
+     "text": "There are two types:",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.28"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig14",
+     "num": 14,
+     "cap": "Simple Ionization Circuit",
+     "alt": "Two parallel metal plates with an air space, connected to a battery and a sensitive ammeter.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.29"
+    },
+    {
+     "t": "p",
+     "text": "As voltage is raised, electrons move more quickly to the positive plate and have less chance to recombine. Eventually all electrons reach the plate.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig16",
+     "num": 16,
+     "cap": "Ionization Chamber",
+     "alt": "Ionization chamber plates enclosed in a metal housing.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "A thin coat of boron on the inner surface, or BF3 gas, lets the chamber detect neutrons through alpha particles.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.3",
+     "q": "What are the two disadvantages of ionization chambers compared with proportional counters?",
+     "o": [
+      "Need quenching and a timer",
+      "Higher voltage and shorter life",
+      "Less sensitive and a slower response time",
+      "More costly and larger"
+     ],
+     "a": 2,
+     "x": "Ionization chambers are less sensitive and have a slower response time.",
+     "p": "P44"
+    },
+    {
+     "eo": "2.3",
+     "q": "How can the gamma sensitivity of an ionization chamber be reduced?",
+     "o": [
+      "Reduce the chamber gas or increase the boron coated area",
+      "Raise the voltage",
+      "Remove the boron",
+      "Thin the walls"
+     ],
+     "a": 0,
+     "x": "Gamma sensitivity reduction is accomplished by reducing the chamber gas or increasing the boron coated surface area.",
+     "p": "P48"
+    }
+   ]
+  },
+  {
+   "title": "Compensated ion chambers",
+   "eo": [
+    "2.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Compensated chambers consist of two separate chambers, one coated with boron and one not.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig19",
+     "num": 19,
+     "cap": "Compensated Ion Chamber",
+     "alt": "Two chambers wired so their currents oppose each other, with a shared meter.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig20",
+     "num": 20,
+     "cap": "Compensated Ion Chamber with Concentric Cylinders",
+     "alt": "Compensated ion chamber built as concentric cylinders.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.36"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "eq",
+     "text": "Percent Compensation = (1 - Imeasured / Ioperating) x 100%",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.37"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "quote",
+     "p": "P56"
+    },
+    {
+     "t": "quote",
+     "p": "P57"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q395",
+     "eo": "2.4"
+    },
+    {
+     "eo": "2.4",
+     "q": "A compensated ion chamber is undercompensated. How does indicated power compare with actual?",
+     "o": [
+      "Higher",
+      "Lower",
+      "Equal",
+      "Zero"
+     ],
+     "a": 0,
+     "x": "If undercompensated, not all of the gamma current is blocked, and indicated power is higher than actual core power.",
+     "p": "P56"
+    },
+    {
+     "eo": "2.4",
+     "q": "A compensated ion chamber is overcompensated. How does indicated power compare with actual?",
+     "o": [
+      "Erratic",
+      "Higher",
+      "Lower",
+      "Equal"
+     ],
+     "a": 2,
+     "x": "If overcompensated, the compensating chamber cancels too much current, and the meter reads low.",
+     "p": "P55"
+    },
+    {
+     "eo": "2.4",
+     "q": "What is the uncoated chamber of a compensated ion chamber sensitive to?",
+     "o": [
+      "Both neutrons and gamma rays",
+      "Alpha particles only",
+      "Gamma rays only",
+      "Neutrons only"
+     ],
+     "a": 2,
+     "x": "The uncoated chamber is sensitive only to gamma rays.",
+     "p": "P50"
+    }
+   ]
+  },
+  {
+   "title": "Electroscopes and film",
+   "eo": [
+    "2.5",
+    "2.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A quartz fiber electroscope has a gold-plated quartz fiber, charged by a battery so that it deflects from its support.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P58"
+    },
+    {
+     "t": "quote",
+     "p": "P59"
+    },
+    {
+     "t": "p",
+     "text": "Pocket dosimeters provide personnel with a means of monitoring their radiation exposure.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.41"
+    },
+    {
+     "t": "p",
+     "text": "Photographic film tends to darken when exposed to radiation.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+    },
+    {
+     "t": "quote",
+     "p": "P78"
+    },
+    {
+     "t": "p",
+     "text": "Neutron scattering produces individual proton recoil tracks.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+    },
+    {
+     "t": "quote",
+     "p": "P79"
+    },
+    {
+     "t": "p",
+     "text": "Filters such as aluminum, copper, cadmium, or lead shield different energies, so comparing exposure under them gives an approximate spectrum.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.5",
+     "q": "In an electroscope ionization chamber, what happens as radiation ionizes the gas?",
+     "o": [
+      "The fiber gains charge",
+      "The chamber heats up",
+      "The battery recharges",
+      "The fiber moves toward the position of zero charge"
+     ],
+     "a": 3,
+     "x": "As the gas is ionized by the incident radiation, the fiber moves toward the position of zero charge.",
+     "p": "P58"
+    },
+    {
+     "eo": "2.10",
+     "q": "How does photographic film measure fast neutron exposure?",
+     "o": [
+      "By overall darkening",
+      "By color change",
+      "By filter weight",
+      "By counting proton recoil tracks"
+     ],
+     "a": 3,
+     "x": "Counting the proton recoil tracks yields the film's exposure to fast neutrons.",
+     "p": "P79"
+    }
+   ]
+  },
+  {
+   "title": "Geiger-Müller detectors",
+   "eo": [
+    "2.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A G-M detector operates in Region V and produces larger pulses than other detector types.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.42"
+    },
+    {
+     "t": "quote",
+     "p": "P60"
+    },
+    {
+     "t": "p",
+     "text": "In the G-M region, the number of electrons produced is independent of applied voltage and of the number produced by the initial radiation.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+    },
+    {
+     "t": "p",
+     "text": "Near the central wire, positive ions form a positively charged cloud called a positive ion sheath.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P61"
+    },
+    {
+     "t": "p",
+     "text": "Positive ions migrating to the chamber can release energy and free an electron.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.43"
+    },
+    {
+     "t": "quote",
+     "p": "P62"
+    },
+    {
+     "t": "quote",
+     "p": "P63"
+    },
+    {
+     "t": "quote",
+     "p": "P64"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q361",
+     "eo": "2.6"
+    },
+    {
+     "existing": "Q396",
+     "eo": "2.6"
+    },
+    {
+     "eo": "2.6",
+     "q": "What does the positive ion sheath do in a G-M detector?",
+     "o": [
+      "Reduces the field strength and stops further electrons reaching the wire",
+      "Increases the applied voltage",
+      "Attracts neutrons",
+      "Quenches the fill gas"
+     ],
+     "a": 0,
+     "x": "The positive ion sheath reduces the field strength of the central wire and prevents further electrons from reaching the wire.",
+     "p": "P61"
+    },
+    {
+     "eo": "2.6",
+     "q": "Why are G-M counters not adaptable as neutron detectors?",
+     "o": [
+      "They operate at low voltage",
+      "They cannot distinguish radiation of different energies or types",
+      "They are not sensitive",
+      "They have no fill gas"
+     ],
+     "a": 1,
+     "x": "Because the same size pulse is produced for any ionization, G-M counters cannot distinguish radiation types.",
+     "p": "P63"
+    }
+   ]
+  },
+  {
+   "title": "Scintillation counters",
+   "eo": [
+    "2.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P65"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig24",
+     "num": 24,
+     "cap": "Electronic Energy Band of an Ionic Crystal",
+     "alt": "Energy band diagram of a crystal, showing the valence band, conduction band, and activator levels in the forbidden gap.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.45"
+    },
+    {
+     "t": "p",
+     "text": "Radiation raises electrons in the crystal. An activator center can trap one, and when the center de-excites it emits a visible photon.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.45"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig25",
+     "num": 25,
+     "cap": "Scintillation Counter",
+     "alt": "Scintillation counter: a sodium iodide crystal coupled to a photomultiplier tube.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P66"
+    },
+    {
+     "t": "quote",
+     "p": "P67"
+    },
+    {
+     "t": "p",
+     "text": "Organic phosphors are frequently used for beta particles. Plastic phosphors have the shortest decay and are useful for fast neutron detectors.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.46"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig26",
+     "num": 26,
+     "cap": "Photomultiplier Tube Schematic Diagram",
+     "alt": "Photomultiplier tube with a photocathode and a series of dynodes in a glass envelope.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.47"
+    },
+    {
+     "t": "p",
+     "text": "Light liberates electrons from the photocathode. They strike the first dynode and liberate several new electrons for each one.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P68"
+    },
+    {
+     "t": "quote",
+     "p": "P69"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q398",
+     "eo": "2.7"
+    },
+    {
+     "eo": "2.7",
+     "q": "What are the three classes of scintillation phosphors?",
+     "o": [
+      "Organic crystals, inorganic crystals, and plastic phosphors",
+      "Gases, liquids, and solids",
+      "Boron, cadmium, and lead",
+      "Argon, helium, and BF3"
+     ],
+     "a": 0,
+     "x": "There are three classes: organic crystals, inorganic crystals, and plastic phosphors.",
+     "p": "P66"
+    },
+    {
+     "eo": "2.7",
+     "q": "How many amplification stages does a typical photomultiplier tube use?",
+     "o": [
+      "50 to 60",
+      "One",
+      "2 to 3",
+      "10 to 12"
+     ],
+     "a": 3,
+     "x": "This amplification continues through 10 to 12 stages.",
+     "p": "P68"
+    }
+   ]
+  },
+  {
+   "title": "Gamma spectroscopy",
+   "eo": [
+    "2.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P72"
+    },
+    {
+     "t": "quote",
+     "p": "P70"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig27",
+     "num": 27,
+     "cap": "Gamma Spectrometer Block Diagram",
+     "alt": "Block diagram of a gamma spectrometer with a detector, amplifier, multichannel analyzer, and readout.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.49"
+    },
+    {
+     "t": "quote",
+     "p": "P71"
+    },
+    {
+     "t": "p",
+     "text": "Pulse height is proportional to the energy lost by a gamma ray, so separating pulses shows the energy spectrum.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.50"
+    },
+    {
+     "t": "p",
+     "text": "Multichannel analyzers typically have 100 or 200 channels over 0 to 2 MeV.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.50"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.8",
+     "q": "What type of detector is normally used in a gamma spectrometer?",
+     "o": [
+      "A sodium iodide scintillation counter",
+      "A BF3 proportional counter",
+      "A fission chamber",
+      "A pocket dosimeter"
+     ],
+     "a": 0,
+     "x": "The detector is normally a sodium iodide (NaI) scintillation counter.",
+     "p": "P70"
+    },
+    {
+     "eo": "2.8",
+     "q": "How does a multichannel analyzer separate pulses?",
+     "o": [
+      "Based on color",
+      "Based on temperature",
+      "Based on pulse height",
+      "Based on arrival time"
+     ],
+     "a": 2,
+     "x": "A multichannel analyzer separates pulses based on pulse height.",
+     "p": "P71"
+    }
+   ]
+  },
+  {
+   "title": "Other neutron detectors",
+   "eo": [
+    "2.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P73"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig29",
+     "num": 29,
+     "cap": "Self-Powered Neutron Detector",
+     "alt": "Self-powered neutron detector: a central emitter wire in an insulator and casing, with a resistor and meter.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.51"
+    },
+    {
+     "t": "quote",
+     "p": "P74"
+    },
+    {
+     "t": "p",
+     "text": "The electrons leave, so the wire becomes more positively charged, and a current flows through a resistor.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+    },
+    {
+     "t": "p",
+     "text": "Rhodium and vanadium emitters cannot respond immediately to a flux change. Cobalt or cadmium emitters are prompt.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P75"
+    },
+    {
+     "t": "p",
+     "text": "A fission chamber is similar to an ionization chamber, with a coating of highly enriched U235.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+    },
+    {
+     "t": "p",
+     "text": "Fission fragments produce many more ionizations than alpha particles, so fission chambers operate in higher gamma fields.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.52"
+    },
+    {
+     "t": "quote",
+     "p": "P76"
+    },
+    {
+     "t": "p",
+     "text": "A section of wire or foil is inserted into the core and remains there until activated to the desired level.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.53"
+    },
+    {
+     "t": "quote",
+     "p": "P77"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q397",
+     "eo": "2.9"
+    },
+    {
+     "existing": "Q240",
+     "eo": "2.9"
+    },
+    {
+     "eo": "2.9",
+     "q": "What is special about the power needs of a self-powered neutron detector?",
+     "o": [
+      "It requires no voltage supply for operation",
+      "It needs a high voltage battery",
+      "It runs from the bridge",
+      "It needs a gas supply"
+     ],
+     "a": 0,
+     "x": "The self-powered neutron detector requires no voltage supply for operation.",
+     "p": "P73"
+    },
+    {
+     "eo": "2.9",
+     "q": "How does a flux wire measure neutron flux?",
+     "o": [
+      "It fills with gas",
+      "It melts at a set flux",
+      "It is activated in the core, then removed and counted",
+      "It carries current to a meter"
+     ],
+     "a": 2,
+     "x": "After activation, the flux wire or foil is removed from the core and the activity counted.",
+     "p": "P77"
+    }
+   ]
+  },
+  {
+   "title": "Nuclear instrument terms",
+   "eo": [
+    "3.1",
+    "3.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P80"
+    },
+    {
+     "t": "quote",
+     "p": "P89"
+    },
+    {
+     "t": "p",
+     "text": "Two stages raise the signal-to-noise ratio.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+    },
+    {
+     "t": "quote",
+     "p": "P81"
+    },
+    {
+     "t": "quote",
+     "p": "P82"
+    },
+    {
+     "t": "p",
+     "text": "A logarithm is the exponent that indicates the power to which a number is raised to produce a given number.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.56"
+    },
+    {
+     "t": "quote",
+     "p": "P83"
+    },
+    {
+     "t": "quote",
+     "p": "P84"
+    },
+    {
+     "t": "quote",
+     "p": "P85"
+    },
+    {
+     "t": "eq",
+     "text": "SUR = 26.06 / τ",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.61"
+    },
+    {
+     "t": "p",
+     "text": "Scalar:",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+    },
+    {
+     "t": "quote",
+     "p": "P87"
+    },
+    {
+     "t": "quote",
+     "p": "P88"
+    },
+    {
+     "t": "p",
+     "text": "A compensated ion chamber is used for the intermediate range, and an uncompensated ion chamber for the power range.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3.2",
+     "q": "Which detector does the source range normally use?",
+     "o": [
+      "A proportional counter",
+      "A compensated ion chamber",
+      "An uncompensated ion chamber",
+      "A G-M tube"
+     ],
+     "a": 0,
+     "x": "The source range normally uses a proportional counter.",
+     "p": "P88"
+    },
+    {
+     "eo": "3.1",
+     "q": "What is reactor period?",
+     "o": [
+      "The time for power to double",
+      "The number of decades per minute",
+      "The fuel cycle length",
+      "The time for neutron flux to change by a factor of e"
+     ],
+     "a": 3,
+     "x": "Reactor period is the time required for neutron flux to change by a factor of e, or 2.718.",
+     "p": "P84"
+    },
+    {
+     "eo": "3.1",
+     "q": "Why do source and intermediate ranges use logarithms?",
+     "o": [
+      "To reduce noise",
+      "To block gamma",
+      "To save power",
+      "To show a wide range of flux on a single meter scale"
+     ],
+     "a": 3,
+     "x": "They use logarithms due to the wide range of measured flux and the need to show it on a single meter scale.",
+     "p": "P83"
+    }
+   ]
+  },
+  {
+   "title": "Source range instruments",
+   "eo": [
+    "3.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Source range instrumentation normally has two redundant count rate channels.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.63"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig35",
+     "num": 35,
+     "cap": "Source Range Channel",
+     "alt": "Source range channel: detector, linear amplifier, discriminator, pulse integrator, log count rate amplifier, and differentiator, with meters.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.64"
+    },
+    {
+     "t": "quote",
+     "p": "P91"
+    },
+    {
+     "t": "quote",
+     "p": "P92"
+    },
+    {
+     "t": "quote",
+     "p": "P93"
+    },
+    {
+     "t": "quote",
+     "p": "P94"
+    },
+    {
+     "t": "quote",
+     "p": "P95"
+    },
+    {
+     "t": "quote",
+     "p": "P90"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q399",
+     "eo": "3.3"
+    },
+    {
+     "eo": "3.3",
+     "q": "In the source range, what does the differentiator provide?",
+     "o": [
+      "A log of the count rate",
+      "A larger pulse",
+      "A gamma signal",
+      "An output proportional to the rate of power change"
+     ],
+     "a": 3,
+     "x": "The differentiator provides an output signal proportional to the rate of power change.",
+     "p": "P95"
+    },
+    {
+     "eo": "3.3",
+     "q": "In the source range, what does the pulse integrator provide?",
+     "o": [
+      "Detector voltage",
+      "A signal proportional to the logarithm of the count rate",
+      "A period signal",
+      "A discriminated pulse"
+     ],
+     "a": 1,
+     "x": "The pulse integrator provides an output proportional to the logarithm of the count rate.",
+     "p": "P93"
+    }
+   ]
+  },
+  {
+   "title": "Intermediate range instruments",
+   "eo": [
+    "3.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Intermediate-range instrumentation has a minimum of two redundant channels.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.66"
+    },
+    {
+     "t": "quote",
+     "p": "P96"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig36",
+     "num": 36,
+     "cap": "Intermediate Range Channel",
+     "alt": "Intermediate range channel: compensated ion chamber, log n amplifier, differentiator, and reactor protection interface, with meters.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+    },
+    {
+     "t": "quote",
+     "p": "P97"
+    },
+    {
+     "t": "p",
+     "text": "The differentiator measures reactor period or startup rate.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+    },
+    {
+     "t": "quote",
+     "p": "P98"
+    },
+    {
+     "t": "quote",
+     "p": "P99"
+    },
+    {
+     "t": "p",
+     "text": "Examples include control rod withdrawal interlocks and startup rate reactor trips.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.67"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3.4",
+     "q": "What does the log n amplifier do in the intermediate range?",
+     "o": [
+      "Counts pulses",
+      "Blocks gamma pulses",
+      "Sets high voltage",
+      "Converts detector output to a signal proportional to the logarithm of detector current"
+     ],
+     "a": 3,
+     "x": "The log n amplifier converts detector output to a signal proportional to the logarithm of the detector current.",
+     "p": "P97"
+    },
+    {
+     "eo": "3.4",
+     "q": "Why is intermediate range startup rate often used by the reactor protection system?",
+     "o": [
+      "It is more stable",
+      "It is faster than power range",
+      "It has no gamma signal",
+      "It is pulse based"
+     ],
+     "a": 0,
+     "x": "Startup rate in the intermediate range is more stable, with less sudden large variations.",
+     "p": "P98"
+    }
+   ]
+  },
+  {
+   "title": "Power range instruments",
+   "eo": [
+    "3.5",
+    "3.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P100"
+    },
+    {
+     "t": "p",
+     "text": "That means the number of gammas is insignificant compared to the number of neutrons.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.69"
+    },
+    {
+     "t": "fig",
+     "id": "ic-06-fig37",
+     "num": 37,
+     "cap": "Power Range Channel",
+     "alt": "Power range channel: two uncompensated ion chambers in parallel, a linear amplifier, and a reactor protection interface.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.70"
+    },
+    {
+     "t": "quote",
+     "p": "P102"
+    },
+    {
+     "t": "p",
+     "text": "Gain is adjustable for calibration, normally using a plant heat balance.",
+     "cite": "DOE-HDBK-1013/2-92 IC-06 p.69"
+    },
+    {
+     "t": "quote",
+     "p": "P101"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3.5",
+     "q": "Why is gamma compensation NOT required in the power range?",
+     "o": [
+      "The detectors are pulse type",
+      "The amplifier blocks gammas",
+      "The neutron-to-gamma flux ratio is high",
+      "Gammas stop at high power"
+     ],
+     "a": 2,
+     "x": "Gamma compensation is unnecessary because the neutron-to-gamma flux ratio is high.",
+     "p": "P100"
+    },
+    {
+     "eo": "3.6",
+     "q": "What is coincidence operation in the power range?",
+     "o": [
+      "A single channel trip",
+      "Equal gain on all channels",
+      "Protective action on high power from any two channels",
+      "Two detectors in series"
+     ],
+     "a": 2,
+     "x": "Protective actions may be initiated by high power level on any two channels; this is termed coincidence operation.",
+     "p": "P101"
+    }
+   ]
+  },
+  {
+   "title": "Personnel dosimetry",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Personnel monitoring uses the thermoluminescent dosimeter, self-reading pocket dosimeter, electronic dosimeter, and film badge.",
+     "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.66 Dosimetry and Types of Radiation Detected"
+    },
+    {
+     "t": "quote",
+     "p": "P105"
+    },
+    {
+     "t": "p",
+     "text": "A TLD gives no permanent record and no immediate readout.",
+     "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.70 Thermoluminescent Dosimeter"
+    },
+    {
+     "t": "quote",
+     "p": "P106"
+    },
+    {
+     "t": "quote",
+     "p": "P107"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q507",
+     "eo": "From the lesson plan"
+    },
+    {
+     "existing": "Q508",
+     "eo": "From the lesson plan"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "What is the principal advantage of a self-reading pocket dosimeter?",
+     "o": [
+      "A permanent record",
+      "Neutron discrimination",
+      "No charging needed",
+      "An immediate reading of accumulated dose"
+     ],
+     "a": 3,
+     "x": "Its principal advantage is giving the wearer an immediate reading of their accumulated radiation dose.",
+     "p": "P106"
+    }
+   ]
+  },
+  {
+   "title": "Malfunctions and failed fuel",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P103"
+    },
+    {
+     "t": "p",
+     "text": "BF3 fill gas burns out over time. Internal coatings are consumed, so detectors need calibration and compensation, and eventually replacement.",
+     "cite": "Word: Failed Fuel Detectors.docx, slide 1.7 Malfunctions"
+    },
+    {
+     "t": "quote",
+     "p": "P104"
+    },
+    {
+     "t": "p",
+     "text": "Circuitry issues may fail the detector low or high, depending on the malfunction.",
+     "cite": "Word: Failed Fuel Detectors.docx, slide 1.7 Malfunctions"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q125",
+     "eo": "From the lesson plan"
+    },
+    {
+     "eo": "From the lesson plan",
+     "q": "How does a loss of voltage affect a radiation detector?",
+     "o": [
+      "It has no effect",
+      "It causes pulses",
+      "It fails the detector low",
+      "It fails the detector high"
+     ],
+     "a": 2,
+     "x": "Loss of voltage will fail the detector low.",
+     "p": "P104"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Gas amplification factor",
+   "eo": "2.1",
+   "page": 21,
+   "problem": "10,000 electrons from a gamma ray are increased to 40,000 by gas amplification. Find the amplification factor.",
+   "steps": [
+    "Factor = final electrons / initial electrons",
+    "40,000 / 10,000"
+   ],
+   "answer": "4",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.21"
+  },
+  {
+   "title": "Two-stage amplification",
+   "eo": "3.1",
+   "page": 58,
+   "problem": "A detector signal is 0.01 volts and the cable adds 0.001 volts of noise. A preamplifier with gain 100 sits before the cable, and an amplifier with gain 10 after it. Find the signal-to-noise ratio.",
+   "steps": [
+    "After the preamplifier the signal is 1 volt",
+    "The cable adds 0.001 volts of noise",
+    "The amplifier gives a 10 volt signal and 0.01 volts of noise"
+   ],
+   "answer": "1000",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.58"
+  },
+  {
+   "title": "Single channel analyzer",
+   "eo": "2.2",
+   "page": 24,
+   "problem": "An analyzer has its level at 2 volts and its window at 0.2 volts. Which pulses give an output?",
+   "steps": [
+    "The lower limit is the level",
+    "The upper limit is the level plus the window"
+   ],
+   "answer": "Only pulses between 2 and 2.2 volts.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.24"
+  },
+  {
+   "title": "Startup rate from period",
+   "eo": "3.1",
+   "page": 61,
+   "problem": "A reactor has a period of five seconds. Find the startup rate.",
+   "steps": [
+    "SUR = 26.06 / τ",
+    "SUR = 26.06 / 5"
+   ],
+   "answer": "About 5.2 decades per minute",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.61"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is an electron-ion pair?",
+   "a": "The products of a single ionizing event.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What are the three methods of attenuating gamma rays?",
+   "a": "Photoelectric effect, compton scattering, and pair production.",
+   "p": "P13",
+   "place": null
+  },
+  {
+   "q": "What are the names of the six detector voltage regions in order?",
+   "a": "Recombination, ionization, proportional, limited proportional, Geiger-Müller, and continuous discharge.",
+   "p": "P27",
+   "place": null
+  },
+  {
+   "q": "Which detector does each nuclear instrument range use?",
+   "a": "Source range: proportional counter. Intermediate range: compensated ion chamber. Power range: uncompensated ion chamber.",
+   "p": "P88",
+   "place": null
+  },
+  {
+   "q": "How does a compensated ion chamber cancel gamma current?",
+   "a": "A boron coated chamber sees neutrons and gammas, an uncoated chamber sees gammas, and their currents are opposed.",
+   "p": "P52",
+   "place": null
+  },
+  {
+   "q": "What does overcompensating a compensated ion chamber do?",
+   "a": "It blocks some neutron current too, so the meter reads low.",
+   "p": "P55",
+   "place": null
+  },
+  {
+   "q": "What is the relationship between startup rate and reactor period?",
+   "a": "SUR = 26.06 / τ, with SUR in decades per minute and τ in seconds.",
+   "p": "P86",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Stopping power is proportional to specific ionization.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.3"
+  },
+  {
+   "text": "Alpha, beta, gamma, and neutron radiation interact with matter in different ways.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.10"
+  },
+  {
+   "text": "Multiplication of electrons in a gas-filled detector is called gas amplification.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.13"
+  },
+  {
+   "text": "The alpha curve is higher than the beta curve from Region I to part of Region IV.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.18"
+  },
+  {
+   "text": "A compensated ion chamber sets its voltages so the gamma currents of the two chambers cancel.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.39"
+  },
+  {
+   "text": "The source range uses a proportional counter, the intermediate range a compensated ion chamber, and the power range an uncompensated ion chamber.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.62"
+  },
+  {
+   "text": "Gamma compensation is not required in the power range, since neutrons outnumber gammas by a large number.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.71"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 8",
+   "note": "Moderator, thermalization, and slowing-down text on p.8 and p.9, and the cadmium filtering of thermal neutrons on p.53, are left off. The Failed Fuel lesson's note on reactions of thermal neutrons is also left off.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+  },
+  {
+   "type": "Scope",
+   "note": "The three ranges and their detectors are the handbook's generic instruments, and the Word file says types vary by plant. No approved source used here confirms them for this reactor, so the lesson teaches them as generic. Tell me if this topic should carry a Needs sodium review tag.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.57"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.8 says a neutron is hundreds of times larger than an electron and one quarter the size of an alpha particle, and p.13 gives detector capacitance of about 10⁻⁴ farads. These look doubtful and are left off.",
+   "cite": "DOE-HDBK-1013/2-92 IC-06 p.8"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Personnel dosimetry and malfunctions are not in the handbook objectives, so they are on pages marked From the lesson plan. Dose unit notes are left off.",
+   "cite": "Word: Sensors and Detectors Part 2.docx, slide 1.62 Personnel Radiation Monitoring"
+  }
+ ],
+ "page_tags": []
+}

@@ -1,0 +1,1104 @@
+{
+ "module_id": "MS-04",
+ "slug": "ms-04-brittle-fracture",
+ "title": "Brittle Fracture",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1017-V2",
+ "handbook": "DOE-HDBK-1017/2-93",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Brittle Fracture and Vessel Thermal Stress",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, EXPLAIN the importance of controlling heatup and cooldown rates of the primary coolant system.",
+   "items": [],
+   "page": {
+    "pdf": 33,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Ductile fracture",
+      "b. Brittle fracture",
+      "c. Nil-ductility Transition (NDT) Temperature"
+     ],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the two changes made to reactor pressure vessels to decrease NDT.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the effect grain size and irradiation have on a material’s NDT.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "LIST the three conditions necessary for brittle fracture to occur.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the three conditions that tend to mitigate crack initiation.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "LIST the five factors that determine the fracture toughness of a material.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Given a stress-temperature diagram, IDENTIFY the following points:",
+     "items": [
+      "a. NDT (with no flaw)",
+      "b. NDT (with flaw)",
+      "c. Fracture transition elastic point",
+      "d. Fracture transition plastic point"
+     ],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the two bases used for developing a minimum pressurization-temperature curve.",
+     "items": [],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "EXPLAIN a typical minimum pressure-temperature curve including:",
+     "items": [
+      "a. Location of safe operating region",
+      "b. The way the curve will shift due to irradiation"
+     ],
+     "page": {
+      "pdf": 33,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "LIST the normal actions taken, in sequence, if the minimum pressurization-temperature curve is exceeded during critical operations.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "STATE the precaution for hydrostatic testing.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "IDENTIFY the basis used for determining heatup and cooldown rate limits.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "IDENTIFY the three components that will set limits on the heatup and cooldown rates.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "STATE the action typically taken upon discovering the heatup or cooldown rate has been exceeded.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "STATE the reason for using soak times.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "STATE when soak times become very significant.",
+     "items": [],
+     "page": {
+      "pdf": 34,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Ductile fracture is exhibited when metals can sustain substantial plastic strain or deformation before fracturing.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "id": "P2",
+   "quote": "Brittle fracture is exhibited when metals fracture with a relatively small or negligible amount of plastic strain.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "id": "P3",
+   "quote": "Ductile fracture is better than brittle fracture, because ductile fracture occurs over a period of time, where as brittle fracture is fast, and can occur (with flaws) at lower stress levels than a ductile fracture.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Nil-Ductility Transition (NDT) temperature is the temperature above which a material is ductile and below which it is brittle.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "id": "P5",
+   "quote": "Small grain size tends to increase ductility and results in a decrease in NDT temperature.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "The NDT temperature can also be lowered by small additions of selected alloying elements such as nickel and manganese to low-carbon steels.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "Consequently, during operation the reactor vessel is subjected to an increasing fluence (flux) of fast neutrons, and as a result the NDT temperature increases steadily.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "One of the biggest concerns with brittle fracture is that it can occur at stresses well below the yield strength (stress corresponding to the transition from elastic to plastic behavior) of the material, provided certain conditions are present.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "The temperature at which the yield and tensile strength coincide is the NDT temperature.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.3"
+  },
+  {
+   "id": "P10",
+   "quote": "Therefore, if a flaw exists, any failure at a temperature equal or below the NDT temperature for flawed material will be brittle.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "It should be noted that smaller grain size, higher temperature, and lower stress tend to mitigate crack initiation.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "Larger grain size, lower temperatures, and higher stress tend to favor crack propagation.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P13",
+   "quote": "There is a stress level below which a crack will not propagate at any temperature.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P14",
+   "quote": "the crack will initiate and propagate through the material at great speeds (speed of sound).",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P15",
+   "quote": "Fracture toughness is an indication of the amount of stress required to propagate a preexisting flaw.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P16",
+   "quote": "The intersection of the crack arrest curve with the yield curve (Curve B) is called the fracture transition elastic (FTE) point.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P17",
+   "quote": "The temperature corresponding with this point is normally about 120°F above the NDT temperature.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P18",
+   "quote": "Above this temperature, only ductile fractures occur.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+  },
+  {
+   "id": "P19",
+   "quote": "For greater safety, it is desirable that operation be limited above the FTE temperature, or NDT + 60°F.",
+   "sec": "Brittle Fracture Mechanism",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.5"
+  },
+  {
+   "id": "P20",
+   "quote": "Minimum pressurization-temperature (MPT) curves specify the temperature and pressure limitations for reactor plant operation.",
+   "sec": "Minimum Pressurization-Temperature Curves",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+  },
+  {
+   "id": "P21",
+   "quote": "They are based on reactor vessel and head stress limitations and the need to preclude reactor vessel and head brittle fracture.",
+   "sec": "Minimum Pressurization-Temperature Curves",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+  },
+  {
+   "id": "P22",
+   "quote": "Note that the safe operating region is to the right of the reactor vessel MPT curve.",
+   "sec": "Minimum Pressurization-Temperature Curves",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+  },
+  {
+   "id": "P23",
+   "quote": "MPT curve will shift to the right due to irradiation.",
+   "sec": "Minimum Pressurization-Temperature Curves",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.10"
+  },
+  {
+   "id": "P24",
+   "quote": "The precaution to be observed when performing a hydrostatic test is to make sure the pressure is consistent with plant temperatures.",
+   "sec": "Minimum Pressurization-Temperature Curves",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.10"
+  },
+  {
+   "id": "P25",
+   "quote": "Heatup and cooldown rate limits are based upon impact on the future fatigue life of the plant.",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  },
+  {
+   "id": "P26",
+   "quote": "The heatup and cooldown rate limits ensure that the plant's fatigue life is equal to or greater than the plant's operational life.",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  },
+  {
+   "id": "P27",
+   "quote": "Large components such as flanges, reactor vessel head, and the vessel itself are the limiting components.",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  },
+  {
+   "id": "P28",
+   "quote": "Usually exceeding the heatup or cooldown rate limits requires only an assessment of the impact on the future fatigue life of the plant.",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  },
+  {
+   "id": "P29",
+   "quote": "Soak times are used so that heating can be carefully controlled.",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.12"
+  },
+  {
+   "id": "P30",
+   "quote": "Become very significant if system is at room temperature or below and very close to RTNDT temperature limitations",
+   "sec": "Heatup and Cooldown Rate Limits",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Ductile and brittle fracture",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "ms-04-fig1",
+     "num": 1,
+     "cap": "Basic Fracture Types",
+     "alt": "An original test specimen, a brittle fracture with a jagged flat break, and a ductile fracture with necked ends.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    },
+    {
+     "t": "p",
+     "text": "In brittle fracture, cracks propagate rapidly, and failure results from cleavage, or splitting along definite planes.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Why is ductile fracture better than brittle fracture?",
+     "o": [
+      "It occurs only at low temperature",
+      "It occurs over a period of time, while brittle fracture is fast",
+      "It occurs at lower stress",
+      "It leaves no cracks"
+     ],
+     "a": 1,
+     "x": "Ductile fracture occurs over a period of time, whereas brittle fracture is fast and can occur, with flaws, at lower stress levels.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is brittle fracture?",
+     "o": [
+      "Fracture with a relatively small or negligible amount of plastic strain",
+      "Fracture after substantial plastic strain",
+      "Slow cracking under constant load",
+      "Failure by general corrosion"
+     ],
+     "a": 0,
+     "x": "Brittle fracture is exhibited when metals fracture with a relatively small or negligible amount of plastic strain.",
+     "p": "P2"
+    }
+   ]
+  },
+  {
+   "title": "Nil-ductility transition temperature",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Many steels are ductile at elevated temperatures and brittle at low temperatures.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "NDT is not precise. It varies with prior mechanical and heat treatment and with the nature and amounts of impurity elements, and is found by a drop-weight test such as the Izod or Charpy test.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Grain size is controlled by heat treatment in the specifications and manufacturing of reactor vessels.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "The reactor vessel is continuously exposed to fast neutrons that escape from the core.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "During shutdown or an abnormal cooldown, the temperature may fall below the NDT value while the internal pressure is still high, and the vessel is then susceptible to brittle fracture.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q379",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.2",
+     "q": "What two changes are made to reactor pressure vessels to decrease NDT?",
+     "o": [
+      "Smaller grain size and small additions of alloying elements such as nickel and manganese",
+      "Larger grain size and more carbon",
+      "Thicker walls and higher pressure",
+      "Cladding and cold working"
+     ],
+     "a": 0,
+     "x": "Changes made to decrease NDT include use of smaller grain size and small additions of selected alloying elements such as nickel and manganese to low-carbon steels.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.3",
+     "q": "What happens to the NDT temperature of a reactor vessel during operation?",
+     "o": [
+      "It decreases steadily",
+      "It stays the same",
+      "It cycles up and down with power",
+      "It increases steadily"
+     ],
+     "a": 3,
+     "x": "The vessel is subjected to an increasing fluence of fast neutrons, and as a result the NDT temperature increases steadily.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Conditions for brittle fracture",
+   "eo": [
+    "1.4",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "A flaw such as a crack",
+      "Stress sufficient to develop a small deformation at the crack tip",
+      "Temperature at or below NDT"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "ms-04-fig2",
+     "num": 2,
+     "cap": "Stress-Temperature Diagram for Crack Initiation and Arrest",
+     "alt": "Stress against temperature: tensile strength curve A, yield strength curve B, tensile strength with flaw curve C, and crack arrest curve D. NDT with no flaw is at 10°F, NDT with a small flaw at 60°F, FTE at 70°F, and FTP where curves A and D meet.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.3"
+    },
+    {
+     "t": "p",
+     "text": "As temperature goes down, tensile strength (Curve A) and yield strength (Curve B) increase. At some low temperature, on the order of 10°F for carbon steel, they coincide.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "When a small flaw is present, tensile strength follows dashed Curve C. About 50°F above the no-flaw NDT temperature, it drops to the yield curve, and where Curves C and B meet there is a new NDT temperature.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q385",
+     "eo": "1.7"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which is one of the three conditions necessary for brittle fracture?",
+     "o": [
+      "A flaw such as a crack",
+      "A temperature well above NDT",
+      "A low stress level with no flaws",
+      "A small grain size"
+     ],
+     "a": 0,
+     "x": "Brittle fracture requires a flaw such as a crack, stress sufficient to develop a small deformation at the crack tip, and a temperature at or below NDT.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.7",
+     "q": "On a stress-temperature diagram, where is the NDT temperature with no flaw?",
+     "o": [
+      "Where the crack arrest curve meets the yield curve",
+      "Where the crack arrest curve meets the tensile curve",
+      "At the lower fracture propagation stress",
+      "Where the yield and tensile strength coincide"
+     ],
+     "a": 3,
+     "x": "The temperature at which the yield and tensile strength coincide is the NDT temperature.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Crack initiation and fracture toughness",
+   "eo": [
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Brittle failure generally occurs because a flaw or crack propagates through the material. If a plastic flaw exists at the tip, the metal around the crack supports the stress and the structure is not endangered.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "When brittle fracture occurs,",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "This stress level is called the lower fracture propagation stress. As temperature increases, a higher stress is needed for a crack to propagate. That relationship is the crack arrest curve, Curve D.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Metal composition",
+      "Metal temperature",
+      "Extent of deformations to the crystal structure",
+      "Metal grain size",
+      "Metal crystalline form"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which conditions tend to mitigate crack initiation?",
+     "o": [
+      "Larger grain size, lower temperature, and higher stress",
+      "Smaller grain size, lower temperature, and higher stress",
+      "Larger grain size, higher temperature, and lower stress",
+      "Smaller grain size, higher temperature, and lower stress"
+     ],
+     "a": 3,
+     "x": "Smaller grain size, higher temperature, and lower stress tend to mitigate crack initiation.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.6",
+     "q": "Which is one of the five factors that determine fracture toughness?",
+     "o": [
+      "Reactor power",
+      "Metal grain size",
+      "Vessel diameter",
+      "Coolant flow rate"
+     ],
+     "a": 1,
+     "x": "The factors are metal composition, metal temperature, extent of deformations to the crystal structure, metal grain size, and metal crystalline form.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.6",
+     "q": "What is fracture toughness?",
+     "o": [
+      "An indication of the amount of stress required to propagate a preexisting flaw",
+      "The temperature at which a metal becomes brittle",
+      "The work to deform a cubic inch of metal",
+      "The hardness of a metal"
+     ],
+     "a": 0,
+     "x": "Fracture toughness is an indication of the amount of stress required to propagate a preexisting flaw.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "FTE and FTP",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "The FTE temperature is normally about 60°F above the NDT temperature, and is also known as the Reference Temperature - Nil-ductility Transition (RTNDT). It is the temperature above which plastic deformation accompanies all fractures.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "The intersection of the crack arrest curve (Curve D) and the tensile strength curve (Curve A) is the fracture transition plastic (FTP) point.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "ms-04-fig3",
+     "num": 3,
+     "cap": "Fracture Diagram",
+     "alt": "Stress against temperature relative to NDT, with fracture initiation curves for 1, 8, 12, and 24 inch flaws, the crack arrest curve, FTE, and FTP.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Operation must be above the NDT temperature to be certain that no brittle fracture can occur.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Under those conditions, no brittle fracture can occur for purely elastic loads.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "Where is the fracture transition elastic (FTE) point on a stress-temperature diagram?",
+     "o": [
+      "Where Curve C meets Curve B",
+      "Where the crack arrest curve meets the yield curve",
+      "Where the crack arrest curve meets the tensile strength curve",
+      "Where yield and tensile strength coincide"
+     ],
+     "a": 1,
+     "x": "The intersection of the crack arrest curve with the yield curve (Curve B) is called the fracture transition elastic (FTE) point.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.7",
+     "q": "About how far above NDT is the fracture transition plastic (FTP) temperature?",
+     "o": [
+      "10°F",
+      "60°F",
+      "120°F",
+      "300°F"
+     ],
+     "a": 2,
+     "x": "The FTP temperature is normally about 120°F above the NDT temperature.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Minimum pressurization-temperature curves",
+   "eo": [
+    "1.8",
+    "1.9",
+    "1.10",
+    "1.11"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "The curve ensures adequate operating margin away from the crack arrest curve. Curves used by operations also include instrument error.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "This shift accounts for the increased brittleness or decreased ductility from neutron irradiation.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Scram reactor",
+      "Cool down and depressurize",
+      "Conduct engineering evaluation prior to further plant operation"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q380",
+     "eo": "1.9"
+    },
+    {
+     "existing": "Q381",
+     "eo": "1.10"
+    },
+    {
+     "eo": "1.8",
+     "q": "What are minimum pressurization-temperature curves based on?",
+     "o": [
+      "Pump seal limits and tank level",
+      "Neutron flux and control rod worth",
+      "Reactor vessel and head stress limitations and preventing vessel and head brittle fracture",
+      "Fuel temperature limits and coolant flow"
+     ],
+     "a": 2,
+     "x": "They are based on reactor vessel and head stress limitations and the need to preclude reactor vessel and head brittle fracture.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.9",
+     "q": "Where is the safe operating region on an MPT curve?",
+     "o": [
+      "To the left of the curve",
+      "Above the curve",
+      "Exactly on the curve",
+      "To the right of the curve"
+     ],
+     "a": 3,
+     "x": "The safe operating region is to the right of the reactor vessel MPT curve.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.11",
+     "q": "What is the precaution for hydrostatic testing?",
+     "o": [
+      "Make sure the pressure is consistent with plant temperatures",
+      "Make sure the test is at the lowest temperature",
+      "Make sure the reactor is critical",
+      "Make sure the relief valves are removed"
+     ],
+     "a": 0,
+     "x": "The precaution is to make sure the pressure is consistent with plant temperatures.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Heatup and cooldown rate limits",
+   "eo": [
+    "1.12",
+    "1.13",
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "Usually the most limiting component sets the heatup and cooldown rates.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "This may depend on the individual plant and its limiting components.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.12"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q382",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.13",
+     "q": "Which components set the limits on heatup and cooldown rates?",
+     "o": [
+      "Large components such as flanges, the vessel head, and the vessel",
+      "Small instrument lines",
+      "Fuel assemblies",
+      "Electrical cables"
+     ],
+     "a": 0,
+     "x": "Large components such as flanges, reactor vessel head, and the vessel itself are the limiting components.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.14",
+     "q": "What is typically required when a heatup or cooldown rate limit is exceeded?",
+     "o": [
+      "An immediate reactor scram",
+      "Replacement of the vessel head",
+      "A hydrostatic test",
+      "Only an assessment of the impact on future fatigue life"
+     ],
+     "a": 3,
+     "x": "Usually exceeding the heatup or cooldown rate limits requires only an assessment of the impact on the future fatigue life of the plant.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Soak times",
+   "eo": [
+    "1.15",
+    "1.16"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Soak times may be required during heatup, especially when large limiting components are involved.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "This minimizes thermal stresses. For example, the coolant is heated to a specified temperature and held there for a set time, so the metal in a large component heats more evenly from the hot side to the cold side.",
+     "cite": "DOE-HDBK-1017/2-93 MS-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "Why are soak times used?",
+     "o": [
+      "To test the relief valves",
+      "To minimize thermal stresses by carefully controlling heating",
+      "To reduce neutron flux",
+      "To remove oxygen from the coolant"
+     ],
+     "a": 1,
+     "x": "Soak times are used so that heating can be carefully controlled, minimizing thermal stresses.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.16",
+     "q": "When do soak times become very significant?",
+     "o": [
+      "At room temperature or below and very close to RTNDT limitations",
+      "At full power",
+      "Just before a scram",
+      "At maximum system temperature"
+     ],
+     "a": 0,
+     "x": "Soak times become very significant if the system is at room temperature or below and very close to RTNDT temperature limitations.",
+     "p": "P30"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Find the temperature after an NDT shift",
+   "eo": "1.7",
+   "page": 5,
+   "problem": "The FTE was 60°F at the beginning of vessel life, and the NDT changed by 300°F over time. What temperature must the coolant be above before full system pressure can be applied?",
+   "steps": [
+    "Irradiation raises the NDT, and the FTE moves with it.",
+    "Add the shift to the starting FTE: 60°F + 300°F."
+   ],
+   "answer": "More than 360°F.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.5"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is ductile fracture?",
+   "a": "Fracture of a metal that can sustain substantial plastic strain or deformation before fracturing.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What three conditions tend to mitigate crack initiation?",
+   "a": "Smaller grain size, higher temperature, and lower stress.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What five factors determine the fracture toughness of a metal?",
+   "a": "Metal composition, metal temperature, extent of deformations to the crystal structure, metal grain size, and metal crystalline form.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "How far above NDT are the FTE and FTP temperatures?",
+   "a": "FTE is normally about 60°F above NDT, and FTP about 120°F above NDT.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "Where is the safe operating region on an MPT curve?",
+   "a": "To the right of the curve.",
+   "p": "P22",
+   "place": null
+  },
+  {
+   "q": "Why are soak times used?",
+   "a": "So heating can be carefully controlled, which minimizes thermal stresses.",
+   "p": "P29",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Ductile fracture follows substantial plastic strain, and brittle fracture follows a small or negligible amount.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "text": "NDT decreases due to smaller grain size and increases due to irradiation.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "text": "Brittle fracture requires a flaw such as a crack, stress sufficient to develop a small deformation at the crack tip, and a temperature at or below NDT.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "text": "MPT curves are based on reactor vessel and head stress limitations, and the safe operating region is to the right of the curve.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.10"
+  },
+  {
+   "text": "Heatup and cooldown rate limits are based upon impact on the future fatigue life of the plant.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  },
+  {
+   "text": "Soak times are used to minimize thermal stresses by controlling the heating rate.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.13"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Batch 9 decision: the MPT section uses the general text without Figures 4 and 5, and its page is tagged Needs sodium review. The PWR PCS curves, pressurizer and steam generator curves, and the relief valve setting on p.7 are left off.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.7"
+  },
+  {
+   "type": "Scope",
+   "note": "Figure 6 is left off because it shows pressure curves up to 2600 psig for the same kind of plant. The pressurizer limits and 24 hour cooldown on p.12 are left off, and so is the water-cooled reactor surveillance program on p.2.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.11"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Terminal objective 1.0 says primary coolant system. It stays verbatim, and the lesson teaches the limits in general terms.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.11"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.3 lists the third brittle fracture condition as a temperature low enough to promote brittle fracture. The p.6 summary says at or below NDT. The lesson uses the summary.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.6"
+  },
+  {
+   "type": "Exponent",
+   "note": "p.11 prints an allowed cycle count that extracts as 106. The lesson leaves it off.",
+   "cite": "DOE-HDBK-1017/2-93 MS-04 p.11"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}

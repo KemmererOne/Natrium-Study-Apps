@@ -1,0 +1,1069 @@
+{
+ "module_id": "PR-03",
+ "slug": "pr-03-electrical-diagrams-and-schematics",
+ "title": "Electrical Diagrams and Schematics",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V1",
+ "handbook": "DOE-HDBK-1016/1-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Breakers, Relays, and Disconnects",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an electrical print, READ and INTERPRET facility electrical diagrams and schematics.",
+   "items": [],
+   "page": {
+    "pdf": 95,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the symbols used on engineering electrical drawings for the following components:",
+     "items": [
+      "a. Single-phase circuit breaker",
+      "b. Three-phase circuit breaker",
+      "c. Thermal overload",
+      "d. \"a\" contact",
+      "e. \"b\" contact",
+      "f. Time-delay contacts",
+      "g. Relay",
+      "h. Potential transformer",
+      "i. Current transformer",
+      "j. Single-phase transformer",
+      "k. Delta-wound transformer",
+      "l. Wye-wound transformer",
+      "m. Electric motor (open/closed)",
+      "n. Meters",
+      "o. Junctions (open/closed)",
+      "p. In-line fuses",
+      "q. Single switch",
+      "r. Multiple-position switch",
+      "s. Pushbutton switch",
+      "t. Limit switches",
+      "u. Turbine-driven generator",
+      "v. Motor-generator set",
+      "w. Generator (wye or delta)",
+      "x. Diesel-driven generator",
+      "y. Battery"
+     ],
+     "page": {
+      "pdf": 95,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given an electrical drawing of a circuit containing a transformer, DETERMINE the direction of current flow, as shown by the transformer's symbol.",
+     "items": [],
+     "page": {
+      "pdf": 95,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "IDENTIFY the symbols and/or codes used on engineering electrical drawings to depict the relationship between the following components:",
+     "items": [
+      "a. Relay and its contacts",
+      "b. Switch and its contacts",
+      "c. Interlocking device and its interlocked equipment"
+     ],
+     "page": {
+      "pdf": 95,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the condition in which all electrical devices are shown, unless otherwise noted on the diagram or schematic.",
+     "items": [],
+     "page": {
+      "pdf": 96,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "Given a simple electrical schematic and initial conditions, DETERMINE the condition of the specified component (i.e., energized/de-energized, open/closed).",
+     "items": [],
+     "page": {
+      "pdf": 96,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given a simple electrical schematic and initial conditions, IDENTIFY the power sources and/or loads and their status (i.e., energized or de-energized).",
+     "items": [],
+     "page": {
+      "pdf": 96,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The marks usually appear as dots on a transformer symbol, as shown",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "On the primary side of the transformer the dot indicates current in; on the secondary side the dot indicates current out.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+  },
+  {
+   "id": "P3",
+   "quote": "If at a given instant the current is flowing into the transformer at the dotted end of the primary coil, it will be flowing out of the transformer at the dotted end of the secondary coil.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "The term \"pole,\" as used to describe the switches in Figure 3, refers to the number of points at which current can enter a switch.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "The term \"throw\" used in Figure 3 refers to the number of circuits that each pole of a switch can complete or control.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "Figure 4 provides the common symbols that are used to denote automatic switches and explains how the symbol indicates switch status or actuation.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "In addition to the graphic symbol, most drawings will also provide the rating of the fuse next to the symbol.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "When fuses, breakers, or switches are used in three-phase systems, the three-phase symbol combines the single-phase symbol in triplicate as shown in Figure 6.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.6"
+  },
+  {
+   "id": "P9",
+   "quote": "The chevrons represent the point at which the breaker disconnects from the circuit when removed.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.6"
+  },
+  {
+   "id": "P10",
+   "quote": "Figure 7 shows the common symbols for relays, contacts, connectors, lines, resistors, and other miscellaneous electrical components.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.6"
+  },
+  {
+   "id": "P11",
+   "quote": "The symbols in Figure 8 are used to identify the larger components that may be found in an electrical diagram or schematic.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "Usually the amount of detail will reflect the relative importance of a component to the particular diagram.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.7"
+  },
+  {
+   "id": "P13",
+   "quote": "There are three ways to show electrical circuits.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+  },
+  {
+   "id": "P14",
+   "quote": "The two most commonly used are the wiring diagram and the schematic diagram.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "This type of diagram depicts the major power sources, breakers, loads, and protective devices, thereby providing a useful overall view of the flow of power in a large electrical power distribution system.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.12"
+  },
+  {
+   "id": "P16",
+   "quote": "Unless otherwise stated, the common units are kilowatts (kW).",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.12"
+  },
+  {
+   "id": "P17",
+   "quote": "For electrical schematics that detail individual relays and contacts, the components are always shown in the de-energized condition (also called the shelf- state).",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+  },
+  {
+   "id": "P18",
+   "quote": "The number/letter code for each relay is carried by all associated contacts.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+  },
+  {
+   "id": "P19",
+   "quote": "If space permits, the relationship may be emphasized by drawing a dashed line (symbolizing a mechanical connection) between the relay and its contact(s) or a dashed box around them as shown in Figure 14 (B).",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+  },
+  {
+   "id": "P20",
+   "quote": "Such switches are called ganged switches and are symbolized by connecting them with a dashed line as shown in Figure 15 (A).",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+  },
+  {
+   "id": "P21",
+   "quote": "In that example, closing Switch 1 also closes Switch 2.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+  },
+  {
+   "id": "P22",
+   "quote": "The dashed line is also used to indicate a mechanical interlock between two circuit components.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+  },
+  {
+   "id": "P23",
+   "quote": "In system single line diagrams, transformers are often represented by the symbol for a single- phase air core transformer; however, that does not necessarily mean that the transformer has an air core or that it is single phase.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+  },
+  {
+   "id": "P24",
+   "quote": "Electrical components, such as relays, are drawn in the de-energized state unless otherwise noted on the diagram.",
+   "sec": "Electrical Diagrams and Schematics",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.17"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Transformer symbols and polarity",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "pr-03-fig1",
+     "num": 1,
+     "cap": "Basic Transformer Symbols",
+     "alt": "Transformer symbols. Figure A shows air core and iron core transformers. Figure B shows three-phase wye, ungrounded or grounded, three-phase delta, potential, and current transformer symbols.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Figure 1 (A) shows the basic transformer symbols, and Figure 1 (B) shows how they are modified for specific types and applications.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Polarity marks are sometimes used to show current flow, which gives the phase relationship between the input and output terminals.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig2",
+     "num": 2,
+     "cap": "Transformer Polarity",
+     "alt": "Two transformers with dots on the primary and secondary windings, and arrows showing current flowing in at the primary dot and out at the secondary dot.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q451",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "At a given instant, current flows into the dotted end of a transformer primary. What is the current doing at the dotted end of the secondary?",
+     "o": [
+      "Stopped",
+      "Flowing to ground only",
+      "Flowing out of the transformer",
+      "Flowing into the transformer"
+     ],
+     "a": 2,
+     "x": "If current is flowing into the transformer at the dotted end of the primary coil, it will be flowing out of the transformer at the dotted end of the secondary coil.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Switches",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "pr-03-fig3",
+     "num": 3,
+     "cap": "Switches and Switch Symbols",
+     "alt": "Typical switches with symbols for single pole and double pole, single throw and double throw switches, and normally open, normally closed, two-position, and multi-position pushbutton switches.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "A switch may have as many poles as it needs to perform its function.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig4",
+     "num": 4,
+     "cap": "Switch and Switch Status Symbology",
+     "alt": "Automatic switch chart: limit switches, time delay switches marked TDC and TDO, and switches actuated by flow, liquid level, pressure or vacuum, and temperature.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What does the term pole refer to on a switch?",
+     "o": [
+      "The voltage rating of the switch",
+      "The number of points at which current can enter a switch",
+      "The number of circuits each pole can complete",
+      "The number of contacts closed at rest"
+     ],
+     "a": 1,
+     "x": "Pole refers to the number of points at which current can enter a switch.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "What does the term throw refer to on a switch?",
+     "o": [
+      "The number of points where current can enter",
+      "The time delay of the switch",
+      "The number of circuits that each pole can complete or control",
+      "The distance the switch handle moves"
+     ],
+     "a": 2,
+     "x": "Throw refers to the number of circuits that each pole of a switch can complete or control.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Fuses and breakers",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "pr-03-fig5",
+     "num": 5,
+     "cap": "Fuse and Circuit Breaker Symbols",
+     "alt": "Plug and cartridge fuses with their single line symbols, and thermal and magnetic circuit breakers with their symbols.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The rating is usually in amps.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig6",
+     "num": 6,
+     "cap": "Three-phase and Removable Breaker Symbols",
+     "alt": "A three-phase breaker drawn as three single-phase breaker symbols, and a removable breaker with chevrons on each side.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.6"
+    },
+    {
+     "t": "p",
+     "text": "A removable breaker is a standard breaker symbol placed between a set of chevrons.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "How is a three-phase breaker symbol made?",
+     "o": [
+      "The letters 3P are added to the single-phase symbol",
+      "The single-phase symbol is drawn in triplicate",
+      "A triangle is added to the single-phase symbol",
+      "A circle is drawn around the single-phase symbol"
+     ],
+     "a": 1,
+     "x": "The three-phase symbol combines the single-phase symbol in triplicate.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.1",
+     "q": "What do chevrons on a breaker symbol represent?",
+     "o": [
+      "The direction of current flow",
+      "The point at which the breaker disconnects from the circuit when removed",
+      "The breaker trip setpoint",
+      "A thermal overload"
+     ],
+     "a": 1,
+     "x": "The chevrons represent the point at which the breaker disconnects from the circuit when removed.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Relays, contacts, and other components",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig7",
+     "num": 7,
+     "cap": "Common Electrical Component Symbols",
+     "alt": "Symbol chart. Relays and contacts: basic relay, A type make contact drawn as two parallel lines, B type break contact with a slash, transfer, time delay, and sequential contacts. Also connectors, conductors, paths crossing and joining, resistors, ground, capacitor, inductor, thermocouple, lamp, and meters.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.7"
+    },
+    {
+     "t": "list",
+     "items": [
+      "\"a\" type contact (make): two parallel lines",
+      "\"b\" type contact (break): two parallel lines with a slash through them",
+      "TDC: time delay to close",
+      "TDO: time delay to open",
+      "Path junction: a dot where the lines meet",
+      "Meters: a circle marked V for voltmeter, A for ammeter, or OHM for ohmmeter"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "On an electrical drawing, how does a \"b\" contact symbol differ from an \"a\" contact symbol?",
+     "o": [
+      "It has a circle around the parallel lines",
+      "It has three parallel lines",
+      "It has a dot on each line",
+      "It has a slash through the parallel lines"
+     ],
+     "a": 3,
+     "x": "Figure 7 shows the \"a\" type (make) contact as two parallel lines, and the \"b\" type (break) contact with a slash through them.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.1",
+     "q": "What do the letters TDO mean next to a contact?",
+     "o": [
+      "Time delay override",
+      "Trip on deenergize only",
+      "Transfer during operation",
+      "Time delay to open"
+     ],
+     "a": 3,
+     "x": "Figure 7 shows TDC for time delay to close and TDO for time delay to open.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Large components",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig8",
+     "num": 8,
+     "cap": "Large Common Electrical Components",
+     "alt": "Motor and generator symbols: circles marked MOT or M and GEN or G, single, double, and three-phase wye and delta windings, turbine driven generator, diesel driven generator, motor generator, and single and multiple cell batteries.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Turbine driven generator: a triangle joined to a GEN circle, or a circle marked TG",
+      "Diesel driven generator: a box joined to a circle, or a circle marked DG",
+      "Motor generator: touching circles marked M and G",
+      "Battery: parallel long and short lines"
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which letters mark a diesel driven generator on an electrical drawing?",
+     "o": [
+      "DG",
+      "TG",
+      "MG",
+      "GEN only"
+     ],
+     "a": 0,
+     "x": "Figure 8 shows a circle marked DG for a diesel driven generator. TG marks a turbine driven generator.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Types of electrical diagrams",
+   "eo": [
+    "1.0"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "They are wiring, schematic, and pictorial diagrams.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Wiring diagrams emphasize connections between elements. Schematic diagrams emphasize the flow of the system.",
+      "Wiring diagrams use simplified pictorials that clearly resemble components. Schematic symbols show function but do not look like the equipment.",
+      "Wiring diagrams place equipment and wiring to approximate the actual physical location. Schematic layout shows the flow of the system as it functions."
+     ],
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig9",
+     "num": 9,
+     "cap": "Comparison of an Electrical Schematic and a Pictorial Diagram",
+     "alt": "A simple circuit with a plug and lamps drawn as a schematic and as a pictorial.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The pictorial diagram is usually not found in engineering applications, because it is not nearly as useful for repairing a circuit or finding how it operates.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig10",
+     "num": 10,
+     "cap": "Comparison of an Electrical Schematic and a Wiring Diagram",
+     "alt": "Air drying unit circuit drawn as a schematic in Figure A and as a wiring diagram with a color table in Figure B.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.10"
+    },
+    {
+     "t": "p",
+     "text": "An electrical single line is a special schematic used for a large power distribution system.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "On power distribution single lines, even for a 3-phase system, each load is commonly a simple circle with a description and its power rating.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.0",
+     "q": "Which electrical diagram places equipment to approximate its actual physical location?",
+     "o": [
+      "Wiring diagram",
+      "Schematic diagram",
+      "Single line",
+      "Block diagram"
+     ],
+     "a": 0,
+     "x": "Table 1 says wiring diagrams place equipment and wiring to approximate actual physical location, while schematic layout shows the flow of the system.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.0",
+     "q": "A load circle on a power distribution single line is marked 350. Unless otherwise stated, what are the units?",
+     "o": [
+      "Kilowatts",
+      "Amps",
+      "Volts",
+      "Horsepower"
+     ],
+     "a": 0,
+     "x": "Unless otherwise stated, the common units are kilowatts (kW).",
+     "p": "P16"
+    },
+    {
+     "eo": "1.0",
+     "q": "What does an electrical single line show?",
+     "o": [
+      "Every relay contact in a circuit",
+      "The physical route of each cable",
+      "The internal parts of each breaker",
+      "The major power sources, breakers, loads, and protective devices"
+     ],
+     "a": 3,
+     "x": "This type of diagram depicts the major power sources, breakers, loads, and protective devices.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Reading relays and contacts",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The condition of each component must be understood first.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Each relay is assigned a specific number and/or letter combination.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig14",
+     "num": 14,
+     "cap": "Examples of Relays and Relay Contacts",
+     "alt": "Figure A: motor start circuit with relay coil M1 and holding contacts marked M1. Figure B: a relay and contact joined by a dashed line or a dashed box. Figure C: a switch and a second set of contacts joined by a dashed line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "Figure 14 (C) shows a switch and a second set of contacts operated by that switch.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "Unless otherwise noted, in what condition are devices shown on an electrical schematic?",
+     "o": [
+      "Energized",
+      "Normal operating",
+      "Tripped",
+      "De-energized"
+     ],
+     "a": 3,
+     "x": "Electrical components, such as relays, are drawn in the de-energized state unless otherwise noted on the diagram.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.3",
+     "q": "How do you find the contacts operated by relay M1 on a schematic?",
+     "o": [
+      "Each associated contact carries the code M1",
+      "They always sit on the line below the relay",
+      "The notes list them by grid",
+      "They are drawn in a different line weight"
+     ],
+     "a": 0,
+     "x": "The number/letter code for each relay is carried by all associated contacts.",
+     "p": "P18"
+    },
+    {
+     "existing": "Q452",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.5",
+     "q": "A relay coil on a schematic is energized. An \"a\" contact with its code is drawn open. What is that contact's state now?",
+     "o": [
+      "Tripped",
+      "Unknown from the drawing",
+      "Closed",
+      "Open"
+     ],
+     "a": 2,
+     "x": "Components are drawn in the de-energized condition, and the \"a\" type contact is a make contact, so energizing the relay closes it.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Ganged switches and interlocks",
+   "eo": [
+    "1.3",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A switch may contain several sets of contacts, or small internal switches, shown individually on a schematic. The position of one may affect another.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig15",
+     "num": 15,
+     "cap": "Ganged Switch Symbology",
+     "alt": "Figure A: ganged breaker and switches joined by a dashed line. Figure B: two breakers joined by a dashed mechanical interlock line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Two breakers on a drawing are joined by a dashed line. What does that show?",
+     "o": [
+      "A mechanical interlock between them",
+      "A temporary jumper",
+      "A cable in conduit",
+      "A spare circuit"
+     ],
+     "a": 0,
+     "x": "The dashed line is also used to indicate a mechanical interlock between two circuit components.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.5",
+     "q": "Switch 1 and Switch 2 are ganged, and Switch 1 is closed. What is the state of Switch 2?",
+     "o": [
+      "Interlocked open",
+      "Unknown from the drawing",
+      "Closed",
+      "Open"
+     ],
+     "a": 2,
+     "x": "In the handbook example, closing Switch 1 also closes Switch 2.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Transformers on single lines",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Single lines give only general functional information, like a P&ID for a piping system, so the reader must investigate further if more detail is needed.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.15"
+    },
+    {
+     "t": "p",
+     "text": "In three-phase diagrams, a small symbol may be placed beside the primary and secondary to show the type of windings.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "pr-03-fig16",
+     "num": 16,
+     "cap": "Three-Phase Symbols",
+     "alt": "Figure A: Y shapes for three-phase wye and triangles for three-phase delta, ungrounded or grounded. Figure B: these marks beside transformer windings on a single line.",
+     "cite": "DOE-HDBK-1016/1-93 PR-03 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "A system single line shows a single-phase air core transformer symbol. What does that prove about the transformer?",
+     "o": [
+      "It is a current transformer",
+      "Not necessarily anything about its core or phases",
+      "It has an air core",
+      "It is single phase"
+     ],
+     "a": 1,
+     "x": "That symbol does not necessarily mean that the transformer has an air core or that it is single phase.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which mark beside a transformer winding shows a delta connection?",
+     "o": [
+      "A Y shape",
+      "A dot",
+      "A circle",
+      "A triangle"
+     ],
+     "a": 3,
+     "x": "Figure 16 shows a triangle for three-phase delta and a Y shape for three-phase wye.",
+     "p": "P23"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Read a schematic",
+   "eo": "1.5",
+   "page": 20,
+   "fig": {
+    "t": "fig",
+    "id": "pr-03-fig17",
+    "num": 17,
+    "cap": "Example 1",
+    "alt": "Schematic of a hydraulic machine control circuit: 440 volt three-phase power feeds a 440 to 110 volt transformer. Numbered lines 1 to 21 run between two vertical lines, with fuses, pushbuttons, limit switches, relay contacts, coils, and lamps.",
+    "cite": "DOE-HDBK-1016/1-93 PR-03 p.19"
+   },
+   "problem": "Using this diagram, find its type, the fuse rating protecting the motor controller circuit, the component labeled ITDR in line 13, and the component at the far right of line 4.",
+   "steps": [
+    "The diagram uses symbols with numbered lines between two power lines, so it is a schematic.",
+    "The fuses in line 1 are marked 10.",
+    "ITDR in line 13 is a time delay closing switch.",
+    "The lamp at the far right of line 4 is marked G."
+   ],
+   "answer": "Schematic; 10 amps; a time delay closing switch; a green lamp.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.20"
+  },
+  {
+   "title": "Trace switches and contacts",
+   "eo": "1.5",
+   "page": 20,
+   "problem": "On the same schematic, which lines contain limit switches, and how many contacts are operated from relay 8CR?",
+   "steps": [
+    "Limit switches are marked LS: 1LS through 6LS.",
+    "Find every contact that carries the code 8CR."
+   ],
+   "answer": "Limit switches are in lines 7, 9, 11, 12, 14, and 15. Relay 8CR operates 4 contacts.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.20"
+  },
+  {
+   "title": "Read a system diagram",
+   "eo": "1.6",
+   "page": 22,
+   "fig": {
+    "t": "fig",
+    "id": "pr-03-fig18",
+    "num": 18,
+    "cap": "Example 2",
+    "alt": "System diagram: a 13.8 to 4.16 kV transformer feeds a 4160 volt bus through a drawout breaker. Breakers feed loads marked 2000, 350, 350, and 200, a 480 to 4160 volt transformer with a generator, and a feed to other busses.",
+    "cite": "DOE-HDBK-1016/1-93 PR-03 p.20"
+   },
+   "problem": "Using this diagram, find its type, the voltage on the main bus, the circuit breaker type, and the component in the lower left corner.",
+   "steps": [
+    "It shows the power sources, breakers, and loads of a system, so it is a system diagram.",
+    "The main bus is labeled 4160 V.",
+    "The chevrons on the breakers show they are drawout type.",
+    "The circle in the lower left is fed through the 480/4160 V transformer."
+   ],
+   "answer": "System diagram; 4.16 kV or 4160 V; drawout type; an (emergency) diesel generator.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.22"
+  },
+  {
+   "title": "Classify transformers",
+   "eo": "1.6",
+   "page": 22,
+   "problem": "On the same diagram, how many current transformers are there, what voltage enters the transformer in the lower left corner, and how is the upper left transformer classified?",
+   "steps": [
+    "Count the current transformers. The transformer in the upper right is a potential transformer, so it is not counted.",
+    "The lower left transformer is marked 480/4160 V, and 480 V is the generator side.",
+    "The upper left transformer has a delta mark on the primary and a grounded wye mark on the secondary."
+   ],
+   "answer": "3 current transformers; 480 V; delta primary, grounded wye secondary.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.22"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What does pole mean for a switch?",
+   "a": "The number of points at which current can enter a switch.",
+   "p": "P4",
+   "place": null
+  },
+  {
+   "q": "What does throw mean for a switch?",
+   "a": "The number of circuits that each pole of a switch can complete or control.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What do chevrons on a breaker symbol show?",
+   "a": "The point at which the breaker disconnects from the circuit when removed. The breaker is removable.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "How do you match a relay to its contacts on a schematic?",
+   "a": "The number/letter code for each relay is carried by all associated contacts.",
+   "p": "P18",
+   "place": null
+  },
+  {
+   "q": "What are ganged switches?",
+   "a": "Switches where the position of one affects another, shown by connecting them with a dashed line.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What are the common units for loads on a power distribution single line?",
+   "a": "Kilowatts (kW), unless otherwise stated.",
+   "p": "P16",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "This chapter covered the common symbols used on electrical diagrams and schematics.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.17"
+  },
+  {
+   "text": "Transformer polarity is shown by dots: the primary dot indicates current in, and the secondary dot indicates current out.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.17"
+  },
+  {
+   "text": "Switches, relays, and interlocked equipment commonly use dashed lines or boxes to show their relationships.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.17"
+  },
+  {
+   "text": "Electrical components, such as relays, are drawn in the de-energized state unless otherwise noted.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.17"
+  },
+  {
+   "text": "This chapter reviewed the material in the module through practice reading examples.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.23"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. These are general electrical symbols for all plant systems.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.2"
+  },
+  {
+   "type": "Objective",
+   "note": "Types of electrical diagrams have no enabling objective, so that page cites terminal objective 1.0.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.9"
+  },
+  {
+   "type": "Objective",
+   "note": "Objectives 1.5 and 1.6 ask for component and power status from initial conditions. The handbook examples ask only for identification, so the lesson teaches status through the de-energized rule, contact types, and ganged switches.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.18"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The answer on p.20 lists lines 3, 4, 5, 6, and 18 as pushbutton switches. Lines 5 and 6 of Figure 17 carry 1SS, marked MAN and AUTO, which looks like a selector switch. The pushbutton question is left out of the lesson.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.20"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Figure 17 spells the part ITDR in line 13 and 1TDR in line 12. The lesson uses the handbook's question and answer as printed.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.20"
+  },
+  {
+   "type": "Figure",
+   "note": "Figure 13, a plant single line, is left off because its labels are water reactor loads such as RX COOL PUMP and STEAM GEN FEED PUMP. Figures 11 and 12, an automobile circuit, are left off because Figure 10 makes the same comparison.",
+   "cite": "DOE-HDBK-1016/1-93 PR-03 p.12"
+  }
+ ],
+ "page_tags": []
+}

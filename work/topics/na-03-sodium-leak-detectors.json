@@ -1,0 +1,514 @@
+{
+ "module_id": "NA-03",
+ "slug": "na-03-sodium-leak-detectors",
+ "title": "Sodium Leak Detectors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": null,
+ "handbook": null,
+ "word_file": "Sodium Leak Detectors.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "TLO 6",
+   "text": "Sodium Leak Detectors",
+   "items": [],
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.1 TLO 6: Sodium Leak Detectors",
+   "enabling": []
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Primary sodium is radioactive",
+   "sec": "x",
+   "cite": "NRC slides ML19149A378, slide 25"
+  },
+  {
+   "id": "P2",
+   "quote": "Liquid sodium will burn in air",
+   "sec": "x",
+   "cite": "NRC slides ML19149A378, slide 25"
+  },
+  {
+   "id": "P3",
+   "quote": "Loss of sodium could impair heat transport systems",
+   "sec": "x",
+   "cite": "NRC slides ML19149A378, slide 25"
+  },
+  {
+   "id": "P4",
+   "quote": "Leaks can be detected by conductivity probes (usually in low spots below sodium-containing tanks) or by sensing of sodium aerosols",
+   "sec": "x",
+   "cite": "NRC slides ML19149A378, slide 25"
+  },
+  {
+   "id": "P5",
+   "quote": "Due to low pressure, sodium leaks are generally small and can be detected before larger piping breaks occur",
+   "sec": "x",
+   "cite": "NRC slides ML19149A433, slide 21"
+  },
+  {
+   "id": "P6",
+   "quote": "Contact detectors (spark plugs)",
+   "sec": "x",
+   "cite": "NRC slides ML19149A433, slide 21"
+  },
+  {
+   "id": "P7",
+   "quote": "automatically trips SPS-P pumps",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+  },
+  {
+   "id": "P8",
+   "quote": "spark plug type leak detectors function on the principal of fluid completing an open circuit.",
+   "sec": "x",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1"
+  },
+  {
+   "id": "P9",
+   "quote": "SPS leak detection uses devices such as wire and cable, spark plugs, and mutual inductance type sensors.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.2.2, p. 7.2-47"
+  },
+  {
+   "id": "P10",
+   "quote": "detects, collects, and contains sodium leaks to mitigate sodium fires",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+  },
+  {
+   "id": "P11",
+   "quote": "The specific type of sodium leak detector is based on the needs of the installation location and configuration.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "id": "P12",
+   "quote": "Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "id": "P13",
+   "quote": "Detectors will generally be based on conductivity detection with a self-test function.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "id": "P14",
+   "quote": "In areas where sodium reactions may occur (e.g., Intermediate Air Cooling stacks), smoke detection is provided.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "id": "P15",
+   "quote": "The sodium leak detectors activate an alarm within the MCR upon detection of sodium.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "id": "P16",
+   "quote": "Leak detection is provided at multiple points between pipe supports along all normally sodium containing systems",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3"
+  },
+  {
+   "id": "P17",
+   "quote": "The leak detectors are capable of detecting leaks within the entire length of pipe it covers.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.1.8, p. 8.2-3"
+  },
+  {
+   "id": "P18",
+   "quote": "Detection of small leaks helps prevent large leaks from occurring.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4"
+  },
+  {
+   "id": "P19",
+   "quote": "Annulus gas is recirculated and monitored for sodium buildup via absolute filter differential pressure changes, oxygen concentrations, and radiation levels.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Spark plug type detector operation",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Why sodium leaks must be detected",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Sodium leak detection is important for three reasons:",
+     "cite": "NRC slides ML19149A378, slide 25"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Sodium systems run at low pressure, so under the leak before break approach:",
+     "cite": "NRC slides ML19149A433, slide 21"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "",
+     "q": "Why does the leak before break approach suit sodium piping?",
+     "o": [
+      "Low pressure makes leaks generally small, so they can be detected before larger breaks",
+      "Sodium piping cannot leak at all",
+      "Sodium freezes at every leak and seals it",
+      "Water systems are routed beside the piping to detect leaks"
+     ],
+     "a": 0,
+     "x": "Because of the low pressure, sodium leaks are generally small and can be detected before larger piping breaks occur.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Types of sodium leak detectors",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NRC training slides list these ways of detecting sodium leaks:",
+     "cite": "NRC slides ML19149A433, slide 21"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Smoke detectors",
+      "Contact detectors (spark plugs)",
+      "Cable detectors",
+      "Aerosol monitors",
+      "Inspections"
+     ],
+     "cite": "NRC slides ML19149A433, slide 21"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Double-walled piping may also carry leak detectors in the gap between the walls.",
+     "cite": "NRC slides ML19149A433, slide 21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "",
+     "q": "Where are sodium conductivity probes usually located?",
+     "o": [
+      "Inside the fuel assemblies",
+      "On the outside of the containment wall",
+      "In low spots below sodium-containing tanks",
+      "At the top of the cover gas space"
+     ],
+     "a": 2,
+     "x": "Leaks can be detected by conductivity probes, usually in low spots below sodium-containing tanks.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Spark plug type detectors",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "So the detector's circuit is normally open, and leaking fluid closes it. The lesson plan's diagrams are pictures and are not used.",
+     "cite": "Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q509",
+     "eo": ""
+    }
+   ]
+  },
+  {
+   "title": "Leak detection at Natrium",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Sodium Leak Detection, Collection, and Containment System (NNA):",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.1, p. 7.5-10"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Sodium leakage from the reactor vessel into the guard vessel is watched through the cover gas system.",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.3.2.1, p. 7.2-28"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q84",
+     "eo": ""
+    },
+    {
+     "eo": "",
+     "q": "What detection principle will Natrium sodium leak detectors generally be based on?",
+     "o": [
+      "Conductivity detection with a self-test function",
+      "Ultrasonic detection",
+      "Neutron detection",
+      "Thermal expansion of a bimetal strip"
+     ],
+     "a": 0,
+     "x": "The PSAR says detectors will generally be based on conductivity detection with a self-test function.",
+     "p": "P13",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Ancillary Systems"
+     ]
+    },
+    {
+     "eo": "",
+     "q": "In the Natrium design, where are sodium leak detectors located?",
+     "o": [
+      "Only on the reactor head",
+      "Only in the main control room",
+      "Only in the turbine building",
+      "Within leak mitigative features, at vulnerable valves, and inside catch pans"
+     ],
+     "a": 3,
+     "x": "Sodium leak detectors are located within leak mitigative features, at vulnerable valves, and inside catch pans.",
+     "p": "P12",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Ancillary Systems"
+     ]
+    },
+    {
+     "eo": "",
+     "q": "What do Natrium sodium leak detectors activate on detection of sodium?",
+     "o": [
+      "A reactor scram",
+      "A water fire suppression system",
+      "A sodium dump to the guard vessel",
+      "An alarm within the main control room"
+     ],
+     "a": 3,
+     "x": "The sodium leak detectors activate an alarm within the MCR upon detection of sodium.",
+     "p": "P15",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Ancillary Systems"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "What a leak signal does",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "NNA leak detection signals support automatic actions for the primary Sodium Processing System (SPS-P):",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "NNA sends a signal to the Auxiliary Monitoring and Control System (AMC), which automatically closes the SPS-P supply valve.",
+      "AMC automatically trips the SPS-P pumps.",
+      "NNA sends a signal to the Utility Monitoring and Control System (UMC), which automatically closes NI HVAC dampers to isolate the SPS cells."
+     ],
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "",
+     "q": "At Natrium, which system automatically trips the SPS-P pumps on a sodium leak detection signal from NNA?",
+     "o": [
+      "The Reactor Protection System",
+      "The Utility Monitoring and Control System (UMC)",
+      "The Nuclear Island Fire Water Distribution System",
+      "The Auxiliary Monitoring and Control System (AMC)"
+     ],
+     "a": 3,
+     "x": "NNA sends the leak detection signal to AMC, and AMC automatically trips the SPS-P pumps.",
+     "p": "P7",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Ancillary Systems"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [],
+ "facts": [
+  {
+   "q": "Name five ways of detecting sodium leaks listed in the NRC training slides.",
+   "a": "Smoke detectors, contact detectors (spark plugs), cable detectors, aerosol monitors and inspections.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What devices does Natrium SPS leak detection use?",
+   "a": "Devices such as wire and cable, spark plugs, and mutual inductance type sensors.",
+   "p": "P9",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Ancillary Systems"
+   ]
+  },
+  {
+   "q": "What decides the type of sodium leak detector used at Natrium?",
+   "a": "The needs of the installation location and configuration.",
+   "p": "P11",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Ancillary Systems"
+   ]
+  },
+  {
+   "q": "Where is smoke detection used for Natrium sodium leaks?",
+   "a": "In areas where sodium reactions may occur, such as Intermediate Air Cooling stacks.",
+   "p": "P14",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Ancillary Systems"
+   ]
+  },
+  {
+   "q": "How is sodium buildup in the RV-GV annulus gas monitored?",
+   "a": "Through absolute filter differential pressure changes, oxygen concentrations and radiation levels.",
+   "p": "P19",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Ancillary Systems"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Leak detection matters because primary sodium is radioactive, sodium burns in air, and sodium loss could impair heat transport.",
+   "cite": "NRC slides ML19149A378, slide 25"
+  },
+  {
+   "text": "Detection methods include smoke, contact (spark plug), cable and aerosol detectors, and inspections.",
+   "cite": "NRC slides ML19149A433, slide 21"
+  },
+  {
+   "text": "In a spark plug type detector, leaking fluid completes an open circuit.",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1"
+  },
+  {
+   "text": "Natrium detectors will generally use conductivity detection with a self-test function, and they alarm in the main control room.",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.3.4, p. 7.5-16"
+  },
+  {
+   "text": "Detection of small leaks helps prevent large leaks from occurring.",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 8.2.2, p. 8.2-4"
+  },
+  {
+   "text": "NNA signals drive automatic SPS-P valve closure, pump trip and cell damper closure.",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.5.2.2, p. 7.5-12"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Source decision",
+   "note": "The Word file holds only two knowledge checks in text. By decision of Nov 5, 2026 this lesson also uses the NRC training slides and the PSAR.",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.5 Knowledge Check 1"
+  },
+  {
+   "type": "Objectives",
+   "note": "The Word file gives only the title TLO 6: Sodium Leak Detectors, with no enabling objectives. No objectives were written for it.",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.1 TLO 6: Sodium Leak Detectors"
+  },
+  {
+   "type": "Missing text",
+   "note": "Knowledge Check 2 has an answer of Low and feedback that the ammeter will read lower than normal, but its question is not in the text. It is left off.",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.6 Knowledge Check 2"
+  },
+  {
+   "type": "Picture content",
+   "note": "Slides 1.2, 1.3 and 1.4 have no text and are not used.",
+   "cite": "Word: Sodium Leak Detectors.docx, slide 1.4 Failure modes"
+  }
+ ],
+ "page_tags": []
+}

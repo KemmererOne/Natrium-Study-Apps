@@ -1,0 +1,1029 @@
+{
+ "module_id": "ES-05",
+ "slug": "es-05-dc-generators",
+ "title": "DC Generators",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V2",
+ "handbook": "DOE-HDBK-1011/2-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the type and application of a direct current (DC) generator, DESCRIBE the operating characteristics of that generator including methods of voltage production, advantages of each type, and voltage-vs-load characteristics.",
+   "items": [],
+   "page": {
+    "pdf": 76,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE terminal voltage as it applies to DC generators.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE counter-electromotive force (CEMF) as it applies to a DC machine.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the effects of commutation in a DC generator.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the purpose of each of the following components of a DC machine:",
+     "items": [
+      "a. Armature",
+      "b. Rotor",
+      "c. Stator",
+      "d. Field"
+     ],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST the three conditions necessary to induce a voltage into a conductor.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Using the left-hand rule of generators, DETERMINE the direction of the magnetic field, the motion of the conductor, or the direction of current induced into a conductor.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE how terminal voltage of a DC generator is adjusted.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the basis behind each of the four DC generator ratings.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "LIST the four internal losses found in a DC generator.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the differences in construction between a shunt-wound and a series-wound DC generator with respect to the relationship between the field and the armature.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE the relationship between the shunt and series fields for cumulatively- compounded and differentially-compounded DC generators.",
+     "items": [],
+     "page": {
+      "pdf": 76,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "DESCRIBE the voltage-vs-load current characteristics for a flat-compounded, over- compounded, and under-compounded DC generator.",
+     "items": [],
+     "page": {
+      "pdf": 77,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Terminal voltage, as applied to DC generators, is defined as the voltage that can be measured at the output of the generator.",
+   "sec": "DC Equipment Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "This induced voltage acts counter to applied voltage; therefore, it is called counter-electromotive force (CEMF).",
+   "sec": "DC Equipment Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "commutation is the mechanical conversion from AC to DC at the brushes of a DC machine",
+   "sec": "DC Equipment Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "The purpose of the armature is to provide the energy conversion in a DC machine",
+   "sec": "DC Equipment Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "The purpose of the rotor is to provide the rotating element in a DC machine",
+   "sec": "DC Equipment Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The stator is the part of a motor or generator that is stationary",
+   "sec": "DC Equipment Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "The purpose of the field in a DC machine is to provide a magnetic field for producing either a voltage (generator) or a torque (motor)",
+   "sec": "DC Equipment Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "there are three conditions necessary to induce a voltage",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.5"
+  },
+  {
+   "id": "P9",
+   "quote": "point the index finger of your left hand in the direction of the magnetic field (from North to South) and point the thumb in the direction of motion of the conductor, the middle finger will point in the direction of current flow",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.6"
+  },
+  {
+   "id": "P10",
+   "quote": "The commutator converts the AC voltage generated in the rotating loop into a DC voltage.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.7"
+  },
+  {
+   "id": "P11",
+   "quote": "This is the most widely used method for regulating the output voltage of a DC generator",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.9"
+  },
+  {
+   "id": "P12",
+   "quote": "A DC generator contains four ratings.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "id": "P13",
+   "quote": "The current rating is based on the size of the conductor and the amount of heat that can be dissipated in the generator.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "id": "P14",
+   "quote": "There are four internal losses that contribute to lower efficiency of a DC generator.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "id": "P15",
+   "quote": "Copper loss is the power lost as heat in the windings",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "These circulating currents within the iron core are called eddy-currents.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "the armature and field cores are constructed from laminated (layered) steel sheets.",
+   "sec": "DC Generator Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.11"
+  },
+  {
+   "id": "P18",
+   "quote": "When the field winding of a generator is connected in parallel with the generator armature, the generator is called a shunt-wound",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.13"
+  },
+  {
+   "id": "P19",
+   "quote": "When the field winding of a DC generator is connected in series with the armature, the generator is called a series-wound generator",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+  },
+  {
+   "id": "P20",
+   "quote": "A series generator has poor voltage regulation",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+  },
+  {
+   "id": "P21",
+   "quote": "If the two fields of a compound generator are wound so that their magnetic fields aid one another, the generator is said to be cumulatively-compounded.",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.16"
+  },
+  {
+   "id": "P22",
+   "quote": "If the two fields are wound so that their flux fields oppose one another, the generator is said to be differentially-compounded.",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.16"
+  },
+  {
+   "id": "P23",
+   "quote": "In practical compounded generators, the change in output voltage from no-load to full-load is less than 5 percent.",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+  },
+  {
+   "id": "P24",
+   "quote": "The output gradually rises with increasing load current over the normal operating range of the machine.",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+  },
+  {
+   "id": "P25",
+   "quote": "The output voltage decreases gradually with an increase in load current.",
+   "sec": "DC Generator Construction",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "DC equipment terms",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Applied voltage is the voltage that is delivered across the load. It should be the same as terminal voltage, but circuit faults and losses may reduce it.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+    },
+    {
+     "t": "p",
+     "text": "In a generator with a rotating armature, voltage is induced in the armature conductors. It opposes the applied voltage and reduces the current flow through the armature.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "Commutation is the positioning of the DC generator brushes so that the commutator segments change brushes at the same time the armature current changes direction.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Where is the terminal voltage of a DC generator measured?",
+     "o": [
+      "Across the field winding",
+      "At the output of the generator",
+      "Across the armature bearings",
+      "At the commutator insulation"
+     ],
+     "a": 1,
+     "x": "Terminal voltage is defined as the voltage that can be measured at the output of the generator.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is counter-electromotive force in a DC machine?",
+     "o": [
+      "The voltage across the load",
+      "The current in the field winding",
+      "An induced voltage that acts counter to applied voltage",
+      "The force on the brushes"
+     ],
+     "a": 2,
+     "x": "The voltage induced in the armature conductors acts counter to applied voltage, so it is called counter-electromotive force.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is the effect of commutation in a DC generator?",
+     "o": [
+      "It raises the field current",
+      "It converts AC to DC at the brushes",
+      "It reduces eddy-currents",
+      "It converts DC to AC at the armature"
+     ],
+     "a": 1,
+     "x": "Commutation is the mechanical conversion from AC to DC at the brushes of a DC machine.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "DC machine components",
+   "eo": [
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "DC motors and generators have the same basic construction, differing primarily in the energy conversion.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig2",
+     "num": 2,
+     "cap": "Basic DC Machine",
+     "alt": "A basic DC machine in cutaway, with the stator, field, armature, rotor, brushes, and commutator segments labeled.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "In a DC generator, the armature converts mechanical energy to electrical energy. In a DC motor, it converts electrical energy into mechanical energy in the form of torque.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "In both types of DC machines, the rotor is the armature.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "In DC machines, the purpose of the stator is to provide the magnetic field.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The field is produced by a permanent magnet or an electromagnet. Electromagnets are normally used because their magnetic strength is greater and more easily varied.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What is the purpose of the armature in a DC machine?",
+     "o": [
+      "To provide the energy conversion",
+      "To stay stationary",
+      "To reduce eddy-currents",
+      "To connect the brushes to the load"
+     ],
+     "a": 0,
+     "x": "The purpose of the armature is to provide the energy conversion in a DC machine.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.4",
+     "q": "Which component is the stationary part of a DC machine?",
+     "o": [
+      "The rotor",
+      "The armature",
+      "The commutator",
+      "The stator"
+     ],
+     "a": 3,
+     "x": "The stator is the part of a motor or generator that is stationary.",
+     "p": "P6"
+    }
+   ]
+  },
+  {
+   "title": "Producing the voltage",
+   "eo": [
+    "1.5",
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "list",
+     "items": [
+      "A magnetic field",
+      "A conductor",
+      "Relative motion between the two"
+     ],
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.5"
+    },
+    {
+     "t": "p",
+     "text": "A basic DC generator has four basic parts: a magnetic field, a single conductor or loop, a commutator, and brushes.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig3",
+     "num": 3,
+     "cap": "Basic Operation of a DC Generator",
+     "alt": "A conductor loop rotating between north and south poles at two positions, with brushes on a commutator and the output voltage waveform.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The stronger the field or the more flux lines cut for a given period of time, the larger the induced EMF.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The left-hand rule for generators gives the direction of the induced current. If you",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig4",
+     "num": 4,
+     "cap": "Left-Hand Rule for Generators",
+     "alt": "A left hand with the index finger along the magnetic field, the thumb along the motion of the conductor, and the middle finger along the current, beside a generator loop.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig5",
+     "num": 5,
+     "cap": "Commutator Segments and Brushes",
+     "alt": "A two-segment commutator with insulating material between the halves, and carbon brushes resting against it.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.7"
+    },
+    {
+     "t": "p",
+     "text": "The voltage between the brushes fluctuates between zero and some maximum value, but is always of the same polarity.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.8"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig6",
+     "num": 6,
+     "cap": "Commutation in a DC Generator",
+     "alt": "Loop positions through one rotation, above a graph of the induced EMF as pulses of one polarity.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.8"
+    },
+    {
+     "t": "p",
+     "text": "Output voltage depends on the number of conductor loops in series in the armature, armature speed, and magnetic field strength.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The field strength can be changed quite easily by varying the current through the field winding.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which of these is NOT one of the three conditions necessary to induce a voltage into a conductor?",
+     "o": [
+      "A magnetic field",
+      "A conductor",
+      "Relative motion between the two",
+      "A commutator"
+     ],
+     "a": 3,
+     "x": "The three conditions are a magnetic field, a conductor, and relative motion between the two.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.6",
+     "q": "In the left-hand rule for generators, what does the middle finger show?",
+     "o": [
+      "The direction of current flow",
+      "The direction of the magnetic field",
+      "The motion of the conductor",
+      "The polarity of the brushes"
+     ],
+     "a": 0,
+     "x": "The index finger points along the magnetic field, the thumb along the motion of the conductor, and the middle finger along the current flow.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is the most widely used way to adjust the output voltage of a DC generator?",
+     "o": [
+      "Changing the number of armature conductors",
+      "Changing the armature speed",
+      "Varying the current through the field winding",
+      "Changing the brushes"
+     ],
+     "a": 2,
+     "x": "Varying the current through the field winding changes the field strength. This is the most widely used method for regulating the output voltage.",
+     "p": "P11"
+    }
+   ]
+  },
+  {
+   "title": "Ratings and losses",
+   "eo": [
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Voltage: based on the insulation type and design of the machine.",
+      "Current: based on the size of the conductor and the amount of heat that can be dissipated in the generator.",
+      "Power: based on the mechanical limitations of the device that turns the generator, and on the thermal limits of conductors, bearings, and other components.",
+      "Speed: the upper limit is the speed at which mechanical damage is done, and the lower limit is based on the limit for field current."
+     ],
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Copper losses",
+      "Eddy-current losses",
+      "Hysteresis losses",
+      "Mechanical losses"
+     ],
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Hysteresis losses occur when the armature rotates in a magnetic field. Rotating magnetic domains in the iron cause friction and heat.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.11"
+    },
+    {
+     "t": "p",
+     "text": "Mechanical losses can be caused by bearing friction, brush friction on the commutator, or air friction called windage.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "What is the current rating of a DC generator based on?",
+     "o": [
+      "The insulation type",
+      "The speed that causes mechanical damage",
+      "The size of the conductor and the heat that can be dissipated",
+      "The limit for field current"
+     ],
+     "a": 2,
+     "x": "The current rating is based on the size of the conductor and the amount of heat that can be dissipated in the generator.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.9",
+     "q": "Which of these is NOT one of the four internal losses of a DC generator?",
+     "o": [
+      "Copper losses",
+      "Dielectric losses",
+      "Eddy-current losses",
+      "Mechanical losses"
+     ],
+     "a": 1,
+     "x": "The four internal losses are copper, eddy-current, hysteresis, and mechanical losses.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Shunt-wound and series-wound generators",
+   "eo": [
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig8",
+     "num": 8,
+     "cap": "Shunt-Wound DC Generator",
+     "alt": "Shunt-wound DC generator: the field winding connected in parallel with the armature, shown as a schematic and as a machine.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.13"
+    },
+    {
+     "t": "p",
+     "text": "A shunt-wound generator has a much more stable voltage output than a series-wound generator.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.14"
+    },
+    {
+     "t": "p",
+     "text": "As load current increases, the voltage drop across the armature coil increases, so output voltage decreases. The field current then decreases, which lowers voltage further.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.14"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig9",
+     "num": 9,
+     "cap": "Output Voltage-vs-Load Current for Shunt-Wound DC Generator",
+     "alt": "Graph of terminal voltage against load current for a shunt-wound generator, falling gently to full-load current.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig10",
+     "num": 10,
+     "cap": "Series-Wound DC Generator",
+     "alt": "Series-wound DC generator: the field winding connected in series with the armature, shown as a schematic and as a machine.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The excitation current in a series-wound generator is the same as the current the generator delivers to the load.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig11",
+     "num": 11,
+     "cap": "Output Voltage-vs-Load Current for Series-Wound",
+     "alt": "Graph of terminal voltage against load current for a series-wound generator, rising steeply with load current.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "As a result, series generators are not used for fluctuating loads.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.15"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "How is the field winding connected in a shunt-wound DC generator?",
+     "o": [
+      "In parallel with the armature",
+      "In series with the armature",
+      "To a separate AC source",
+      "Across the brushes in series with the load"
+     ],
+     "a": 0,
+     "x": "When the field winding is connected in parallel with the generator armature, the generator is called a shunt-wound generator.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.10",
+     "q": "In a series-wound generator, what current flows through the field winding?",
+     "o": [
+      "A small fixed current",
+      "No current",
+      "Between 0.5 and 5 percent of output",
+      "The same current the generator delivers to the load"
+     ],
+     "a": 3,
+     "x": "The excitation current in a series-wound generator is the same as the current the generator delivers to the load.",
+     "p": "P19"
+    }
+   ]
+  },
+  {
+   "title": "Compound generators",
+   "eo": [
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A compound generator has a field winding in parallel with the armature and a field winding in series with it.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig12",
+     "num": 12,
+     "cap": "Compounded DC Generator",
+     "alt": "A series generator and a shunt generator combined into a compounded DC generator with both field windings.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "As load current increases in a cumulatively-compounded generator, the series field strength increases and compensates for the decrease in shunt field strength.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "A generator with this characteristic is said to be flat-compounded.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+    },
+    {
+     "t": "p",
+     "text": "In an over-compounded generator, the series winding overcompensates for a change in the shunt field.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "In an under-compounded generator, the series winding undercompensates for the change in shunt field strength.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "fig",
+     "id": "es-05-fig13",
+     "num": 13,
+     "cap": "Voltage-vs-Current for a Compounded DC Generator",
+     "alt": "Graph of output voltage against load current with three curves: over-compounded rising, flat-compounded nearly level, and under-compounded falling.",
+     "cite": "DOE-HDBK-1011/2-92 ES-05 p.17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "In a cumulatively-compounded generator, how do the two fields act?",
+     "o": [
+      "They oppose one another",
+      "They aid one another",
+      "They cancel completely",
+      "Only the shunt field is used"
+     ],
+     "a": 1,
+     "x": "If the two fields are wound so that their magnetic fields aid one another, the generator is cumulatively-compounded.",
+     "p": "P21"
+    },
+    {
+     "existing": "Q423",
+     "eo": "1.12"
+    },
+    {
+     "eo": "1.12",
+     "q": "How much does the output voltage of a flat-compounded generator change from no-load to full-load?",
+     "o": [
+      "Less than 5 percent",
+      "About 25 percent",
+      "About 50 percent",
+      "It doubles"
+     ],
+     "a": 0,
+     "x": "In practical compounded generators, the change in output voltage from no-load to full-load is less than 5 percent.",
+     "p": "P23"
+    },
+    {
+     "eo": "1.12",
+     "q": "What happens to the output of an over-compounded generator as load current increases?",
+     "o": [
+      "It falls sharply",
+      "It stays exactly constant",
+      "It gradually rises",
+      "It drops to zero"
+     ],
+     "a": 2,
+     "x": "The output gradually rises with increasing load current over the normal operating range of the machine.",
+     "p": "P24"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Using the left-hand rule",
+   "eo": "1.6",
+   "page": 6,
+   "problem": "In a generator, the conductor closest to the N pole is traveling upward across the field. Which way does the current flow?",
+   "steps": [
+    "Point the index finger along the magnetic field, from North to South.",
+    "Point the thumb in the direction of motion of the conductor.",
+    "The middle finger points in the direction of current flow.",
+    "Applying the rule to both sides of the loop shows that current flows in a counter-clockwise direction."
+   ],
+   "answer": "To the right, lower corner in Figure 4",
+   "fig": {
+    "t": "fig",
+    "id": "es-05-fig4",
+    "num": 4,
+    "cap": "Left-Hand Rule for Generators",
+    "alt": "A left hand with the index finger along the magnetic field, the thumb along the motion of the conductor, and the middle finger along the current, beside a generator loop.",
+    "cite": "DOE-HDBK-1011/2-92 ES-05 p.7"
+   },
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.6"
+  },
+  {
+   "title": "Raising terminal voltage",
+   "eo": "1.7",
+   "page": 9,
+   "problem": "The output voltage of an operating DC generator must be raised. Which of the three factors should change?",
+   "steps": [
+    "The number of conductors cannot be changed in a normally operating generator.",
+    "It is usually impractical to change the armature speed.",
+    "The magnetic field strength can be changed easily by varying the field winding current."
+   ],
+   "answer": "Vary the current through the field winding",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.9"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is commutation?",
+   "a": "The positioning of the DC generator brushes so that the commutator segments change brushes at the same time the armature current changes direction.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What are the four ratings of a DC generator?",
+   "a": "Voltage, current, power, and speed.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "What are eddy-currents?",
+   "a": "Circulating currents within the iron core.",
+   "p": "P16",
+   "place": null
+  },
+  {
+   "q": "How are eddy-currents reduced?",
+   "a": "The armature and field cores are constructed from laminated steel sheets, insulated from one another.",
+   "p": "P17",
+   "place": null
+  },
+  {
+   "q": "What is copper loss?",
+   "a": "The power lost as heat in the windings.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What is a differentially-compounded generator?",
+   "a": "One whose two fields are wound so that their flux fields oppose one another.",
+   "p": "P22",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Terminal voltage is the voltage that can be measured at the output of the generator.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.2"
+  },
+  {
+   "text": "In a DC generator, commutation provides for the conversion of AC to a DC output that is generated in the armature windings.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.2"
+  },
+  {
+   "text": "The armature provides the energy conversion, the rotor is the rotating element, and the field provides a magnetic field.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.4"
+  },
+  {
+   "text": "A voltage is induced when there is a magnetic field, a conductor, and relative motion between the two.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.12"
+  },
+  {
+   "text": "The terminal voltage of a DC generator is adjusted by varying the field strength.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.12"
+  },
+  {
+   "text": "A shunt-wound generator has its field in parallel with the armature winding, and its voltage decreases with an increase in load.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.18"
+  },
+  {
+   "text": "A series-wound generator has its field in series with the armature winding, and its voltage increases sharply with an increase in load.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.18"
+  },
+  {
+   "text": "In a cumulatively-compounded generator the fields aid one another, and in a differentially-compounded generator they oppose one another.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.18"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Rule 10",
+   "note": "The armature example names a steam turbine as the external force. The lesson leaves it off the page.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.3"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The text bases the power rating on mechanical limits and thermal limits, while the summary on p.12 gives only the mechanical limits. The lesson uses the text.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.10"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The chapter puts CEMF in a generator, while the summary calls it a voltage that counters applied voltage in a DC motor or a DC generator. The lesson uses the chapter wording.",
+   "cite": "DOE-HDBK-1011/2-92 ES-05 p.1"
+  }
+ ],
+ "page_tags": []
+}

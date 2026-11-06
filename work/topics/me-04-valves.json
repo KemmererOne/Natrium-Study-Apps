@@ -1,0 +1,1824 @@
+{
+ "module_id": "ME-04",
+ "slug": "me-04-valves",
+ "title": "Valves",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1018-V2",
+ "handbook": "DOE-HDBK-1018/2-93",
+ "word_file": "Valve Fundamentals.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Valves",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the construction and operation of a given type of valve, valve component, or valve actuator, as presented in this module.",
+   "items": [],
+   "page": {
+    "pdf": 19,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the four basic types of flow control elements employed in valve design.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE how valve stem leakage is controlled.",
+     "items": [],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given a drawing of a valve, IDENTIFY the following:",
+     "items": [
+      "a. Body",
+      "b. Bonnet",
+      "c. Stem",
+      "d. Actuator",
+      "e. Packing",
+      "f. Seat",
+      "g. Disk"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given a drawing of a valve, IDENTIFY each of the following types of valves:",
+     "items": [
+      "a. Globe",
+      "b. Gate",
+      "c. Plug",
+      "d. Ball",
+      "e. Needle",
+      "f. Butterfly",
+      "g. Diaphragm",
+      "h. Pinch",
+      "i. Check",
+      "j. Stop check",
+      "k. Safety/relief",
+      "l. Reducing"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DESCRIBE the application of the following types of valves:",
+     "items": [
+      "a. Globe",
+      "b. Gate",
+      "c. Plug",
+      "d. Ball",
+      "e. Needle",
+      "f. Butterfly",
+      "g. Diaphragm",
+      "h. Pinch",
+      "i. Check",
+      "j. Safety/relief",
+      "k. Reducing"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the construction and principle of operation for the following types of valve actuators:",
+     "items": [
+      "a. Manual",
+      "b. Electric motor",
+      "c. Pneumatic",
+      "d. Hydraulic",
+      "e. Solenoid"
+     ],
+     "page": {
+      "pdf": 19,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "A valve is a mechanical device that controls the flow of fluid and pressure within a system or process.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Regardless of type, all valves have the following basic parts: the body, bonnet, trim (internal elements), actuator, and packing.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "The body, sometimes called the shell, is the primary pressure boundary of a valve.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.2"
+  },
+  {
+   "id": "P4",
+   "quote": "The cover for the opening in the valve body is the bonnet.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "The internal elements of a valve are collectively referred to as a valve's trim",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "The disk provides the capability for permitting and prohibiting fluid flow.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+  },
+  {
+   "id": "P7",
+   "quote": "The seat or seal rings provide the seating surface for the disk.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+  },
+  {
+   "id": "P8",
+   "quote": "connects the actuator and disk, is responsible for positioning the disk.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "The actuator operates the stem and disk assembly.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.5"
+  },
+  {
+   "id": "P10",
+   "quote": "Most valves use some form of packing to prevent leakage from the space between the stem and the bonnet.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.5"
+  },
+  {
+   "id": "P11",
+   "quote": "If a valve's packing is too loose, the valve will leak, which is a safety hazard. If the packing is too tight, it will impair the movement and possibly damage the stem.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "In general, there are four methods of controlling flow through a valve.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "For a rising stem valve, the stem will rise above the actuator as the valve is opened.",
+   "sec": "Valve Functions and Basic Parts",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.4"
+  },
+  {
+   "id": "P14",
+   "quote": "A gate valve is a linear motion valve used to start or stop fluid flow; however, it does not regulate or throttle flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.8"
+  },
+  {
+   "id": "P15",
+   "quote": "Hence, there is little pressure drop across an open gate valve.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.8"
+  },
+  {
+   "id": "P16",
+   "quote": "Most of the flow change occurs near shutoff with a relatively high fluid velocity causing disk and seat wear and eventual leakage if used to regulate flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "A globe valve is a linear motion valve used to stop, start, and regulate fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.15"
+  },
+  {
+   "id": "P18",
+   "quote": "When compared to a gate valve, a globe valve generally yields much less seat leakage.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.15"
+  },
+  {
+   "id": "P19",
+   "quote": "The most evident shortcoming of the simple globe valve is the high head loss from two or more right angle turns of flowing fluid.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.15"
+  },
+  {
+   "id": "P20",
+   "quote": "The backseat design prevents system pressure from building against the valve packing.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.18"
+  },
+  {
+   "id": "P21",
+   "quote": "A ball valve is a rotational motion valve that uses a ball-shaped disk to stop or start fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.18"
+  },
+  {
+   "id": "P22",
+   "quote": "A ball valve is generally the least expensive of any valve configuration and has low maintenance costs.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.19"
+  },
+  {
+   "id": "P23",
+   "quote": "Conventional ball valves have relatively poor throttling characteristics.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.19"
+  },
+  {
+   "id": "P24",
+   "quote": "A plug valve is a rotational motion valve used to stop or start fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.21"
+  },
+  {
+   "id": "P25",
+   "quote": "Multiport valves are particularly advantageous on transfer lines and for diverting services.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.22"
+  },
+  {
+   "id": "P26",
+   "quote": "A diaphragm valve is a linear motion valve that is used to start, regulate, and stop fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.24"
+  },
+  {
+   "id": "P27",
+   "quote": "Diaphragm valves are particularly suited for the handling of corrosive fluids, fibrous slurries, radioactive fluids, or other fluids that must remain free from contamination.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.25"
+  },
+  {
+   "id": "P28",
+   "quote": "Reducing valves automatically reduce supply pressure to a preselected pressure as long as the supply pressure is at least as high as the selected pressure.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.28"
+  },
+  {
+   "id": "P29",
+   "quote": "Pinch valves are suitable for on-off and throttling services.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.30"
+  },
+  {
+   "id": "P30",
+   "quote": "A butterfly valve, illustrated in Figure 19, is a rotary motion valve that is used to stop, regulate, and start fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.31"
+  },
+  {
+   "id": "P31",
+   "quote": "Butterfly valves are especially well-suited for the handling of large flows of liquids or gases at relatively low pressures and for the handling of slurries or liquids with large amounts of suspended solids.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.32"
+  },
+  {
+   "id": "P32",
+   "quote": "A needle valve, as shown in Figure 20, is used to make relatively fine adjustments in the amount of fluid flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.33"
+  },
+  {
+   "id": "P33",
+   "quote": "Check valves are designed to prevent the reversal of flow in a piping system.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.35"
+  },
+  {
+   "id": "P34",
+   "quote": "Swing check valves are usually installed in conjunction with gate valves because they provide relatively free flow.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.36"
+  },
+  {
+   "id": "P35",
+   "quote": "A lift check valve, illustrated in Figure 24, is commonly used in piping systems in which globe valves are being used as a flow control valve.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.37"
+  },
+  {
+   "id": "P36",
+   "quote": "A stop check valve, illustrated in Figure 27, is a combination of a lift check valve and a globe valve.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+  },
+  {
+   "id": "P37",
+   "quote": "The main difference between a relief valve and a safety valve is the extent of opening at the setpoint pressure.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+  },
+  {
+   "id": "P38",
+   "quote": "The difference between the actuating pressure setpoint and the pressure at which the safety valve resets is called blowdown.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+  },
+  {
+   "id": "P39",
+   "quote": "Relief valves are typically used for incompressible fluids such as water or oil.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.41"
+  },
+  {
+   "id": "P40",
+   "quote": "Safety valves can often be distinguished by the presence of an external lever at the top of the valve body, which is used as an operational check.",
+   "sec": "Types of Valves",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.41"
+  },
+  {
+   "id": "P41",
+   "quote": "Manual actuators are capable of placing the valve in any position but do not permit automatic operation.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.44"
+  },
+  {
+   "id": "P42",
+   "quote": "All actuators except manual handwheel and lever are adaptable to automatic actuation.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.44"
+  },
+  {
+   "id": "P43",
+   "quote": "With this arrangement, the valve can be pounded shut for tight closure or pounded open if it is stuck shut.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.45"
+  },
+  {
+   "id": "P44",
+   "quote": "The motor is usually a, reversible, high speed type connected through a gear train to reduce the motor speed and thereby increase the torque at the stem.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.46"
+  },
+  {
+   "id": "P45",
+   "quote": "Limit switches are normally provided to stop the motor automatically at full open and full closed valve positions.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.46"
+  },
+  {
+   "id": "P46",
+   "quote": "These actuators translate an air signal into valve stem motion by air pressure acting on a diaphragm or piston connected to the stem.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.47"
+  },
+  {
+   "id": "P47",
+   "quote": "These actuators use a piston to convert a signal pressure into valve stem motion.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.47"
+  },
+  {
+   "id": "P48",
+   "quote": "Solenoids position the valve by attracting a magnetic slug attached to the valve stem.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.48"
+  },
+  {
+   "id": "P49",
+   "quote": "Double solenoid valves typically fail \"as is.\"",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.48"
+  },
+  {
+   "id": "P50",
+   "quote": "In general, fastest actuation is provided by hydraulic, pneumatic, and solenoid actuators.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.49"
+  },
+  {
+   "id": "P51",
+   "quote": "However, solenoids are not practical for large valves because their size and power requirements would be excessive.",
+   "sec": "Valve Actuators",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.49"
+  },
+  {
+   "id": "P52",
+   "quote": "Upon a loss of power, an MOV will fail as is.",
+   "sec": "Valve Operation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.47 Electric-Motor Actuator"
+  },
+  {
+   "id": "P53",
+   "quote": "Always open valves slowly to minimize system pressure transients.",
+   "sec": "Valve Operation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.54 Manual Valve Operation"
+  },
+  {
+   "id": "P54",
+   "quote": "Thermal binding is more likely to occur in a wedge gate valve that is closed while the system is hot.",
+   "sec": "Valve Operation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.57 Thermal Binding of Gate Valves"
+  },
+  {
+   "id": "P55",
+   "quote": "Opening a valve results in increased flow and decreased backpressure as measured upstream of the valve.",
+   "sec": "Valve Operation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.63 Valve Position and Fluid Flow"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Valve purposes",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.5 Valve Components and Purpose"
+  },
+  {
+   "step": "Major components",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.6 Major Valve Components and Purpose"
+  },
+  {
+   "step": "Gate valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.7 Gate Valve Characteristics & Advantages"
+  },
+  {
+   "step": "Stem types",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.12 Valve Stems Can be Rising Stem or Non-Rising Stem Design"
+  },
+  {
+   "step": "Globe and needle valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.15 Globe and Needle Valves"
+  },
+  {
+   "step": "Ball and plug valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.22 Ball and Plug Valves"
+  },
+  {
+   "step": "Butterfly valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.27 Butterfly Valves"
+  },
+  {
+   "step": "Check valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.32 Check Valves"
+  },
+  {
+   "step": "Actuators",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.39 Valve Actuators"
+  },
+  {
+   "step": "Operation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.53 Operating Valves"
+  },
+  {
+   "step": "Valve position and flow",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.63 Valve Position and Fluid Flow"
+  },
+  {
+   "step": "Position indication",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.70 Valve Position Indication"
+  },
+  {
+   "step": "Safety and relief valves",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.80 Safety and Relief Valve"
+  },
+  {
+   "step": "Setpoint calculation",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.88 Valve Setpoint Calculation"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "What valves do",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Stopping and starting fluid flow",
+      "Varying (throttling) the amount of fluid flow",
+      "Controlling the direction of fluid flow",
+      "Regulating downstream system or process pressure",
+      "Relieving component or piping over pressure"
+     ],
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Move a disc or plug into or against an orifice, as in a globe or needle valve",
+      "Slide a flat, cylindrical, or spherical surface across an orifice, as in gate and plug valves",
+      "Rotate a disc or ellipse about a shaft across the diameter of an orifice, as in a butterfly or ball valve",
+      "Move a flexible material into the flow passage, as in diaphragm and pinch valves"
+     ],
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "Which is one of the four basic methods of controlling flow through a valve?",
+     "o": [
+      "Reverse the direction of the pump",
+      "Heat the fluid to change its density",
+      "Add a second fluid to the line",
+      "Move a flexible material into the flow passage"
+     ],
+     "a": 3,
+     "x": "The four methods are moving a disc or plug against an orifice, sliding a surface across an orifice, rotating a disc or ellipse about a shaft, and moving a flexible material into the flow passage.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which flow control method does a butterfly valve use?",
+     "o": [
+      "Sliding a flat surface across the orifice",
+      "Moving a plug into the orifice",
+      "Moving a flexible material into the passage",
+      "Rotating a disc about a shaft across the orifice"
+     ],
+     "a": 3,
+     "x": "Rotating a disc or ellipse about a shaft extending across the diameter of an orifice applies to a butterfly or ball valve.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Basic valve parts",
+   "eo": [
+    "1.2",
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig1",
+     "num": 1,
+     "cap": "Basic Parts of a Valve",
+     "alt": "Valve cross section labeling the actuator, packing, bonnet, stem, body, disk, and seat.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "The body resists fluid pressure loads from connecting piping and receives the piping through threaded, bolted, or welded joints.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The bonnet is the second principal pressure boundary, and it is a potential source of leakage.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The trim typically includes a disk, seat, stem, and sleeves that guide the stem.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The stem connects the actuator and disk.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig2",
+     "num": 2,
+     "cap": "Rising Stems",
+     "alt": "Rising stem gate valve, closed and open, with the stem extending above the handwheel when open.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.4"
+    },
+    {
+     "t": "p",
+     "text": "A nonrising stem shows no upward movement outside the valve. The disk is threaded internally and travels on the stem.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig3",
+     "num": 3,
+     "cap": "Nonrising Stems",
+     "alt": "Nonrising stem gate valve, closed and open, with the gate traveling on the stem threads.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Which part is the primary pressure boundary of a valve?",
+     "o": [
+      "Body",
+      "Bonnet",
+      "Stem",
+      "Seal ring"
+     ],
+     "a": 0,
+     "x": "The body, sometimes called the shell, is the primary pressure boundary of a valve.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is the purpose of the valve stem?",
+     "o": [
+      "It provides the seating surface",
+      "It is the first pressure boundary",
+      "It connects the actuator and disk and positions the disk",
+      "It seals the bonnet to the body"
+     ],
+     "a": 2,
+     "x": "The stem connects the actuator and disk and is responsible for positioning the disk.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.2",
+     "q": "How is valve stem leakage controlled?",
+     "o": [
+      "By properly compressing the packing around the stem",
+      "By tightening the seat rings",
+      "By adding a second disk",
+      "By throttling the valve"
+     ],
+     "a": 0,
+     "x": "Valve packing must be properly compressed to prevent fluid loss and damage to the stem.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.2",
+     "q": "What happens if valve packing is too tight?",
+     "o": [
+      "The valve leaks",
+      "The disk falls off the stem",
+      "The seat wears out faster",
+      "It impairs valve movement and may damage the stem"
+     ],
+     "a": 3,
+     "x": "If the packing is too tight, it will impair the movement and possibly damage the stem.",
+     "p": "P11"
+    },
+    {
+     "existing": "Q349",
+     "eo": "1.2"
+    }
+   ]
+  },
+  {
+   "title": "Gate and globe valves",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig4",
+     "num": 4,
+     "cap": "Gate Valve",
+     "alt": "Cutaway gate valve labeling the handwheel, stem, packing, bonnet, gate, and body.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.9"
+    },
+    {
+     "t": "p",
+     "text": "The disk is completely out of the flow stream when the valve is fully open, so it offers virtually no resistance to flow.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Flow does not change evenly with stem travel, and a partly open gate disk tends to vibrate. For these reasons gate valves are not used to throttle.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig9",
+     "num": 9,
+     "cap": "Z-Body Globe Valve",
+     "alt": "Z-body globe valve labeling the handwheel, stem, bonnet, disk, and seat, with flow turning through the body.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The disk moves perpendicular to the seat, so the annular space closes gradually. This gives the globe valve good throttling ability.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q41",
+     "eo": "1.5"
+    },
+    {
+     "existing": "Q42",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.5",
+     "q": "Why are gate valves not used to throttle flow?",
+     "o": [
+      "Most flow change occurs near shutoff, and high velocity wears the disk and seat",
+      "They cannot be fully opened",
+      "They have too much head loss when open",
+      "Their disks are too small"
+     ],
+     "a": 0,
+     "x": "Most of the flow change occurs near shutoff with a relatively high fluid velocity causing disk and seat wear and eventual leakage if used to regulate flow.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is the main drawback of a simple globe valve?",
+     "o": [
+      "It cannot stop flow",
+      "High head loss from two or more right angle turns",
+      "Very poor throttling",
+      "High seat leakage"
+     ],
+     "a": 1,
+     "x": "The most evident shortcoming of the simple globe valve is the high head loss from two or more right angle turns of flowing fluid.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.4",
+     "q": "What does a globe valve backseat do?",
+     "o": [
+      "Limits flow when the valve is open",
+      "Prevents system pressure from building against the packing",
+      "Seals the disk when the valve is closed",
+      "Guides the stem"
+     ],
+     "a": 1,
+     "x": "The backseat design prevents system pressure from building against the valve packing.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Ball and plug valves",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig12",
+     "num": 12,
+     "cap": "Typical Ball Valve",
+     "alt": "Ball valve cross section with a ball that has a hole through it, between two seats.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Most ball valves need a 90° turn of the handle. When the handle lies along the axis of the valve, the valve is open.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "Ball valves also offer quick, quarter turn on-off operation, are compact, require no lubrication, and give tight sealing with low torque.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "In a throttling position the partly exposed seat erodes rapidly from high velocity flow. Elastomeric seats also keep these valves from elevated temperatures.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig13",
+     "num": 13,
+     "cap": "Plug Valve",
+     "alt": "Plug valve with a solid plug bored through at right angles to its axis.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.21"
+    },
+    {
+     "t": "p",
+     "text": "The passage in the plug lines up with the valve ports when open, and a 90° turn blocks them.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "One multiport valve can replace three or four shutoff valves, but many configurations do not completely shut off flow.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.22"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q72",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is a common use of a multiport plug valve?",
+     "o": [
+      "Preventing reverse flow",
+      "Relieving overpressure",
+      "Diverting flow on transfer lines",
+      "Fine metering of small flows"
+     ],
+     "a": 2,
+     "x": "Multiport valves are particularly advantageous on transfer lines and for diverting services.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.4",
+     "q": "In a ball valve, what shows that the valve is open?",
+     "o": [
+      "The stem rises above the handwheel",
+      "The handle lies across the axis of the valve",
+      "The bonnet cap is loose",
+      "The handle lies along the axis of the valve"
+     ],
+     "a": 3,
+     "x": "When the handle lies along the axis of the valve, the valve is open. When it lies 90° across the axis, the valve is closed.",
+     "p": "P21"
+    }
+   ]
+  },
+  {
+   "title": "Diaphragm, pinch, butterfly, needle, and reducing valves",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig14",
+     "num": 14,
+     "cap": "Straight Through Diaphragm Valve",
+     "alt": "Straight through diaphragm valve in three positions, with a flexible diaphragm pressed against the body.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.24"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig15",
+     "num": 15,
+     "cap": "Weir Diaphragm Valve",
+     "alt": "Weir diaphragm valve in cross section, with the compressor pressing the diaphragm onto a raised weir.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "The operating mechanism is not exposed to the fluid, and there are no packing glands to maintain.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig18",
+     "num": 18,
+     "cap": "Pinch Valves",
+     "alt": "Pinch valve with a rubber sleeve squeezed by an external pinching device.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Pinch valves suit slurries and liquids with large amounts of suspended solids, because the operating mechanism is completely isolated from the fluid.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig19",
+     "num": 19,
+     "cap": "Typical Butterfly Valve",
+     "alt": "Butterfly valve with a disk on a stem inside a short body.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.31"
+    },
+    {
+     "t": "p",
+     "text": "A 90° rotation of the handle moves the disk from fully closed to fully open. Savings in weight, space, and cost are the most obvious advantages, especially for large valves.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig20",
+     "num": 20,
+     "cap": "Needle Valve",
+     "alt": "Needle valve with a long, tapered point on the end of the stem entering the seat.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.33"
+    },
+    {
+     "t": "p",
+     "text": "The long, tapered point acts as a disk and passes through the orifice before it seats, so the opening changes very gradually.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig16",
+     "num": 16,
+     "cap": "Variable Reducing Valve",
+     "alt": "Variable reducing valve showing the main valve, piston, auxiliary valve, controlling diaphragm, and adjusting spring and screw.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.28"
+    },
+    {
+     "t": "p",
+     "text": "An adjusting spring pushes against a diaphragm, and reduced outlet pressure opposes it. The balance positions the auxiliary valve, and so the main valve.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.29"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which valve suits fluids that must stay free of contamination, such as radioactive fluids?",
+     "o": [
+      "Lubricated plug",
+      "Swing check",
+      "Diaphragm",
+      "Gate"
+     ],
+     "a": 2,
+     "x": "Diaphragm valves are particularly suited for corrosive fluids, fibrous slurries, radioactive fluids, or other fluids that must remain free from contamination.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which valve is especially suited to large flows at relatively low pressures?",
+     "o": [
+      "Needle",
+      "Globe",
+      "Diaphragm",
+      "Butterfly"
+     ],
+     "a": 3,
+     "x": "Butterfly valves are especially well-suited for the handling of large flows of liquids or gases at relatively low pressures.",
+     "p": "P31"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which valve is used for relatively fine adjustments of flow?",
+     "o": [
+      "Gate",
+      "Ball",
+      "Butterfly",
+      "Needle"
+     ],
+     "a": 3,
+     "x": "A needle valve is used to make relatively fine adjustments in the amount of fluid flow.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.5",
+     "q": "What does a reducing valve do?",
+     "o": [
+      "Automatically reduces supply pressure to a preselected pressure",
+      "Prevents reverse flow",
+      "Relieves overpressure to atmosphere",
+      "Isolates a system with no leakage"
+     ],
+     "a": 0,
+     "x": "Reducing valves automatically reduce supply pressure to a preselected pressure as long as the supply pressure is at least as high as the selected pressure.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.4",
+     "q": "A valve is a rubber sleeve squeezed by an external mechanism. What type is it?",
+     "o": [
+      "Butterfly",
+      "Needle",
+      "Pinch",
+      "Diaphragm"
+     ],
+     "a": 2,
+     "x": "The pinch control valve consists of a sleeve molded of rubber or other synthetic material and a pinching mechanism.",
+     "p": "P29"
+    }
+   ]
+  },
+  {
+   "title": "Check valves",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "Flow opens the valve, and any reversal of flow closes it. Closure comes from the weight of the check mechanism, back pressure, a spring, or a combination.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.35"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig22",
+     "num": 22,
+     "cap": "Swing Check Valve",
+     "alt": "Swing check valve with a disk hinged at the top.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.35"
+    },
+    {
+     "t": "p",
+     "text": "A swing check gives full, unobstructed flow, and turbulence and pressure drop are very low.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.35"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "Swing checks suit low velocity flow. Pulsating flow would make the disk flap and destroy the seating elements.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.36"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig24",
+     "num": 24,
+     "cap": "Lift Check Valve",
+     "alt": "Lift check valve with a guided disk that lifts off its seat as flow enters below.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.37"
+    },
+    {
+     "t": "p",
+     "text": "Flow to a lift check must always enter below the seat. Backflow and gravity force the disk or ball onto the seat.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig27",
+     "num": 27,
+     "cap": "Stop Check Valve",
+     "alt": "Stop check valve with a stem that can hold the disk on its seat, on a globe type body.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    },
+    {
+     "t": "p",
+     "text": "With the stem closed, the disk cannot leave the seat, as in a globe valve. With the stem open, the valve works as a lift check. The stem is not connected to the disk.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What is the purpose of a check valve?",
+     "o": [
+      "To regulate pressure downstream",
+      "To throttle flow",
+      "To relieve overpressure",
+      "To prevent the reversal of flow in a piping system"
+     ],
+     "a": 3,
+     "x": "Check valves are designed to prevent the reversal of flow in a piping system.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.5",
+     "q": "Why should swing check valves be kept off lines with pulsating flow?",
+     "o": [
+      "They cannot open against pulsing flow",
+      "Their pressure drop is too high",
+      "They block flow in both directions",
+      "The continual flapping would destroy the seating elements"
+     ],
+     "a": 3,
+     "x": "They should not be used on lines with pulsating flow when the continual flapping or pounding would be destructive to the seating elements.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.4",
+     "q": "What combination makes up a stop check valve?",
+     "o": [
+      "A swing check valve and a gate valve",
+      "A safety valve and a relief valve",
+      "A butterfly valve and a ball valve",
+      "A lift check valve and a globe valve"
+     ],
+     "a": 3,
+     "x": "A stop check valve is a combination of a lift check valve and a globe valve.",
+     "p": "P36"
+    }
+   ]
+  },
+  {
+   "title": "Relief and safety valves",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Relief and safety valves prevent equipment damage by relieving accidental over-pressurization of fluid systems.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig28",
+     "num": 28,
+     "cap": "Relief Valve",
+     "alt": "Relief valve with a spring holding the disk on the seat and a side outlet.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.41"
+    },
+    {
+     "t": "p",
+     "text": "A relief valve gradually opens as inlet pressure rises above the setpoint, and only as far as needed.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig29",
+     "num": 29,
+     "cap": "Safety Valve",
+     "alt": "Safety valve with a spring, adjusting nuts on the yoke, and an external lever at the top.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.42"
+    },
+    {
+     "t": "p",
+     "text": "A safety valve rapidly pops fully open at the pressure setting and stays open until pressure drops below a reset pressure.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "Blowdown is expressed as a percentage of the actuating pressure setpoint.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "Safety valves are typically used for compressible fluids such as steam or other gases.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.41"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "p",
+     "text": "Most of these valves open against a compression spring, and the adjusting nuts set the pressure.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.41"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q510",
+     "eo": "1.5"
+    },
+    {
+     "existing": "Q511",
+     "eo": "1.5"
+    },
+    {
+     "existing": "Q512",
+     "eo": "1.5"
+    },
+    {
+     "eo": "1.4",
+     "q": "How can a safety valve often be told apart from a relief valve?",
+     "o": [
+      "A flow arrow on the bonnet",
+      "A handwheel on the yoke",
+      "An external lever at the top of the valve body",
+      "A rising stem"
+     ],
+     "a": 2,
+     "x": "Safety valves can often be distinguished by the presence of an external lever at the top of the valve body, which is used as an operational check.",
+     "p": "P40"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is the main difference between a relief valve and a safety valve?",
+     "o": [
+      "The size of the handwheel",
+      "Only safety valves have springs",
+      "The extent of opening at the setpoint pressure",
+      "The fluid color"
+     ],
+     "a": 2,
+     "x": "The main difference between a relief valve and a safety valve is the extent of opening at the setpoint pressure.",
+     "p": "P37"
+    }
+   ]
+  },
+  {
+   "title": "Manual actuators",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig30",
+     "num": 30,
+     "cap": "Fixed Handwheel",
+     "alt": "Handwheel fixed directly to a valve stem.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.44"
+    },
+    {
+     "t": "p",
+     "text": "A handwheel fixed to the stem gives only the mechanical advantage of the wheel.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.44"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig31",
+     "num": 31,
+     "cap": "Hammer Handwheel",
+     "alt": "Hammer handwheel with a primary wheel, a secondary wheel, and lugs.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.45"
+    },
+    {
+     "t": "p",
+     "text": "A hammer handwheel moves freely through part of its turn and then hits a lug on a secondary wheel attached to the stem.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig32",
+     "num": 32,
+     "cap": "Manual Gear Head",
+     "alt": "Manual gear head with a pinion and valve gear on the bonnet.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.45"
+    },
+    {
+     "t": "p",
+     "text": "Gear heads add mechanical advantage, so one person can operate the valve, but operating time for large valves is exceptionally long.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.45"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What do manual actuators not permit?",
+     "o": [
+      "Automatic operation",
+      "Placing the valve in an intermediate position",
+      "Full opening of the valve",
+      "Tight closure"
+     ],
+     "a": 0,
+     "x": "Manual actuators are capable of placing the valve in any position but do not permit automatic operation.",
+     "p": "P41"
+    },
+    {
+     "eo": "1.6",
+     "q": "What is a hammer handwheel for?",
+     "o": [
+      "Speeding up a motor actuator",
+      "Measuring stem torque",
+      "Locking a valve in place",
+      "Pounding a valve shut for tight closure, or open if stuck"
+     ],
+     "a": 3,
+     "x": "With this arrangement, the valve can be pounded shut for tight closure or pounded open if it is stuck shut.",
+     "p": "P43"
+    }
+   ]
+  },
+  {
+   "title": "Power actuators",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig33",
+     "num": 33,
+     "cap": "Electric Motor Actuator",
+     "alt": "Electric motor actuator: a motor drives a gear train with limit switches, and a handwheel engages the same gears.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.46"
+    },
+    {
+     "t": "p",
+     "text": "Direction of motor rotation sets direction of disk motion, and a handwheel can be engaged for manual operation.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.46"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig34",
+     "num": 34,
+     "cap": "Pneumatic Actuator",
+     "alt": "Pneumatic actuator with air pressure acting on a diaphragm above a spring, connected through the stem to the valve.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.47"
+    },
+    {
+     "t": "p",
+     "text": "When air pressure closes the valve and spring action opens it, the actuator is direct-acting. When air pressure opens it and spring action closes it, the actuator is reverse-acting. Duplex actuators have air on both sides of the diaphragm.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "Hydraulic fluid is fed to one side of the piston while the other side is drained or bled. Solenoid valves typically direct the fluid.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.47"
+    },
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "fig",
+     "id": "me-04-fig35",
+     "num": 35,
+     "cap": "Solenoid Actuated Valve",
+     "alt": "Solenoid actuated valve with a coil around a magnetic slug on the stem, a spring, and a manual override.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.48"
+    },
+    {
+     "t": "p",
+     "text": "In a single solenoid valve, a spring acts against the slug, and removing power returns the valve to the opposite position. Fail open valves are opened by the spring and closed by energizing the solenoid. Fail closed valves are the reverse.",
+     "cite": "DOE-HDBK-1018/2-93 ME-04 p.48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q73",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "What stops an electric motor actuator at full open and full closed?",
+     "o": [
+      "Limit switches",
+      "A hammer handwheel",
+      "A buffer spring",
+      "An orifice in the air line"
+     ],
+     "a": 0,
+     "x": "Limit switches are normally provided to stop the motor automatically at full open and full closed valve positions.",
+     "p": "P45"
+    },
+    {
+     "eo": "1.6",
+     "q": "A pneumatic actuator closes the valve with air pressure and opens it with a spring. What is it called?",
+     "o": [
+      "Self-actuated",
+      "Direct-acting",
+      "Reverse-acting",
+      "Duplex"
+     ],
+     "a": 1,
+     "x": "When air pressure closes the valve and spring action opens the valve, the actuator is termed direct-acting.",
+     "p": "P46"
+    },
+    {
+     "existing": "Q348",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "How does a solenoid position a valve?",
+     "o": [
+      "By pressing air on a diaphragm",
+      "By driving a gear train",
+      "By feeding hydraulic fluid to a piston",
+      "By attracting a magnetic slug attached to the stem"
+     ],
+     "a": 3,
+     "x": "Solenoids position the valve by attracting a magnetic slug attached to the valve stem.",
+     "p": "P48"
+    },
+    {
+     "eo": "1.6",
+     "q": "Why are solenoids not used on large valves?",
+     "o": [
+      "They cannot fail open",
+      "They need hydraulic fluid",
+      "Their size and power requirements would be excessive",
+      "They act too slowly"
+     ],
+     "a": 2,
+     "x": "Solenoids are not practical for large valves because their size and power requirements would be excessive.",
+     "p": "P51"
+    }
+   ]
+  },
+  {
+   "title": "Valve position and good operating practice",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Remote position indication uses lights driven by a detector that senses stem, disk, or actuator position, such as a mechanical limit switch or a magnetic switch.",
+     "cite": "Word: Valve Fundamentals.docx, slide 1.70 Valve Position Indication"
+    },
+    {
+     "t": "p",
+     "text": "Locally, a rising stem shows position, and nonrising stem and power actuated valves often use mechanical pointers.",
+     "cite": "Word: Valve Fundamentals.docx, slide 1.70 Valve Position Indication"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "p",
+     "text": "Opening a valve slowly also lets the system stabilize as flow rates change. Use both hands where the design allows, and do not use unapproved aids such as cheater bars.",
+     "cite": "Word: Valve Fundamentals.docx, slide 1.54 Manual Valve Operation"
+    },
+    {
+     "t": "quote",
+     "p": "P54"
+    },
+    {
+     "t": "p",
+     "text": "Parts of different materials and thicknesses cool at different rates. Yoke arms contract faster than the body and compress the stem, which causes the valve to bind.",
+     "cite": "Word: Valve Fundamentals.docx, slide 1.57 Thermal Binding of Gate Valves"
+    },
+    {
+     "t": "quote",
+     "p": "P55"
+    },
+    {
+     "t": "p",
+     "text": "Closing a valve results in decreased flow and increased backpressure upstream of the valve.",
+     "cite": "Word: Valve Fundamentals.docx, slide 1.63 Valve Position and Fluid Flow"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q350",
+     "eo": "1.0"
+    },
+    {
+     "eo": "1.0",
+     "q": "Why should valves always be opened slowly?",
+     "o": [
+      "To keep the packing warm",
+      "To reduce the setpoint of relief valves",
+      "To prevent the stem from rising",
+      "To minimize system pressure transients"
+     ],
+     "a": 3,
+     "x": "Always open valves slowly to minimize system pressure transients.",
+     "p": "P53"
+    },
+    {
+     "eo": "1.0",
+     "q": "What is the effect of opening a valve on flow and upstream backpressure?",
+     "o": [
+      "Both increase",
+      "Both decrease",
+      "Flow increases and upstream backpressure decreases",
+      "Flow decreases and upstream backpressure increases"
+     ],
+     "a": 2,
+     "x": "Opening a valve results in increased flow and decreased backpressure as measured upstream of the valve.",
+     "p": "P55"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Safety valve blowdown",
+   "eo": [
+    "1.5"
+   ],
+   "page": 40,
+   "problem": "A safety valve lifts at 200 psig and reseats at 190 psig. Find the blowdown as a percentage of the actuating pressure.",
+   "steps": [
+    "Blowdown is the difference between setpoint and reset pressure: 200 - 190 = 10 psig.",
+    "Express it as a percentage of the setpoint: 10 / 200 x 100."
+   ],
+   "answer": "5%.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+  },
+  {
+   "title": "Relief valve setpoint",
+   "eo": [
+    "1.5"
+   ],
+   "page": "Word: Valve Fundamentals.docx, slide 1.88 Valve Setpoint Calculation",
+   "problem": "A spring holds a relief valve disk shut with 1000 lbf, and system pressure acts on 4 in² of disk area. At what pressure does the valve lift?",
+   "steps": [
+    "The setpoint depends on spring force and the disk area on which pressure acts, so use P = F / A.",
+    "P = 1000 lbf / 4 in² = 250 psi."
+   ],
+   "answer": "250 psi.",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.88 Valve Setpoint Calculation"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the seven basic valve parts in objective 1.3 of ME-04?",
+   "a": "Body, bonnet, stem, actuator, packing, seat, and disk.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "What is the primary pressure boundary of a valve?",
+   "a": "The body, sometimes called the shell.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What does a globe valve backseat do?",
+   "a": "It prevents system pressure from building against the valve packing.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What is the main drawback of a globe valve?",
+   "a": "High head loss from two or more right angle turns of the fluid.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "What is a needle valve used for?",
+   "a": "Relatively fine adjustments in the amount of fluid flow.",
+   "p": "P32",
+   "place": null
+  },
+  {
+   "q": "What does a reducing valve do?",
+   "a": "It automatically reduces supply pressure to a preselected pressure.",
+   "p": "P28",
+   "place": null
+  },
+  {
+   "q": "What is the difference between direct-acting and reverse-acting pneumatic actuators?",
+   "a": "Direct-acting: air closes the valve and the spring opens it. Reverse-acting: air opens the valve and the spring closes it.",
+   "p": "P46",
+   "place": null
+  },
+  {
+   "q": "How does a motor-operated valve fail on loss of power?",
+   "a": "As is.",
+   "p": "P52",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A valve's basic parts are the body, bonnet, trim, actuator, and packing. Stem leakage is controlled by properly compressing the packing.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.7"
+  },
+  {
+   "text": "Gate valves give low resistance but do not throttle. Globe valves throttle well but have high head loss.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.43"
+  },
+  {
+   "text": "Ball valves give quarter turn on-off service, plug valves direct flow between ports, and diaphragm and pinch valves isolate the mechanism from the fluid.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.43"
+  },
+  {
+   "text": "Check valves prevent reverse flow, and safety and relief valves provide automatic overpressure protection.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.43"
+  },
+  {
+   "text": "Actuators are manual, electric motor, pneumatic, hydraulic, and solenoid.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.50"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "The handbook p.38 says some lift check valves may be installed horizontally, with a ball held by guide ribs. Valve Fundamentals.docx slide 1.35 says vertically. The p.37 and slide 1.34 installation limits also differ. Neither detail is shown.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.38"
+  },
+  {
+   "type": "Conflict",
+   "note": "Slides 1.23 and 1.26 say ball and plug valves start, stop, or throttle. The handbook p.18 and p.21 say they stop or start, and p.19 and p.22 say they throttle poorly apart from special designs. The lesson uses the handbook.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.18"
+  },
+  {
+   "type": "Conflict",
+   "note": "The handbook p.35 lists swing, tilting-disk, piston, butterfly, and stop as the general check valve types and then teaches lift checks too. Slide 1.32 lists swing, lift, and stop. The lesson teaches swing, lift, and stop, which the objective names need. No values differ.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.35"
+  },
+  {
+   "type": "Scope",
+   "note": "Flexible wedge steam service (p.11), steam service globe installation (p.18), composition disks for steam and hot water (p.17), hydraulic lock (slide 1.58), and water injection speed (p.49) are water-system material, so they are left off.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.11"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Most quiz slides keep their question text in pictures, so they are not used. Slide 1.65 to 1.68 throttling examples, slides 1.94 to 1.110 on predicting relief valve response, and accumulation are beyond the objectives and left off, apart from the setpoint equation.",
+   "cite": "Word: Valve Fundamentals.docx, slide 1.64 Valve Position and Fluid Flow"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.4 lists stop check on the objectives page, but the p.8 chapter list does not. The lesson keeps the objectives page wording.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.8"
+  },
+  {
+   "type": "Figures",
+   "note": "Figures 5 to 8, 10, 11, 17, 21, 23, 25, and 26 are off. They show variants that no objective needs. Gate disk designs, plug and butterfly construction detail, and tilting-disk, piston, and butterfly check valves are also left off.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.11"
+  },
+  {
+   "type": "Examples",
+   "note": "The handbook has no valve calculations. The examples use new numbers with the handbook's blowdown definition and the setpoint equation from slide 1.88.",
+   "cite": "DOE-HDBK-1018/2-93 ME-04 p.40"
+  }
+ ],
+ "page_tags": []
+}

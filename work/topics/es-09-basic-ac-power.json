@@ -1,0 +1,838 @@
+{
+ "module_id": "ES-09",
+ "slug": "es-09-basic-ac-power",
+ "title": "Basic AC Power",
+ "status": "Reviewed",
+ "scope_tags": [
+  "Draft source"
+ ],
+ "source_id": "DOE-1011-V3",
+ "handbook": "DOE-HDBK-1011/3-92",
+ "word_file": "AC Generator Theory and Operation.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an AC single-phase or three-phase circuit, DESCRIBE the power characteristics in the circuit.",
+   "items": [],
+   "page": {
+    "pdf": 65,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE the relationship between apparent, true, and reactive power by definition or by using a power triangle.",
+     "items": [],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE power factor as it relates to true power and apparent power.",
+     "items": [],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given the necessary values for voltage (E), resistance (R), reactance (X), impedance (Z), and/or current (I), CALCULATE the following power components for an AC circuit:",
+     "items": [
+      "a. True power (P)",
+      "b. Apparent power (S)",
+      "c. Reactive power (Q)",
+      "d. Power factor (pf)"
+     ],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Leading power factor",
+      "b. Lagging power factor"
+     ],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the reasons that three-phase power systems are used in the industry.",
+     "items": [],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given values for current, voltage, and power factor in a three-phase system, CALCULATE the following:",
+     "items": [
+      "a. Real power",
+      "b. Reactive power",
+      "c. Apparent power"
+     ],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "Given a diagram of a wye- or delta-connected three-phase system, DESCRIBE the voltage/current relationships of the circuit.",
+     "items": [],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the indications of an unbalanced load in a three-phase power system.",
+     "items": [],
+     "page": {
+      "pdf": 65,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Apparent power (S) is the power delivered to an electrical circuit.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.2"
+  },
+  {
+   "id": "P2",
+   "quote": "True power (P) is the power consumed by the resistive loads in an electrical circuit.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+  },
+  {
+   "id": "P3",
+   "quote": "Unlike true power, reactive power is not useful power because it is stored in the circuit itself.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "The total power delivered by the source is the apparent power.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "Power factor (pf) is the ratio between true power and apparent power.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "It can vary from 1, when the phase angle is 0°, to 0, when the phase angle is 90°.",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "inductive circuit (L) where current (I) lags voltage (E).",
+   "sec": "Power Triangle",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "Total Power supplied to an electrical circuit.  It is a combination of the true and reactive power, measured in Volt Amps (VA).",
+   "sec": "",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.23 Power Factor Recall"
+  },
+  {
+   "id": "P9",
+   "quote": "Does not perform any useful work but is essential for maintaining magnetic and electric fields through inductors and capacitors.",
+   "sec": "",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.23 Power Factor Recall"
+  },
+  {
+   "id": "P10",
+   "quote": "A three-phase (3φ) system is a combination of three single-phase systems.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.17"
+  },
+  {
+   "id": "P11",
+   "quote": "produces three separate and equal voltages, each of which is 120° out of phase with the other voltages",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.17"
+  },
+  {
+   "id": "P12",
+   "quote": "Three-phase equipment is smaller in size, weighs less, and is more efficient than single-phase equipment.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+  },
+  {
+   "id": "P13",
+   "quote": "They have a wide range of voltages and can be used for single-phase loads.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+  },
+  {
+   "id": "P14",
+   "quote": "If the three common ends of each phase are connected at a common point and the other three ends are connected to a 3φ line, it is called a wye, or Y-, connection",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+  },
+  {
+   "id": "P15",
+   "quote": "If the three phases are connected in series to form a closed loop, it is called a delta, or ∆-, connection.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+  },
+  {
+   "id": "P16",
+   "quote": "In a balanced delta load, the line voltage (VL) is equal to the phase voltage (Vφ )",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.20"
+  },
+  {
+   "id": "P17",
+   "quote": "line current (IL) is equal to the phase current (Iφ ).",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.20"
+  },
+  {
+   "id": "P18",
+   "quote": "the total power formulas for delta- and wye-connected loads are identical.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.21"
+  },
+  {
+   "id": "P19",
+   "quote": "Unbalanced three-phase circuits are indicated by abnormally high currents in one or more of the phases.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.25"
+  },
+  {
+   "id": "P20",
+   "quote": "the neutral connection in a wye-connected load will carry more current than the phase under a balanced load.",
+   "sec": "Three-Phase Circuits",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.25"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Power triangle",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.22 Power Triangle"
+  },
+  {
+   "step": "Power factor recall",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.23 Power Factor Recall"
+  },
+  {
+   "step": "Inductive and capacitive reactance",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.24 Inductive and Capacitive Reactance"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "The power triangle",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In AC circuits, current and voltage are normally out of phase, so not all the power produced by the generator can be used to accomplish work.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.1"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig1",
+     "num": 1,
+     "cap": "Power Triangle",
+     "alt": "Right triangle with true power P on the base, reactive power Q on the vertical side, apparent power S on the hypotenuse, and angle theta between P and S.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "Apparent power is measured in volt-amperes (VA).",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.2"
+    },
+    {
+     "t": "eq",
+     "text": "S = I²Z = ITE",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "True power is measured in watts.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+    },
+    {
+     "t": "eq",
+     "text": "P = I²R = EI cos θ",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Reactive power (Q) is expressed in volt-amperes-reactive (VAR). It comes from the expansion and collapse of magnetic and electrostatic fields.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+    },
+    {
+     "t": "eq",
+     "text": "Q = I²X = EI sin θ",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Part of the apparent power, called true power, is dissipated by the circuit resistance as heat. The rest is returned to the source by the circuit inductance and capacitance.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "On the power triangle, which side represents apparent power?",
+     "o": [
+      "The hypotenuse",
+      "The base",
+      "The vertical side",
+      "The angle θ"
+     ],
+     "a": 0,
+     "x": "Figure 1 shows apparent power S as the hypotenuse, between true power P and reactive power Q. The total power delivered by the source is the apparent power.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why is reactive power not useful power?",
+     "o": [
+      "It is lost as heat",
+      "It is stored in the circuit itself",
+      "It exists only in DC circuits",
+      "It is consumed by resistive loads"
+     ],
+     "a": 1,
+     "x": "Unlike true power, reactive power is not useful power because it is stored in the circuit itself.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Power factor",
+   "eo": [
+    "1.2",
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "eq",
+     "text": "pf = cos θ = P / S",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "In an inductive circuit, the current lags the voltage and is said to have a lagging power factor.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig2",
+     "num": 2,
+     "cap": "Lagging Power Factor",
+     "alt": "Phasor diagram with E on the reference line and current I lagging it by the angle theta.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "p",
+     "text": "In a capacitive circuit, the current leads the voltage and is said to have a leading power factor.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig3",
+     "num": 3,
+     "cap": "Leading Power Factor",
+     "alt": "Phasor diagram with E on the reference line and current I leading it by the angle theta.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "p",
+     "text": "The memory aid is ELI the ICE man. ELI refers to an:",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "ICE refers to a capacitive circuit (C) where current (I) leads voltage (E).",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q279",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.3",
+     "q": "A circuit has E = 100 volts, I = 5 amps, and a power factor of 0.8. What is the true power?",
+     "o": [
+      "125 watts",
+      "400 watts",
+      "500 watts",
+      "625 watts"
+     ],
+     "a": 1,
+     "x": "P = EI cos θ = (100)(5)(0.8) = 400 watts.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.3",
+     "q": "A circuit has E = 100 volts and I = 5 amps. What is the apparent power?",
+     "o": [
+      "20 VA",
+      "95 VA",
+      "105 VA",
+      "500 VA"
+     ],
+     "a": 3,
+     "x": "S = ITE = (5)(100) = 500 VA.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.3",
+     "q": "A circuit has true power of 300 watts and apparent power of 500 VA. What is the power factor?",
+     "o": [
+      "0.6",
+      "0.8",
+      "1.67",
+      "200"
+     ],
+     "a": 0,
+     "x": "pf = P / S = 300 / 500 = 0.6.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.4",
+     "q": "In an inductive circuit, the power factor is:",
+     "o": [
+      "Leading, because current leads voltage",
+      "Lagging, because current lags voltage",
+      "Always 1",
+      "Always 0"
+     ],
+     "a": 1,
+     "x": "In an inductive circuit, the current lags the voltage and is said to have a lagging power factor.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Three-phase systems",
+   "eo": [
+    "1.5",
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "A balanced system gets its power from a 3φ AC generator that:",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig10",
+     "num": 10,
+     "cap": "Three-Phase AC",
+     "alt": "Three sine waves of equal size, each 120 degrees out of phase with the others.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+    },
+    {
+     "t": "p",
+     "text": "Three-phase equipment weighs less than single-phase equipment of the same power rating.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig11",
+     "num": 11,
+     "cap": "3φ AC Power Connections",
+     "alt": "Wye connection with three windings joined at a common point, and delta connection with three windings in a closed loop.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "In a balanced delta load, the line current is the square root of three times the phase current.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.20"
+    },
+    {
+     "t": "p",
+     "text": "In a balanced wye load, the line voltage is the square root of three times the phase voltage, and:",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "eq",
+     "text": "PT = √3 VL IL cos θ",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.20"
+    },
+    {
+     "t": "eq",
+     "text": "ST = √3 VT IL",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.21"
+    },
+    {
+     "t": "eq",
+     "text": "QT = √3 VT IL sin θ",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.21"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig13",
+     "num": 13,
+     "cap": "3φ Power Triangle",
+     "alt": "Three-phase power triangle with PT in kW on the base, QT in kVAR on the vertical side, and ST in kVA on the hypotenuse.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "Which is a reason three-phase power systems are used?",
+     "o": [
+      "The equipment is larger",
+      "The equipment is smaller, weighs less, and is more efficient",
+      "It needs no generators",
+      "It removes all reactive power"
+     ],
+     "a": 1,
+     "x": "Three-phase equipment is smaller in size, weighs less, and is more efficient than single-phase equipment.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.6",
+     "q": "A balanced three-phase system has VL = 100 volts, IL = 10 amps, and a power factor of 0.8. Using √3 = 1.73, what is the real power?",
+     "o": [
+      "800 watts",
+      "1384 watts",
+      "1730 watts",
+      "2400 watts"
+     ],
+     "a": 1,
+     "x": "PT = √3 VL IL cos θ = (1.73)(100)(10)(0.8) = 1384 watts.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.6",
+     "q": "A balanced three-phase system has VL = 100 volts and IL = 10 amps. Using √3 = 1.73, what is the apparent power?",
+     "o": [
+      "1000 VA",
+      "1384 VA",
+      "1730 VA",
+      "3000 VA"
+     ],
+     "a": 2,
+     "x": "ST = √3 VL IL = (1.73)(100)(10) = 1730 VA.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.6",
+     "q": "A balanced three-phase system has VL = 100 volts, IL = 10 amps, and sin θ = 0.6. Using √3 = 1.73, what is the reactive power?",
+     "o": [
+      "600 VAR",
+      "1038 VAR",
+      "1384 VAR",
+      "1730 VAR"
+     ],
+     "a": 1,
+     "x": "QT = √3 VL IL sin θ = (1.73)(100)(10)(0.6) = 1038 VAR.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.7",
+     "q": "In a balanced delta load, how does line voltage compare with phase voltage?",
+     "o": [
+      "They are equal",
+      "Line voltage is √3 times phase voltage",
+      "Line voltage is half of phase voltage",
+      "Line voltage is zero"
+     ],
+     "a": 0,
+     "x": "In a balanced delta load, the line voltage is equal to the phase voltage.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.7",
+     "q": "In a balanced wye load, how does line current compare with phase current?",
+     "o": [
+      "Line current is √3 times phase current",
+      "Line current is three times phase current",
+      "They are equal",
+      "Line current is zero"
+     ],
+     "a": 2,
+     "x": "In a balanced wye load, line current is equal to the phase current.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Unbalanced loads",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In a balanced system, the phasor sum of the three line or phase voltages is zero, and the phasor sum of the three line or phase currents is zero.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.23"
+    },
+    {
+     "t": "p",
+     "text": "When the three load impedances are not equal, the phasor sums and the neutral current are not zero, and the load is unbalanced. This occurs when an open or short circuit appears at the load.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.23"
+    },
+    {
+     "t": "fig",
+     "id": "es-09-fig16",
+     "num": 16,
+     "cap": "3φ Unbalanced Load",
+     "alt": "A wye load shown balanced, with an open circuit in phase A, and with a short circuit in phase A.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "This may cause damage to equipment if the imbalance is allowed to continue.",
+     "cite": "DOE-HDBK-1011/3-92 ES-09 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q428",
+     "eo": "1.8"
+    },
+    {
+     "eo": "1.8",
+     "q": "In a fault condition, what can the neutral connection of a wye-connected load carry?",
+     "o": [
+      "No current",
+      "More current than the phase carries under a balanced load",
+      "Only DC current",
+      "Exactly the phase voltage"
+     ],
+     "a": 1,
+     "x": "In a fault condition, the neutral connection in a wye-connected load will carry more current than the phase under a balanced load.",
+     "p": "P20"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Power in a series R-C circuit",
+   "eo": "1.3",
+   "page": 9,
+   "problem": "An 80 Ω XC and a 60 Ω resistance are in series with a 120 V source, and the current is 1.2 amps. Find the power factor, true power, reactive power, and apparent power.",
+   "steps": [
+    "pf = cos θ, where θ = arctan(-80/60) = -53°, so pf = 0.60.",
+    "P = EI cos θ = (120)(1.2)(0.60) = 86.4 watts.",
+    "Q = EI sin θ = (120)(1.2)(0.798) = 114.9 VAR.",
+    "S = EI = (120)(1.2) = 144 VA."
+   ],
+   "answer": "pf 0.60, P 86.4 watts, Q 114.9 VAR, S 144 VA",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.9"
+  },
+  {
+   "title": "Power in a series R-C-L circuit",
+   "eo": "1.3",
+   "page": 13,
+   "problem": "A series R-C-L circuit has 71.6 V applied, a 4 amp current, and a phase angle of 63.4°. Find the power factor, true power, and apparent power.",
+   "steps": [
+    "pf = cos 63.4° = 0.45.",
+    "P = EI cos θ = (71.6)(4)(0.45) = 128.9 watts.",
+    "S = EI = (71.6)(4) = 286.4 VA."
+   ],
+   "answer": "pf 0.45, P 128.9 watts, S 286.4 VA",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.13"
+  }
+ ],
+ "facts": [
+  {
+   "q": "In what units are apparent, true, and reactive power measured?",
+   "a": "Apparent power in volt-amperes (VA), true power in watts, and reactive power in volt-amperes-reactive (VAR).",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "Over what range can power factor vary?",
+   "a": "From 1, when the phase angle is 0°, to 0, when the phase angle is 90°.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What does ELI the ICE man help you remember?",
+   "a": "ELI: in an inductive circuit, current lags voltage. ICE: in a capacitive circuit, current leads voltage.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "How far apart are the three voltages of a three-phase generator?",
+   "a": "Each is 120° out of phase with the other voltages.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What is a delta connection?",
+   "a": "The three phases are connected in series to form a closed loop.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What is a wye connection?",
+   "a": "The three common ends of each phase are connected at a common point, and the other three ends are connected to a 3φ line.",
+   "p": "P14",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Apparent power is S = I²Z = ITE, true power is P = I²R = EI cos θ, and reactive power is Q = I²X = EI sin θ.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.16"
+  },
+  {
+   "text": "ELI the ICE man describes the reactive characteristics of an AC circuit.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.16"
+  },
+  {
+   "text": "Three-phase systems are used because the equipment is smaller, weighs less, and is more efficient.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.26"
+  },
+  {
+   "text": "Unbalanced three-phase circuits are indicated by abnormally high currents in one or more of the phases.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.26"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Left off the page",
+   "note": "The series R-L example prints cos 14° as 0.097, which conflicts with the size of the other values in the example. The example is not used.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.5"
+  },
+  {
+   "type": "Handbook notation",
+   "note": "Page 20 writes the power formula with VL, and page 21 writes the same formula with VT. Each equation is shown as printed, and the checks use line voltage, VL.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.21"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "Page 3 calls reactive power the power consumed because of expanding and collapsing fields, then says none of it is consumed and it is all returned to the source. The lesson says it is stored.",
+   "cite": "DOE-HDBK-1011/3-92 ES-09 p.3"
+  },
+  {
+   "type": "Word source",
+   "note": "Most of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. No value in that text conflicts with the handbook.",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.22 Power Triangle"
+  },
+  {
+   "type": "Word and handbook",
+   "note": "The lesson plan defines apparent power as a combination of true and reactive power, and the handbook as the power delivered to a circuit. These agree, and both are on the page with citations.",
+   "cite": "Word: AC Generator Theory and Operation.docx, slide 1.23 Power Factor Recall"
+  }
+ ],
+ "page_tags": []
+}

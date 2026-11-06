@@ -1,0 +1,828 @@
+{
+ "module_id": "ES-06",
+ "slug": "es-06-dc-motors",
+ "title": "DC Motors",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V2",
+ "handbook": "DOE-HDBK-1011/2-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the type and application of a DC motor, DESCRIBE the operating characteristics of that motor to include methods of speed variation, advantages of each type, and torque vs speed characteristics.",
+   "items": [],
+   "page": {
+    "pdf": 103,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "Using the right-hand rule for motors, DETERMINE the direction of the magnetic field, direction of current flow, or force on a conductor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the function of torque in a direct current motor and how it is developed.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE how Counterelectromotive Force (CEMF) is developed in a DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE the relationship between field current and magnetic field size in a DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "STATE the function of the CEMF that is developed in a DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE how the speed of a DC motor is adjusted.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the relationship between armature current and torque produced in a DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DESCRIBE the differences in construction between a shunt-wound and a series-wound DC motor with respect to the relationship between the field and the armature windings.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DESCRIBE the construction of a compounded DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the torque-vs-speed characteristics for a shunt-wound and a series-wound DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "EXPLAIN why starting resistors are necessary for large DC motors.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "LIST the four nameplate ratings for a DC motor.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "There are two conditions which are necessary to produce a force on a conductor.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "When the forefinger is pointed in the direction of the magnetic field lines, and the center finger is pointed in the direction of current flow, the thumb will point in the direction of force (motion).",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+  },
+  {
+   "id": "P3",
+   "quote": "Torque is defined as that force which tends to produce and maintain rotation.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+  },
+  {
+   "id": "P4",
+   "quote": "The function of torque in a DC motor is to provide the mechanical output or drive the piece of equipment that the DC motor is attached to.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "if the armature current were reversed, but the field were the same, torque would be developed in the opposite direction.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "The induced EMF, as a result of motor operation, is called counterelectromotive force, or CEMF",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "The CEMF opposes the applied voltage and functions to lower armature current.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+  },
+  {
+   "id": "P8",
+   "quote": "An increase in field current will cause field flux (Φf) to increase.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.6"
+  },
+  {
+   "id": "P9",
+   "quote": "If the field flux of a DC motor is decreased, the motor speed will increase.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.6"
+  },
+  {
+   "id": "P10",
+   "quote": "The speed of a DC motor may be changed by using resistors to vary the field current and, therefore, the field strength.",
+   "sec": "DC Motor Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.7"
+  },
+  {
+   "id": "P11",
+   "quote": "The motor is called a \"shunt\" motor because the field is in parallel, or \"shunts\" the armature.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+  },
+  {
+   "id": "P12",
+   "quote": "The motor field windings for a series motor are in series with the armature.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+  },
+  {
+   "id": "P13",
+   "quote": "A compounded DC motor is constructed so that it contains both a shunt and a series field.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+  },
+  {
+   "id": "P14",
+   "quote": "it is classified as a constant speed motor, even though the speed does slightly decrease as load is increased.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+  },
+  {
+   "id": "P15",
+   "quote": "series-wound motors must have a load connected to prevent damage from high speed conditions.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "The advantage of a series-wound motor is that it develops a large torque and can be operated at low speed.",
+   "sec": "Types of DC Motors",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "At the moment a DC motor is started the armature is stationary and there is no counter EMF being generated.",
+   "sec": "DC Motor Operation",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "Starting resistors are usually incorporated into the motor design to limit starting current to 125 to 200 percent of full load current.",
+   "sec": "DC Motor Operation",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+  },
+  {
+   "id": "P19",
+   "quote": "The nameplate ratings of a DC motor refer to the conditions of voltage, current, speed, and power at which the motor is normally operated.",
+   "sec": "DC Motor Operation",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.13"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Force on a conductor",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "list",
+     "items": [
+      "The conductor must be carrying current.",
+      "The conductor must be within a magnetic field."
+     ],
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The force attempts to move the conductor in a direction perpendicular to the magnetic field. This is the basic theory by which all DC motors operate.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.1"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig2",
+     "num": 2,
+     "cap": "Current-Carrying Conductor in a Magnetic Field",
+     "alt": "Cross sections of conductors in a magnetic field, showing the main field weakened on one side of each conductor and strengthened on the other.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.2"
+    },
+    {
+     "t": "p",
+     "text": "A force is developed on the conductor that moves it in the direction of the weakened field.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.2"
+    },
+    {
+     "t": "p",
+     "text": "The right-hand rule for motors shows the direction in which a current-carrying conductor moves in a magnetic field.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig4",
+     "num": 4,
+     "cap": "Right-Hand Rule for Motors",
+     "alt": "A right hand with the forefinger along the magnetic field, the center finger along the current, and the thumb along the force on the conductor.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "In the right-hand rule for motors, what does the thumb show?",
+     "o": [
+      "The direction of force (motion)",
+      "The direction of the magnetic field",
+      "The direction of current flow",
+      "The polarity of the brushes"
+     ],
+     "a": 0,
+     "x": "The forefinger points along the magnetic field lines, the center finger along the current flow, and the thumb along the force (motion).",
+     "p": "P2"
+    }
+   ]
+  },
+  {
+   "title": "Torque",
+   "eo": [
+    "1.2",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "When voltage is applied, current flows through the field winding and establishes a magnetic field. Current also flows through the armature winding.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig5",
+     "num": 5,
+     "cap": "Armature Current in a Basic DC Motor",
+     "alt": "A DC motor armature loop between north and south poles, connected to a DC power source through brushes, with arrows for armature current.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+    },
+    {
+     "t": "p",
+     "text": "The armature is a current-carrying conductor in a magnetic field, so a force is exerted on it. The sum of the forces multiplied by the radius of the armature equals the torque.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Torque depends on the field flux and the armature current.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "eq",
+     "text": "T = KΦIa",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What is the function of torque in a DC motor?",
+     "o": [
+      "To generate the field flux",
+      "To provide the mechanical output",
+      "To reverse the armature current",
+      "To limit starting current"
+     ],
+     "a": 1,
+     "x": "The function of torque in a DC motor is to provide the mechanical output, or drive the piece of equipment the motor is attached to.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.7",
+     "q": "With field flux constant, what happens to torque when armature current increases?",
+     "o": [
+      "It decreases",
+      "It stays constant",
+      "It increases",
+      "It reverses"
+     ],
+     "a": 2,
+     "x": "T = KΦIa, so with field flux constant, torque increases with armature current.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "CEMF and speed control",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A generator action is developed in every motor. When a conductor cuts lines of force, an EMF is induced in that conductor.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig6",
+     "num": 6,
+     "cap": "Counterelectromotive Force (CEMF)",
+     "alt": "A rotating armature between north and south poles, with arrows showing CEMF opposing the applied current from the DC power source.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "The value of CEMF depends on field strength and armature speed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "eq",
+     "text": "ECEMF = KΦN",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "The effective voltage acting in the armature is the applied voltage minus the counter EMF.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.5"
+    },
+    {
+     "t": "eq",
+     "text": "Ia = (Et - ECEMF) / Ra",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.6"
+    },
+    {
+     "t": "p",
+     "text": "The field of a DC motor is varied using external devices, usually field resistors. Lowering the field resistance increases the field current.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Less field strength reduces the CEMF. That allows more armature current, which develops a larger torque and increases the motor speed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.6"
+    },
+    {
+     "t": "p",
+     "text": "Speed and CEMF continue to increase until armature current and torque are just large enough to supply the load at a new constant speed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "How is CEMF developed in a DC motor?",
+     "o": [
+      "By the armature rotating in the field of the motor",
+      "By the brushes shorting the commutator",
+      "By field resistors heating",
+      "By the load driving the shaft backward"
+     ],
+     "a": 0,
+     "x": "When the armature conductor cuts lines of force as it rotates, an EMF is induced. This is counterelectromotive force.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.4",
+     "q": "What happens to field flux when field current increases in a DC motor?",
+     "o": [
+      "It decreases",
+      "It reverses",
+      "It does not change",
+      "It increases"
+     ],
+     "a": 3,
+     "x": "An increase in field current will cause field flux to increase.",
+     "p": "P8"
+    },
+    {
+     "eo": "1.5",
+     "q": "What is the function of the CEMF developed in a DC motor?",
+     "o": [
+      "To raise armature current",
+      "To oppose the applied voltage and lower armature current",
+      "To strengthen the field",
+      "To supply the load"
+     ],
+     "a": 1,
+     "x": "The CEMF opposes the applied voltage and functions to lower armature current.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.6",
+     "q": "The field flux of a DC motor is decreased. What happens to motor speed?",
+     "o": [
+      "It increases",
+      "It decreases",
+      "It stays the same",
+      "The motor stops"
+     ],
+     "a": 0,
+     "x": "If the field flux of a DC motor is decreased, the motor speed will increase.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "Types of DC motors",
+   "eo": [
+    "1.8",
+    "1.9",
+    "1.10"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "fig",
+     "id": "es-06-fig7",
+     "num": 7,
+     "cap": "DC Motor Connections",
+     "alt": "Schematics of DC motor connections: externally excited, shunt, series, cumulatively compounded, and differentially compounded.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "In a cumulatively-compounded motor the shunt and series fields aid one another, and in a differentially-compounded motor they oppose one another.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+    },
+    {
+     "t": "p",
+     "text": "A shunt-wound DC motor has a decreasing torque when speed increases.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig8",
+     "num": 8,
+     "cap": "Torque-vs-Speed for a Shunt-Wound DC Motor",
+     "alt": "Graph of torque against speed for a shunt-wound motor, falling slowly, then dropping rapidly at high speed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "As the speed of a series-wound motor decreases, its torque increases sharply. As load is removed, its speed increases sharply.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "es-06-fig9",
+     "num": 9,
+     "cap": "Torque-vs-Speed for a Series-Wound Motor",
+     "alt": "Graph of torque against speed for a series-wound motor, very high at low speed and falling steeply as speed rises.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "The compounded motor has a greater torque than a shunt motor due to the series field, and a fairly constant speed due to the shunt field winding.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "In a series-wound DC motor, how is the field connected?",
+     "o": [
+      "In parallel with the armature",
+      "To a separate source",
+      "In series with the armature",
+      "Across the brushes only"
+     ],
+     "a": 2,
+     "x": "The motor field windings for a series motor are in series with the armature.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.9",
+     "q": "What does a compounded DC motor contain?",
+     "o": [
+      "Only a shunt field",
+      "Only a series field",
+      "No field windings",
+      "Both a shunt and a series field"
+     ],
+     "a": 3,
+     "x": "A compounded DC motor is constructed so that it contains both a shunt and a series field.",
+     "p": "P13"
+    },
+    {
+     "existing": "Q424",
+     "eo": "1.10"
+    },
+    {
+     "eo": "1.10",
+     "q": "Why must a series-wound motor have a load connected?",
+     "o": [
+      "To prevent damage from high speed conditions",
+      "To keep the field in parallel",
+      "To reduce starting torque",
+      "To raise the CEMF to zero"
+     ],
+     "a": 0,
+     "x": "As load is removed from a series motor, the speed will increase sharply, so it must have a load connected.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Starting and ratings",
+   "eo": [
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "The only thing limiting starting current is the armature resistance, which in most DC motors is a very low value.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+    },
+    {
+     "t": "p",
+     "text": "This high current would, in all probability, cause severe damage to the brushes, commutator, or windings.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "Maximum resistance is inserted when the motor is first started. As speed and counter EMF increase, the starting resistors are cut out in steps until the motor reaches full running speed.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "The continuous power rating is a thermal rating. The speed rating is the upper limit at which a motor can be operated without mechanical damage.",
+     "cite": "DOE-HDBK-1011/2-92 ES-06 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "A motor has 200 volts applied and an armature resistance of 0.5 ohms. What is the armature current at the moment of starting?",
+     "o": [
+      "100 amps",
+      "200 amps",
+      "400 amps",
+      "800 amps"
+     ],
+     "a": 2,
+     "x": "There is no counter EMF at start, so Ia = Et / Ra = 200 / 0.5 = 400 amps.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.12",
+     "q": "Which set lists the nameplate ratings of a DC motor?",
+     "o": [
+      "Voltage, current, speed, and power",
+      "Torque, flux, slip, and frequency",
+      "Resistance, reactance, impedance, and phase",
+      "Weight, size, cost, and age"
+     ],
+     "a": 0,
+     "x": "The nameplate ratings of a DC motor refer to the conditions of voltage, current, speed, and power.",
+     "p": "P19"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Starting current",
+   "eo": "1.11",
+   "page": 12,
+   "problem": "A 10-hp motor has an armature resistance of 0.4 ohms and a 260 VDC source. Find the starting current with no starting resistance.",
+   "steps": [
+    "There is no counter EMF at the moment of starting.",
+    "Ia = (260 VDC - 0) / 0.4 Ω."
+   ],
+   "answer": "650 amps",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+  },
+  {
+   "title": "Sizing a starting resistor",
+   "eo": "1.11",
+   "page": 13,
+   "problem": "The same motor has a full load current of 50 amps. Find the resistance to add in series to limit starting current to 125 percent of this value.",
+   "steps": [
+    "Rs = (Et / Is) - Ra.",
+    "Rs = 260 VDC / (125%)(50 amps) - 0.4 Ω."
+   ],
+   "answer": "3.76 Ω",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.13"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What two conditions produce the force in a DC motor's right-hand rule?",
+   "a": "The conductor must be carrying current, and it must be within a magnetic field.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What is torque?",
+   "a": "That force which tends to produce and maintain rotation.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "How is the speed of a DC motor changed?",
+   "a": "By using resistors to vary the field current and, therefore, the field strength.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "How is a shunt-wound DC motor classified by speed?",
+   "a": "As a constant speed motor, even though the speed does slightly decrease as load is increased.",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What is the advantage of a series-wound motor?",
+   "a": "It develops a large torque and can be operated at low speed.",
+   "p": "P16",
+   "place": null
+  },
+  {
+   "q": "To what value do starting resistors usually limit starting current?",
+   "a": "125 to 200 percent of full load current.",
+   "p": "P18",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A force is produced on a conductor that is carrying current and is within a magnetic field.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.7"
+  },
+  {
+   "text": "The function of torque is to provide the mechanical output, and CEMF lowers armature current.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.7"
+  },
+  {
+   "text": "The speed of a DC motor may be changed by varying the field current.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.7"
+  },
+  {
+   "text": "A shunt-wound motor has a decreasing torque as speed increases. A series-wound motor has a rapidly increasing torque when speed decreases.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.11"
+  },
+  {
+   "text": "Starting resistors are necessary for large DC motors to prevent damage due to high currents while starting the motor.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.14"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook inconsistency",
+   "note": "The text calls the 650 amp starting current about twelve times full-load current, but the example's 50 amp full load makes it thirteen times. The lesson does not repeat the ratio.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.12"
+  },
+  {
+   "type": "Rule 9",
+   "note": "The handbook's applications (cranes, winches, presses, shears) are left out because no objective names them.",
+   "cite": "DOE-HDBK-1011/2-92 ES-06 p.10"
+  }
+ ],
+ "page_tags": []
+}

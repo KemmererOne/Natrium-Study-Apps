@@ -1,0 +1,954 @@
+{
+ "module_id": "ES-08",
+ "slug": "es-08-basic-ac-reactive-components",
+ "title": "Basic AC Reactive Components",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V3",
+ "handbook": "DOE-HDBK-1011/3-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Using the rules associated with inductors and capacitors, DESCRIBE the characteristics of these elements when they are placed in an AC circuit.",
+   "items": [],
+   "page": {
+    "pdf": 37,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DESCRIBE inductive reactance (XL).",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given the operation frequency (f) and the value of inductance (L), CALCULATE the inductive reactance (XL) of a simple circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the effect of the phase relationship between current and voltage in an inductive circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DRAW a simple phasor diagram representing AC current (I) and voltage (E) in an inductive circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DEFINE capacitive reactance (XC).",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "Given the operating frequency (f) and the value of capacitance (C), CALCULATE the capacitive reactance (XC) of a simple AC circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DESCRIBE the effect on phase relationship between current (I) and voltage (E) in a capacitive circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DRAW a simple phasor diagram representing AC current (I) and voltage (E) in a capacitive circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DEFINE impedance (Z).",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "Given the values for resistance (R) and inductance (L) and a simple R-L series AC circuit, CALCULATE the impedance (Z) for that circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "Given the values for resistance (R) and capacitance (C) and a simple R-C series AC circuit, CALCULATE the impedance (Z) for that circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "Given a simple R-C-L series AC circuit and the values for resistance (R), inductive reactance (XL), and capacitive reactance (XC), CALCULATE the impedance (Z) for that circuit.",
+     "items": [],
+     "page": {
+      "pdf": 37,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "STATE the formula for calculating total current (IT) in a simple parallel R-C-L AC circuit.",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "Given a simple R-C-L parallel AC circuit and the values for voltage (VT), resistance (R), inductive reactance (XL), and capacitive reactance (XC), CALCULATE the impedance (Z) for that circuit.",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "DEFINE resonance.",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "Given the values of capacitance (C) and inductance (L), CALCULATE the resonant frequency.",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "Given a series R-C-L circuit at resonance, DESCRIBE the net reactance of the circuit.",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "Given a parallel R-C-L circuit at resonance, DESCRIBE the circuit output relative to current (I).",
+     "items": [],
+     "page": {
+      "pdf": 38,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "This opposition of the inductance to the flow of an alternating current is called inductive reactance (XL).",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "the current lags the applied voltage by 90° in a purely inductive circuit.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+  },
+  {
+   "id": "P3",
+   "quote": "Diagrams of this type are referred to as phasor diagrams.",
+   "sec": "Inductance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "In any purely capacitive circuit, current leads applied voltage by 90°.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.6"
+  },
+  {
+   "id": "P5",
+   "quote": "Capacitive reactance is the opposition by a capacitor or a capacitive circuit to the flow of current.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.6"
+  },
+  {
+   "id": "P6",
+   "quote": "capacitive reactance, which is the opposition to current flow, is inversely proportional to frequency and capacitance.",
+   "sec": "Capacitance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.6"
+  },
+  {
+   "id": "P7",
+   "quote": "Impedance is defined as the total opposition to current flow in a circuit.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.9"
+  },
+  {
+   "id": "P8",
+   "quote": "Net reactance in an AC circuit is the difference between inductive and capacitive reactance.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.10"
+  },
+  {
+   "id": "P9",
+   "quote": "Impedance in an AC circuit corresponds to the resistance of a DC circuit.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.11"
+  },
+  {
+   "id": "P10",
+   "quote": "Impedance is the resultant of phasor addition of R and XL.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.11"
+  },
+  {
+   "id": "P11",
+   "quote": "impedance is the resultant of phasor addition of R and XC.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.12"
+  },
+  {
+   "id": "P12",
+   "quote": "Impedance in an R-C-L series circuit is equal to the phasor sum of resistance, inductive reactance, and capacitive reactance",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.13"
+  },
+  {
+   "id": "P13",
+   "quote": "Impedance in a parallel R-C-L circuit equals the voltage divided by the total current.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.15"
+  },
+  {
+   "id": "P14",
+   "quote": "Total current in a parallel R-C-L circuit is equal to the square root of the sum of the squares of the current flows through the resistance, inductive reactance, and capacitive reactance branches of the circuit.",
+   "sec": "Impedance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.16"
+  },
+  {
+   "id": "P15",
+   "quote": "Resonance occurs in an AC circuit when inductive reactance and capacitive reactance are equal to one another",
+   "sec": "Resonance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+  },
+  {
+   "id": "P16",
+   "quote": "at resonance the net reactance of the circuit is zero, and the impedance is equal to the circuit resistance",
+   "sec": "Resonance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+  },
+  {
+   "id": "P17",
+   "quote": "the net current flow through the circuit is at minimum because of the high impendence presented by XL and XC in parallel.",
+   "sec": "Resonance",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Inductive reactance",
+   "eo": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "In an inductive AC circuit, the current is continually changing and continuously inducing an EMF that opposes the change.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "XL depends on the inductance of the circuit and on the frequency of the applied voltage.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.1"
+    },
+    {
+     "t": "eq",
+     "text": "XL = 2πfL",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.4"
+    },
+    {
+     "t": "eq",
+     "text": "I = E / XL",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.1"
+    },
+    {
+     "t": "p",
+     "text": "The self-induced EMF varies as a sine wave and lags the current by 90°. The applied voltage must be equal and opposite to it at all times.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig1",
+     "num": 1,
+     "cap": "Current, Self-Induced EMF, and Applied Voltage in an Inductive Circuit",
+     "alt": "Sine waves of current, self-induced EMF, and applied voltage in an inductive circuit, beside a phasor diagram with current 90 degrees behind voltage.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "p",
+     "text": "If the applied voltage is a vector rotating counterclockwise, the current is a vector lagging it by 90°.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig2",
+     "num": 2,
+     "cap": "Coil Circuit and Phasor Diagram",
+     "alt": "A coil connected to an AC source, beside a phasor diagram with voltage E on the reference line and current I 90 degrees below it.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is inductive reactance?",
+     "o": [
+      "The opposition of inductance to the flow of alternating current",
+      "The opposition of a capacitor to the flow of current",
+      "The total opposition to current flow",
+      "The rate of change of flux"
+     ],
+     "a": 0,
+     "x": "The opposition of the inductance to the flow of an alternating current is called inductive reactance (XL).",
+     "p": "P1"
+    },
+    {
+     "eo": "1.2",
+     "q": "What is the inductive reactance of a 0.1 henry coil at 60 Hz?",
+     "o": [
+      "0.1 ohms",
+      "6 ohms",
+      "37.7 ohms",
+      "377 ohms"
+     ],
+     "a": 2,
+     "x": "XL = 2πfL = (2)(3.14)(60)(0.1), which is about 37.7 ohms.",
+     "p": "P1"
+    },
+    {
+     "existing": "Q427",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.4",
+     "q": "On a phasor diagram of a purely inductive circuit, where is the current vector?",
+     "o": [
+      "In line with the voltage vector",
+      "Lagging the voltage vector by 90°",
+      "Leading the voltage vector by 90°",
+      "Opposite the voltage vector"
+     ],
+     "a": 1,
+     "x": "The current can be expressed as a vector that is lagging the applied voltage by 90°.",
+     "p": "P2"
+    }
+   ]
+  },
+  {
+   "title": "Capacitive reactance",
+   "eo": [
+    "1.5",
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The current flow in a circuit containing capacitance depends on the rate at which the voltage changes.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.5"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig3",
+     "num": 3,
+     "cap": "Voltage, Charge, and Current in a Capacitor",
+     "alt": "Sine waves of voltage, charge, and current for a capacitor, with current peaking 90 degrees before voltage.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "Capacitive reactance is measured in ohms, as is inductive reactance.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.6"
+    },
+    {
+     "t": "eq",
+     "text": "XC = 1 / (2πfC)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.8"
+    },
+    {
+     "t": "eq",
+     "text": "I = E / XC",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig4",
+     "num": 4,
+     "cap": "Circuit and Phasor Diagram",
+     "alt": "A capacitor connected to an AC source, beside a phasor diagram with current leading voltage by 90 degrees.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.7"
+    },
+    {
+     "t": "p",
+     "text": "The phasor diagram shows current leading voltage by 90°.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "If frequency increases, what happens to capacitive reactance?",
+     "o": [
+      "It increases",
+      "It decreases",
+      "It does not change",
+      "It reverses"
+     ],
+     "a": 1,
+     "x": "Capacitive reactance is inversely proportional to frequency and capacitance.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.6",
+     "q": "What is the capacitive reactance of a 100 µF capacitor at 60 Hz?",
+     "o": [
+      "0.04 ohms",
+      "2.65 ohms",
+      "26.5 ohms",
+      "265 ohms"
+     ],
+     "a": 2,
+     "x": "XC = 1 / (2πfC) = 1 / [(2)(3.14)(60)(100 x 10⁻⁶)], which is about 26.5 ohms.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is the phase relationship in a purely capacitive circuit?",
+     "o": [
+      "Current lags applied voltage by 90°",
+      "Current and voltage are in phase",
+      "Current leads applied voltage by 45°",
+      "Current leads applied voltage by 90°"
+     ],
+     "a": 3,
+     "x": "In any purely capacitive circuit, current leads applied voltage by 90°.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.8",
+     "q": "On a phasor diagram of a purely capacitive circuit, the current vector:",
+     "o": [
+      "Leads the voltage vector by 90°",
+      "Lags the voltage vector by 90°",
+      "Lies on the voltage vector",
+      "Is opposite the voltage vector"
+     ],
+     "a": 0,
+     "x": "The phasor diagram shows current leading voltage by 90°.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Impedance",
+   "eo": [
+    "1.9",
+    "1.10",
+    "1.11",
+    "1.12",
+    "1.13",
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig5",
+     "num": 5,
+     "cap": "Relationship Between Resistance, Reactance, and Impedance",
+     "alt": "Phasor diagram with resistance on the zero axis, inductive reactance up, capacitive reactance down, and impedance Z as the vector sum.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.10"
+    },
+    {
+     "t": "eq",
+     "text": "Z = √(R² + X²)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "eq",
+     "text": "V = IZ",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "eq",
+     "text": "Z = √(R² + XL²)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "eq",
+     "text": "Z = √(R² + XC²)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "eq",
+     "text": "Z = √(R² + (XL - XC)²)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.14"
+    },
+    {
+     "t": "p",
+     "text": "Because the difference between XL and XC is squared, the order of subtraction does not affect the answer.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "eq",
+     "text": "ZT = VT / IT",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "eq",
+     "text": "IT = √(IR² + (IC - IL)²)",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.16"
+    },
+    {
+     "t": "fig",
+     "id": "es-08-fig10",
+     "num": 10,
+     "cap": "Simple Parallel R-C-L Circuit",
+     "alt": "A resistor, an inductor, and a capacitor in parallel across an AC source, with branch currents.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "How does the handbook define impedance?",
+     "o": [
+      "The opposition of a coil to AC",
+      "The difference between XL and XC",
+      "The total opposition to current flow in a circuit",
+      "The ratio of voltage to frequency"
+     ],
+     "a": 2,
+     "x": "Impedance is defined as the total opposition to current flow in a circuit.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.10",
+     "q": "A series R-L circuit has R = 30 ohms and XL = 40 ohms. What is the impedance?",
+     "o": [
+      "10 ohms",
+      "50 ohms",
+      "70 ohms",
+      "120 ohms"
+     ],
+     "a": 1,
+     "x": "Z = √(30² + 40²) = √2500 = 50 ohms.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.11",
+     "q": "A series R-C circuit has R = 60 ohms and XC = 80 ohms. What is the impedance?",
+     "o": [
+      "20 ohms",
+      "48 ohms",
+      "100 ohms",
+      "140 ohms"
+     ],
+     "a": 2,
+     "x": "Z = √(60² + 80²) = √10,000 = 100 ohms.",
+     "p": "P11"
+    },
+    {
+     "eo": "1.12",
+     "q": "A series R-C-L circuit has R = 3 ohms, XL = 10 ohms, and XC = 6 ohms. What is the impedance?",
+     "o": [
+      "5 ohms",
+      "7 ohms",
+      "13 ohms",
+      "19 ohms"
+     ],
+     "a": 0,
+     "x": "Z = √(3² + (10 - 6)²) = √25 = 5 ohms.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.13",
+     "q": "Which formula gives total current in a parallel R-C-L circuit?",
+     "o": [
+      "IT = IR + IL + IC",
+      "IT = √(IR² + (IC - IL)²)",
+      "IT = IR x IL x IC",
+      "IT = VT x ZT"
+     ],
+     "a": 1,
+     "x": "Total current is the square root of the sum of the squares: IT = √(IR² + (IC - IL)²).",
+     "p": "P14"
+    },
+    {
+     "eo": "1.14",
+     "q": "A parallel R-C-L circuit has 100 volts applied, with IR = 3 A, IL = 6 A, and IC = 2 A. What is the impedance?",
+     "o": [
+      "9 ohms",
+      "11 ohms",
+      "20 ohms",
+      "25 ohms"
+     ],
+     "a": 2,
+     "x": "IT = √(3² + (6 - 2)²) = 5 A, and Z = VT / IT = 100 / 5 = 20 ohms.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Resonance",
+   "eo": [
+    "1.15",
+    "1.16",
+    "1.17",
+    "1.18"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "When XL = XC, the total reactance becomes zero and the impedance is totally resistive.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+    },
+    {
+     "t": "eq",
+     "text": "fRes = 1 / (2π√(LC))",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "The current output of a series resonant circuit is at a maximum value for that circuit and is determined by the value of the resistance.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+    },
+    {
+     "t": "p",
+     "text": "In a parallel R-C-L circuit at resonance, the inductive and capacitive currents are equal and opposite in phase, so they cancel one another.",
+     "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "When does resonance occur in an AC circuit?",
+     "o": [
+      "When resistance is zero",
+      "When current is at its maximum in any circuit",
+      "When inductive and capacitive reactance are equal",
+      "When frequency is 60 Hz"
+     ],
+     "a": 2,
+     "x": "Resonance occurs in an AC circuit when inductive reactance and capacitive reactance are equal to one another.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.16",
+     "q": "A circuit has L = 0.1 henry and C = 10 µF. What is the resonant frequency?",
+     "o": [
+      "16 Hz",
+      "60 Hz",
+      "159 Hz",
+      "1000 Hz"
+     ],
+     "a": 2,
+     "x": "fRes = 1 / (2π√(LC)) = 1 / [(2)(3.14)(1 x 10⁻³)], which is about 159 Hz.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.17",
+     "q": "What is the net reactance of a series R-C-L circuit at resonance?",
+     "o": [
+      "Zero",
+      "Equal to XL",
+      "Twice XC",
+      "Infinite"
+     ],
+     "a": 0,
+     "x": "At resonance the net reactance of the circuit is zero, and the impedance is equal to the circuit resistance.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.18",
+     "q": "What is the net current flow through a parallel R-C-L circuit at resonance?",
+     "o": [
+      "At maximum",
+      "At minimum",
+      "Equal to the inductive branch current",
+      "Twice the resistive current"
+     ],
+     "a": 1,
+     "x": "The net current flow through the circuit is at minimum because of the high impedance presented by XL and XC in parallel.",
+     "p": "P17"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Inductive circuit",
+   "eo": "1.2",
+   "page": 4,
+   "problem": "A 0.4 H coil with negligible resistance is connected to a 115 V, 60 Hz source. Find the inductive reactance and the current.",
+   "steps": [
+    "XL = 2πfL = (2)(3.14)(60)(0.4) = 150.7 Ω.",
+    "I = E / XL = 115 / 150.7."
+   ],
+   "answer": "150.7 Ω and 0.76 amps, with current lagging voltage by 90°",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.4"
+  },
+  {
+   "title": "Capacitive circuit",
+   "eo": "1.6",
+   "page": 8,
+   "problem": "A 10 µF capacitor is connected to a 120 V, 60 Hz source. Find the current if the capacitive reactance is 265.4 Ω.",
+   "steps": [
+    "I = E / XC.",
+    "I = 120 / 265.4."
+   ],
+   "answer": "0.452 amps, with current leading voltage by 90°",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.8"
+  },
+  {
+   "title": "R-L impedance",
+   "eo": "1.10",
+   "page": 12,
+   "problem": "A 100 Ω resistor and a 60 Ω XL are in series. What is the circuit impedance?",
+   "steps": [
+    "Z = √(R² + XL²).",
+    "Z = √(100² + 60²) = √13,600."
+   ],
+   "answer": "116.6 Ω",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.12"
+  },
+  {
+   "title": "R-C-L impedance",
+   "eo": "1.12",
+   "page": 15,
+   "problem": "Find the impedance of a series R-C-L circuit when R = 6 Ω, XL = 20 Ω, and XC = 10 Ω.",
+   "steps": [
+    "Z = √(R² + (XL - XC)²).",
+    "Z = √(6² + (20 - 10)²) = √136."
+   ],
+   "answer": "11.66 Ω",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.15"
+  },
+  {
+   "title": "Parallel R-C-L circuit",
+   "eo": "1.14",
+   "page": 17,
+   "problem": "A 200 Ω resistor, a 100 Ω XL, and an 80 Ω XC are in parallel across a 120 V source. Find the total current and impedance.",
+   "steps": [
+    "Branch currents: IR = 120/200 = 0.6 A, IL = 120/100 = 1.2 A, IC = 120/80 = 1.5 A.",
+    "IT = √((0.6)² + (1.5 - 1.2)²) = √0.45 = 0.671 A.",
+    "Z = 120 / 0.671."
+   ],
+   "answer": "0.671 A and 178.8 Ω",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.17"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is capacitive reactance?",
+   "a": "The opposition by a capacitor or a capacitive circuit to the flow of current.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What is net reactance?",
+   "a": "The difference between inductive and capacitive reactance.",
+   "p": "P8",
+   "place": null
+  },
+  {
+   "q": "What does impedance in an AC circuit correspond to in a DC circuit?",
+   "a": "The resistance of a DC circuit.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What are diagrams of rotating voltage and current vectors called?",
+   "a": "Phasor diagrams.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What is the impedance of a series R-C-L circuit at resonance?",
+   "a": "It is equal to the circuit resistance.",
+   "p": "P16",
+   "place": null
+  },
+  {
+   "q": "How is impedance found in a parallel R-C-L circuit?",
+   "a": "It equals the voltage divided by the total current.",
+   "p": "P13",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Opposition to the flow of alternating current caused by inductance is inductive reactance, and current lags applied voltage by 90° in a purely inductive circuit.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.4"
+  },
+  {
+   "text": "Opposition caused by capacitance is capacitive reactance, and current leads applied voltage by 90° in a purely capacitive circuit.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.8"
+  },
+  {
+   "text": "Impedance is the total opposition to current flow in an AC circuit.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.18"
+  },
+  {
+   "text": "Resonance is a state in which the inductive reactance equals the capacitive reactance at a specified frequency.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+  },
+  {
+   "text": "At resonance, a series R-C-L circuit has zero net reactance, and a parallel R-C-L circuit has minimum current output.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Handbook inconsistency",
+   "note": "Equation number 8-14 is used twice, on pages 15 and 19. The lesson does not use equation numbers.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.19"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Page 6 prints \"frequency of the capacitance\" where the next sentence says frequency or capacitance, and page 20 prints \"impendence.\" The quote on page 20 keeps the handbook spelling.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The summary on p.20 says net reactance is maximum at parallel resonance, while the chapter text describes the high impedance of XL and XC in parallel. The lesson uses the chapter text.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.20"
+  },
+  {
+   "type": "Objective coverage",
+   "note": "Objectives 1.4 and 1.8 ask the student to draw a phasor diagram. The lesson shows the diagrams, and the checks test the phase relationship they show.",
+   "cite": "DOE-HDBK-1011/3-92 ES-08 p.3"
+  }
+ ],
+ "page_tags": []
+}

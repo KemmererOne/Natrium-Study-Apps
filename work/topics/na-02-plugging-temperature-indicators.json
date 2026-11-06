@@ -1,0 +1,663 @@
+{
+ "module_id": "NA-02",
+ "slug": "na-02-plugging-temperature-indicators",
+ "title": "Plugging Temperature Indicators",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": null,
+ "handbook": null,
+ "word_file": "Plugging Temperature Indicators.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Sensors and Detectors",
+ "objectives": [
+  {
+   "number": "TLO 7",
+   "text": "Sodium Purity Monitors",
+   "items": [],
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.1 TLO 7: Sodium Purity Monitors",
+   "enabling": [
+    {
+     "number": "1",
+     "text": "Describe the theory of operation of a sodium purity monitor.",
+     "items": [],
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.2 TLO 7: Enabling Objectives"
+    },
+    {
+     "number": "2",
+     "text": "Describe the basic construction of a plugging temperature indicator.",
+     "items": [],
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.2 TLO 7: Enabling Objectives"
+    },
+    {
+     "number": "3",
+     "text": "List the advantages of using plugging temperature indicators.",
+     "items": [],
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.2 TLO 7: Enabling Objectives"
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The purity of the coolant plays a critical role in preventing corrosion of structural materials within the reactor system",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P2",
+   "quote": "maintaining purity facilitates optimal heat transfer efficiency",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P3",
+   "quote": "uncontaminated sodium coolant minimizes the risk of material activation by neutron irradiation",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P4",
+   "quote": "a pure coolant contributes to predictable and stable reactor performance",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P5",
+   "quote": "When the flow rate decrease is detected by a flow meter the temperature of the sodium is noted.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P6",
+   "quote": "Impurities in the sodium will begin to precipitate on an orifice.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P7",
+   "quote": "The more the impurities the higher the temperature a decrease in flow rate will be detected.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "id": "P8",
+   "quote": "impurities will precipitate out of solution and begin to crystallize",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "id": "P9",
+   "quote": "As impurities build up in the coolant, the temperature at which crystallization occurs rises.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "id": "P10",
+   "quote": "A plugging temperature indicator measures flow past an orifice.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "id": "P11",
+   "quote": "Monitoring changes in the plugging temperature helps determine the level of impurities present in the sodium coolant.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "id": "P12",
+   "quote": "Plugging temperature indicators can be used to determine the effectiveness of cold traps, and when they should be placed in service if not operated continuously.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.8 Cold Trap"
+  },
+  {
+   "id": "P13",
+   "quote": "does not discriminate the species of the plugging impurity",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P14",
+   "quote": "on-line systems avoid contamination of the sample by air or other foreign agents",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P15",
+   "quote": "on-line systems are not subject to analytical errors caused by segregation of impurities to the walls of a container during cooling of sodium samples",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P16",
+   "quote": "eliminate the need for transporting radioactive samples or for using remote handling equipment during analysis",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P17",
+   "quote": "the precision of a measurement is more readily obtained from a continuous or semi-continuous signal",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P18",
+   "quote": "have been used since the initial fill of sodium in the primary and secondary systems of EBR-II in 1963",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "id": "P19",
+   "quote": "The key process indicator for sodium purity is the saturation temperature which correlates directly with impurity concentration.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+  },
+  {
+   "id": "P20",
+   "quote": "PTI operation requires correlating flow rate of the sodium through a plugging orifice at a given temperature to the impurity concentrations.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+  },
+  {
+   "id": "P21",
+   "quote": "The SPS operates with the sodium above this saturation temperature to avoid plugging passageways in the system.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+  },
+  {
+   "id": "P22",
+   "quote": "The saturation temperature is also used in conjunction with the traps to adjust processing temperatures for impurity removal.",
+   "sec": "x",
+   "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+  },
+  {
+   "id": "P23",
+   "quote": "The source of the copper was found to be the exposed bus bars of the primary auxiliary pump.",
+   "sec": "x",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Why purity matters and how a PTI works",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "step": "Plugging temperature",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "step": "Use with cold traps",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.8 Cold Trap"
+  },
+  {
+   "step": "Advantages and EBR-II experience",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Why sodium purity is monitored",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "That reduces radiation exposure hazards for personnel.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Plugging temperature indicators (PTIs) are one way to monitor sodium purity.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1",
+     "q": "Which of these is NOT a reason given for keeping sodium coolant pure in a sodium fast reactor?",
+     "o": [
+      "To minimize the risk of material activation by neutron irradiation",
+      "To reduce the cost of reactor operation",
+      "To prevent corrosion of structural materials",
+      "To enhance heat transfer efficiency"
+     ],
+     "a": 1,
+     "x": "The lesson plan's reasons are preventing corrosion, enhancing heat transfer and minimizing material activation. Reducing the cost of reactor operation is the wrong choice on its question.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "Theory of operation",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "As sodium gets colder and approaches its freezing point:",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "A PTI uses this to measure the level of impurities in the sodium. Sodium is sent through the PTI and gradually cooled.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+    },
+    {
+     "t": "p",
+     "text": "When the sodium at the orifice reaches the impurity saturation temperature, impurities such as oxygen and hydrogen begin to precipitate and deposit on the orifice surface, which changes the sodium flow rate. The temperature measured when the flow begins to decrease is the plugging temperature.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q265",
+     "eo": "1"
+    },
+    {
+     "eo": "1",
+     "q": "At what moment is the plugging temperature measured in a plugging temperature indicator?",
+     "o": [
+      "When the flow past the orifice begins to decrease",
+      "When the sodium first enters the indicator",
+      "When the flow stops completely",
+      "When the sodium reaches its boiling point"
+     ],
+     "a": 0,
+     "x": "The temperature measured at the moment the flow begins to decrease is the plugging temperature.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Basic construction",
+   "eo": [
+    "2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "So the lesson plan's text names two parts: the orifice, where the impurities deposit, and the flow meter, which detects the flow decrease. The diagrams of the rest of the indicator are pictures in the lesson plan and are not used.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2",
+     "q": "Which device detects the flow decrease in a plugging temperature indicator?",
+     "o": [
+      "A pressure relief valve",
+      "A cesium trap",
+      "An ion chamber",
+      "A flow meter"
+     ],
+     "a": 3,
+     "x": "When a flow meter detects the flow rate decrease, the temperature of the sodium is noted.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Use with cold traps",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "A cold trap cools a small fraction of the main flow to just above the sodium freezing point, so impurities precipitate and adhere to the mesh packing and walls. The clean sodium returns to the main loop.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.8 Cold Trap"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1",
+     "q": "How can plugging temperature indicators support cold trap operation?",
+     "o": [
+      "They remove cesium ahead of the trap",
+      "They show cold trap effectiveness and when a trap should be placed in service",
+      "They provide the cooling flow to the trap",
+      "They regenerate a saturated trap"
+     ],
+     "a": 1,
+     "x": "PTIs can be used to determine the effectiveness of cold traps, and when they should be placed in service if not operated continuously.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "PTIs at Natrium",
+   "eo": [
+    "1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The Natrium Sodium Processing System (SPS) uses plugging temperature indicators. The PSAR describes them this way:",
+     "cite": "PSAR Rev 1, ML25276A288, Sec. 7.2.4.3.1, p. 7.2-51"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1",
+     "q": "Why does the Natrium Sodium Processing System operate with the sodium above the saturation temperature?",
+     "o": [
+      "To keep the sodium from boiling",
+      "To increase cesium removal",
+      "To reduce pump power",
+      "To avoid plugging passageways in the system"
+     ],
+     "a": 3,
+     "x": "The SPS operates with the sodium above this saturation temperature to avoid plugging passageways in the system.",
+     "p": "P21",
+     "place": [
+      "PSAR design basis",
+      "PSAR: Reactor Auxiliary Systems"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Advantages of PTIs",
+   "eo": [
+    "3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "A PTI has one limit. It:",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "It does detect the impurity's presence, and it offers these principal advantages over grab sampling:",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "PTI analysis is not delayed by radioactive decay periods before a sample can be removed, which were up to five days on the EBR-II primary sodium system.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "p",
+     "text": "PTIs also:",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "PTIs give a continuous measurement, or one that can be repeated at short intervals. This helps identify the cause of unexpected changes in impurity concentrations after operations such as reactor shutdown, cold trap isolation or fuel handling.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q266",
+     "eo": "3"
+    },
+    {
+     "eo": "3",
+     "q": "Why are on-line plugging temperature indicators free from the error of impurity segregation seen in grab samples?",
+     "o": [
+      "The sample is held for five days first",
+      "The indicator identifies each impurity species",
+      "No sample cools in a container, where impurities can segregate to the walls",
+      "The sample is diluted with argon first"
+     ],
+     "a": 2,
+     "x": "On-line systems are not subject to analytical errors caused by segregation of impurities to the walls of a container during cooling of sodium samples.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "EBR-II experience",
+   "eo": [],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "At EBR-II, PTIs:",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "p",
+     "text": "From 1964 to 1967 they were the principal indicators of sodium purity. The practice was to run without cold trapping until the plugging temperature exceeded 149°C, then run the cold trap until it fell below 107°C, then shut the trap off again.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "p",
+     "text": "More-or-less continuous cold trap operation began in 1967, with plugging temperature measurements made once per day.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "p",
+     "text": "Copper in the primary sodium was discovered in 1967 by the irreversible plugging of the PTI.",
+     "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "3",
+     "q": "At EBR-II, what was found to be the source of the copper that irreversibly plugged the PTI in 1967?",
+     "o": [
+      "Exposed bus bars of the primary auxiliary pump",
+      "Heat exchanger tubing",
+      "Fuel cladding",
+      "The cold trap mesh"
+     ],
+     "a": 0,
+     "x": "The source of the copper was found to be the exposed bus bars of the primary auxiliary pump.",
+     "p": "P23"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Reading a PTI during the EBR-II years",
+   "eo": "1",
+   "page": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank",
+   "problem": "It is 1965 at EBR-II, the cold trap is off, and the indicated plugging temperature has just exceeded 149°C. Using the practice of those years, what happens next?",
+   "steps": [
+    "A plugging temperature above 149°C meant it was time to operate the cold trap.",
+    "The cold trap ran until the indicated plugging temperature was below 107°C.",
+    "The cold trap was then shut off again."
+   ],
+   "answer": "Run the cold trap until the plugging temperature is below 107°C, then shut it off.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What part of a plugging temperature indicator do impurities deposit on?",
+   "a": "An orifice. The deposit reduces the flow, which a flow meter detects.",
+   "p": "P6",
+   "place": null
+  },
+  {
+   "q": "What can plugging temperature indicators tell you about a cold trap?",
+   "a": "How effective it is, and when it should be placed in service if it is not operated continuously.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "How did EBR-II discover copper in its primary sodium?",
+   "a": "By the irreversible plugging of the PTI in 1967. The source was the exposed bus bars of the primary auxiliary pump.",
+   "p": "P23",
+   "place": null
+  },
+  {
+   "q": "Since when have PTIs been used at EBR-II?",
+   "a": "Since the initial fill of sodium in the primary and secondary systems in 1963.",
+   "p": "P18",
+   "place": null
+  },
+  {
+   "q": "What is the key process indicator for sodium purity at Natrium?",
+   "a": "The saturation temperature, which correlates directly with impurity concentration.",
+   "p": "P19",
+   "place": [
+    "PSAR design basis",
+    "PSAR: Reactor Auxiliary Systems"
+   ]
+  },
+  {
+   "q": "How do on-line PTIs avoid sample contamination?",
+   "a": "On-line systems avoid contamination of the sample by air or other foreign agents.",
+   "p": "P14",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Sodium purity protects against corrosion, keeps heat transfer efficient, limits activation and supports stable performance.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "text": "As impurities build up, the temperature at which crystallization occurs rises.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "text": "A PTI cools sodium past an orifice. The temperature when flow begins to decrease is the plugging temperature.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.7 Plugging Temperature Indicator"
+  },
+  {
+   "text": "A PTI detects the presence of a plugging impurity but not its species.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "text": "PTIs avoid sample contamination, segregation errors, decay delays and sample transport, and they can measure continuously.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "text": "PTIs show how effective cold traps are and when to place them in service.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.8 Cold Trap"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Word typo",
+   "note": "Slides 1.11 and 1.12 print the Fahrenheit values as 3O0°F and 22S°F, which look like scanning errors. Only the Celsius values 149°C and 107°C are shown.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.11 Advantages of PTI Fill-in-blank"
+  },
+  {
+   "type": "Coverage",
+   "note": "Objective 2 asks for basic construction, but the construction is in pictures. The page gives only the orifice and flow meter from the text. The PSAR page added by decision of Nov 5, 2026 does not describe more parts.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  },
+  {
+   "type": "Duplicate",
+   "note": "Slide 1.9 repeats the notes of slide 1.7, and slide 1.12 repeats slide 1.11. Each is cited once.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.9 PTI in a Purification Loop"
+  },
+  {
+   "type": "Draft note",
+   "note": "Slide 1.3 says a short essay quiz is still to be developed, and slide 1.7 lists an image as needing creation. SOURCES.md lists the file as an approved lesson plan, so no Draft source tag is applied.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.3 Purity Monitors"
+  },
+  {
+   "type": "Multiple response",
+   "note": "Slide 1.4 is a select-all question. Its wrong choice is reused as a single-answer check.",
+   "cite": "Word: Plugging Temperature Indicators.docx, slide 1.5 Sodium Purity Monitoring Theory"
+  }
+ ],
+ "page_tags": []
+}

@@ -1,0 +1,1035 @@
+{
+ "module_id": "ES-04",
+ "slug": "es-04-batteries",
+ "title": "Batteries",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V2",
+ "handbook": "DOE-HDBK-1011/2-92",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Motors and Generators",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "DESCRIBE the operating characteristics of a lead-acid battery to include methods of voltage production, state of charge, and hazards associated with storage batteries.",
+   "items": [],
+   "page": {
+    "pdf": 46,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms as they relate to batteries and voltaic cells:",
+     "items": [
+      "a. Voltaic cell",
+      "b. Battery",
+      "c. Electrode",
+      "d. Electrolyte",
+      "e. Specific gravity",
+      "f. Ampere-Hour"
+     ],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the purpose of a battery.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DESCRIBE the operation of a simple voltaic cell.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "STATE the chemical equation for the reaction that occurs when a lead-acid battery is being charged or discharged.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "EXPLAIN the relationship between specific gravity and state of charge of a lead-acid battery.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DESCRIBE the relationship between total battery voltage and cell voltage for a series-connected battery.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE the advantage of connecting a battery in parallel with respect to current-carrying capability.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "STATE the difference between primary and secondary cells with respect to recharge capability.",
+     "items": [],
+     "page": {
+      "pdf": 46,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE the advantage of each of the following types of batteries:",
+     "items": [
+      "a. Carbon-zinc cell",
+      "b. Alkaline cell",
+      "c. Nickel-cadmium cell",
+      "d. Edison cell",
+      "e. Mercury cell"
+     ],
+     "page": {
+      "pdf": 47,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "EXPLAIN the adverse effects of a shorted cell.",
+     "items": [],
+     "page": {
+      "pdf": 47,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "EXPLAIN how gas generation is minimized for a lead-acid battery.",
+     "items": [],
+     "page": {
+      "pdf": 47,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "EXPLAIN how heat is generated in a lead-acid battery.",
+     "items": [],
+     "page": {
+      "pdf": 47,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "The term voltaic cell is defined as a combination of materials used to convert chemical energy into electrical energy.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "A battery is a group of two or more connected voltaic cells.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "An electrode is a metallic compound, or metal, which has an abundance of electrons (negative electrode) or an abundance of positive charges (positive electrode).",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "An electrolyte is a solution which is capable of conducting an electric current.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "Specific gravity is defined as the ratio comparing the weight of any liquid to the weight of an equal volume of water.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "id": "P6",
+   "quote": "Specific gravity is measured with a hydrometer.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "An ampere-hour is defined as a current of one ampere flowing for one hour.",
+   "sec": "Battery Terminology",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "The purpose of a battery is to store chemical energy and to convert this chemical energy into electrical energy when the need arises.",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "a chemical cell (or voltaic cell) consists of two electrodes of different types of metals or metallic compounds and an electrolyte solution",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "The positive plate consists of lead peroxide (PbO2), and the negative plate is sponge lead (Pb)",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+  },
+  {
+   "id": "P11",
+   "quote": "Since hydrogen is highly explosive, it is necessary to provide adequate ventilation to the battery whenever charging is in progress.",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "the value of specific gravity at any given time is an approximate indication of the battery’s state of charge.",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "The specific gravity decreases as the battery discharges and increases to its normal, original value as it is charged.",
+   "sec": "Battery Theory",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.8"
+  },
+  {
+   "id": "P14",
+   "quote": "it will increase the current-carrying capability of the",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+  },
+  {
+   "id": "P15",
+   "quote": "Cells that cannot be returned to good condition, or recharged after their voltage output has dropped to a value that is not usable, are called primary cells.",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+  },
+  {
+   "id": "P16",
+   "quote": "Cells that can be recharged to nearly their original condition are called secondary cells.",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+  },
+  {
+   "id": "P17",
+   "quote": "The capacity of a storage battery determines how long the storage battery will operate at a certain discharge rate and is rated in ampere-hours.",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+  },
+  {
+   "id": "P18",
+   "quote": "internal resistance reduces both the current and voltage available to the load.",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.12"
+  },
+  {
+   "id": "P19",
+   "quote": "The shelf life of a battery is the time which a battery may be stored and not lose more than 10 percent of its original capacity.",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.13"
+  },
+  {
+   "id": "P20",
+   "quote": "The output voltage of a battery connected in series is equal to the sum of the cell",
+   "sec": "Battery Operations",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.13"
+  },
+  {
+   "id": "P21",
+   "quote": "The advantage of a carbon-zinc battery is that it is durable and very inexpensive to produce.",
+   "sec": "Types of Batteries",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.14"
+  },
+  {
+   "id": "P22",
+   "quote": "The alkaline cell has the advantage of an extended life over that of a carbon-zinc cell of the same size",
+   "sec": "Types of Batteries",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.14"
+  },
+  {
+   "id": "P23",
+   "quote": "The nickel-cadmium battery has the advantage of being a dry cell that is a true storage battery with a reversible chemical reaction",
+   "sec": "Types of Batteries",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.15"
+  },
+  {
+   "id": "P24",
+   "quote": "The edison cell has the advantage of being a lighter and more rugged secondary cell than a lead-acid storage battery.",
+   "sec": "Types of Batteries",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.15"
+  },
+  {
+   "id": "P25",
+   "quote": "has the advantage of maintaining a fairly constant output under varying load conditions.",
+   "sec": "Types of Batteries",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.15"
+  },
+  {
+   "id": "P26",
+   "quote": "With each shorted cell, battery capacity is reduced by a percentage equal to one over the total number of cells.",
+   "sec": "Battery Hazards",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.17"
+  },
+  {
+   "id": "P27",
+   "quote": "Overcharging and overdischarging should be avoided at all costs.",
+   "sec": "Battery Hazards",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.17"
+  },
+  {
+   "id": "P28",
+   "quote": "To reduce the amount of gassing, charging voltages above 2.30 volts per cell should be minimized",
+   "sec": "Battery Hazards",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+  },
+  {
+   "id": "P29",
+   "quote": "the current flowing through the battery will cause heat to be generated by the electrolysis of water.",
+   "sec": "Battery Hazards",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+  },
+  {
+   "id": "P30",
+   "quote": "Very high temperatures, 125°F and higher, can actually do damage to the battery and cause early failure.",
+   "sec": "Battery Hazards",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Battery terms and purpose",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "If the electrolyte is a paste, the cell is a dry cell. If it is a solution, the cell is a wet cell.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "Lead-acid batteries use an electrolyte that contains sulfuric acid. The specific gravity of the electrolyte falls between 1.000 and 1.835, and it is normally mixed to be less than 1.350.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig1",
+     "num": 1,
+     "cap": "Simple Hydrometer",
+     "alt": "A hydrometer: a rubber bulb on a glass tube holding a weighted glass float with a scale along its body.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "p",
+     "text": "Multiplying the current in amperes by the time of flow in hours gives the total ampere-hours.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What is an electrolyte?",
+     "o": [
+      "A metal with an abundance of electrons",
+      "A solution capable of conducting an electric current",
+      "A group of connected voltaic cells",
+      "A measure of current over time"
+     ],
+     "a": 1,
+     "x": "An electrolyte is a solution which is capable of conducting an electric current.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "A current of 5 amps flows for 20 hours. How many ampere-hours is this?",
+     "o": [
+      "4 ampere-hours",
+      "25 ampere-hours",
+      "100 ampere-hours",
+      "400 ampere-hours"
+     ],
+     "a": 2,
+     "x": "Multiply the current in amperes by the time of flow in hours: 5 x 20 = 100 ampere-hours.",
+     "p": "P7"
+    },
+    {
+     "eo": "1.2",
+     "q": "A battery stores chemical energy so that it can be converted into what?",
+     "o": [
+      "Mechanical energy",
+      "Thermal energy",
+      "Magnetic flux",
+      "Electrical energy"
+     ],
+     "a": 3,
+     "x": "The purpose of a battery is to store chemical energy and to convert it into electrical energy when the need arises.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "How a cell works",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "In a cell with zinc and copper electrodes, the zinc electrode accumulates a much larger negative charge because it dissolves into the electrolyte.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig2",
+     "num": 2,
+     "cap": "Basic Chemical Production of Electrical Power",
+     "alt": "Two views of a cell with zinc and copper electrodes in an electrolyte, showing positive and negative ions moving between them.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Electrons are removed from the copper electrode, leaving it with an excess of positive charge.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "If a load is connected across the electrodes, free electrons in the negative zinc electrode move through the wire and load toward the positive copper electrode.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.5"
+    },
+    {
+     "t": "p",
+     "text": "The potential difference that results allows the cell to function as a source of applied voltage.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.5"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What does a voltaic cell consist of?",
+     "o": [
+      "Two electrodes of different metals or metallic compounds and an electrolyte solution",
+      "Two electrodes of the same metal in air",
+      "A coil of wire and a permeable core",
+      "Two metal plates separated by a dielectric"
+     ],
+     "a": 0,
+     "x": "A chemical or voltaic cell consists of two electrodes of different types of metals or metallic compounds and an electrolyte solution.",
+     "p": "P9"
+    }
+   ]
+  },
+  {
+   "title": "The lead-acid battery",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Two types of lead are acted upon electro-chemically by a solution of diluted sulfuric acid.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "On discharge, the electrolyte divides, its hydrogen combines with oxygen to produce water, and the sulfate combines with the lead of both plates to form lead sulphate.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+    },
+    {
+     "t": "eq",
+     "text": "Discharge: PbO2 + Pb + 2H2SO4 → 2PbSO4 + 2H2O",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig4",
+     "num": 4,
+     "cap": "Chemical Action During Discharge",
+     "alt": "A lead-acid cell on discharge connected to a load, with both plates changing to lead sulfate and the electrolyte becoming weaker.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+    },
+    {
+     "t": "p",
+     "text": "On charge, the action is reversed, and the return of acid to the electrolyte increases the specific gravity.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.7"
+    },
+    {
+     "t": "eq",
+     "text": "Charge: PbO2 + Pb + 2H2SO4 ← 2PbSO4 + 2H2O",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig5",
+     "num": 5,
+     "cap": "Chemical Action During Charging",
+     "alt": "A lead-acid cell on charge connected to a charger, with the plates changing back to lead peroxide and sponge lead.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig6",
+     "num": 6,
+     "cap": "Voltage and Specific Gravity During Charge and Discharge",
+     "alt": "Graph of cell voltage and specific gravity against time during discharge and charge. Specific gravity falls in a straight line on discharge and rises unevenly on charge.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.8"
+    },
+    {
+     "t": "p",
+     "text": "The decrease in specific gravity on discharge is proportional to the ampere-hours discharged. The rise while charging is not uniform.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.4",
+     "q": "What do the plates of a lead-acid battery form on discharge?",
+     "o": [
+      "Lead peroxide",
+      "Sponge lead",
+      "Sulfuric acid",
+      "Lead sulphate"
+     ],
+     "a": 3,
+     "x": "The sulfate combines with the lead of both plates, forming lead sulphate.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.5",
+     "q": "What happens to specific gravity as a lead-acid battery discharges?",
+     "o": [
+      "It decreases",
+      "It increases",
+      "It stays constant",
+      "It rises, then falls"
+     ],
+     "a": 0,
+     "x": "The specific gravity decreases as the battery discharges and increases to its normal, original value as it is charged.",
+     "p": "P13"
+    }
+   ]
+  },
+  {
+   "title": "Connecting cells and rating batteries",
+   "eo": [
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "In a series connection, the positive terminal of one cell is connected to the negative terminal of the next. Four 1.5 V cells provide a total of 6 volts.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.10"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig7",
+     "num": 7,
+     "cap": "Cells Connected in Series",
+     "alt": "Four 1.5 volt cells joined positive to negative, totaling 6 volts, with the schematic form below.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.10"
+    },
+    {
+     "t": "p",
+     "text": "In a parallel connection, all the positive terminals are connected together and all the negative terminals are connected together. The total voltage is the same as that of a single cell.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "es-04-fig8",
+     "num": 8,
+     "cap": "Cells Connected in Parallel",
+     "alt": "Three 1.5 volt cells with their positive terminals joined and their negative terminals joined, with the schematic form below.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+    },
+    {
+     "t": "p",
+     "text": "The advantage of connecting cells in parallel:",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "Dry cells in flashlights are examples of primary cells. The most common secondary cell is the lead-acid automobile battery.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Internal resistance is due mainly to the resistance of the electrolyte between electrodes.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q426",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "Six 1.5 volt cells are connected in series. What is the battery voltage?",
+     "o": [
+      "1.5 volts",
+      "4 volts",
+      "7.5 volts",
+      "9 volts"
+     ],
+     "a": 3,
+     "x": "The output voltage equals the sum of the cell voltages: 6 x 1.5 = 9 volts.",
+     "p": "P20"
+    },
+    {
+     "eo": "1.7",
+     "q": "What is the advantage of connecting cells in parallel?",
+     "o": [
+      "Higher total voltage",
+      "Lower internal heat",
+      "Greater current-carrying capability",
+      "Longer shelf life"
+     ],
+     "a": 2,
+     "x": "Connecting cells in parallel will increase the current-carrying capability of the battery. The voltage stays the same as a single cell.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.8",
+     "q": "What is the difference between primary and secondary cells?",
+     "o": [
+      "Secondary cells can be recharged, and primary cells cannot",
+      "Primary cells can be recharged, and secondary cells cannot",
+      "Primary cells use a paste, and secondary cells use a liquid",
+      "Both can be recharged, but primary cells last longer"
+     ],
+     "a": 0,
+     "x": "Primary cells cannot be recharged. Secondary cells can be recharged to nearly their original condition.",
+     "p": "P16"
+    }
+   ]
+  },
+  {
+   "title": "Types of batteries",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "p",
+     "text": "The alkaline cell is usually more expensive than a carbon-zinc cell.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.14"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "p",
+     "text": "The mercury cell:",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "What is the advantage of a carbon-zinc cell?",
+     "o": [
+      "It can be recharged",
+      "It is durable and very inexpensive to produce",
+      "It keeps a constant output under varying loads",
+      "It is lighter than a lead-acid battery"
+     ],
+     "a": 1,
+     "x": "The advantage of a carbon-zinc battery is that it is durable and very inexpensive to produce.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.9",
+     "q": "Which cell has the advantage of a fairly constant output under varying load conditions?",
+     "o": [
+      "Alkaline cell",
+      "Edison cell",
+      "Mercury cell",
+      "Carbon-zinc cell"
+     ],
+     "a": 2,
+     "x": "The mercury cell has the advantage of maintaining a fairly constant output under varying load conditions.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.9",
+     "q": "What advantage does the edison cell have over a lead-acid storage battery?",
+     "o": [
+      "It is lighter and more rugged",
+      "It costs less to produce",
+      "It has a higher cell voltage",
+      "It never needs recharging"
+     ],
+     "a": 0,
+     "x": "The edison cell has the advantage of being a lighter and more rugged secondary cell than a lead-acid storage battery.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Battery hazards",
+   "eo": [
+    "1.10",
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Cell short circuits can be caused by faulty separators, metal particles forming a circuit between the plates, buckling of the plates, or excessive sediments in the bottom of the jar.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "A lead-acid battery cannot absorb all the energy from the charging source near the completion of the charge. The excess energy produces hydrogen and oxygen. This process is known as gassing.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.17"
+    },
+    {
+     "t": "p",
+     "text": "Gassing is first noticed when cell voltage reaches 2.30-2.35 volts per cell.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "No smoking, electric sparks, or open flames are allowed near a charging battery.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "The operating temperature of a battery should preferably be maintained in the nominal band of 60-80°F.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "The current also generates heat as it passes through the internal resistance, during both charge and discharge.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+    },
+    {
+     "t": "eq",
+     "text": "P = I²Ri",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Low temperatures lower battery capacity but prolong battery life under floating operation or storage.",
+     "cite": "DOE-HDBK-1011/2-92 ES-04 p.18"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "One cell of a six cell battery is shorted. By what fraction is battery capacity reduced?",
+     "o": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "1/12"
+     ],
+     "a": 2,
+     "x": "With each shorted cell, capacity is reduced by a percentage equal to one over the total number of cells: 1/6.",
+     "p": "P26"
+    },
+    {
+     "existing": "Q425",
+     "eo": "1.11"
+    },
+    {
+     "eo": "1.11",
+     "q": "How is the amount of gassing reduced in a lead-acid battery?",
+     "o": [
+      "By minimizing charging voltages above 2.30 volts per cell",
+      "By raising the charging voltage",
+      "By adding sulfuric acid",
+      "By charging at 125°F"
+     ],
+     "a": 0,
+     "x": "To reduce the amount of gassing, charging voltages above 2.30 volts per cell should be minimized.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.12",
+     "q": "Which two effects generate heat in a lead-acid battery during charging?",
+     "o": [
+      "Friction and hysteresis",
+      "Electrolysis of water and current through the internal resistance",
+      "Evaporation and sulfation",
+      "Magnetic flux and eddy currents"
+     ],
+     "a": 1,
+     "x": "Current causes heat through the electrolysis of water, and also as it passes through the internal resistance (I²Ri).",
+     "p": "P29"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "State of charge from specific gravity",
+   "eo": "1.5",
+   "page": 8,
+   "problem": "A lead-acid battery reads 1.175 specific gravity. Its full charge specific gravity is 1.260, and it has a normal gravity drop of 120 points. Estimate its state of charge.",
+   "steps": [
+    "Fully charged 1.260 minus present charge 1.175 is 85 points.",
+    "The battery is 85 points below its fully charged state, out of a 120 point drop.",
+    "85/120 is about 71 percent."
+   ],
+   "answer": "About 71 percent discharged",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.8"
+  },
+  {
+   "title": "Battery capacity",
+   "eo": "1.1",
+   "page": 11,
+   "problem": "How long will a 120 ampere-hour battery run at a discharge rate of 10 amps?",
+   "steps": [
+    "Capacity is rated in ampere-hours.",
+    "120 ampere-hours / 10 amps."
+   ],
+   "answer": "12 hours",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.11"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is a dry cell, and what is a wet cell?",
+   "a": "If the electrolyte is a paste, the cell is a dry cell. If the electrolyte is a solution, it is a wet cell.",
+   "p": "P4",
+   "place": null
+  },
+  {
+   "q": "What is an ampere-hour?",
+   "a": "A current of one ampere flowing for one hour.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What are the plates of a lead-acid battery made of?",
+   "a": "The positive plate is lead peroxide (PbO2), and the negative plate is sponge lead (Pb).",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "Why is ventilation needed while a battery is charging?",
+   "a": "Hydrogen is highly explosive.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What is the shelf life of a battery?",
+   "a": "The time a battery may be stored and not lose more than 10 percent of its original capacity.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "What temperature can damage a battery and cause early failure?",
+   "a": "Very high temperatures, 125°F and higher.",
+   "p": "P30",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A voltaic cell converts chemical energy into electrical energy, and a battery is two or more connected voltaic cells.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.3"
+  },
+  {
+   "text": "Specific gravity of a lead-acid battery decreases proportionally during discharge, so it is an approximate indication of state of charge.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.9"
+  },
+  {
+   "text": "A battery connected in series has an output voltage equal to the sum of the cell voltages. One connected in parallel has a greater current-carrying capability.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.13"
+  },
+  {
+   "text": "Secondary cells can be recharged, and primary cells cannot.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.13"
+  },
+  {
+   "text": "Short circuits cause a great reduction in battery capacity.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.19"
+  },
+  {
+   "text": "If gassing occurs and the gases are allowed to collect, an explosive mixture of hydrogen and oxygen can be produced.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.19"
+  },
+  {
+   "text": "Charging current generates heat by the electrolysis of water and by I²Ri.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.19"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Water in the specific gravity definition and the battery equation is normal battery chemistry, not a water system. Approved with no tag, Nov 5, 2026.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.1"
+  },
+  {
+   "type": "Left off the page",
+   "note": "The nickel-cadmium electrode materials are not on the page. Objective 1.9 asks only for the advantage of each type.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.15"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The handbook spells both sulphate and sulfate. The lesson uses sulphate, as in the battery chemistry text.",
+   "cite": "DOE-HDBK-1011/2-92 ES-04 p.6"
+  }
+ ],
+ "page_tags": []
+}

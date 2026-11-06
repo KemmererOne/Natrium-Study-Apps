@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131821" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Natrium Quiz">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Natrium Reactor Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one centered reading column, header bar with score, card with four answer rows.
+   Palette: slate neutrals with a sodium-yellow accent (the coolant's own flame colour). */
+:root {
+  --bg: #f4f4f1;
+  --card: #ffffff;
+  --fg: #1c2230;
+  --muted: #5a6376;
+  --line: #d6d9e0;
+  --accent: #8a5f00;
+  --accent-soft: #f6e7b8;
+  --ok: #22714a;
+  --ok-soft: #dcf0e4;
+  --bad: #a83a2a;
+  --bad-soft: #f7dfd9;
+  --track: #e2e4e9;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131821;
+    --card: #1b222e;
+    --fg: #e7eaf0;
+    --muted: #9aa3b4;
+    --line: #2c3645;
+    --accent: #f2c14e;
+    --accent-soft: #3a3118;
+    --ok: #6cc592;
+    --ok-soft: #173224;
+    --bad: #ef8a74;
+    --bad-soft: #3a211b;
+    --track: #2a3342;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131821;
+  --card: #1b222e;
+  --fg: #e7eaf0;
+  --muted: #9aa3b4;
+  --line: #2c3645;
+  --accent: #f2c14e;
+  --accent-soft: #3a3118;
+  --ok: #6cc592;
+  --ok-soft: #173224;
+  --bad: #ef8a74;
+  --bad-soft: #3a211b;
+  --track: #2a3342;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px;
+  /* Extra 90px so the last buttons sit above the Netlify badge */
+  padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px));
+}
+.wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+/* Home link gets its own row above the title so it never crowds it */
+.home { flex-basis: 100%; font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.home:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a.btn { display: inline-block; text-align: center; text-decoration: none; }
+h1 {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-wrap: balance;
+}
+.meta { color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.score { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--accent); }
+.bar { height: 6px; background: var(--track); border-radius: 3px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s ease; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 16px; min-width: 0;
+}
+.topic {
+  font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600;
+}
+.question {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.22rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.opts { display: flex; flex-direction: column; gap: 10px; }
+.opt {
+  all: unset;
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--card);
+}
+.opt:hover { border-color: var(--accent); }
+.opt:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.letter {
+  flex: none;
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; color: var(--muted);
+}
+.opt[aria-checked="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.opt[aria-checked="true"] .letter { border-color: var(--accent); color: var(--accent); }
+.opt.right { border-color: var(--ok); background: var(--ok-soft); }
+.opt.right .letter { border-color: var(--ok); color: var(--ok); }
+.opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
+.opt.wrong .letter { border-color: var(--bad); color: var(--bad); }
+.opt[disabled] { cursor: default; }
+.opt[disabled]:not(.right):not(.wrong) { opacity: .65; }
+.opt .text { min-width: 0; overflow-wrap: anywhere; }
+.feedback {
+  border-left: 3px solid var(--line);
+  padding: 4px 0 4px 14px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.feedback.right { border-color: var(--ok); }
+.feedback.wrong { border-color: var(--bad); }
+.verdict { font-weight: 600; }
+.feedback.right .verdict { color: var(--ok); }
+.feedback.wrong .verdict { color: var(--bad); }
+.why { margin: 0; color: var(--fg); text-wrap: pretty; }
+.src { margin: 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; color: var(--muted); overflow-wrap: anywhere; }
+.flag { margin: 0; font-size: 0.78rem; line-height: 1.4; color: var(--fg); background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 6px 10px; border-radius: 4px; }
+.actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.btn {
+  font: inherit; font-weight: 600; font-size: 0.95rem;
+  padding: 10px 18px; border-radius: 7px; border: 1px solid var(--accent);
+  background: var(--accent); color: var(--bg); cursor: pointer;
+}
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn[disabled] { opacity: .4; cursor: not-allowed; }
+.final { text-align: left; gap: 12px; }
+.big { font-family: "Source Serif 4", Georgia, serif; font-size: 2.4rem; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+/* Handbook figures: white backing so line art stays readable in dark mode */
+.fig { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.fig img { display: block; max-width: 100%; height: auto; max-height: 45vh; object-fit: contain; margin: 0 auto; background: #fff; border-radius: 6px; padding: 6px; }
+.fig figcaption { font-size: 0.75rem; line-height: 1.35; color: var(--muted); }
+/* Topic on the left, the item's permanent ID on the right */
+.itemhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.itemid { flex: none; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.75rem; color: var(--muted); }
+.report { font-size: 0.8rem; text-align: center; margin: 0; }
+.report a { color: var(--accent); font-weight: 600; }
+.hint { color: var(--muted); font-size: .8rem; }
+.counts { display: flex; flex-wrap: wrap; gap: 10px; }
+.counts .btn { min-width: 64px; }
+.counts .btn[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+/* The keyboard hint means nothing on a touch screen */
+@media (hover: none) and (pointer: coarse) { .hint { display: none; } }
+[hidden] { display: none !important; }
+</style>
+
+<div class="wrap">
+  <header>
+    <a class="home" href="../"><span aria-hidden="true">←</span> Home</a>
+    <h1>Natrium Reactor Quiz</h1>
+    <div class="meta"><span class="score" id="score">0 / 0</span> correct</div>
+  </header>
+  <div class="bar" aria-hidden="true"><span id="fill"></span></div>
+  <div class="meta" id="progress"></div>
+  <p class="meta" id="short" hidden></p>
+
+  <section class="card" id="setup">
+    <div class="topic">New quiz</div>
+    <p class="question">Which questions?</p>
+    <div class="counts" id="modes" role="group" aria-label="Question set"></div>
+    <p class="question">How many questions?</p>
+    <div class="counts" id="counts" role="group" aria-label="Number of questions"></div>
+    <p class="meta" id="available"></p>
+  </section>
+
+  <section class="card" id="quiz" aria-live="polite" hidden>
+    <div class="itemhead"><div class="topic" id="topic"></div><div class="itemid" id="item-id"></div></div>
+    <p class="question" id="question"></p>
+    <figure class="fig" id="fig-q" hidden><img alt=""><figcaption></figcaption></figure>
+    <div class="opts" id="opts" role="radiogroup" aria-labelledby="question"></div>
+    <div class="feedback" id="feedback" hidden>
+      <div class="verdict" id="verdict"></div>
+      <p class="why" id="why"></p>
+      <figure class="fig" id="fig-a" hidden><img alt=""><figcaption></figcaption></figure>
+      <p class="flag" id="flag" hidden></p>
+      <p class="src" id="src"></p>
+    </div>
+    <div class="actions">
+      <button class="btn" id="primary" disabled>Commit answer</button>
+    </div>
+    <p class="report"><a id="report-link">Report a problem with this question</a></p>
+    <div class="hint">Keys: 1 to 4 choose, Enter commits or continues.</div>
+  </section>
+
+  <section class="card final" id="done" hidden>
+    <div class="topic">Session complete</div>
+    <div class="big" id="final-score"></div>
+    <p class="why" id="final-note"></p>
+    <div class="actions">
+      <a class="btn ghost" href="../">Back to home</a>
+      <button class="btn ghost" id="review">Review missed questions</button>
+      <button class="btn" id="restart">Start over</button>
+    </div>
+  </section>
+</div>
+
+<script src="../feedback.js"></script>
+<script src="questions.js"></script>
+<script>
+// opts: the current question's options in shuffled order; answer: the correct option's text.
+// lastOrder remembers each question's previous arrangement so it never repeats back to back.
+const state = { order: [], pos: 0, picked: null, committed: false, correct: 0, missed: [], opts: [], answer: "", lastOrder: new Map() };
+
+const $ = id => document.getElementById(id);
+const COUNTS = [10, 20, 30, 50, "All"];
+const MODES = [["fund", "Fundamentals"], ["psar", "PSAR"], ["mix", "Mixed"]];
+let mode = "mix";
+
+// Show an item's figure in one <figure> element, or hide the element
+function showFig(id, fig) {
+  const el = $(id), img = el.querySelector("img");
+  el.hidden = !fig;
+  if (!fig) { img.removeAttribute("src"); img.alt = ""; return; }
+  img.src = fig.f; img.alt = fig.alt;
+  el.querySelector("figcaption").textContent = fig.cap;
+}
+
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+
+// Question indexes grouped by topic
+const TOPICS = new Map();
+QS.forEach((q, i) => { if (!TOPICS.has(q.topic)) TOPICS.set(q.topic, []); TOPICS.get(q.topic).push(i); });
+
+const isPsar = t => t.startsWith("PSAR: ");
+const topicsFor = m => [...TOPICS.keys()].filter(t => m === "mix" || isPsar(t) === (m === "psar"));
+const sizeOf = topics => topics.reduce((n, t) => n + TOPICS.get(t).length, 0);
+
+// Pick `count` questions spread evenly across `topics`. Each round gives every topic that
+// still has questions an equal share; a topic with fewer than its share gives all it has
+// and is reported as short. Slots that don't divide evenly go to random topics.
+function spread(topics, count) {
+  const pools = new Map(topics.map(t => [t, shuffle(TOPICS.get(t).slice())]));
+  const take = new Map(topics.map(t => [t, 0]));
+  const short = [];
+  let left = count;
+  while (left > 0) {
+    const open = [...pools.keys()].filter(t => take.get(t) < pools.get(t).length);
+    if (!open.length) break;
+    const share = Math.floor(left / open.length);
+    if (share === 0) {
+      shuffle(open).slice(0, left).forEach(t => take.set(t, take.get(t) + 1));
+      break;
+    }
+    for (const t of open) {
+      const room = pools.get(t).length - take.get(t);
+      if (room < share && !short.includes(t)) short.push(t);
+      const n = Math.min(share, room);
+      take.set(t, take.get(t) + n);
+      left -= n;
+    }
+  }
+  const ids = [];
+  for (const [t, n] of take) ids.push(...pools.get(t).slice(0, n));
+  return { ids, short };
+}
+
+// Fundamentals and PSAR each draw from their own topics. Mixed is half of each,
+// spread across that half's topics; an odd count gives the extra question to either half.
+function buildSet(count) {
+  const topics = topicsFor(mode);
+  if (count >= sizeOf(topics)) return { ids: shuffle(topics.flatMap(t => TOPICS.get(t))), short: [] };
+  if (mode !== "mix") { const r = spread(topics, count); return { ids: shuffle(r.ids), short: r.short }; }
+  const half = Math.floor(count / 2), extra = count % 2 && Math.random() < 0.5 ? 1 : 0;
+  const f = spread(topicsFor("fund"), count - half - extra);
+  const p = spread(topicsFor("psar"), half + extra);
+  return { ids: shuffle(f.ids.concat(p.ids)), short: f.short.concat(p.short) };
+}
+
+function showSetup() {
+  $("setup").hidden = false; $("quiz").hidden = true; $("done").hidden = true; $("short").hidden = true;
+  $("progress").textContent = "";
+  $("fill").style.width = "0%";
+  $("score").textContent = "0 / 0";
+}
+
+function buildModes() {
+  MODES.forEach(([id, label]) => {
+    const b = document.createElement("button");
+    b.className = "btn ghost";
+    b.textContent = label;
+    b.setAttribute("aria-pressed", String(id === mode));
+    b.addEventListener("click", () => {
+      mode = id;
+      [...$("modes").children].forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      buildCounts();
+    });
+    $("modes").appendChild(b);
+  });
+}
+
+function buildCounts() {
+  const topics = topicsFor(mode), total = sizeOf(topics);
+  $("counts").textContent = "";
+  COUNTS.forEach(c => {
+    const n = c === "All" ? total : c;
+    const b = document.createElement("button");
+    b.className = "btn ghost";
+    b.textContent = c === "All" ? "All (" + total + ")" : String(c);
+    b.disabled = n > total;
+    b.addEventListener("click", () => { const set = buildSet(n); start(set.ids, set.short); });
+    $("counts").appendChild(b);
+  });
+  $("available").textContent = total + " questions available across " + topics.length + " topics.";
+}
+
+function start(list, short = []) {
+  state.order = shuffle(list.slice());
+  state.pos = 0; state.correct = 0; state.missed = [];
+  $("setup").hidden = true; $("quiz").hidden = false; $("done").hidden = true;
+  const note = $("short");
+  note.hidden = short.length === 0;
+  note.textContent = short.length
+    ? "Not enough questions to fill an even share for: " + short.map(t => t + " (" + TOPICS.get(t).length + ")").join(", ") + ". Their slots went to other topics."
+    : "";
+  showQuestion();
+}
+
+// Called each time a question appears: shuffle its options, avoiding the arrangement it had last time.
+// Questions marked seq keep their stored (numeric or time) order.
+function showQuestion() {
+  const qi = state.order[state.pos], Q = QS[qi];
+  let opts;
+  if (Q.seq) opts = Q.o.slice();
+  else do { opts = shuffle(Q.o.slice()); } while (opts.join("\n") === state.lastOrder.get(qi));
+  state.lastOrder.set(qi, opts.join("\n"));
+  state.opts = opts;
+  state.answer = Q.o[Q.a];
+  state.picked = null; state.committed = false;
+  render();
+}
+
+function render() {
+  const n = state.order.length, qi = state.order[state.pos], Q = QS[qi];
+  const right = state.opts.indexOf(state.answer);
+  $("progress").textContent = "Question " + (state.pos + 1) + " of " + n;
+  $("fill").style.width = (state.pos / n * 100) + "%";
+  $("score").textContent = state.correct + " / " + (state.pos + (state.committed ? 1 : 0));
+  $("topic").textContent = Q.topic.startsWith("PSAR") ? Q.topic : Q.t + ": " + Q.topic;
+  $("question").textContent = Q.q;
+  $("item-id").textContent = Q.id;
+  $("report-link").href = itemReport(Q.id, Q.topic, Q.q, Q.src);
+  showFig("fig-q", Q.fig && Q.fig.at === "q" ? Q.fig : null);
+  showFig("fig-a", Q.fig && Q.fig.at !== "q" && state.committed ? Q.fig : null);
+
+  const opts = $("opts");
+  opts.innerHTML = "";
+  state.opts.forEach((text, k) => {
+    const b = document.createElement("button");
+    b.className = "opt";
+    b.setAttribute("role", "radio");
+    b.setAttribute("aria-checked", String(state.picked === k));
+    b.dataset.k = k;
+    b.disabled = state.committed;
+    b.innerHTML = '<span class="letter">' + "ABCD"[k] + '</span><span class="text"></span>';
+    b.querySelector(".text").textContent = text;
+    if (state.committed) {
+      if (k === right) b.classList.add("right");
+      else if (k === state.picked) b.classList.add("wrong");
+    }
+    opts.appendChild(b);
+  });
+
+  const fb = $("feedback");
+  if (state.committed) {
+    const ok = state.opts[state.picked] === state.answer;
+    fb.hidden = false;
+    fb.className = "feedback " + (ok ? "right" : "wrong");
+    $("verdict").textContent = ok ? "Correct" : "Not quite. The answer is " + "ABCD"[right] + ".";
+    $("why").textContent = Q.x;
+    $("src").textContent = "Source: " + Q.src;
+    $("flag").hidden = !Q.flag;
+    $("flag").textContent = Q.flag ? "⚠ Possible discrepancy: " + Q.flag : "";
+    const p = $("primary");
+    p.textContent = state.pos + 1 < n ? "Next question" : "See results";
+    p.disabled = false;
+  } else {
+    fb.hidden = true;
+    const p = $("primary");
+    p.textContent = "Commit answer";
+    p.disabled = state.picked === null;
+  }
+}
+
+function choose(k) {
+  if (state.committed) return;
+  state.picked = k;
+  render();
+  $("primary").focus();
+}
+
+function commit() {
+  if (state.picked === null || state.committed) return;
+  state.committed = true;
+  if (state.opts[state.picked] === state.answer) state.correct++;
+  else state.missed.push(state.order[state.pos]);
+  render();
+}
+
+function next() {
+  if (!state.committed) return;
+  state.pos++;
+  if (state.pos >= state.order.length) return finish();
+  showQuestion();
+}
+
+function finish() {
+  const n = state.order.length, pct = Math.round(state.correct / n * 100);
+  $("quiz").hidden = true; $("done").hidden = false; $("short").hidden = true;
+  $("fill").style.width = "100%";
+  $("score").textContent = state.correct + " / " + n;
+  $("final-score").textContent = state.correct + " of " + n + " (" + pct + "%)";
+  $("final-note").textContent = state.missed.length
+    ? state.missed.length + " missed. Review them, since they show the weakest areas."
+    : "No misses this round. Start over to reshuffle the set.";
+  $("review").hidden = state.missed.length === 0;
+}
+
+$("opts").addEventListener("click", e => {
+  const b = e.target.closest(".opt");
+  if (b) choose(Number(b.dataset.k));
+});
+$("primary").addEventListener("click", () => { state.committed ? next() : commit(); });
+$("restart").addEventListener("click", showSetup);
+$("review").addEventListener("click", () => start(state.missed.slice()));
+
+document.addEventListener("keydown", e => {
+  if ($("quiz").hidden) return;
+  if (/^[1-4]$/.test(e.key) && !state.committed) choose(Number(e.key) - 1);
+  if (e.key === "Enter" && !$("primary").disabled) { e.preventDefault(); state.committed ? next() : commit(); }
+});
+
+buildModes();
+buildCounts();
+showSetup();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(err => console.warn("Service worker registration failed", err));
+  });
+}
+</script>
+</html>

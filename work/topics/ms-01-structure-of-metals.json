@@ -1,0 +1,1269 @@
+{
+ "module_id": "MS-01",
+ "slug": "ms-01-structure-of-metals",
+ "title": "Structure of Metals",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1017-V1",
+ "handbook": "DOE-HDBK-1017/1-93",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Brittle Fracture and Vessel Thermal Stress",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the bonding and patterns that effect the structure of a metal.",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the five types of bonding that occur in materials and their characteristics.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Crystal structure",
+      "b. Body-centered cubic structure",
+      "c. Face-centered cubic structure",
+      "d. Hexagonal close-packed structure"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the three lattice-type structures in metals.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given a description or drawing, DISTINGUISH between the three most common types of crystalline structures.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "IDENTIFY the crystalline structure possessed by a metal.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Grain",
+      "b. Grain structure",
+      "c. Grain boundary",
+      "d. Creep"
+     ],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "DEFINE the term polymorphism.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "IDENTIFY the ranges and names for the polymorphism phases associated with uranium metal.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "IDENTIFY the polymorphism phase that prevents pure uranium from being used as fuel.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DEFINE the term alloy.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE an alloy as to the three possible microstructures and the two general characteristics as compared to pure metals.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "IDENTIFY the two desirable properties of type 304 stainless steel.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "IDENTIFY the three types of microscopic imperfections found in crystalline structures.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "STATE how slip occurs in crystals.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "IDENTIFY the four types of bulk defects.",
+     "items": [],
+     "page": {
+      "pdf": 18,
+      "printed": "vi"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Solid matter is held together by forces originating between neighboring atoms or molecules.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Ionic bond - In this type of bond, one or more electrons are wholly transferred from an atom of one element to the atom of the other, and the elements are held together by the force of attraction due to the opposite polarity of the charge.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Covalent bond - A bond formed by shared electrons.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Metallic bond - In this type of bond, the atoms do not share or exchange electrons to bond together.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+  },
+  {
+   "id": "P5",
+   "quote": "Instead, many electrons (roughly one for each atom) are more or less free to move throughout the metal, so that each electron can interact with many of the fixed atoms.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+  },
+  {
+   "id": "P6",
+   "quote": "This is sometimes called the van der Waals or molecular bonds.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+  },
+  {
+   "id": "P7",
+   "quote": "Hydrogen bond - This bond is similar to the molecular bond and occurs due to the ease with which hydrogen atoms are willing to give up an electron to atoms of oxygen, fluorine, or nitrogen.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "Amorphous materials have no regular arrangement of their molecules.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "In a crystalline structure, the atoms are arranged in a three-dimensional array called a lattice.",
+   "sec": "Bonding",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "A crystal structure consists of atoms arranged in a pattern that repeats periodically in a three-dimensional geometric lattice.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.6"
+  },
+  {
+   "id": "P11",
+   "quote": "In a body-centered cubic (BCC) arrangement of atoms, the unit cell consists of eight atoms at the corners of a cube and one atom at the body center of the cube.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.6"
+  },
+  {
+   "id": "P12",
+   "quote": "In a face-centered cubic (FCC) arrangement of atoms, the unit cell consists of eight atoms at the corners of a cube and one atom at the center of each of the faces of the cube.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.7"
+  },
+  {
+   "id": "P13",
+   "quote": "In a hexagonal close-packed (HCP) arrangement of atoms, the unit cell consists of three layers of atoms.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.7"
+  },
+  {
+   "id": "P14",
+   "quote": "Metals containing BCC structures include ferrite, chromium, vanadium, molybdenum, and tungsten.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+  },
+  {
+   "id": "P15",
+   "quote": "Metals containing FCC structures include austenite, aluminum, copper, lead, silver, gold, nickel, platinum, and thorium.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+  },
+  {
+   "id": "P16",
+   "quote": "Metals containing HCP structures include beryllium, magnesium, zinc, cadmium, cobalt, thallium, and zirconium.",
+   "sec": "Common Lattice Types",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+  },
+  {
+   "id": "P17",
+   "quote": "Grain is the region of space occupied by a continuous crystal lattice.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.11"
+  },
+  {
+   "id": "P18",
+   "quote": "Grain structure is the arrangement of grains in a metal, with a grain having a particular crystal structure.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.11"
+  },
+  {
+   "id": "P19",
+   "quote": "Grain boundary is the outside area of grain that separates it from other grains.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.11"
+  },
+  {
+   "id": "P20",
+   "quote": "The grain boundary is a region of misfit between the grains and is usually one to three atom diameters wide.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.9"
+  },
+  {
+   "id": "P21",
+   "quote": "For example, smaller grain size increases tensile strength and tends to increase ductility.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.9"
+  },
+  {
+   "id": "P22",
+   "quote": "A larger grain size is preferred for improved high-temperature creep properties.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.9"
+  },
+  {
+   "id": "P23",
+   "quote": "Creep is the permanent deformation that increases with time under constant load or stress.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.9"
+  },
+  {
+   "id": "P24",
+   "quote": "For example, preferred orientation in uranium fuel elements can result in catastrophic changes in dimensions during use in a nuclear reactor.",
+   "sec": "Grain Structure and Boundary",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.10"
+  },
+  {
+   "id": "P25",
+   "quote": "Polymorphism is the property or ability of a metal to exist in two or more crystalline forms depending upon temperature and composition.",
+   "sec": "Polymorphism",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.14"
+  },
+  {
+   "id": "P26",
+   "quote": "As shown, heating and cooling of alpha phase uranium can lead to drastic dimensional changes and gross distortions of the metal.",
+   "sec": "Polymorphism",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.13"
+  },
+  {
+   "id": "P27",
+   "quote": "Thus, pure uranium is not used as a fuel, but only in alloys or compounds.",
+   "sec": "Polymorphism",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.13"
+  },
+  {
+   "id": "P28",
+   "quote": "Alpha phase prevents pure uranium from being used as fuel because of expansion properties.",
+   "sec": "Polymorphism",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.14"
+  },
+  {
+   "id": "P29",
+   "quote": "An alloy is a mixture of two or more materials, at least one of which is a metal.",
+   "sec": "Alloys",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.15"
+  },
+  {
+   "id": "P30",
+   "quote": "Alloys are usually stronger than pure metals, although they generally offer reduced electrical and thermal conductivity.",
+   "sec": "Alloys",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.15"
+  },
+  {
+   "id": "P31",
+   "quote": "The two desirable properties of type 304 stainless steel are corrosion resistance and high toughness.",
+   "sec": "Alloys",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.17"
+  },
+  {
+   "id": "P32",
+   "quote": "Stainless steels are classified as austenitic or ferritic based on their lattice structure.",
+   "sec": "Alloys",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.16"
+  },
+  {
+   "id": "P33",
+   "quote": "Microscopic imperfections are generally classified as either point, line, or interfacial imperfections.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.18"
+  },
+  {
+   "id": "P34",
+   "quote": "Vacancy defects result from a missing atom in a lattice position.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.18"
+  },
+  {
+   "id": "P35",
+   "quote": "Substitutional defects result from an impurity present at a lattice position.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.18"
+  },
+  {
+   "id": "P36",
+   "quote": "Slip occurs when a crystal is subjected to stress and the dislocations march through the crystal until they reach the edge or are arrested by another dislocation.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.22"
+  },
+  {
+   "id": "P37",
+   "quote": "Three-dimensional macroscopic defects are called bulk defects.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.21"
+  },
+  {
+   "id": "P38",
+   "quote": "The most common bulk defect arises from foreign particles being included in the prime material.",
+   "sec": "Imperfections in Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.21"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Bonding",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "These forces arise because of differences in the electron clouds of atoms. The valence electrons, those in the outer shell, determine an atom's attraction for its neighbors.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Electrons are shared when an atom needs electrons to complete its outer shell and can share them with its neighbor. The electrons are then part of both atoms and both shells are filled.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "In a molecular bond, the electrons of neutral atoms spend more time in one region of their orbit, so a temporary weak charge exists and the molecule weakly attracts other molecules.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig1",
+     "num": 1,
+     "cap": "Bonding Types",
+     "alt": "Atoms arranged to show ionic bonding in sodium chloride, covalent in diamond, metallic in sodium, molecular in solid hydrogen, and hydrogen bonding in ice.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.3"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Sodium chloride: ionic",
+      "Diamond: covalent",
+      "Sodium: metallic",
+      "Solid H2: molecular",
+      "Ice: hydrogen"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Properties such as the ability to conduct heat or electrical current are set by the freedom of movement of electrons, which depends on the type of bonding.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.2"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What type of bond does sodium have?",
+     "o": [
+      "Molecular",
+      "Metallic",
+      "Ionic",
+      "Covalent"
+     ],
+     "a": 1,
+     "x": "Table 1 lists sodium as metallic, sodium chloride as ionic, and diamond as covalent.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "In which bond are electrons wholly transferred from one atom to another?",
+     "o": [
+      "Covalent",
+      "Metallic",
+      "Hydrogen",
+      "Ionic"
+     ],
+     "a": 3,
+     "x": "In an ionic bond, one or more electrons are wholly transferred from an atom of one element to the atom of the other.",
+     "p": "P2"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is special about the electrons in a metallic bond?",
+     "o": [
+      "Many are more or less free to move throughout the metal",
+      "They are wholly transferred to one atom",
+      "They are shared by only two atoms",
+      "They stay in one region of their orbit"
+     ],
+     "a": 0,
+     "x": "Many electrons, roughly one for each atom, are more or less free to move throughout the metal.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Amorphous and crystalline solids",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "The properties of materials depend on their interatomic bonds. All solids are either amorphous or crystalline.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Glass and paraffin are amorphous. Amorphous materials have definite shape and volume, diffuse slowly, and lack sharply defined melting points.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "The lattice has a regular repeating configuration in all directions.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "What do amorphous materials lack?",
+     "o": [
+      "A definite shape",
+      "A definite volume",
+      "Any interatomic bonds",
+      "A regular arrangement of their molecules"
+     ],
+     "a": 3,
+     "x": "Amorphous materials have no regular arrangement of their molecules.",
+     "p": "P8"
+    }
+   ]
+  },
+  {
+   "title": "Common lattice types",
+   "eo": [
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "This repeated pattern controls properties like strength, ductility, density, conductivity, and shape.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "The top and bottom layers contain six atoms at the corners of a hexagon and one atom at the center of each hexagon. The middle layer contains three atoms nestled between the atoms of the top and bottom layers.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig2",
+     "num": 2,
+     "cap": "Common Lattice Types",
+     "alt": "Unit cells of body-centered cubic, face-centered cubic, and hexagonal close-packed lattices, with dots marking atoms.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "p",
+     "text": "BCC metals have high strength and low ductility.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "FCC metals are, in general, of lower strength and higher ductility than BCC metals.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "HCP metals are not as ductile as FCC metals.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What are the three most common crystal patterns in metals?",
+     "o": [
+      "Alpha, beta, and gamma",
+      "Body-centered cubic, face-centered cubic, and hexagonal close-packed",
+      "Amorphous, crystalline, and polycrystalline",
+      "Ionic, covalent, and metallic"
+     ],
+     "a": 1,
+     "x": "The three most common basic crystal patterns are body-centered cubic, face-centered cubic, and hexagonal close-packed.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.4",
+     "q": "A unit cell has eight atoms at the corners of a cube and one atom at the center of each face. What structure is it?",
+     "o": [
+      "Body-centered cubic",
+      "Hexagonal close-packed",
+      "Tetragonal",
+      "Face-centered cubic"
+     ],
+     "a": 3,
+     "x": "In an FCC arrangement, the unit cell has eight atoms at the corners of a cube and one atom at the center of each of the faces.",
+     "p": "P12"
+    },
+    {
+     "eo": "1.5",
+     "q": "What crystal structure does zirconium have?",
+     "o": [
+      "Amorphous",
+      "Hexagonal close-packed",
+      "Body-centered cubic",
+      "Face-centered cubic"
+     ],
+     "a": 1,
+     "x": "HCP structures are found in metals that include zirconium.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.5",
+     "q": "What crystal structure does austenite have?",
+     "o": [
+      "Hexagonal close-packed",
+      "Tetragonal",
+      "Face-centered cubic",
+      "Body-centered cubic"
+     ],
+     "a": 2,
+     "x": "Metals containing FCC structures include austenite.",
+     "p": "P15"
+    }
+   ]
+  },
+  {
+   "title": "Grains, grain boundaries, and creep",
+   "eo": [
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig3",
+     "num": 3,
+     "cap": "Grains and Boundaries",
+     "alt": "Part A: a microscope view of light grains with dark boundaries. Part B: four grains with lattices at different orientations meeting at boundaries.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "Creep becomes progressively easier with increasing temperature.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig4",
+     "num": 4,
+     "cap": "Grain Orientation",
+     "alt": "Part A: grains with random orientation. Part B: grains aligned in the rolling direction, called preferred orientation.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Cross rolling can give a random grain orientation. Rolling enough in one direction can give a grain-oriented structure, called preferred orientation.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q406",
+     "eo": "1.6"
+    },
+    {
+     "eo": "1.6",
+     "q": "What is a grain boundary?",
+     "o": [
+      "A crack through a crystal",
+      "The center of a grain",
+      "A plane of extra atoms",
+      "The outside area of a grain that separates it from other grains"
+     ],
+     "a": 3,
+     "x": "Grain boundary is the outside area of grain that separates it from other grains.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.6",
+     "q": "Which grain size is preferred for improved high-temperature creep properties?",
+     "o": [
+      "Smaller grain size",
+      "Random grain size",
+      "Grain size has no effect",
+      "Larger grain size"
+     ],
+     "a": 3,
+     "x": "A larger grain size is preferred for improved high-temperature creep properties.",
+     "p": "P22"
+    }
+   ]
+  },
+  {
+   "title": "Polymorphism and uranium",
+   "eo": [
+    "1.7",
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "p",
+     "text": "Most metals and metal alloys exhibit this property. Uranium metal can exist in three different crystalline structures.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.12"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig5",
+     "num": 5,
+     "cap": "Cooling Curve for Unalloyed Uranium",
+     "alt": "Cooling curve for unalloyed uranium: temperature falls with steps at 1133°C for freezing, 764°C, and 663°C, showing the gamma, beta, and alpha phases.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.12"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Alpha phase: room temperature to 663°C",
+      "Beta phase: 663°C to 764°C",
+      "Gamma phase: 764°C to its melting point of 1133°C"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.12"
+    },
+    {
+     "t": "p",
+     "text": "The alpha phase is stable at room temperature. Its lattice properties differ in the X, Y, and Z axes, so when heated it expands in the X and Z directions and shrinks in the Y direction.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.13"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig6",
+     "num": 6,
+     "cap": "Change in Alpha Uranium Upon Heating From 0 to 300°C",
+     "alt": "Alpha uranium unit cell growing along two axes and shrinking along a third when heated from 0 to 300°C.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.13"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "The beta phase has a tetragonal lattice. The gamma phase is BCC and expands equally in all directions when heated.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.13"
+    },
+    {
+     "t": "p",
+     "text": "Iron also shows polymorphism: heating to 907°C changes it from BCC (alpha, ferrite) to FCC (gamma, austenite). Zirconium is HCP (alpha) up to 863°C, where it becomes BCC.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.14"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What is polymorphism?",
+     "o": [
+      "The growth of grains at high temperature",
+      "The ability of a metal to exist in two or more crystalline forms",
+      "The mixing of two or more metals",
+      "The slip of atomic planes under stress"
+     ],
+     "a": 1,
+     "x": "Polymorphism is the property or ability of a metal to exist in two or more crystalline forms depending upon temperature and composition.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.8",
+     "q": "What is the temperature range of the beta phase of uranium?",
+     "o": [
+      "764°C to 1133°C",
+      "1133°C and above",
+      "Room temperature to 663°C",
+      "663°C to 764°C"
+     ],
+     "a": 3,
+     "x": "The beta phase runs from 663°C to 764°C.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.9",
+     "q": "Which uranium phase prevents pure uranium from being used as fuel?",
+     "o": [
+      "Alpha",
+      "Beta",
+      "Gamma",
+      "Delta"
+     ],
+     "a": 0,
+     "x": "Alpha phase prevents pure uranium from being used as fuel because of expansion properties.",
+     "p": "P28"
+    }
+   ]
+  },
+  {
+   "title": "Alloys",
+   "eo": [
+    "1.10",
+    "1.11",
+    "1.12"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Solid solutions, where secondary atoms are introduced as substitutionals or interstitials in a crystal lattice",
+      "A crystal with a metallic compound at each lattice point",
+      "Composites, where secondary crystals are imbedded in a primary polycrystalline matrix"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "Steel is an alloy of iron and carbon, with other elements to give it certain desirable properties.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "Type 304 stainless steel contains 18%-20% chromium and 8%-10.5% nickel.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "Austenitic stainless steels, including 304 and 316, have a face-centered cubic structure. Ferritic stainless steels, including type 405, have a body-centered cubic lattice and contain no nickel. Ferritic steels are easier to weld and fabricate and less susceptible to stress corrosion cracking, but have only moderate resistance to other chemical attack.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.16"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What is an alloy?",
+     "o": [
+      "A metal with a single grain",
+      "A mixture of two or more materials, at least one of which is a metal",
+      "A pure metal with no impurities",
+      "A metal in its alpha phase"
+     ],
+     "a": 1,
+     "x": "An alloy is a mixture of two or more materials, at least one of which is a metal.",
+     "p": "P29"
+    },
+    {
+     "eo": "1.11",
+     "q": "How do alloys generally compare with pure metals?",
+     "o": [
+      "Weaker, with reduced conductivity",
+      "Stronger, with reduced electrical and thermal conductivity",
+      "Weaker, with higher conductivity",
+      "Stronger, with higher conductivity"
+     ],
+     "a": 1,
+     "x": "Alloys are usually stronger than pure metals, although they generally offer reduced electrical and thermal conductivity.",
+     "p": "P30"
+    },
+    {
+     "eo": "1.12",
+     "q": "What are the two desirable properties of type 304 stainless steel?",
+     "o": [
+      "Corrosion resistance and high toughness",
+      "High hardness and low density",
+      "High conductivity and low cost",
+      "Low ductility and high creep"
+     ],
+     "a": 0,
+     "x": "The two desirable properties of type 304 stainless steel are corrosion resistance and high toughness.",
+     "p": "P31"
+    }
+   ]
+  },
+  {
+   "title": "Microscopic imperfections",
+   "eo": [
+    "1.13",
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Point imperfections have atomic dimensions.",
+      "Line imperfections, or dislocations, are generally many atoms in length.",
+      "Interfacial imperfections are larger than line defects and occur over a two-dimensional area."
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "Interstitial defects come from an impurity at an interstitial site, or a lattice atom in an interstitial position. Interstitial refers to locations between atoms in a lattice.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig7",
+     "num": 7,
+     "cap": "Point Defects",
+     "alt": "Lattices showing a vacancy, a substitutional atom, and an interstitial atom.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.19"
+    },
+    {
+     "t": "p",
+     "text": "Line imperfections occur in crystalline materials only, and can be edge, screw, or mixed type. They cannot end inside a crystal. They must end at a crystal edge or another dislocation, or close back on themselves.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig8",
+     "num": 8,
+     "cap": "Line Defects (Dislocations)",
+     "alt": "An edge dislocation with an extra plane of atoms, and a screw dislocation with a stepped lattice.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "fig",
+     "id": "ms-01-fig9",
+     "num": 9,
+     "cap": "Slips",
+     "alt": "Six positions of a crystal under opposing forces, showing a dislocation moving through until the crystal is deformed.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.20"
+    },
+    {
+     "t": "p",
+     "text": "The slip of one active plane is ordinarily about 1000 atomic distances, and yielding requires slip on many planes.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.20"
+    },
+    {
+     "t": "p",
+     "text": "Interfacial imperfections are found at free surfaces, domain boundaries, grain boundaries, or interphase boundaries.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.13",
+     "q": "What are the three types of microscopic imperfections?",
+     "o": [
+      "Edge, screw, and mixed",
+      "Inclusions, gas pockets, and cavities",
+      "Point, line, and interfacial",
+      "Vacancy, substitutional, and interstitial"
+     ],
+     "a": 2,
+     "x": "Microscopic imperfections are generally classified as either point, line, or interfacial imperfections.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.14",
+     "q": "How does slip occur in a crystal?",
+     "o": [
+      "Atoms leave the lattice and form a vacancy",
+      "Grain boundaries melt under load",
+      "Impurities replace lattice atoms",
+      "Under stress, dislocations move through the crystal until they reach the edge or are arrested"
+     ],
+     "a": 3,
+     "x": "Slip occurs when a crystal is subjected to stress and the dislocations march through the crystal until they reach the edge or are arrested by another dislocation.",
+     "p": "P36"
+    },
+    {
+     "eo": "1.13",
+     "q": "What causes a vacancy defect?",
+     "o": [
+      "A missing atom in a lattice position",
+      "An impurity at a lattice position",
+      "An extra plane of atoms",
+      "A foreign particle in the material"
+     ],
+     "a": 0,
+     "x": "Vacancy defects result from a missing atom in a lattice position.",
+     "p": "P34"
+    }
+   ]
+  },
+  {
+   "title": "Bulk defects",
+   "eo": [
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "They occur on a much larger scale than microscopic defects, and are generally introduced during refinement from the raw state or during fabrication.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Foreign particles included in the prime material (inclusions)",
+      "Gas pockets",
+      "Shrinking cavities",
+      "Welding or joining defects"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.22"
+    },
+    {
+     "t": "p",
+     "text": "Working and forging can also cause cracks that act as stress concentrators and weaken the material.",
+     "cite": "DOE-HDBK-1017/1-93 MS-01 p.21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "What is the most common bulk defect?",
+     "o": [
+      "Welding defects",
+      "Inclusions of foreign particles",
+      "Gas pockets",
+      "Shrinking cavities"
+     ],
+     "a": 1,
+     "x": "The most common bulk defect arises from foreign particles being included in the prime material.",
+     "p": "P38"
+    }
+   ]
+  }
+ ],
+ "examples": [],
+ "facts": [
+  {
+   "q": "What are the five types of bonding in materials?",
+   "a": "Ionic, covalent, metallic, molecular, and hydrogen.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "What is a crystal structure?",
+   "a": "Atoms arranged in a pattern that repeats periodically in a three-dimensional geometric lattice.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "Which common lattice type gives high strength and low ductility?",
+   "a": "Body-centered cubic (BCC).",
+   "p": "P14",
+   "place": null
+  },
+  {
+   "q": "What are the three phases of uranium metal?",
+   "a": "Alpha, room temperature to 663°C. Beta, 663°C to 764°C. Gamma, 764°C to 1133°C.",
+   "p": "P28",
+   "place": null
+  },
+  {
+   "q": "Why is pure uranium not used as a fuel?",
+   "a": "Heating and cooling alpha phase uranium can cause drastic dimensional changes and gross distortions.",
+   "p": "P26",
+   "place": null
+  },
+  {
+   "q": "What are the three possible alloy microstructures?",
+   "a": "Solid solutions, a crystal with a metallic compound at each lattice point, and composites.",
+   "p": "P29",
+   "place": null
+  },
+  {
+   "q": "What are the four types of bulk defects?",
+   "a": "Inclusions, gas pockets, shrinking cavities, and welding or joining defects.",
+   "p": "P37",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "The five bond types are ionic, covalent, metallic, molecular, and hydrogen.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.5"
+  },
+  {
+   "text": "A crystal structure consists of atoms arranged in a pattern that repeats periodically in a three-dimensional lattice, commonly BCC, FCC, or HCP.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+  },
+  {
+   "text": "Grain is the region of space occupied by a continuous crystal lattice, and small grain size increases tensile strength and ductility.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.11"
+  },
+  {
+   "text": "Alpha phase prevents pure uranium from being used as fuel because of expansion properties.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.14"
+  },
+  {
+   "text": "Alloys are usually stronger than pure metals, with reduced electrical and thermal conductivities.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.17"
+  },
+  {
+   "text": "Microscopic imperfections are point, line, and interfacial, and bulk defects are three dimensional.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.22"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. Ice appears only as a hydrogen bond example, and the lesson leaves off p.16's reactor tank and process water uses of type 304.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.16"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.15 says a crystal with a metallic compound at each lattice point. The p.17 summary says crystal with metallic bonds. The lesson uses p.15.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.15"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.8 says low ductility \"permits permanent deformation,\" which reads backwards. The lesson does not repeat the phrase.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.8"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "Objective 1.12 asks for two desirable properties of type 304. p.16 gives corrosion resistance, and only the p.17 summary adds high toughness.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.17"
+  },
+  {
+   "type": "Worked examples",
+   "note": "This module has no worked examples or calculations, so the lesson has no examples page.",
+   "cite": "DOE-HDBK-1017/1-93 MS-01 p.22"
+  }
+ ],
+ "page_tags": []
+}

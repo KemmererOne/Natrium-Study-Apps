@@ -1,0 +1,672 @@
+{
+ "module_id": "PR-06",
+ "slug": "pr-06-engineering-fabrication-construction-and-architectural-drawings",
+ "title": "Engineering Fabrication, Construction, and Architectural Drawings",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1016-V2",
+ "handbook": "DOE-HDBK-1016/2-93",
+ "word_file": null,
+ "quiz_t": "Components",
+ "quiz_topic": "Valves",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given an engineering fabrication, construction, or architectural drawing, READ and INTERPRET basic dimensional and tolerance symbology, and basic fabrication, construction, or architectural symbology.",
+   "items": [],
+   "page": {
+    "pdf": 77,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "STATE the purpose of engineering fabrication, construction, and architectural drawings.",
+     "items": [],
+     "page": {
+      "pdf": 77,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "Given an engineering fabrication, construction, or architectural drawing, DETERMINE the specified dimensions of an object.",
+     "items": [],
+     "page": {
+      "pdf": 77,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given an engineering fabrication, construction, or architectural drawing, DETERMINE the maximum and minimum dimensions or location of an object or feature from the stated drawing tolerance.",
+     "items": [],
+     "page": {
+      "pdf": 77,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "These three types of drawings represent the category of drawings commonly referred to as blueprints.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Fabrication, construction, and architectural drawings differ from P&IDs, electrical prints, and logic diagrams in that they are drawn to scale and provide the component's physical dimensions so that the part, component, or structure can be manufactured or assembled.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "A fabrication drawing provides information on how a single part is machined or fabricated in a machine shop, whereas a construction drawing provides the construction or assembly of large multi-component structures or systems.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "These drawings do not provide detailed information on how the structure or building is to be built, but rather they provide information on how the designer wants the building to appear and how it will function.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "Dimensions on a drawing can be expressed in one of two ways.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.5"
+  },
+  {
+   "id": "P6",
+   "quote": "The second method is the preferred method because it reduces the chances of error and allows greater accuracy and drawing flexibility.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "When actual dimensions are specified on a print, the basic line symbols that are illustrated by Figure 4 are used.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.6"
+  },
+  {
+   "id": "P8",
+   "quote": "Figure 5 provides examples of the various methods used on drawings to indicate linear, circular and angular dimensions.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.7"
+  },
+  {
+   "id": "P9",
+   "quote": "Another method of expressing tolerances on a drawing is to state in the title block, or in a note, a global tolerance for all measurements on the drawing.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+  },
+  {
+   "id": "P10",
+   "quote": "The last method is to state the tolerance for a specified dimension with the measurement.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+  },
+  {
+   "id": "P11",
+   "quote": "This type of notation is commonly used for a dimension that requires a higher level of accuracy than the remainder of the drawing.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+  },
+  {
+   "id": "P12",
+   "quote": "Geometric tolerances state the maximum allowable variation of a form or its position from the perfect geometry implied on the drawing.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "This allows the unspecified, and therefor non- toleranced, dimension to absorb the errors in the critical dimensions.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.11"
+  },
+  {
+   "id": "P14",
+   "quote": "4.15 inches. The nominal length of 4.1 plus the tolerance of 0.05.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawing, Examples",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  },
+  {
+   "id": "P15",
+   "quote": "4.05 inches. The nominal length of 4.1 minus the tolerance of 0.05.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawing, Examples",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  },
+  {
+   "id": "P16",
+   "quote": "The purpose of a fabrication drawing is to provide the information necessary to manufacture and machine components.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  },
+  {
+   "id": "P17",
+   "quote": "The purpose of construction drawings is to provide the information necessary to build and assemble structures and systems.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "The purpose of architectural drawings is to provide conceptual information about buildings and structures.",
+   "sec": "Engineering Fabrication, Construction, and Architectural Drawings",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Purpose of the three drawing types",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "Fabrication drawings, also called machine drawings, are found mainly in and around machine and fabrication shops. They usually show the part as an orthographic projection, with each view holding the needed dimensions.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.1"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig1",
+     "num": 1,
+     "cap": "Example of a Fabrication Drawing",
+     "alt": "Fabrication drawing of a centering rest, shown in orthographic views with dimensions and a parts list.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.2"
+    },
+    {
+     "t": "p",
+     "text": "Construction drawings are found mainly at construction sites, and usually show each structure or system as an orthographic projection with the dimensions needed for assembly.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.3"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig2",
+     "num": 2,
+     "cap": "Example of a Construction Drawing",
+     "alt": "Construction print of a section of a steel roof truss, with member lengths and angles.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Architectural drawings are used by architects in the conceptual design of buildings and structures. Examples of their content are the location, size, and type of doors, windows, and rooms, the flow of people, storage areas, and the location of equipment.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q501",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the purpose of construction drawings?",
+     "o": [
+      "To provide conceptual information about buildings",
+      "To show how a single part is machined",
+      "To show the function of a piping system",
+      "To provide the information necessary to build and assemble structures and systems"
+     ],
+     "a": 3,
+     "x": "The purpose of construction drawings is to provide the information necessary to build and assemble structures and systems.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.1",
+     "q": "Which drawing shows how the designer wants a building to appear and function?",
+     "o": [
+      "Fabrication drawing",
+      "Construction drawing",
+      "Single line drawing",
+      "Architectural drawing"
+     ],
+     "a": 3,
+     "x": "Architectural drawings provide information on how the designer wants the building to appear and how it will function.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the main difference between a fabrication drawing and a construction drawing?",
+     "o": [
+      "Only construction drawings give dimensions",
+      "Fabrication drawings show no tolerances",
+      "The subject matter: a single part or a large multi-component structure",
+      "Only fabrication drawings are drawn to scale"
+     ],
+     "a": 2,
+     "x": "A fabrication drawing covers a single part, whereas a construction drawing covers large multi-component structures or systems.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Dimensioning a drawing",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Drawings usually show dimensions and tolerances per American National Standards Institute (ANSI) standards.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "In the first method, the drawing is drafted to scale and the measurement is taken from the drawing and corrected for the scale. In the second, the actual dimensions are specified on the drawing.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig4",
+     "num": 4,
+     "cap": "Types of Dimensioning Lines",
+     "alt": "Dimensioning lines: visible outline, hidden line, center line, extension line, dimension line, cutting plane, and section lining, each with its use.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.6"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Visible outline (full line): shows the shape of the part and all visible features",
+      "Hidden line (dashed line): shows hidden features",
+      "Center line: locates the centers of holes and round features",
+      "Extension line: extends from the object to locate dimension lines",
+      "Dimension line: shows the size of the object"
+     ],
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig5",
+     "num": 5,
+     "cap": "Example of Dimensioning Notation",
+     "alt": "Examples of linear, grouped, angular, and circular dimensions on simple parts.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.7"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.2",
+     "q": "Why is stating the actual dimensions on a drawing preferred over measuring a scale drawing?",
+     "o": [
+      "It makes the drawing smaller",
+      "It removes the need for a title block",
+      "It reduces the chances of error and allows greater accuracy",
+      "It removes the need for tolerances"
+     ],
+     "a": 2,
+     "x": "The second method is the preferred method because it reduces the chances of error and allows greater accuracy and drawing flexibility.",
+     "p": "P6"
+    },
+    {
+     "eo": "1.2",
+     "q": "On a dimensioned drawing, what does a dashed line show?",
+     "o": [
+      "The center of a hole",
+      "A section cut",
+      "Hidden features of the object",
+      "The size of the object"
+     ],
+     "a": 2,
+     "x": "Figure 4 shows the hidden line as a dashed line that shows hidden features of objects.",
+     "p": "P7"
+    }
+   ]
+  },
+  {
+   "title": "Tolerances",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Each dimension on a drawing must have a tolerance. In many cases it is not stated, but is set to an implied standard, as with a house blueprint built to the normal tolerances of the trade.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "p",
+     "text": "This method is usually used along with one of the other two.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Tolerances apply to more than linear dimensions. They can apply to the radius, the degree of out-of-round, the allowable out-of-square, the surface condition, or any other parameter that affects the shape and size of the object. These are called geometric tolerances.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig6",
+     "num": 6,
+     "cap": "Symbology Used in Tolerancing Drawings",
+     "alt": "Feature control frames with a geometric characteristic symbol, tolerance, and datum letter, plus charts of geometric characteristic symbols and modifying symbols.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.9"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig7",
+     "num": 7,
+     "cap": "Examples of Tolerance Symbology",
+     "alt": "Two parts dimensioned with position and other tolerance symbols.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.10"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Straightness: a straight line",
+      "Circularity (roundness): a circle",
+      "Cylindricity: a circle with two parallel bars",
+      "Parallelism: two slanted parallel lines",
+      "Perpendicularity: an inverted T"
+     ],
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "A dimension reads 2.50 ± 0.02. What is the maximum dimension?",
+     "o": [
+      "2.48",
+      "2.50",
+      "2.52",
+      "2.54"
+     ],
+     "a": 2,
+     "x": "Add the tolerance to the nominal value, as the handbook does with 4.1 and 0.05.",
+     "p": "P14"
+    },
+    {
+     "eo": "1.3",
+     "q": "A dimension reads 2.50 ± 0.02. What is the minimum dimension?",
+     "o": [
+      "2.46",
+      "2.48",
+      "2.50",
+      "2.52"
+     ],
+     "a": 1,
+     "x": "Subtract the tolerance from the nominal value, as the handbook does with 4.1 and 0.05.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.3",
+     "q": "Where can a global tolerance for all measurements on a drawing be stated?",
+     "o": [
+      "In the revision block only",
+      "On each dimension line",
+      "In the title block or a note",
+      "In the grid system"
+     ],
+     "a": 2,
+     "x": "Tolerances can be stated in the title block, or in a note, as a global tolerance for all measurements on the drawing.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.3",
+     "q": "What do geometric tolerances state?",
+     "o": [
+      "The material of the part",
+      "The surface paint thickness",
+      "The maximum allowable variation of a form or its position from perfect geometry",
+      "The drawing scale"
+     ],
+     "a": 2,
+     "x": "Geometric tolerances state the maximum allowable variation of a form or its position from the perfect geometry implied on the drawing.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Why one dimension is left off",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Because tolerances let a part vary, not all of an object's dimensions can be specified.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "fig",
+     "id": "pr-06-fig8",
+     "num": 8,
+     "cap": "Example of Tolerancing",
+     "alt": "Figure A: a stepped part with three steps of 1 ± 1/10 and an overall length of 3 ± 1/10. Figure B: the same part with one step dimension left off.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.11"
+    },
+    {
+     "t": "p",
+     "text": "In Figure 8 (A), each step plus its maximum tolerance is 1 1/10 inches, for a maximum length of 3 3/10 inches, but the total length cannot exceed 3 1/10 inches. A drawing dimensioned this way is not correct.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.11"
+    },
+    {
+     "t": "p",
+     "text": "The designer must either give each dimension a tolerance that keeps the sum inside the overall dimension and its tolerance, or leave one dimension off, as in Figure 8 (B). Leaving one off is the preferred method.",
+     "cite": "DOE-HDBK-1016/2-93 PR-06 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "What is the preferred way to prevent step tolerances from adding up past the overall tolerance?",
+     "o": [
+      "Add a note to the revision block",
+      "Leave one of the dimensions off",
+      "Tighten the overall tolerance",
+      "Remove all tolerances"
+     ],
+     "a": 1,
+     "x": "The designer must specify different tolerances or leave one of the dimensions off, which is the preferred method.",
+     "p": "P13"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Read a dimensioned structure",
+   "eo": "1.2",
+   "page": 16,
+   "fig": {
+    "t": "fig",
+    "id": "pr-06-fig9",
+    "num": 9,
+    "cap": "Example 1",
+    "alt": "Top, front, and side views of a stepped structure with dimensions, including 5'-6\" overall height, 4'-1\" front to back, and 4'-10\" side to side.",
+    "cite": "DOE-HDBK-1016/2-93 PR-06 p.13"
+   },
+   "problem": "What is the overall height of the structure, its width front to back, and the difference between its width front to back and side to side at the base?",
+   "steps": [
+    "Read the overall height from the 5'-6\" dimension.",
+    "Read the front-to-back width from the 4'-1\" dimension.",
+    "Subtract: 4'-10\" side to side minus 4'-1\" front to back."
+   ],
+   "answer": "5' 6\" overall height, 4' 1\" front to back, and a difference of 9\".",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  },
+  {
+   "title": "Read a shaft tolerance",
+   "eo": "1.3",
+   "page": 16,
+   "fig": {
+    "t": "fig",
+    "id": "pr-06-fig10",
+    "num": 10,
+    "cap": "Example 2",
+    "alt": "Shaft with a feature control frame holding a straight line and 0.02, and a diameter marked 16.00 over 15.89.",
+    "cite": "DOE-HDBK-1016/2-93 PR-06 p.14"
+   },
+   "problem": "What geometric characteristic is being given a tolerance, and what are the maximum and minimum shaft diameters?",
+   "steps": [
+    "Use the symbol chart: a straight line in the box is straightness.",
+    "The surface must be straight to within 0.02 inches.",
+    "Read the two limits stacked beside the diameter symbol."
+   ],
+   "answer": "Straightness; maximum diameter 16.00 inches; minimum diameter 15.89 inches.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  },
+  {
+   "title": "Read a cylinder tolerance",
+   "eo": "1.3",
+   "page": 16,
+   "fig": {
+    "t": "fig",
+    "id": "pr-06-fig11",
+    "num": 11,
+    "cap": "Example 3",
+    "alt": "Cylinder with a feature control frame holding the cylindricity symbol and 0.25, and a length of 4.1 ± 0.05.",
+    "cite": "DOE-HDBK-1016/2-93 PR-06 p.15"
+   },
+   "problem": "What geometric characteristic is being given a tolerance, and what are the maximum and minimum cylinder lengths?",
+   "steps": [
+    "Use the symbol chart: the circle with two parallel bars is cylindricity, here 0.25 inches.",
+    "Maximum: the nominal length of 4.1 plus the tolerance of 0.05.",
+    "Minimum: the nominal length of 4.1 minus the tolerance of 0.05."
+   ],
+   "answer": "Cylindricity; maximum length 4.15 inches; minimum length 4.05 inches.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two ways dimensions can be expressed on a drawing?",
+   "a": "Drafted to scale and measured from the drawing, or with the actual dimensions specified. The second is preferred.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "What are the three methods of stating a tolerance on a drawing?",
+   "a": "An implied standard, a global tolerance in the title block or a note, or a tolerance stated with a specific dimension.",
+   "p": "P9",
+   "place": null
+  },
+  {
+   "q": "What are geometric tolerances?",
+   "a": "The maximum allowable variation of a form or its position from the perfect geometry implied on the drawing.",
+   "p": "P12",
+   "place": null
+  },
+  {
+   "q": "Why is one dimension often left off a toleranced drawing?",
+   "a": "The unspecified dimension absorbs the errors in the critical dimensions.",
+   "p": "P13",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "A fabrication drawing provides the information necessary to manufacture and machine components.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  },
+  {
+   "text": "Construction drawings provide the information necessary to build and assemble structures and systems.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  },
+  {
+   "text": "Architectural drawings provide conceptual information about buildings and structures.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  },
+  {
+   "text": "This chapter reviewed the basic symbology used in dimensioning these drawings.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.12"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "No scope tag applies. Dimensioning is general.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.1"
+  },
+  {
+   "type": "Exponent",
+   "note": "p.8 prints a plus or minus sign that extracts as \"1 + 0.1 inches.\" The lesson does not quote that sentence.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.8"
+  },
+  {
+   "type": "Figure",
+   "note": "Figure 3, a county library drawing, prints sideways, is not needed for any objective, and is left off.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.4"
+  },
+  {
+   "type": "Calculation",
+   "note": "The two tolerance checks use new numbers with the method on p.16.",
+   "cite": "DOE-HDBK-1016/2-93 PR-06 p.16"
+  }
+ ],
+ "page_tags": []
+}

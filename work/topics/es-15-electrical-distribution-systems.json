@@ -1,0 +1,1332 @@
+{
+ "module_id": "ES-15",
+ "slug": "es-15-electrical-distribution-systems",
+ "title": "Electrical Distribution Systems",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1011-V4",
+ "handbook": "DOE-HDBK-1011/4-92",
+ "word_file": "Breakers, Relays, and Disconnects Part 1.docx",
+ "quiz_t": "Components",
+ "quiz_topic": "Breakers, Relays, and Disconnects",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Given the functional characteristics of an AC power source and the intended load, DESCRIBE the necessary components and the wiring scheme to provide a safe Electrical Distribution System.",
+   "items": [],
+   "page": {
+    "pdf": 110,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "EXPLAIN the following terms as they apply to Electrical Distribution Systems:",
+     "items": [
+      "a. Single (one-line) diagram",
+      "b. Commercial or utility power",
+      "c. Diesel power",
+      "d. Failure-free power",
+      "e. Neutral grounding",
+      "f. Voltage class",
+      "g. Protective relays",
+      "h. Overlapping protective zones"
+     ],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DESCRIBE the protection provided by each of the following:",
+     "items": [
+      "a. Fuses",
+      "b. Protective relays"
+     ],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "STATE the purpose of circuit breakers.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "Given a simple schematic of a circuit breaker control circuit, DESCRIBE the operation of that breaker during remote operation and automatic tripping.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST the three most widely-used protective features that may be incorporated into a circuit breaker control circuit.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "STATE the function of motor controllers.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE three protective features (overloads) that may be incorporated into a motor controller.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "Given a simplified drawing of a motor controller, DESCRIBE the operation of that motor controller.",
+     "items": [],
+     "page": {
+      "pdf": 110,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "DEFINE the following terms as they apply to wiring schemes used in power distribution systems:",
+     "items": [
+      "a. Ampacity",
+      "b. Bond",
+      "c. Conductor",
+      "d. Ground",
+      "e. Ground voltage",
+      "f. Leg",
+      "g. Neutral",
+      "h. Phase voltage"
+     ],
+     "page": {
+      "pdf": 111,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DESCRIBE the two methods of connecting single-phase loads to a three-phase power source.",
+     "items": [],
+     "page": {
+      "pdf": 111,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "DESCRIBE the purpose of the following power distribution schemes.",
+     "items": [
+      "a. 3-wire, single-phase Edison system",
+      "b. 3-wire, three-phase Delta system",
+      "c. 4-wire, three-phase Delta system",
+      "d. 4-wire, three-phase Wye system"
+     ],
+     "page": {
+      "pdf": 111,
+      "printed": "vii"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "A single, or one-line diagram of a distribution system is a simple and easy-to-read diagram showing power supplies, loads, and major components in the distribution system",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Commercial or utility power is electrical power that is provided by commercial generating systems to the facility.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Diesel-driven generators are the most economical and practical source of \"standby power.\"",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "Failure-free power is accomplished by providing vital equipment with automatic switching between two or more power supplies so that interruption of power is minimized.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+  },
+  {
+   "id": "P5",
+   "quote": "High voltage is voltage that is above 15,000 volts, intermediate voltage is voltage between 15,000 volts and 600 volts, and low voltage is voltage at 600 volts or less.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "<600 volts",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.6 Circuit Breaker Classifications"
+  },
+  {
+   "id": "P7",
+   "quote": ">15,000 volts",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.6 Circuit Breaker Classifications"
+  },
+  {
+   "id": "P8",
+   "quote": "Protective relays are designed to cause the prompt removal of any part of a power system that might cause damage or interfere with the effective and continuous operation of the rest of the system.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+  },
+  {
+   "id": "P9",
+   "quote": "if there were no overlap of protective zones, a fault in a region between the two zones would result in no protective action at all.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "There are only two operating principles for protective relays",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+  },
+  {
+   "id": "P11",
+   "quote": "A fuse is a device that protects a circuit from an overcurrent condition only.",
+   "sec": "System Components and Protection Devices",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.5"
+  },
+  {
+   "id": "P12",
+   "quote": "an adjustable device generally set to trip the breaker when voltage drops to 60 to 70 percent of normal value.",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+  },
+  {
+   "id": "P13",
+   "quote": "device that will trip the breaker when frequency drops below a preset value to protect frequency-sensitive loads on a system.",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+  },
+  {
+   "id": "P14",
+   "quote": "device protects a generator from damage from motoring by tripping the generator output breaker.",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+  },
+  {
+   "id": "P15",
+   "quote": "The purpose of a circuit breaker is to break the circuit and stop the current flow when the current exceeds a predetermined value without causing damage to the circuit or the circuit breaker.",
+   "sec": "Circuit Breakers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.7"
+  },
+  {
+   "id": "P16",
+   "quote": "The three most commonly-used automatic trip features for a circuit breaker are overcurrent (as discussed previously), underfrequency, and undervoltage.",
+   "sec": "Circuit Breakers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.13"
+  },
+  {
+   "id": "P17",
+   "quote": "The closing relay shuts an auxiliary contact, which energizes the closing coil (CC), which, in turn, shuts the circuit breaker",
+   "sec": "Circuit Breakers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+  },
+  {
+   "id": "P18",
+   "quote": "This action energizes the trip coil (TC), which acts directly on the circuit breaker to release the latching mechanism that holds the circuit breaker closed.",
+   "sec": "Circuit Breakers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+  },
+  {
+   "id": "P19",
+   "quote": "Never operate a disconnect under load.",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.24 Knowledge Check"
+  },
+  {
+   "id": "P20",
+   "quote": "To reset a breaker in the TRIP FREE position, it must be positioned to the OPEN position first.",
+   "sec": "",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.41 Resetting a Breaker"
+  },
+  {
+   "id": "P21",
+   "quote": "The basic functions of a motor controller are to control and protect the operation of a motor.",
+   "sec": "Motor Controllers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.15"
+  },
+  {
+   "id": "P22",
+   "quote": "The following types of overload devices are commonly used in motor-control equipment.",
+   "sec": "Motor Controllers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.17"
+  },
+  {
+   "id": "P23",
+   "quote": "Manual controllers do NOT provide low voltage protection or low voltage release.",
+   "sec": "Motor Controllers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.15"
+  },
+  {
+   "id": "P24",
+   "quote": "The LVRE controller maintains the motor across the line at all times.",
+   "sec": "Motor Controllers",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+  },
+  {
+   "id": "P25",
+   "quote": "Ampacity - the current in amperes that a conductor can carry continuously under the conditions of use without exceeding its temperature rating.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+  },
+  {
+   "id": "P26",
+   "quote": "Bond - the permanent joining of metallic parts or circuits assuring electrical continuity and capacity to safely conduct any current likely to be imposed.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+  },
+  {
+   "id": "P27",
+   "quote": "Ground - a conducting connection, whether intentional or accidental, between a circuit or piece of equipment and the earth, or some body serving as earth; a place of zero electrical potential.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+  },
+  {
+   "id": "P28",
+   "quote": "Neutral - a current-carrying conductor normally tied to ground so that the electrical potential is zero.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+  },
+  {
+   "id": "P29",
+   "quote": "Leg - a current-carrying conductor intended to deliver power to or from a load normally at an electrical potential other than ground.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+  },
+  {
+   "id": "P30",
+   "quote": "is referred to as a phase-to-ground scheme.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+  },
+  {
+   "id": "P31",
+   "quote": "referred to as a phase-to-phase connection.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+  },
+  {
+   "id": "P32",
+   "quote": "The only approved method of wiring single-phase power is the scheme commonly referred to as the 3-wire, single-phase Edison system.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+  },
+  {
+   "id": "P33",
+   "quote": "normally used for transmission of power in the intermediate voltage class from approximately 15,000 volts to 600 volts.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.24"
+  },
+  {
+   "id": "P34",
+   "quote": "with the convenience of the Edison system for single-phase loads.",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.25"
+  },
+  {
+   "id": "P35",
+   "quote": "This system is recognized as the safest possible multi-purpose distribution system for low voltage",
+   "sec": "Wiring Schemes and Grounding",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.27"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Fuses",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.9 Fuses"
+  },
+  {
+   "step": "Circuit protection schemes",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.11 Circuit Protection Schemes"
+  },
+  {
+   "step": "Circuit breaker protective relays",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.12 Circuit Breaker Protective Relays"
+  },
+  {
+   "step": "Breaker protective relays",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+  },
+  {
+   "step": "Disconnect switches",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.20 Disconnect Switches"
+  },
+  {
+   "step": "Circuit breaker control",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.26 Circuit Breaker Control"
+  },
+  {
+   "step": "Selective tripping",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.40 Selective Tripping"
+  },
+  {
+   "step": "Circuit breaker classifications",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.5 Circuit Breaker Classifications"
+  },
+  {
+   "step": "Low-voltage air circuit breakers",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.7 Low-Voltage Air Circuit Breakers"
+  },
+  {
+   "step": "Tripping molded case circuit breakers",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.8 Tripping Molded Case Circuit Breakers"
+  },
+  {
+   "step": "Large air circuit breakers",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.12 Large Air Circuit Breakers"
+  },
+  {
+   "step": "Local and remote operation",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.15 Local and Remote Operation"
+  },
+  {
+   "step": "Racking positions",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.19 Racking Positions"
+  },
+  {
+   "step": "Circuit breaker control power",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.33 Circuit Breaker Control Power"
+  },
+  {
+   "step": "High voltage circuit breaker types",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.37 High Voltage Circuit Breaker Types"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Distribution system terms",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig1",
+     "num": 1,
+     "cap": "One-Line Distribution Diagram",
+     "alt": "One-line diagram of a facility distribution system, with supplies, transformers, breakers, and loads on single lines.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "Neutral grounding helps prevent accidents to personnel and damage to property. It also reduces the amount of insulation required for high-voltage lines.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+    },
+    {
+     "t": "p",
+     "text": "Voltage in distribution systems is classified into high, intermediate, and low voltage. The sources differ at exactly 600 volts.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The handbook says:",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The lesson plan, which notes its levels are from IEEE C84.1, lists these classes:",
+     "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.5 Circuit Breaker Classifications"
+    },
+    {
+     "t": "list",
+     "items": [
+      ">15,000 volts: above 15,000",
+      "600 to 15,000 volts: between",
+      "<600 volts: below 600"
+     ],
+     "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.6 Circuit Breaker Classifications"
+    },
+    {
+     "t": "p",
+     "text": "So the handbook puts exactly 600 volts in low voltage, and the lesson plan puts it in the middle class. Both are shown here, and neither is tested.",
+     "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.6 Circuit Breaker Classifications"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "A separate zone of protection is provided around each system element. A failure within a zone trips all breakers in that zone.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.4"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig2",
+     "num": 2,
+     "cap": "Protective Relaying Zones",
+     "alt": "Protective zones drawn around each element of a distribution system, overlapping at the circuit breakers.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q435",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is high voltage in a distribution system?",
+     "o": [
+      "Above 600 volts",
+      "Above 5,000 volts",
+      "Above 15,000 volts",
+      "Above 765,000 volts"
+     ],
+     "a": 2,
+     "x": "High voltage is voltage that is above 15,000 volts. The handbook and the lesson plan agree on this.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "Why do protective zones overlap?",
+     "o": [
+      "To reduce the number of breakers",
+      "Without overlap, a fault between zones would get no protective action",
+      "To trip fewer breakers",
+      "To raise the voltage class"
+     ],
+     "a": 1,
+     "x": "If there were no overlap of protective zones, a fault in a region between the two zones would result in no protective action at all.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.1",
+     "q": "What is the most economical and practical source of standby power?",
+     "o": [
+      "Batteries",
+      "Commercial power",
+      "Diesel-driven generators",
+      "Rectifiers"
+     ],
+     "a": 2,
+     "x": "Diesel-driven generators are the most economical and practical source of standby power.",
+     "p": "P3"
+    },
+    {
+     "eo": "1.1",
+     "q": "How is failure-free power accomplished?",
+     "o": [
+      "By automatic switching between two or more power supplies",
+      "By removing all fuses",
+      "By raising line voltage",
+      "By opening disconnects"
+     ],
+     "a": 0,
+     "x": "Failure-free power is accomplished by providing vital equipment with automatic switching between two or more power supplies.",
+     "p": "P4"
+    }
+   ]
+  },
+  {
+   "title": "Fuses and protective relays",
+   "eo": [
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "An overcurrent or short-circuit current melts the fusible link and opens the circuit.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.5"
+    },
+    {
+     "t": "p",
+     "text": "Protective relays are aided by circuit breakers capable of disconnecting faulty components. They can protect against undesirable conditions such as undervoltage and underfrequency.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+    },
+    {
+     "t": "p",
+     "text": "There are only two operating principles for protective relays: electromagnetic attraction and electromagnetic induction.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+    },
+    {
+     "t": "p",
+     "text": "The lesson plan describes these relays. An undervoltage relay is",
+     "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "An underfrequency relay is a",
+     "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "A reverse-power relay:",
+     "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.19 Breaker Protective Relays"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q270",
+     "eo": "1.2"
+    },
+    {
+     "existing": "Q272",
+     "eo": "1.2"
+    },
+    {
+     "eo": "1.2",
+     "q": "What are the two operating principles of protective relays?",
+     "o": [
+      "Electromagnetic attraction and electromagnetic induction",
+      "Thermal and chemical",
+      "Capacitive and resistive",
+      "Mechanical and hydraulic"
+     ],
+     "a": 0,
+     "x": "There are only two operating principles for protective relays: electromagnetic attraction and electromagnetic induction.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.2",
+     "q": "What does a reverse-power relay protect a generator from?",
+     "o": [
+      "Overvoltage",
+      "Motoring",
+      "Lightning",
+      "Low frequency loads"
+     ],
+     "a": 1,
+     "x": "The lesson plan describes this device as protecting a generator from damage from motoring by tripping the generator output breaker.",
+     "p": "P14"
+    }
+   ]
+  },
+  {
+   "title": "Circuit breakers",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "p",
+     "text": "A circuit breaker trips to break the circuit and may be reset, while a fuse melts and must be replaced.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig5",
+     "num": 5,
+     "cap": "Cutaway View of Molded Case Circuit Breaker",
+     "alt": "Cutaway view of a molded case circuit breaker, showing the handle, contacts, arc chute, and trip element.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.8"
+    },
+    {
+     "t": "p",
+     "text": "If a breaker opens on a short circuit or overload, the handle goes to the trip-free position, midway between ON and OFF.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "p",
+     "text": "A bimetallic thermal trip element has an inverse-time characteristic. An extremely high current trips the breaker very rapidly.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.8"
+    },
+    {
+     "t": "p",
+     "text": "For moderate overload currents, it operates more slowly.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.9"
+    },
+    {
+     "t": "p",
+     "text": "An arc chute divides the arc into small segments and quenches it.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.9"
+    },
+    {
+     "t": "p",
+     "text": "Remote operation needs a control circuit. Control power is supplied by an AC source and rectified to DC.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.11"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig7",
+     "num": 7,
+     "cap": "Simple Circuit Breaker Control Circuit - Breaker Open",
+     "alt": "Simple breaker control circuit with a rectifier, control switch, closing relay, closing coil, trip coil, and a and b auxiliary contacts.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Turning the control switch to close energizes the closing relay.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "When the breaker closes, the \"b\" contact opens and de-energizes the closing relay, and the \"a\" contact closes to enable the trip circuit.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "How does a circuit breaker differ from a fuse?",
+     "o": [
+      "It trips and may be reset, while a fuse melts and must be replaced",
+      "It melts, while a fuse trips",
+      "It can only be used once",
+      "It protects only against low voltage"
+     ],
+     "a": 0,
+     "x": "A circuit breaker trips to break the circuit and may be reset, while a fuse melts and must be replaced.",
+     "p": "P15"
+    },
+    {
+     "existing": "Q274",
+     "eo": "1.3"
+    },
+    {
+     "eo": "1.4",
+     "q": "In a remotely-operated breaker, what energizes the closing coil?",
+     "o": [
+      "An auxiliary contact shut by the closing relay",
+      "The trip coil",
+      "The 'a' contact",
+      "The rectifier directly"
+     ],
+     "a": 0,
+     "x": "The closing relay shuts an auxiliary contact, which energizes the closing coil, which shuts the circuit breaker.",
+     "p": "P17"
+    },
+    {
+     "eo": "1.4",
+     "q": "What does the trip coil do when energized?",
+     "o": [
+      "Charges the closing spring",
+      "Releases the latching mechanism that holds the breaker closed",
+      "Closes the 'b' contact directly",
+      "Energizes the closing relay"
+     ],
+     "a": 1,
+     "x": "The trip coil acts directly on the circuit breaker to release the latching mechanism that holds the circuit breaker closed.",
+     "p": "P18"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which is NOT one of the three most commonly-used automatic trip features for a circuit breaker?",
+     "o": [
+      "Overcurrent",
+      "Underfrequency",
+      "Undervoltage",
+      "Overtemperature"
+     ],
+     "a": 3,
+     "x": "The three most commonly-used automatic trip features are overcurrent, underfrequency, and undervoltage.",
+     "p": "P16"
+    },
+    {
+     "existing": "Q273",
+     "eo": "1.4"
+    },
+    {
+     "existing": "Q277",
+     "eo": "1.4"
+    }
+   ]
+  },
+  {
+   "title": "Motor controllers",
+   "eo": [
+    "1.6",
+    "1.7",
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "This includes starting and stopping the motor, and protecting it from overcurrent, undervoltage, and overheating.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.15"
+    },
+    {
+     "t": "p",
+     "text": "The two basic categories are the manual controller and the magnetic controller.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "When power fails, the manual controller contacts remain closed, and the motor restarts when power is restored.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.15"
+    },
+    {
+     "t": "p",
+     "text": "A magnetic controller automatically performs all operations in the proper sequence after the closure of a master switch.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.16"
+    },
+    {
+     "t": "p",
+     "text": "Overload devices protect the motor from overcurrent. Those commonly used are:",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.17"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Fuses",
+      "Thermal overloads",
+      "Magnetic overloads"
+     ],
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.17"
+    },
+    {
+     "t": "p",
+     "text": "An LVP controller de-energizes the motor in a low voltage condition and keeps it from re-starting automatically.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig12",
+     "num": 12,
+     "cap": "LVP Controller",
+     "alt": "LVP controller circuit with START and STOP buttons, contactor coil M, contact Ma, and overloads on the motor lines.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.18"
+    },
+    {
+     "t": "p",
+     "text": "Pushing START energizes coil M and closes the M and Ma contacts. The Ma contact keeps the circuit complete when the button is released.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.18"
+    },
+    {
+     "t": "p",
+     "text": "On low voltage, the M coil drops out and the contacts open. START must then be pushed to restart the motor.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+    },
+    {
+     "t": "p",
+     "text": "An LVR controller de-energizes the motor in a low voltage condition and restarts it when normal voltage is restored.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig13",
+     "num": 13,
+     "cap": "LVR Controller",
+     "alt": "LVR controller circuit with a START-RUN switch, contactor coil M, and overloads on the motor lines.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What are the basic functions of a motor controller?",
+     "o": [
+      "To control and protect the operation of a motor",
+      "To convert AC to DC",
+      "To store energy",
+      "To step up voltage"
+     ],
+     "a": 0,
+     "x": "The basic functions of a motor controller are to control and protect the operation of a motor.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.7",
+     "q": "Which set lists the overload devices commonly used in motor-control equipment?",
+     "o": [
+      "Rectifiers, diodes, and capacitors",
+      "Fuses, thermal overloads, and magnetic overloads",
+      "Transformers, regulators, and meters",
+      "Slip rings, brushes, and commutators"
+     ],
+     "a": 1,
+     "x": "Fuses, thermal overloads, and magnetic overloads are commonly used in motor-control equipment.",
+     "p": "P22"
+    },
+    {
+     "existing": "Q433",
+     "eo": "1.8"
+    },
+    {
+     "existing": "Q434",
+     "eo": "1.8"
+    },
+    {
+     "eo": "1.8",
+     "q": "What does an LVRE controller do?",
+     "o": [
+      "Trips on any low voltage",
+      "Maintains the motor across the line at all times",
+      "Prevents all restarts",
+      "Disconnects the motor overnight"
+     ],
+     "a": 1,
+     "x": "The LVRE controller maintains the motor across the line at all times.",
+     "p": "P24"
+    }
+   ]
+  },
+  {
+   "title": "Wiring terms",
+   "eo": [
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "A conductor is any wire, cable, or substance capable of carrying an electrical current.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "p",
+     "text": "Ground voltage is the voltage between any given conductor and any point at ground potential.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "Phase voltage is the greatest root mean square (effective) difference of potential between any two legs of the circuit.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "What is ampacity?",
+     "o": [
+      "The current a conductor can carry continuously without exceeding its temperature rating",
+      "The voltage between two legs",
+      "The joining of metal parts",
+      "A connection to earth"
+     ],
+     "a": 0,
+     "x": "Ampacity is the current in amperes that a conductor can carry continuously under the conditions of use without exceeding its temperature rating.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is a neutral?",
+     "o": [
+      "A conductor at high potential",
+      "A current-carrying conductor normally tied to ground so that the electrical potential is zero",
+      "A non-current-carrying bond",
+      "A fuse link"
+     ],
+     "a": 1,
+     "x": "A neutral is a current-carrying conductor normally tied to ground so that the electrical potential is zero.",
+     "p": "P28"
+    },
+    {
+     "eo": "1.9",
+     "q": "What is a bond?",
+     "o": [
+      "A voltage between two legs",
+      "A temporary test connection",
+      "The permanent joining of metallic parts or circuits assuring electrical continuity",
+      "A type of fuse"
+     ],
+     "a": 2,
+     "x": "A bond is the permanent joining of metallic parts or circuits assuring electrical continuity and capacity to safely conduct any current likely to be imposed.",
+     "p": "P26"
+    }
+   ]
+  },
+  {
+   "title": "Wiring schemes",
+   "eo": [
+    "1.10",
+    "1.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Single-phase loads can be connected to three-phase systems by two methods.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.22"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig15",
+     "num": 15,
+     "cap": "Three-Phase To Single-Phase Connections",
+     "alt": "Two connections of a single-phase load to a three-phase source: phase to ground, and phase to phase.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+    },
+    {
+     "t": "p",
+     "text": "A load connected from a phase leg to any ground point",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "p",
+     "text": "A load connected between any two legs of the three-phase source is",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig16",
+     "num": 16,
+     "cap": "3-Wire Edison Scheme",
+     "alt": "A center-tapped transformer secondary, with the grounded center tap giving 120 volts on either side and 240 volts across both.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.24"
+    },
+    {
+     "t": "p",
+     "text": "A center-tapped transformer with the center tap grounded provides half voltage (120 V) on either side or full voltage (240 V) across both sides.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+    },
+    {
+     "t": "p",
+     "text": "The 3-wire, three-phase Delta system is the simplest three-phase system,",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.24"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "p",
+     "text": "The 4-wire, three-phase Delta system combines the ungrounded Delta for three-phase loads",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "p",
+     "text": "In the Wye system, the voltage available from phase to ground is the phase voltage divided by 1.73.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.26"
+    },
+    {
+     "t": "fig",
+     "id": "es-15-fig19",
+     "num": 19,
+     "cap": "4-Wire, Three-Phase Wye System",
+     "alt": "A wye-connected secondary with three phase conductors and a grounded neutral, marked with phase-to-phase and phase-to-neutral voltages.",
+     "cite": "DOE-HDBK-1011/4-92 ES-15 p.27"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.10",
+     "q": "What are the two methods of connecting single-phase loads to a three-phase source?",
+     "o": [
+      "Phase-to-ground and phase-to-phase",
+      "Series and parallel",
+      "Delta and wye",
+      "Manual and magnetic"
+     ],
+     "a": 0,
+     "x": "A load can be connected from a phase leg to ground (phase-to-ground) or between any two legs (phase-to-phase).",
+     "p": "P30"
+    },
+    {
+     "eo": "1.11",
+     "q": "What is the only approved method of wiring single-phase power?",
+     "o": [
+      "4-wire Delta",
+      "3-wire, single-phase Edison system",
+      "Corner-grounded Delta",
+      "4-wire Wye"
+     ],
+     "a": 1,
+     "x": "The only approved method of wiring single-phase power is the 3-wire, single-phase Edison system.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.11",
+     "q": "What is the 3-wire, three-phase Delta system normally used for?",
+     "o": [
+      "Household appliances",
+      "Transmission of power in the intermediate voltage class",
+      "Battery charging",
+      "Instrument circuits"
+     ],
+     "a": 1,
+     "x": "It is normally used for transmission of power in the intermediate voltage class, from approximately 15,000 volts to 600 volts.",
+     "p": "P33"
+    },
+    {
+     "eo": "1.11",
+     "q": "Which system is recognized as the safest possible multi-purpose distribution system for low voltage?",
+     "o": [
+      "3-wire Delta",
+      "4-wire Delta",
+      "4-wire, three-phase Wye",
+      "Ungrounded Delta"
+     ],
+     "a": 2,
+     "x": "The 4-wire, three-phase Wye system is recognized as the safest possible multi-purpose distribution system for low voltage.",
+     "p": "P35"
+    },
+    {
+     "eo": "1.11",
+     "q": "What does the 4-wire, three-phase Delta system combine?",
+     "o": [
+      "The ungrounded Delta for three-phase loads with the Edison system for single-phase loads",
+      "Two Wye systems",
+      "DC and AC loads",
+      "Two generators in series"
+     ],
+     "a": 0,
+     "x": "It combines the ungrounded Delta for three-phase loads with the convenience of the Edison system for single-phase loads.",
+     "p": "P34"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Closing a breaker remotely",
+   "eo": "1.4",
+   "page": 12,
+   "problem": "Follow the control circuit when the control switch is turned to close.",
+   "steps": [
+    "The switch completes a path through the closing relay (CR).",
+    "The closing relay shuts an auxiliary contact, which energizes the closing coil (CC).",
+    "The closing coil shuts the breaker, which latches closed.",
+    "The \"b\" contact opens, de-energizing the closing relay and closing coil.",
+    "The \"a\" contact closes, enabling the trip circuit."
+   ],
+   "answer": "The breaker is closed and the trip circuit is enabled",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.12"
+  },
+  {
+   "title": "LVP controller on low voltage",
+   "eo": "1.8",
+   "page": 19,
+   "problem": "A motor on an LVP controller sees a low voltage condition. What happens?",
+   "steps": [
+    "The M coil drops out at a pre-determined voltage.",
+    "The M and Ma contacts open.",
+    "Normal voltage returns, but the Ma contact stays open."
+   ],
+   "answer": "The START button must be pushed to restart the motor",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the difference between an LVP and an LVR controller?",
+   "a": "Both de-energize the motor on low voltage. An LVP keeps it from restarting automatically, and an LVR restarts it when normal voltage is restored.",
+   "p": "P24",
+   "place": null
+  },
+  {
+   "q": "What must be done before operating a disconnect?",
+   "a": "Open the breaker first. Never operate a disconnect under load.",
+   "p": "P19",
+   "place": null
+  },
+  {
+   "q": "How is a breaker in the TRIP FREE position reset?",
+   "a": "It must be positioned to the OPEN position first.",
+   "p": "P20",
+   "place": null
+  },
+  {
+   "q": "What protects a circuit from an overcurrent condition only?",
+   "a": "A fuse.",
+   "p": "P11",
+   "place": null
+  },
+  {
+   "q": "What is a leg in a power distribution system?",
+   "a": "A current-carrying conductor intended to deliver power to or from a load, normally at an electrical potential other than ground.",
+   "p": "P29",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Protective relays cause prompt removal of any part of a power system that might cause damage.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.3"
+  },
+  {
+   "text": "The three most commonly-used automatic trip features for a circuit breaker are overcurrent, underfrequency, and undervoltage.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.14"
+  },
+  {
+   "text": "A motor controller controls and protects the operation of a motor. Its protective features are fuses, thermal overloads, and magnetic overloads.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.20"
+  },
+  {
+   "text": "Single-phase loads connect to a three-phase system phase-to-ground or phase-to-phase.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.23"
+  },
+  {
+   "text": "The 3-wire, single-phase Edison system is the only approved method of wiring single-phase power.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.28"
+  },
+  {
+   "text": "The 4-wire, three-phase Wye system is the safest possible multi-purpose distribution system for low voltage.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.28"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "Handbook: low voltage is 600 volts or less. Word file: below 600 volts, citing IEEE C84.1. Both are shown on the page by the user's decision, Nov 5, 2026, and no check or card tests the boundary.",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 2.docx, slide 1.6 Circuit Breaker Classifications"
+  },
+  {
+   "type": "Handbook inconsistency",
+   "note": "The summary on p.28 gives neutral the same definition as leg, while p.22 says a neutral is normally tied to ground. The lesson uses p.22.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.28"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The summary on p.6 limits protective relays to a short circuit, while p.3 covers any part that might cause damage. The lesson uses p.3.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.6"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The summary on p.14 words the purpose of a circuit breaker differently from p.7. The lesson uses p.7.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.14"
+  },
+  {
+   "type": "Rule 10",
+   "note": "The handbook names cooling water pumps as an LVR application. The lesson leaves that off the page.",
+   "cite": "DOE-HDBK-1011/4-92 ES-15 p.19"
+  },
+  {
+   "type": "Word source",
+   "note": "Many of this lesson plan's slides are pictures, so the lesson uses its sequence and only the text it contains. Many knowledge checks depend on pictures of drawings, so they stay in the quiz only where they already were. Slides on valve control circuits and drawings are not used.",
+   "cite": "Word: Breakers, Relays, and Disconnects Part 1.docx, slide 1.28 Valve Control Circuits"
+  }
+ ],
+ "page_tags": []
+}

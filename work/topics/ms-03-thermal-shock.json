@@ -1,0 +1,724 @@
+{
+ "module_id": "MS-03",
+ "slug": "ms-03-thermal-shock",
+ "title": "Thermal Shock",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1017-V2",
+ "handbook": "DOE-HDBK-1017/2-93",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Brittle Fracture and Vessel Thermal Stress",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE the importance of minimizing thermal shock (stress).",
+   "items": [],
+   "page": {
+    "pdf": 17,
+    "printed": "v"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "IDENTIFY the two stresses that are the result of thermal shock (stress) to plant materials.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "STATE the two causes of thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "Given the material’s coefficient of Linear Thermal Expansion, CALCULATE the thermal shock (stress) on a material using Hooke’s Law.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "DESCRIBE why thermal shock is a major concern in reactor systems when rapidly heating or cooling a thick-walled vessel.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "LIST the three operational limits that are specifically intended to reduce the severity of thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "DEFINE the term pressurized thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE how the pressure in a closed system effects the severity of thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "LIST the four plant transients that have the greatest potential for causing thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "STATE the three locations in a reactor system that are of primary concern for thermal shock.",
+     "items": [],
+     "page": {
+      "pdf": 17,
+      "printed": "v"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Thermal shock (stress) can lead to excessive thermal gradients on materials, which lead to excessive stresses.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "These stresses, cyclic in nature, can lead to fatigue failure of the materials.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "Thermal shock is caused by nonuniform heating or cooling of a uniform material, or uniform heating of nonuniform materials.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.1"
+  },
+  {
+   "id": "P4",
+   "quote": "When the temperature of the material increases, the increased activity of the molecules causes them to press against the constraining boundaries, thus setting up thermal stresses.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.1"
+  },
+  {
+   "id": "P5",
+   "quote": "In the simple case where two ends of a material are strictly constrained, the thermal stress can be calculated using Hooke's Law",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.3"
+  },
+  {
+   "id": "P6",
+   "quote": "Thermal stress is a major concern due to the magnitude of the stresses involved with rapid heating (or cooling).",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "If the thickness of the vessel wall is more than 5 percent to 10 percent of the vessel's radius, it is considered a thick-walled vessel.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "When the metal on the inside wall cools, it contracts, while the hot metal on the outside wall is still expanded.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "This sets up a thermal stress, placing the cold side in tensile stress and the hot side in compressive stress, which can cause cracks in the cold side of the wall.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "id": "P10",
+   "quote": "Operating procedures are designed to reduce both the magnitude and the frequency of these stresses.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "id": "P11",
+   "quote": "These limitations permit material structures to change temperature at a more even rate, minimizing thermal stresses.",
+   "sec": "Thermal Stress",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "id": "P12",
+   "quote": "PTS is the shock experienced by a thick-walled vessel due to the combined stresses from a rapid temperature and/or pressure change.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+  },
+  {
+   "id": "P13",
+   "quote": "As the facilities get older in terms of full power operating years, the neutron radiation causes a change in the ductility of the vessel material, making it more susceptible to embrittlement.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+  },
+  {
+   "id": "P14",
+   "quote": "Thus, if an older reactor vessel is cooled rapidly at high pressure, the potential for failure by cracking increases greatly.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+  },
+  {
+   "id": "P15",
+   "quote": "Pressure in the reactor system raises the severity of the thermal shock due to the addition of stress from pressure.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+  },
+  {
+   "id": "P16",
+   "quote": "Pressure in closed system raises the severity of thermal shock due to the additive effect of thermal and pressure tensile stresses on the inside reactor vessel wall.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+  },
+  {
+   "id": "P17",
+   "quote": "Stresses arising from coolant system pressure exerted against the inside vessel wall (where neutron fluence is greatest) are always tensile in nature.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+  },
+  {
+   "id": "P18",
+   "quote": "For this reason the 3/4 T location is limiting during system heatup.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+  },
+  {
+   "id": "P19",
+   "quote": "Thus, the 1/4 T location is limiting during system cooldown.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+  },
+  {
+   "id": "P20",
+   "quote": "Plant transients with greatest potential to cause PTS include:",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+  },
+  {
+   "id": "P21",
+   "quote": "In addition, the material toughness of the reactor vessel is reduced as the temperature rapidly decreases.",
+   "sec": "Pressurized Thermal Shock",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Thermal shock",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "These stresses can be tensile, from forces tending to pull a material apart, and compressive, from forces tending to push a material together.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.1",
+     "q": "What two stresses result from thermal shock?",
+     "o": [
+      "Torsion and fatigue",
+      "Tensile and compressive",
+      "Shear and bending",
+      "Residual and flow"
+     ],
+     "a": 1,
+     "x": "Two types of stress that can be caused by thermal shock are tensile stress and compressive stress.",
+     "p": "P1"
+    },
+    {
+     "eo": "1.2",
+     "q": "What are the two causes of thermal shock?",
+     "o": [
+      "Corrosion and irradiation",
+      "Nonuniform heating or cooling of a uniform material, or uniform heating of nonuniform materials",
+      "High pressure and high flow",
+      "Low ductility and small grain size"
+     ],
+     "a": 1,
+     "x": "Thermal shock is caused by nonuniform heating or cooling of a uniform material, or uniform heating of nonuniform materials.",
+     "p": "P3"
+    }
+   ]
+  },
+  {
+   "title": "Calculating thermal stress",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "If a material is not constrained, it expands. The thermal expansion coefficient α relates the fractional change in length, called thermal strain, to the change in temperature.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.2"
+    },
+    {
+     "t": "eq",
+     "text": "Δl/l = αΔT",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.2"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Carbon steel: 5.8 x 10⁻⁶ per °F",
+      "Stainless steel: 9.6 x 10⁻⁶ per °F",
+      "Aluminum: 13.3 x 10⁻⁶ per °F",
+      "Copper: 9.3 x 10⁻⁶ per °F",
+      "Lead: 16.3 x 10⁻⁶ per °F"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "eq",
+     "text": "F/A = EαΔT, where F/A is thermal stress, E the modulus of elasticity, α the linear thermal expansion coefficient, and ΔT the change in temperature.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "A carbon steel bar constrained at both ends is heated 100°F. E is 3.0 x 10⁷ psi and α is 5.8 x 10⁻⁶ per °F. What is the thermal stress?",
+     "o": [
+      "1,740 psi",
+      "17,400 psi",
+      "174,000 psi",
+      "1,740,000 psi"
+     ],
+     "a": 1,
+     "x": "F/A = EαΔT = (3.0 x 10⁷)(5.8 x 10⁻⁶)(100) = 17,400 psi.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.3",
+     "q": "Which equation gives the thermal stress in a material constrained at both ends?",
+     "o": [
+      "F/A = Eα/ΔT",
+      "F/A = αΔT/E",
+      "F/A = E/αΔT",
+      "F/A = EαΔT"
+     ],
+     "a": 3,
+     "x": "Equating strain from thermal expansion and from Hooke's Law gives F/A = EαΔT.",
+     "p": "P5"
+    }
+   ]
+  },
+  {
+   "title": "Thick-walled vessels and operating limits",
+   "eo": [
+    "1.4",
+    "1.5"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "p",
+     "text": "With rapid heating or cooling of a thick-walled vessel, one part of the wall may try to expand or contract while the adjacent section, not yet at the new temperature, tries to restrain it. Both sections are under stress.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+    },
+    {
+     "t": "p",
+     "text": "If the wall is less than about 1 percent of the vessel's radius, it is usually considered thin-walled.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "p",
+     "text": "Slow controlled heating and cooling of the reactor system are necessary to minimize cyclic thermal stress and the potential for fatigue failure.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Heatup and cooldown rate limits",
+      "Temperature limits for placing systems into operation",
+      "Specific temperatures for specific pressures for system operation"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q383",
+     "eo": "1.4"
+    },
+    {
+     "eo": "1.4",
+     "q": "When the inside wall of a thick vessel is cooled faster than the outside, which side is in tensile stress?",
+     "o": [
+      "Both sides",
+      "Neither side",
+      "The cold side",
+      "The hot side"
+     ],
+     "a": 2,
+     "x": "The thermal stress places the cold side in tensile stress and the hot side in compressive stress.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.5",
+     "q": "Which is an operational limit intended to reduce the severity of thermal shock?",
+     "o": [
+      "Coolant purity limits",
+      "Neutron flux limits",
+      "Heatup and cooldown rate limits",
+      "Reactor power limits"
+     ],
+     "a": 2,
+     "x": "The limits are heatup and cooldown rate limits, temperature limits for placing systems into operation, and specific temperatures for specific pressures.",
+     "p": "P10"
+    }
+   ]
+  },
+  {
+   "title": "Pressurized thermal shock",
+   "eo": [
+    "1.6",
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "Nonuniform temperature distribution and the resulting differential expansion and contraction cause the stresses.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.6",
+     "q": "What is pressurized thermal shock?",
+     "o": [
+      "Corrosion from high pressure coolant",
+      "A rapid drop in reactor power",
+      "Shock to a thick-walled vessel from combined stresses of a rapid temperature and/or pressure change",
+      "A pressure spike in a thin pipe"
+     ],
+     "a": 2,
+     "x": "PTS is the shock experienced by a thick-walled vessel due to the combined stresses from a rapid temperature and/or pressure change.",
+     "p": "P12"
+    },
+    {
+     "existing": "Q384",
+     "eo": "1.7"
+    }
+   ]
+  },
+  {
+   "title": "Stress through the vessel wall",
+   "eo": [
+    "1.7"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "Stresses from temperature gradients can be tensile or compressive. The type depends on the location in the wall and reverses from heatup to cooldown.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+    },
+    {
+     "t": "fig",
+     "id": "ms-03-fig2",
+     "num": 2,
+     "cap": "Heatup Stress Profile",
+     "alt": "Heatup stress profile across a vessel wall: pressure stress is tensile, temperature stress is compressive at the inner wall and tensile at the outer wall, with 1/4 T and 3/4 T marked.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+    },
+    {
+     "t": "p",
+     "text": "During heatup, the outer wall temperature lags the inner wall. At 1/4 T the temperature stresses are compressive, so the stresses tend to cancel. At 3/4 T the stresses from temperature and pressure are both tensile and reinforce each other.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "ms-03-fig3",
+     "num": 3,
+     "cap": "Cooldown Stress Profile",
+     "alt": "Cooldown stress profile across a vessel wall: the temperature stress reverses, with tension at the inner wall and compression at the outer wall.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+    },
+    {
+     "t": "p",
+     "text": "During cooldown, the stresses at 3/4 T tend to cancel. At 1/4 T the pressure and temperature stresses are both tensile and reinforce each other.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.7",
+     "q": "What type of stress does system pressure produce on the inside vessel wall?",
+     "o": [
+      "Shear only",
+      "Always tensile",
+      "Always compressive",
+      "Tensile on heatup, compressive on cooldown"
+     ],
+     "a": 1,
+     "x": "Stresses arising from coolant system pressure exerted against the inside vessel wall are always tensile in nature.",
+     "p": "P17"
+    }
+   ]
+  },
+  {
+   "title": "Transients with the greatest potential",
+   "eo": [
+    "1.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Excessive heatup and cooldown",
+      "Plant scrams",
+      "Plant pressure excursions outside of normal pressure bands",
+      "Loss of coolant accident"
+     ],
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+    },
+    {
+     "t": "p",
+     "text": "Changes from one steady-state temperature or pressure to another are called transients. This is especially important for a rapid cooldown of the reactor system.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.6"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.8",
+     "q": "Which is one of the four plant transients with the greatest potential to cause thermal shock?",
+     "o": [
+      "Routine instrument calibration",
+      "Plant scrams",
+      "Steady full power operation",
+      "A slow controlled heatup"
+     ],
+     "a": 1,
+     "x": "The transients are excessive heatup and cooldown, plant scrams, plant pressure excursions outside of normal pressure bands, and loss of coolant accident.",
+     "p": "P20"
+    }
+   ]
+  },
+  {
+   "title": "Locations of primary concern",
+   "eo": [
+    "1.9"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook names the reactor pressure vessel and the purification system as locations of primary concern for thermal shock. Its third location belongs to a water-cooled plant and is left off this page.",
+     "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+    }
+   ],
+   "checks": []
+  }
+ ],
+ "examples": [
+  {
+   "title": "Thermal stress in a constrained bar",
+   "eo": "1.3",
+   "page": 3,
+   "problem": "A carbon steel bar is constrained at both ends. What is the thermal stress when it is heated from 60°F to 540°F?",
+   "steps": [
+    "α = 5.8 x 10⁻⁶ per °F. E = 3.0 x 10⁷ lb/in.².",
+    "ΔT = 540°F - 60°F = 480°F.",
+    "F/A = EαΔT = (3.0 x 10⁷ lb/in.²)(5.8 x 10⁻⁶ per °F)(480°F)."
+   ],
+   "answer": "Thermal stress = 8.4 x 10⁴ lb/in.², which is higher than the yield point.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.3"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What are the two causes of thermal shock?",
+   "a": "Nonuniform heating or cooling of a uniform material, and uniform heating or cooling of a nonuniform material.",
+   "p": "P3",
+   "place": null
+  },
+  {
+   "q": "What is the equation for thermal stress in a constrained material?",
+   "a": "F/A = EαΔT.",
+   "p": "P5",
+   "place": null
+  },
+  {
+   "q": "When is a vessel usually considered thick-walled?",
+   "a": "When its wall thickness is more than 5 percent to 10 percent of its radius.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What plant transients have the greatest potential to cause thermal shock?",
+   "a": "Excessive heatup and cooldown, plant scrams, pressure excursions outside normal bands, and loss of coolant accidents.",
+   "p": "P20",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Two types of stress that can be caused by thermal shock are tensile stress and compressive stress.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+  },
+  {
+   "text": "Thermal shock on a material can be calculated using Hooke's Law from F/A = EαΔT.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+  },
+  {
+   "text": "Thermal stress is a major concern due to the magnitude of the stresses involved with rapid heating or cooling.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+  },
+  {
+   "text": "Operational limits include heatup and cooldown rate limits, temperature limits for placing systems into operation, and specific temperatures for specific pressures.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.5"
+  },
+  {
+   "text": "Pressure in a closed system raises the severity of thermal shock, due to the additive effect of thermal and pressure tensile stresses on the inside vessel wall.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "Batch 9 decision: general vessel material only. Left off: cold water entering the vessel and makeup water on p.4, Figure 1 (labeled cold water), the PWR transients on p.7, and the pressurizer spray line on p.8.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.4"
+  },
+  {
+   "type": "Scope",
+   "note": "Objective 1.9 can't be fully taught, so its page is tagged Needs sodium review and has no check.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.8"
+  },
+  {
+   "type": "Exponent",
+   "note": "Table values and the example on p.2 and p.3 extract with flattened exponents. The page images show 10 to the -6, 10 to the 7, and 10 to the 4, and the lesson writes them out, not as quotes.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.3"
+  },
+  {
+   "type": "Calculation",
+   "note": "The thermal stress check uses a new temperature change with the handbook's equation.",
+   "cite": "DOE-HDBK-1017/2-93 MS-03 p.3"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}

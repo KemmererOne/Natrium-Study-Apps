@@ -1,0 +1,1794 @@
+{
+ "module_id": "MS-02",
+ "slug": "ms-02-properties-of-metals",
+ "title": "Properties of Metals",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1017-V1",
+ "handbook": "DOE-HDBK-1017/1-93",
+ "word_file": null,
+ "quiz_t": "Thermodynamics",
+ "quiz_topic": "Brittle Fracture and Vessel Thermal Stress",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, DESCRIBE how changes in stress, strain, and physical and chemical properties effect the materials used in a reactor plant.",
+   "items": [],
+   "page": {
+    "pdf": 49,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Stress",
+      "b. Tensile stress",
+      "c. Compressive stress",
+      "d. Shear stress",
+      "e. Compressibility"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "DISTINGUISH between the following types of stresses by the direction in which stress is applied.",
+     "items": [
+      "a. Tensile",
+      "b. Compressive",
+      "c. Shear"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Strain",
+      "b. Plastic deformation",
+      "c. Proportional limit"
+     ],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.4",
+     "text": "IDENTIFY the two common forms of strain.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.5",
+     "text": "DISTINGUISH between the two common forms of strain as to dimensional change.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.6",
+     "text": "STATE how iron crystalline lattice, γ and α, structure deforms under load.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.7",
+     "text": "STATE Hooke's Law.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.8",
+     "text": "DEFINE Young's Modulus (Elastic Modulus) as it relates to stress.",
+     "items": [],
+     "page": {
+      "pdf": 49,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "1.9",
+     "text": "Given the values of the associated material properties, CALCULATE the elongation of a material using Hooke's Law.",
+     "items": [],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.10",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Bulk Modulus",
+      "b. Fracture point"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.11",
+     "text": "Given stress-strain curves for ductile and brittle material, IDENTIFY the following specific points on a stress-strain curve.",
+     "items": [
+      "a. Proportional limit",
+      "b. Yield point",
+      "c. Ultimate strength",
+      "d. Fracture point"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.12",
+     "text": "Given a stress-strain curve, IDENTIFY whether the type of material represented is ductile or brittle.",
+     "items": [],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.13",
+     "text": "Given a stress-strain curve, INTERPRET a stress-strain curve for the following:",
+     "items": [
+      "a. Application of Hooke's Law",
+      "b. Elastic region",
+      "c. Plastic region"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.14",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Strength",
+      "b. Ultimate tensile strength",
+      "c. Yield strength",
+      "d. Ductility",
+      "e. Malleability",
+      "f. Toughness",
+      "g. Hardness"
+     ],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.15",
+     "text": "IDENTIFY how slip effects the strength of a metal.",
+     "items": [],
+     "page": {
+      "pdf": 50,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "1.16",
+     "text": "DESCRIBE the effects on ductility caused by:",
+     "items": [
+      "a. Temperature changes",
+      "b. Irradiation",
+      "c. Cold working"
+     ],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.17",
+     "text": "IDENTIFY the reactor plant application for which high ductility is desirable.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.18",
+     "text": "STATE how heat treatment effects the properties of heat-treated steel and carbon steel.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.19",
+     "text": "DESCRIBE the adverse effects of welding on metal including types of stress and method(s) for minimizing stress.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.20",
+     "text": "STATE the reason that galvanic corrosion is a concern in design and material selection.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.21",
+     "text": "DESCRIBE hydrogen embrittlement including the two required conditions and the formation process.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "1.22",
+     "text": "IDENTIFY why zircaloy-4 is less susceptible to hydrogen embrittlement than zircaloy-2.",
+     "items": [],
+     "page": {
+      "pdf": 51,
+      "printed": "ix"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Stress is the internal resistance of a material to the distorting effects of an external force or load.",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.6"
+  },
+  {
+   "id": "P2",
+   "quote": "Tensile stress is that type of stress in which the two sections of material on either side of a stress plane tend to pull apart or elongate as illustrated in Figure 1(a).",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+  },
+  {
+   "id": "P3",
+   "quote": "Compressive stress is the reverse of tensile stress.",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+  },
+  {
+   "id": "P4",
+   "quote": "Shear stress exists when two parts of a material tend to slide across each other in any typical plane of shear upon application of force parallel to that plane as illustrated in Figure 1(c).",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "The plane of a shear stress lies in the plane of the force system from which it originates.",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "The ability of a material to react to compressive stress or pressure is called compressibility.",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.5"
+  },
+  {
+   "id": "P7",
+   "quote": "There are many types of stresses, but they can all be generally classified in one of six categories: residual stresses, structural stresses, pressure stresses, flow stresses, thermal stresses, and fatigue stresses.",
+   "sec": "Stress",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.2"
+  },
+  {
+   "id": "P8",
+   "quote": "Strain is the proportional dimensional change, or the intensity or degree of distortion, in a material under stress.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.10"
+  },
+  {
+   "id": "P9",
+   "quote": "Strain may take two forms; elastic strain and plastic deformation.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+  },
+  {
+   "id": "P10",
+   "quote": "Elastic strain is a transitory dimensional change that exists only while the initiating stress is applied and disappears immediately upon removal of the stress.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+  },
+  {
+   "id": "P11",
+   "quote": "Plastic deformation (or plastic strain) is a dimensional change that does not disappear when the initiating stress is removed.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+  },
+  {
+   "id": "P12",
+   "quote": "The state of stress just before plastic strain begins to appear is known as the proportional limit, or elastic limit, and is defined by the stress level and the corresponding value of elastic strain.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "A face-centered cubic crystal structure will deform more readily under load before breaking than a body-centered cubic structure.",
+   "sec": "Strain",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.9"
+  },
+  {
+   "id": "P14",
+   "quote": "Hooke's Law states that in the elastic range of a material strain is proportional to stress.",
+   "sec": "Young's Modulus",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.14"
+  },
+  {
+   "id": "P15",
+   "quote": "Young's Modulus (Elastic Modulus) is the ratio of stress to strain, or the gradient of the stress-strain graph.",
+   "sec": "Young's Modulus",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.14"
+  },
+  {
+   "id": "P16",
+   "quote": "The elongation of the bar is directly proportional to the tensile force and the length of the bar and inversely proportional to the cross-sectional area and the modulus of elasticity.",
+   "sec": "Young's Modulus",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.11"
+  },
+  {
+   "id": "P17",
+   "quote": "The Bulk Modulus of Elasticity is the elastic response to hydrostatic pressure and equilateral tension or the volumetric response to hydrostatic pressure and equilateral tension.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.16"
+  },
+  {
+   "id": "P18",
+   "quote": "Fracture point is the point where the material fractures due to plastic deformation.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.16"
+  },
+  {
+   "id": "P19",
+   "quote": "Hooke's Law applies between Points 1 and 2.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.19"
+  },
+  {
+   "id": "P20",
+   "quote": "Elastic region is between Points 1 and 2.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.19"
+  },
+  {
+   "id": "P21",
+   "quote": "Plastic region is between Points 2 and 5.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.19"
+  },
+  {
+   "id": "P22",
+   "quote": "Ductile material will deform (elongate) more than brittle material, shown in the figures within the text.",
+   "sec": "Stress-Strain Relationship",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.19"
+  },
+  {
+   "id": "P23",
+   "quote": "Strength is the ability of a material to resist deformation.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.20"
+  },
+  {
+   "id": "P24",
+   "quote": "Decreasing the grain size through cold or hot working of the metal tends to retard slip and thus increases the strength of the metal.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.21"
+  },
+  {
+   "id": "P25",
+   "quote": "An increase in slip will decrease the strength of a material.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P26",
+   "quote": "Ultimate tensile strength (UTS) is the maximum resistance to fracture.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P27",
+   "quote": "the ultimate tensile strength appears as the stress coordinate value of the highest point on the curve.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.21"
+  },
+  {
+   "id": "P28",
+   "quote": "Yield strength is the stress at which a predetermined amount of permanent deformation occurs.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P29",
+   "quote": "Ductility is the ability of a material to deform easily upon the application of a tensile force, or the ability of a material to withstand plastic deformation without rupture.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P30",
+   "quote": "An increase in temperature will increase ductility.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.25"
+  },
+  {
+   "id": "P31",
+   "quote": "Ductility decreases with lower temperatures, cold working, and irradiation.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P32",
+   "quote": "Ductility is desirable in high temperature and high pressure applications.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P33",
+   "quote": "Malleability is the ability of a metal to exhibit large deformation or plastic response when being subjected to compressive force.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P34",
+   "quote": "Toughness describes how a material reacts under sudden impacts.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P35",
+   "quote": "It is defined as the work required to deform one cubic inch of metal until it fractures.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P36",
+   "quote": "Hardness is the property of a material that enables it to resist plastic deformation, penetration, indentation, and scratching.",
+   "sec": "Physical Properties",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "id": "P37",
+   "quote": "Hardness and tensile strength increase in heat-treated steel; toughness and ductility decrease.",
+   "sec": "Working of Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.31"
+  },
+  {
+   "id": "P38",
+   "quote": "Generally, the faster a metal is cooled, the smaller the grain sizes will be.",
+   "sec": "Working of Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.29"
+  },
+  {
+   "id": "P39",
+   "quote": "Welding can induce internal stresses that will remain in the material after the welding is completed.",
+   "sec": "Working of Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.29"
+  },
+  {
+   "id": "P40",
+   "quote": "This elongation of the material causes residual compressive and tensile stresses in the material.",
+   "sec": "Working of Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+  },
+  {
+   "id": "P41",
+   "quote": "Welding stresses can be minimized by using heat sink welding, which results in lower metal temperatures, and by annealing.",
+   "sec": "Working of Metals",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+  },
+  {
+   "id": "P42",
+   "quote": "Corrosion is the deterioration of a material due to interaction with its environment.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.32"
+  },
+  {
+   "id": "P43",
+   "quote": "Galvanic corrosion occurs when two dissimilar metals with different potentials are placed in electrical contact in an electrolyte.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+  },
+  {
+   "id": "P44",
+   "quote": "Galvanic corrosion is of particular concern in design and material selection.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+  },
+  {
+   "id": "P45",
+   "quote": "Material selection is important because different metals come into contact with each other and may form galvanic cells.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+  },
+  {
+   "id": "P46",
+   "quote": "Design is important to minimize differing flow conditions and resultant areas of corrosion buildup.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+  },
+  {
+   "id": "P47",
+   "quote": "The less resistant, more active one becomes the anodic (negative) corrosion site.",
+   "sec": "Corrosion",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+  },
+  {
+   "id": "P48",
+   "quote": "Hydrogen embrittlement is the process by which steel loses its ductility and strength due to tiny cracks that result from the internal pressure of hydrogen (H2) or methane gas (CH4), which forms at the grain boundaries.",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.37"
+  },
+  {
+   "id": "P49",
+   "quote": "The conditions required for hydrogen embrittlement in steel is the presence of hydrogen dissolved in the water and the carbon in the steel.",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.39"
+  },
+  {
+   "id": "P50",
+   "quote": "The methane gas collects in small voids along the grain boundaries where it builds up enormous pressures that initiate cracks and decrease the ductility of the steel.",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.39"
+  },
+  {
+   "id": "P51",
+   "quote": "Hydrogen embrittlement is not a permanent condition.",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+  },
+  {
+   "id": "P52",
+   "quote": "Zircaloy-4 is less susceptible to hydrogen embrittlement than zircaloy-2 because:",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.39"
+  },
+  {
+   "id": "P53",
+   "quote": "Studies at Westinghouse, Batelle, and elsewhere have revealed that the nickel in the zircaloy-2 was responsible for the hydrogen pickup.",
+   "sec": "Hydrogen Embrittlement",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+  }
+ ],
+ "word_sequence": [],
+ "concepts": [
+  {
+   "title": "Stress",
+   "eo": [
+    "1.1",
+    "1.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "eq",
+     "text": "Stress: σ = F/A, where F is the applied force and A is the cross-sectional area perpendicular to the force.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.2"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig1",
+     "num": 1,
+     "cap": "Types of Applied Stress",
+     "alt": "Three bars: forces pulling apart across a stress plane for tensile, pressing together for compressive, and sliding along the plane for shear.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    },
+    {
+     "t": "p",
+     "text": "In compressive stress, adjacent parts of the material tend to press against each other through a stress plane.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "p",
+     "text": "The plane of a tensile or compressive stress lies perpendicular to the axis of the force.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q407",
+     "eo": "1.1"
+    },
+    {
+     "eo": "1.2",
+     "q": "In which stress do two parts of a material tend to slide across each other?",
+     "o": [
+      "Thermal stress",
+      "Shear stress",
+      "Tensile stress",
+      "Compressive stress"
+     ],
+     "a": 1,
+     "x": "Shear stress exists when two parts of a material tend to slide across each other upon application of force parallel to that plane.",
+     "p": "P4"
+    },
+    {
+     "eo": "1.2",
+     "q": "How is the plane of a shear stress oriented?",
+     "o": [
+      "Perpendicular to the force",
+      "At 45 degrees to the force",
+      "It has no plane",
+      "In the plane of the force system"
+     ],
+     "a": 3,
+     "x": "The plane of a shear stress lies in the plane of the force system from which it originates.",
+     "p": "P5"
+    },
+    {
+     "eo": "1.1",
+     "q": "A force of 1,000 lbf acts on a cross-sectional area of 2 in.². What is the stress?",
+     "o": [
+      "200 psi",
+      "500 psi",
+      "1,000 psi",
+      "2,000 psi"
+     ],
+     "a": 1,
+     "x": "Stress is force divided by cross-sectional area: 1,000 lbf divided by 2 in.² is 500 psi.",
+     "p": "P1"
+    }
+   ]
+  },
+  {
+   "title": "Strain",
+   "eo": [
+    "1.3",
+    "1.4",
+    "1.5",
+    "1.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "eq",
+     "text": "Strain: ε = δ/L, where δ is the total elongation and L is the original length.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.7"
+    },
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "With elastic strain, the atoms all return to their original positions when the stress is removed, and no permanent deformation occurs.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "p",
+     "text": "Beyond the proportional limit, the deformation consists of both elastic and plastic strains.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.8"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig2",
+     "num": 2,
+     "cap": "Change of Shape of Cylinder Under Stress",
+     "alt": "A cylinder under tension gets longer and narrower. Under compression it gets shorter and wider.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.9"
+    },
+    {
+     "t": "p",
+     "text": "When metal experiences strain, its volume remains constant, so if one dimension increases, another must decrease. There are a few exceptions, such as strain hardening.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.9"
+    },
+    {
+     "t": "p",
+     "text": "Lattices with closely packed planes allow more plastic deformation, and cubic lattices allow slippage more easily than non-cubic lattices.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "p",
+     "text": "The BCC lattice, as in α-iron, is cubic but not closely packed and forms strong metals. The FCC lattice, as in γ-iron, is cubic and closely packed and forms more ductile materials.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.9"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.5",
+     "q": "What happens to elastic strain when the stress is removed?",
+     "o": [
+      "It slowly doubles",
+      "It becomes plastic strain",
+      "It disappears immediately",
+      "It remains as a permanent change"
+     ],
+     "a": 2,
+     "x": "Elastic strain exists only while the initiating stress is applied and disappears immediately upon removal of the stress.",
+     "p": "P10"
+    },
+    {
+     "eo": "1.4",
+     "q": "What are the two common forms of strain?",
+     "o": [
+      "Elastic strain and plastic deformation",
+      "Tensile and compressive strain",
+      "Thermal and fatigue strain",
+      "Shear and bulk strain"
+     ],
+     "a": 0,
+     "x": "Strain may take two forms: elastic strain and plastic deformation.",
+     "p": "P9"
+    },
+    {
+     "eo": "1.6",
+     "q": "Which iron lattice deforms more readily under load before breaking?",
+     "o": [
+      "γ-iron, face-centered cubic",
+      "α-iron, body-centered cubic",
+      "Both deform equally",
+      "Neither deforms under load"
+     ],
+     "a": 0,
+     "x": "A face-centered cubic crystal structure will deform more readily under load before breaking than a body-centered cubic structure.",
+     "p": "P13"
+    },
+    {
+     "eo": "1.3",
+     "q": "What is the proportional limit?",
+     "o": [
+      "The stress at fracture",
+      "The highest point on the stress-strain curve",
+      "The stress when elastic strain disappears",
+      "The stress just before plastic strain begins to appear"
+     ],
+     "a": 3,
+     "x": "The state of stress just before plastic strain begins to appear is known as the proportional limit, or elastic limit.",
+     "p": "P12"
+    }
+   ]
+  },
+  {
+   "title": "Hooke's Law and Young's Modulus",
+   "eo": [
+    "1.7",
+    "1.8",
+    "1.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "eq",
+     "text": "δ = PL/AE, where P is the force, L the length of the bar, A the cross-sectional area, and E the Modulus of Elasticity.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.11"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "eq",
+     "text": "E = σ/ε",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.12"
+    },
+    {
+     "t": "p",
+     "text": "Young's Modulus is measured in the same units as stress, pounds per square inch, because strain is a ratio of two lengths.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.13"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Aluminum: 1.0 x 10⁷ psi",
+      "Stainless steel: 2.9 x 10⁷ psi",
+      "Carbon steel: 3.0 x 10⁷ psi"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.13"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.9",
+     "q": "A carbon steel bar 100 in. long with a 1 in.² area carries a 30,000 lb load. E is 3.0 x 10⁷ psi. What is the elongation?",
+     "o": [
+      "0.01 in.",
+      "0.1 in.",
+      "1.0 in.",
+      "10 in."
+     ],
+     "a": 1,
+     "x": "δ = PL/AE = (30,000 lb)(100 in.) / (1 in.²)(3.0 x 10⁷ psi) = 0.1 in.",
+     "p": "P16"
+    },
+    {
+     "eo": "1.8",
+     "q": "What is Young's Modulus?",
+     "o": [
+      "The ratio of strain to stress",
+      "The maximum stress before fracture",
+      "The stress at which yielding begins",
+      "The ratio of stress to strain"
+     ],
+     "a": 3,
+     "x": "Young's Modulus (Elastic Modulus) is the ratio of stress to strain, or the gradient of the stress-strain graph.",
+     "p": "P15"
+    },
+    {
+     "eo": "1.9",
+     "q": "If the length of a bar under a set load is doubled, what happens to its elongation?",
+     "o": [
+      "It stays the same",
+      "It quadruples",
+      "It doubles",
+      "It halves"
+     ],
+     "a": 2,
+     "x": "The elongation of the bar is directly proportional to the tensile force and the length of the bar.",
+     "p": "P16"
+    }
+   ]
+  },
+  {
+   "title": "Stress-strain curves",
+   "eo": [
+    "1.10",
+    "1.11",
+    "1.12",
+    "1.13"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "A tensile test applies a gradually increasing tension force to a sample until it is pulled apart, measuring load and elongation.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig3",
+     "num": 3,
+     "cap": "Typical Ductile Material Stress-Strain Curve",
+     "alt": "Stress against elongation for a ductile material: a straight rise from Point 1 to proportional limit 2, yield point 3, a long curve up to ultimate tensile strength 4, and fracture point 5.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.17"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Point 2: proportional limit (PL) or elastic limit",
+      "Point 3: yield strength (YS) or yield point",
+      "Point 4: ultimate strength",
+      "Point 5: fracture point, at which failure occurs"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    },
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "p",
+     "text": "If stress is removed in the elastic region, the material returns to its original length. In the plastic region, it does not.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.18"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig4",
+     "num": 4,
+     "cap": "Typical Brittle Material Stress-Strain Curve",
+     "alt": "Stress against elongation for a brittle material: a steep rise with fracture at low elongation, and a short plastic region.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.18"
+    },
+    {
+     "t": "p",
+     "text": "Figure 3 is typical of a ductile material, where the plastic region is great and the material will bear more strain before fracture. Figure 4 is typical of a brittle material, where the plastic region is small.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.18"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.11",
+     "q": "On a stress-strain curve, what is the highest point?",
+     "o": [
+      "Yield point",
+      "Fracture point",
+      "Ultimate tensile strength",
+      "Proportional limit"
+     ],
+     "a": 2,
+     "x": "If the complete curve is available, the ultimate tensile strength appears as the stress coordinate of the highest point.",
+     "p": "P27"
+    },
+    {
+     "eo": "1.12",
+     "q": "A stress-strain curve has a large plastic region. What type of material does it show?",
+     "o": [
+      "Amorphous",
+      "Ductile",
+      "Brittle",
+      "Elastic only"
+     ],
+     "a": 1,
+     "x": "Figure 3 is typical of a ductile material, where the plastic region is great. Ductile material will deform more than brittle material.",
+     "p": "P22"
+    },
+    {
+     "eo": "1.13",
+     "q": "Between which points of the stress-strain curve does Hooke's Law apply?",
+     "o": [
+      "Points 4 and 5",
+      "Points 1 and 2",
+      "Points 2 and 3",
+      "Points 3 and 4"
+     ],
+     "a": 1,
+     "x": "Hooke's Law applies between Points 1 and 2, the elastic region.",
+     "p": "P19"
+    },
+    {
+     "eo": "1.13",
+     "q": "Which part of the stress-strain curve is the plastic region?",
+     "o": [
+      "Between Points 1 and 3",
+      "Only at Point 5",
+      "Between Points 2 and 5",
+      "Between Points 1 and 2"
+     ],
+     "a": 2,
+     "x": "Plastic region is between Points 2 and 5.",
+     "p": "P21"
+    },
+    {
+     "eo": "1.10",
+     "q": "What is the fracture point?",
+     "o": [
+      "The point where the curve stops being straight",
+      "The point where the material fractures due to plastic deformation",
+      "The point where plastic strain begins",
+      "The highest stress on the curve"
+     ],
+     "a": 1,
+     "x": "Fracture point is the point where the material fractures due to plastic deformation.",
+     "p": "P18"
+    }
+   ]
+  },
+  {
+   "title": "Strength",
+   "eo": [
+    "1.14",
+    "1.15"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P23"
+    },
+    {
+     "t": "p",
+     "text": "The strength of a material is the maximum nominal stress it can sustain, and is always qualified by the type of stress, such as tensile, compressive, or shear strength.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "p",
+     "text": "UTS equals the maximum load divided by the area of the original cross section.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "When a force is applied, layers of atoms move in relation to adjacent layers, which is slip. Grain boundaries tend to prevent slip, and smaller grains give a larger grain boundary area.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.21"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.15",
+     "q": "How does an increase in slip affect a metal?",
+     "o": [
+      "It has no effect on strength",
+      "It decreases the strength",
+      "It increases the strength",
+      "It increases the hardness"
+     ],
+     "a": 1,
+     "x": "An increase in slip will decrease the strength of a material.",
+     "p": "P25"
+    },
+    {
+     "eo": "1.15",
+     "q": "Why does decreasing grain size increase the strength of a metal?",
+     "o": [
+      "It raises the temperature",
+      "It removes all dislocations",
+      "It retards slip",
+      "It adds carbon"
+     ],
+     "a": 2,
+     "x": "Decreasing the grain size through cold or hot working of the metal tends to retard slip and thus increases the strength.",
+     "p": "P24"
+    },
+    {
+     "eo": "1.14",
+     "q": "What is strength?",
+     "o": [
+      "The ability to resist scratching",
+      "The ability of a material to resist deformation",
+      "The ability to deform without rupture",
+      "The work to fracture a cubic inch of metal"
+     ],
+     "a": 1,
+     "x": "Strength is the ability of a material to resist deformation.",
+     "p": "P23"
+    }
+   ]
+  },
+  {
+   "title": "Ductility",
+   "eo": [
+    "1.14",
+    "1.16",
+    "1.17"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig6",
+     "num": 6,
+     "cap": "Measuring Elongation After Fracture",
+     "alt": "A marked gage length before a test, a fracture through a neck, and the broken parts fitted together to find the final gage length.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.24"
+    },
+    {
+     "t": "p",
+     "text": "Percent elongation and reduction of area are both indicators of ductility. Reduction of area is the better indicator, because it is measured at the minimum diameter of the neck.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "p",
+     "text": "A decrease in temperature causes a change from ductile to brittle behavior. Heating a cold-worked metal to or above the temperature at which its atoms return to their equilibrium positions increases ductility, and this is called annealing.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "p",
+     "text": "High ductility in these applications helps prevent brittle fracture.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.25"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q404",
+     "eo": "1.16"
+    },
+    {
+     "eo": "1.17",
+     "q": "For which reactor plant applications is high ductility desirable?",
+     "o": [
+      "Instrument tubing only",
+      "High temperature and high pressure applications",
+      "Low temperature, low pressure piping only",
+      "Electrical insulation"
+     ],
+     "a": 1,
+     "x": "Ductility is desirable in high temperature and high pressure applications.",
+     "p": "P32"
+    },
+    {
+     "eo": "1.16",
+     "q": "What effect does an increase in temperature have on ductility?",
+     "o": [
+      "It removes ductility",
+      "It increases ductility",
+      "It decreases ductility",
+      "It has no effect"
+     ],
+     "a": 1,
+     "x": "An increase in temperature will increase ductility.",
+     "p": "P30"
+    }
+   ]
+  },
+  {
+   "title": "Malleability, toughness, and hardness",
+   "eo": [
+    "1.14"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig7",
+     "num": 7,
+     "cap": "Malleable Deformation of a Cylinder",
+     "alt": "A cylinder squeezed axially bulges outward, with arrows showing surface and internal tension.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.25"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "p",
+     "text": "Toughness is measured by the Charpy test or the Izod test, which use a notched sample and a swinging pendulum.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.26"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig9",
+     "num": 9,
+     "cap": "Material Toughness Test",
+     "alt": "Pendulum impact tester with a meter, showing the notched specimen and the swing path.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.26"
+    },
+    {
+     "t": "p",
+     "text": "The more energy the specimen absorbs, the smaller the upward swing of the pendulum and the tougher the material.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.26"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "p",
+     "text": "Resistance to wear by friction or erosion generally increases with hardness.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.27"
+    },
+    {
+     "t": "p",
+     "text": "In concentrations of less than 5%, nickel raises the toughness and ductility of steel without raising the hardness. Chromium forms a carbide that hardens the metal. Stainless steels are alloy steels containing at least 12% chromium.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.27"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.14",
+     "q": "Which property describes how a material reacts under sudden impacts?",
+     "o": [
+      "Malleability",
+      "Ductility",
+      "Toughness",
+      "Hardness"
+     ],
+     "a": 2,
+     "x": "Toughness describes how a material reacts under sudden impacts.",
+     "p": "P34"
+    },
+    {
+     "eo": "1.14",
+     "q": "What does hardness enable a material to resist?",
+     "o": [
+      "Plastic deformation, penetration, indentation, and scratching",
+      "Corrosion and oxidation",
+      "Thermal expansion",
+      "Sudden impacts only"
+     ],
+     "a": 0,
+     "x": "Hardness is the property of a material that enables it to resist plastic deformation, penetration, indentation, and scratching.",
+     "p": "P36"
+    },
+    {
+     "eo": "1.14",
+     "q": "What is malleability?",
+     "o": [
+      "Large deformation or plastic response under compressive force",
+      "Easy deformation under a tensile force",
+      "The maximum resistance to fracture",
+      "Resistance to scratching"
+     ],
+     "a": 0,
+     "x": "Malleability is the ability of a metal to exhibit large deformation or plastic response when being subjected to compressive force.",
+     "p": "P33"
+    }
+   ]
+  },
+  {
+   "title": "Heat treatment and working",
+   "eo": [
+    "1.18"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "During manufacture, varying the rate of cooling (quenching) controls grain size and grain patterns, to produce different levels of hardness and tensile strength.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "p",
+     "text": "This makes the metal harder.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "p",
+     "text": "Annealing heats a component slowly to an elevated temperature, holds it there for a long time, then cools it.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Softens the steel and improves ductility",
+      "Relieves internal stresses from previous processes",
+      "Refines the grain structure"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+    },
+    {
+     "t": "p",
+     "text": "Cold work is plastic deformation carried out so that strain hardening is not relieved, and it decreases ductility. Hot working deforms metals above their recrystallization temperature, and strain hardening does not occur.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q405",
+     "eo": "1.18"
+    },
+    {
+     "eo": "1.18",
+     "q": "What happens to grain size as a metal is cooled faster?",
+     "o": [
+      "Grain size stays the same",
+      "The grains disappear",
+      "The grains get smaller",
+      "The grains get larger"
+     ],
+     "a": 2,
+     "x": "Generally, the faster a metal is cooled, the smaller the grain sizes will be.",
+     "p": "P38"
+    }
+   ]
+  },
+  {
+   "title": "Welding stresses",
+   "eo": [
+    "1.19"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "p",
+     "text": "In stainless steels such as type 304, the lattice is FCC (austenite). During high temperature welding, surrounding metal may reach 500°F to 1000°F, where austenite transforms to a BCC structure (bainite).",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.29"
+    },
+    {
+     "t": "p",
+     "text": "The bainite occupies more space than the original austenite lattice.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q409",
+     "eo": "1.19"
+    },
+    {
+     "eo": "1.19",
+     "q": "What types of stress does welding leave in stainless steel?",
+     "o": [
+      "Only thermal stresses during welding",
+      "No stresses after cooling",
+      "Residual compressive and tensile stresses",
+      "Only shear stresses"
+     ],
+     "a": 2,
+     "x": "The elongation of the material causes residual compressive and tensile stresses in the material.",
+     "p": "P40"
+    }
+   ]
+  },
+  {
+   "title": "Galvanic corrosion",
+   "eo": [
+    "1.20"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P42"
+    },
+    {
+     "t": "p",
+     "text": "All metals and alloys are subject to corrosion. It cannot be eliminated, but it can be controlled.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    },
+    {
+     "t": "p",
+     "text": "A difference in electrical potential drives current through the electrolyte, and this current corrodes one of the metals. The larger the potential difference, the greater the probability of galvanic corrosion.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "p",
+     "text": "The stronger, more noble metal is cathodic and protected.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "p",
+     "text": "Loose corrosion products are important because they can be transported to the reactor core and irradiated.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.33"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.20",
+     "q": "Why is galvanic corrosion a concern in material selection?",
+     "o": [
+      "Different metals in contact may form galvanic cells",
+      "It only occurs in pure metals",
+      "It raises the melting point",
+      "It lowers the operating pressure"
+     ],
+     "a": 0,
+     "x": "Material selection is important because different metals come into contact with each other and may form galvanic cells.",
+     "p": "P45"
+    },
+    {
+     "eo": "1.20",
+     "q": "In galvanic corrosion, which metal corrodes?",
+     "o": [
+      "The less resistant, more active one",
+      "The stronger, more noble one",
+      "Both metals equally",
+      "Neither metal"
+     ],
+     "a": 0,
+     "x": "The less resistant, more active one becomes the anodic (negative) corrosion site.",
+     "p": "P47"
+    }
+   ]
+  },
+  {
+   "title": "Hydrogen embrittlement of steel",
+   "eo": [
+    "1.21"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P48"
+    },
+    {
+     "t": "quote",
+     "p": "P49"
+    },
+    {
+     "t": "p",
+     "text": "Hydrogen diffuses along the grain boundaries and combines with the carbon in the steel to form methane gas, which is not mobile.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.37"
+    },
+    {
+     "t": "fig",
+     "id": "ms-02-fig10",
+     "num": 10,
+     "cap": "Hydrogen Embrittlement",
+     "alt": "Hydrogen from a corrosive solution enters the metal, forms CH4 at grain boundaries, and opens a crack.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P50"
+    },
+    {
+     "t": "p",
+     "text": "If the metal is under a high tensile stress, brittle failure can occur.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P51"
+    },
+    {
+     "t": "p",
+     "text": "If cracking does not occur and no more hydrogen is generated at the surface, the hydrogen can rediffuse from the steel, so that ductility is restored.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q408",
+     "eo": "1.21"
+    },
+    {
+     "eo": "1.21",
+     "q": "What two conditions are required for hydrogen embrittlement in steel?",
+     "o": [
+      "Tensile stress and a low pH",
+      "Hydrogen dissolved in the water and carbon in the steel",
+      "High temperature and low pressure",
+      "Nickel in the steel and oxygen in the water"
+     ],
+     "a": 1,
+     "x": "The conditions required for hydrogen embrittlement in steel is the presence of hydrogen dissolved in the water and the carbon in the steel.",
+     "p": "P49"
+    },
+    {
+     "eo": "1.21",
+     "q": "Is hydrogen embrittlement of steel a permanent condition?",
+     "o": [
+      "Yes, in all cases",
+      "Yes, once methane forms",
+      "No, because it stops at room temperature",
+      "No, ductility can be restored if the hydrogen rediffuses"
+     ],
+     "a": 3,
+     "x": "Hydrogen embrittlement is not a permanent condition. If cracking does not occur, the hydrogen can rediffuse from the steel.",
+     "p": "P51"
+    }
+   ]
+  },
+  {
+   "title": "Hydrogen embrittlement of zirconium alloys",
+   "eo": [
+    "1.22"
+   ],
+   "tag": "Water-system only",
+   "body": [
+    {
+     "t": "p",
+     "text": "Zirconium reacts with water, and part of the hydrogen produced combines with the zirconium to form zirconium hydride platelets. The metal then becomes embrittled, and cracks begin in the platelets.",
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.38"
+    },
+    {
+     "t": "quote",
+     "p": "P53"
+    },
+    {
+     "t": "quote",
+     "p": "P52"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Zircaloy-4 contains less nickel",
+      "The introduction of niobium into zircaloy-4 reduces the amount of hydrogen absorption in the metal"
+     ],
+     "cite": "DOE-HDBK-1017/1-93 MS-02 p.39"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.22",
+     "q": "Why is zircaloy-4 less susceptible to hydrogen embrittlement than zircaloy-2?",
+     "o": [
+      "It contains more nickel",
+      "It contains more carbon",
+      "It has a larger grain size",
+      "It contains less nickel, and niobium reduces hydrogen absorption"
+     ],
+     "a": 3,
+     "x": "Zircaloy-4 contains less nickel, and the introduction of niobium reduces the amount of hydrogen absorption in the metal.",
+     "p": "P52"
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Calculate elongation",
+   "eo": "1.9",
+   "page": 13,
+   "problem": "What is the elongation of 200 in. of aluminum wire with a 0.01 square in. area if it supports a weight of 100 lb?",
+   "steps": [
+    "Use Hooke's Law: δ = PL/AE.",
+    "E for aluminum is 1.0 x 10⁷ lb/in.².",
+    "δ = (100 lb)(200 in.) / (0.01 in.²)(1.0 x 10⁷ lb/in.²)."
+   ],
+   "answer": "δ = 0.2 in.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.13"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is the formula for stress?",
+   "a": "Stress equals force divided by cross-sectional area: σ = F/A.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What are the six categories of stress?",
+   "a": "Residual, structural, pressure, flow, thermal, and fatigue stresses.",
+   "p": "P7",
+   "place": null
+  },
+  {
+   "q": "What is elastic strain?",
+   "a": "A transitory dimensional change that exists only while the initiating stress is applied.",
+   "p": "P10",
+   "place": null
+  },
+  {
+   "q": "What is Young's Modulus?",
+   "a": "The ratio of stress to strain, or the gradient of the stress-strain graph.",
+   "p": "P15",
+   "place": null
+  },
+  {
+   "q": "What is ductility?",
+   "a": "The ability of a material to deform easily upon the application of a tensile force, or to withstand plastic deformation without rupture.",
+   "p": "P29",
+   "place": null
+  },
+  {
+   "q": "What is toughness?",
+   "a": "How a material reacts under sudden impacts, defined as the work required to deform one cubic inch of metal until it fractures.",
+   "p": "P35",
+   "place": null
+  },
+  {
+   "q": "What is galvanic corrosion?",
+   "a": "Corrosion that occurs when two dissimilar metals with different potentials are in electrical contact in an electrolyte.",
+   "p": "P43",
+   "place": null
+  },
+  {
+   "q": "What is hydrogen embrittlement of steel?",
+   "a": "Loss of ductility and strength from tiny cracks caused by the internal pressure of hydrogen or methane gas at the grain boundaries.",
+   "p": "P48",
+   "place": null
+  }
+ ],
+ "summary": [
+  {
+   "text": "Stress is the internal resistance of a material to the distorting effects of an external force or load, and its three types are tensile, compressive, and shear.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.6"
+  },
+  {
+   "text": "Strain takes two forms: elastic strain, which disappears when the stress is removed, and plastic deformation, which does not.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.10"
+  },
+  {
+   "text": "Hooke's Law states that in the elastic range of a material strain is proportional to stress.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.14"
+  },
+  {
+   "text": "Hooke's Law applies between Points 1 and 2 of the stress-strain curve, and the plastic region is between Points 2 and 5.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.19"
+  },
+  {
+   "text": "Ductility decreases with lower temperatures, cold working, and irradiation.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.28"
+  },
+  {
+   "text": "Hardness and tensile strength increase in heat-treated steel, while toughness and ductility decrease.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.31"
+  },
+  {
+   "text": "Welding produces compressive and tensile stresses, which are minimized by heat sink welding and annealing.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.31"
+  },
+  {
+   "text": "Galvanic corrosion occurs when dissimilar metals exist at different electrical potentials in the presence of an electrolyte.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.36"
+  },
+  {
+   "text": "Zircaloy-4 is less susceptible to hydrogen embrittlement than zircaloy-2 because it contains less nickel and has niobium added.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.39"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Scope",
+   "note": "The two hydrogen embrittlement pages are tagged Water-system only: the handbook's required condition is hydrogen dissolved in water, and zirconium hydriding starts with the zirconium-water reaction. Coolant pH and coolant hydrogen addition on p.37 are left off.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.37"
+  },
+  {
+   "type": "Scope",
+   "note": "Galvanic corrosion stays untagged, as in CH-02. General corrosion in water, SCC, chloride stress corrosion, and inconel problems on p.32 to p.35 have no objective here, are taught in CH-02, and are left off.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.34"
+  },
+  {
+   "type": "Scope",
+   "note": "p.23 on PWR components and the ASME code, and p.29 on the type 304 tritium reactor tank, are left off.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.23"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.1 says that if the distortion disappears and the metal remains distorted, the strain is plastic, which contradicts itself. The lesson uses p.8.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.1"
+  },
+  {
+   "type": "Handbook error",
+   "note": "p.2 gives the units of applied force as lbs of force per in.². The lesson does not repeat the unit.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.2"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "p.8 treats proportional limit and elastic limit as one term, and p.23 describes them separately. The lesson uses p.8, which is the objective's source.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.23"
+  },
+  {
+   "type": "Figure",
+   "note": "Figure 5 repeats Figure 4 and carries the same caption, so only Figure 4 is shown. Figure 8 is left off because Figure 9 shows the same tester.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.22"
+  },
+  {
+   "type": "Exponent",
+   "note": "Young's Modulus values on p.13 extract as 107. The page shows ten to the seventh power, and the lesson writes them out in a list, not as quotes.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.13"
+  },
+  {
+   "type": "Calculation",
+   "note": "The stress and carbon steel elongation checks use new numbers with the handbook's equations.",
+   "cite": "DOE-HDBK-1017/1-93 MS-02 p.13"
+  }
+ ],
+ "page_tags": [
+  "Water-system only"
+ ]
+}

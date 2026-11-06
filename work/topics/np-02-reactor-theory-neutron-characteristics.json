@@ -1,0 +1,1589 @@
+{
+ "module_id": "NP-02",
+ "slug": "np-02-reactor-theory-neutron-characteristics",
+ "title": "Reactor Theory (Neutron Characteristics)",
+ "status": "Reviewed",
+ "scope_tags": [],
+ "source_id": "DOE-1019-V1",
+ "handbook": "DOE-HDBK-1019/1-93",
+ "word_file": "Source Neutrons.docx",
+ "quiz_t": "Reactor Theory",
+ "quiz_topic": "Reactor Kinetics and Neutron Sources",
+ "objectives": [
+  {
+   "number": "1.0",
+   "text": "Without references, EXPLAIN how neutron sources produce neutrons.",
+   "items": [],
+   "page": {
+    "pdf": 100,
+    "printed": "vi"
+   },
+   "enabling": [
+    {
+     "number": "1.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Intrinsic neutron source",
+      "b. Installed neutron source"
+     ],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.2",
+     "text": "LIST three examples of reactions that produce neutrons in intrinsic neutron sources.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    },
+    {
+     "number": "1.3",
+     "text": "LIST three examples of reactions that produce neutrons in installed neutron sources.",
+     "items": [],
+     "page": {
+      "pdf": 100,
+      "printed": "vi"
+     }
+    }
+   ]
+  },
+  {
+   "number": "2.0",
+   "text": "Given the necessary information for calculations, EXPLAIN basic concepts in reactor physics and perform calculations.",
+   "items": [],
+   "page": {
+    "pdf": 101,
+    "printed": "vii"
+   },
+   "enabling": [
+    {
+     "number": "2.1",
+     "text": "DEFINE the following terms:",
+     "items": [
+      "a. Atom density",
+      "b. Neutron flux",
+      "c. Microscopic cross section",
+      "d. Barn",
+      "e. Macroscopic cross section",
+      "f. Mean free path"
+     ],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.2",
+     "text": "EXPRESS macroscopic cross section in terms of microscopic cross section.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.3",
+     "text": "DESCRIBE how the absorption cross section of typical nuclides varies with neutron energy at energies below the resonance absorption region.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.4",
+     "text": "DESCRIBE the cause of resonance absorption in terms of nuclear energy levels.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.5",
+     "text": "DESCRIBE the energy dependence of resonance absorption peaks for typical light and heavy nuclei.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.6",
+     "text": "EXPRESS mean free path in terms of macroscopic cross section.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.7",
+     "text": "Given the number densities (or total density and component fractions) and microscopic cross sections of components, CALCULATE the macroscopic cross section for a mixture.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.8",
+     "text": "CALCULATE a macroscopic cross section given a material density, atomic mass, and microscopic cross section.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.9",
+     "text": "EXPLAIN neutron shadowing or self-shielding.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.10",
+     "text": "Given the neutron flux and macroscopic cross section, CALCULATE the reaction rate.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.11",
+     "text": "DESCRIBE the relationship between neutron flux and reactor power.",
+     "items": [],
+     "page": {
+      "pdf": 101,
+      "printed": "vii"
+     }
+    },
+    {
+     "number": "2.12",
+     "text": "DEFINE the following concepts:",
+     "items": [
+      "a. Thermalization",
+      "b. Moderator",
+      "c. Moderating ratio",
+      "d. Average logarithmic energy decrement",
+      "e. Macroscopic slowing down power"
+     ],
+     "page": {
+      "pdf": 102,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.13",
+     "text": "LIST three desirable characteristics of a moderator.",
+     "items": [],
+     "page": {
+      "pdf": 102,
+      "printed": "viii"
+     }
+    },
+    {
+     "number": "2.14",
+     "text": "Given an average fractional energy loss per collision, CALCULATE the energy loss after a specified number of collisions.",
+     "items": [],
+     "page": {
+      "pdf": 102,
+      "printed": "viii"
+     }
+    }
+   ]
+  },
+  {
+   "number": "3.0",
+   "text": "Without references, EXPLAIN the production process and effects on fission of prompt and delayed neutrons.",
+   "items": [],
+   "page": {
+    "pdf": 103,
+    "printed": "ix"
+   },
+   "enabling": [
+    {
+     "number": "3.1",
+     "text": "STATE the origin of prompt neutrons and delayed neutrons.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.2",
+     "text": "STATE the approximate fraction of neutrons that are born as delayed neutrons from the fission of the following nuclear fuels:",
+     "items": [
+      "a. Uranium-235",
+      "b. Plutonium-239"
+     ],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.3",
+     "text": "EXPLAIN the mechanism for production of delayed neutrons.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.4",
+     "text": "EXPLAIN prompt and delayed neutron generation times.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.5",
+     "text": "Given prompt and delayed neutron generation times and delayed neutron fraction, CALCULATE the average generation time.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    },
+    {
+     "number": "3.6",
+     "text": "EXPLAIN the effect of delayed neutrons on reactor control.",
+     "items": [],
+     "page": {
+      "pdf": 103,
+      "printed": "ix"
+     }
+    }
+   ]
+  },
+  {
+   "number": "4.0",
+   "text": "Without references, DESCRIBE the neutron energy spectrum for the type of reactor presented in this module.",
+   "items": [],
+   "page": {
+    "pdf": 104,
+    "printed": "x"
+   },
+   "enabling": [
+    {
+     "number": "4.1",
+     "text": "STATE the average energy at which prompt neutrons are produced.",
+     "items": [],
+     "page": {
+      "pdf": 104,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.2",
+     "text": "DESCRIBE the neutron energy spectrum in the following reactors:",
+     "items": [
+      "a. Fast reactor",
+      "b. Thermal reactor"
+     ],
+     "page": {
+      "pdf": 104,
+      "printed": "x"
+     }
+    },
+    {
+     "number": "4.3",
+     "text": "EXPLAIN the reason for the particular shape of the fast, intermediate, and slow energy regions of the neutron flux spectrum for a thermal reactor.",
+     "items": [],
+     "page": {
+      "pdf": 104,
+      "printed": "x"
+     }
+    }
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "id": "P1",
+   "quote": "Source neutrons are important because they ensure that the neutron population remains high enough to allow a visible indication of neutron level on the most sensitive monitoring instruments while the reactor is shutdown and during the startup sequence.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.1"
+  },
+  {
+   "id": "P2",
+   "quote": "Intrinsic neutron sources are those neutron-producing reactions that always occur in reactor materials.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.1"
+  },
+  {
+   "id": "P3",
+   "quote": "An installed neutron source is an assembly placed in or near the reactor for the sole purpose of producing source neutrons.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.3"
+  },
+  {
+   "id": "P4",
+   "quote": "Spontaneous fission of heavy nuclides in fuel, such as uranium-238, uranium-235, and plutonium-239, results in fission fragments and free neutrons.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "id": "P5",
+   "quote": "Boron-11 mixed with the fuel undergoes an alpha-neutron reaction and becomes nitrogen-14.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "id": "P6",
+   "quote": "Spontaneous fission of californium-252 results in fission fragments and free neutrons.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "id": "P7",
+   "quote": "Beryllium-9 undergoes an alpha-neutron reaction (alpha from the decay of plutonium, polonium, or radium) and becomes carbon-12.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "id": "P8",
+   "quote": "Beryllium-9 undergoes a gamma-neutron reaction (high energy gamma from decay of antimony-124) and becomes beryllium-8.",
+   "sec": "Neutron Sources",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "id": "P9",
+   "quote": "The atom density is the number of atoms of a given type per unit volume of the material.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.6"
+  },
+  {
+   "id": "P10",
+   "quote": "The probability of a particular reaction occurring between a neutron and a nucleus is called the microscopic cross section",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.7"
+  },
+  {
+   "id": "P11",
+   "quote": "The microscopic cross section may also be regarded as the effective area the nucleus presents to the neutron for the particular reaction.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.7"
+  },
+  {
+   "id": "P12",
+   "quote": "The macroscopic cross section is the probability of a given reaction occurring per unit travel of the neutron.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.8"
+  },
+  {
+   "id": "P13",
+   "quote": "This average distance traveled by a neutron before interaction is known as the mean free path for that interaction",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+  },
+  {
+   "id": "P14",
+   "quote": "Resonance absorption occurs when the sum of the kinetic energy of the neutron and its binding energy is equal to an allowed nuclear energy level of the nucleus.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.17"
+  },
+  {
+   "id": "P15",
+   "quote": "This is because heavy nuclei are complex and have more possible configurations and corresponding energy states.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+  },
+  {
+   "id": "P16",
+   "quote": "Light nuclei, being less complex, have fewer possible energy states and fewer resonances that are sparsely distributed at higher energy levels.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+  },
+  {
+   "id": "P17",
+   "quote": "This is called the \"fast neutron region.\"",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+  },
+  {
+   "id": "P18",
+   "quote": "At low neutron energies (<1 eV) the cross section is inversely proportional to the neutron velocity.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.17"
+  },
+  {
+   "id": "P19",
+   "quote": "Self-shielding is where the local neutron flux is depressed within a material due to neutron absorption near the surface of the material.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.17"
+  },
+  {
+   "id": "P20",
+   "quote": "This is especially important at resonance energies, where the absorption cross sections are large.",
+   "sec": "Nuclear Cross Sections and Neutron Flux",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.16"
+  },
+  {
+   "id": "P21",
+   "quote": "The reaction rate is the number of interactions of a particular type occurring in a cubic centimeter of material in a second.",
+   "sec": "Reaction Rates",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.22"
+  },
+  {
+   "id": "P22",
+   "quote": "Over a period of several days, while the atom density of the fuel can be considered constant, the neutron flux is directly proportional to reactor power.",
+   "sec": "Reaction Rates",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.22"
+  },
+  {
+   "id": "P23",
+   "quote": "The neutron flux for a given power level will increase very slowly over a period of months due to the burnup of the fuel and resulting decrease in atom density and macroscopic cross section.",
+   "sec": "Reaction Rates",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.21"
+  },
+  {
+   "id": "P24",
+   "quote": "Sometimes it is convenient, based upon information known, to work with an average fractional energy loss per collision as opposed to an average logarithmic fraction.",
+   "sec": "Neutron Moderation",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.25"
+  },
+  {
+   "id": "P25",
+   "quote": "Delayed neutrons are released from the decay of fission products that are called delayed neutron precursors.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "id": "P26",
+   "quote": "The fraction of neutrons born as delayed neutrons is different for different fuel materials.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "id": "P27",
+   "quote": "The delayed neutrons are emitted immediately following the first beta decay of a fission fragment known as a delayed neutron precursor.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.29"
+  },
+  {
+   "id": "P28",
+   "quote": "The neutron generation time is the time required for neutrons from one generation to cause the fissions that produce the next generation of neutrons.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.30"
+  },
+  {
+   "id": "P29",
+   "quote": "The average delayed neutron generation time is about 12.5 seconds.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "id": "P30",
+   "quote": "Delayed neutrons are responsible for the ability to control the rate at which power can rise in a reactor.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "id": "P31",
+   "quote": "If only prompt neutrons existed, reactor control would not be possible due to the rapid power changes.",
+   "sec": "Prompt and Delayed Neutrons",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "id": "P32",
+   "quote": "Prompt neutrons are born at energies between 0.1 MeV and 10 MeV.",
+   "sec": "Neutron Flux Spectrum",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.37"
+  },
+  {
+   "id": "P33",
+   "quote": "The average prompt neutron energy is about 2 MeV.",
+   "sec": "Neutron Flux Spectrum",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.37"
+  },
+  {
+   "id": "P34",
+   "quote": "Fast reactors have a neutron energy spectrum that has the same shape as the prompt neutron energy spectrum.",
+   "sec": "Neutron Flux Spectrum",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.37"
+  },
+  {
+   "id": "P35",
+   "quote": "No attempt is made to thermalize or slow down neutrons in the fast breeder reactor (liquid metal cooled); therefore, an insignificant number of neutrons exist in the thermal range.",
+   "sec": "Neutron Flux Spectrum",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.34"
+  },
+  {
+   "id": "P36",
+   "quote": "In SFR, moderation is avoided – no thermal neutrons; most fissions occur at higher energies (>10 keV)",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 3"
+  },
+  {
+   "id": "P37",
+   "quote": "Slowing-down power in FR is ~1% that observed for typical LWR",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 4"
+  },
+  {
+   "id": "P38",
+   "quote": "Thus, neutrons are either absorbed or leak from the reactor before they can reach thermal energies",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 4"
+  },
+  {
+   "id": "P39",
+   "quote": "Net result is that the SFR-metal has the hardest neutron spectrum",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 5"
+  },
+  {
+   "id": "P40",
+   "quote": "Threshold fission at ~1 MeV (~10% of total fission rate in a fast reactor)",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 8"
+  },
+  {
+   "id": "P41",
+   "quote": "One-group cross sections are significantly reduced in fast system",
+   "sec": "x",
+   "cite": "NRC slides ML19148A793, slide 12"
+  },
+  {
+   "id": "P42",
+   "quote": "Net result is 0.3-0.4% for conventional compositions",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 5"
+  },
+  {
+   "id": "P43",
+   "quote": "At low values, response to small changes in the reactivity is magnified and power can change more quickly",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 5"
+  },
+  {
+   "id": "P44",
+   "quote": "Neutron leakage is increased (>20% in typical designs, reactivity coefficient)",
+   "sec": "x",
+   "cite": "NRC slides ML19148A801, slide 3"
+  },
+  {
+   "id": "P45",
+   "quote": "Not all fission fragments are Delayed Neutron Precursors, but all Delayed Neutron Precursors are fission fragments!",
+   "sec": "x",
+   "cite": "Word: Neutrons.docx, slide 1.60 Delayed Neutron Precursors"
+  },
+  {
+   "id": "P46",
+   "quote": "As it turns out, the delayed neutrons control the rate of power change far more than the prompt neutrons do.",
+   "sec": "x",
+   "cite": "Word: Delayed Neutron Importance.docx, slide 1.5 Delayed Neutrons effect on rate of power change"
+  },
+  {
+   "id": "P47",
+   "quote": "Spontaneous fission of U-238 from the fuel provides more then enough neutrons to start a chain reaction.",
+   "sec": "x",
+   "cite": "Word: Source Neutrons.docx, slide 1.9 Knowledge Check #1"
+  }
+ ],
+ "word_sequence": [
+  {
+   "step": "Why source neutrons matter",
+   "cite": "Word: Source Neutrons.docx, slide 1.3 Source Neutron Importance"
+  },
+  {
+   "step": "Intrinsic and installed sources",
+   "cite": "Word: Source Neutrons.docx, slide 1.6 Source Neutron Types"
+  },
+  {
+   "step": "Reaction terms and cross sections",
+   "cite": "Word: Neutrons.docx, slide 1.71 Neutron Reaction Terms"
+  },
+  {
+   "step": "Reaction rate",
+   "cite": "Word: Neutrons.docx, slide 1.86 Reaction Rate"
+  },
+  {
+   "step": "Flux and reactor power",
+   "cite": "Word: Neutrons.docx, slide 1.89 Neutron Flux and Reactor Power"
+  },
+  {
+   "step": "Prompt and delayed neutrons",
+   "cite": "Word: Neutrons.docx, slide 1.56 Prompt and Delayed Neutrons"
+  },
+  {
+   "step": "Delayed neutron formation",
+   "cite": "Word: Delayed Neutron Importance.docx, slide 1.3 Delayed Neutron Formation"
+  }
+ ],
+ "concepts": [
+  {
+   "title": "Why source neutrons matter",
+   "eo": [
+    "1.1"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Source neutrons are neutrons produced by reactions other than neutron-induced fission.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P1"
+    },
+    {
+     "t": "p",
+     "text": "This verifies instrument operability and allows monitoring of neutron population changes.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.1"
+    },
+    {
+     "t": "quote",
+     "p": "P47"
+    },
+    {
+     "t": "quote",
+     "p": "P2"
+    },
+    {
+     "t": "quote",
+     "p": "P3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q244",
+     "eo": "1.1"
+    },
+    {
+     "existing": "Q566",
+     "eo": "1.1"
+    }
+   ]
+  },
+  {
+   "title": "Intrinsic neutron sources",
+   "eo": [
+    "1.2"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P4"
+    },
+    {
+     "t": "quote",
+     "p": "P5"
+    },
+    {
+     "t": "p",
+     "text": "The handbook's third example is a gamma-neutron reaction with deuterium in water coolant. It depends on water, so it stays off this page and objective 1.2 is marked for review.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q567",
+     "eo": "1.2"
+    }
+   ]
+  },
+  {
+   "title": "Installed neutron sources",
+   "eo": [
+    "1.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Intrinsic sources can be weak or depend on recent power history, so many reactors have installed sources to keep shutdown neutron levels detectable.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.3"
+    },
+    {
+     "t": "quote",
+     "p": "P6"
+    },
+    {
+     "t": "quote",
+     "p": "P7"
+    },
+    {
+     "t": "quote",
+     "p": "P8"
+    },
+    {
+     "t": "p",
+     "text": "Californium-252's drawbacks for some applications are high cost and a short half-life of 2.65 years.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.3"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "1.3",
+     "q": "Which reaction is an example of an installed neutron source?",
+     "o": [
+      "Neutron-induced fission of plutonium-239",
+      "Beryllium-9 undergoing an alpha-neutron reaction",
+      "Spontaneous fission of uranium-238 in the fuel",
+      "Boron-11 mixed with the fuel"
+     ],
+     "a": 1,
+     "x": "Installed sources include californium-252 spontaneous fission and alpha-neutron and gamma-neutron reactions with beryllium-9.",
+     "p": "P7",
+     "place": [
+      "Reactor Theory",
+      "Reactor Kinetics and Neutron Sources"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Atom density and cross sections",
+   "eo": [
+    "2.1",
+    "2.2"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P9"
+    },
+    {
+     "t": "eq",
+     "text": "N = ρ NA / M   (N in atoms/cm³)",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.6"
+    },
+    {
+     "t": "quote",
+     "p": "P10"
+    },
+    {
+     "t": "quote",
+     "p": "P11"
+    },
+    {
+     "t": "p",
+     "text": "Microscopic cross sections are measured in barns, where 1 barn = 10^-24 cm².",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.17"
+    },
+    {
+     "t": "quote",
+     "p": "P12"
+    },
+    {
+     "t": "eq",
+     "text": "Σ = Nσ   (Σ in cm⁻¹)",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.8"
+    },
+    {
+     "t": "p",
+     "text": "The total microscopic cross section is the sum of absorption and scattering. Absorption divides into fission and capture.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.8"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q504",
+     "eo": "2.1"
+    },
+    {
+     "existing": "Q506",
+     "eo": "2.1"
+    },
+    {
+     "eo": "2.2",
+     "q": "How is macroscopic cross section related to microscopic cross section?",
+     "o": [
+      "Σ = N / σ",
+      "Σ = N + σ",
+      "Σ = Nσ",
+      "Σ = σ / N"
+     ],
+     "a": 2,
+     "x": "The macroscopic cross section is the atom density times the microscopic cross section.",
+     "p": "P12",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Absorption cross section and neutron energy",
+   "eo": [
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "fig",
+     "id": "np-02-fig1",
+     "num": 1,
+     "cap": "Typical Neutron Absorption Cross Section vs. Neutron Energy",
+     "alt": "Absorption cross section against neutron energy on log axes, falling in the 1/v region, then a region of resonance peaks, then the fast region.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.9"
+    },
+    {
+     "t": "quote",
+     "p": "P18"
+    },
+    {
+     "t": "quote",
+     "p": "P14"
+    },
+    {
+     "t": "quote",
+     "p": "P15"
+    },
+    {
+     "t": "quote",
+     "p": "P16"
+    },
+    {
+     "t": "p",
+     "text": "For higher neutron energies, the absorption cross section steadily decreases as the energy increases.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+    },
+    {
+     "t": "quote",
+     "p": "P17"
+    },
+    {
+     "t": "p",
+     "text": "A fast reactor works at the high energy end of this curve, as the slides below show.",
+     "cite": "NRC slides ML19148A793, slide 3"
+    },
+    {
+     "t": "quote",
+     "p": "P41"
+    },
+    {
+     "t": "quote",
+     "p": "P40"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.4",
+     "q": "When does resonance absorption occur?",
+     "o": [
+      "When the neutron's energy exceeds 10 MeV",
+      "When two neutrons strike a nucleus together",
+      "When the neutron's kinetic energy plus its binding energy equals an allowed nuclear energy level",
+      "When the neutron is in thermal equilibrium with the medium"
+     ],
+     "a": 2,
+     "x": "Resonance absorption occurs when the sum of the kinetic energy of the neutron and its binding energy equals an allowed nuclear energy level.",
+     "p": "P14",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    },
+    {
+     "eo": "2.5",
+     "q": "Why do heavy nuclei have more resonances than light nuclei?",
+     "o": [
+      "They have no binding energy",
+      "Their nuclei are less stable to scattering",
+      "They are complex, with more possible configurations and energy states",
+      "They have fewer neutrons"
+     ],
+     "a": 2,
+     "x": "Heavy nuclei are complex and have more possible configurations and corresponding energy states.",
+     "p": "P15",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Mean free path and mixtures",
+   "eo": [
+    "2.1",
+    "2.6",
+    "2.7",
+    "2.8"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P13"
+    },
+    {
+     "t": "eq",
+     "text": "λ = 1 / Σ",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.10"
+    },
+    {
+     "t": "p",
+     "text": "Most materials contain several isotopes, so each isotope's macroscopic cross section is found and the values are summed.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.11"
+    },
+    {
+     "t": "eq",
+     "text": "Σ = N₁σ₁ + N₂σ₂ + N₃σ₃ + ... + Nₙσₙ",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.11"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.6",
+     "q": "A material has a macroscopic cross section of 0.1 cm⁻¹ for an interaction. What is the mean free path?",
+     "o": [
+      "0.1 cm",
+      "1 cm",
+      "10 cm",
+      "100 cm"
+     ],
+     "a": 2,
+     "x": "The mean free path equals 1 / Σ = 1 / (0.1 cm⁻¹) = 10 cm.",
+     "p": "P13",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Neutron flux and self-shielding",
+   "eo": [
+    "2.1",
+    "2.9"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Neutron flux is the total path length covered by all neutrons in one cubic centimeter during one second.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.15"
+    },
+    {
+     "t": "eq",
+     "text": "φ = nv   (φ in neutrons/cm²-sec)",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.15"
+    },
+    {
+     "t": "quote",
+     "p": "P19"
+    },
+    {
+     "t": "p",
+     "text": "For example, the interior of a fuel pin sees a lower average flux than its outer surfaces, because neutrons are absorbed before they reach it.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.16"
+    },
+    {
+     "t": "quote",
+     "p": "P20"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "2.9",
+     "q": "Why does the interior of a fuel pin see a lower average flux than its surface?",
+     "o": [
+      "Neutrons are repelled by the fuel",
+      "The interior contains no fissile material",
+      "Neutrons are absorbed near the surface and cannot reach the interior",
+      "The interior is hotter"
+     ],
+     "a": 2,
+     "x": "Self-shielding is where the local neutron flux is depressed within a material due to neutron absorption near the surface.",
+     "p": "P19",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Reaction rates and reactor power",
+   "eo": [
+    "2.10",
+    "2.11"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P21"
+    },
+    {
+     "t": "eq",
+     "text": "R = φΣ",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.18"
+    },
+    {
+     "t": "p",
+     "text": "Multiplying the reaction rate by the core volume gives the total fission rate. With 200 MeV per fission, 3.12 x 10^10 fissions release 1 watt-second of energy.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.20"
+    },
+    {
+     "t": "quote",
+     "p": "P22"
+    },
+    {
+     "t": "quote",
+     "p": "P23"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q505",
+     "eo": "2.11"
+    },
+    {
+     "eo": "2.10",
+     "q": "A section of a reactor has a macroscopic fission cross section of 0.1 cm⁻¹ and a flux of 10^13 neutrons/cm²-sec. What is the fission rate per cm³ each second?",
+     "o": [
+      "10^11",
+      "10^12",
+      "10^13",
+      "10^14"
+     ],
+     "a": 1,
+     "x": "R = φΣ = (10^13)(0.1) = 10^12 fissions per cm³ each second.",
+     "p": "P21",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Slowing down in a fast reactor",
+   "eo": [
+    "2.12",
+    "2.13",
+    "2.14"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "p",
+     "text": "The handbook's thermalization and moderator material is for thermal reactors, so it stays off this page and objectives 2.12 and 2.13 are marked for review. The fast reactor equivalent is below.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.23"
+    },
+    {
+     "t": "quote",
+     "p": "P37"
+    },
+    {
+     "t": "quote",
+     "p": "P38"
+    },
+    {
+     "t": "quote",
+     "p": "P39"
+    },
+    {
+     "t": "quote",
+     "p": "P24"
+    },
+    {
+     "t": "eq",
+     "text": "E(N) = E₀ (1 - x)^N",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.28"
+    },
+    {
+     "t": "p",
+     "text": "Here x is the average fractional energy loss per collision and N is the number of collisions.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.26"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q103",
+     "eo": "2.12"
+    },
+    {
+     "eo": "2.14",
+     "q": "A 2 MeV neutron loses an average fraction of 0.5 of its energy per collision. What is its energy after 2 collisions?",
+     "o": [
+      "0.25 MeV",
+      "0.5 MeV",
+      "1 MeV",
+      "1.5 MeV"
+     ],
+     "a": 1,
+     "x": "E = (2 MeV)(1 - 0.5)^2 = 0.5 MeV.",
+     "p": "P24",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Prompt and delayed neutrons",
+   "eo": [
+    "3.1",
+    "3.2",
+    "3.3"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "p",
+     "text": "Over 99% of the neutrons produced in fission are prompt neutrons, released within about 10^-13 seconds of the fission event.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.29"
+    },
+    {
+     "t": "quote",
+     "p": "P25"
+    },
+    {
+     "t": "quote",
+     "p": "P27"
+    },
+    {
+     "t": "quote",
+     "p": "P45"
+    },
+    {
+     "t": "p",
+     "text": "A precursor's beta decay leaves an excited daughter that immediately ejects a neutron, so delayed neutrons appear with the precursor's half-life. Half-lives vary from fractions of a second to almost a minute.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+    },
+    {
+     "t": "quote",
+     "p": "P26"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Uranium-235: 0.0065",
+      "Plutonium-239: 0.0021",
+      "Uranium-238: 0.0148",
+      "Uranium-233: 0.0026"
+     ],
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P42"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q50",
+     "eo": "3.2"
+    },
+    {
+     "existing": "Q288",
+     "eo": "3.2"
+    },
+    {
+     "existing": "Q106",
+     "eo": "3.2"
+    },
+    {
+     "eo": "3.3",
+     "q": "How is a delayed neutron produced?",
+     "o": [
+      "A prompt neutron is absorbed and re-emitted",
+      "A fission fragment undergoes spontaneous fission",
+      "A gamma ray strikes deuterium",
+      "A precursor beta decays to an excited daughter that immediately ejects a neutron"
+     ],
+     "a": 3,
+     "x": "A precursor's beta decay results in an excited daughter nucleus, which immediately ejects a neutron.",
+     "p": "P27",
+     "place": [
+      "Reactor Theory",
+      "Reactor Kinetics and Neutron Sources"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Generation time and reactor control",
+   "eo": [
+    "3.4",
+    "3.5",
+    "3.6"
+   ],
+   "tag": null,
+   "body": [
+    {
+     "t": "quote",
+     "p": "P28"
+    },
+    {
+     "t": "p",
+     "text": "The handbook gives fast reactors a prompt generation time of about 10^-6 seconds.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.30"
+    },
+    {
+     "t": "quote",
+     "p": "P29"
+    },
+    {
+     "t": "p",
+     "text": "That delayed time is dominated by precursor decay, for uranium-235 precursors. The other intervals are insignificant beside it.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.31"
+    },
+    {
+     "t": "eq",
+     "text": "ℓ(avg) = (1 - β) ℓ* + β (ℓ* + delayed generation time)",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.31"
+    },
+    {
+     "t": "quote",
+     "p": "P30"
+    },
+    {
+     "t": "quote",
+     "p": "P31"
+    },
+    {
+     "t": "quote",
+     "p": "P46"
+    },
+    {
+     "t": "quote",
+     "p": "P43"
+    }
+   ],
+   "checks": [
+    {
+     "existing": "Q6",
+     "eo": "3.4"
+    },
+    {
+     "existing": "Q7",
+     "eo": "3.4"
+    },
+    {
+     "existing": "Q15",
+     "eo": "3.6"
+    },
+    {
+     "existing": "Q16",
+     "eo": "3.6"
+    }
+   ]
+  },
+  {
+   "title": "Neutron energy spectrum in a fast reactor",
+   "eo": [
+    "4.1",
+    "4.2",
+    "4.3"
+   ],
+   "tag": "Needs sodium review",
+   "body": [
+    {
+     "t": "quote",
+     "p": "P32"
+    },
+    {
+     "t": "quote",
+     "p": "P33"
+    },
+    {
+     "t": "fig",
+     "id": "np-02-fig2",
+     "num": 2,
+     "cap": "Prompt Fission Neutron Energy Spectrum for Thermal Fission of Uranium-235",
+     "alt": "Fraction of neutrons per MeV against neutron energy, rising to a peak near 0.7 MeV and falling off at higher energy.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.33"
+    },
+    {
+     "t": "p",
+     "text": "The handbook's plot is for thermal fission of uranium-235, and the most probable energy is about 0.7 MeV. Values vary slightly for other nuclides.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.33"
+    },
+    {
+     "t": "quote",
+     "p": "P34"
+    },
+    {
+     "t": "quote",
+     "p": "P35"
+    },
+    {
+     "t": "quote",
+     "p": "P36"
+    },
+    {
+     "t": "quote",
+     "p": "P44"
+    },
+    {
+     "t": "fig",
+     "id": "np-02-fig3",
+     "num": 3,
+     "cap": "Comparison of Neutron Flux Spectra for Thermal and Fast Breeder Reactor",
+     "alt": "Neutron flux against energy for a thermal reactor and a fast breeder reactor. The fast breeder curve has no thermal peak.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.34"
+    },
+    {
+     "t": "p",
+     "text": "The thermal reactor spectrum and its region-by-region shape stay off this page, so objectives 4.2 (part b) and 4.3 are marked for review.",
+     "cite": "DOE-HDBK-1019/1-93 NP-02 p.34"
+    }
+   ],
+   "checks": [
+    {
+     "eo": "4.1",
+     "q": "What is the average energy at which prompt neutrons are produced?",
+     "o": [
+      "About 0.025 eV",
+      "About 1 keV",
+      "About 200 MeV",
+      "About 2 MeV"
+     ],
+     "a": 3,
+     "x": "The average prompt neutron energy is about 2 MeV.",
+     "p": "P33",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    },
+    {
+     "eo": "4.2",
+     "q": "What does the neutron energy spectrum of a fast reactor look like?",
+     "o": [
+      "It is flat at all energies",
+      "It has the same shape as the prompt neutron energy spectrum",
+      "It has a large thermal peak",
+      "It has two pronounced peaks"
+     ],
+     "a": 1,
+     "x": "Fast reactors have a neutron energy spectrum that has the same shape as the prompt neutron energy spectrum.",
+     "p": "P34",
+     "place": [
+      "Reactor Theory",
+      "Neutrons"
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "title": "Atom density of aluminum",
+   "eo": [
+    "2.1"
+   ],
+   "page": 7,
+   "problem": "A block of aluminum has a density of 2.699 g/cm³ and a gram atomic weight of 26.9815 g. Calculate the atom density.",
+   "steps": [
+    "N = ρ NA / M",
+    "N = (2.699 g/cm³)(6.022 x 10^23 atoms/mole) / (26.9815 g/mole)"
+   ],
+   "answer": "N = 6.024 x 10^22 atoms/cm³",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.7"
+  },
+  {
+   "title": "Cross sections and mean free paths of an alloy",
+   "eo": [
+    "2.7",
+    "2.6"
+   ],
+   "tag": "Needs sodium review",
+   "page": 13,
+   "problem": "An alloy has 5.64 x 10^22 aluminum atoms/cm³ and 2.85 x 10^21 silicon atoms/cm³. Aluminum has σa = 0.23 barns and σs = 1.49 barns. Silicon has σa = 0.16 barns and σs = 2.20 barns. These are the handbook's thermal values, used here only to show the method.",
+   "steps": [
+    "Σa = (5.64 x 10^22)(0.23 x 10^-24 cm²) + (2.85 x 10^21)(0.16 x 10^-24 cm²) = 0.0134 cm⁻¹",
+    "Σs = (5.64 x 10^22)(1.49 x 10^-24 cm²) + (2.85 x 10^21)(2.20 x 10^-24 cm²) = 0.0903 cm⁻¹",
+    "λa = 1 / Σa and λs = 1 / Σs"
+   ],
+   "answer": "λa = 74.3 cm and λs = 11.1 cm",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.13"
+  },
+  {
+   "title": "Average neutron generation time",
+   "eo": [
+    "3.5"
+   ],
+   "page": 31,
+   "problem": "A reactor has a prompt generation time of 5 x 10^-5 seconds, a delayed generation time of 12.5 seconds, and β = 0.0065. These are the handbook's values for a thermal system. Calculate the average generation time.",
+   "tag": "Needs sodium review",
+   "steps": [
+    "Delayed neutrons dominate the average: 0.0065 x 12.5 seconds is about 0.081 seconds",
+    "The prompt term is very small beside it"
+   ],
+   "answer": "About 0.0813 seconds, compared with about 5 x 10^-5 seconds on prompt neutrons alone",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.31"
+  }
+ ],
+ "facts": [
+  {
+   "q": "What is an intrinsic neutron source?",
+   "a": "Neutron-producing reactions that always occur in reactor materials.",
+   "p": "P2",
+   "place": null
+  },
+  {
+   "q": "Why are source neutrons important?",
+   "a": "They keep the neutron population high enough to give a visible indication on the most sensitive instruments while shut down and during startup.",
+   "p": "P1",
+   "place": null
+  },
+  {
+   "q": "What is a macroscopic cross section?",
+   "a": "The probability of a given reaction occurring per unit travel of the neutron.",
+   "p": "P12",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "What is mean free path?",
+   "a": "The average distance traveled by a neutron before interaction.",
+   "p": "P13",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "What is self-shielding?",
+   "a": "Local neutron flux is depressed within a material due to neutron absorption near its surface.",
+   "p": "P19",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "What is a reaction rate?",
+   "a": "The number of interactions of a particular type occurring in a cubic centimeter of material in a second.",
+   "p": "P21",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "What are delayed neutrons released from?",
+   "a": "The decay of fission products called delayed neutron precursors.",
+   "p": "P25",
+   "place": null
+  },
+  {
+   "q": "What is the neutron generation time?",
+   "a": "The time required for neutrons from one generation to cause the fissions that produce the next generation.",
+   "p": "P28",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "At what energies are prompt neutrons born?",
+   "a": "Between 0.1 MeV and 10 MeV, with an average of about 2 MeV.",
+   "p": "P32",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "At what energies do most fissions occur in an SFR?",
+   "a": "At higher energies, above 10 keV. Moderation is avoided, and there are no thermal neutrons.",
+   "p": "P36",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  },
+  {
+   "q": "About what share of the fission rate in a fast reactor comes from U-238 threshold fission?",
+   "a": "About 10%. The threshold is at about 1 MeV.",
+   "p": "P40",
+   "place": [
+    "Reactor Theory",
+    "Neutrons"
+   ]
+  }
+ ],
+ "summary": [
+  {
+   "text": "Source neutrons keep neutron level visible on instruments. Sources are intrinsic or installed.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.4"
+  },
+  {
+   "text": "Microscopic cross section is a probability per nucleus, and macroscopic cross section is Σ = Nσ. Mean free path is 1 / Σ.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.17"
+  },
+  {
+   "text": "Reaction rate is R = φΣ. Over several days, flux is directly proportional to reactor power.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.22"
+  },
+  {
+   "text": "In a fast reactor, moderation is avoided and most fissions occur above 10 keV.",
+   "cite": "NRC slides ML19148A793, slide 3"
+  },
+  {
+   "text": "Delayed neutrons come from precursors, and they make power changes controllable.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.32"
+  },
+  {
+   "text": "Prompt neutrons average about 2 MeV. A fast reactor's spectrum has the same shape as the prompt spectrum.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.37"
+  }
+ ],
+ "blend_notes": [
+  {
+   "type": "Conflict",
+   "note": "Delayed Neutron Importance.docx slide 1.3 says prompt neutrons appear within 10 to the minus 14 seconds. The handbook p.29 and p.32 give 10 to the minus 13 seconds. By decision on Nov 5, 2026, the page shows the handbook value.",
+   "cite": "Word: Delayed Neutron Importance.docx, slide 1.3 Delayed Neutron Formation"
+  },
+  {
+   "type": "Conflict",
+   "note": "ML19148A801 slide 5 gives U-235's delayed neutron fraction as about 0.67%. The handbook p.30 gives 0.0065, and Neutrons.docx uses 0.0065 and a rounded 0.7%. The page shows the handbook value.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.30"
+  },
+  {
+   "type": "Scope",
+   "note": "Objectives 1.2, 2.3, 2.4, 2.5, 2.12, 2.13, 4.2 and 4.3 carry Needs sodium review. The deuterium photoneutron source, moderator properties, logarithmic energy decrement, moderating ratio, the temperature correction for thermal cross sections, thermal neutron velocities and the thermal reactor spectrum are left off. The water and hydrogen slowing down examples are left off.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.23"
+  },
+  {
+   "type": "Scope",
+   "note": "Equation 2-7 uses thermal flux, so the page keeps only the general steps, as Neutrons.docx slide 1.90 does. Objective 2.10's check uses the handbook's numbers with the word thermal removed. The alloy and generation time examples use the handbook's thermal values and are tagged.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.19"
+  },
+  {
+   "type": "Handbook wording",
+   "note": "The handbook p.30 prints the fast reactor prompt generation time as about 10^-6 seconds. ML19148A801 slide 4 lists prompt neutron lifetimes of 0.32 to 0.38 microseconds for specific designs. The page uses the handbook value.",
+   "cite": "DOE-HDBK-1019/1-93 NP-02 p.30"
+  },
+  {
+   "type": "Word source",
+   "note": "Delayed Neutron Importance.docx teaches kinetics by spreadsheet. Slides 1.6 to 1.12 are left for NP-04, along with the delayed neutron fraction terms on slides 1.14 to 1.17.",
+   "cite": "Word: Delayed Neutron Importance.docx, slide 1.5 Delayed Neutrons effect on rate of power change"
+  }
+ ],
+ "page_tags": [
+  "Needs sodium review"
+ ]
+}
